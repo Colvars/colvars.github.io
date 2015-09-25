@@ -24,11 +24,11 @@ $(PDFDIR)/%.pdf: $(SRCDIR)/%.tex $(BIBTEX) $(SRCDIR)/colvars-refman-main.tex $(S
 
 # Note: this relies on up-to-date bbl files; run pdflatex first!
 colvars-refman-namd/colvars-refman-namd.html: $(BIBTEX) $(PDF) $(SRCDIR)/colvars-refman-main.tex $(SRCDIR)/colvars-refman.tex $(SRCDIR)/colvars-refman-namd.tex $(SRCDIR)/colvars-cv.tex 
-	cd $(SRCDIR); htlatex  colvars-refman-namd.tex "" "" "-d$(DOCDIR)/colvars-refman-namd/"
+	cd $(SRCDIR); htlatex  colvars-refman-namd.tex "xhtml, charset=utf-8" " -cunihtf -utf8" "-d$(DOCDIR)/colvars-refman-namd/"
 colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(SRCDIR)/colvars-refman-main.tex $(SRCDIR)/colvars-refman.tex $(SRCDIR)/colvars-refman-vmd.tex $(SRCDIR)/colvars-cv.tex 
-	cd $(SRCDIR); htlatex  colvars-refman-vmd.tex "" "" "-d$(DOCDIR)/colvars-refman-vmd/"
+	cd $(SRCDIR); htlatex  colvars-refman-vmd.tex "xhtml, charset=utf-8" " -cunihtf -utf8" "-d$(DOCDIR)/colvars-refman-vmd/"
 colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(SRCDIR)/colvars-refman-main.tex $(SRCDIR)/colvars-refman.tex $(SRCDIR)/colvars-refman-lammps.tex $(SRCDIR)/colvars-cv.tex 
-	cd $(SRCDIR); htlatex  colvars-refman-lammps.tex "" "" "-d$(DOCDIR)/colvars-refman-lammps/"
+	cd $(SRCDIR); htlatex  colvars-refman-lammps.tex "xhtml, charset=utf-8" " -cunihtf -utf8" "-d$(DOCDIR)/colvars-refman-lammps/"
 
 clean:
 	make -C $(SRCDIR) clean
