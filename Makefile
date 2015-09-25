@@ -20,7 +20,8 @@ html: colvars-refman-namd/colvars-refman-namd.html colvars-refman-vmd/colvars-re
 
 $(PDFDIR)/%.pdf: $(SRCDIR)/%.tex $(BIBTEX) $(SRCDIR)/colvars-refman-main.tex $(SRCDIR)/colvars-refman.tex $(SRCDIR)/colvars-cv.tex
 	make -C $(SRCDIR) pdf
-	cp $(SRCDIR)/`basename $@` $(PDFDIR)
+	mv $(SRCDIR)/`basename $@` $(PDFDIR)
+	make -C $(SRCDIR) clean
 
 # Note: this relies on up-to-date bbl files; run pdflatex first!
 colvars-refman-namd/colvars-refman-namd.html: $(BIBTEX) $(PDF) $(SRCDIR)/colvars-refman-main.tex $(SRCDIR)/colvars-refman.tex $(SRCDIR)/colvars-refman-namd.tex $(SRCDIR)/colvars-cv.tex 
