@@ -16,7 +16,7 @@ endif
 .PHONY: all clean clean-all
 all: pdf html
 pdf: $(PDF)
-html: colvars-refman-*/*html
+html: colvars-refman-namd/colvars-refman-namd.html colvars-refman-vmd/colvars-refman-vmd.html colvars-refman-lammps/colvars-refman-lammps.html
 
 $(PDFDIR)/%.pdf: $(SRCDIR)/%.tex $(BIBTEX) $(SRCDIR)/colvars-refman-main.tex $(SRCDIR)/colvars-refman.tex $(SRCDIR)/colvars-cv.tex
 	make -C $(SRCDIR) pdf
