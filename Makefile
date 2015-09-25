@@ -30,8 +30,8 @@ colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(SRCDIR)/colvars-r
 colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(SRCDIR)/colvars-refman-main.tex $(SRCDIR)/colvars-refman.tex $(SRCDIR)/colvars-refman-lammps.tex $(SRCDIR)/colvars-cv.tex 
 	cd $(SRCDIR); htlatex  colvars-refman-lammps.tex "" "" "-d$(DOCDIR)/colvars-refman-lammps/"
 
-clean: 
-	cd $(SRCDIR); rm -f *.aux *.blg *.log *.toc *.out *.idx *.ilg *.ind *.brf *.4tc *.4ct *.css *.dvi *.html *.idv *.lg *.xref *.tmp *.bbl
+clean:
+	make -C $(SRCDIR) clean
 
 clean-all: 
 	rm -rf $(PDF) colvars-refman-namd colvars-refman-vmd colvars-refman-lammps
