@@ -35,5 +35,5 @@ clean:
 	make -C $(SRCDIR) clean
 
 clean-all: 
-	rm -rf $(PDF) colvars-refman-namd colvars-refman-vmd colvars-refman-lammps
+	rm -f $(PDF) colvars-refman-namd/* colvars-refman-vmd/* colvars-refman-lammps/*
 
