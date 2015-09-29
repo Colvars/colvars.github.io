@@ -10,7 +10,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <!-- xhtml,charset=utf-8,html --> 
 <meta name="src" content="colvars-refman-vmd.tex" /> 
-<meta name="date" content="2015-09-25 16:48:00" /> 
+<meta name="date" content="2015-09-29 16:44:00" /> 
 <link rel="stylesheet" type="text/css" href="colvars-refman-vmd.css" /> 
 </head><body 
 >
@@ -26,7 +26,7 @@ class="newline" />
 </p><!--l. 50--><p class="noindent" ><span 
 class="phvb7t-x-x-248">Reference manual for VMD</span>
 </p><!--l. 50--><p class="noindent" ><span 
-class="phvr7t-x-x-144">September 25, 2015</span></p></div></span>
+class="phvr7t-x-x-144">September 29, 2015</span></p></div></span>
 <!--l. 53--><p class="indent" >   <img 
 src="cover.jpg" alt="PIC"  
  /> <span 
@@ -335,8 +335,8 @@ joint 2-dimensional histogram. </span></div><!--tex4ht:label?: x1-20021 -->
                                                                                          
                                                                                          
    </div><hr class="endfigure" />
-<!--l. 63--><p class="indent" >   Detailed explanations of the design of the colvars module are provided in reference <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. Please cite this
+<!--l. 63--><p class="indent" >   Detailed explanations of the design of the colvars module are provided in reference <span class="cite">[<a 
+href="#XFiorin2013">1</a>]</span>. Please cite this
 reference whenever publishing work that makes use of this module.
 </p>
    <h3 class="sectionHead"><span class="titlemark">2    </span> <a 
@@ -1413,8 +1413,8 @@ class="ptmb7t-x-x-109">Description:    </span>Adds  a  ﬁctitious  particle  to
 class="ot1-zi4r-0-x-x-109">extendedTimeConstant </span>and <span 
 class="ot1-zi4r-0-x-x-109">extendedFluctuation</span>, described below. Biasing forces on the colvar
      are applied to this ﬁctitious particle, rather than to the atoms directly. This implements the extended
-     Lagrangian formalism used in some metadynamics simulations <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>.
+     Lagrangian formalism used in some metadynamics simulations <span class="cite">[<a 
+href="#XIannuzzi2003">2</a>]</span>.
      </li>
      <li class="itemize"><a 
  id="dx1-16002"></a> <span 
@@ -2122,8 +2122,8 @@ class="ot1-zi4r-0-x-x-109">refPositionsFile</span>. The rotation will
 class="ot1-zi4r-0-x-x-109">centerReference </span>is <span 
 class="ot1-zi4r-0-x-x-109">on</span>, around the origin otherwise.
      The algorithm used is the same employed by the <span 
-class="ot1-zi4r-0-x-x-109">orientation </span>colvar component <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. Forces applied
+class="ot1-zi4r-0-x-x-109">orientation </span>colvar component <span class="cite">[<a 
+href="#XCoutsias2004">3</a>]</span>. Forces applied
      to the atoms of this group will also be implicitly rotated back to the original frame. <span 
 class="ptmb7t-x-x-109">Note</span>: unless
      otherwise speciﬁed, <span 
@@ -3093,8 +3093,8 @@ class="zptmcm7m-x-x-109">d</span><sub><span
 class="zptmcm7t-x-x-80">0</span></sub> is the “cutoﬀ” distance, and <span 
 class="zptmcm7m-x-x-109">n </span>and <span 
 class="zptmcm7m-x-x-109">m </span>are exponents that can control its
-long range behavior and stiﬀness <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. This function is summed over all pairs of atoms in <span 
+long range behavior and stiﬀness <span class="cite">[<a 
+href="#XIannuzzi2003">2</a>]</span>. This function is summed over all pairs of atoms in <span 
 class="ot1-zi4r-0-x-x-109">group1 </span>and
 <span 
 class="ot1-zi4r-0-x-x-109">group2</span>:
@@ -3446,8 +3446,8 @@ class="zptmcm7y-x-x-80">}→{</span><span
 class="ptmb7t-x-x-80">x</span><sub><span 
 class="zptmcm7m-x-x-60">i</span></sub><sup><span 
 class="zptmcm7t-x-x-60">(ref)</span></sup><span 
-class="zptmcm7y-x-x-80">}</span></sup> is calculated within the formalism developed in reference <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>, which
+class="zptmcm7y-x-x-80">}</span></sup> is calculated within the formalism developed in reference <span class="cite">[<a 
+href="#XCoutsias2004">3</a>]</span>, which
 guarantees a continuous dependence of <span 
 class="zptmcm7m-x-x-109">U</span><sup><span 
 class="zptmcm7y-x-x-80">{</span><span 
@@ -4055,8 +4055,8 @@ class="zptmcm7y-x-x-109">}→{</span><span
 class="ptmb7t-x-x-109">x</span><sub><span 
 class="zptmcm7m-x-x-80">i</span></sub><sup><span 
 class="zptmcm7t-x-x-80">(ref)</span></sup><span 
-class="zptmcm7y-x-x-109">} </span>according to the formalism in reference <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. The quaternion <span 
+class="zptmcm7y-x-x-109">} </span>according to the formalism in reference <span class="cite">[<a 
+href="#XCoutsias2004">3</a>]</span>. The quaternion <span 
 class="zptmcm7t-x-x-109">(</span><span 
 class="zptmcm7m-x-x-109">q</span><sub><span 
 class="zptmcm7t-x-x-80">0</span></sub><span 
@@ -4544,9 +4544,9 @@ class="ot1-zi4r-0-x-x-109">...</span><span
 class="cmsy-10x-x-109">} </span>deﬁnes the parameters to calculate the projection of backbone dihedral angles within
 a protein segment onto a <span 
 class="ptmri7t-x-x-109">dihedral principal component</span>, following the formalism of dihedral principal component
-analysis (dPCA) proposed by Mu et al.<span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span> and documented in detail by Altis et al.<span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. Given a peptide or protein
+analysis (dPCA) proposed by Mu et al.<span class="cite">[<a 
+href="#XMu2005">4</a>]</span> and documented in detail by Altis et al.<span class="cite">[<a 
+href="#XAltis2007">5</a>]</span>. Given a peptide or protein
 segment of <span 
 class="zptmcm7m-x-x-109">N </span>residues, each with Ramachandran angles <span 
 class="zptmcm7m-x-x-109">ϕ</span><sub><span 
@@ -4598,8 +4598,8 @@ class="zptmcm7t-x-x-80">1</span></sub> and <span
 class="zptmcm7m-x-x-109">ψ</span><sub><span 
 class="zptmcm7m-x-x-80">N</span></sub> have
 little impact on chain conformation, and are therefore discarded, following the implementation of dPCA in the
-analysis software Carma.<span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>
+analysis software Carma.<span class="cite">[<a 
+href="#XGlykos2006">6</a>]</span>
 </p><!--l. 2207--><p class="indent" >   For a given principal component (eigenvector) of coeﬃcients <span 
 class="zptmcm7t-x-x-109">(</span><span 
 class="zptmcm7m-x-x-109">k</span><sub><span 
@@ -4647,8 +4647,8 @@ class="newline" /><span
 class="ptmb7t-x-x-109">Acceptable values:  </span>ﬁle name <br 
 class="newline" /><span 
 class="ptmb7t-x-x-109">Description:  </span>A text ﬁle containing the coeﬃcients of dihedral PCA eigenvectors on the cosine and
-     sine coordinates. The vectors should be arranged in columns, as in the ﬁles output by Carma.<span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>
+     sine coordinates. The vectors should be arranged in columns, as in the ﬁles output by Carma.<span class="cite">[<a 
+href="#XGlykos2006">6</a>]</span>
      </li>
      <li class="itemize"><a 
  id="dx1-49003"></a> <span 
@@ -4896,8 +4896,8 @@ coordinates rather than functions of existing components, the <span
 class="ot1-zi4r-0-x-x-109">cartesian </span>component may be particularly
 useful.
 </p><!--l. 2428--><p class="indent" >   An example of elaborate scripted colvar is given in example 10, in the form of path-based collective
-variables as deﬁned by Branduardi et al.<span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span> The required Tcl procedures are provided in the colvartools
+variables as deﬁned by Branduardi et al.<span class="cite">[<a 
+href="#XBranduardi2007">7</a>]</span> The required Tcl procedures are provided in the colvartools
 directory.
 </p>
      <ul class="itemize1">
@@ -5076,21 +5076,23 @@ class="ot1-zi4r-0-x-x-109">colvarsTrajFrequency </span>is not zero, the current 
 </p>
    <h4 class="subsectionHead"><span class="titlemark">6.1    </span> <a 
  id="x1-570006.1"></a>Adaptive Biasing Force</h4>
-<!--l. 2476--><p class="noindent" >For a full description of the Adaptive Biasing Force method, see reference <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. For details about this
-implementation, see references <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span> and <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. <span 
+<!--l. 2476--><p class="noindent" >For a full description of the Adaptive Biasing Force method, see reference <span class="cite">[<a 
+href="#XDarve2008">8</a>]</span>. For details about this
+implementation, see references <span class="cite">[<a 
+href="#XHenin2004">9</a>]</span> and <span class="cite">[<a 
+href="#XHenin2010">10</a>]</span>. <span 
 class="ptmb7t-x-x-109">When publishing research that makes use of this functionality,</span>
 <span 
 class="ptmb7t-x-x-109">please cite references</span><span 
 class="ptmb7t-x-x-109"> </span><span class="cite"><span 
-class="ptmb7t-x-x-109">[</span><span 
-class="ptmb7t-x-x-109">?</span><span 
+class="ptmb7t-x-x-109">[</span><a 
+href="#XDarve2008"><span 
+class="ptmb7t-x-x-109">8</span></a><span 
 class="ptmb7t-x-x-109">]</span></span> <span 
 class="ptmb7t-x-x-109">and </span><span class="cite"><span 
-class="ptmb7t-x-x-109">[</span><span 
-class="ptmb7t-x-x-109">?</span><span 
+class="ptmb7t-x-x-109">[</span><a 
+href="#XHenin2010"><span 
+class="ptmb7t-x-x-109">10</span></a><span 
 class="ptmb7t-x-x-109">]</span></span><span 
 class="ptmb7t-x-x-109">.</span>
 </p><!--l. 2482--><p class="indent" >   An alternate usage of this feature is the application of custom tabulated biasing potentials to one or more colvars.
@@ -5143,13 +5145,13 @@ src="colvars-refman-vmd22x.png" alt="         ⟨    ⟩
 <!--l. 2503--><p class="nopar" >
 </p><!--l. 2505--><p class="indent" >   Several formulae that take the form of (<a 
 href="#x1-57002r16">16<!--tex4ht:ref: eq:gradient --></a>) have been proposed. This implementation relies partly on the classic
-formulation <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>, and partly on a more versatile scheme originating in a work by Ruiz-Montero et al. <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>,
-generalized by den Otter <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span> and extended to multiple variables by Ciccotti et al. <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. Consider a system subject to
-constraints of the form <span 
+formulation <span class="cite">[<a 
+href="#XCarter1989">11</a>]</span>, and partly on a more versatile scheme originating in a work by Ruiz-Montero et al. <span class="cite">[<a 
+href="#XRuiz-Montero1997">12</a>]</span>,
+generalized by den Otter <span class="cite">[<a 
+href="#XdenOtter2000">13</a>]</span> and extended to multiple variables by Ciccotti et al. <span class="cite">[<a 
+href="#XCiccotti2005">14</a>]</span>. Consider a system subject
+to constraints of the form <span 
 class="zptmcm7m-x-x-109">σ</span><sub><span 
 class="zptmcm7m-x-x-80">k</span></sub><span 
 class="zptmcm7t-x-x-109">(</span><span 
@@ -5169,11 +5171,11 @@ class="zptmcm7m-x-x-80">N</span></sup> <span
 class="zptmcm7y-x-x-109">→ </span><span 
 class="msbm-10x-x-109">ℝ</span><sup><span 
 class="zptmcm7t-x-x-80">3</span><span 
-class="zptmcm7m-x-x-80">N</span></sup>) verifying, for all <span 
-class="zptmcm7m-x-x-109">i</span>,
+class="zptmcm7m-x-x-80">N</span></sup>) verifying, for all
                                                                                          
                                                                                          
 <span 
+class="zptmcm7m-x-x-109">i</span>, <span 
 class="zptmcm7m-x-x-109">j</span>, and <span 
 class="zptmcm7m-x-x-109">k</span>:
 </p>
@@ -5186,8 +5188,8 @@ vi⋅∇xσk  =   0                                   (1 8)
  id="x1-57003r17"></a><a 
  id="x1-57003r18"></a></center>
 </div>
-<!--l. 2523--><p class="indent" >   then the following holds <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>:
+<!--l. 2523--><p class="indent" >   then the following holds <span class="cite">[<a 
+href="#XCiccotti2005">14</a>]</span>:
 </p>
    <table 
 class="equation"><tr><td><a 
@@ -5206,8 +5208,8 @@ class="zptmcm7m-x-x-80">i</span></sub> can be interpreted as the direction along
 variable <span 
 class="zptmcm7m-x-x-109">ξ</span><sub><span 
 class="zptmcm7m-x-x-80">i</span></sub> is measured, whereas the second term in the average corresponds to the geometric entropy contribution
-that appears as a Jacobian correction in the classic formalism <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. Condition (<a 
+that appears as a Jacobian correction in the classic formalism <span class="cite">[<a 
+href="#XCarter1989">11</a>]</span>. Condition (<a 
 href="#x1-57003r17">17<!--tex4ht:ref: eq:ortho_gradient --></a>) states that the direction along
 which the system force on <span 
 class="zptmcm7m-x-x-109">ξ</span><sub><span 
@@ -5682,11 +5684,11 @@ used to obtain it (ﬁnite sampling and discretization on a grid).
 </p>
    <h4 class="subsectionHead"><span class="titlemark">6.2    </span> <a 
  id="x1-620006.2"></a>Metadynamics</h4>
-<!--l. 2848--><p class="noindent" >The metadynamics method uses a history-dependent potential <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span> that generalizes to any type of colvars the
-conformational ﬂooding <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span> and local elevation <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span> methods, originally formulated to use as colvars the principal
+<!--l. 2848--><p class="noindent" >The metadynamics method uses a history-dependent potential <span class="cite">[<a 
+href="#XLaio2002">15</a>]</span> that generalizes to any type of colvars the
+conformational ﬂooding <span class="cite">[<a 
+href="#XGrubmuller1995">16</a>]</span> and local elevation <span class="cite">[<a 
+href="#XHuber1994">17</a>]</span> methods, originally formulated to use as colvars the principal
 components of a covariance matrix or a set of dihedral angles, respectively. The metadynamics potential on the
 colvars <span 
 class="zptmcm7m-x-x-109">ξ</span> <span 
@@ -5794,8 +5796,8 @@ class="zptmcm7m-x-x-109">δ</span><sub><span
 class="zptmcm7m-x-x-80">ξ</span><sub><span 
 class="zptmcm7m-x-x-60">i</span></sub></sub>
 and <span 
-class="zptmcm7m-x-x-109">δt </span><span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. In typical applications, a good rule of thumb can be to choose the ratio <span 
+class="zptmcm7m-x-x-109">δt </span><span class="cite">[<a 
+href="#XBussi2006">18</a>]</span>. In typical applications, a good rule of thumb can be to choose the ratio <span 
 class="zptmcm7m-x-x-109">W∕δt </span>much smaller than
 <span 
 class="zptmcm7m-x-x-109">κ</span><sub><span 
@@ -6049,8 +6051,8 @@ class="ptmb7t-x-x-109">Description:  </span>When restarting from a state ﬁle, 
 </p>
    <h5 class="subsubsectionHead"><span class="titlemark">6.2.3    </span> <a 
  id="x1-650006.2.3"></a>Well-tempered metadynamics</h5>
-<!--l. 3019--><p class="noindent" >The following options deﬁne the conﬁguration for the “well-tempered” metadynamics approach <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>:
+<!--l. 3019--><p class="noindent" >The following options deﬁne the conﬁguration for the “well-tempered” metadynamics approach <span class="cite">[<a 
+href="#XBarducci2008">19</a>]</span>:
 </p>
      <ul class="itemize1">
      <li class="itemize"><a 
@@ -6068,8 +6070,8 @@ class="ptmb7t-x-x-109">Default value:  </span><span
 class="ot1-zi4r-0-x-x-109">off</span><br 
 class="newline" /><span 
 class="ptmb7t-x-x-109">Description:  </span>If enabled, this ﬂag causes well-tempered metadynamics as described by Barducci et
-     al.<span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span> to be performed, rather than standard metadynamics. The parameter <span 
+     al.<span class="cite">[<a 
+href="#XBarducci2008">19</a>]</span> to be performed, rather than standard metadynamics. The parameter <span 
 class="ot1-zi4r-0-x-x-109">biasTemperature </span>is then
      required.This feature was contributed by Li Li (Luthey-Schulten group, Departement of Chemistry,
      UIUC).
@@ -6108,8 +6110,8 @@ class="zptmcm7m-x-x-109">T </span><span
 class="zptmcm7t-x-x-109">)</span><span 
 class="zptmcm7m-x-x-109">∕</span><span 
 class="zptmcm7t-x-x-109">Δ</span><span 
-class="zptmcm7m-x-x-109">T </span><span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. A careful choice of <span 
+class="zptmcm7m-x-x-109">T </span><span class="cite">[<a 
+href="#XBarducci2008">19</a>]</span>. A careful choice of <span 
 class="zptmcm7t-x-x-109">Δ</span><span 
 class="zptmcm7m-x-x-109">T </span>determines the sampling and convergence rate, and
      is hence crucial to the success of a well-tempered metadynamics simulation.</li></ul>
@@ -6134,10 +6136,10 @@ class="newline" /><span
 class="ptmb7t-x-x-109">Default value:  </span><span 
 class="ot1-zi4r-0-x-x-109">off</span><br 
 class="newline" /><span 
-class="ptmb7t-x-x-109">Description:   </span>If this option is <span 
-class="ot1-zi4r-0-x-x-109">on</span>, multiple (independent) replica of the same system can be run at
-     the same time, and their hills will be combined to obtain a single PMF <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>. Replicas are identiﬁed by
+class="ptmb7t-x-x-109">Description:  </span>If this option is <span 
+class="ot1-zi4r-0-x-x-109">on</span>, multiple (independent) replica of the same system can be run at the
+     same time, and their hills will be combined to obtain a single PMF <span class="cite">[<a 
+href="#XRaiteri2005">20</a>]</span>. Replicas are identiﬁed by
      the value of <span 
 class="ot1-zi4r-0-x-x-109">replicaID</span>. Communication is done by ﬁles: each replica must be able to read the ﬁles
      created by the others, whose paths are communicated through the ﬁle <span 
@@ -6592,8 +6594,8 @@ class="ot1-zi4r-0-x-x-109">targetNumStages </span>+ 1).
 </p>
    <h5 class="subsubsectionHead"><span class="titlemark">6.3.3    </span> <a 
  id="x1-710006.3.3"></a>Changing force constant</h5>
-<!--l. 3387--><p class="noindent" >The force constant of the harmonic restraint may also be changed to equilibrate <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>.
+<!--l. 3387--><p class="noindent" >The force constant of the harmonic restraint may also be changed to equilibrate <span class="cite">[<a 
+href="#XDeng2009">21</a>]</span>.
                                                                                          
                                                                                          
 </p>
@@ -6627,8 +6629,8 @@ class="ptmri7t-x-x-109">each</span>.
      the colvars trajectory, if <span 
 class="ot1-zi4r-0-x-x-109">colvarsTrajFrequency </span>is set to a suitably small value. It should be noted,
      however, that restraint free energy calculations may be handled more eﬃciently by an indirect route,
-     through the determination of a PMF for the restrained coordinate.<span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>
+     through the determination of a PMF for the restrained coordinate.<span class="cite">[<a 
+href="#XDeng2009">21</a>]</span>
      </li>
      <li class="itemize"><a 
  id="dx1-71002"></a> <span 
@@ -6720,8 +6722,8 @@ class="zptmcm7m-x-x-109">λ </span>values
 bias for each CV center, which means you must know the bias force constant speciﬁcally for the center of the CV.
 This force constant may be found by using experiment directed simulation described in section <a 
 href="#x1-730006.5">6.5<!--tex4ht:ref: sec:colvarbias_alb --></a>. Please cite
-Pitera and Chodera when using <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>.
+Pitera and Chodera when using <span class="cite">[<a 
+href="#XPitera2012">22</a>]</span>.
 </p>
      <ul class="itemize1">
      <li class="itemize"><a 
@@ -6765,8 +6767,8 @@ class="ot1-zi4r-0-x-x-109">q0, q1, q2, q3)</span>”
 </p>
    <h4 class="subsectionHead"><span class="titlemark">6.5    </span> <a 
  id="x1-730006.5"></a>Adaptive Linear Bias/Experiment Directed Simulation</h4>
-<!--l. 3507--><p class="noindent" >Experiment directed simulation applies a linear bias with a changing force constant. Please cite White and Voth <span class="cite">[<span 
-class="ptmb7t-x-x-109">?</span>]</span>
+<!--l. 3507--><p class="noindent" >Experiment directed simulation applies a linear bias with a changing force constant. Please cite White and Voth <span class="cite">[<a 
+href="#XWhite2014">23</a>]</span>
 when using this feature. As opposed to that reference, the force constant here is scaled by the <span 
 class="ot1-zi4r-0-x-x-109">width </span>corresponding
 to the biased colvar. In White and Voth, each force constant is scaled by the colvars set center. The bias converges to
@@ -6961,6 +6963,157 @@ class="ot1-zi4r-0-x-x-109">cv </span>command to access the values of colvars and
                                                                                          
                                                                                          
 </p>
+   <h3 class="likesectionHead"><a 
+ id="x1-760006.7"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+     </p><div class="thebibliography">
+     <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">   </span></span><a 
+ id="XFiorin2013"></a>G. Fiorin, M. L. Klein, and J. Hénin.   Using collective variables to drive molecular dynamics
+     simulations. <span 
+class="ptmri7t-x-x-109">Mol. Phys.</span>, 111(22-23):3345–3362, 2013.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">   </span></span><a 
+ id="XIannuzzi2003"></a>M. Iannuzzi,  A. Laio,  and  M. Parrinello.    Eﬃcient  exploration  of  reactive  potential  energy
+     surfaces using car-parrinello molecular dynamics. <span 
+class="ptmri7t-x-x-109">Phys. Rev. Lett.</span>, 90(23):238302, 2003.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">   </span></span><a 
+ id="XCoutsias2004"></a>E A Coutsias, C Seok, and K A Dill.  Using quaternions to calculate RMSD.  <span 
+class="ptmri7t-x-x-109">J. Comput. Chem.</span>,
+     25(15):1849–1857, 2004.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">   </span></span><a 
+ id="XMu2005"></a>Yuguang  Mu,  Phuong H.  Nguyen,  and  Gerhard  Stock.    Energy  landscape  of  a  small  peptide
+     revealed by dihedral angle principal component analysis. <span 
+class="ptmri7t-x-x-109">Proteins</span>, 58(1):45–52, 2005.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">   </span></span><a 
+ id="XAltis2007"></a>Alexandros Altis, Phuong H. Nguyen, Rainer Hegger, and Gerhard Stock. Dihedral angle principal
+     component analysis of molecular dynamics simulations. <span 
+class="ptmri7t-x-x-109">J. Chem. Phys.</span>, 126(24):244111, 2007.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">   </span></span><a 
+ id="XGlykos2006"></a>Nicholas M  Glykos.    Carma:  a  molecular  dynamics  analysis  program.    <span 
+class="ptmri7t-x-x-109">J.  Comput.  Chem.</span>,
+     27(14):1765–1768, 2006.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">   </span></span><a 
+ id="XBranduardi2007"></a>Davide Branduardi, Francesco Luigi Gervasio, and Michele Parrinello. From a to b in free energy
+     space. <span 
+class="ptmri7t-x-x-109">J Chem Phys</span>, 126(5):054103, 2007.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">   </span></span><a 
+ id="XDarve2008"></a>Eric Darve, David Rodríguez-Gómez, and Andrew Pohorille.  Adaptive biasing force method for
+     scalar and vector free energy calculations. <span 
+class="ptmri7t-x-x-109">J. Chem. Phys.</span>, 128(14):144120, 2008.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">   </span></span><a 
+ id="XHenin2004"></a>J. Hénin  and  C. Chipot.     Overcoming  free  energy  barriers  using  unconstrained  molecular
+     dynamics simulations. <span 
+class="ptmri7t-x-x-109">J. Chem. Phys.</span>, 121:2904–2914, 2004.
+                                                                                         
+                                                                                         
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">   </span></span><a 
+ id="XHenin2010"></a>J. Hénin,  G. Fiorin,  C. Chipot,  and  M. L.  Klein.     Exploring  multidimensional  free  energy
+     landscapes using time-dependent biases on collective variables. <span 
+class="ptmri7t-x-x-109">J. Chem. Theory Comput.</span>, 6(1):35–47,
+     2010.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">   </span></span><a 
+ id="XCarter1989"></a>A. Carter, E, G. Ciccotti, J. T. Hynes, and R. Kapral. Constrained reaction coordinate dynamics
+     for the simulation of rare events. <span 
+class="ptmri7t-x-x-109">Chem. Phys. Lett.</span>, 156:472–477, 1989.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">   </span></span><a 
+ id="XRuiz-Montero1997"></a>M. J. Ruiz-Montero, D. Frenkel, and J. J. Brey.  Eﬃcient schemes to compute diﬀusive barrier
+     crossing rates. <span 
+class="ptmri7t-x-x-109">Mol. Phys.</span>, 90:925–941, 1997.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [13]<span class="bibsp">   </span></span><a 
+ id="XdenOtter2000"></a>W. K. den Otter.   Thermodynamic integration of the free energy along a reaction coordinate in
+     cartesian coordinates. <span 
+class="ptmri7t-x-x-109">J. Chem. Phys.</span>, 112:7283–7292, 2000.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [14]<span class="bibsp">   </span></span><a 
+ id="XCiccotti2005"></a>Giovanni Ciccotti, Raymond Kapral, and Eric Vanden-Eijnden.   Blue moon sampling, vectorial
+     reaction coordinates, and unbiased constrained dynamics. <span 
+class="ptmri7t-x-x-109">ChemPhysChem</span>, 6(9):1809–1814, 2005.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [15]<span class="bibsp">   </span></span><a 
+ id="XLaio2002"></a>A. Laio  and  M. Parrinello.     Escaping  free-energy  minima.     <span 
+class="ptmri7t-x-x-109">Proc.  Natl.  Acad.  Sci.  USA</span>,
+     99(20):12562–12566, 2002.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [16]<span class="bibsp">   </span></span><a 
+ id="XGrubmuller1995"></a>Helmut   Grubmüller.       Predicting   slow   structural   transitions   in   macromolecular   systems:
+     Conformational ﬂooding. <span 
+class="ptmri7t-x-x-109">Phys. Rev. E</span>, 52(3):2893–2906, Sep 1995.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [17]<span class="bibsp">   </span></span><a 
+ id="XHuber1994"></a>T. Huber,  A. E.  Torda,  and  W.F.  van  Gunsteren.    Local  elevation  -  A  method  for  improving
+     the searching properties of molecular-dynamics simulation.   <span 
+class="ptmri7t-x-x-109">Journal of Computer-Aided Molecular</span>
+     <span 
+class="ptmri7t-x-x-109">Design</span>, 8(6):695–708, DEC 1994.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [18]<span class="bibsp">   </span></span><a 
+ id="XBussi2006"></a>G. Bussi,   A. Laio,   and   M. Parrinello.       Equilibrium   free   energies   from   nonequilibrium
+     metadynamics. <span 
+class="ptmri7t-x-x-109">Phys. Rev. Lett.</span>, 96(9):090601, 2006.
+                                                                                         
+                                                                                         
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [19]<span class="bibsp">   </span></span><a 
+ id="XBarducci2008"></a>Alessandro Barducci, Giovanni Bussi, and Michele Parrinello.  Well-tempered metadynamics: A
+     smoothly converging and tunable free-energy method. <span 
+class="ptmri7t-x-x-109">Phys. Rev. Lett.</span>, 100:020603, 2008.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [20]<span class="bibsp">   </span></span><a 
+ id="XRaiteri2005"></a>P. Raiteri, A. Laio, F. L. Gervasio, C. Micheletti, and M. Parrinello.  Eﬃcient reconstruction of
+     complex free energy landscapes by multiple walkers metadynamics. <span 
+class="ptmri7t-x-x-109">J. Phys. Chem. B</span>, 110(8):3533–9,
+     2005.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [21]<span class="bibsp">   </span></span><a 
+ id="XDeng2009"></a>Yuqing Deng and Benoît Roux.  Computations of standard binding free energies with molecular
+     dynamics simulations. <span 
+class="ptmri7t-x-x-109">J. Phys. Chem. B</span>, 113(8):2234–2246, 2009.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [22]<span class="bibsp">   </span></span><a 
+ id="XPitera2012"></a>Jed W. Pitera and John D. Chodera.  On the use of experimental observations to bias simulated
+     ensembles. <span 
+class="ptmri7t-x-x-109">J. Chem. Theory Comput.</span>, 8:3445–3451, 2012.
+     </p>
+     <p class="bibitem" ><span class="biblabel">
+ [23]<span class="bibsp">   </span></span><a 
+ id="XWhite2014"></a>A. D. White and G. A. Voth.  Eﬃcient and minimal method to bias molecular simulations with
+     experimental data. <span 
+class="ptmri7t-x-x-109">J. Chem. Theory Comput.</span>, ASAP, 2014.
+</p>
+     </div>
     
 </body></html> 
 
