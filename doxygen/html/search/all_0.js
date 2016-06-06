@@ -37,7 +37,6 @@ var searchData=
   ['ag_5ffeatures',['ag_features',['../classcolvarmodule_1_1atom__group.html#a713a16be1a065efd86e4e79a2bca521f',1,'colvarmodule::atom_group']]],
   ['allowed_5fkeywords',['allowed_keywords',['../classcolvarparse.html#a9e3abe5ee9dc4dc42bd5d4e13d385844',1,'colvarparse']]],
   ['alpha_5fangles',['alpha_angles',['../classcolvar_1_1alpha__angles.html',1,'colvar']]],
-  ['alpha_5fangles',['alpha_angles',['../classcolvar_1_1alpha__angles.html#a9874a3ab13c02ca9f01e7c459acb85e0',1,'colvar::alpha_angles']]],
   ['analyze',['analyze',['../classcolvar.html#a9467b434d2255a7a4df2f45252dc267d',1,'colvar::analyze()'],['../classcolvarbias.html#a91e264939d263605408765c9d1ef28ae',1,'colvarbias::analyze()'],['../classcolvarmodule.html#abb8a8246f0858993d60ecc5cd23a0020',1,'colvarmodule::analyze()']]],
   ['angle',['angle',['../classcolvar_1_1angle.html',1,'colvar']]],
   ['angle',['angle',['../classcolvar_1_1angle.html#afbd368a7ed393490899d59b56b0ff182',1,'colvar::angle::angle(std::string const &amp;conf)'],['../classcolvar_1_1angle.html#a9c2ac93d8259d52e1654c0db530b9cf4',1,'colvar::angle::angle(cvm::atom const &amp;a1, cvm::atom const &amp;a2, cvm::atom const &amp;a3)']]],

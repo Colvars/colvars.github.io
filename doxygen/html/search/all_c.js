@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['main_20page',['Main page',['../index.html',1,'']]],
   ['main',['main',['../classcolvar_1_1distance__z.html#a28518aa5c21b928dbde766a9da6812dd',1,'colvar::distance_z']]],
   ['map_5fgrid',['map_grid',['../classcolvar__grid.html#ae5730d70387aaad037d79794f4e594ac',1,'colvar_grid']]],
   ['mass',['mass',['../classcolvarmodule_1_1atom.html#ac62f1528c0cc97068d0e6218687c0bcd',1,'colvarmodule::atom']]],

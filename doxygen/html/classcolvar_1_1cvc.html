@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Collective Variables Module - Developer documentation: colvar::cvc Class Reference</title>
+<title>Collective Variables Module - Developer Documentation: colvar::cvc Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Collective Variables Module - Developer documentation
+   <div id="projectname">Collective Variables Module - Developer Documentation
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>-*- c++ -*-  
+<p>Colvar component (base class); most implementations of <a class="el" href="classcolvar_1_1cvc.html">cvc</a> utilize one or more <a class="el" href="classcolvarmodule_1_1atom.html">colvarmodule::atom</a> or <a class="el" href="classcolvarmodule_1_1atom__group.html">colvarmodule::atom_group</a> objects to access atoms.  
  <a href="classcolvar_1_1cvc.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="colvarcomp_8h_source.html">colvarcomp.h</a>&gt;</code></p>
@@ -107,7 +107,7 @@ Inheritance diagram for colvar::cvc:</div>
   <img src="classcolvar_1_1cvc.png" usemap="#colvar::cvc_map" alt=""/>
   <map id="colvar::cvc_map" name="colvar::cvc_map">
 <area href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="colvarparse" shape="rect" coords="0,0,136,24"/>
-<area href="classcvm_1_1deps.html" title="-*- c++ -*- " alt="cvm::deps" shape="rect" coords="146,0,282,24"/>
+<area href="classcvm_1_1deps.html" alt="cvm::deps" shape="rect" coords="146,0,282,24"/>
 <area href="classcolvar_1_1alpha__angles.html" title="Colvar component: alpha helix content of a contiguous segment of 5 or more residues, implemented as a sum of phi/psi dihedral angles and hydrogen bonds (colvarvalue::type_scalar type, range [0:1]) " alt="colvar::alpha_angles" shape="rect" coords="219,112,355,136"/>
 <area href="classcolvar_1_1angle.html" title="Colvar component: angle between the centers of mass of three groups (colvarvalue::type_scalar type..." alt="colvar::angle" shape="rect" coords="219,168,355,192"/>
 <area href="classcolvar_1_1cartesian.html" alt="colvar::cartesian" shape="rect" coords="219,224,355,248"/>
@@ -138,8 +138,9 @@ Public Member Functions</h2></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a47ace15dc26000806abbb092bef46ed6">setup</a> ()</td></tr>
 <tr class="memdesc:a47ace15dc26000806abbb092bef46ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">After construction, set data related to dependency handling. <br /></td></tr>
 <tr class="separator:a47ace15dc26000806abbb092bef46ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf7b5e8616a0e589df38bc2bfad5c31d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aaf7b5e8616a0e589df38bc2bfad5c31d">cvc</a> ()</td></tr>
-<tr class="memdesc:aaf7b5e8616a0e589df38bc2bfad5c31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor (used when <a class="el" href="classcolvar_1_1cvc.html">cvc</a> objects are declared within other ones)  <a href="#aaf7b5e8616a0e589df38bc2bfad5c31d">More...</a><br /></td></tr>
+<tr class="memitem:aaf7b5e8616a0e589df38bc2bfad5c31d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf7b5e8616a0e589df38bc2bfad5c31d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aaf7b5e8616a0e589df38bc2bfad5c31d">cvc</a> ()</td></tr>
+<tr class="memdesc:aaf7b5e8616a0e589df38bc2bfad5c31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor (used when <a class="el" href="classcolvar_1_1cvc.html">cvc</a> objects are declared within other ones) <br /></td></tr>
 <tr class="separator:aaf7b5e8616a0e589df38bc2bfad5c31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c7968e6dce6fb671a52c557a748ada4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c7968e6dce6fb671a52c557a748ada4"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a2c7968e6dce6fb671a52c557a748ada4">~cvc</a> ()</td></tr>
@@ -382,8 +383,9 @@ static std::vector&lt; feature * &gt;&#160;</td><td class="memItemRight" valign=
 <tr class="memdesc:ac389aefb3ebc44e8dbd3487272a4faae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the feature list for colvar. <br /></td></tr>
 <tr class="separator:ac389aefb3ebc44e8dbd3487272a4faae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
-<tr class="memitem:ad06ba6c3c854714a0622319e84a5796b inherit pub_static_attribs_classcolvarparse"><td class="memItemLeft" align="right" valign="top">static std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#ad06ba6c3c854714a0622319e84a5796b">white_space</a> = &quot; \t&quot;</td></tr>
-<tr class="memdesc:ad06ba6c3c854714a0622319e84a5796b inherit pub_static_attribs_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepted white space delimiters, used in <a class="el" href="classcolvarparse.html#a2e45c40c5ee0cfa7cb951ad0dc19320b" title="Low-level function for parsing configuration strings; automatically adds the requested keywords to th...">key_lookup()</a>  <a href="#ad06ba6c3c854714a0622319e84a5796b">More...</a><br /></td></tr>
+<tr class="memitem:ad06ba6c3c854714a0622319e84a5796b inherit pub_static_attribs_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad06ba6c3c854714a0622319e84a5796b"></a>
+static std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#ad06ba6c3c854714a0622319e84a5796b">white_space</a> = &quot; \t&quot;</td></tr>
+<tr class="memdesc:ad06ba6c3c854714a0622319e84a5796b inherit pub_static_attribs_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepted white space delimiters, used in <a class="el" href="classcolvarparse.html#a2e45c40c5ee0cfa7cb951ad0dc19320b" title="Low-level function for parsing configuration strings; automatically adds the requested keywords to th...">key_lookup()</a> <br /></td></tr>
 <tr class="separator:ad06ba6c3c854714a0622319e84a5796b inherit pub_static_attribs_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a171a237f2900e1e860b69bc7dc0cfc96 inherit pub_static_attribs_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a171a237f2900e1e860b69bc7dc0cfc96"></a>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a171a237f2900e1e860b69bc7dc0cfc96">dummy_string</a> = &quot;&quot;</td></tr>
@@ -536,8 +538,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:acb077a5cdd16f48b0ffd70d1cbd21d12 inherit pro_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>-*- c++ -*- </p>
-<p>Colvar component (base class); most implementations of <a class="el" href="classcolvar_1_1cvc.html">cvc</a> utilize one or more <a class="el" href="classcolvarmodule_1_1atom.html">colvarmodule::atom</a> or <a class="el" href="classcolvarmodule_1_1atom__group.html">colvarmodule::atom_group</a> objects to access atoms.</p>
+<div class="textblock"><p>Colvar component (base class); most implementations of <a class="el" href="classcolvar_1_1cvc.html">cvc</a> utilize one or more <a class="el" href="classcolvarmodule_1_1atom.html">colvarmodule::atom</a> or <a class="el" href="classcolvarmodule_1_1atom__group.html">colvarmodule::atom_group</a> objects to access atoms. </p>
 <p>A <a class="el" href="classcolvar_1_1cvc.html">cvc</a> object (or an object of a cvc-derived class) specifies how to calculate a collective variable, its gradients and other related physical quantities which do not depend only on the numeric value (the <a class="el" href="classcolvar.html">colvar</a> class already serves this purpose).</p>
 <p>No restriction is set to what kind of calculation a <a class="el" href="classcolvar_1_1cvc.html">cvc</a> object performs (usually calculate an analytical function of atomic coordinates). The only constraint is that the value calculated is implemented as a <a class="el" href="classcolvarvalue.html">colvarvalue</a> object. This serves to provide a unique way to calculate scalar and non-scalar collective variables, and specify if and how they can be combined together by the parent <a class="el" href="classcolvar.html">colvar</a> object.</p>
 <p><b> If you wish to implement a new collective variable component, you should write your own class by inheriting directly from <a class="el" href="classcolvar_1_1cvc.html">cvc</a>, or one of its derived classes (for instance, <a class="el" href="classcolvar_1_1distance.html">distance</a> is frequently used, because it provides useful data and function members for any colvar based on two atom groups). The steps are: </p><dl class="section user"><dt></dt><dd><ol type="1">
@@ -579,24 +580,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="aaf7b5e8616a0e589df38bc2bfad5c31d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">colvar::cvc::cvc </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Default constructor (used when <a class="el" href="classcolvar_1_1cvc.html">cvc</a> objects are declared within other ones) </p>
-<p>-*- c++ -*- </p>
 
 </div>
 </div>
@@ -668,7 +651,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Square distance between x1 and x2 (can be redefined to transparently implement constraints, symmetries and periodicities) </p>
-<p><a class="el" href="classcolvar_1_1cvc.html#a3ec23b3468c099bdbf45fa551ae7cf50" title="Square distance between x1 and x2 (can be redefined to transparently implement constraints, symmetries and periodicities) ">colvar::cvc::dist2()</a> and the related functions are declared as "const" functions, but not "static", because additional parameters defining the metrics (e.g. the periodicity) may be specific to each <a class="el" href="classcolvar_1_1cvc.html" title="-*- c++ -*- ">colvar::cvc</a> object.</p>
+<p><a class="el" href="classcolvar_1_1cvc.html#a3ec23b3468c099bdbf45fa551ae7cf50" title="Square distance between x1 and x2 (can be redefined to transparently implement constraints, symmetries and periodicities) ">colvar::cvc::dist2()</a> and the related functions are declared as "const" functions, but not "static", because additional parameters defining the metrics (e.g. the periodicity) may be specific to each <a class="el" href="classcolvar_1_1cvc.html" title="Colvar component (base class); most implementations of cvc utilize one or more colvarmodule::atom or ...">colvar::cvc</a> object.</p>
 <p>If symmetries or periodicities are present, the <a class="el" href="classcolvar_1_1cvc.html#a3ec23b3468c099bdbf45fa551ae7cf50" title="Square distance between x1 and x2 (can be redefined to transparently implement constraints, symmetries and periodicities) ">colvar::cvc::dist2()</a> should be redefined to return the "closest distance" value and <a class="el" href="classcolvar_1_1cvc.html#a2194bb0c763cb4bd24f8edbd3cb5a173" title="Gradient(with respect to x1) of the square distance (can be redefined to transparently implement cons...">colvar::cvc::dist2_lgrad()</a>, <a class="el" href="classcolvar_1_1cvc.html#a3ae2dd5e70f9e20ab1b75f3685630138" title="Gradient(with respect to x2) of the square distance (can be redefined to transparently implement cons...">colvar::cvc::dist2_rgrad()</a> to return its gradients.</p>
 <p>If constraints are present (and not already implemented by any of the <a class="el" href="classcolvarvalue.html">colvarvalue</a> types), the <a class="el" href="classcolvar_1_1cvc.html#a2194bb0c763cb4bd24f8edbd3cb5a173" title="Gradient(with respect to x1) of the square distance (can be redefined to transparently implement cons...">colvar::cvc::dist2_lgrad()</a> and <a class="el" href="classcolvar_1_1cvc.html#a3ae2dd5e70f9e20ab1b75f3685630138" title="Gradient(with respect to x2) of the square distance (can be redefined to transparently implement cons...">colvar::cvc::dist2_rgrad()</a> functions should be redefined to provide a gradient which is compatible with the constraint, i.e. already deprived of its component normal to the constraint hypersurface.</p>
 <p>Finally, another useful application, if you are performing very many operations with these functions, could be to override the <a class="el" href="classcolvarvalue.html">colvarvalue</a> member functions and access directly its member data. For instance: to define dist2(x1,x2) as (x2.real_value-x1.real_value)*(x2.real_value-x1.real_value) in case of a scalar <a class="el" href="classcolvarvalue.html">colvarvalue</a> type. </p>
@@ -700,7 +683,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 3 2016 00:19:24 for Collective Variables Module - Developer documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 6 2016 21:54:04 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
