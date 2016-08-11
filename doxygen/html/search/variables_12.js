@@ -14,6 +14,5 @@ var searchData=
   ['state_5ffile_5fstep',['state_file_step',['../classcolvarbias__meta.html#ae7893bdbee31a57ddc07fb5043b972e5',1,'colvarbias_meta']]],
   ['sup_5fcoeff',['sup_coeff',['../classcolvar_1_1cvc.html#a0fcbf9fc6484f6ea71deb01472d90f95',1,'colvar::cvc']]],
   ['sup_5fnp',['sup_np',['../classcolvar_1_1cvc.html#a0a5b794497d12e7a37a5666f1eb1c85c',1,'colvar::cvc']]],
-  ['sw',['sW',['../classcolvarbias__meta_1_1hill.html#aa8583e52b1545df70c27b2fc440384e0',1,'colvarbias_meta::hill']]],
-  ['system_5fforce',['system_force',['../classcolvarmodule_1_1atom.html#a66ee2a5a95819aa0344285e933f07f52',1,'colvarmodule::atom']]]
+  ['sw',['sW',['../classcolvarbias__meta_1_1hill.html#aa8583e52b1545df70c27b2fc440384e0',1,'colvarbias_meta::hill']]]
 ];

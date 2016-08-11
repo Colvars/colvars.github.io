@@ -142,14 +142,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#adf2fe96c0a54e0ae8f6d33d69a4a4d2f">rand_gaussian</a> ()</td></tr>
 <tr class="memdesc:adf2fe96c0a54e0ae8f6d33d69a4a4d2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pseudo-random number with Gaussian distribution. <br /></td></tr>
 <tr class="separator:adf2fe96c0a54e0ae8f6d33d69a4a4d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9840946acd08c61a0f0fa7cfe20c4528"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9840946acd08c61a0f0fa7cfe20c4528"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a9840946acd08c61a0f0fa7cfe20c4528">frame</a> ()</td></tr>
-<tr class="memdesc:a9840946acd08c61a0f0fa7cfe20c4528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current frame number. <br /></td></tr>
-<tr class="separator:a9840946acd08c61a0f0fa7cfe20c4528"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f2210fbe056bf766647e748e033258f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f2210fbe056bf766647e748e033258f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a3f2210fbe056bf766647e748e033258f">frame</a> (int f)</td></tr>
-<tr class="memdesc:a3f2210fbe056bf766647e748e033258f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current frame number. <br /></td></tr>
-<tr class="separator:a3f2210fbe056bf766647e748e033258f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723b2b58e02e1fae2bb3b69fa025bbd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a723b2b58e02e1fae2bb3b69fa025bbd4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a723b2b58e02e1fae2bb3b69fa025bbd4">get_frame</a> (long int &amp;f)</td></tr>
+<tr class="memdesc:a723b2b58e02e1fae2bb3b69fa025bbd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current frame number. <br /></td></tr>
+<tr class="separator:a723b2b58e02e1fae2bb3b69fa025bbd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381d5748b576c668120d9822a7e3d97d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a381d5748b576c668120d9822a7e3d97d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a381d5748b576c668120d9822a7e3d97d">set_frame</a> (long int f)</td></tr>
+<tr class="memdesc:a381d5748b576c668120d9822a7e3d97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current frame number (as well as <a class="el" href="classcolvarmodule.html#aa18d04676cef52dbe7e577a0ba42c334" title="Current step number. ">colvarmodule::it</a>) <br /></td></tr>
+<tr class="separator:a381d5748b576c668120d9822a7e3d97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a299413579abe4c921f088d14f7ee0c99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a299413579abe4c921f088d14f7ee0c99"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>input_prefix</b> ()</td></tr>
 <tr class="separator:a299413579abe4c921f088d14f7ee0c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,10 +163,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>output_prefix<
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a2fdb335a6d3dab1ef8075851966a06ee">add_energy</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> energy)</td></tr>
 <tr class="memdesc:a2fdb335a6d3dab1ef8075851966a06ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass restraint energy value for current timestep to MD engine. <br /></td></tr>
 <tr class="separator:a2fdb335a6d3dab1ef8075851966a06ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06d2900812635f5a28e7eb09c7041dac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06d2900812635f5a28e7eb09c7041dac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a06d2900812635f5a28e7eb09c7041dac">request_system_force</a> (bool yesno)</td></tr>
-<tr class="memdesc:a06d2900812635f5a28e7eb09c7041dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell the proxy whether system forces are needed (may not always be available) <br /></td></tr>
-<tr class="separator:a06d2900812635f5a28e7eb09c7041dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a505ea542cb5170da82404ab811f69d1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a505ea542cb5170da82404ab811f69d1c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a505ea542cb5170da82404ab811f69d1c">request_total_force</a> (bool yesno)</td></tr>
+<tr class="memdesc:a505ea542cb5170da82404ab811f69d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell the proxy whether total forces are needed (may not always be available) <br /></td></tr>
+<tr class="separator:a505ea542cb5170da82404ab811f69d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98cde9d1b598a16afdced042de05f0d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98cde9d1b598a16afdced042de05f0d8"></a>
 <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a98cde9d1b598a16afdced042de05f0d8">position_distance</a> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2)</td></tr>
 <tr class="memdesc:a98cde9d1b598a16afdced042de05f0d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions. <br /></td></tr>
@@ -351,10 +351,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#abf480a88d18f34b1e3fd6b42432c0091">get_atom_position</a> (int index) const </td></tr>
 <tr class="memdesc:abf480a88d18f34b1e3fd6b42432c0091 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the current position of the given atom. <br /></td></tr>
 <tr class="separator:abf480a88d18f34b1e3fd6b42432c0091 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa05f64eb1d7da7f623e9a7f6ee5060f inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa05f64eb1d7da7f623e9a7f6ee5060f"></a>
-<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#aaa05f64eb1d7da7f623e9a7f6ee5060f">get_atom_system_force</a> (int index) const </td></tr>
-<tr class="memdesc:aaa05f64eb1d7da7f623e9a7f6ee5060f inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the current total system force of the given atom. <br /></td></tr>
-<tr class="separator:aaa05f64eb1d7da7f623e9a7f6ee5060f inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc69dce0ed3c54c438ea1ed548c6e83 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedc69dce0ed3c54c438ea1ed548c6e83"></a>
+<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#aedc69dce0ed3c54c438ea1ed548c6e83">get_atom_total_force</a> (int index) const </td></tr>
+<tr class="memdesc:aedc69dce0ed3c54c438ea1ed548c6e83 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the current total force of the given atom. <br /></td></tr>
+<tr class="separator:aedc69dce0ed3c54c438ea1ed548c6e83 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab708b8c5a298a940606f2f59bb9d732a inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab708b8c5a298a940606f2f59bb9d732a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#ab708b8c5a298a940606f2f59bb9d732a">apply_atom_force</a> (int index, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;new_force)</td></tr>
 <tr class="memdesc:ab708b8c5a298a940606f2f59bb9d732a inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request that this force is applied to the given atom. <br /></td></tr>
@@ -378,9 +378,6 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 <tr class="memitem:aaed0f5dba8a83078654ec2d72e8e84e6 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaed0f5dba8a83078654ec2d72e8e84e6"></a>
 std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>modify_atom_total_forces</b> ()</td></tr>
 <tr class="separator:aaed0f5dba8a83078654ec2d72e8e84e6 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a103d29ef429887faa3d54f04e8f097da inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a103d29ef429887faa3d54f04e8f097da"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>modify_atom_applied_forces</b> ()</td></tr>
-<tr class="separator:a103d29ef429887faa3d54f04e8f097da inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a437a8291a7cec2b3a930167894d3389d inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a437a8291a7cec2b3a930167894d3389d"></a>
 std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>modify_atom_new_colvar_forces</b> ()</td></tr>
 <tr class="separator:a437a8291a7cec2b3a930167894d3389d inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -415,10 +412,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a6e9fd64ce4cf4a0d3280824088a07296">get_atom_group_com</a> (int index) const </td></tr>
 <tr class="memdesc:a6e9fd64ce4cf4a0d3280824088a07296 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the current position of the center of mass given atom group. <br /></td></tr>
 <tr class="separator:a6e9fd64ce4cf4a0d3280824088a07296 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187dac7f8a31c5b78efbb30373fefd30 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a187dac7f8a31c5b78efbb30373fefd30"></a>
-<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a187dac7f8a31c5b78efbb30373fefd30">get_atom_group_system_force</a> (int index) const </td></tr>
-<tr class="memdesc:a187dac7f8a31c5b78efbb30373fefd30 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the current total system force of the given atom group. <br /></td></tr>
-<tr class="separator:a187dac7f8a31c5b78efbb30373fefd30 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac52c940e651b492bc27cf0033e10d22 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac52c940e651b492bc27cf0033e10d22"></a>
+<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#aac52c940e651b492bc27cf0033e10d22">get_atom_group_total_force</a> (int index) const </td></tr>
+<tr class="memdesc:aac52c940e651b492bc27cf0033e10d22 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the current total force of the given atom group. <br /></td></tr>
+<tr class="separator:aac52c940e651b492bc27cf0033e10d22 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabadecd4c80a6904f6f899aa622de2c0 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabadecd4c80a6904f6f899aa622de2c0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#aabadecd4c80a6904f6f899aa622de2c0">apply_atom_group_force</a> (int index, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;new_force)</td></tr>
 <tr class="memdesc:aabadecd4c80a6904f6f899aa622de2c0 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request that this force is applied to the given atom group. <br /></td></tr>
@@ -483,10 +480,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 DrawMolecule *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a93653170953144fa86a880181e589023">vmdmol</a></td></tr>
 <tr class="memdesc:a93653170953144fa86a880181e589023"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to VMD molecule (derived from vmdmolid) <br /></td></tr>
 <tr class="separator:a93653170953144fa86a880181e589023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abba2de3af10f890734006b19cfe34071"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abba2de3af10f890734006b19cfe34071"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#abba2de3af10f890734006b19cfe34071">vmdmol_frame</a></td></tr>
-<tr class="memdesc:abba2de3af10f890734006b19cfe34071"><td class="mdescLeft">&#160;</td><td class="mdescRight">current frame (returned by vmdmol-&gt;<a class="el" href="classcolvarproxy__vmd.html#a9840946acd08c61a0f0fa7cfe20c4528" title="Get the current frame number. ">frame()</a>) <br /></td></tr>
-<tr class="separator:abba2de3af10f890734006b19cfe34071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23e9eac128153a22834f9a21e252a41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa23e9eac128153a22834f9a21e252a41"></a>
+long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#aa23e9eac128153a22834f9a21e252a41">vmdmol_frame</a></td></tr>
+<tr class="memdesc:aa23e9eac128153a22834f9a21e252a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">current frame (returned by vmdmol-&gt;frame()) <br /></td></tr>
+<tr class="separator:aa23e9eac128153a22834f9a21e252a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11d498ad34c25eee1264d11a5c56923b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11d498ad34c25eee1264d11a5c56923b"></a>
 Inform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a11d498ad34c25eee1264d11a5c56923b">msgColvars</a></td></tr>
 <tr class="memdesc:a11d498ad34c25eee1264d11a5c56923b"><td class="mdescLeft">&#160;</td><td class="mdescRight">output object <br /></td></tr>
@@ -524,10 +521,6 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a4d19672fc1a7702d6717de51ea6ba3d6">atoms_total_forces</a></td></tr>
 <tr class="memdesc:a4d19672fc1a7702d6717de51ea6ba3d6 inherit pro_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most recent total forces on each atom. <br /></td></tr>
 <tr class="separator:a4d19672fc1a7702d6717de51ea6ba3d6 inherit pro_attribs_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96eafc10c7e10a7f37511bc305aef835 inherit pro_attribs_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96eafc10c7e10a7f37511bc305aef835"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a96eafc10c7e10a7f37511bc305aef835">atoms_applied_forces</a></td></tr>
-<tr class="memdesc:a96eafc10c7e10a7f37511bc305aef835 inherit pro_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most recent forces applied by external potentials onto each atom. <br /></td></tr>
-<tr class="separator:a96eafc10c7e10a7f37511bc305aef835 inherit pro_attribs_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77fe46896020419032f645ba19e982d5 inherit pro_attribs_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77fe46896020419032f645ba19e982d5"></a>
 std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a77fe46896020419032f645ba19e982d5">atoms_new_colvar_forces</a></td></tr>
 <tr class="memdesc:a77fe46896020419032f645ba19e982d5 inherit pro_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces applied from colvars, to be communicated to the MD integrator. <br /></td></tr>
@@ -556,10 +549,6 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#abc1231f2164b4305319c4b7e63478a7c">atom_groups_total_forces</a></td></tr>
 <tr class="memdesc:abc1231f2164b4305319c4b7e63478a7c inherit pro_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most recently updated total forces on the com of each group. <br /></td></tr>
 <tr class="separator:abc1231f2164b4305319c4b7e63478a7c inherit pro_attribs_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a305476a9734adb869e8ab2f6ef81f24d inherit pro_attribs_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a305476a9734adb869e8ab2f6ef81f24d"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a305476a9734adb869e8ab2f6ef81f24d">atom_groups_applied_forces</a></td></tr>
-<tr class="memdesc:a305476a9734adb869e8ab2f6ef81f24d inherit pro_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most recent forces applied by external potentials onto each group. <br /></td></tr>
-<tr class="separator:a305476a9734adb869e8ab2f6ef81f24d inherit pro_attribs_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f3787aa28c642a74c1bb66b600abd8f inherit pro_attribs_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f3787aa28c642a74c1bb66b600abd8f"></a>
 std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a0f3787aa28c642a74c1bb66b600abd8f">atom_groups_new_colvar_forces</a></td></tr>
 <tr class="memdesc:a0f3787aa28c642a74c1bb66b600abd8f inherit pro_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces applied from colvars, to be communicated to the MD integrator. <br /></td></tr>
@@ -763,7 +752,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 6 2016 21:54:05 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 08:43:52 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -8,6 +8,7 @@ var searchData=
   ['b_5fchg_5fforce_5fk',['b_chg_force_k',['../classcolvarbias__restraint.html#aa3c87e456eef8d05fa30b2ea5385b3d0',1,'colvarbias_restraint']]],
   ['b_5fdebug_5fgradients',['b_debug_gradients',['../classcolvarmodule_1_1rotation.html#aa4a250ae92a59d20a6dd2d9c3de8820d',1,'colvarmodule::rotation']]],
   ['b_5fdummy',['b_dummy',['../classcolvarmodule_1_1atom__group.html#ab6eedc3e64db231962f90bbb56659192',1,'colvarmodule::atom_group']]],
+  ['b_5ffit_5fgradients',['b_fit_gradients',['../classcolvarmodule_1_1atom__group.html#ac2e1b32ccadb24b62e6fdd8b51e93071',1,'colvarmodule::atom_group']]],
   ['b_5fgroup2_5fcenter_5fonly',['b_group2_center_only',['../classcolvar_1_1coordnum.html#a509ab793160d4675dfd0c1ae89e96204',1,'colvar::coordnum']]],
   ['b_5fhills_5ftraj',['b_hills_traj',['../classcolvarbias__meta.html#a9e4580ba8205f845de2a5880bc03495a',1,'colvarbias_meta']]],
   ['b_5fno_5fpbc',['b_no_PBC',['../classcolvar_1_1distance.html#aaf60a77886014e242d33ccd49b96e451',1,'colvar::distance::b_no_PBC()'],['../classcolvar_1_1distance__z.html#af70d72d427e994d9f7321fdc31d17c87',1,'colvar::distance_z::b_no_PBC()'],['../classcolvar_1_1distance__pairs.html#a0f1c665cc255610ae81ee237f7d0e76b',1,'colvar::distance_pairs::b_no_PBC()']]],
@@ -22,5 +23,6 @@ var searchData=
   ['b_5fuser_5fdefined_5ffit',['b_user_defined_fit',['../classcolvarmodule_1_1atom__group.html#a7d985d9fb4a666dde3011681b190cccc',1,'colvarmodule::atom_group']]],
   ['bias_5fenergy',['bias_energy',['../classcolvarbias.html#a33f857771c16fc663e0efc8ad549e829',1,'colvarbias']]],
   ['bias_5ftemperature',['bias_temperature',['../classcolvarbias__meta.html#a54607f583f3e1d3c36a52ec3a6852c42',1,'colvarbias_meta']]],
+  ['bias_5ftype',['bias_type',['../classcolvarbias.html#acb2e5c8601ca9f25869c8197d62c5450',1,'colvarbias']]],
   ['biases',['biases',['../classcolvar.html#a1eebc46ed5c021fc18a1b8f374db4a21',1,'colvar::biases()'],['../classcolvarmodule.html#afcd8c313c814589223ea03ca85cad895',1,'colvarmodule::biases()']]]
 ];

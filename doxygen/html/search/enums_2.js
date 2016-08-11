@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['features_5fatomgroup',['features_atomgroup',['../classcvm_1_1deps.html#adf9d516a0648807e1e74fa7379a70ba0',1,'cvm::deps']]],
-  ['features_5fbiases',['features_biases',['../classcvm_1_1deps.html#a72082bede088e4a09d414ddd2cb95f41',1,'cvm::deps']]],
-  ['features_5fcolvar',['features_colvar',['../classcvm_1_1deps.html#aefe04baa49b10bda367602a42ebad920',1,'cvm::deps']]],
-  ['features_5fcvc',['features_cvc',['../classcvm_1_1deps.html#aa96b576ea33a6a1dbf2c94f2bd29c0b9',1,'cvm::deps']]]
+  ['features_5fatomgroup',['features_atomgroup',['../classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95',1,'colvardeps']]],
+  ['features_5fbiases',['features_biases',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603da',1,'colvardeps']]],
+  ['features_5fcolvar',['features_colvar',['../classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628',1,'colvardeps']]],
+  ['features_5fcvc',['features_cvc',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6',1,'colvardeps']]]
 ];

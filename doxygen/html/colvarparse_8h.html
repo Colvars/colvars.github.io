@@ -84,8 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">colvarparse.h File Reference</div>  </div>
 </div><!--header-->
@@ -97,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="colvarmodule_8h_source.html">colvarmodule.h</a>&quot;</code><br />
 <code>#include &quot;colvarvalue.h&quot;</code><br />
+<code>#include &quot;colvardeps.h&quot;</code><br />
 </div>
 <p><a href="colvarparse_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -108,84 +108,13 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse_1_1read__block.html">colvarparse::read_block</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to read a block of the type "key { ... }" from a stream and store it in a string.  <a href="classcolvarparse_1_1read__block.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ae343b0904e26f300ecbbd2a8436f832d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>_get_keyval_scalar_proto_</b>(_type_, _def_value_)</td></tr>
-<tr class="separator:ae343b0904e26f300ecbbd2a8436f832d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac313c30ea9ae7deff59cb7df62d91707"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>_get_keyval_vector_proto_</b>(_type_, _def_value_)</td></tr>
-<tr class="separator:ac313c30ea9ae7deff59cb7df62d91707"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Parsing functions for collective variables. </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="ae343b0904e26f300ecbbd2a8436f832d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _get_keyval_scalar_proto_</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">_type_, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">_def_value_&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordtype">bool</span> get_keyval(std::string <span class="keyword">const</span> &amp;conf,                      \</div>
-<div class="line">                  <span class="keywordtype">char</span> <span class="keyword">const</span> *key,                              \</div>
-<div class="line">                  _type_ &amp;value,                                \</div>
-<div class="line">                  _type_ <span class="keyword">const</span> &amp;def_value = _def_value_,        \</div>
-<div class="line">                  Parse_Mode <span class="keyword">const</span> parse_mode = parse_normal)</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a class="anchor" id="ac313c30ea9ae7deff59cb7df62d91707"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _get_keyval_vector_proto_</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">_type_, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">_def_value_&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordtype">bool</span> get_keyval(std::string <span class="keyword">const</span> &amp;conf,                              \</div>
-<div class="line">                  <span class="keywordtype">char</span> <span class="keyword">const</span> *key,                                      \</div>
-<div class="line">                  std::vector&lt;_type_&gt; &amp;values,                          \</div>
-<div class="line">                  std::vector&lt;_type_&gt; <span class="keyword">const</span> &amp;def_values =               \</div>
-<div class="line">                  std::vector&lt;_type_&gt; (0, static_cast&lt;_type_&gt;(_def_value_)), \</div>
-<div class="line">                  Parse_Mode <span class="keyword">const</span> parse_mode = parse_normal)</div>
-</div><!-- fragment -->
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 6 2016 21:54:04 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 08:43:52 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

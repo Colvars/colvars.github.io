@@ -91,8 +91,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * $Source: /namd/cvsroot/namd2/src/SimParameters.h,v $</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * $Author: jim $</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * $Date: 2016/03/02 21:33:06 $</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * $Revision: 1.1240 $</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * $Date: 2016/05/24 19:05:41 $</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * $Revision: 1.1241 $</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *****************************************************************************/</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef SIMPARAMETERS_H</span></div>
@@ -568,512 +568,513 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    Bool fixedAtomsForces;      <span class="comment">//  Calculate forces anyway?</span></div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    Bool fixedAtomsForceOutput; <span class="comment">// Output fixed forces?</span></div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    Bool langevinOn;        <span class="comment">//  Flag TRUE-&gt; langevin dynamics active</span></div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    BigReal langevinTemp;       <span class="comment">//  Temperature for Langevin dynamics</span></div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    BigReal langevinDamping;    <span class="comment">//  Damping coefficient (1/ps)</span></div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    Bool langevinHydrogen;      <span class="comment">//  Flag TRUE-&gt; apply to hydrogens</span></div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    Bool langevin_useBAOAB;     <span class="comment">//  Flag TRUE-&gt; use the experimental BAOAB integrator for NVT instead of the BBK one</span></div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;                    <span class="comment">//  See Leimkuhler and Matthews (AMRX 2012); implemented in NAMD by CM June2012</span></div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="comment">// BEGIN LA</span></div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    Bool loweAndersenOn;        <span class="comment">//  Flag TRUE-&gt; Lowe-Andersen dynamics active</span></div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    BigReal loweAndersenTemp;   <span class="comment">//  Temperature for Lowe-Andersen dynamics</span></div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    BigReal loweAndersenRate;   <span class="comment">//  Collision frequency for Lowe-Andersen dynamics (1/ps)</span></div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    BigReal loweAndersenCutoff; <span class="comment">//  Cutoff radius for Lowe-Andersen dynamics</span></div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="comment">// END LA</span></div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    Bool globalOn;          <span class="comment">//  Flag TRUE-&gt; use global integrator</span></div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    Bool dihedralOn;        <span class="comment">//  Flag TRUE-&gt; dihedral dynamics active</span></div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    Bool COLDOn;            <span class="comment">//  Flag TRUE-&gt; constrained overdamped</span></div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;                    <span class="comment">//  langevin dynamics active</span></div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    BigReal COLDRate;       <span class="comment">//  Damping coefficient for COLD.</span></div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    BigReal COLDTemp;       <span class="comment">//  Temperature for COLD.</span></div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    Bool tCoupleOn;         <span class="comment">//  Flag TRUE-&gt; Temperature coupling</span></div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                    <span class="comment">//  active</span></div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    BigReal tCoupleTemp;        <span class="comment">//  Temperature for temp coupling</span></div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="keywordtype">int</span> rescaleFreq;        <span class="comment">//  Velocity rescale frequency</span></div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    BigReal rescaleTemp;        <span class="comment">//  Temperature to rescale to</span></div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        Bool accelMDOn;                 <span class="comment">//  Perform accelerated MD</span></div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        Bool accelMDdihe;               <span class="comment">//  Apply boost to the dihedral potential</span></div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        Bool accelMDdual;               <span class="comment">//  dual boost mode</span></div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        Bool accelMDDebugOn;            <span class="comment">//  Debugging accelerated MD</span></div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        BigReal accelMDFirstStep;       <span class="comment">//  First aMD step</span></div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        BigReal accelMDLastStep;        <span class="comment">//  Last aMD step</span></div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        <span class="keywordtype">int</span> accelMDOutFreq;             <span class="comment">//  aMD output frequency</span></div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        BigReal accelMDE;               <span class="comment">//  aMD E</span></div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        BigReal accelMDalpha;           <span class="comment">//  aMD alpha</span></div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        BigReal accelMDTE;              <span class="comment">//  E for total potential in the dual boost mode</span></div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        BigReal accelMDTalpha;          <span class="comment">//  alpha for total potential in the dual boost mode</span></div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        <span class="comment">/* Begin Adaptive Temperature Sampling */</span></div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        Bool adaptTempOn;                      <span class="comment">//  is adaptTempOn</span></div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        Bool adaptTempDebug;                   <span class="comment">//  Debuggin adaptive temperature sampling</span></div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        <span class="keywordtype">int</span> adaptTempFirstStep;                <span class="comment">//  First adaptTemp step</span></div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        <span class="keywordtype">int</span> adaptTempLastStep;                 <span class="comment">//  Last adaptTemp step</span></div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        <span class="keywordtype">int</span> adaptTempOutFreq;                  <span class="comment">//  adaptTemp output frequency</span></div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        <span class="keywordtype">int</span> adaptTempFreq;                     <span class="comment">//  Steps between adaptTemp updates</span></div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        BigReal adaptTempTmin;                 <span class="comment">//  Lower temperature bound</span></div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        BigReal adaptTempTmax;                 <span class="comment">//  Upper temperature bound</span></div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        BigReal adaptTempAutoDt;               <span class="comment">//  Auto jump size. Value determines upper bound, adaotTempDt determines lower bound</span></div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        <span class="keywordtype">int</span> adaptTempBins;                     <span class="comment">//  Number of bins to store average energy values</span></div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        BigReal adaptTempDt;                   <span class="comment">//  timestep for adaptTemp updates - only affects Temperature random walk</span></div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        BigReal adaptTempCgamma;               <span class="comment">//  Cgamma variable for adaptive bin averaging Cgamma = 0 is normal Averaging. 1 &gt; Cgamma &gt;= 0</span></div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        Bool adaptTempLangevin;                <span class="comment">//  Couple to Langevin Thermostat</span></div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        Bool adaptTempRescale;                 <span class="comment">//  Couple to Vel. Rescaling</span></div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        <span class="keywordtype">char</span> adaptTempInFile[128];             <span class="comment">//  Restart information for adaptTemp to read</span></div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        <span class="keywordtype">char</span> adaptTempRestartFile[128];        <span class="comment">//  File to write restart information</span></div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        <span class="keywordtype">int</span>  adaptTempRestartFreq;             <span class="comment">//  Frequency of writing restart output</span></div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        Bool adaptTempRandom;                  <span class="comment">//  Do we assign random temperatures when we step out of [Tmin,Tmax]?</span></div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        <span class="comment">/* End Adaptive Temperature Sampling */</span></div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <span class="keywordtype">int</span> reassignFreq;       <span class="comment">//  Velocity reassignment frequency</span></div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    BigReal reassignTemp;       <span class="comment">//  Temperature to reassign to</span></div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    BigReal reassignIncr;       <span class="comment">//  Added to reassignTemp each time</span></div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    BigReal reassignHold;       <span class="comment">//  Hold reassignTemp at this value</span></div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    Bool useGroupPressure;      <span class="comment">//  Use group rather than atomic</span></div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;                    <span class="comment">//  quantities for pressure calc</span></div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    Bool excludeFromPressure;   <span class="comment">//  Flag TRUE-&gt; some atoms not rescaled</span></div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    Bool useFlexibleCell;       <span class="comment">//  Use anisotropic cell fluctuations</span></div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    Bool useConstantArea;       <span class="comment">//  x,y dimensions fixed.</span></div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    Bool useConstantRatio;      <span class="comment">//  x,y ratio fixed.</span></div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;  Bool fixCellDims; <span class="comment">// fix the cell dimensions</span></div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;  Bool fixCellDimX;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;  Bool fixCellDimY;</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;  Bool fixCellDimZ;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    Bool berendsenPressureOn;   <span class="comment">//  Berendsen pressure bath</span></div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    BigReal berendsenPressureTarget;</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    BigReal berendsenPressureCompressibility;</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    BigReal berendsenPressureRelaxationTime;</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    <span class="keywordtype">int</span> berendsenPressureFreq;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    Bool langevinPistonOn;      <span class="comment">//  Langevin piston pressure control</span></div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    Bool langevinPistonBarrier; <span class="comment">//  Turn off to extrapolate cell</span></div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    BigReal langevinPistonTarget;</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    BigReal langevinPistonPeriod;</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    BigReal langevinPistonDecay;</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    BigReal langevinPistonTemp;</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    Bool multigratorOn;     <span class="comment">// Multigrator temperature and/or pressure control</span></div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    BigReal multigratorPressureTarget;</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    BigReal multigratorPressureRelaxationTime;</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    <span class="keywordtype">int</span> multigratorPressureFreq;</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    BigReal multigratorTemperatureTarget;</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    BigReal multigratorTemperatureRelaxationTime;</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    <span class="keywordtype">int</span> multigratorTemperatureFreq;</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    <span class="keywordtype">int</span> multigratorNoseHooverChainLength;</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        BigReal surfaceTensionTarget;</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        Bool pressureProfileOn;         <span class="comment">// Compute lateral pressure profile?</span></div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        <span class="keywordtype">int</span> pressureProfileSlabs;       <span class="comment">// Number of slabs</span></div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        <span class="keywordtype">int</span> pressureProfileFreq;        <span class="comment">// How often to store profile data</span></div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        <span class="keywordtype">int</span> pressureProfileAtomTypes;</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        Bool pressureProfileEwaldOn;    <span class="comment">// Compute Ewald contribution?</span></div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        <span class="keywordtype">int</span> pressureProfileEwaldX;</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        <span class="keywordtype">int</span> pressureProfileEwaldY;</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        <span class="keywordtype">int</span> pressureProfileEwaldZ;</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    zVector strainRate;</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    zVector strainRate2; <span class="comment">// off diagonal elements (xy, xz, yz)</span></div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> randomSeed;    <span class="comment">//  Seed for random number generator</span></div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    Bool FMAOn;                     <span class="comment">//  Flag TRUE-&gt; FMA active</span></div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    <span class="keywordtype">int</span> FMALevels;          <span class="comment">//  Number of Levels for FMA</span></div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    <span class="keywordtype">int</span> FMAMp;          <span class="comment">//  Number of multipole terms for FMA</span></div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    Bool FMAFFTOn;          <span class="comment">//  FFT on/off flag for FMA</span></div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    <span class="keywordtype">int</span> FMAFFTBlock;        <span class="comment">//  FFT blocking factor for FMA</span></div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    Bool fullDirectOn;      <span class="comment">//  Should direct calculations of</span></div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                    <span class="comment">//  full electrostatics be performed?</span></div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        Bool MSMOn;      <span class="comment">// enable MSM (multilevel summation method)</span></div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                         <span class="comment">// for long-range electrostatics</span></div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        <span class="keywordtype">int</span> MSMQuality;  <span class="comment">// choose MSM quality 0 (low) - 3 (high), using</span></div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                         <span class="comment">// optimal combination of approximation and splitting</span></div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                         <span class="comment">// defaults to &quot;low&quot; for fastest performance</span></div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;        <span class="keywordtype">int</span> MSMApprox;   <span class="comment">// choose MSM approximation</span></div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                         <span class="comment">// defaults to &quot;cubic&quot; (low) for fastest performance</span></div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;        <span class="keywordtype">int</span> MSMSplit;    <span class="comment">// choose MSM splitting function</span></div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                         <span class="comment">// defaults to &quot;Taylor2&quot; (low) for fastest performance</span></div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;        <span class="keywordtype">int</span> MSMLevels;   <span class="comment">// select number of MSM levels</span></div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                         <span class="comment">// default (0) adapts number of levels to the</span></div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                         <span class="comment">// system for fastest performance</span></div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;        <span class="keywordtype">int</span> MSMBlockSizeX;  <span class="comment">// controls size of parallel work decomposition</span></div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;        <span class="keywordtype">int</span> MSMBlockSizeY;  <span class="comment">// controls size of parallel work decomposition</span></div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        <span class="keywordtype">int</span> MSMBlockSizeZ;  <span class="comment">// controls size of parallel work decomposition</span></div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        BigReal MSMGridSpacing;  <span class="comment">// defaults to 2.5 A, best for atomic systems</span></div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        BigReal MSMPadding;      <span class="comment">// pad grid along non-periodic boundaries</span></div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;                                 <span class="comment">// defaults to 2.5 A</span></div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                                 <span class="comment">// increase if atoms are drifting beyond</span></div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;                                 <span class="comment">// edge of grid, which will terminate</span></div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                                 <span class="comment">// simulation prematurely</span></div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        BigReal MSMxmin;  <span class="comment">// define extent of non-periodic boundaries</span></div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        BigReal MSMxmax;</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        BigReal MSMymin;</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        BigReal MSMymax;</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        BigReal MSMzmin;</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        BigReal MSMzmax;</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;        Bool MsmSerialOn;   <span class="comment">// use serial MSM solver for testing</span></div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        Bool FMMOn;</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;        <span class="keywordtype">int</span> FMMLevels;</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        BigReal FMMPadding;</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    Bool PMEOn;         <span class="comment">//  Flag TRUE -&gt; PME active</span></div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    BigReal PMETolerance;       <span class="comment">//  Direct space tolerance</span></div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        BigReal PMEEwaldCoefficient;    <span class="comment">//  From tolerance and cutoff</span></div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="keywordtype">int</span> PMEInterpOrder;     <span class="comment">//  Order of interpolation</span></div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="keywordtype">int</span> PMEGridSizeX;       <span class="comment">//  No. of grid points in x dim</span></div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keywordtype">int</span> PMEGridSizeY;       <span class="comment">//  No. of grid points in y dim</span></div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordtype">int</span> PMEGridSizeZ;       <span class="comment">//  No. of grid points in z dim</span></div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    BigReal PMEGridSpacing;     <span class="comment">//  Maximum spacing between points</span></div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <span class="keywordtype">int</span> PMEProcessors;      <span class="comment">//  No. of processors to use</span></div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <span class="keywordtype">int</span> PMEMinSlices;       <span class="comment">//  Min slices per PME slab</span></div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keywordtype">int</span> PMEMinPoints;       <span class="comment">//  Min points per PME pencil</span></div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    Bool PMEBarrier;        <span class="comment">//  Use barrier before sendTrans</span></div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    <span class="keywordtype">int</span> PMEPencils;         <span class="comment">//  Size of pencil grid in each dim</span></div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    <span class="keywordtype">int</span> PMEPencilsX;        <span class="comment">//  Size of pencil grid in X dim</span></div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keywordtype">int</span> PMEPencilsY;        <span class="comment">//  Size of pencil grid in Y dim</span></div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keywordtype">int</span> PMEPencilsZ;        <span class="comment">//  Size of pencil grid in Z dim</span></div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="keywordtype">int</span> PMEPencilsYLayout;      <span class="comment">//  Y pencil layout strategy</span></div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <span class="keywordtype">int</span> PMEPencilsXLayout;      <span class="comment">//  X pencil layout strategy</span></div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        <span class="keywordtype">int</span> PMESendOrder;       <span class="comment">//  Message ordering strategy</span></div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        Bool PMEOffload;        <span class="comment">//  Offload reciprocal sum to accelerator</span></div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    Bool useDPME;           <span class="comment">//  Flag TRUE -&gt; old DPME code</span></div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    Bool usePMECUDA;                <span class="comment">//  Flag TRUE -&gt; use the PME CUDA version</span></div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    Bool useCUDA2;                  <span class="comment">//  Flag TRUE -&gt; use ComputeNonbondedCUDA2</span></div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    Bool useOptPME;                 <span class="comment">//  Flag TRUE -&gt; use the scalable version of PME</span></div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    Bool useManyToMany;             <span class="comment">//  Flag TRUE -&gt; use the manytomany optimization of PME.</span></div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                                    <span class="comment">//  This flag requres useOptPME to be set.</span></div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    Bool FFTWEstimate;</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    Bool FFTWPatient;</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    Bool FFTWUseWisdom;</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    <span class="keywordtype">char</span> FFTWWisdomFile[128];</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    <span class="keywordtype">char</span> *FFTWWisdomString;</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;<span class="preprocessor">        #ifdef OPENATOM_VERSION</span></div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;        Bool openatom;                  <span class="comment">// Flag TRUE -&gt; OpenAtom QM/MM active</span></div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;<span class="preprocessor">        #endif // OPENATOM_VERSION</span></div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    Bool minimizeCGOn;      <span class="comment">//  Flag TRUE-&gt; CG minimization active</span></div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        Bool minVerbose;                <span class="comment">//  Flag TRUE-&gt; print extra minimization data</span></div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    BigReal minTinyStep;        <span class="comment">//  Minimization parameter</span></div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    BigReal minBabyStep;        <span class="comment">//  Minimization parameter</span></div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    BigReal minLineGoal;        <span class="comment">//  Minimization parameter</span></div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    Bool minimizeOn;        <span class="comment">//  Flag TRUE-&gt; minimization active</span></div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    BigReal maximumMove;        <span class="comment">//  Maximum movement per timestep</span></div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;                    <span class="comment">//  during minimization</span></div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    Bool sphericalBCOn;     <span class="comment">//  Flag TRUE-&gt; spherical boundary</span></div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;                    <span class="comment">//  conditions are active</span></div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    zVector sphericalCenter;        <span class="comment">//  Center specified by user</span></div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    BigReal sphericalBCk1;      <span class="comment">//  First force constant for</span></div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;                    <span class="comment">//  spherical BC</span></div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;    BigReal sphericalBCk2;      <span class="comment">//  Second force constant for</span></div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;                    <span class="comment">//  spherical BC</span></div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    BigReal sphericalBCr1;      <span class="comment">//  First radius for spherical BC</span></div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    BigReal sphericalBCr2;      <span class="comment">//  Second radius for spherical BC</span></div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="keywordtype">int</span> sphericalBCexp1;        <span class="comment">//  First radius for spherical BC</span></div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    <span class="keywordtype">int</span> sphericalBCexp2;        <span class="comment">//  Second radius for spherical BC</span></div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        Bool cylindricalBCOn;           <span class="comment">//  Flag TRUE-&gt;cylindrical boundary</span></div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;                                        <span class="comment">//  conditions are active</span></div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;        zVector cylindricalCenter;</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    <span class="keywordtype">char</span> cylindricalBCAxis;     <span class="comment">//  &#39;x&#39;, &#39;y&#39;, or &#39;z&#39;</span></div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        BigReal cylindricalBCr1;</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        BigReal cylindricalBCr2;</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        BigReal cylindricalBCl1;</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        BigReal cylindricalBCl2;</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="keywordtype">int</span> cylindricalBCexp1;</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        <span class="keywordtype">int</span> cylindricalBCexp2;</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;        BigReal cylindricalBCk1;</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        BigReal cylindricalBCk2;</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    Bool eFieldOn;                  <span class="comment">//  Should a electric field be applied</span></div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    Bool eFieldNormalized;          <span class="comment">//  Is eField vector scaled by cell basis vectors</span></div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    zVector eField;                 <span class="comment">//  Electric field vector to be applied</span></div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    BigReal eFieldFreq;     <span class="comment">// Frequency of the electric field</span></div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    BigReal eFieldPhase;        <span class="comment">// Phase phi, cos(w*t-phi*PI/180)</span></div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    Bool stirOn;                   <span class="comment">// Should a stirring torque be applied</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordtype">char</span> stirFilename[128];        <span class="comment">// Stirring filename (atoms marked)</span></div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    <span class="comment">//do the below two even needed to be defined?</span></div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    BigReal stirStartingTheta;     <span class="comment">// Stir starting theta offset</span></div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    BigReal stirVel;               <span class="comment">// Stir angular velocity</span></div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    BigReal stirK;                 <span class="comment">// Stir force harmonic spring constant</span></div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        zVector stirAxis;              <span class="comment">// Direction of stir axis</span></div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        zVector stirPivot;             <span class="comment">// Pivot point of stir axis</span></div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    Bool extraBondsOn;      <span class="comment">// read extra bonded forces</span></div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;    Bool consForceOn;       <span class="comment">//  Should constant force be applied</span></div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;  <span class="keywordtype">char</span> consForceFile[128];</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    BigReal consForceScaling;</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;    <span class="keywordtype">int</span> outputEnergies;     <span class="comment">//  Number of timesteps between energy</span></div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                    <span class="comment">//  outputs</span></div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <span class="keywordtype">int</span> outputMomenta;      <span class="comment">//  Number of timesteps between momentum</span></div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;                    <span class="comment">//  outputs</span></div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keywordtype">int</span> outputTiming;       <span class="comment">//  Number of timesteps between timing</span></div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                    <span class="comment">//  outputs</span></div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    <span class="keywordtype">int</span> outputCudaTiming;       <span class="comment">//  Number of timesteps between timing</span></div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                    <span class="comment">//  outputs of CUDA code</span></div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    <span class="keywordtype">int</span> outputPressure;     <span class="comment">//  Number of timesteps between pressure</span></div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                    <span class="comment">//  tensor outputs</span></div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    Bool mergeCrossterms;       <span class="comment">//  Merge crossterm energy w/ dihedrals</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    <span class="keywordtype">int</span> firstTimestep;      <span class="comment">//  Starting timestep.  Will be 0 unless</span></div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;                    <span class="comment">//  restarting a simulation</span></div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    MTSChoices MTSAlgorithm;    <span class="comment">//  What multiple timestep algorithm</span></div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;                    <span class="comment">//  to use</span></div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="keywordtype">int</span> longSplitting;      <span class="comment">//  What electrostatic splitting</span></div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;                    <span class="comment">//  to use</span></div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    Bool ignoreMass;        <span class="comment">//  Mass &lt; 3.5 does not indicate hydrogen, etc.</span></div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    <span class="keywordtype">int</span> splitPatch;         <span class="comment">// How are patches determined?</span></div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    BigReal hgroupCutoff;       <span class="comment">// what is the added hydrogen margin?</span></div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    <span class="keywordtype">int</span> mollyOn;            <span class="comment">// mollify long range forces?</span></div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    BigReal mollyTol;       <span class="comment">// error tolerance for molly</span></div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    <span class="keywordtype">int</span> mollyIter;          <span class="comment">// max number of iterations for molly</span></div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;        <span class="keywordtype">int</span> rigidBonds;                 <span class="comment">// what type of rigid bonds to hydrogens</span></div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                                        <span class="comment">// none, all, or only water</span></div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        BigReal rigidTol;               <span class="comment">// error tolerance for rigid bonds</span></div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        <span class="keywordtype">int</span> rigidIter;                  <span class="comment">// Number of NR iterations</span></div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    <span class="keywordtype">int</span> rigidDie;           <span class="comment">// die if rigidTol not achieved</span></div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    Bool useSettle;         <span class="comment">// Use SETTLE; requires rigid waters</span></div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    Bool testOn;            <span class="comment">//  Do tests rather than simulation</span></div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    Bool commOnly;          <span class="comment">//  Don&#39;t do any force evaluations</span></div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    Bool statsOn;           <span class="comment">//  Don&#39;t do any force evaluations</span></div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    <span class="keywordtype">int</span> totalAtoms;         <span class="comment">//  Total Number of atoms in simulation</span></div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        <span class="keywordtype">int</span> maxSelfPart;                <span class="comment">// maximum number of self partitions</span></div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;                                        <span class="comment">// that a patch can be split into</span></div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        <span class="keywordtype">int</span> maxPairPart;                <span class="comment">// maximum number of pair partitions</span></div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                                        <span class="comment">// that a patch can be split into</span></div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        <span class="keywordtype">int</span> numAtomsSelf;               <span class="comment">// maximum number of atoms in a single</span></div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                                        <span class="comment">// self-compute</span></div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;        <span class="keywordtype">int</span> numAtomsSelf2;              <span class="comment">// maximum number of atoms in a pair compute</span></div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;                                        <span class="comment">// in the presence of twoAwayX,Y,Z options</span></div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        <span class="keywordtype">int</span> numAtomsPair;               <span class="comment">// maximum number of atoms in a single</span></div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;                                        <span class="comment">// pair-compute</span></div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        <span class="keywordtype">int</span> numAtomsPair2;              <span class="comment">// maximum number of atoms in a single</span></div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;                                        <span class="comment">// pair-compute</span></div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        <span class="keywordtype">int</span> minAtomsPerPatch;           <span class="comment">// minimum average atoms per patch</span></div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;                                        <span class="comment">//  (may create larger patches)</span></div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    <span class="keywordtype">int</span> maxExclusionFlags;      <span class="comment">// maximum size of exclusion check list</span></div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                    <span class="comment">// for any given atom</span></div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    Bool outputPatchDetails;    <span class="comment">// print number of atoms per patch</span></div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        Bool staticAtomAssignment;      <span class="comment">// never migrate atoms</span></div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        Bool replicaUniformPatchGrids;  <span class="comment">// same patch grid size on all replicas</span></div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        <span class="comment">// hydrogen bond simulation parameters</span></div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        <span class="comment">//</span></div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;        <span class="comment">// should the hydrogen bond term be used?  If FALSE, all other</span></div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;    <span class="comment">// hydrogen bond parameters are unnecessary in simulation.</span></div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;    Bool HydrogenBonds;</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;    <span class="comment">// should the antecedent atom be used in the calculation of hbonds?</span></div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;    Bool useAntecedent;</div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;    <span class="comment">// exponents used in hydrogen bond energy function:</span></div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    <span class="comment">//   aaAngleExp = exp for H-A-AA angle term (n)</span></div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;    <span class="comment">//   haAngleExp = exp for D-H-A angle term (m)</span></div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;    <span class="comment">//   distAttExp = exp for attractive A-D distance term (j)</span></div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;    <span class="comment">//   distRepExp = exp for repulsive A-D distance term (i)</span></div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;    <span class="keywordtype">int</span> aaAngleExp, haAngleExp, distAttExp, distRepExp;</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;    <span class="comment">// cutoff D-H-A angle, and on/off angles for switch fcn (in degrees)</span></div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    BigReal dhaCutoffAngle, dhaOnAngle, dhaOffAngle;</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;    <span class="comment">// cutoff distance for D-A separation in hbonds (in Angstroms), and</span></div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    <span class="comment">// on/off distances for hbond radial term switching function</span></div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    BigReal daCutoffDist, daOnDist, daOffDist;</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    <span class="comment">// IMD parameters</span></div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    <span class="keywordtype">int</span> IMDon;    <span class="comment">// enable IMD</span></div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    <span class="keywordtype">int</span> IMDport;  <span class="comment">// port on which to listen for connections</span></div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    <span class="keywordtype">int</span> IMDfreq;  <span class="comment">// frequency at which coordinates will be available</span></div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;        <span class="keywordtype">int</span> IMDwait;  <span class="comment">// if true, pause the simulation when there is no</span></div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;                      <span class="comment">// connection</span></div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;    <span class="keywordtype">int</span> IMDignore;  <span class="comment">// IMD connection does not influence simulation</span></div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;                        <span class="comment">// only sends coordinates and energies to VMD</span></div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        <span class="comment">// AMBER options</span></div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        Bool amberOn; <span class="comment">// FLAG TRUE-&gt; amber force field is used</span></div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        Bool readExclusions; <span class="comment">// FLAG TRUE-&gt; Read exclusions from parm file</span></div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;        BigReal vdwscale14; <span class="comment">//  Scaling factor for 1-4 VDW interactions</span></div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;    <span class="comment">// GROMACS options</span></div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    Bool gromacsOn; <span class="comment">// FLAG TRUE -&gt; gromacs-style force field is used</span></div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;</div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;    <span class="comment">// OPLS options</span></div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    Bool vdwGeometricSigma;  <span class="comment">// Lennard-J sigma uses geometric mean</span></div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;</div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;    <span class="comment">// ScriptTcl argument passing</span></div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    BigReal scriptArg1;</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    BigReal scriptArg2;</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;    BigReal scriptArg3;</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    BigReal scriptArg4;</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    BigReal scriptArg5;</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        <span class="keywordtype">int</span> scriptIntArg1;</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="keywordtype">int</span> scriptIntArg2;</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;        <span class="keywordtype">char</span> scriptStringArg1[128];</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        <span class="keywordtype">char</span> scriptStringArg2[128];</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;</div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    Bool useCompressedPsf;</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    Bool genCompressedPsf;</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    Bool usePluginIO;</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;        Bool mallocTest;</div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        Bool printExclusions;</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    <span class="comment">//default value is -1</span></div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    <span class="keywordtype">int</span> proxySendSpanningTree;</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordtype">int</span> proxyRecvSpanningTree;</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;</div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    <span class="keywordtype">int</span> proxyTreeBranchFactor;</div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    Bool langevinOnAtStartup;   <span class="comment">//  Ensure that langevin is set up properly</span></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    Bool langevinOn;        <span class="comment">//  Flag TRUE-&gt; langevin dynamics active</span></div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    BigReal langevinTemp;       <span class="comment">//  Temperature for Langevin dynamics</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    BigReal langevinDamping;    <span class="comment">//  Damping coefficient (1/ps)</span></div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    Bool langevinHydrogen;      <span class="comment">//  Flag TRUE-&gt; apply to hydrogens</span></div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    Bool langevin_useBAOAB;     <span class="comment">//  Flag TRUE-&gt; use the experimental BAOAB integrator for NVT instead of the BBK one</span></div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                    <span class="comment">//  See Leimkuhler and Matthews (AMRX 2012); implemented in NAMD by CM June2012</span></div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="comment">// BEGIN LA</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    Bool loweAndersenOn;        <span class="comment">//  Flag TRUE-&gt; Lowe-Andersen dynamics active</span></div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    BigReal loweAndersenTemp;   <span class="comment">//  Temperature for Lowe-Andersen dynamics</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    BigReal loweAndersenRate;   <span class="comment">//  Collision frequency for Lowe-Andersen dynamics (1/ps)</span></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    BigReal loweAndersenCutoff; <span class="comment">//  Cutoff radius for Lowe-Andersen dynamics</span></div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <span class="comment">// END LA</span></div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    Bool globalOn;          <span class="comment">//  Flag TRUE-&gt; use global integrator</span></div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    Bool dihedralOn;        <span class="comment">//  Flag TRUE-&gt; dihedral dynamics active</span></div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    Bool COLDOn;            <span class="comment">//  Flag TRUE-&gt; constrained overdamped</span></div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                    <span class="comment">//  langevin dynamics active</span></div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    BigReal COLDRate;       <span class="comment">//  Damping coefficient for COLD.</span></div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    BigReal COLDTemp;       <span class="comment">//  Temperature for COLD.</span></div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    Bool tCoupleOn;         <span class="comment">//  Flag TRUE-&gt; Temperature coupling</span></div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;                    <span class="comment">//  active</span></div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    BigReal tCoupleTemp;        <span class="comment">//  Temperature for temp coupling</span></div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="keywordtype">int</span> rescaleFreq;        <span class="comment">//  Velocity rescale frequency</span></div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    BigReal rescaleTemp;        <span class="comment">//  Temperature to rescale to</span></div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        Bool accelMDOn;                 <span class="comment">//  Perform accelerated MD</span></div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        Bool accelMDdihe;               <span class="comment">//  Apply boost to the dihedral potential</span></div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        Bool accelMDdual;               <span class="comment">//  dual boost mode</span></div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        Bool accelMDDebugOn;            <span class="comment">//  Debugging accelerated MD</span></div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        BigReal accelMDFirstStep;       <span class="comment">//  First aMD step</span></div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        BigReal accelMDLastStep;        <span class="comment">//  Last aMD step</span></div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        <span class="keywordtype">int</span> accelMDOutFreq;             <span class="comment">//  aMD output frequency</span></div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        BigReal accelMDE;               <span class="comment">//  aMD E</span></div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        BigReal accelMDalpha;           <span class="comment">//  aMD alpha</span></div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        BigReal accelMDTE;              <span class="comment">//  E for total potential in the dual boost mode</span></div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        BigReal accelMDTalpha;          <span class="comment">//  alpha for total potential in the dual boost mode</span></div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        <span class="comment">/* Begin Adaptive Temperature Sampling */</span></div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        Bool adaptTempOn;                      <span class="comment">//  is adaptTempOn</span></div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        Bool adaptTempDebug;                   <span class="comment">//  Debuggin adaptive temperature sampling</span></div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        <span class="keywordtype">int</span> adaptTempFirstStep;                <span class="comment">//  First adaptTemp step</span></div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        <span class="keywordtype">int</span> adaptTempLastStep;                 <span class="comment">//  Last adaptTemp step</span></div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        <span class="keywordtype">int</span> adaptTempOutFreq;                  <span class="comment">//  adaptTemp output frequency</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="keywordtype">int</span> adaptTempFreq;                     <span class="comment">//  Steps between adaptTemp updates</span></div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        BigReal adaptTempTmin;                 <span class="comment">//  Lower temperature bound</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        BigReal adaptTempTmax;                 <span class="comment">//  Upper temperature bound</span></div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        BigReal adaptTempAutoDt;               <span class="comment">//  Auto jump size. Value determines upper bound, adaotTempDt determines lower bound</span></div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keywordtype">int</span> adaptTempBins;                     <span class="comment">//  Number of bins to store average energy values</span></div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        BigReal adaptTempDt;                   <span class="comment">//  timestep for adaptTemp updates - only affects Temperature random walk</span></div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        BigReal adaptTempCgamma;               <span class="comment">//  Cgamma variable for adaptive bin averaging Cgamma = 0 is normal Averaging. 1 &gt; Cgamma &gt;= 0</span></div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        Bool adaptTempLangevin;                <span class="comment">//  Couple to Langevin Thermostat</span></div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        Bool adaptTempRescale;                 <span class="comment">//  Couple to Vel. Rescaling</span></div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        <span class="keywordtype">char</span> adaptTempInFile[128];             <span class="comment">//  Restart information for adaptTemp to read</span></div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        <span class="keywordtype">char</span> adaptTempRestartFile[128];        <span class="comment">//  File to write restart information</span></div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        <span class="keywordtype">int</span>  adaptTempRestartFreq;             <span class="comment">//  Frequency of writing restart output</span></div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        Bool adaptTempRandom;                  <span class="comment">//  Do we assign random temperatures when we step out of [Tmin,Tmax]?</span></div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        <span class="comment">/* End Adaptive Temperature Sampling */</span></div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <span class="keywordtype">int</span> reassignFreq;       <span class="comment">//  Velocity reassignment frequency</span></div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    BigReal reassignTemp;       <span class="comment">//  Temperature to reassign to</span></div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    BigReal reassignIncr;       <span class="comment">//  Added to reassignTemp each time</span></div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    BigReal reassignHold;       <span class="comment">//  Hold reassignTemp at this value</span></div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    Bool useGroupPressure;      <span class="comment">//  Use group rather than atomic</span></div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;                    <span class="comment">//  quantities for pressure calc</span></div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    Bool excludeFromPressure;   <span class="comment">//  Flag TRUE-&gt; some atoms not rescaled</span></div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    Bool useFlexibleCell;       <span class="comment">//  Use anisotropic cell fluctuations</span></div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    Bool useConstantArea;       <span class="comment">//  x,y dimensions fixed.</span></div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    Bool useConstantRatio;      <span class="comment">//  x,y ratio fixed.</span></div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;  Bool fixCellDims; <span class="comment">// fix the cell dimensions</span></div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;  Bool fixCellDimX;</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;  Bool fixCellDimY;</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;  Bool fixCellDimZ;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    Bool berendsenPressureOn;   <span class="comment">//  Berendsen pressure bath</span></div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    BigReal berendsenPressureTarget;</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    BigReal berendsenPressureCompressibility;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    BigReal berendsenPressureRelaxationTime;</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="keywordtype">int</span> berendsenPressureFreq;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    Bool langevinPistonOn;      <span class="comment">//  Langevin piston pressure control</span></div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    Bool langevinPistonBarrier; <span class="comment">//  Turn off to extrapolate cell</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    BigReal langevinPistonTarget;</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    BigReal langevinPistonPeriod;</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    BigReal langevinPistonDecay;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    BigReal langevinPistonTemp;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    Bool multigratorOn;     <span class="comment">// Multigrator temperature and/or pressure control</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    BigReal multigratorPressureTarget;</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    BigReal multigratorPressureRelaxationTime;</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    <span class="keywordtype">int</span> multigratorPressureFreq;</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    BigReal multigratorTemperatureTarget;</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    BigReal multigratorTemperatureRelaxationTime;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    <span class="keywordtype">int</span> multigratorTemperatureFreq;</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <span class="keywordtype">int</span> multigratorNoseHooverChainLength;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;        BigReal surfaceTensionTarget;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        Bool pressureProfileOn;         <span class="comment">// Compute lateral pressure profile?</span></div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        <span class="keywordtype">int</span> pressureProfileSlabs;       <span class="comment">// Number of slabs</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        <span class="keywordtype">int</span> pressureProfileFreq;        <span class="comment">// How often to store profile data</span></div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        <span class="keywordtype">int</span> pressureProfileAtomTypes;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        Bool pressureProfileEwaldOn;    <span class="comment">// Compute Ewald contribution?</span></div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        <span class="keywordtype">int</span> pressureProfileEwaldX;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        <span class="keywordtype">int</span> pressureProfileEwaldY;</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        <span class="keywordtype">int</span> pressureProfileEwaldZ;</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    zVector strainRate;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    zVector strainRate2; <span class="comment">// off diagonal elements (xy, xz, yz)</span></div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> randomSeed;    <span class="comment">//  Seed for random number generator</span></div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    Bool FMAOn;                     <span class="comment">//  Flag TRUE-&gt; FMA active</span></div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    <span class="keywordtype">int</span> FMALevels;          <span class="comment">//  Number of Levels for FMA</span></div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    <span class="keywordtype">int</span> FMAMp;          <span class="comment">//  Number of multipole terms for FMA</span></div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    Bool FMAFFTOn;          <span class="comment">//  FFT on/off flag for FMA</span></div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    <span class="keywordtype">int</span> FMAFFTBlock;        <span class="comment">//  FFT blocking factor for FMA</span></div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    Bool fullDirectOn;      <span class="comment">//  Should direct calculations of</span></div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                    <span class="comment">//  full electrostatics be performed?</span></div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;        Bool MSMOn;      <span class="comment">// enable MSM (multilevel summation method)</span></div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                         <span class="comment">// for long-range electrostatics</span></div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        <span class="keywordtype">int</span> MSMQuality;  <span class="comment">// choose MSM quality 0 (low) - 3 (high), using</span></div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                         <span class="comment">// optimal combination of approximation and splitting</span></div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                         <span class="comment">// defaults to &quot;low&quot; for fastest performance</span></div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;        <span class="keywordtype">int</span> MSMApprox;   <span class="comment">// choose MSM approximation</span></div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                         <span class="comment">// defaults to &quot;cubic&quot; (low) for fastest performance</span></div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;        <span class="keywordtype">int</span> MSMSplit;    <span class="comment">// choose MSM splitting function</span></div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                         <span class="comment">// defaults to &quot;Taylor2&quot; (low) for fastest performance</span></div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        <span class="keywordtype">int</span> MSMLevels;   <span class="comment">// select number of MSM levels</span></div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                         <span class="comment">// default (0) adapts number of levels to the</span></div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                         <span class="comment">// system for fastest performance</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;        <span class="keywordtype">int</span> MSMBlockSizeX;  <span class="comment">// controls size of parallel work decomposition</span></div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        <span class="keywordtype">int</span> MSMBlockSizeY;  <span class="comment">// controls size of parallel work decomposition</span></div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;        <span class="keywordtype">int</span> MSMBlockSizeZ;  <span class="comment">// controls size of parallel work decomposition</span></div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;        BigReal MSMGridSpacing;  <span class="comment">// defaults to 2.5 A, best for atomic systems</span></div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        BigReal MSMPadding;      <span class="comment">// pad grid along non-periodic boundaries</span></div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                                 <span class="comment">// defaults to 2.5 A</span></div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;                                 <span class="comment">// increase if atoms are drifting beyond</span></div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                                 <span class="comment">// edge of grid, which will terminate</span></div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                                 <span class="comment">// simulation prematurely</span></div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        BigReal MSMxmin;  <span class="comment">// define extent of non-periodic boundaries</span></div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        BigReal MSMxmax;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        BigReal MSMymin;</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        BigReal MSMymax;</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        BigReal MSMzmin;</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;        BigReal MSMzmax;</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;        Bool MsmSerialOn;   <span class="comment">// use serial MSM solver for testing</span></div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;        Bool FMMOn;</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        <span class="keywordtype">int</span> FMMLevels;</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        BigReal FMMPadding;</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    Bool PMEOn;         <span class="comment">//  Flag TRUE -&gt; PME active</span></div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    BigReal PMETolerance;       <span class="comment">//  Direct space tolerance</span></div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        BigReal PMEEwaldCoefficient;    <span class="comment">//  From tolerance and cutoff</span></div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="keywordtype">int</span> PMEInterpOrder;     <span class="comment">//  Order of interpolation</span></div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keywordtype">int</span> PMEGridSizeX;       <span class="comment">//  No. of grid points in x dim</span></div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordtype">int</span> PMEGridSizeY;       <span class="comment">//  No. of grid points in y dim</span></div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="keywordtype">int</span> PMEGridSizeZ;       <span class="comment">//  No. of grid points in z dim</span></div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    BigReal PMEGridSpacing;     <span class="comment">//  Maximum spacing between points</span></div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <span class="keywordtype">int</span> PMEProcessors;      <span class="comment">//  No. of processors to use</span></div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keywordtype">int</span> PMEMinSlices;       <span class="comment">//  Min slices per PME slab</span></div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="keywordtype">int</span> PMEMinPoints;       <span class="comment">//  Min points per PME pencil</span></div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    Bool PMEBarrier;        <span class="comment">//  Use barrier before sendTrans</span></div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    <span class="keywordtype">int</span> PMEPencils;         <span class="comment">//  Size of pencil grid in each dim</span></div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keywordtype">int</span> PMEPencilsX;        <span class="comment">//  Size of pencil grid in X dim</span></div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keywordtype">int</span> PMEPencilsY;        <span class="comment">//  Size of pencil grid in Y dim</span></div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="keywordtype">int</span> PMEPencilsZ;        <span class="comment">//  Size of pencil grid in Z dim</span></div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <span class="keywordtype">int</span> PMEPencilsYLayout;      <span class="comment">//  Y pencil layout strategy</span></div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <span class="keywordtype">int</span> PMEPencilsXLayout;      <span class="comment">//  X pencil layout strategy</span></div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        <span class="keywordtype">int</span> PMESendOrder;       <span class="comment">//  Message ordering strategy</span></div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        Bool PMEOffload;        <span class="comment">//  Offload reciprocal sum to accelerator</span></div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    Bool useDPME;           <span class="comment">//  Flag TRUE -&gt; old DPME code</span></div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    Bool usePMECUDA;                <span class="comment">//  Flag TRUE -&gt; use the PME CUDA version</span></div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    Bool useCUDA2;                  <span class="comment">//  Flag TRUE -&gt; use ComputeNonbondedCUDA2</span></div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    Bool useOptPME;                 <span class="comment">//  Flag TRUE -&gt; use the scalable version of PME</span></div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    Bool useManyToMany;             <span class="comment">//  Flag TRUE -&gt; use the manytomany optimization of PME.</span></div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                                    <span class="comment">//  This flag requres useOptPME to be set.</span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    Bool FFTWEstimate;</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    Bool FFTWPatient;</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    Bool FFTWUseWisdom;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    <span class="keywordtype">char</span> FFTWWisdomFile[128];</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <span class="keywordtype">char</span> *FFTWWisdomString;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;<span class="preprocessor">        #ifdef OPENATOM_VERSION</span></div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        Bool openatom;                  <span class="comment">// Flag TRUE -&gt; OpenAtom QM/MM active</span></div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="preprocessor">        #endif // OPENATOM_VERSION</span></div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    Bool minimizeCGOn;      <span class="comment">//  Flag TRUE-&gt; CG minimization active</span></div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;        Bool minVerbose;                <span class="comment">//  Flag TRUE-&gt; print extra minimization data</span></div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    BigReal minTinyStep;        <span class="comment">//  Minimization parameter</span></div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    BigReal minBabyStep;        <span class="comment">//  Minimization parameter</span></div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    BigReal minLineGoal;        <span class="comment">//  Minimization parameter</span></div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    Bool minimizeOn;        <span class="comment">//  Flag TRUE-&gt; minimization active</span></div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    BigReal maximumMove;        <span class="comment">//  Maximum movement per timestep</span></div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;                    <span class="comment">//  during minimization</span></div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    Bool sphericalBCOn;     <span class="comment">//  Flag TRUE-&gt; spherical boundary</span></div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                    <span class="comment">//  conditions are active</span></div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    zVector sphericalCenter;        <span class="comment">//  Center specified by user</span></div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    BigReal sphericalBCk1;      <span class="comment">//  First force constant for</span></div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;                    <span class="comment">//  spherical BC</span></div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    BigReal sphericalBCk2;      <span class="comment">//  Second force constant for</span></div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;                    <span class="comment">//  spherical BC</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    BigReal sphericalBCr1;      <span class="comment">//  First radius for spherical BC</span></div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    BigReal sphericalBCr2;      <span class="comment">//  Second radius for spherical BC</span></div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    <span class="keywordtype">int</span> sphericalBCexp1;        <span class="comment">//  First radius for spherical BC</span></div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="keywordtype">int</span> sphericalBCexp2;        <span class="comment">//  Second radius for spherical BC</span></div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        Bool cylindricalBCOn;           <span class="comment">//  Flag TRUE-&gt;cylindrical boundary</span></div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;                                        <span class="comment">//  conditions are active</span></div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        zVector cylindricalCenter;</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    <span class="keywordtype">char</span> cylindricalBCAxis;     <span class="comment">//  &#39;x&#39;, &#39;y&#39;, or &#39;z&#39;</span></div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        BigReal cylindricalBCr1;</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        BigReal cylindricalBCr2;</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        BigReal cylindricalBCl1;</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        BigReal cylindricalBCl2;</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        <span class="keywordtype">int</span> cylindricalBCexp1;</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;        <span class="keywordtype">int</span> cylindricalBCexp2;</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        BigReal cylindricalBCk1;</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        BigReal cylindricalBCk2;</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    Bool eFieldOn;                  <span class="comment">//  Should a electric field be applied</span></div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    Bool eFieldNormalized;          <span class="comment">//  Is eField vector scaled by cell basis vectors</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    zVector eField;                 <span class="comment">//  Electric field vector to be applied</span></div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    BigReal eFieldFreq;     <span class="comment">// Frequency of the electric field</span></div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    BigReal eFieldPhase;        <span class="comment">// Phase phi, cos(w*t-phi*PI/180)</span></div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    Bool stirOn;                   <span class="comment">// Should a stirring torque be applied</span></div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    <span class="keywordtype">char</span> stirFilename[128];        <span class="comment">// Stirring filename (atoms marked)</span></div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="comment">//do the below two even needed to be defined?</span></div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    BigReal stirStartingTheta;     <span class="comment">// Stir starting theta offset</span></div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    BigReal stirVel;               <span class="comment">// Stir angular velocity</span></div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    BigReal stirK;                 <span class="comment">// Stir force harmonic spring constant</span></div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        zVector stirAxis;              <span class="comment">// Direction of stir axis</span></div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        zVector stirPivot;             <span class="comment">// Pivot point of stir axis</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;    Bool extraBondsOn;      <span class="comment">// read extra bonded forces</span></div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    Bool consForceOn;       <span class="comment">//  Should constant force be applied</span></div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;  <span class="keywordtype">char</span> consForceFile[128];</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    BigReal consForceScaling;</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <span class="keywordtype">int</span> outputEnergies;     <span class="comment">//  Number of timesteps between energy</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;                    <span class="comment">//  outputs</span></div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    <span class="keywordtype">int</span> outputMomenta;      <span class="comment">//  Number of timesteps between momentum</span></div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                    <span class="comment">//  outputs</span></div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    <span class="keywordtype">int</span> outputTiming;       <span class="comment">//  Number of timesteps between timing</span></div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;                    <span class="comment">//  outputs</span></div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;    <span class="keywordtype">int</span> outputCudaTiming;       <span class="comment">//  Number of timesteps between timing</span></div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;                    <span class="comment">//  outputs of CUDA code</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <span class="keywordtype">int</span> outputPressure;     <span class="comment">//  Number of timesteps between pressure</span></div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                    <span class="comment">//  tensor outputs</span></div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;    Bool mergeCrossterms;       <span class="comment">//  Merge crossterm energy w/ dihedrals</span></div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;    <span class="keywordtype">int</span> firstTimestep;      <span class="comment">//  Starting timestep.  Will be 0 unless</span></div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;                    <span class="comment">//  restarting a simulation</span></div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;    MTSChoices MTSAlgorithm;    <span class="comment">//  What multiple timestep algorithm</span></div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;                    <span class="comment">//  to use</span></div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <span class="keywordtype">int</span> longSplitting;      <span class="comment">//  What electrostatic splitting </span></div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;                    <span class="comment">//  to use</span></div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    Bool ignoreMass;        <span class="comment">//  Mass &lt; 3.5 does not indicate hydrogen, etc.</span></div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    <span class="keywordtype">int</span> splitPatch;         <span class="comment">// How are patches determined?</span></div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    BigReal hgroupCutoff;       <span class="comment">// what is the added hydrogen margin?</span></div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    <span class="keywordtype">int</span> mollyOn;            <span class="comment">// mollify long range forces?</span></div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    BigReal mollyTol;       <span class="comment">// error tolerance for molly</span></div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    <span class="keywordtype">int</span> mollyIter;          <span class="comment">// max number of iterations for molly</span></div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;        <span class="keywordtype">int</span> rigidBonds;                 <span class="comment">// what type of rigid bonds to hydrogens</span></div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                                        <span class="comment">// none, all, or only water</span></div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        BigReal rigidTol;               <span class="comment">// error tolerance for rigid bonds</span></div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        <span class="keywordtype">int</span> rigidIter;                  <span class="comment">// Number of NR iterations</span></div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    <span class="keywordtype">int</span> rigidDie;           <span class="comment">// die if rigidTol not achieved</span></div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    Bool useSettle;         <span class="comment">// Use SETTLE; requires rigid waters</span></div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    Bool testOn;            <span class="comment">//  Do tests rather than simulation</span></div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    Bool commOnly;          <span class="comment">//  Don&#39;t do any force evaluations</span></div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    Bool statsOn;           <span class="comment">//  Don&#39;t do any force evaluations</span></div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;    <span class="keywordtype">int</span> totalAtoms;         <span class="comment">//  Total Number of atoms in simulation</span></div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        <span class="keywordtype">int</span> maxSelfPart;                <span class="comment">// maximum number of self partitions</span></div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                                        <span class="comment">// that a patch can be split into</span></div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        <span class="keywordtype">int</span> maxPairPart;                <span class="comment">// maximum number of pair partitions</span></div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                                        <span class="comment">// that a patch can be split into</span></div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        <span class="keywordtype">int</span> numAtomsSelf;               <span class="comment">// maximum number of atoms in a single</span></div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                                        <span class="comment">// self-compute</span></div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;        <span class="keywordtype">int</span> numAtomsSelf2;              <span class="comment">// maximum number of atoms in a pair compute</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;                                        <span class="comment">// in the presence of twoAwayX,Y,Z options</span></div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        <span class="keywordtype">int</span> numAtomsPair;               <span class="comment">// maximum number of atoms in a single</span></div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;                                        <span class="comment">// pair-compute</span></div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        <span class="keywordtype">int</span> numAtomsPair2;              <span class="comment">// maximum number of atoms in a single</span></div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;                                        <span class="comment">// pair-compute</span></div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;        <span class="keywordtype">int</span> minAtomsPerPatch;           <span class="comment">// minimum average atoms per patch</span></div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                                        <span class="comment">//  (may create larger patches)</span></div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;    <span class="keywordtype">int</span> maxExclusionFlags;      <span class="comment">// maximum size of exclusion check list</span></div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                    <span class="comment">// for any given atom</span></div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;    Bool outputPatchDetails;    <span class="comment">// print number of atoms per patch</span></div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        Bool staticAtomAssignment;      <span class="comment">// never migrate atoms</span></div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        Bool replicaUniformPatchGrids;  <span class="comment">// same patch grid size on all replicas</span></div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        <span class="comment">// hydrogen bond simulation parameters</span></div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;        <span class="comment">// should the hydrogen bond term be used?  If FALSE, all other</span></div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;    <span class="comment">// hydrogen bond parameters are unnecessary in simulation.</span></div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;    Bool HydrogenBonds;</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;    <span class="comment">// should the antecedent atom be used in the calculation of hbonds?</span></div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;    Bool useAntecedent;</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    <span class="comment">// exponents used in hydrogen bond energy function:</span></div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;    <span class="comment">//   aaAngleExp = exp for H-A-AA angle term (n)</span></div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;    <span class="comment">//   haAngleExp = exp for D-H-A angle term (m)</span></div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;    <span class="comment">//   distAttExp = exp for attractive A-D distance term (j)</span></div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;    <span class="comment">//   distRepExp = exp for repulsive A-D distance term (i)</span></div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;    <span class="keywordtype">int</span> aaAngleExp, haAngleExp, distAttExp, distRepExp;</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    <span class="comment">// cutoff D-H-A angle, and on/off angles for switch fcn (in degrees)</span></div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;    BigReal dhaCutoffAngle, dhaOnAngle, dhaOffAngle;</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    <span class="comment">// cutoff distance for D-A separation in hbonds (in Angstroms), and</span></div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <span class="comment">// on/off distances for hbond radial term switching function</span></div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    BigReal daCutoffDist, daOnDist, daOffDist;</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    <span class="comment">// IMD parameters</span></div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    <span class="keywordtype">int</span> IMDon;    <span class="comment">// enable IMD</span></div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    <span class="keywordtype">int</span> IMDport;  <span class="comment">// port on which to listen for connections</span></div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;    <span class="keywordtype">int</span> IMDfreq;  <span class="comment">// frequency at which coordinates will be available</span></div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        <span class="keywordtype">int</span> IMDwait;  <span class="comment">// if true, pause the simulation when there is no</span></div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;                      <span class="comment">// connection</span></div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    <span class="keywordtype">int</span> IMDignore;  <span class="comment">// IMD connection does not influence simulation</span></div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;                        <span class="comment">// only sends coordinates and energies to VMD</span></div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        <span class="comment">// AMBER options</span></div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        Bool amberOn; <span class="comment">// FLAG TRUE-&gt; amber force field is used</span></div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;        Bool readExclusions; <span class="comment">// FLAG TRUE-&gt; Read exclusions from parm file</span></div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;        BigReal vdwscale14; <span class="comment">//  Scaling factor for 1-4 VDW interactions</span></div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    <span class="comment">// GROMACS options</span></div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;    Bool gromacsOn; <span class="comment">// FLAG TRUE -&gt; gromacs-style force field is used</span></div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    <span class="comment">// OPLS options</span></div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    Bool vdwGeometricSigma;  <span class="comment">// Lennard-J sigma uses geometric mean</span></div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    <span class="comment">// ScriptTcl argument passing</span></div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    BigReal scriptArg1;</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;    BigReal scriptArg2;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    BigReal scriptArg3;</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    BigReal scriptArg4;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    BigReal scriptArg5;</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="keywordtype">int</span> scriptIntArg1;</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;        <span class="keywordtype">int</span> scriptIntArg2;</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        <span class="keywordtype">char</span> scriptStringArg1[128];</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        <span class="keywordtype">char</span> scriptStringArg2[128];</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    Bool useCompressedPsf;</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    Bool genCompressedPsf;</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    Bool usePluginIO;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        Bool mallocTest;</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;        Bool printExclusions;</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    <span class="comment">//default value is -1</span></div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordtype">int</span> proxySendSpanningTree;</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    <span class="keywordtype">int</span> proxyRecvSpanningTree;</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;    <span class="keywordtype">int</span> proxyTreeBranchFactor;</div>
 <div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;    <span class="comment">//fields needed for Parallel IO Input</span></div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    <span class="keywordtype">int</span> numinputprocs;</div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;    <span class="keywordtype">char</span> *binAtomFile;</div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    <span class="keywordtype">char</span> *binCoorFile;</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;    <span class="keywordtype">char</span> *binVelFile;</div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    <span class="keywordtype">char</span> *binRefFile;</div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;</div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <span class="comment">//fields needed for Parallel IO Output</span></div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    <span class="keywordtype">int</span> numoutputprocs;</div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;    <span class="keywordtype">int</span> numoutputwrts;</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;</div>
-<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;    <span class="keywordtype">char</span> computeMapFilename[128];       <span class="comment">//  store compute map</span></div>
-<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;        Bool storeComputeMap;</div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;        Bool loadComputeMap;</div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;        <span class="comment">// MIC-specific parameters</span></div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        <span class="keywordtype">int</span> mic_hostSplit;</div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        <span class="keywordtype">int</span> mic_numParts_self_p1;</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="keywordtype">int</span> mic_numParts_pair_p1;</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        <span class="keywordtype">int</span> mic_numParts_pair_p2;</div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        <span class="keywordtype">int</span> mic_unloadMICPEs;</div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        <span class="keywordtype">int</span> mic_deviceThreshold;</div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        <span class="keywordtype">int</span> mic_singleKernel;</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;</div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        <a class="code" href="classSimParameters.html">SimParameters</a>() : mgridforcelist(), parseopts(0) {};</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;        <a class="code" href="classSimParameters.html">SimParameters</a>(ConfigList *c, <span class="keywordtype">char</span> *&amp;cwd) : mgridforcelist(), parseopts(0) {</div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;      initialize_config_data(c,cwd);</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    };</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;        ~<a class="code" href="classSimParameters.html">SimParameters</a>() {};</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;</div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <span class="keywordtype">void</span> initialize_config_data(ConfigList *, <span class="keywordtype">char</span> *&amp;cwd);</div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;                    <span class="comment">//  Initialize SimParameters data</span></div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;                    <span class="comment">//  from the ConfigList object</span></div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keywordtype">void</span> send_SimParameters(MOStream *);</div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;                    <span class="comment">//  Used by the master process</span></div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;                    <span class="comment">//  to send the paramters to</span></div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;                    <span class="comment">//  the other processors</span></div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    <span class="keywordtype">void</span> receive_SimParameters(MIStream *);</div>
-<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;                    <span class="comment">//  Used by the other processors</span></div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;                    <span class="comment">//  to receive the data from the</span></div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;                    <span class="comment">//  master process</span></div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    <span class="keywordtype">void</span> scriptSet(<span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;                    <span class="comment">//  Set parameters at run time</span></div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    <span class="keywordtype">void</span> close_dcdfile();  <span class="comment">// *** implemented in Output.C ***</span></div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> nonbonded_select();</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;    <span class="keywordtype">int</span> isSendSpanningTreeOn(){ <span class="keywordflow">return</span> proxySendSpanningTree == 1; }</div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;    <span class="keywordtype">int</span> isSendSpanningTreeUnset() { <span class="keywordflow">return</span> proxySendSpanningTree == -1; }</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    <span class="keywordtype">int</span> isRecvSpanningTreeOn(){ <span class="keywordflow">return</span> proxyRecvSpanningTree == 1; }</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;    <span class="keywordtype">int</span> isRecvSpanningTreeUnset() { <span class="keywordflow">return</span> proxyRecvSpanningTree == -1; }</div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;        <span class="keywordtype">char</span>* getfromparseopts(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">char</span> *outbuf);</div>
-<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;        <span class="keywordtype">int</span> istrueinparseopts(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;        <span class="keywordtype">int</span> issetinparseopts(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;        <span class="keywordtype">void</span> readExtendedSystem(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename, Lattice *latptr=0);</div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;        ParseOptions *parseopts;</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;    <span class="keywordtype">void</span> config_parser(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;    <span class="keywordtype">void</span> config_parser_basic(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;    <span class="keywordtype">void</span> config_parser_fileio(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    <span class="keywordtype">void</span> config_parser_fullelect(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;    <span class="keywordtype">void</span> config_parser_methods(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;    <span class="keywordtype">void</span> config_parser_constraints(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;<span class="preprocessor">#ifdef OPENATOM_VERSION</span></div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;    <span class="keywordtype">void</span> config_parser_openatom(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;<span class="preprocessor">#endif //OPENATOM_VERSION</span></div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;    <span class="comment">/* BEGIN gf */</span></div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;    <span class="keywordtype">void</span> config_parser_gridforce(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    <span class="comment">/* END gf */</span></div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;    <span class="keywordtype">void</span> config_parser_movdrag(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    <span class="keywordtype">void</span> config_parser_rotdrag(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    <span class="keywordtype">void</span> config_parser_constorque(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    <span class="keywordtype">void</span> config_parser_boundary(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    <span class="keywordtype">void</span> config_parser_misc(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;    <span class="keywordtype">void</span> config_parser_mgridforce(ParseOptions &amp;opts);</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;        <span class="keywordtype">void</span> parse_mgrid_string_param(ConfigList *config,</div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;                                      <span class="keyword">const</span> <span class="keywordtype">char</span> *fieldname, <span class="keywordtype">char</span>** dest);</div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;        <span class="keywordtype">void</span> parse_mgrid_params(ConfigList *config);</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;        <span class="keywordtype">void</span> print_mgrid_params();</div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    <span class="keywordtype">void</span> check_config(ParseOptions &amp;opts, ConfigList *config, <span class="keywordtype">char</span> *&amp;cwd);</div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;</div>
-<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    <span class="keywordtype">void</span> print_config(ParseOptions &amp;opts, ConfigList *config, <span class="keywordtype">char</span> *&amp;cwd);</div>
-<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;</div>
-<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;    <span class="keywordtype">void</span> create_output_directories(<span class="keyword">const</span> <span class="keywordtype">char</span> *dirname);</div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;</div>
-<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;    <span class="keywordtype">int</span> fmaFrequency;       <span class="comment">//  outdated parameter name</span></div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    <span class="keywordtype">char</span> loadBalancer[64];      <span class="comment">//  Load balancer</span></div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;    <span class="keywordtype">char</span> loadStrategy[64];      <span class="comment">//  Load balancing strategy</span></div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;</div>
-<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;};</div>
-<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;</div>
-<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    <span class="comment">//fields needed for Parallel IO Input</span></div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;    <span class="keywordtype">int</span> numinputprocs;</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    <span class="keywordtype">char</span> *binAtomFile;</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;    <span class="keywordtype">char</span> *binCoorFile;</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    <span class="keywordtype">char</span> *binVelFile;</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;    <span class="keywordtype">char</span> *binRefFile;</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    <span class="comment">//fields needed for Parallel IO Output</span></div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;    <span class="keywordtype">int</span> numoutputprocs;</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;    <span class="keywordtype">int</span> numoutputwrts;</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;    <span class="keywordtype">char</span> computeMapFilename[128];       <span class="comment">//  store compute map</span></div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;        Bool storeComputeMap;</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;        Bool loadComputeMap;</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        <span class="comment">// MIC-specific parameters</span></div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        <span class="keywordtype">int</span> mic_hostSplit;</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="keywordtype">int</span> mic_numParts_self_p1;</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        <span class="keywordtype">int</span> mic_numParts_pair_p1;</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        <span class="keywordtype">int</span> mic_numParts_pair_p2;</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        <span class="keywordtype">int</span> mic_unloadMICPEs;</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        <span class="keywordtype">int</span> mic_deviceThreshold;</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;        <span class="keywordtype">int</span> mic_singleKernel;</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;        <a class="code" href="classSimParameters.html">SimParameters</a>() : mgridforcelist(), parseopts(0) {};</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;        <a class="code" href="classSimParameters.html">SimParameters</a>(ConfigList *c, <span class="keywordtype">char</span> *&amp;cwd) : mgridforcelist(), parseopts(0) {</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;      initialize_config_data(c,cwd);</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    };</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;        ~<a class="code" href="classSimParameters.html">SimParameters</a>() {};</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    <span class="keywordtype">void</span> initialize_config_data(ConfigList *, <span class="keywordtype">char</span> *&amp;cwd);</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;                    <span class="comment">//  Initialize SimParameters data</span></div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;                    <span class="comment">//  from the ConfigList object</span></div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    <span class="keywordtype">void</span> send_SimParameters(MOStream *);</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;                    <span class="comment">//  Used by the master process</span></div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;                    <span class="comment">//  to send the paramters to</span></div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;                    <span class="comment">//  the other processors</span></div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;    <span class="keywordtype">void</span> receive_SimParameters(MIStream *);</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;                    <span class="comment">//  Used by the other processors</span></div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;                    <span class="comment">//  to receive the data from the</span></div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;                    <span class="comment">//  master process</span></div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <span class="keywordtype">void</span> scriptSet(<span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;                    <span class="comment">//  Set parameters at run time</span></div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    <span class="keywordtype">void</span> close_dcdfile();  <span class="comment">// *** implemented in Output.C ***</span></div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> nonbonded_select();</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;    <span class="keywordtype">int</span> isSendSpanningTreeOn(){ <span class="keywordflow">return</span> proxySendSpanningTree == 1; }</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    <span class="keywordtype">int</span> isSendSpanningTreeUnset() { <span class="keywordflow">return</span> proxySendSpanningTree == -1; }</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;    <span class="keywordtype">int</span> isRecvSpanningTreeOn(){ <span class="keywordflow">return</span> proxyRecvSpanningTree == 1; }</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;    <span class="keywordtype">int</span> isRecvSpanningTreeUnset() { <span class="keywordflow">return</span> proxyRecvSpanningTree == -1; }</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;        <span class="keywordtype">char</span>* getfromparseopts(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">char</span> *outbuf);</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;        <span class="keywordtype">int</span> istrueinparseopts(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        <span class="keywordtype">int</span> issetinparseopts(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;        <span class="keywordtype">void</span> readExtendedSystem(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename, Lattice *latptr=0);</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;        ParseOptions *parseopts;</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;    <span class="keywordtype">void</span> config_parser(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;    <span class="keywordtype">void</span> config_parser_basic(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    <span class="keywordtype">void</span> config_parser_fileio(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;    <span class="keywordtype">void</span> config_parser_fullelect(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;    <span class="keywordtype">void</span> config_parser_methods(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;    <span class="keywordtype">void</span> config_parser_constraints(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;<span class="preprocessor">#ifdef OPENATOM_VERSION</span></div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;    <span class="keywordtype">void</span> config_parser_openatom(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;<span class="preprocessor">#endif //OPENATOM_VERSION</span></div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;    <span class="comment">/* BEGIN gf */</span></div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    <span class="keywordtype">void</span> config_parser_gridforce(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;    <span class="comment">/* END gf */</span></div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    <span class="keywordtype">void</span> config_parser_movdrag(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    <span class="keywordtype">void</span> config_parser_rotdrag(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    <span class="keywordtype">void</span> config_parser_constorque(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    <span class="keywordtype">void</span> config_parser_boundary(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;    <span class="keywordtype">void</span> config_parser_misc(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    <span class="keywordtype">void</span> config_parser_mgridforce(ParseOptions &amp;opts);</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;        <span class="keywordtype">void</span> parse_mgrid_string_param(ConfigList *config,</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;                                      <span class="keyword">const</span> <span class="keywordtype">char</span> *fieldname, <span class="keywordtype">char</span>** dest);</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;        <span class="keywordtype">void</span> parse_mgrid_params(ConfigList *config);</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;        <span class="keywordtype">void</span> print_mgrid_params();</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;    <span class="keywordtype">void</span> check_config(ParseOptions &amp;opts, ConfigList *config, <span class="keywordtype">char</span> *&amp;cwd);</div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;    <span class="keywordtype">void</span> print_config(ParseOptions &amp;opts, ConfigList *config, <span class="keywordtype">char</span> *&amp;cwd);</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;    <span class="keywordtype">void</span> create_output_directories(<span class="keyword">const</span> <span class="keywordtype">char</span> *dirname);</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    <span class="keywordtype">int</span> fmaFrequency;       <span class="comment">//  outdated parameter name</span></div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;    <span class="keywordtype">char</span> loadBalancer[64];      <span class="comment">//  Load balancer</span></div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;    <span class="keywordtype">char</span> loadStrategy[64];      <span class="comment">//  Load balancing strategy</span></div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;</div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;};</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;</div>
 <div class="ttc" id="classSimParameters_html"><div class="ttname"><a href="classSimParameters.html">SimParameters</a></div><div class="ttdef"><b>Definition:</b> SimParameters.h:100</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 6 2016 21:54:04 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 08:43:52 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
