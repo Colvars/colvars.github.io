@@ -24,7 +24,7 @@ readme: $(COLVARSDIR)/README.md $(COLVARSDIR)/README-totalforce.md
 
 $(PDFDIR)/%.pdf: $(DOCSRCDIR)/%.tex $(BIBTEX) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-cv.tex
 	make -C $(DOCSRCDIR) pdf
-	mv $(DOCSRCDIR)/`basename $@` $(PDFDIR)
+	mv -f $(DOCSRCDIR)/`basename $@` $(PDFDIR)
 	make -C $(DOCSRCDIR) clean
 
 # Note: this relies on up-to-date bbl files; run pdflatex first!
