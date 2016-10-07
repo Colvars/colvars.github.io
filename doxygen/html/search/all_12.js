@@ -17,7 +17,6 @@ var searchData=
   ['set_5fcoupling',['set_coupling',['../classcolvarbias__alb.html#ac6390852bde5c825bcf9352b055f5fce',1,'colvarbias_alb']]],
   ['set_5fcvc_5fflags',['set_cvc_flags',['../classcolvar.html#afaece454de418ceba1ea43bdfb3ec6ed',1,'colvar']]],
   ['set_5felem',['set_elem',['../classcolvarvalue.html#a0261c2b978ea217a19927ed9019b124e',1,'colvarvalue::set_elem(int const i_begin, int const i_end, colvarvalue const &amp;x)'],['../classcolvarvalue.html#a6fa3d7489fda48643cad969d00a2b24b',1,'colvarvalue::set_elem(int const icv, colvarvalue const &amp;x)']]],
-  ['set_5ffeature',['set_feature',['../classcolvardeps.html#adc1fa2ec2a82ac7073b5e64cd5924a81',1,'colvardeps']]],
   ['set_5fframe',['set_frame',['../classcolvarproxy.html#af123ac8a95bbb480afaffc023cc04228',1,'colvarproxy::set_frame()'],['../classcolvarproxy__vmd.html#a381d5748b576c668120d9822a7e3d97d',1,'colvarproxy_vmd::set_frame()']]],
   ['set_5ffrom_5feuler_5fangles',['set_from_euler_angles',['../classcolvarmodule_1_1quaternion.html#a61c50d176440fb77dd86dcf4829107af',1,'colvarmodule::quaternion']]],
   ['set_5fsizes',['set_sizes',['../classcolvar__grid.html#ad731d89768b605e22ddc9e88e5a54760',1,'colvar_grid']]],
@@ -30,10 +29,10 @@ var searchData=
   ['simparameters_2ec',['SimParameters.C',['../SimParameters_8C.html',1,'']]],
   ['simparams',['simparams',['../classcolvarproxy__namd.html#ab68d6f9bc1254d57ecf5e1dce4ba4843',1,'colvarproxy_namd']]],
   ['single_5freplica',['single_replica',['../classcolvarbias__meta.html#a795c12aae8c0ae64166839531e1b7841afbefd6e10dd2f72844b3d3ce104b6b24',1,'colvarbias_meta']]],
-  ['size',['size',['../classcolvarvalue.html#a1c8b4976613ff8a3bded1b1cbec7237f',1,'colvarvalue']]],
+  ['size',['size',['../classcolvarmodule.html#a3efba4ca5307c21d3e1aefe4df36a09c',1,'colvarmodule::size()'],['../classcolvarvalue.html#a1c8b4976613ff8a3bded1b1cbec7237f',1,'colvarvalue::size()']]],
   ['sizes',['sizes',['../classcolvar__grid.html#a468a105a21defb1727f18bc37591b6cb',1,'colvar_grid']]],
-  ['slice',['slice',['../singletoncolvarmodule_1_1vector1d.html#ae43e571ebaf17fe494d94d3ed6328b0e',1,'colvarmodule::vector1d']]],
-  ['sliceassign',['sliceassign',['../singletoncolvarmodule_1_1vector1d.html#a51fb3dd6d0f194549dba7922287d3ec8',1,'colvarmodule::vector1d']]],
+  ['slice',['slice',['../classcolvarmodule_1_1vector1d.html#ae43e571ebaf17fe494d94d3ed6328b0e',1,'colvarmodule::vector1d']]],
+  ['sliceassign',['sliceassign',['../classcolvarmodule_1_1vector1d.html#a51fb3dd6d0f194549dba7922287d3ec8',1,'colvarmodule::vector1d']]],
   ['smp_5fbiases_5floop',['smp_biases_loop',['../classcolvarproxy.html#a7cd5dd74fcd96181123db98928522461',1,'colvarproxy']]],
   ['smp_5fbiases_5fscript_5floop',['smp_biases_script_loop',['../classcolvarproxy.html#ae056acbb0679b3f5b8d10bae8c306fa1',1,'colvarproxy']]],
   ['smp_5fcolvars_5floop',['smp_colvars_loop',['../classcolvarproxy.html#a65517d0154b7444d78ae73a8acb14f08',1,'colvarproxy']]],
@@ -55,5 +54,5 @@ var searchData=
   ['sup_5fcoeff',['sup_coeff',['../classcolvar_1_1cvc.html#a0fcbf9fc6484f6ea71deb01472d90f95',1,'colvar::cvc']]],
   ['sup_5fnp',['sup_np',['../classcolvar_1_1cvc.html#a0a5b794497d12e7a37a5666f1eb1c85c',1,'colvar::cvc']]],
   ['sw',['sW',['../classcolvarbias__meta_1_1hill.html#aa8583e52b1545df70c27b2fc440384e0',1,'colvarbias_meta::hill']]],
-  ['switching_5ffunction',['switching_function',['../classcolvar_1_1coordnum.html#a3aada3f6cb787529ec4233ac13901cbe',1,'colvar::coordnum::switching_function(cvm::real const &amp;r0, int const &amp;exp_num, int const &amp;exp_den, cvm::atom &amp;A1, cvm::atom &amp;A2)'],['../classcolvar_1_1coordnum.html#a51c0ffbead4ebc3f03fc5e819bc5fc0b',1,'colvar::coordnum::switching_function(cvm::rvector const &amp;r0_vec, int const &amp;exp_num, int const &amp;exp_den, cvm::atom &amp;A1, cvm::atom &amp;A2)'],['../classcolvar_1_1selfcoordnum.html#a2d7ba31242f6828260e6d3d97f50efb3',1,'colvar::selfcoordnum::switching_function()']]]
+  ['switching_5ffunction',['switching_function',['../classcolvar_1_1coordnum.html#a3aada3f6cb787529ec4233ac13901cbe',1,'colvar::coordnum::switching_function(cvm::real const &amp;r0, int const &amp;exp_num, int const &amp;exp_den, cvm::atom &amp;A1, cvm::atom &amp;A2)'],['../classcolvar_1_1coordnum.html#a51c0ffbead4ebc3f03fc5e819bc5fc0b',1,'colvar::coordnum::switching_function(cvm::rvector const &amp;r0_vec, int const &amp;exp_num, int const &amp;exp_den, cvm::atom &amp;A1, cvm::atom &amp;A2)'],['../classcolvar_1_1selfcoordnum.html#a2d7ba31242f6828260e6d3d97f50efb3',1,'colvar::selfcoordnum::switching_function()'],['../classcolvar_1_1groupcoordnum.html#a7a10b2670da007527050cdda6f31564f',1,'colvar::groupcoordnum::switching_function()']]]
 ];

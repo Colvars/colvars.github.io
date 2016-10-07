@@ -15,6 +15,7 @@ var searchData=
   ['colvarbias_5fmeta',['colvarbias_meta',['../classcolvarbias__meta.html',1,'']]],
   ['colvarbias_5frestraint',['colvarbias_restraint',['../classcolvarbias__restraint.html',1,'']]],
   ['colvarbias_5frestraint_5fharmonic',['colvarbias_restraint_harmonic',['../classcolvarbias__restraint__harmonic.html',1,'']]],
+  ['colvarbias_5frestraint_5fhistogram',['colvarbias_restraint_histogram',['../classcolvarbias__restraint__histogram.html',1,'']]],
   ['colvarbias_5frestraint_5flinear',['colvarbias_restraint_linear',['../classcolvarbias__restraint__linear.html',1,'']]],
   ['colvardeps',['colvardeps',['../classcolvardeps.html',1,'']]],
   ['colvarmodule',['colvarmodule',['../classcolvarmodule.html',1,'']]],

@@ -9,7 +9,7 @@ var searchData=
   ['parse_5fconfig',['parse_config',['../classcolvarmodule.html#a3653ec3ccb5c3ca17544b7677502fd00',1,'colvarmodule']]],
   ['parse_5fglobal_5fparams',['parse_global_params',['../classcolvarmodule.html#af5dffb9a09447232aa8ed7f84719d581',1,'colvarmodule']]],
   ['parse_5fgroup',['parse_group',['../classcolvar_1_1cvc.html#af06d108e67f65aa1506471e971271ae7',1,'colvar::cvc']]],
-  ['parse_5fparams',['parse_params',['../classcolvar__grid.html#af9a1b1abaafa9b205dd0694c8fe99af4',1,'colvar_grid']]],
+  ['parse_5fparams',['parse_params',['../classcolvar__grid.html#a72901cb6cba1c99a4f9ccbb0c8e08190',1,'colvar_grid']]],
   ['periodic_5fboundaries',['periodic_boundaries',['../classcolvar.html#a3eb05be71cfea0f7d37e1f7ca4077810',1,'colvar::periodic_boundaries() const '],['../classcolvar.html#a889ea15ab7527406f53cfc15ba0e1c00',1,'colvar::periodic_boundaries(colvarvalue const &amp;lb, colvarvalue const &amp;ub) const ']]],
   ['position_5fderivative_5finner',['position_derivative_inner',['../classcolvarmodule_1_1quaternion.html#a24046575afac7e699f32fa2d1d399b95',1,'colvarmodule::quaternion']]],
   ['position_5fdist2',['position_dist2',['../classcolvarmodule.html#a54331f1927ea683508c775631d2d084b',1,'colvarmodule::position_dist2()'],['../classcolvarproxy.html#a30f0cfb2336ef9f5822d752b76f8e8d7',1,'colvarproxy::position_dist2()'],['../classcolvarproxy__namd.html#a9a60d1969aa6187a6ba01094107d0fd5',1,'colvarproxy_namd::position_dist2()'],['../classcolvarproxy__vmd.html#a5b422ab5c6a94e2e8aa9785e181776e1',1,'colvarproxy_vmd::position_dist2()']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['data_5farray',['data_array',['../classcolvarmodule_1_1vector1d.html#a9d813e8e74469700817c1a8624c5d3d8',1,'colvarmodule::vector1d::data_array()'],['../classcolvarmodule_1_1matrix2d.html#a9727b45acca5e46e8498a6b1c071c8b2',1,'colvarmodule::matrix2d::data_array()']]],
   ['dcos_5ftheta_5fdq',['dcos_theta_dq',['../classcolvarmodule_1_1rotation.html#a6885b1e2f7cae64aa5f227b36077a27b',1,'colvarmodule::rotation']]],
   ['debug',['debug',['../classcolvarmodule.html#ac415ee66c310e474dd0b41d41c7da954',1,'colvarmodule']]],
   ['debug_5fgradients',['debug_gradients',['../classcolvar_1_1cvc.html#a37cf23b56c262e1a7fd92691e50d525c',1,'colvar::cvc']]],

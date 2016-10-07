@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['gaussian_5fwidth',['gaussian_width',['../classcolvarbias__restraint__histogram.html#af93a6a0eaebcda947e396cefbe199c26',1,'colvarbias_restraint_histogram']]],
   ['get_5fatom_5fcharge',['get_atom_charge',['../classcolvarproxy.html#aeee0f41225a9ee11a9590e52465134c1',1,'colvarproxy']]],
   ['get_5fatom_5fgroup_5fcharge',['get_atom_group_charge',['../classcolvarproxy.html#a72daf3a34c9d80057cf0e41661469c96',1,'colvarproxy']]],
   ['get_5fatom_5fgroup_5fcom',['get_atom_group_com',['../classcolvarproxy.html#a6e9fd64ce4cf4a0d3280824088a07296',1,'colvarproxy']]],
@@ -15,6 +16,7 @@ var searchData=
   ['get_5fcolvars_5findex',['get_colvars_index',['../classcolvar__grid.html#ae52824086b4339da0d8d6e4175bb1187',1,'colvar_grid::get_colvars_index(std::vector&lt; colvarvalue &gt; const &amp;values) const '],['../classcolvar__grid.html#a6a4b5bb88d137281edd21a48695abb58',1,'colvar_grid::get_colvars_index() const ']]],
   ['get_5felem',['get_elem',['../classcolvarvalue.html#a9f96e98b39c0a013ba0b71e6b88f7a85',1,'colvarvalue::get_elem(int const i_begin, int const i_end, Type const vt) const '],['../classcolvarvalue.html#ac505984766ae975d7fdae0374d010da6',1,'colvarvalue::get_elem(int const icv) const ']]],
   ['get_5fframe',['get_frame',['../classcolvarproxy.html#afb81d8787fcdc018ca398de7ad63542c',1,'colvarproxy::get_frame()'],['../classcolvarproxy__vmd.html#a723b2b58e02e1fae2bb3b69fa025bbd4',1,'colvarproxy_vmd::get_frame()']]],
+  ['get_5fkeyval_5ffeature',['get_keyval_feature',['../classcolvardeps.html#ab9abd034505e8223e4a80fc02b205505',1,'colvardeps']]],
   ['get_5ftime_5fstep_5ffactor',['get_time_step_factor',['../classcolvar.html#a67dc1619b4345ccbb6dc17adbac0e7aa',1,'colvar']]],
   ['get_5fvector',['get_vector',['../classcolvarmodule_1_1quaternion.html#a9f93eec7600961254318b01f9568d68b',1,'colvarmodule::quaternion']]],
   ['getline_5fnocomments',['getline_nocomments',['../classcolvarparse.html#aeb6e307095de7de9de377847f29e191d',1,'colvarparse']]],
@@ -26,6 +28,8 @@ var searchData=
   ['group2',['group2',['../classcolvar_1_1distance.html#a24915db5e005defc572f7d3a6e74d245',1,'colvar::distance::group2()'],['../classcolvar_1_1distance__pairs.html#a2bfbf6879506f619a0fad01890ae34b8',1,'colvar::distance_pairs::group2()'],['../classcolvar_1_1angle.html#a6168e669f28c49956a1f86cfc5bab1b8',1,'colvar::angle::group2()'],['../classcolvar_1_1dipole__angle.html#ae09b7aa9a663f63a98f2b6677636d9ec',1,'colvar::dipole_angle::group2()'],['../classcolvar_1_1dihedral.html#ad225acfcaf5cf8d6c08c75797eb034c0',1,'colvar::dihedral::group2()'],['../classcolvar_1_1coordnum.html#a39d855fcc7ef7046406ee1197be9f884',1,'colvar::coordnum::group2()']]],
   ['group3',['group3',['../classcolvar_1_1angle.html#a196f28e8322901b94b2f7dbc68a84bf6',1,'colvar::angle::group3()'],['../classcolvar_1_1dipole__angle.html#a9449871b7d5120f3b52d0d0b1d90612f',1,'colvar::dipole_angle::group3()'],['../classcolvar_1_1dihedral.html#a84f04b4ec21fd4e0eb549c7939e231ed',1,'colvar::dihedral::group3()']]],
   ['group4',['group4',['../classcolvar_1_1dihedral.html#a115b67a86a2fcf0e671e629707ceb4da',1,'colvar::dihedral']]],
-  ['gyration',['gyration',['../classcolvar_1_1gyration.html',1,'colvar']]],
-  ['gyration',['gyration',['../classcolvar_1_1gyration.html#afe606e63d3b23d8172a6dcaaadc27302',1,'colvar::gyration']]]
+  ['groupcoordnum',['groupcoordnum',['../classcolvar_1_1groupcoordnum.html',1,'colvar']]],
+  ['groupcoordnum',['groupcoordnum',['../classcolvar_1_1groupcoordnum.html#a76040dc91ddd884798406fcca66e5420',1,'colvar::groupcoordnum']]],
+  ['gyration',['gyration',['../classcolvar_1_1gyration.html#afe606e63d3b23d8172a6dcaaadc27302',1,'colvar::gyration']]],
+  ['gyration',['gyration',['../classcolvar_1_1gyration.html',1,'colvar']]]
 ];

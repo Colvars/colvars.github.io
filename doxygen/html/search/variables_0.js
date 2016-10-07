@@ -36,7 +36,7 @@ var searchData=
   ['atoms_5fnew_5fcolvar_5fforces',['atoms_new_colvar_forces',['../classcolvarproxy.html#a77fe46896020419032f645ba19e982d5',1,'colvarproxy']]],
   ['atoms_5fpositions',['atoms_positions',['../classcolvarproxy.html#a8d692e35ad6e35d181d0598e0634acc0',1,'colvarproxy']]],
   ['atoms_5ftotal_5fforces',['atoms_total_forces',['../classcolvarproxy.html#a4d19672fc1a7702d6717de51ea6ba3d6',1,'colvarproxy']]],
-  ['available',['available',['../classcolvardeps_1_1feature__state.html#abc1639b17da2a354f36bad983b03ec53',1,'colvardeps::feature_state']]],
+  ['available',['available',['../structcolvardeps_1_1feature__state.html#abc1639b17da2a354f36bad983b03ec53',1,'colvardeps::feature_state']]],
   ['axes',['axes',['../classcolvar_1_1cartesian.html#ac7200484e8b8ebcfe38c5f5e0b8ab1a1',1,'colvar::cartesian']]],
   ['axis',['axis',['../classcolvar_1_1distance__z.html#ac2391f9b06bcc5fd701fc5880a4ad2b9',1,'colvar::distance_z::axis()'],['../classcolvar_1_1inertia__z.html#a5b15fb8095906b2455aebe640606e608',1,'colvar::inertia_z::axis()']]],
   ['axis_5fnorm',['axis_norm',['../classcolvar_1_1distance__z.html#a81b0dff0696f2afc3bca6a9d3cab904d',1,'colvar::distance_z']]]

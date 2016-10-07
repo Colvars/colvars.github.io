@@ -1,6 +1,8 @@
 var searchData=
 [
+  ['p',['p',['../classcolvarbias__restraint__histogram.html#ae4077310bbd78d15fab0f607a847d848',1,'colvarbias_restraint_histogram']]],
   ['p2leg_5fopt',['p2leg_opt',['../classcolvarvalue.html#ae966c9f2a1bccc6a9b71b50a608db771',1,'colvarvalue::p2leg_opt(colvarvalue const &amp;x, std::vector&lt; colvarvalue &gt;::iterator &amp;xv, std::vector&lt; colvarvalue &gt;::iterator const &amp;xv_end, std::vector&lt; cvm::real &gt;::iterator &amp;result)'],['../classcolvarvalue.html#a4a0a055da195738c64a61a89630664f3',1,'colvarvalue::p2leg_opt(colvarvalue const &amp;x, std::list&lt; colvarvalue &gt;::iterator &amp;xv, std::list&lt; colvarvalue &gt;::iterator const &amp;xv_end, std::vector&lt; cvm::real &gt;::iterator &amp;result)']]],
+  ['p_5fdiff',['p_diff',['../classcolvarbias__restraint__histogram.html#a37d8bf520e3e89ae2e686a2944f77bff',1,'colvarbias_restraint_histogram']]],
   ['parse',['parse',['../classcolvarmodule.html#a8be73a0b3c3d72211fbd8349e7d1d41e',1,'colvarmodule::parse()'],['../classcolvarmodule_1_1atom__group.html#aeeaec3b0308cc2446cf72abb162ef560',1,'colvarmodule::atom_group::parse()']]],
   ['parse_5fanalysis',['parse_analysis',['../classcolvar.html#a2fb6d950b3dec7303a0d5fe3d5170774',1,'colvar']]],
   ['parse_5fbiases',['parse_biases',['../classcolvarmodule.html#af51dcd2d41b68e0c0842a15bdac82355',1,'colvarmodule']]],
@@ -11,7 +13,7 @@ var searchData=
   ['parse_5fgroup',['parse_group',['../classcolvar_1_1cvc.html#af06d108e67f65aa1506471e971271ae7',1,'colvar::cvc']]],
   ['parse_5fmode',['Parse_Mode',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4',1,'colvarparse']]],
   ['parse_5fnormal',['parse_normal',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f',1,'colvarparse']]],
-  ['parse_5fparams',['parse_params',['../classcolvar__grid.html#af9a1b1abaafa9b205dd0694c8fe99af4',1,'colvar_grid']]],
+  ['parse_5fparams',['parse_params',['../classcolvar__grid.html#a72901cb6cba1c99a4f9ccbb0c8e08190',1,'colvar_grid']]],
   ['parse_5fsilent',['parse_silent',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4acd1135f68e4757747be4c0e586dcf82e',1,'colvarparse']]],
   ['period',['period',['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period()'],['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period()']]],
   ['periodic',['periodic',['../classcolvar__grid.html#ae7ae2b01e5c6afa691889907419aa4ec',1,'colvar_grid']]],

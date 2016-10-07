@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['gaussian_5fwidth',['gaussian_width',['../classcolvarbias__restraint__histogram.html#af93a6a0eaebcda947e396cefbe199c26',1,'colvarbias_restraint_histogram']]],
   ['grad',['grad',['../classcolvarmodule_1_1atom.html#a4025f9073c212c8603dea8f61450225e',1,'colvarmodule::atom']]],
   ['grid',['grid',['../classcolvarbias__histogram.html#aec5424ae0dbc963108317ec5bf3fd9e7',1,'colvarbias_histogram']]],
   ['grids_5ffreq',['grids_freq',['../classcolvarbias__meta.html#a11d9c2c7e59fba6a32103628b9f448f3',1,'colvarbias_meta']]],

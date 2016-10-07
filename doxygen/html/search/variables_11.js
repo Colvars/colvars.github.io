@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['r0',['r0',['../classcolvar_1_1coordnum.html#a892f0166432807e51bc8d2e2d71fd194',1,'colvar::coordnum::r0()'],['../classcolvar_1_1selfcoordnum.html#adad6196c38860e9590080870c7b46112',1,'colvar::selfcoordnum::r0()'],['../classcolvar_1_1h__bond.html#a7dd11f17797f33d3fe3bd271cdd229bd',1,'colvar::h_bond::r0()']]],
-  ['r0_5fvec',['r0_vec',['../classcolvar_1_1coordnum.html#afb42bd7e45175a419ca5bfc037f6ec92',1,'colvar::coordnum']]],
+  ['r0',['r0',['../classcolvar_1_1coordnum.html#a892f0166432807e51bc8d2e2d71fd194',1,'colvar::coordnum::r0()'],['../classcolvar_1_1selfcoordnum.html#adad6196c38860e9590080870c7b46112',1,'colvar::selfcoordnum::r0()'],['../classcolvar_1_1groupcoordnum.html#aedb71de81d5eb86714df29ba057a4791',1,'colvar::groupcoordnum::r0()'],['../classcolvar_1_1h__bond.html#a7dd11f17797f33d3fe3bd271cdd229bd',1,'colvar::h_bond::r0()']]],
+  ['r0_5fvec',['r0_vec',['../classcolvar_1_1coordnum.html#afb42bd7e45175a419ca5bfc037f6ec92',1,'colvar::coordnum::r0_vec()'],['../classcolvar_1_1groupcoordnum.html#a0dc9030d37d7ea6bde84654eeaa48638',1,'colvar::groupcoordnum::r0_vec()']]],
   ['r12',['r12',['../classcolvar_1_1dihedral.html#a4fa33a834478d2ac8e5f88cf009c47cd',1,'colvar::dihedral']]],
   ['r21',['r21',['../classcolvar_1_1angle.html#a1b32c1888ac24e1884b494f979daba65',1,'colvar::angle::r21()'],['../classcolvar_1_1dipole__angle.html#a40b894b4c874859a92238e55a6756bb4',1,'colvar::dipole_angle::r21()']]],
   ['r21l',['r21l',['../classcolvar_1_1angle.html#adbd652d28a40bd7b9279ac081b21ec75',1,'colvar::angle::r21l()'],['../classcolvar_1_1dipole__angle.html#a489d8fd2d8676bf8992225752eaf5620',1,'colvar::dipole_angle::r21l()']]],
@@ -12,6 +12,7 @@ var searchData=
   ['reduction',['reduction',['../classcolvarproxy__namd.html#adb099b35dd2457a711f177111c297704',1,'colvarproxy_namd']]],
   ['ref1',['ref1',['../classcolvar_1_1distance__z.html#a8eb8fab874c6370e247aff2fe799ded3',1,'colvar::distance_z']]],
   ['ref2',['ref2',['../classcolvar_1_1distance__z.html#abe77b74ab1e5f8ee3d0f7456c59f0508',1,'colvar::distance_z']]],
+  ['ref_5fp',['ref_p',['../classcolvarbias__restraint__histogram.html#a422ba38a4eca6c5f51cf96d12125aa87',1,'colvarbias_restraint_histogram']]],
   ['ref_5fpos',['ref_pos',['../classcolvarmodule_1_1atom__group.html#a46a532f30a3f6800b98e77fbcfb97a42',1,'colvarmodule::atom_group::ref_pos()'],['../classcolvar_1_1eigenvector.html#a1125fc781287a0c7c51de54d5a59757b',1,'colvar::eigenvector::ref_pos()'],['../classcolvar_1_1orientation.html#aa1a815f32da6be81699222389df84987',1,'colvar::orientation::ref_pos()'],['../classcolvar_1_1rmsd.html#a45d6bbfd23c3b24f44cd2e32306e4732',1,'colvar::rmsd::ref_pos()']]],
   ['ref_5fpos_5fcenter',['ref_pos_center',['../classcolvar_1_1eigenvector.html#ad8d6e343040a3057bc069c38ccb49d2b',1,'colvar::eigenvector']]],
   ['ref_5fpos_5fcog',['ref_pos_cog',['../classcolvarmodule_1_1atom__group.html#a91f63d8f5976dce774fed331c0aaeabf',1,'colvarmodule::atom_group']]],
@@ -30,7 +31,6 @@ var searchData=
   ['replicas_5fregistry',['replicas_registry',['../classcolvarbias__meta.html#aeb7beaeecb0aeaf768a1394b3379ff54',1,'colvarbias_meta']]],
   ['replicas_5fregistry_5ffile',['replicas_registry_file',['../classcolvarbias__meta.html#a232e9e3159ebcb0f83da0a1b9027756d',1,'colvarbias_meta']]],
   ['restart_5ffrequency_5fs',['restart_frequency_s',['../classcolvarproxy__namd.html#a4322e427c2b15eac81fe5a89d0122a41',1,'colvarproxy_namd']]],
-  ['restart_5fin_5fname',['restart_in_name',['../classcolvarmodule.html#a029c7d9f3967927e467101379ac3f6bb',1,'colvarmodule']]],
   ['restart_5fout_5ffreq',['restart_out_freq',['../classcolvarmodule.html#a9311c4218f208934719ab3bf69535021',1,'colvarmodule']]],
   ['restart_5fout_5fname',['restart_out_name',['../classcolvarmodule.html#abf246f5197230f0af5e412865a44b28b',1,'colvarmodule']]],
   ['restart_5fout_5fos',['restart_out_os',['../classcolvarmodule.html#a9e9dfd39b805e2c067e56455b50ed7f0',1,'colvarmodule']]],

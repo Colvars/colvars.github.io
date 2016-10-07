@@ -1,6 +1,7 @@
 var searchData=
 [
   ['data',['data',['../classcolvar__grid.html#a55315b2161c9487ade559bf1174b31dd',1,'colvar_grid']]],
+  ['data_5farray',['data_array',['../classcolvarmodule_1_1vector1d.html#a9d813e8e74469700817c1a8624c5d3d8',1,'colvarmodule::vector1d::data_array()'],['../classcolvarmodule_1_1matrix2d.html#a9727b45acca5e46e8498a6b1c071c8b2',1,'colvarmodule::matrix2d::data_array()']]],
   ['data_5fbegin_5fpos',['data_begin_pos',['../classcolvarparse.html#a39c128c5f96f1d6d74038024c1e25ce9',1,'colvarparse']]],
   ['data_5fend_5fpos',['data_end_pos',['../classcolvarparse.html#a953417bf426b3f6743ad08a5d6f5549c',1,'colvarparse']]],
   ['dcos_5ftheta_5fdq',['dcos_theta_dq',['../classcolvarmodule_1_1rotation.html#a6885b1e2f7cae64aa5f227b36077a27b',1,'colvarmodule::rotation']]],

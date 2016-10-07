@@ -13,7 +13,7 @@ var searchData=
   ['_7ecolvarproxy',['~colvarproxy',['../classcolvarproxy.html#a5ee69c8de0bd535763ebfad1a3c85b5c',1,'colvarproxy']]],
   ['_7ecvc',['~cvc',['../classcolvar_1_1cvc.html#a2c7968e6dce6fb671a52c557a748ada4',1,'colvar::cvc']]],
   ['_7ehill',['~hill',['../classcolvarbias__meta_1_1hill.html#a579a38b44f318b0dd279f49b00ec45ca',1,'colvarbias_meta::hill']]],
-  ['_7ematrix2d',['~matrix2d',['../singletoncolvarmodule_1_1matrix2d.html#a5c14ecf2b1131685fc173fe9f2c19083',1,'colvarmodule::matrix2d']]],
+  ['_7ematrix2d',['~matrix2d',['../classcolvarmodule_1_1matrix2d.html#a5c14ecf2b1131685fc173fe9f2c19083',1,'colvarmodule::matrix2d']]],
   ['_7ermatrix',['~rmatrix',['../classcolvarmodule_1_1rmatrix.html#aaeee94d3f3f881eb84c8491a9582469b',1,'colvarmodule::rmatrix']]],
   ['_7erotation',['~rotation',['../classcolvarmodule_1_1rotation.html#a06255dfdb6442f8a109dc067f86bf5dd',1,'colvarmodule::rotation']]]
 ];

@@ -9,7 +9,7 @@ var searchData=
   ['log',['log',['../classcolvarmodule.html#af3407a1bad91886413d22b0a4f31e814',1,'colvarmodule::log()'],['../classcolvarproxy.html#aa2ebf5d000d5ac94a408721f4843d06f',1,'colvarproxy::log()'],['../classcolvarproxy__namd.html#a6e138fe7d0f3869e71270328342099f9',1,'colvarproxy_namd::log()'],['../classcolvarproxy__vmd.html#ae9190c5d6321529e8e32583666a1ad51',1,'colvarproxy_vmd::log()']]],
   ['log_5fgradient_5ffinite_5fdiff',['log_gradient_finite_diff',['../classcolvar__grid__count.html#a0bf3abee589cb46ce3d77d85ef0f6aa2',1,'colvar_grid_count']]],
   ['lower_5fboundaries',['lower_boundaries',['../classcolvar__grid.html#aeb1b4ae308139440e47d59aefd7e7f4c',1,'colvar_grid']]],
-  ['lower_5fboundary',['lower_boundary',['../classcolvar.html#a4d8e143de86d62119f2c990bfd5c845a',1,'colvar']]],
+  ['lower_5fboundary',['lower_boundary',['../classcolvar.html#a4d8e143de86d62119f2c990bfd5c845a',1,'colvar::lower_boundary()'],['../classcolvarbias__restraint__histogram.html#a5f378c17744b684bcc31671c4128a511',1,'colvarbias_restraint_histogram::lower_boundary()']]],
   ['lower_5fwall',['lower_wall',['../classcolvar.html#af3618fa6fc39cac6db279a4bde00ac4c',1,'colvar']]],
   ['lower_5fwall_5fk',['lower_wall_k',['../classcolvar.html#a93641051d14e18049f26bc7de220f810',1,'colvar']]]
 ];
