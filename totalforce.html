@@ -1,0 +1,47 @@
+<h3>CHANGES IN THE DEFINITION OF SYSTEM FORCES (NOW TOTAL FORCES)</h3>
+
+<p>Starting from the version 2016-08-10 of the Colvars module, 
+the role of system forces has been replaced by total forces.</p>
+
+<p>These include <em>all</em> forces acting on a collective variable, whether they
+come from the force field potential or from external terms
+(e.g. restraints), including forces applied by Colvars itself.</p>
+
+<p>In NAMD, forces applied by Colvars, IMD, SMD, TMD, symmetry
+restraints and tclForces are now all counted in the total force.</p>
+
+<p>In LAMMPS, forces applied by Colvars itself are now counted in the total
+force (all forces from other fixes were being counted already).</p>
+
+<h3>WHEN IS THIS CHANGE RELEVANT</h3>
+
+<p>This change affects results <em>only</em> when (1) outputSystemForce is
+requested or (2) the ABF bias is used.  All other usage cases are
+<em>unaffected</em> (colvar restraints, metadynamics, etc).</p>
+
+<p>When system forces are reported (flag: outputSystemForce), their values
+in the output may change, but the physical trajectory is never affected.
+The physical results of ABF calculations may be affected in some cases.</p>
+
+<h3>CHANGES TO ABF CALCULATIONS</h3>
+
+<p>Compared to previous Colvars versions, the ABF method will now attempt
+to cancel external forces (for example, boundary walls) and it may be
+not possible to resume through a state file a simulation that was
+performed with a previous version.</p>
+
+<p>There are three possible scenarios:</p>
+
+<ol>
+<li><p>No external forces are applied to the atoms used by ABF: results are
+unchanged.</p></li>
+<li><p>Some of the atoms used by ABF experience external forces, but these
+forces are not applied directly to the variables used by ABF
+(e.g. another colvar that uses the same atoms, tclForces, etc): in this
+case, we recommend beginning a new simulation.</p></li>
+<li><p>External forces are applied to one or more of the colvars used by
+ABF, but no other forces are applied to their atoms: you may use the
+subtractAppliedForce keyword inside the corresponding colvars to
+continue the previous simulation.</p></li>
+</ol>
+
