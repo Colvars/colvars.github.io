@@ -37,7 +37,7 @@ colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/
 
 doxygen: doxygen/html/index.html
    
-doxygen/html/index.html: $(SRCDIR)/*.h
+doxygen/html/index.html: $(SRCDIR)/*.h doxygen/Doxyfile
 	cd doxygen; doxygen
 
 clean:
