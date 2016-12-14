@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['acc_5fwork',['acc_work',['../classcolvarbias__restraint.html#ada91f0bba564baf5ff6e54683d5b653e',1,'colvarbias_restraint']]],
+  ['acc_5fwork',['acc_work',['../classcolvarbias__restraint__centers__moving.html#a3385dd8a19cccc4782ab1fd9f042671a',1,'colvarbias_restraint_centers_moving']]],
   ['acf',['acf',['../classcolvar.html#a5b82753cac4c6408e66d98876f1a21ac',1,'colvar']]],
   ['acf_5fcolvar_5fname',['acf_colvar_name',['../classcolvar.html#ad403c0b1869ae4335677273c87e0016a',1,'colvar']]],
   ['acf_5flength',['acf_length',['../classcolvar.html#aefd8381ef9eeb683cdbfaa464830e34b',1,'colvar']]],
@@ -14,6 +14,7 @@ var searchData=
   ['acf_5fx_5fhistory_5fp',['acf_x_history_p',['../classcolvar.html#a3e4fe8593e4d7308055f7341b6ece5d4',1,'colvar']]],
   ['active_5fcvc_5fsquare_5fnorm',['active_cvc_square_norm',['../classcolvar.html#a1578ec614ef2afd196c6a3be5e3a092f',1,'colvar']]],
   ['actual_5fvalue',['actual_value',['../classcolvar__grid.html#a7a3082ef54e173b0abaf1b8a4a034c0f',1,'colvar_grid']]],
+  ['after_5frestart',['after_restart',['../classcolvar.html#a374d1799f5620d218c0e44cd307ebb06',1,'colvar']]],
   ['ag_5ffeatures',['ag_features',['../classcolvarmodule_1_1atom__group.html#a3ba079f52a38408f6044404b68cc4f01',1,'colvarmodule::atom_group']]],
   ['allowed_5fkeywords',['allowed_keywords',['../classcolvarparse.html#a9e3abe5ee9dc4dc42bd5d4e13d385844',1,'colvarparse']]],
   ['atom_5fgroups',['atom_groups',['../classcolvar_1_1cvc.html#ae91dd987bde95bcfdd3cb5e0d06339f4',1,'colvar::cvc']]],

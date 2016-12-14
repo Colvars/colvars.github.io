@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li class="current"><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -204,13 +204,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>read_restart()
 : <a class="el" href="classcolvar.html#a1590092464e6dbbb9165c1c8d20f3506">colvar</a>
 , <a class="el" href="classcolvar__grid.html#a0a3ad3e1eeaa42c33ad3d2a00bd313d6">colvar_grid&lt; T &gt;</a>
-, <a class="el" href="classcolvarbias.html#a51e98d9f99b64e9005665f95a437c282">colvarbias</a>
-, <a class="el" href="classcolvarbias__alb.html#a82280766f014e4baaeed652d4aa0c946">colvarbias_alb</a>
-, <a class="el" href="classcolvarbias__histogram.html#ae2afaaf11df2a69c9d4954a5ddab95d1">colvarbias_histogram</a>
-, <a class="el" href="classcolvarbias__meta.html#a0c810a00765048ac24dd243a2a74e87b">colvarbias_meta</a>
-, <a class="el" href="classcolvarbias__restraint.html#a35aa6efb6bf2f11aae353094e07e7ed0">colvarbias_restraint</a>
-, <a class="el" href="classcolvarbias__restraint__histogram.html#aed3ad611e1425ed5a9622dd5c955681e">colvarbias_restraint_histogram</a>
 , <a class="el" href="classcolvarmodule.html#a1bd1a4c8bda768a5125515e74e4154cf">colvarmodule</a>
+</li>
+<li>read_state()
+: <a class="el" href="classcolvarbias.html#a89cea38974152aab68bf42d4abee2add">colvarbias</a>
+, <a class="el" href="classcolvarbias__restraint.html#ab63a45fdc19ced03414a08e896e8467a">colvarbias_restraint</a>
+</li>
+<li>read_state_data()
+: <a class="el" href="classcolvarbias.html#a17bb5bac537390dc441c35db15132122">colvarbias</a>
+, <a class="el" href="classcolvarbias__histogram.html#a4a1fe1beaaacf9b2dc972a1cee26a95b">colvarbias_histogram</a>
+, <a class="el" href="classcolvarbias__meta.html#a1819ba53804de7785232e1b61e45f4e4">colvarbias_meta</a>
+</li>
+<li>read_state_data_key()
+: <a class="el" href="classcolvarbias.html#ae0752a8895d4c4a959b00d6b706afcdd">colvarbias</a>
 </li>
 <li>read_total_force()
 : <a class="el" href="classcolvarmodule_1_1atom.html#ac1808fc4af63a63bd4e158dbac859319">colvarmodule::atom</a>
@@ -276,6 +282,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>remove_atom()
 : <a class="el" href="classcolvarmodule_1_1atom__group.html#a1803efdb8d699520dfc7a2676cd9f64c">colvarmodule::atom_group</a>
+</li>
+<li>remove_zeros()
+: <a class="el" href="classcolvar__grid.html#a6d084d05e719aa0be3a6dd9a21f9e590">colvar_grid&lt; T &gt;</a>
 </li>
 <li>replica
 : <a class="el" href="classcolvarbias__meta_1_1hill.html#a818b4c3f9e5531cd1ce9fbbb3d9ff85f">colvarbias_meta::hill</a>
@@ -407,23 +416,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>restraint_convert_k()
 : <a class="el" href="classcolvarbias__alb.html#a214b622ccfaa4dd27cfc8ab255ad6e43">colvarbias_alb</a>
-, <a class="el" href="classcolvarbias__restraint.html#af5400f6c46ad4dba854076d97c5a71c8">colvarbias_restraint</a>
-, <a class="el" href="classcolvarbias__restraint__harmonic.html#aeb9bb6584a8e0314ead98d8a4baa8628">colvarbias_restraint_harmonic</a>
-, <a class="el" href="classcolvarbias__restraint__linear.html#ab18dcef0668652e4a65acd3452446b9f">colvarbias_restraint_linear</a>
 </li>
 <li>restraint_FE
-: <a class="el" href="classcolvarbias__restraint.html#a9059fe16571c96309fa0f1a83eeb45fa">colvarbias_restraint</a>
+: <a class="el" href="classcolvarbias__restraint__k__moving.html#adb49c0b3bb970f1d639c049d10abc049">colvarbias_restraint_k_moving</a>
 </li>
 <li>restraint_force()
 : <a class="el" href="classcolvarbias__alb.html#a632e2cc301b2dee3b8131a8e486393ea">colvarbias_alb</a>
-, <a class="el" href="classcolvarbias__restraint.html#a0710c32871d820280cc8de5df98e685c">colvarbias_restraint</a>
-, <a class="el" href="classcolvarbias__restraint__harmonic.html#a21e525734c4ea5efd5ea476317e767d7">colvarbias_restraint_harmonic</a>
-, <a class="el" href="classcolvarbias__restraint__linear.html#a79dc03fe112b6d0e4ebcbe7b261e782f">colvarbias_restraint_linear</a>
+, <a class="el" href="classcolvarbias__restraint.html#a65ed1842434dfcb07cfbbbc658d47d37">colvarbias_restraint</a>
+, <a class="el" href="classcolvarbias__restraint__harmonic.html#a30c85e33cd623bb2201fff34473e4c19">colvarbias_restraint_harmonic</a>
+, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#af30b771b29a995ba2fb66f3f2a54502d">colvarbias_restraint_harmonic_walls</a>
+, <a class="el" href="classcolvarbias__restraint__linear.html#a91858173b9039ece429646ac1ff204f3">colvarbias_restraint_linear</a>
 </li>
 <li>restraint_potential()
-: <a class="el" href="classcolvarbias__restraint.html#a2b8f7eb10f2da6b17cd0db78b44a259e">colvarbias_restraint</a>
-, <a class="el" href="classcolvarbias__restraint__harmonic.html#aca7221b44a8602e17929b9daa401c47f">colvarbias_restraint_harmonic</a>
-, <a class="el" href="classcolvarbias__restraint__linear.html#a1b3f2ac8d7f06cda5cdb2028909740cd">colvarbias_restraint_linear</a>
+: <a class="el" href="classcolvarbias__restraint.html#ab330422af832dba5370421869c3943ed">colvarbias_restraint</a>
+, <a class="el" href="classcolvarbias__restraint__harmonic.html#afcffd249eb2a92a6be651ad4dff6190c">colvarbias_restraint_harmonic</a>
+, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#a3822e3349b5ca38a4cebf7886799eebe">colvarbias_restraint_harmonic_walls</a>
+, <a class="el" href="classcolvarbias__restraint__linear.html#a6ce8a38407d6b0313416fcbd3465059e">colvarbias_restraint_linear</a>
 </li>
 <li>result
 : <a class="el" href="classcolvarscript.html#ab171072de0fd4948e1b9e8d4e2995489">colvarscript</a>
@@ -478,7 +486,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 7 2016 11:45:05 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 14 2016 15:37:23 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

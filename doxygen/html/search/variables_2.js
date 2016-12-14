@@ -1,11 +1,11 @@
 var searchData=
 [
   ['centers',['centers',['../classcolvarbias__meta_1_1hill.html#a8cbb66260e30c1231dc1a7d2d91ff0bb',1,'colvarbias_meta::hill']]],
-  ['centers_5fincr',['centers_incr',['../classcolvarbias__restraint.html#ae20a65ee49782ed024333206b2162a54',1,'colvarbias_restraint']]],
+  ['centers_5fincr',['centers_incr',['../classcolvarbias__restraint__centers__moving.html#ac55436a860b70016bc90e95d2c067459',1,'colvarbias_restraint_centers_moving']]],
   ['charge',['charge',['../classcolvarmodule_1_1atom.html#a9e14b4fcff053c2789652542a5144eea',1,'colvarmodule::atom']]],
   ['colvar_5farray_5fsize',['colvar_array_size',['../classcolvarbias__histogram.html#a152b27e315fe24a14b6b9f22ecac514a',1,'colvarbias_histogram']]],
-  ['colvar_5fcenters',['colvar_centers',['../classcolvarbias__alb.html#a3e94b04983de1c6a6148e42c20834cd3',1,'colvarbias_alb::colvar_centers()'],['../classcolvarbias__restraint.html#aacd3b6af633c91334f0bf0023fde726d',1,'colvarbias_restraint::colvar_centers()']]],
-  ['colvar_5fcenters_5fraw',['colvar_centers_raw',['../classcolvarbias__restraint.html#a20f9790f72e37a92f2720cf0679008be',1,'colvarbias_restraint']]],
+  ['colvar_5fcenters',['colvar_centers',['../classcolvarbias__alb.html#a3e94b04983de1c6a6148e42c20834cd3',1,'colvarbias_alb::colvar_centers()'],['../classcolvarbias__restraint__centers.html#a9cd76902d65e10e8240f2e3bbac68eb7',1,'colvarbias_restraint_centers::colvar_centers()']]],
+  ['colvar_5fcenters_5fraw',['colvar_centers_raw',['../classcolvarbias__restraint__centers.html#add26e70dcaa4e734b169c5c4c8e42e62',1,'colvarbias_restraint_centers']]],
   ['colvar_5fforces',['colvar_forces',['../classcolvarbias.html#ae99956532b05dbf016b208ada82ac943',1,'colvarbias']]],
   ['colvars',['colvars',['../classcolvarbias.html#a981fef00c9f3bdd8dd03c0617297e56b',1,'colvarbias::colvars()'],['../classcolvarmodule.html#af93654ceb915e18b249dd4db9dc9aec8',1,'colvarmodule::colvars()'],['../classcolvarproxy.html#a24379da129608ec8fbbb3effa820bd1d',1,'colvarproxy::colvars()']]],
   ['colvars_5fsmp',['colvars_smp',['../classcolvarmodule.html#ab7f44d8557f48704ee29c1a620b88dbe',1,'colvarmodule']]],

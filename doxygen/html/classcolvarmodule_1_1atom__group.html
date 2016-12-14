@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -103,13 +103,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for colvarmodule::atom_group:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classcolvarmodule_1_1atom__group.png" usemap="#colvarmodule::atom_group_map" alt=""/>
-  <map id="colvarmodule::atom_group_map" name="colvarmodule::atom_group_map">
-<area href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="colvarparse" shape="rect" coords="0,0,160,24"/>
-<area href="classcolvardeps.html" alt="colvardeps" shape="rect" coords="170,0,330,24"/>
-</map>
- </div></div>
+<div class="center"><img src="classcolvarmodule_1_1atom__group__inherit__graph.png" border="0" usemap="#colvarmodule_1_1atom__group_inherit__map" alt="Inheritance graph"/></div>
+<map name="colvarmodule_1_1atom__group_inherit__map" id="colvarmodule_1_1atom__group_inherit__map">
+<area shape="rect" id="node2" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="" coords="5,5,93,32"/><area shape="rect" id="node3" href="classcolvardeps.html" title="colvardeps" alt="" coords="119,5,204,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for colvarmodule::atom_group:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcolvarmodule_1_1atom__group__coll__graph.png" border="0" usemap="#colvarmodule_1_1atom__group_coll__map" alt="Collaboration graph"/></div>
+<map name="colvarmodule_1_1atom__group_coll__map" id="colvarmodule_1_1atom__group_coll__map">
+<area shape="rect" id="node2" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="" coords="517,5,606,32"/><area shape="rect" id="node3" href="classcolvardeps.html" title="colvardeps" alt="" coords="519,56,604,83"/><area shape="rect" id="node4" href="classcolvarmodule_1_1rotation.html" title="A rotation between two sets of coordinates (for the moment a wrapper for colvarmodule::quaternion) ..." alt="" coords="486,107,637,133"/><area shape="rect" id="node5" href="classcolvarmodule_1_1quaternion.html" title="1&#45;dimensional vector of real numbers with four components and a quaternion algebra ..." alt="" coords="214,8,381,35"/><area shape="rect" id="node6" href="classcolvarmodule_1_1rmatrix.html" title="2&#45;dimensional array of real numbers with three components along each dimension (works with colvarmodu..." alt="" coords="224,151,371,177"/><area shape="rect" id="node7" href="classcolvarmodule_1_1matrix2d.html" title="colvarmodule::matrix2d\l\&lt; colvarmodule::real \&gt;" alt="" coords="5,106,163,147"/><area shape="rect" id="node8" href="classcolvarmodule_1_1vector1d.html" title="colvarmodule::vector1d\l\&lt; colvarmodule::real \&gt;" alt="" coords="219,202,376,243"/><area shape="rect" id="node9" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components " alt="" coords="488,157,635,184"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -197,6 +201,9 @@ cvm::atom_const_iter&#160;</td><td class="memItemRight" valign="bottom"><b>end</
 <tr class="memitem:ad6179a46162c7e6873213e5d4486eef5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6179a46162c7e6873213e5d4486eef5"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const </td></tr>
 <tr class="separator:ad6179a46162c7e6873213e5d4486eef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a236810d4dc335263e1b8cd5ec5543515"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a236810d4dc335263e1b8cd5ec5543515"></a>
+std::string const&#160;</td><td class="memItemRight" valign="bottom"><b>print_atom_ids</b> () const </td></tr>
+<tr class="separator:a236810d4dc335263e1b8cd5ec5543515"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addd59dd45db2a6418f9e6dd02c9ee8ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addd59dd45db2a6418f9e6dd02c9ee8ca"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#addd59dd45db2a6418f9e6dd02c9ee8ca">create_sorted_ids</a> (void)</td></tr>
 <tr class="memdesc:addd59dd45db2a6418f9e6dd02c9ee8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and populates the sorted list of atom ids. <br/></td></tr>
@@ -565,7 +572,8 @@ Additional Inherited Members</h2></td></tr>
 <b>f_cvb_get_total_force</b>, 
 <b>f_cvb_history_dependent</b>, 
 <br/>
-&#160;&#160;<b>f_cvb_ntot</b>
+&#160;&#160;<b>f_cvb_scalar_variables</b>, 
+<b>f_cvb_ntot</b>
 <br/>
  }</td></tr>
 <tr class="separator:abf010b3abf3aa69fc260847bce6603da inherit pub_types_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -709,7 +717,7 @@ template&lt;typename TYPE &gt; </td></tr>
 </div><div class="memdoc">
 
 <p>Apply a force "to the center of mass", i.e. the force is distributed on each atom according to its mass. </p>
-<p>If the group is being rotated to a reference frame (e.g. to express the colvar independently from the solute rotation), the force is rotated back to the original frame. Colvar gradients are not used, either because they were not defined (e.g because the colvar has not a scalar value) or the biases require to micromanage the force. </p>
+<p>If the group is being rotated to a reference frame (e.g. to express the colvar independently from the solute rotation), the force is rotated back to the original frame. Colvar gradients are not used, either because they were not defined (e.g because the colvar has not a scalar value) or the biases require to micromanage the force. This function will be phased out eventually, in favor of <a class="el" href="classcolvarmodule_1_1atom__group.html#ac4ff6b030809c7875ea4d135cab32895" title="Used by a (scalar) colvar to apply its force on its atom_group members. ">apply_colvar_force()</a> once that is implemented for non-scalar values </p>
 
 </div>
 </div>
@@ -762,12 +770,13 @@ template&lt;typename TYPE &gt; </td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvaratoms_8h_source.html">colvaratoms.h</a></li>
+<li>a.cpp</li>
 <li>colvaratoms.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 7 2016 11:45:05 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 14 2016 15:37:23 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

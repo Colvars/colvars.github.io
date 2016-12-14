@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -99,23 +99,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for colvarproxy:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classcolvarproxy.png" usemap="#colvarproxy_map" alt=""/>
-  <map id="colvarproxy_map" name="colvarproxy_map">
-<area href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy) " alt="colvarproxy_namd" shape="rect" coords="0,56,117,80"/>
-<area href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy) " alt="colvarproxy_vmd" shape="rect" coords="127,56,244,80"/>
-</map>
- </div></div>
+<div class="center"><img src="classcolvarproxy__inherit__graph.png" border="0" usemap="#colvarproxy_inherit__map" alt="Inheritance graph"/></div>
+<map name="colvarproxy_inherit__map" id="colvarproxy_inherit__map">
+<area shape="rect" id="node2" href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy) " alt="" coords="5,80,133,107"/><area shape="rect" id="node3" href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy) " alt="" coords="158,80,279,107"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for colvarproxy:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcolvarproxy__coll__graph.png" border="0" usemap="#colvarproxy_coll__map" alt="Collaboration graph"/></div>
+<map name="colvarproxy_coll__map" id="colvarproxy_coll__map">
+<area shape="rect" id="node2" href="classcolvarmodule.html" title="Collective variables module (main class) " alt="" coords="68,187,167,213"/><area shape="rect" id="node3" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="" coords="5,96,93,123"/><area shape="rect" id="node4" href="classcolvarscript.html" title="colvarscript" alt="" coords="129,5,217,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a05bb023c0858bbd38906563d8fc44108"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05bb023c0858bbd38906563d8fc44108"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a05bb023c0858bbd38906563d8fc44108">colvarproxy</a> ()</td></tr>
-<tr class="memdesc:a05bb023c0858bbd38906563d8fc44108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br/></td></tr>
+<tr class="memdesc:a05bb023c0858bbd38906563d8fc44108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br/></td></tr>
 <tr class="separator:a05bb023c0858bbd38906563d8fc44108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ee69c8de0bd535763ebfad1a3c85b5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ee69c8de0bd535763ebfad1a3c85b5c"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a5ee69c8de0bd535763ebfad1a3c85b5c">~colvarproxy</a> ()</td></tr>
-<tr class="memdesc:a5ee69c8de0bd535763ebfad1a3c85b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br/></td></tr>
+<tr class="memdesc:a5ee69c8de0bd535763ebfad1a3c85b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
 <tr class="separator:a5ee69c8de0bd535763ebfad1a3c85b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84fdcf7aafa517dc915c322167152141"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84fdcf7aafa517dc915c322167152141"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a84fdcf7aafa517dc915c322167152141">setup</a> ()</td></tr>
@@ -171,9 +175,13 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a0ac0cb6c7ca74cb0e2eccf2af1347571">restart_frequency</a> ()</td></tr>
 <tr class="memdesc:a0ac0cb6c7ca74cb0e2eccf2af1347571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restarts will be written each time this number of steps has passed. <br/></td></tr>
 <tr class="separator:a0ac0cb6c7ca74cb0e2eccf2af1347571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c6ed066fa090459eb962130887976af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c6ed066fa090459eb962130887976af"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a8c6ed066fa090459eb962130887976af">simulation_running</a> () const </td></tr>
+<tr class="memdesc:a8c6ed066fa090459eb962130887976af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a simulation is running (and try to prevent irrecovarable errors) <br/></td></tr>
+<tr class="separator:a8c6ed066fa090459eb962130887976af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6d646fee5597cdf95b388b926de20e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6d646fee5597cdf95b388b926de20e0"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#ae6d646fee5597cdf95b388b926de20e0">smp_enabled</a> ()</td></tr>
-<tr class="memdesc:ae6d646fee5597cdf95b388b926de20e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not threaded parallelization is available. <br/></td></tr>
+<tr class="memdesc:ae6d646fee5597cdf95b388b926de20e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether threaded parallelization is available (TODO: make this a cvm::deps feature) <br/></td></tr>
 <tr class="separator:ae6d646fee5597cdf95b388b926de20e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65517d0154b7444d78ae73a8acb14f08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65517d0154b7444d78ae73a8acb14f08"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a65517d0154b7444d78ae73a8acb14f08">smp_colvars_loop</a> ()</td></tr>
@@ -426,6 +434,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>output_prefix_
 <tr class="memitem:a45a375556b13915ee47486dfe4bec8f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45a375556b13915ee47486dfe4bec8f8"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>restart_output_prefix_str</b></td></tr>
 <tr class="separator:a45a375556b13915ee47486dfe4bec8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96fc8677cd5a1be11c11adeb29288fd1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96fc8677cd5a1be11c11adeb29288fd1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a96fc8677cd5a1be11c11adeb29288fd1">b_smp_active</a></td></tr>
+<tr class="memdesc:a96fc8677cd5a1be11c11adeb29288fd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether threaded parallelization should be used (TODO: make this a cvm::deps feature) <br/></td></tr>
+<tr class="separator:a96fc8677cd5a1be11c11adeb29288fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63cf3c32a65650ae7f67608237a8c893"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarscript.html">colvarscript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a63cf3c32a65650ae7f67608237a8c893">script</a></td></tr>
 <tr class="separator:a63cf3c32a65650ae7f67608237a8c893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18853bbb44eabea28b2b146d7f40cd05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18853bbb44eabea28b2b146d7f40cd05"></a>
@@ -446,6 +458,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:ae1bf730e928539e61f869530e7969e82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1bf730e928539e61f869530e7969e82"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#ae1bf730e928539e61f869530e7969e82">b_simulation_running</a></td></tr>
+<tr class="memdesc:ae1bf730e928539e61f869530e7969e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a simulation is running (and try to prevent irrecovarable errors) <br/></td></tr>
+<tr class="separator:ae1bf730e928539e61f869530e7969e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a789e11eecec78218c6ad59018f468d6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a789e11eecec78218c6ad59018f468d6b"></a>
 std::list&lt; std::ostream * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a789e11eecec78218c6ad59018f468d6b">output_files</a></td></tr>
 <tr class="memdesc:a789e11eecec78218c6ad59018f468d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently opened output files: by default, these are ofstream objects. Allows redefinition to implement different output mechanisms. <br/></td></tr>
@@ -773,7 +789,7 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 7 2016 11:45:05 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 14 2016 15:37:23 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

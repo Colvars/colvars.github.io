@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -97,6 +97,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classcolvarvalue.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="colvarvalue_8h_source.html">colvarvalue.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for colvarvalue:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcolvarvalue__coll__graph.png" border="0" usemap="#colvarvalue_coll__map" alt="Collaboration graph"/></div>
+<map name="colvarvalue_coll__map" id="colvarvalue_coll__map">
+<area shape="rect" id="node2" href="classcolvarmodule_1_1quaternion.html" title="1&#45;dimensional vector of real numbers with four components and a quaternion algebra ..." alt="" coords="6,5,173,32"/><area shape="rect" id="node3" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components " alt="" coords="16,56,163,83"/><area shape="rect" id="node4" href="classcolvarmodule_1_1vector1d.html" title="colvarmodule::vector1d\l\&lt; colvarmodule::real \&gt;" alt="" coords="11,107,168,149"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -135,26 +142,22 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a0d5461b21b6e1331e5899a50e43a1724">colvarvalue</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;x)</td></tr>
 <tr class="memdesc:a0d5461b21b6e1331e5899a50e43a1724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor from real base type. <br/></td></tr>
 <tr class="separator:a0d5461b21b6e1331e5899a50e43a1724"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af58b64101bd76254a8aa36c0e27a6e44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af58b64101bd76254a8aa36c0e27a6e44"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#af58b64101bd76254a8aa36c0e27a6e44">colvarvalue</a> (<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;v)</td></tr>
-<tr class="memdesc:af58b64101bd76254a8aa36c0e27a6e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor from rvector base type (Note: this sets automatically a type <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50a1b79a5eabc441faf3193e0cd81862375">type_3vector</a> , if you want a <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50a75e0072c95387c5464a6090e86fb8097">type_unit3vector</a> you must set it explicitly) <br/></td></tr>
-<tr class="separator:af58b64101bd76254a8aa36c0e27a6e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4668e8fe4b615db83b002d8ab398fec5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4668e8fe4b615db83b002d8ab398fec5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a4668e8fe4b615db83b002d8ab398fec5">colvarvalue</a> (<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;v, <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50">Type</a> const &amp;vti)</td></tr>
-<tr class="memdesc:a4668e8fe4b615db83b002d8ab398fec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor from rvector base type (additional argument to make possible to choose a <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50a75e0072c95387c5464a6090e86fb8097">type_unit3vector</a>. <br/></td></tr>
-<tr class="separator:a4668e8fe4b615db83b002d8ab398fec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af121e51a4f76d2eb3e78d1875270257c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af121e51a4f76d2eb3e78d1875270257c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#af121e51a4f76d2eb3e78d1875270257c">colvarvalue</a> (<a class="el" href="classcolvarmodule_1_1quaternion.html">cvm::quaternion</a> const &amp;q)</td></tr>
-<tr class="memdesc:af121e51a4f76d2eb3e78d1875270257c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor from quaternion base type. <br/></td></tr>
-<tr class="separator:af121e51a4f76d2eb3e78d1875270257c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d92ef369ca08c2cb11800e86a91ab2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66d92ef369ca08c2cb11800e86a91ab2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a66d92ef369ca08c2cb11800e86a91ab2">colvarvalue</a> (<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;v, <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50">Type</a> vti=<a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50a1b79a5eabc441faf3193e0cd81862375">type_3vector</a>)</td></tr>
+<tr class="memdesc:a66d92ef369ca08c2cb11800e86a91ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor from rvector base type (Note: this sets by default a type <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50a1b79a5eabc441faf3193e0cd81862375">type_3vector</a> , if you want a <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50a75e0072c95387c5464a6090e86fb8097">type_unit3vector</a> you must set it explicitly) <br/></td></tr>
+<tr class="separator:a66d92ef369ca08c2cb11800e86a91ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ac996f91c7abdf9144ad98e86daa28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98ac996f91c7abdf9144ad98e86daa28"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a98ac996f91c7abdf9144ad98e86daa28">colvarvalue</a> (<a class="el" href="classcolvarmodule_1_1quaternion.html">cvm::quaternion</a> const &amp;q, <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50">Type</a> vti=<a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50a6f1a08bdbedde66ecf9623cefc96e0c5">type_quaternion</a>)</td></tr>
+<tr class="memdesc:a98ac996f91c7abdf9144ad98e86daa28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor from quaternion base type. <br/></td></tr>
+<tr class="separator:a98ac996f91c7abdf9144ad98e86daa28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca71480f4c5cc66b4b271d1a840a8410"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca71480f4c5cc66b4b271d1a840a8410"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#aca71480f4c5cc66b4b271d1a840a8410">colvarvalue</a> (<a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; const &amp;v, <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50">Type</a> vti=<a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50a2df8b57d154ea3769b93d4ae5ed98032">type_vector</a>)</td></tr>
+<tr class="memdesc:aca71480f4c5cc66b4b271d1a840a8410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor from vector1d base type. <br/></td></tr>
+<tr class="separator:aca71480f4c5cc66b4b271d1a840a8410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ca04eebc1386eff05f72f91043056a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ca04eebc1386eff05f72f91043056a0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a7ca04eebc1386eff05f72f91043056a0">colvarvalue</a> (<a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x)</td></tr>
 <tr class="memdesc:a7ca04eebc1386eff05f72f91043056a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor from another <a class="el" href="classcolvarvalue.html">colvarvalue</a>. <br/></td></tr>
 <tr class="separator:a7ca04eebc1386eff05f72f91043056a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae20128bdbc80f4784ec4e4ce2b221e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adae20128bdbc80f4784ec4e4ce2b221e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#adae20128bdbc80f4784ec4e4ce2b221e">colvarvalue</a> (<a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; const &amp;v, <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50">Type</a> const &amp;vti)</td></tr>
-<tr class="memdesc:adae20128bdbc80f4784ec4e4ce2b221e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor from vector1d base type. <br/></td></tr>
-<tr class="separator:adae20128bdbc80f4784ec4e4ce2b221e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61348c9b61d1ab43c51300dd81514740"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61348c9b61d1ab43c51300dd81514740"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a61348c9b61d1ab43c51300dd81514740">reset</a> ()</td></tr>
 <tr class="memdesc:a61348c9b61d1ab43c51300dd81514740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to the null value for the data type currently defined. <br/></td></tr>
@@ -185,10 +188,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a498d872ad25ce0ab48237fe4e535403c">norm</a> () const </td></tr>
 <tr class="memdesc:a498d872ad25ce0ab48237fe4e535403c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Norm of this colvarvalue. <br/></td></tr>
 <tr class="separator:a498d872ad25ce0ab48237fe4e535403c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af782fb495260d5441bd987324ec60320"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af782fb495260d5441bd987324ec60320"></a>
-<a class="el" href="classcolvarvalue.html">colvarvalue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#af782fb495260d5441bd987324ec60320">inverse</a> () const </td></tr>
-<tr class="memdesc:af782fb495260d5441bd987324ec60320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value whose scalar product with this value is 1. <br/></td></tr>
-<tr class="separator:af782fb495260d5441bd987324ec60320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82f9f6111faa19ff370a88818e057c6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82f9f6111faa19ff370a88818e057c6f"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a82f9f6111faa19ff370a88818e057c6f">dist2</a> (<a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x2) const </td></tr>
 <tr class="memdesc:a82f9f6111faa19ff370a88818e057c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square distance between this <a class="el" href="classcolvarvalue.html">colvarvalue</a> and another. <br/></td></tr>
@@ -239,6 +238,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a0261c2b978ea217a19927ed9019b124e">set_elem</a> (int const i_begin, int const i_end, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x)</td></tr>
 <tr class="memdesc:a0261c2b978ea217a19927ed9019b124e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set elements of the vector from a single colvarvalue. <br/></td></tr>
 <tr class="separator:a0261c2b978ea217a19927ed9019b124e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9b1bbc475543d44dc303310ec230c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae9b1bbc475543d44dc303310ec230c7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#aae9b1bbc475543d44dc303310ec230c7">set_random</a> ()</td></tr>
+<tr class="memdesc:aae9b1bbc475543d44dc303310ec230c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make each element a random number in N(0,1) <br/></td></tr>
+<tr class="separator:aae9b1bbc475543d44dc303310ec230c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac505984766ae975d7fdae0374d010da6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac505984766ae975d7fdae0374d010da6"></a>
 <a class="el" href="classcolvarvalue.html">colvarvalue</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#ac505984766ae975d7fdae0374d010da6">get_elem</a> (int const icv) const </td></tr>
 <tr class="memdesc:ac505984766ae975d7fdae0374d010da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a single colvarvalue out of elements of the vector. <br/></td></tr>
@@ -500,12 +503,13 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvarvalue_8h_source.html">colvarvalue.h</a></li>
+<li>a.cpp</li>
 <li>colvarvalue.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 7 2016 11:45:05 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 14 2016 15:37:23 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

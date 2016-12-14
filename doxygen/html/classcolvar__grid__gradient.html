@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -97,13 +97,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for colvar_grid_gradient:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classcolvar__grid__gradient.png" usemap="#colvar_grid_gradient_map" alt=""/>
-  <map id="colvar_grid_gradient_map" name="colvar_grid_gradient_map">
-<area href="classcolvar__grid.html" alt="colvar_grid&lt; cvm::real &gt;" shape="rect" coords="0,56,152,80"/>
-<area href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="colvarparse" shape="rect" coords="0,0,152,24"/>
-</map>
- </div></div>
+<div class="center"><img src="classcolvar__grid__gradient__inherit__graph.png" border="0" usemap="#colvar__grid__gradient_inherit__map" alt="Inheritance graph"/></div>
+<map name="colvar__grid__gradient_inherit__map" id="colvar__grid__gradient_inherit__map">
+<area shape="rect" id="node2" href="classcolvar__grid.html" title="colvar_grid\&lt; cvm::real \&gt;" alt="" coords="5,80,168,107"/><area shape="rect" id="node3" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="" coords="42,5,131,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for colvar_grid_gradient:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcolvar__grid__gradient__coll__graph.png" border="0" usemap="#colvar__grid__gradient_coll__map" alt="Collaboration graph"/></div>
+<map name="colvar__grid__gradient_coll__map" id="colvar__grid__gradient_coll__map">
+<area shape="rect" id="node2" href="classcolvar__grid.html" title="colvar_grid\&lt; cvm::real \&gt;" alt="" coords="5,133,168,160"/><area shape="rect" id="node3" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="" coords="75,5,164,32"/><area shape="rect" id="node5" href="classcolvar__grid.html" title="colvar_grid\&lt; size_t \&gt;" alt="" coords="123,83,267,109"/><area shape="rect" id="node4" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space. " alt="" coords="125,184,248,211"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -217,6 +221,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a70258e5ce02e2807922ae9e4039e6a1d">current_bin_scalar</a> (int const i, int const iv) const</td></tr>
 <tr class="memdesc:a70258e5ce02e2807922ae9e4039e6a1d inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report the bin corresponding to the current value of item iv in variable i. <br/></td></tr>
 <tr class="separator:a70258e5ce02e2807922ae9e4039e6a1d inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2644d6b3fbaf6050f0bdf8157c0539e4 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2644d6b3fbaf6050f0bdf8157c0539e4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a2644d6b3fbaf6050f0bdf8157c0539e4">current_bin_scalar_bound</a> (int const i) const</td></tr>
+<tr class="memdesc:a2644d6b3fbaf6050f0bdf8157c0539e4 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report the bin corresponding to the current value of variable i and assign first or last bin if out of boundaries. <br/></td></tr>
+<tr class="separator:a2644d6b3fbaf6050f0bdf8157c0539e4 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bb392a7db0c2a6f65bd11693633805e inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bb392a7db0c2a6f65bd11693633805e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a9bb392a7db0c2a6f65bd11693633805e">value_to_bin_scalar</a> (<a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;<a class="el" href="classcolvar__grid.html#a5c3eba90a06ee744a9b846cb29c0c9d2">value</a>, const int i) const</td></tr>
 <tr class="memdesc:a9bb392a7db0c2a6f65bd11693633805e inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the lower boundary and the width to report which bin the provided value is in. <br/></td></tr>
@@ -225,6 +233,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a8048331899fb1ca7c00c89cea81790ec">value_to_bin_scalar</a> (<a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;<a class="el" href="classcolvar__grid.html#a5c3eba90a06ee744a9b846cb29c0c9d2">value</a>, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;new_offset, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;new_width) const</td></tr>
 <tr class="memdesc:a8048331899fb1ca7c00c89cea81790ec inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as the standard version, but uses another grid definition. <br/></td></tr>
 <tr class="separator:a8048331899fb1ca7c00c89cea81790ec inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07088be1c6450e50b4a0814482129cf3 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07088be1c6450e50b4a0814482129cf3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a07088be1c6450e50b4a0814482129cf3">value_to_bin_scalar_bound</a> (<a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;<a class="el" href="classcolvar__grid.html#a5c3eba90a06ee744a9b846cb29c0c9d2">value</a>, const int i) const</td></tr>
+<tr class="memdesc:a07088be1c6450e50b4a0814482129cf3 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the lower boundary and the width to report which bin the provided value is in and assign first or last bin if out of boundaries. <br/></td></tr>
+<tr class="separator:a07088be1c6450e50b4a0814482129cf3 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68006f9bb7030fae3d61c1c34f752840 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68006f9bb7030fae3d61c1c34f752840"></a>
 <a class="el" href="classcolvarvalue.html">colvarvalue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a68006f9bb7030fae3d61c1c34f752840">bin_to_value_scalar</a> (int const &amp;i_bin, int const i) const</td></tr>
 <tr class="memdesc:a68006f9bb7030fae3d61c1c34f752840 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the two boundaries and the width to report the central value corresponding to a bin index. <br/></td></tr>
@@ -269,6 +281,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a5861f628eab12b32e08c995eac4ee3f6">multiply_constant</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;a)</td></tr>
 <tr class="memdesc:a5861f628eab12b32e08c995eac4ee3f6 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply all elements by a scalar constant (fast loop) <br/></td></tr>
 <tr class="separator:a5861f628eab12b32e08c995eac4ee3f6 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d084d05e719aa0be3a6dd9a21f9e590 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d084d05e719aa0be3a6dd9a21f9e590"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a6d084d05e719aa0be3a6dd9a21f9e590">remove_zeros</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;a)</td></tr>
+<tr class="memdesc:a6d084d05e719aa0be3a6dd9a21f9e590 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign all zero elements a scalar constant (fast loop) <br/></td></tr>
+<tr class="separator:a6d084d05e719aa0be3a6dd9a21f9e590 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae52824086b4339da0d8d6e4175bb1187 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae52824086b4339da0d8d6e4175bb1187"></a>
 std::vector&lt; int &gt; const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#ae52824086b4339da0d8d6e4175bb1187">get_colvars_index</a> (std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt; const &amp;values) const</td></tr>
 <tr class="memdesc:ae52824086b4339da0d8d6e4175bb1187 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bin indices corresponding to the provided values of the colvars. <br/></td></tr>
@@ -277,6 +293,10 @@ std::vector&lt; int &gt; const&#160;</td><td class="memItemRight" valign="bottom
 std::vector&lt; int &gt; const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a6a4b5bb88d137281edd21a48695abb58">get_colvars_index</a> () const</td></tr>
 <tr class="memdesc:a6a4b5bb88d137281edd21a48695abb58 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bin indices corresponding to the current values of the colvars. <br/></td></tr>
 <tr class="separator:a6a4b5bb88d137281edd21a48695abb58 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043adce4e95936233f501975c62361f0 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a043adce4e95936233f501975c62361f0"></a>
+std::vector&lt; int &gt; const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a043adce4e95936233f501975c62361f0">get_colvars_index_bound</a> () const</td></tr>
+<tr class="memdesc:a043adce4e95936233f501975c62361f0 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bin indices corresponding to the provided values of the colvars and assign first or last bin if out of boundaries. <br/></td></tr>
+<tr class="separator:a043adce4e95936233f501975c62361f0 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa97140481838384006fe6ef3c86f14c3 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa97140481838384006fe6ef3c86f14c3"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#aa97140481838384006fe6ef3c86f14c3">bin_distance_from_boundaries</a> (std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt; const &amp;values, bool skip_hard_boundaries=false)</td></tr>
 <tr class="memdesc:aa97140481838384006fe6ef3c86f14c3 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimal distance (in number of bins) from the boundaries; a negative number is returned if the given point is off-grid. <br/></td></tr>
@@ -584,12 +604,13 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <div class="textblock"><p>Class for accumulating the gradient of a scalar function on a grid. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvargrid_8h_source.html">colvargrid.h</a></li>
+<li>a.cpp</li>
 <li>colvargrid.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 7 2016 11:45:04 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 14 2016 15:37:23 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

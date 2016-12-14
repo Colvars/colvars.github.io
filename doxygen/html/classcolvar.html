@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -102,13 +102,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for colvar:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classcolvar.png" usemap="#colvar_map" alt=""/>
-  <map id="colvar_map" name="colvar_map">
-<area href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="colvarparse" shape="rect" coords="0,0,80,24"/>
-<area href="classcolvardeps.html" alt="colvardeps" shape="rect" coords="90,0,170,24"/>
-</map>
- </div></div>
+<div class="center"><img src="classcolvar__inherit__graph.png" border="0" usemap="#colvar_inherit__map" alt="Inheritance graph"/></div>
+<map name="colvar_inherit__map" id="colvar_inherit__map">
+<area shape="rect" id="node2" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="" coords="5,5,93,32"/><area shape="rect" id="node3" href="classcolvardeps.html" title="colvardeps" alt="" coords="119,5,204,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for colvar:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcolvar__coll__graph.png" border="0" usemap="#colvar_coll__map" alt="Collaboration graph"/></div>
+<map name="colvar_coll__map" id="colvar_coll__map">
+<area shape="rect" id="node2" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="" coords="326,5,415,32"/><area shape="rect" id="node3" href="classcolvardeps.html" title="colvardeps" alt="" coords="328,56,413,83"/><area shape="rect" id="node4" href="classcolvarvalue.html" title="Value of a collective variable: this is a metatype which can be set at runtime. By default it is set ..." alt="" coords="327,237,415,264"/><area shape="rect" id="node5" href="classcolvarmodule_1_1quaternion.html" title="1&#45;dimensional vector of real numbers with four components and a quaternion algebra ..." alt="" coords="6,187,173,213"/><area shape="rect" id="node6" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components " alt="" coords="16,237,163,264"/><area shape="rect" id="node7" href="classcolvarmodule_1_1vector1d.html" title="colvarmodule::vector1d\l\&lt; colvarmodule::real \&gt;" alt="" coords="11,289,168,330"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -532,12 +536,8 @@ std::vector&lt; <a class="el" href="classcolvarbias.html">colvarbias</a> * &gt;&
 <tr class="separator:ad27fad6f1211cccf9b2dafaf4787f9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a446ab5f644a3f9c6715e119bbfc6de6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a446ab5f644a3f9c6715e119bbfc6de6b"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b">period</a></td></tr>
-<tr class="memdesc:a446ab5f644a3f9c6715e119bbfc6de6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Period, if it is a constant. <br/></td></tr>
+<tr class="memdesc:a446ab5f644a3f9c6715e119bbfc6de6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Period, if this variable is periodic. <br/></td></tr>
 <tr class="separator:a446ab5f644a3f9c6715e119bbfc6de6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8533801249c307907b2a8930eaf7dc6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8533801249c307907b2a8930eaf7dc6c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a8533801249c307907b2a8930eaf7dc6c">b_periodic</a></td></tr>
-<tr class="memdesc:a8533801249c307907b2a8930eaf7dc6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as above, but also takes into account components with a variable period, such as distanceZ. <br/></td></tr>
-<tr class="separator:a8533801249c307907b2a8930eaf7dc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cc773ce95f9533b84099a4119979c27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cc773ce95f9533b84099a4119979c27"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a8cc773ce95f9533b84099a4119979c27">expand_boundaries</a></td></tr>
 <tr class="memdesc:a8cc773ce95f9533b84099a4119979c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand the boundaries of multiples of width, to keep the value always within range. <br/></td></tr>
@@ -747,6 +747,14 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <a class="el" href="classcolvarvalue.html">colvarvalue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#adf446c03a972168ed9c24a06665074a3">x_old</a></td></tr>
 <tr class="memdesc:adf446c03a972168ed9c24a06665074a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous value (to calculate velocities during analysis) <br/></td></tr>
 <tr class="separator:adf446c03a972168ed9c24a06665074a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175f754e7062d91c1e8fd213afa6f8c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a175f754e7062d91c1e8fd213afa6f8c3"></a>
+<a class="el" href="classcolvarvalue.html">colvarvalue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a175f754e7062d91c1e8fd213afa6f8c3">x_restart</a></td></tr>
+<tr class="memdesc:a175f754e7062d91c1e8fd213afa6f8c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value read from the most recent state file (if any) <br/></td></tr>
+<tr class="separator:a175f754e7062d91c1e8fd213afa6f8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374d1799f5620d218c0e44cd307ebb06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a374d1799f5620d218c0e44cd307ebb06"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a374d1799f5620d218c0e44cd307ebb06">after_restart</a></td></tr>
+<tr class="memdesc:a374d1799f5620d218c0e44cd307ebb06"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if a state file was just read. <br/></td></tr>
+<tr class="separator:a374d1799f5620d218c0e44cd307ebb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fd9ae0c47c1613fdafbd368e5bd0580"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::list<br class="typebreak"/>
 &lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a9fd9ae0c47c1613fdafbd368e5bd0580">acf_x_history</a></td></tr>
 <tr class="separator:a9fd9ae0c47c1613fdafbd368e5bd0580"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -877,7 +885,8 @@ Additional Inherited Members</h2></td></tr>
 <b>f_cvb_get_total_force</b>, 
 <b>f_cvb_history_dependent</b>, 
 <br/>
-&#160;&#160;<b>f_cvb_ntot</b>
+&#160;&#160;<b>f_cvb_scalar_variables</b>, 
+<b>f_cvb_ntot</b>
 <br/>
  }</td></tr>
 <tr class="separator:abf010b3abf3aa69fc260847bce6603da inherit pub_types_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1266,12 +1275,13 @@ static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a 
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvar_8h_source.html">colvar.h</a></li>
+<li>a.cpp</li>
 <li>colvar.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 7 2016 11:45:04 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 14 2016 15:37:23 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

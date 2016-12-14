@@ -12,6 +12,7 @@ var searchData=
   ['max_5fcoupling_5frange',['max_coupling_range',['../classcolvarbias__alb.html#ac6965e52376cd8271c7caafe80b9616e',1,'colvarbias_alb']]],
   ['maximum_5fvalue',['maximum_value',['../classcolvar__grid__scalar.html#a4fb3293d2cee86d49926d23fb0a9fd74',1,'colvar_grid_scalar']]],
   ['means',['means',['../classcolvarbias__alb.html#a0dd7f01418c21d32eca3fdfa905e9791',1,'colvarbias_alb']]],
+  ['minimum_5fpos_5fvalue',['minimum_pos_value',['../classcolvar__grid__scalar.html#a2bbb807f74839a90d9f0f02a215918f7',1,'colvar_grid_scalar']]],
   ['minimum_5fvalue',['minimum_value',['../classcolvar__grid__scalar.html#a4d6bb890037bc285bf32a3476484c9f7',1,'colvar_grid_scalar']]],
   ['monitor_5fcrossings',['monitor_crossings',['../classcolvarmodule_1_1rotation.html#a9967b62b87d70fd7cf35b1a5b4fd8513',1,'colvarmodule::rotation']]],
   ['msgcolvars',['msgColvars',['../classcolvarproxy__vmd.html#a11d498ad34c25eee1264d11a5c56923b',1,'colvarproxy_vmd']]],

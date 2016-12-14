@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -98,14 +98,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for colvarbias_histogram:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classcolvarbias__histogram.png" usemap="#colvarbias_histogram_map" alt=""/>
-  <map id="colvarbias_histogram_map" name="colvarbias_histogram_map">
-<area href="classcolvarbias.html" title="Collective variable bias, base class. " alt="colvarbias" shape="rect" coords="71,56,203,80"/>
-<area href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="colvarparse" shape="rect" coords="0,0,132,24"/>
-<area href="classcolvardeps.html" alt="colvardeps" shape="rect" coords="142,0,274,24"/>
-</map>
- </div></div>
+<div class="center"><img src="classcolvarbias__histogram__inherit__graph.png" border="0" usemap="#colvarbias__histogram_inherit__map" alt="Inheritance graph"/></div>
+<map name="colvarbias__histogram_inherit__map" id="colvarbias__histogram_inherit__map">
+<area shape="rect" id="node2" href="classcolvarbias.html" title="Collective variable bias, base class. " alt="" coords="65,80,145,107"/><area shape="rect" id="node3" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="" coords="5,5,93,32"/><area shape="rect" id="node4" href="classcolvardeps.html" title="colvardeps" alt="" coords="119,5,204,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for colvarbias_histogram:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcolvarbias__histogram__coll__graph.png" border="0" usemap="#colvarbias__histogram_coll__map" alt="Collaboration graph"/></div>
+<map name="colvarbias__histogram_coll__map" id="colvarbias__histogram_coll__map">
+<area shape="rect" id="node2" href="classcolvarbias.html" title="Collective variable bias, base class. " alt="" coords="289,83,369,109"/><area shape="rect" id="node3" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="" coords="147,5,236,32"/><area shape="rect" id="node6" href="classcolvar__grid.html" title="colvar_grid\&lt; cvm::real \&gt;" alt="" coords="5,133,168,160"/><area shape="rect" id="node8" href="classcolvar__grid.html" title="colvar_grid\&lt; size_t \&gt;" alt="" coords="120,83,264,109"/><area shape="rect" id="node4" href="classcolvardeps.html" title="colvardeps" alt="" coords="287,5,372,32"/><area shape="rect" id="node5" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid. " alt="" coords="129,275,255,301"/><area shape="rect" id="node7" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space. " alt="" coords="130,184,253,211"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -120,17 +123,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a23d83572981df634ef1d8f2660713c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72a130b78dbc9ffc5c3c2a59d72f04f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72a130b78dbc9ffc5c3c2a59d72f04f2"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__histogram.html#a72a130b78dbc9ffc5c3c2a59d72f04f2">write_output_files</a> ()</td></tr>
-<tr class="memdesc:a72a130b78dbc9ffc5c3c2a59d72f04f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write output files (if defined, e.g. in analysis mode) <br/></td></tr>
+<tr class="memdesc:a72a130b78dbc9ffc5c3c2a59d72f04f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write any output files that this bias may have (e.g. PMF files) <br/></td></tr>
 <tr class="separator:a72a130b78dbc9ffc5c3c2a59d72f04f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcolvarbias"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvarbias')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvarbias.html">colvarbias</a></td></tr>
 <tr class="memitem:a2012d7262356cb524bbe0bad5cf32d06 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2012d7262356cb524bbe0bad5cf32d06"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a2012d7262356cb524bbe0bad5cf32d06">add_colvar</a> (std::string const &amp;cv_name)</td></tr>
 <tr class="memdesc:a2012d7262356cb524bbe0bad5cf32d06 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new collective variable to this bias. <br/></td></tr>
 <tr class="separator:a2012d7262356cb524bbe0bad5cf32d06 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16b6c5f6f609da25aa2d1eec6f1b922f inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16b6c5f6f609da25aa2d1eec6f1b922f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a16b6c5f6f609da25aa2d1eec6f1b922f">change_configuration</a> (std::string const &amp;conf)</td></tr>
-<tr class="memdesc:a16b6c5f6f609da25aa2d1eec6f1b922f inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load new configuration - force constant and/or centers only. <br/></td></tr>
-<tr class="separator:a16b6c5f6f609da25aa2d1eec6f1b922f inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91dd04ea78a1d3931388f98463d87f3 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af91dd04ea78a1d3931388f98463d87f3"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#af91dd04ea78a1d3931388f98463d87f3">number_of_colvars</a> () const </td></tr>
+<tr class="memdesc:af91dd04ea78a1d3931388f98463d87f3 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new collective variable to this bias. <br/></td></tr>
+<tr class="separator:af91dd04ea78a1d3931388f98463d87f3 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a5f4d7a317d2cd2f6e30acbb27c274 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06a5f4d7a317d2cd2f6e30acbb27c274"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a06a5f4d7a317d2cd2f6e30acbb27c274">change_configuration</a> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a06a5f4d7a317d2cd2f6e30acbb27c274 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load new configuration - force constant and/or centers only. <br/></td></tr>
+<tr class="separator:a06a5f4d7a317d2cd2f6e30acbb27c274 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80078487afaf38971e21fb771e3a59a5 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80078487afaf38971e21fb771e3a59a5"></a>
 virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a80078487afaf38971e21fb771e3a59a5">energy_difference</a> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:a80078487afaf38971e21fb771e3a59a5 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate change in energy from using alternate configuration. <br/></td></tr>
@@ -173,18 +180,42 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#aed44dcc9384af83bbb552c9950ccb3dd">~colvarbias</a> ()</td></tr>
 <tr class="memdesc:aed44dcc9384af83bbb552c9950ccb3dd inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
 <tr class="separator:aed44dcc9384af83bbb552c9950ccb3dd inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a412e6230030364c0cf292e9683a8a5c4 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a412e6230030364c0cf292e9683a8a5c4"></a>
+virtual std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a412e6230030364c0cf292e9683a8a5c4">get_state_params</a> () const </td></tr>
+<tr class="memdesc:a412e6230030364c0cf292e9683a8a5c4 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the values of specific mutable properties to a string. <br/></td></tr>
+<tr class="separator:a412e6230030364c0cf292e9683a8a5c4 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ae30bb5ef52cd3f719f300ac57a581 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03ae30bb5ef52cd3f719f300ac57a581"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a03ae30bb5ef52cd3f719f300ac57a581">set_state_params</a> (std::string const &amp;state_conf)</td></tr>
+<tr class="memdesc:a03ae30bb5ef52cd3f719f300ac57a581 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the values of specific mutable properties from a string. <br/></td></tr>
+<tr class="separator:a03ae30bb5ef52cd3f719f300ac57a581 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0752a8895d4c4a959b00d6b706afcdd inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0752a8895d4c4a959b00d6b706afcdd"></a>
+std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#ae0752a8895d4c4a959b00d6b706afcdd">read_state_data_key</a> (std::istream &amp;is, char const *key)</td></tr>
+<tr class="memdesc:ae0752a8895d4c4a959b00d6b706afcdd inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a keyword from the state data (typically a header) <br/></td></tr>
+<tr class="separator:ae0752a8895d4c4a959b00d6b706afcdd inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec81bc2c03b9c65c92a515e2f36a547 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaec81bc2c03b9c65c92a515e2f36a547"></a>
+virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#aaec81bc2c03b9c65c92a515e2f36a547">write_state</a> (std::ostream &amp;os)</td></tr>
+<tr class="memdesc:aaec81bc2c03b9c65c92a515e2f36a547 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the bias configuration to a restart file or other stream. <br/></td></tr>
+<tr class="separator:aaec81bc2c03b9c65c92a515e2f36a547 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89cea38974152aab68bf42d4abee2add inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89cea38974152aab68bf42d4abee2add"></a>
+virtual std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a89cea38974152aab68bf42d4abee2add">read_state</a> (std::istream &amp;is)</td></tr>
+<tr class="memdesc:a89cea38974152aab68bf42d4abee2add inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the bias configuration from a restart file or other stream. <br/></td></tr>
+<tr class="separator:a89cea38974152aab68bf42d4abee2add inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3fc63d60bfd062f56642de1ba23d530 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3fc63d60bfd062f56642de1ba23d530"></a>
 virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#aa3fc63d60bfd062f56642de1ba23d530">write_traj_label</a> (std::ostream &amp;os)</td></tr>
 <tr class="memdesc:aa3fc63d60bfd062f56642de1ba23d530 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a label to the trajectory file (comment line) <br/></td></tr>
 <tr class="separator:aa3fc63d60bfd062f56642de1ba23d530 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa85f1378271f7dcf2f3613a4b6ac23a8 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa85f1378271f7dcf2f3613a4b6ac23a8"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#aa85f1378271f7dcf2f3613a4b6ac23a8">setup_output</a> ()</td></tr>
-<tr class="memdesc:aa85f1378271f7dcf2f3613a4b6ac23a8 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)initialize the output files (does not write them yet) <br/></td></tr>
-<tr class="separator:aa85f1378271f7dcf2f3613a4b6ac23a8 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32004a21548c2504afb8c9939eeb85c6 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32004a21548c2504afb8c9939eeb85c6"></a>
 virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a32004a21548c2504afb8c9939eeb85c6">write_traj</a> (std::ostream &amp;os)</td></tr>
 <tr class="memdesc:a32004a21548c2504afb8c9939eeb85c6 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output quantities such as the bias energy to the trajectory file. <br/></td></tr>
 <tr class="separator:a32004a21548c2504afb8c9939eeb85c6 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85f1378271f7dcf2f3613a4b6ac23a8 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa85f1378271f7dcf2f3613a4b6ac23a8"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#aa85f1378271f7dcf2f3613a4b6ac23a8">setup_output</a> ()</td></tr>
+<tr class="memdesc:aa85f1378271f7dcf2f3613a4b6ac23a8 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)initialize the output files (does not write them yet) <br/></td></tr>
+<tr class="separator:aa85f1378271f7dcf2f3613a4b6ac23a8 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25fd4ff9c796628f169d603bd04a5b50 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25fd4ff9c796628f169d603bd04a5b50"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a25fd4ff9c796628f169d603bd04a5b50">write_state_to_replicas</a> ()</td></tr>
+<tr class="memdesc:a25fd4ff9c796628f169d603bd04a5b50 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this bias is communicating with other replicas through files, send it to them. <br/></td></tr>
+<tr class="separator:a25fd4ff9c796628f169d603bd04a5b50 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28747178bc49ffef72813224e3ff0d40 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28747178bc49ffef72813224e3ff0d40"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_energy</b> ()</td></tr>
 <tr class="separator:a28747178bc49ffef72813224e3ff0d40 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -320,19 +351,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae2afaaf11df2a69c9d4954a5ddab95d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2afaaf11df2a69c9d4954a5ddab95d1"></a>
-virtual std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__histogram.html#ae2afaaf11df2a69c9d4954a5ddab95d1">read_restart</a> (std::istream &amp;)</td></tr>
-<tr class="memdesc:ae2afaaf11df2a69c9d4954a5ddab95d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the bias configuration from a restart file. <br/></td></tr>
-<tr class="separator:ae2afaaf11df2a69c9d4954a5ddab95d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1645da6e2dac72cbc1fce4bc13e8adb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1645da6e2dac72cbc1fce4bc13e8adb"></a>
-virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__histogram.html#aa1645da6e2dac72cbc1fce4bc13e8adb">write_restart</a> (std::ostream &amp;)</td></tr>
-<tr class="memdesc:aa1645da6e2dac72cbc1fce4bc13e8adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the bias configuration to a restart file. <br/></td></tr>
-<tr class="separator:aa1645da6e2dac72cbc1fce4bc13e8adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classcolvarbias"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcolvarbias')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcolvarbias.html">colvarbias</a></td></tr>
-<tr class="memitem:aab080c0b744918a06e386805208c1f1c inherit pro_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab080c0b744918a06e386805208c1f1c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#aab080c0b744918a06e386805208c1f1c">colvarbias</a> ()</td></tr>
-<tr class="memdesc:aab080c0b744918a06e386805208c1f1c inherit pro_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br/></td></tr>
-<tr class="separator:aab080c0b744918a06e386805208c1f1c inherit pro_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1fe1beaaacf9b2dc972a1cee26a95b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a1fe1beaaacf9b2dc972a1cee26a95b"></a>
+virtual std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__histogram.html#a4a1fe1beaaacf9b2dc972a1cee26a95b">read_state_data</a> (std::istream &amp;is)</td></tr>
+<tr class="memdesc:a4a1fe1beaaacf9b2dc972a1cee26a95b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all mutable data not already set by <a class="el" href="classcolvarbias.html#a03ae30bb5ef52cd3f719f300ac57a581" title="Read the values of specific mutable properties from a string. ">set_state_params()</a> <br/></td></tr>
+<tr class="separator:a4a1fe1beaaacf9b2dc972a1cee26a95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93be36c1c32be7aa33c47a1b7ae35f46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93be36c1c32be7aa33c47a1b7ae35f46"></a>
+virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__histogram.html#a93be36c1c32be7aa33c47a1b7ae35f46">write_state_data</a> (std::ostream &amp;os)</td></tr>
+<tr class="memdesc:a93be36c1c32be7aa33c47a1b7ae35f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all mutable data not already written by <a class="el" href="classcolvarbias.html#a412e6230030364c0cf292e9683a8a5c4" title="Write the values of specific mutable properties to a string. ">get_state_params()</a> <br/></td></tr>
+<tr class="separator:a93be36c1c32be7aa33c47a1b7ae35f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
 <tr class="memitem:a61af310cf8cde7f9853c35ba232e3aad inherit pro_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61af310cf8cde7f9853c35ba232e3aad"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a61af310cf8cde7f9853c35ba232e3aad">add_keyword</a> (char const *key)</td></tr>
@@ -401,6 +427,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#aa33d58dccf5a5c2a1cab78a4412b8ed1">has_data</a></td></tr>
 <tr class="memdesc:aa33d58dccf5a5c2a1cab78a4412b8ed1 inherit pro_attribs_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this bias has already accumulated information (for history-dependent biases) <br/></td></tr>
 <tr class="separator:aa33d58dccf5a5c2a1cab78a4412b8ed1 inherit pro_attribs_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d3579aa09b94763fa62778d65ab3844 inherit pro_attribs_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d3579aa09b94763fa62778d65ab3844"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a9d3579aa09b94763fa62778d65ab3844">state_file_step</a></td></tr>
+<tr class="memdesc:a9d3579aa09b94763fa62778d65ab3844 inherit pro_attribs_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Step number read from the last state file. <br/></td></tr>
+<tr class="separator:a9d3579aa09b94763fa62778d65ab3844 inherit pro_attribs_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
 <tr class="memitem:a9e3abe5ee9dc4dc42bd5d4e13d385844 inherit pro_attribs_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e3abe5ee9dc4dc42bd5d4e13d385844"></a>
 std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a9e3abe5ee9dc4dc42bd5d4e13d385844">allowed_keywords</a></td></tr>
@@ -438,7 +468,8 @@ Additional Inherited Members</h2></td></tr>
 <b>f_cvb_get_total_force</b>, 
 <b>f_cvb_history_dependent</b>, 
 <br/>
-&#160;&#160;<b>f_cvb_ntot</b>
+&#160;&#160;<b>f_cvb_scalar_variables</b>, 
+<b>f_cvb_ntot</b>
 <br/>
  }</td></tr>
 <tr class="separator:abf010b3abf3aa69fc260847bce6603da inherit pub_types_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -624,12 +655,13 @@ static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvarbias__histogram_8h_source.html">colvarbias_histogram.h</a></li>
+<li>a.cpp</li>
 <li>colvarbias_histogram.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 7 2016 11:45:04 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 14 2016 15:37:23 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

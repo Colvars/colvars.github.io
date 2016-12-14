@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -101,6 +101,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classcolvarmodule.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="colvarmodule_8h_source.html">colvarmodule.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for colvarmodule:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcolvarmodule__coll__graph.png" border="0" usemap="#colvarmodule_coll__map" alt="Collaboration graph"/></div>
+<map name="colvarmodule_coll__map" id="colvarmodule_coll__map">
+<area shape="rect" id="node3" href="classcolvarproxy.html" title="Interface between the collective variables module and the simulation or analysis program (NAMD..." alt="" coords="73,187,161,213"/><area shape="rect" id="node2" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this..." alt="" coords="137,5,225,32"/><area shape="rect" id="node4" href="classcolvarscript.html" title="colvarscript" alt="" coords="5,96,93,123"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -157,10 +164,10 @@ typedef std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><b>ofst
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3efba4ca5307c21d3e1aefe4df36a09c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3efba4ca5307c21d3e1aefe4df36a09c"></a>
-size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a3efba4ca5307c21d3e1aefe4df36a09c">size</a> () const </td></tr>
-<tr class="memdesc:a3efba4ca5307c21d3e1aefe4df36a09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many objects are configured yet? <br/></td></tr>
-<tr class="separator:a3efba4ca5307c21d3e1aefe4df36a09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f67a5f158cceebc44033f7301937c68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f67a5f158cceebc44033f7301937c68"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a5f67a5f158cceebc44033f7301937c68">size</a> () const </td></tr>
+<tr class="memdesc:a5f67a5f158cceebc44033f7301937c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many objects are configured yet? <br/></td></tr>
+<tr class="separator:a5f67a5f158cceebc44033f7301937c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69ee4894428b7748b880772c49cccf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aa69ee4894428b7748b880772c49cccf3">colvarmodule</a> (<a class="el" href="classcolvarproxy.html">colvarproxy</a> *<a class="el" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">proxy</a>)</td></tr>
 <tr class="memdesc:aa69ee4894428b7748b880772c49cccf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aa69ee4894428b7748b880772c49cccf3">More...</a><br/></td></tr>
 <tr class="separator:aa69ee4894428b7748b880772c49cccf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -270,9 +277,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>bias_bin_count</b> (st
 <tr class="memitem:a8eb6515e75a7ddf7d4a25d75d8a868f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8eb6515e75a7ddf7d4a25d75d8a868f8"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>bias_share</b> (std::string const &amp;bias_name)</td></tr>
 <tr class="separator:a8eb6515e75a7ddf7d4a25d75d8a868f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a93b8ea3ad9da8e3a7f1303fbb72143"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a4a93b8ea3ad9da8e3a7f1303fbb72143">calc</a> ()</td></tr>
-<tr class="memdesc:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main worker function. <br/></td></tr>
+<tr class="memitem:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a4a93b8ea3ad9da8e3a7f1303fbb72143">calc</a> ()</td></tr>
+<tr class="memdesc:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main worker function.  <a href="#a4a93b8ea3ad9da8e3a7f1303fbb72143">More...</a><br/></td></tr>
 <tr class="separator:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad52189d8b70cb2b1748536b41771dd38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad52189d8b70cb2b1748536b41771dd38"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ad52189d8b70cb2b1748536b41771dd38">calc_colvars</a> ()</td></tr>
@@ -528,9 +534,9 @@ static size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class=
 static size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aff3e7d63a68af0c7b3b6444914b7c545">en_width</a> = 21</td></tr>
 <tr class="memdesc:aff3e7d63a68af0c7b3b6444914b7c545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of characters to represent the collective variables energy. <br/></td></tr>
 <tr class="separator:aff3e7d63a68af0c7b3b6444914b7c545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8769845b866c09f1dbd615cef0aa0caf"><td class="memItemLeft" align="right" valign="top">static std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a8769845b866c09f1dbd615cef0aa0caf">line_marker</a></td></tr>
-<tr class="memdesc:a8769845b866c09f1dbd615cef0aa0caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line separator in the log output.  <a href="#a8769845b866c09f1dbd615cef0aa0caf">More...</a><br/></td></tr>
-<tr class="separator:a8769845b866c09f1dbd615cef0aa0caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05fb04216d214336ab62501565d72a5a"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a05fb04216d214336ab62501565d72a5a">line_marker</a></td></tr>
+<tr class="memdesc:a05fb04216d214336ab62501565d72a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line separator in the log output.  <a href="#a05fb04216d214336ab62501565d72a5a">More...</a><br/></td></tr>
+<tr class="separator:a05fb04216d214336ab62501565d72a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dbffe09d93084c42a7f224a74d8998f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dbffe09d93084c42a7f224a74d8998f"></a>
 static std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a9dbffe09d93084c42a7f224a74d8998f">index_group_names</a></td></tr>
 <tr class="memdesc:a9dbffe09d93084c42a7f224a74d8998f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names of groups from a Gromacs .ndx file to be read at startup. <br/></td></tr>
@@ -651,6 +657,25 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4a93b8ea3ad9da8e3a7f1303fbb72143"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvarmodule::calc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Main worker function. </p>
+<p>write trajectory files, if needed</p>
+<p>write restart files, if needed </p>
+
+</div>
+</div>
 <a class="anchor" id="ac73c2f5e8836309d4794044adebd32a3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -806,6 +831,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 <p>initialize ABF instances</p>
 <p>initialize adaptive linear biases</p>
 <p>initialize harmonic restraints</p>
+<p>initialize harmonic walls restraints</p>
 <p>initialize histograms</p>
 <p>initialize histogram restraints</p>
 <p>initialize linear restraints</p>
@@ -1018,7 +1044,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 
 </div>
 </div>
-<a class="anchor" id="a8769845b866c09f1dbd615cef0aa0caf"></a>
+<a class="anchor" id="a05fb04216d214336ab62501565d72a5a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1026,7 +1052,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string const colvarmodule::line_marker</td>
+          <td class="memname">const char *const colvarmodule::line_marker</td>
         </tr>
       </table>
   </td>
@@ -1035,7 +1061,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= (<span class="keyword">const</span> <span class="keywordtype">char</span> *)</div>
 <div class="line">  <span class="stringliteral">&quot;----------------------------------------------------------------------\n&quot;</span></div>
 </div><!-- fragment -->
 <p>Line separator in the log output. </p>
@@ -1044,12 +1070,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvarmodule_8h_source.html">colvarmodule.h</a></li>
+<li>a.cpp</li>
 <li>colvarmodule.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 7 2016 11:45:04 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 14 2016 15:37:23 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

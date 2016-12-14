@@ -34,7 +34,7 @@ var searchData=
   ['restart_5fout_5ffreq',['restart_out_freq',['../classcolvarmodule.html#a9311c4218f208934719ab3bf69535021',1,'colvarmodule']]],
   ['restart_5fout_5fname',['restart_out_name',['../classcolvarmodule.html#abf246f5197230f0af5e412865a44b28b',1,'colvarmodule']]],
   ['restart_5fout_5fos',['restart_out_os',['../classcolvarmodule.html#a9e9dfd39b805e2c067e56455b50ed7f0',1,'colvarmodule']]],
-  ['restraint_5ffe',['restraint_FE',['../classcolvarbias__restraint.html#a9059fe16571c96309fa0f1a83eeb45fa',1,'colvarbias_restraint']]],
+  ['restraint_5ffe',['restraint_FE',['../classcolvarbias__restraint__k__moving.html#adb49c0b3bb970f1d639c049d10abc049',1,'colvarbias_restraint_k_moving']]],
   ['result',['result',['../classcolvarscript.html#ab171072de0fd4948e1b9e8d4e2995489',1,'colvarscript']]],
   ['rot',['rot',['../classcolvarmodule_1_1atom__group.html#ac85a2f74ee74bd1fadc278199d690cf7',1,'colvarmodule::atom_group::rot()'],['../classcolvar_1_1orientation.html#a1d950c2959120cc3d43801f07bd935cc',1,'colvar::orientation::rot()']]],
   ['runave',['runave',['../classcolvar.html#ab1c86cdd64a024b01e90c97b2787efc7',1,'colvar']]],
