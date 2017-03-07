@@ -15,7 +15,7 @@ var searchData=
   ['orientation_5fangle',['orientation_angle',['../classcolvar_1_1orientation__angle.html',1,'colvar']]],
   ['orientation_5fproj',['orientation_proj',['../classcolvar_1_1orientation__proj.html',1,'colvar']]],
   ['output_5ffiles',['output_files',['../classcolvarproxy.html#a789e11eecec78218c6ad59018f468d6b',1,'colvarproxy']]],
-  ['output_5fprefix',['output_prefix',['../classcolvarmodule.html#a90b29b241f9a19e53e484058edc5fbdc',1,'colvarmodule::output_prefix()'],['../classcolvarproxy.html#ada8de848bc182eaf0e033e5905e1c8e5',1,'colvarproxy::output_prefix()']]],
+  ['output_5fprefix',['output_prefix',['../classcolvarbias.html#af6a378920ad82509ba44089c668f584d',1,'colvarbias::output_prefix()'],['../classcolvarmodule.html#ab1960ab86b41e37f33be0ade82c1dd11',1,'colvarmodule::output_prefix()'],['../classcolvarproxy.html#ada8de848bc182eaf0e033e5905e1c8e5',1,'colvarproxy::output_prefix()']]],
   ['output_5fstream',['output_stream',['../classcolvarproxy.html#a21b08e0ee65c7418b8711d0ebfaec04b',1,'colvarproxy::output_stream()'],['../classcolvarproxy__namd.html#a7f89515ba866bae6a7211501113211ef',1,'colvarproxy_namd::output_stream()']]],
   ['output_5fstream_5fnames',['output_stream_names',['../classcolvarproxy.html#aeb8bed99b6792ac09e006fbe91cf2df3',1,'colvarproxy']]],
   ['output_5ftraj',['output_traj',['../classcolvarbias__meta_1_1hill.html#ace9d0b2e01e7e042961b0c80d25001b5',1,'colvarbias_meta::hill']]],

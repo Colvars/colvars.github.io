@@ -87,7 +87,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">colvarproxy_vmd.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// -*- c++ -*-</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef COLVARPROXY_VMD_H</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define COLVARPROXY_VMD_H</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span></div>
@@ -103,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;colvaratoms.h&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef COLVARPROXY_VERSION</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define COLVARPROXY_VERSION &quot;2016-12-09&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define COLVARPROXY_VERSION &quot;2016-12-23&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
@@ -182,7 +183,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  std::string output_prefix_str;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classcolvarmodule.html#a90b29b241f9a19e53e484058edc5fbdc">output_prefix</a>()</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classcolvarmodule.html#ab1960ab86b41e37f33be0ade82c1dd11">output_prefix</a>()</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  {</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> output_prefix_str;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
@@ -302,6 +303,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classcolvarmodule_html_a1ef542d23cf36504a8154c281eba2d5b"><div class="ttname"><a href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">colvarmodule::real</a></div><div class="ttdeci">double real</div><div class="ttdoc">Defining an abstract real number allows to switch precision. </div><div class="ttdef"><b>Definition:</b> colvarmodule.h:85</div></div>
 <div class="ttc" id="classcolvarproxy__vmd_html_ac65a9f9d7a3df3a5c6c689bada07ff2b"><div class="ttname"><a href="classcolvarproxy__vmd.html#ac65a9f9d7a3df3a5c6c689bada07ff2b">colvarproxy_vmd::error</a></div><div class="ttdeci">void error(std::string const &amp;message)</div><div class="ttdoc">Print a message to the main log and let the rest of the program handle the error. ...</div><div class="ttdef"><b>Definition:</b> colvarproxy_vmd.C:253</div></div>
 <div class="ttc" id="classcolvarproxy__vmd_html_aca88c91e1c28f776c11d5f54d73c7608"><div class="ttname"><a href="classcolvarproxy__vmd.html#aca88c91e1c28f776c11d5f54d73c7608">colvarproxy_vmd::unit_angstrom</a></div><div class="ttdeci">cvm::real unit_angstrom()</div><div class="ttdoc">Value of the unit for atomic coordinates with respect to angstroms (used by some variables for hard-c...</div><div class="ttdef"><b>Definition:</b> colvarproxy_vmd.h:58</div></div>
+<div class="ttc" id="classcolvarmodule_html_ab1960ab86b41e37f33be0ade82c1dd11"><div class="ttname"><a href="classcolvarmodule.html#ab1960ab86b41e37f33be0ade82c1dd11">colvarmodule::output_prefix</a></div><div class="ttdeci">static std::string &amp; output_prefix()</div><div class="ttdoc">Accessor for the above. </div><div class="ttdef"><b>Definition:</b> colvarmodule.h:164</div></div>
 <div class="ttc" id="classcolvarvalue_html"><div class="ttname"><a href="classcolvarvalue.html">colvarvalue</a></div><div class="ttdoc">Value of a collective variable: this is a metatype which can be set at runtime. By default it is set ...</div><div class="ttdef"><b>Definition:</b> colvarvalue.h:34</div></div>
 <div class="ttc" id="classcolvarproxy__vmd_html_aa5b92beecc11fac09a44439fc8caf21c"><div class="ttname"><a href="classcolvarproxy__vmd.html#aa5b92beecc11fac09a44439fc8caf21c">colvarproxy_vmd::boltzmann</a></div><div class="ttdeci">cvm::real boltzmann()</div><div class="ttdoc">Boltzmann constant. </div><div class="ttdef"><b>Definition:</b> colvarproxy_vmd.h:63</div></div>
 <div class="ttc" id="classcolvarproxy__vmd_html_a2594b26324081c0bc8b73868fd666724"><div class="ttname"><a href="classcolvarproxy__vmd.html#a2594b26324081c0bc8b73868fd666724">colvarproxy_vmd::setup</a></div><div class="ttdeci">int setup()</div><div class="ttdoc">(Re)initialize required member data after construction </div><div class="ttdef"><b>Definition:</b> colvarproxy_vmd.C:162</div></div>
@@ -315,7 +317,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classcolvarproxy__vmd_html_a8f1d0a1980457aaf72890831a4110607"><div class="ttname"><a href="classcolvarproxy__vmd.html#a8f1d0a1980457aaf72890831a4110607">colvarproxy_vmd::fatal_error</a></div><div class="ttdeci">void fatal_error(std::string const &amp;message)</div><div class="ttdoc">Print a message to the main log and exit with error code. </div><div class="ttdef"><b>Definition:</b> colvarproxy_vmd.C:264</div></div>
 <div class="ttc" id="classcolvarproxy__vmd_html_aa23e9eac128153a22834f9a21e252a41"><div class="ttname"><a href="classcolvarproxy__vmd.html#aa23e9eac128153a22834f9a21e252a41">colvarproxy_vmd::vmdmol_frame</a></div><div class="ttdeci">long int vmdmol_frame</div><div class="ttdoc">current frame (returned by vmdmol-&gt;frame()) </div><div class="ttdef"><b>Definition:</b> colvarproxy_vmd.h:40</div></div>
 <div class="ttc" id="classcolvarproxy__vmd_html_a5b422ab5c6a94e2e8aa9785e181776e1"><div class="ttname"><a href="classcolvarproxy__vmd.html#a5b422ab5c6a94e2e8aa9785e181776e1">colvarproxy_vmd::position_dist2</a></div><div class="ttdeci">cvm::real position_dist2(cvm::atom_pos const &amp;pos1, cvm::atom_pos const &amp;pos2)</div><div class="ttdoc">Get the PBC-aware square distance between two positions; may need to be reimplemented independently f...</div><div class="ttdef"><b>Definition:</b> colvarproxy_vmd.h:198</div></div>
-<div class="ttc" id="classcolvarmodule_html_a90b29b241f9a19e53e484058edc5fbdc"><div class="ttname"><a href="classcolvarmodule.html#a90b29b241f9a19e53e484058edc5fbdc">colvarmodule::output_prefix</a></div><div class="ttdeci">static std::string output_prefix</div><div class="ttdoc">Prefix for all output files for this run. </div><div class="ttdef"><b>Definition:</b> colvarmodule.h:158</div></div>
 <div class="ttc" id="classcolvarproxy__vmd_html_a5e48973581840e812cd8e090ff1fbcaf"><div class="ttname"><a href="classcolvarproxy__vmd.html#a5e48973581840e812cd8e090ff1fbcaf">colvarproxy_vmd::update_atomic_properties</a></div><div class="ttdeci">int update_atomic_properties()</div><div class="ttdoc">Update mass, charge, etc. </div><div class="ttdef"><b>Definition:</b> colvarproxy_vmd.C:203</div></div>
 <div class="ttc" id="classcolvarmodule_1_1atom_html_ad69c11b6395fdda6f0c84783ade07a88"><div class="ttname"><a href="classcolvarmodule_1_1atom.html#ad69c11b6395fdda6f0c84783ade07a88">colvarmodule::atom::pos</a></div><div class="ttdeci">cvm::atom_pos pos</div><div class="ttdoc">Current position (copied from the program, can be modified if necessary) </div><div class="ttdef"><b>Definition:</b> colvaratoms.h:40</div></div>
 <div class="ttc" id="classcolvarproxy__vmd_html_a723b2b58e02e1fae2bb3b69fa025bbd4"><div class="ttname"><a href="classcolvarproxy__vmd.html#a723b2b58e02e1fae2bb3b69fa025bbd4">colvarproxy_vmd::get_frame</a></div><div class="ttdeci">int get_frame(long int &amp;f)</div><div class="ttdoc">Get the current frame number. </div><div class="ttdef"><b>Definition:</b> colvarproxy_vmd.h:85</div></div>
@@ -329,7 +330,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 14 2016 15:37:22 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 7 2017 15:07:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

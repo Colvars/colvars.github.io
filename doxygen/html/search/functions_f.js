@@ -4,7 +4,6 @@ var searchData=
   ['parse',['parse',['../classcolvarmodule_1_1atom__group.html#aeeaec3b0308cc2446cf72abb162ef560',1,'colvarmodule::atom_group']]],
   ['parse_5fanalysis',['parse_analysis',['../classcolvar.html#a2fb6d950b3dec7303a0d5fe3d5170774',1,'colvar']]],
   ['parse_5fbiases',['parse_biases',['../classcolvarmodule.html#af51dcd2d41b68e0c0842a15bdac82355',1,'colvarmodule']]],
-  ['parse_5fbiases_5ftype',['parse_biases_type',['../classcolvarmodule.html#a40a822279015505d680a4d6c5398d66b',1,'colvarmodule']]],
   ['parse_5fcolvars',['parse_colvars',['../classcolvarmodule.html#a97d38abfa5e4dfbc773962e7c19056e3',1,'colvarmodule']]],
   ['parse_5fconfig',['parse_config',['../classcolvarmodule.html#a3653ec3ccb5c3ca17544b7677502fd00',1,'colvarmodule']]],
   ['parse_5fglobal_5fparams',['parse_global_params',['../classcolvarmodule.html#af5dffb9a09447232aa8ed7f84719d581',1,'colvarmodule']]],

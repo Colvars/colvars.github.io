@@ -4,8 +4,6 @@ var searchData=
   ['data_5fbegin_5fpos',['data_begin_pos',['../classcolvarparse.html#a39c128c5f96f1d6d74038024c1e25ce9',1,'colvarparse']]],
   ['data_5fend_5fpos',['data_end_pos',['../classcolvarparse.html#a953417bf426b3f6743ad08a5d6f5549c',1,'colvarparse']]],
   ['debug_5fgradients_5fstep_5fsize',['debug_gradients_step_size',['../classcolvarmodule.html#af60268f7e2d5ec410d43a0013f74081b',1,'colvarmodule']]],
-  ['depth_5fs',['depth_s',['../classcolvarmodule.html#ac3dea574de8fb04e4f9baaae06fa1851',1,'colvarmodule']]],
-  ['depth_5fv',['depth_v',['../classcolvarmodule.html#a27e7e89238f0f57c3bc81af89c678592',1,'colvarmodule']]],
   ['dist_5fv',['dist_v',['../classcolvar_1_1distance.html#a5ba17d6d1753880b9454d2605f57cf11',1,'colvar::distance::dist_v()'],['../classcolvar_1_1distance__z.html#a20bf5a25f3b2bf4abd78b667cc4f5fe9',1,'colvar::distance_z::dist_v()']]],
   ['dist_5fv_5fortho',['dist_v_ortho',['../classcolvar_1_1distance__xy.html#a0125d34eb0809093f5164c3b36ccc53c',1,'colvar::distance_xy']]],
   ['dl0_5f1',['dL0_1',['../classcolvarmodule_1_1rotation.html#a59386f4b0a12523154730effd0e63e7e',1,'colvarmodule::rotation']]],

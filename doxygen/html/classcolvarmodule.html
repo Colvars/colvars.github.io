@@ -164,6 +164,24 @@ typedef std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><b>ofst
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ad6dbf186f9cfd9edf6ee9b24dc88f48e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6dbf186f9cfd9edf6ee9b24dc88f48e"></a>
+std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ad6dbf186f9cfd9edf6ee9b24dc88f48e">variables</a> ()</td></tr>
+<tr class="memdesc:ad6dbf186f9cfd9edf6ee9b24dc88f48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of collective variables. <br/></td></tr>
+<tr class="separator:ad6dbf186f9cfd9edf6ee9b24dc88f48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695ed6abc91c425c654fce388a70f2ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a695ed6abc91c425c654fce388a70f2ed"></a>
+std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a695ed6abc91c425c654fce388a70f2ed">variables_active</a> ()</td></tr>
+<tr class="memdesc:a695ed6abc91c425c654fce388a70f2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collective variables with the active flag on. <br/></td></tr>
+<tr class="separator:a695ed6abc91c425c654fce388a70f2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e68b0ff7b89da9f8208f36e39dcdf2c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a9e68b0ff7b89da9f8208f36e39dcdf2c">variables_active_smp</a> ()</td></tr>
+<tr class="separator:a9e68b0ff7b89da9f8208f36e39dcdf2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e4dda797182e5cd3e683c5fd7e1a4c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e4dda797182e5cd3e683c5fd7e1a4c8"></a>
+std::vector&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a3e4dda797182e5cd3e683c5fd7e1a4c8">variables_active_smp_items</a> ()</td></tr>
+<tr class="memdesc:a3e4dda797182e5cd3e683c5fd7e1a4c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indexes of the items to calculate for each colvar. <br/></td></tr>
+<tr class="separator:a3e4dda797182e5cd3e683c5fd7e1a4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af0b37065218097ddcb87286a7f1371"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6af0b37065218097ddcb87286a7f1371"></a>
+std::vector&lt; <a class="el" href="classcolvarbias.html">colvarbias</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a6af0b37065218097ddcb87286a7f1371">biases_active</a> ()</td></tr>
+<tr class="memdesc:a6af0b37065218097ddcb87286a7f1371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of active collective variable biases. <br/></td></tr>
+<tr class="separator:a6af0b37065218097ddcb87286a7f1371"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f67a5f158cceebc44033f7301937c68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f67a5f158cceebc44033f7301937c68"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a5f67a5f158cceebc44033f7301937c68">size</a> () const </td></tr>
 <tr class="memdesc:a5f67a5f158cceebc44033f7301937c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many objects are configured yet? <br/></td></tr>
@@ -202,13 +220,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:af51dcd2d41b68e0c0842a15bdac82355"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af51dcd2d41b68e0c0842a15bdac82355">parse_biases</a> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:af51dcd2d41b68e0c0842a15bdac82355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse and initialize collective variable biases.  <a href="#af51dcd2d41b68e0c0842a15bdac82355">More...</a><br/></td></tr>
 <tr class="separator:af51dcd2d41b68e0c0842a15bdac82355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40a822279015505d680a4d6c5398d66b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a40a822279015505d680a4d6c5398d66b"></a>
-template&lt;class bias_type &gt; </td></tr>
-<tr class="memitem:a40a822279015505d680a4d6c5398d66b"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a40a822279015505d680a4d6c5398d66b">parse_biases_type</a> (std::string const &amp;conf, char const *keyword, size_t &amp;bias_count)</td></tr>
-<tr class="memdesc:a40a822279015505d680a4d6c5398d66b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse and initialize collective variable biases of a specific type. <br/></td></tr>
-<tr class="separator:a40a822279015505d680a4d6c5398d66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4619655e5cc59d6a4bd198415df79b1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a4619655e5cc59d6a4bd198415df79b1b">check_new_bias</a> (std::string &amp;conf, char const *key)</td></tr>
-<tr class="separator:a4619655e5cc59d6a4bd198415df79b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7425a44105a54b166a1550c2995b32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f7425a44105a54b166a1550c2995b32"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a6f7425a44105a54b166a1550c2995b32">append_new_config</a> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a6f7425a44105a54b166a1550c2995b32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new configuration during parsing (e.g. to implement back-compatibility); cannot be nested, i.e. conf should not contain anything that triggers another call. <br/></td></tr>
+<tr class="separator:a6f7425a44105a54b166a1550c2995b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a200768da390b0eba3b9190d00921dad5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a200768da390b0eba3b9190d00921dad5">setup</a> ()</td></tr>
 <tr class="separator:a200768da390b0eba3b9190d00921dad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49979648aa93f1379a3954995d49177"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af49979648aa93f1379a3954995d49177"></a>
@@ -277,8 +292,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>bias_bin_count</b> (st
 <tr class="memitem:a8eb6515e75a7ddf7d4a25d75d8a868f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8eb6515e75a7ddf7d4a25d75d8a868f8"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>bias_share</b> (std::string const &amp;bias_name)</td></tr>
 <tr class="separator:a8eb6515e75a7ddf7d4a25d75d8a868f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a4a93b8ea3ad9da8e3a7f1303fbb72143">calc</a> ()</td></tr>
-<tr class="memdesc:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main worker function.  <a href="#a4a93b8ea3ad9da8e3a7f1303fbb72143">More...</a><br/></td></tr>
+<tr class="memitem:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a93b8ea3ad9da8e3a7f1303fbb72143"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a4a93b8ea3ad9da8e3a7f1303fbb72143">calc</a> ()</td></tr>
+<tr class="memdesc:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main worker function. <br/></td></tr>
 <tr class="separator:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad52189d8b70cb2b1748536b41771dd38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad52189d8b70cb2b1748536b41771dd38"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ad52189d8b70cb2b1748536b41771dd38">calc_colvars</a> ()</td></tr>
@@ -300,6 +316,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac00f7e6800925970a58ef741c53a1d5e">read_traj</a> (char const *traj_filename, long traj_read_begin, long traj_read_end)</td></tr>
 <tr class="memdesc:ac00f7e6800925970a58ef741c53a1d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a collective variable trajectory (post-processing only, not called at runtime) <br/></td></tr>
 <tr class="separator:ac00f7e6800925970a58ef741c53a1d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a642a13dd4beb5aae1f3f9c9aa66e015b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a642a13dd4beb5aae1f3f9c9aa66e015b">read_index_file</a> (char const *filename)</td></tr>
+<tr class="memdesc:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a Gromacs .ndx file. <br/></td></tr>
+<tr class="separator:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca325ef5e56b3d375a9ffb3e92359216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca325ef5e56b3d375a9ffb3e92359216"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aca325ef5e56b3d375a9ffb3e92359216">calc_scripted_forces</a> ()</td></tr>
 <tr class="memdesc:aca325ef5e56b3d375a9ffb3e92359216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the energy and forces of scripted biases. <br/></td></tr>
@@ -325,10 +345,24 @@ static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="separator:ae121921c9f14f74f93dd8a2cae1a2778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88e4e27ebf27eaa302f080be6ea31ac5"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a88e4e27ebf27eaa302f080be6ea31ac5">step_absolute</a> ()</td></tr>
 <tr class="separator:a88e4e27ebf27eaa302f080be6ea31ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1960ab86b41e37f33be0ade82c1dd11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1960ab86b41e37f33be0ade82c1dd11"></a>
+static std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ab1960ab86b41e37f33be0ade82c1dd11">output_prefix</a> ()</td></tr>
+<tr class="memdesc:ab1960ab86b41e37f33be0ade82c1dd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for the above. <br/></td></tr>
+<tr class="separator:ab1960ab86b41e37f33be0ade82c1dd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac415ee66c310e474dd0b41d41c7da954"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac415ee66c310e474dd0b41d41c7da954"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac415ee66c310e474dd0b41d41c7da954">debug</a> ()</td></tr>
 <tr class="memdesc:ac415ee66c310e474dd0b41d41c7da954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether debug output should be enabled (compile-time option) <br/></td></tr>
 <tr class="separator:ac415ee66c310e474dd0b41d41c7da954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9f035364ca1b14cabdeb9ca016dd97"><td class="memItemLeft" align="right" valign="top">static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#acd9f035364ca1b14cabdeb9ca016dd97">getline</a> (std::istream &amp;is, std::string &amp;line)</td></tr>
+<tr class="separator:acd9f035364ca1b14cabdeb9ca016dd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85c6edc39cc755e3da03f133782fae34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85c6edc39cc755e3da03f133782fae34"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a85c6edc39cc755e3da03f133782fae34">num_biases_feature</a> (int feature_id)</td></tr>
+<tr class="memdesc:a85c6edc39cc755e3da03f133782fae34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return how many biases have this feature enabled. <br/></td></tr>
+<tr class="separator:a85c6edc39cc755e3da03f133782fae34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefbbc4b8fd30d64c954062276d605430"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefbbc4b8fd30d64c954062276d605430"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aefbbc4b8fd30d64c954062276d605430">num_biases_type</a> (std::string const &amp;type)</td></tr>
+<tr class="memdesc:aefbbc4b8fd30d64c954062276d605430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return how many biases are defined with this type. <br/></td></tr>
+<tr class="separator:aefbbc4b8fd30d64c954062276d605430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49efc5129a53b498b9238d3561a0440a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49efc5129a53b498b9238d3561a0440a"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">backup_file</a> (char const *filename)</td></tr>
 <tr class="memdesc:a49efc5129a53b498b9238d3561a0440a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backup a file before writing it. <br/></td></tr>
@@ -422,10 +456,6 @@ static <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a>&#160;<
 <tr class="memitem:ac42306956c269c69f279988e169cff5e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac42306956c269c69f279988e169cff5e">select_closest_images</a> (std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> &gt; &amp;pos, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> const &amp;ref_pos)</td></tr>
 <tr class="memdesc:ac42306956c269c69f279988e169cff5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform <a class="el" href="classcolvarmodule.html#a5da8188d2e4de48003fab04244dc6433" title="Get the closest periodic image to a reference position. ">select_closest_image()</a> on a set of atomic positions.  <a href="#ac42306956c269c69f279988e169cff5e">More...</a><br/></td></tr>
 <tr class="separator:ac42306956c269c69f279988e169cff5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a642a13dd4beb5aae1f3f9c9aa66e015b"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a642a13dd4beb5aae1f3f9c9aa66e015b">read_index_file</a> (char const *filename)</td></tr>
-<tr class="memdesc:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a Gromacs .ndx file. <br/></td></tr>
-<tr class="separator:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11656942e1840b6a1649811b456bcb62"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a11656942e1840b6a1649811b456bcb62">load_atoms</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double const pdb_field_value=0.0)</td></tr>
 <tr class="memdesc:a11656942e1840b6a1649811b456bcb62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create atoms from a file.  <a href="#a11656942e1840b6a1649811b456bcb62">More...</a><br/></td></tr>
 <tr class="separator:a11656942e1840b6a1649811b456bcb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -456,17 +486,31 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:acd786a59c8820f2b48060f28b6067ac1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd786a59c8820f2b48060f28b6067ac1"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>scripted_forces</b> ()</td></tr>
 <tr class="separator:acd786a59c8820f2b48060f28b6067ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaade094070e7dbdddc1f4c4d99041d07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaade094070e7dbdddc1f4c4d99041d07"></a>
+static <a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">main</a> ()</td></tr>
+<tr class="memdesc:aaade094070e7dbdddc1f4c4d99041d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for the above. <br/></td></tr>
+<tr class="separator:aaade094070e7dbdddc1f4c4d99041d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af36560323d0894fdf59312617dcffbd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af36560323d0894fdf59312617dcffbd8">it_restart_from_state_file</a></td></tr>
 <tr class="separator:af36560323d0894fdf59312617dcffbd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7f44d8557f48704ee29c1a620b88dbe"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ab7f44d8557f48704ee29c1a620b88dbe">colvars_smp</a></td></tr>
-<tr class="separator:ab7f44d8557f48704ee29c1a620b88dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4824af5f8f54ef36f0330cfc8087c8bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4824af5f8f54ef36f0330cfc8087c8bb"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a4824af5f8f54ef36f0330cfc8087c8bb">colvars_smp_items</a></td></tr>
-<tr class="memdesc:a4824af5f8f54ef36f0330cfc8087c8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indexes of the items to calculate for each colvar. <br/></td></tr>
-<tr class="separator:a4824af5f8f54ef36f0330cfc8087c8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac843326ecf8cf46c7852ccdc746d31a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac843326ecf8cf46c7852ccdc746d31a9"></a>
+std::vector&lt; <a class="el" href="classcolvarbias.html">colvarbias</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac843326ecf8cf46c7852ccdc746d31a9">biases</a></td></tr>
+<tr class="memdesc:ac843326ecf8cf46c7852ccdc746d31a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of collective variable biases. <br/></td></tr>
+<tr class="separator:ac843326ecf8cf46c7852ccdc746d31a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5a4cccf4d66137beac717cb7ea3e63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a5a4cccf4d66137beac717cb7ea3e63"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a7a5a4cccf4d66137beac717cb7ea3e63">total_bias_energy</a></td></tr>
+<tr class="memdesc:a7a5a4cccf4d66137beac717cb7ea3e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Energy of built-in and scripted biases, summed per time-step. <br/></td></tr>
+<tr class="separator:a7a5a4cccf4d66137beac717cb7ea3e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5473b3a7e637854b0a5bb929efcc6dd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5473b3a7e637854b0a5bb929efcc6dd0"></a>
+std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a5473b3a7e637854b0a5bb929efcc6dd0">index_group_names</a></td></tr>
+<tr class="memdesc:a5473b3a7e637854b0a5bb929efcc6dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names of groups from a Gromacs .ndx file to be read at startup. <br/></td></tr>
+<tr class="separator:a5473b3a7e637854b0a5bb929efcc6dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1ad444197f6916564dc191493422eb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1ad444197f6916564dc191493422eb6"></a>
+std::list&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac1ad444197f6916564dc191493422eb6">index_groups</a></td></tr>
+<tr class="memdesc:ac1ad444197f6916564dc191493422eb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Groups from a Gromacs .ndx file read at startup. <br/></td></tr>
+<tr class="separator:ac1ad444197f6916564dc191493422eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf246f5197230f0af5e412865a44b28b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf246f5197230f0af5e412865a44b28b"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#abf246f5197230f0af5e412865a44b28b">restart_out_name</a></td></tr>
 <tr class="memdesc:abf246f5197230f0af5e412865a44b28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output restart file name. <br/></td></tr>
@@ -486,34 +530,6 @@ static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af60268f7e2d5ec410d43a0013f74081b">debug_gradients_step_size</a> = 1.0e-07</td></tr>
 <tr class="memdesc:af60268f7e2d5ec410d43a0013f74081b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finite difference step size (if there is no dynamics, or if gradients need to be tested independently from the size of dt) <br/></td></tr>
 <tr class="separator:af60268f7e2d5ec410d43a0013f74081b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90b29b241f9a19e53e484058edc5fbdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90b29b241f9a19e53e484058edc5fbdc"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a90b29b241f9a19e53e484058edc5fbdc">output_prefix</a> = &quot;&quot;</td></tr>
-<tr class="memdesc:a90b29b241f9a19e53e484058edc5fbdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix for all output files for this run. <br/></td></tr>
-<tr class="separator:a90b29b241f9a19e53e484058edc5fbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af93654ceb915e18b249dd4db9dc9aec8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af93654ceb915e18b249dd4db9dc9aec8"></a>
-static std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af93654ceb915e18b249dd4db9dc9aec8">colvars</a></td></tr>
-<tr class="memdesc:af93654ceb915e18b249dd4db9dc9aec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of collective variables. <br/></td></tr>
-<tr class="separator:af93654ceb915e18b249dd4db9dc9aec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcd8c313c814589223ea03ca85cad895"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcd8c313c814589223ea03ca85cad895"></a>
-static std::vector&lt; <a class="el" href="classcolvarbias.html">colvarbias</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#afcd8c313c814589223ea03ca85cad895">biases</a></td></tr>
-<tr class="memdesc:afcd8c313c814589223ea03ca85cad895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of collective variable biases. <br/></td></tr>
-<tr class="separator:afcd8c313c814589223ea03ca85cad895"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb35cdb914cd15592015c61a0390fd64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb35cdb914cd15592015c61a0390fd64"></a>
-static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#afb35cdb914cd15592015c61a0390fd64">n_abf_biases</a> = 0</td></tr>
-<tr class="memdesc:afb35cdb914cd15592015c61a0390fd64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of ABF biases initialized (in normal conditions should be 1) <br/></td></tr>
-<tr class="separator:afb35cdb914cd15592015c61a0390fd64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01c8b6ae5fe8697e374595f3d6568b91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01c8b6ae5fe8697e374595f3d6568b91"></a>
-static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a01c8b6ae5fe8697e374595f3d6568b91">n_meta_biases</a> = 0</td></tr>
-<tr class="memdesc:a01c8b6ae5fe8697e374595f3d6568b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of metadynamics biases initialized (in normal conditions should be 1) <br/></td></tr>
-<tr class="separator:a01c8b6ae5fe8697e374595f3d6568b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abad7b3b2ddbd4b13cf5e35b7ab10f415"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abad7b3b2ddbd4b13cf5e35b7ab10f415"></a>
-static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#abad7b3b2ddbd4b13cf5e35b7ab10f415">n_rest_biases</a> = 0</td></tr>
-<tr class="memdesc:abad7b3b2ddbd4b13cf5e35b7ab10f415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of restraint biases initialized (no limit on the number) <br/></td></tr>
-<tr class="separator:abad7b3b2ddbd4b13cf5e35b7ab10f415"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b1e39df6fb58389b9b84879f6f158cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b1e39df6fb58389b9b84879f6f158cc"></a>
-static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a0b1e39df6fb58389b9b84879f6f158cc">n_histo_biases</a> = 0</td></tr>
-<tr class="memdesc:a0b1e39df6fb58389b9b84879f6f158cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of histograms initialized (no limit on the number) <br/></td></tr>
-<tr class="separator:a0b1e39df6fb58389b9b84879f6f158cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f7355658f6d709f9787cb7b792b2ebe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f7355658f6d709f9787cb7b792b2ebe"></a>
 static size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a7f7355658f6d709f9787cb7b792b2ebe">it_width</a> = 12</td></tr>
 <tr class="memdesc:a7f7355658f6d709f9787cb7b792b2ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of characters to represent a time step. <br/></td></tr>
@@ -537,15 +553,6 @@ static size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <tr class="memitem:a05fb04216d214336ab62501565d72a5a"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a05fb04216d214336ab62501565d72a5a">line_marker</a></td></tr>
 <tr class="memdesc:a05fb04216d214336ab62501565d72a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line separator in the log output.  <a href="#a05fb04216d214336ab62501565d72a5a">More...</a><br/></td></tr>
 <tr class="separator:a05fb04216d214336ab62501565d72a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dbffe09d93084c42a7f224a74d8998f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dbffe09d93084c42a7f224a74d8998f"></a>
-static std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a9dbffe09d93084c42a7f224a74d8998f">index_group_names</a></td></tr>
-<tr class="memdesc:a9dbffe09d93084c42a7f224a74d8998f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names of groups from a Gromacs .ndx file to be read at startup. <br/></td></tr>
-<tr class="separator:a9dbffe09d93084c42a7f224a74d8998f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35c5545b66f501f6152b35015d798cc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35c5545b66f501f6152b35015d798cc3"></a>
-static std::list&lt; std::vector<br class="typebreak"/>
-&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a35c5545b66f501f6152b35015d798cc3">index_groups</a></td></tr>
-<tr class="memdesc:a35c5545b66f501f6152b35015d798cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Groups from a Gromacs .ndx file read at startup. <br/></td></tr>
-<tr class="separator:a35c5545b66f501f6152b35015d798cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cd6aa918a6b745a665c8bcb035c6808"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cd6aa918a6b745a665c8bcb035c6808"></a>
 static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a8cd6aa918a6b745a665c8bcb035c6808">cv_traj_freq</a> = 0</td></tr>
 <tr class="memdesc:a8cd6aa918a6b745a665c8bcb035c6808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frequency for collective variables trajectory output. <br/></td></tr>
@@ -602,14 +609,6 @@ colvarmodule::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a cla
 Static Protected Attributes</h2></td></tr>
 <tr class="memitem:a9d228802609d99aaee261e01b8768e06"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a9d228802609d99aaee261e01b8768e06">errorCode</a> = 0</td></tr>
 <tr class="separator:a9d228802609d99aaee261e01b8768e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3dea574de8fb04e4f9baaae06fa1851"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3dea574de8fb04e4f9baaae06fa1851"></a>
-static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac3dea574de8fb04e4f9baaae06fa1851">depth_s</a> = 0</td></tr>
-<tr class="memdesc:ac3dea574de8fb04e4f9baaae06fa1851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter for the current depth in the object hierarchy (useg e.g. in output) <br/></td></tr>
-<tr class="separator:ac3dea574de8fb04e4f9baaae06fa1851"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27e7e89238f0f57c3bc81af89c678592"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27e7e89238f0f57c3bc81af89c678592"></a>
-static std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a27e7e89238f0f57c3bc81af89c678592">depth_v</a></td></tr>
-<tr class="memdesc:a27e7e89238f0f57c3bc81af89c678592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread-specific depth. <br/></td></tr>
-<tr class="separator:a27e7e89238f0f57c3bc81af89c678592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -657,25 +656,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4a93b8ea3ad9da8e3a7f1303fbb72143"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int colvarmodule::calc </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Main worker function. </p>
-<p>write trajectory files, if needed</p>
-<p>write restart files, if needed </p>
-
-</div>
-</div>
 <a class="anchor" id="ac73c2f5e8836309d4794044adebd32a3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -703,33 +683,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 
 </div>
 </div>
-<a class="anchor" id="a4619655e5cc59d6a4bd198415df79b1b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool colvarmodule::check_new_bias </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>key</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Test error condition and keyword parsing on error, delete new bias </p>
-
-</div>
-</div>
 <a class="anchor" id="ad7a80dcc060a2ef314005497693e8491"></a>
 <div class="memitem">
 <div class="memproto">
@@ -754,6 +707,41 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
       </table>
 </div><div class="memdoc">
 <p>Calculate change in energy from using alt. config. for the given bias - currently works for harmonic (force constant and/or centers) </p>
+
+</div>
+</div>
+<a class="anchor" id="acd9f035364ca1b14cabdeb9ca016dd97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream &amp; colvarmodule::getline </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allow reading from Windows text files using using std::getline (which can still be used when the text is produced by Colvars itself) </p>
 
 </div>
 </div>
@@ -996,13 +984,15 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ab7f44d8557f48704ee29c1a620b88dbe"></a>
+<a class="anchor" id="a9e68b0ff7b89da9f8208f36e39dcdf2c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classcolvar.html">colvar</a> *&gt; colvarmodule::colvars_smp</td>
+          <td class="memname">std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; * colvarmodule::variables_active_smp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1010,6 +1000,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a9d228802609d99aaee261e01b8768e06"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1070,13 +1061,12 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvarmodule_8h_source.html">colvarmodule.h</a></li>
-<li>a.cpp</li>
 <li>colvarmodule.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 14 2016 15:37:23 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 7 2017 15:07:19 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

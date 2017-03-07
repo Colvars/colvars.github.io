@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['main',['main',['../classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07',1,'colvarmodule']]],
   ['map_5fgrid',['map_grid',['../classcolvar__grid.html#ae5730d70387aaad037d79794f4e594ac',1,'colvar_grid']]],
   ['match',['match',['../classcolvarmodule_1_1quaternion.html#ae74abcf83e989ac8d9bd6f8f54ea4e90',1,'colvarmodule::quaternion']]],
   ['matrix',['matrix',['../classcolvarmodule_1_1rotation.html#a6d839d83e4e95cc65cdac3739b27b204',1,'colvarmodule::rotation']]],

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['main_20page',['Main page',['../index.html',1,'']]],
-  ['main',['main',['../classcolvar_1_1distance__z.html#a28518aa5c21b928dbde766a9da6812dd',1,'colvar::distance_z']]],
+  ['main',['main',['../classcolvar_1_1distance__z.html#a28518aa5c21b928dbde766a9da6812dd',1,'colvar::distance_z::main()'],['../classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07',1,'colvarmodule::main()']]],
   ['map_5fgrid',['map_grid',['../classcolvar__grid.html#ae5730d70387aaad037d79794f4e594ac',1,'colvar_grid']]],
   ['mass',['mass',['../classcolvarmodule_1_1atom.html#ac62f1528c0cc97068d0e6218687c0bcd',1,'colvarmodule::atom']]],
   ['match',['match',['../classcolvarmodule_1_1quaternion.html#ae74abcf83e989ac8d9bd6f8f54ea4e90',1,'colvarmodule::quaternion']]],
