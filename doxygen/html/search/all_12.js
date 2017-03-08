@@ -17,6 +17,7 @@ var searchData=
   ['set_5fcoupling',['set_coupling',['../classcolvarbias__alb.html#ac6390852bde5c825bcf9352b055f5fce',1,'colvarbias_alb']]],
   ['set_5fcvc_5fflags',['set_cvc_flags',['../classcolvar.html#afaece454de418ceba1ea43bdfb3ec6ed',1,'colvar']]],
   ['set_5felem',['set_elem',['../classcolvarvalue.html#a0261c2b978ea217a19927ed9019b124e',1,'colvarvalue::set_elem(int const i_begin, int const i_end, colvarvalue const &amp;x)'],['../classcolvarvalue.html#a6fa3d7489fda48643cad969d00a2b24b',1,'colvarvalue::set_elem(int const icv, colvarvalue const &amp;x)']]],
+  ['set_5fenabled',['set_enabled',['../classcolvardeps.html#abb18523c8db67f3e1494c9d894af253e',1,'colvardeps']]],
   ['set_5fframe',['set_frame',['../classcolvarproxy.html#af123ac8a95bbb480afaffc023cc04228',1,'colvarproxy::set_frame()'],['../classcolvarproxy__vmd.html#a381d5748b576c668120d9822a7e3d97d',1,'colvarproxy_vmd::set_frame()']]],
   ['set_5ffrom_5feuler_5fangles',['set_from_euler_angles',['../classcolvarmodule_1_1quaternion.html#a61c50d176440fb77dd86dcf4829107af',1,'colvarmodule::quaternion']]],
   ['set_5frandom',['set_random',['../classcolvarvalue.html#aae9b1bbc475543d44dc303310ec230c7',1,'colvarvalue']]],

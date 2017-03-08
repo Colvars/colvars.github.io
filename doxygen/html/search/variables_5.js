@@ -5,7 +5,6 @@ var searchData=
   ['f_5fold',['f_old',['../classcolvar.html#ac997604e3ad9e85c1a98efbc7c42fad0',1,'colvar']]],
   ['fb',['fb',['../classcolvar.html#a5797e399be3f07656ca629c5357b7ad0',1,'colvar']]],
   ['fb_5factual',['fb_actual',['../classcolvar.html#ad895a0fa650aff226071de92e973e763',1,'colvar']]],
-  ['feature_5fstates',['feature_states',['../classcolvardeps.html#ab45a72aed8c61e309ef2430587a217ae',1,'colvardeps']]],
   ['fit_5fgradients',['fit_gradients',['../classcolvarmodule_1_1atom__group.html#a9f47e14ce3b47efa8b6a77ffb9e57834',1,'colvarmodule::atom_group']]],
   ['fitting_5fgroup',['fitting_group',['../classcolvarmodule_1_1atom__group.html#ad32c2b3700219d15f8d9965bcabb2e65',1,'colvarmodule::atom_group']]],
   ['fixed_5faxis',['fixed_axis',['../classcolvar_1_1distance__z.html#a4ddacce652519a4f3a63665a25aed83a',1,'colvar::distance_z']]],

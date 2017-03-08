@@ -92,8 +92,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">colvardeps Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="colvardeps_8h_source.html">colvardeps.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for colvardeps:</div>
 <div class="dyncontent">
@@ -197,6 +195,10 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa589190785f194b8ba2be25b0783428e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa589190785f194b8ba2be25b0783428e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#aa589190785f194b8ba2be25b0783428e">init_feature</a> (int feature_id, const char *description, feature_type type=f_type_not_set)</td></tr>
+<tr class="memdesc:aa589190785f194b8ba2be25b0783428e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pair a numerical feature ID with a description and type. <br/></td></tr>
+<tr class="separator:aa589190785f194b8ba2be25b0783428e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa88acdfde1d43c2cf635bbb5e83e8fd8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa88acdfde1d43c2cf635bbb5e83e8fd8"></a>
 virtual std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>features</b> ()=0</td></tr>
 <tr class="separator:aa88acdfde1d43c2cf635bbb5e83e8fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,9 +216,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_enabled</b> (int f
 <tr class="memitem:adb06601f41a536b4fe6d1e3c2b35821c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb06601f41a536b4fe6d1e3c2b35821c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_available</b> (int f=<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ad478a534f6bd3427975c03f1a4d0eb85">f_cv_active</a>) const </td></tr>
 <tr class="separator:adb06601f41a536b4fe6d1e3c2b35821c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d99d19fc4d0f45e880b06c24dfd9039"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d99d19fc4d0f45e880b06c24dfd9039"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>provide</b> (int feature_id)</td></tr>
-<tr class="separator:a5d99d19fc4d0f45e880b06c24dfd9039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75c130f4f2c4ef5f50d1c0dcbc97276"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ae75c130f4f2c4ef5f50d1c0dcbc97276">provide</a> (int feature_id, bool truefalse=true)</td></tr>
+<tr class="separator:ae75c130f4f2c4ef5f50d1c0dcbc97276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb18523c8db67f3e1494c9d894af253e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#abb18523c8db67f3e1494c9d894af253e">set_enabled</a> (int feature_id, bool truefalse=true)</td></tr>
+<tr class="separator:abb18523c8db67f3e1494c9d894af253e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0af270540fcec97efae2733a63bb7f0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0af270540fcec97efae2733a63bb7f0b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>enable</b> (int f, bool dry_run=false, bool toplevel=true)</td></tr>
 <tr class="separator:a0af270540fcec97efae2733a63bb7f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,27 +247,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad272099c249484986af5428e5d12880f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad272099c249484986af5428e5d12880f"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b></td></tr>
 <tr class="separator:ad272099c249484986af5428e5d12880f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab45a72aed8c61e309ef2430587a217ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab45a72aed8c61e309ef2430587a217ae"></a>
-std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">feature_state</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ab45a72aed8c61e309ef2430587a217ae">feature_states</a></td></tr>
-<tr class="memdesc:ab45a72aed8c61e309ef2430587a217ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of the state of all features. <br/></td></tr>
-<tr class="separator:ab45a72aed8c61e309ef2430587a217ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a8918211792a702a96dc1a336d72f01bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8918211792a702a96dc1a336d72f01bc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_available</b> (int feature_id, bool truefalse)</td></tr>
-<tr class="separator:a8918211792a702a96dc1a336d72f01bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb2a7565809f65ba71be65b7de68078a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb2a7565809f65ba71be65b7de68078a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_enabled</b> (int feature_id, bool truefalse)</td></tr>
-<tr class="separator:afb2a7565809f65ba71be65b7de68078a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9abd034505e8223e4a80fc02b205505"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9abd034505e8223e4a80fc02b205505"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ab9abd034505e8223e4a80fc02b205505">get_keyval_feature</a> (<a class="el" href="classcolvarparse.html">colvarparse</a> *cvp, std::string const &amp;conf, char const *key, int feature_id, bool const &amp;def_value, <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">colvarparse::Parse_Mode</a> const parse_mode=<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">colvarparse::parse_normal</a>)</td></tr>
 <tr class="memdesc:ab9abd034505e8223e4a80fc02b205505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a keyword and enable a feature accordingly. <br/></td></tr>
 <tr class="separator:ab9abd034505e8223e4a80fc02b205505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Parent class for a member object of a bias, cv or cvc etc. containing dependencies (features) and handling dependency resolution </p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a65d8eea75a4a6cb5b047b79ffac26f95"></a>
 <div class="memitem">
 <div class="memproto">
@@ -406,6 +397,33 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae75c130f4f2c4ef5f50d1c0dcbc97276"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void colvardeps::provide </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>feature_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>truefalse</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the feature's available flag, without checking To be used for dynamic properties dependencies will be checked by enable() </p>
+
+</div>
+</div>
 <a class="anchor" id="aeceb64175e64d8e7688e25ef513d8e22"></a>
 <div class="memitem">
 <div class="memproto">
@@ -448,6 +466,33 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a class="anchor" id="abb18523c8db67f3e1494c9d894af253e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void colvardeps::set_enabled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>feature_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>truefalse</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the feature's enabled flag, without dependency check or resolution To be used for static properties only Checking for availability is up to the caller </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvardeps_8h_source.html">colvardeps.h</a></li>
 <li>colvardeps.cpp</li>
@@ -455,7 +500,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 7 2017 15:07:19 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 8 2017 17:23:01 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

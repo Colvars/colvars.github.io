@@ -281,6 +281,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a0f816766cd8779f415861ece7a239128 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the content of the file has matching braces. <br/></td></tr>
 <tr class="separator:a0f816766cd8779f415861ece7a239128 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcolvardeps"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvardeps')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvardeps.html">colvardeps</a></td></tr>
+<tr class="memitem:aa589190785f194b8ba2be25b0783428e inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa589190785f194b8ba2be25b0783428e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#aa589190785f194b8ba2be25b0783428e">init_feature</a> (int feature_id, const char *description, feature_type type=f_type_not_set)</td></tr>
+<tr class="memdesc:aa589190785f194b8ba2be25b0783428e inherit pub_methods_classcolvardeps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pair a numerical feature ID with a description and type. <br/></td></tr>
+<tr class="separator:aa589190785f194b8ba2be25b0783428e inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a999d7c4e5d167996bc9babb236501bb4 inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a999d7c4e5d167996bc9babb236501bb4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_child</b> (<a class="el" href="classcolvardeps.html">colvardeps</a> *child)</td></tr>
 <tr class="separator:a999d7c4e5d167996bc9babb236501bb4 inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,9 +299,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_enabled</b> (int f
 <tr class="memitem:adb06601f41a536b4fe6d1e3c2b35821c inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb06601f41a536b4fe6d1e3c2b35821c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_available</b> (int f=<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ad478a534f6bd3427975c03f1a4d0eb85">f_cv_active</a>) const </td></tr>
 <tr class="separator:adb06601f41a536b4fe6d1e3c2b35821c inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d99d19fc4d0f45e880b06c24dfd9039 inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d99d19fc4d0f45e880b06c24dfd9039"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>provide</b> (int feature_id)</td></tr>
-<tr class="separator:a5d99d19fc4d0f45e880b06c24dfd9039 inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75c130f4f2c4ef5f50d1c0dcbc97276 inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ae75c130f4f2c4ef5f50d1c0dcbc97276">provide</a> (int feature_id, bool truefalse=true)</td></tr>
+<tr class="separator:ae75c130f4f2c4ef5f50d1c0dcbc97276 inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb18523c8db67f3e1494c9d894af253e inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#abb18523c8db67f3e1494c9d894af253e">set_enabled</a> (int feature_id, bool truefalse=true)</td></tr>
+<tr class="separator:abb18523c8db67f3e1494c9d894af253e inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0af270540fcec97efae2733a63bb7f0b inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0af270540fcec97efae2733a63bb7f0b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>enable</b> (int f, bool dry_run=false, bool toplevel=true)</td></tr>
 <tr class="separator:a0af270540fcec97efae2733a63bb7f0b inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -361,10 +366,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ad272099c249484986af5428e5d12880f inherit pub_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad272099c249484986af5428e5d12880f"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b></td></tr>
 <tr class="separator:ad272099c249484986af5428e5d12880f inherit pub_attribs_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab45a72aed8c61e309ef2430587a217ae inherit pub_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab45a72aed8c61e309ef2430587a217ae"></a>
-std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">feature_state</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ab45a72aed8c61e309ef2430587a217ae">feature_states</a></td></tr>
-<tr class="memdesc:ab45a72aed8c61e309ef2430587a217ae inherit pub_attribs_classcolvardeps"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of the state of all features. <br/></td></tr>
-<tr class="separator:ab45a72aed8c61e309ef2430587a217ae inherit pub_attribs_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -547,12 +548,6 @@ template&lt;typename TYPE &gt; </td></tr>
 <tr class="memitem:a8d511486e257839bdee072ad092f5b24 inherit pro_methods_classcolvarparse"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>_get_keyval_vector_</b> (std::string const &amp;conf, char const *key, std::vector&lt; TYPE &gt; &amp;values, std::vector&lt; TYPE &gt; const &amp;def_values, <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">Parse_Mode</a> const parse_mode)</td></tr>
 <tr class="separator:a8d511486e257839bdee072ad092f5b24 inherit pro_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcolvardeps"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcolvardeps')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcolvardeps.html">colvardeps</a></td></tr>
-<tr class="memitem:a8918211792a702a96dc1a336d72f01bc inherit pro_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8918211792a702a96dc1a336d72f01bc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_available</b> (int feature_id, bool truefalse)</td></tr>
-<tr class="separator:a8918211792a702a96dc1a336d72f01bc inherit pro_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb2a7565809f65ba71be65b7de68078a inherit pro_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb2a7565809f65ba71be65b7de68078a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_enabled</b> (int feature_id, bool truefalse)</td></tr>
-<tr class="separator:afb2a7565809f65ba71be65b7de68078a inherit pro_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9abd034505e8223e4a80fc02b205505 inherit pro_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9abd034505e8223e4a80fc02b205505"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ab9abd034505e8223e4a80fc02b205505">get_keyval_feature</a> (<a class="el" href="classcolvarparse.html">colvarparse</a> *cvp, std::string const &amp;conf, char const *key, int feature_id, bool const &amp;def_value, <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">colvarparse::Parse_Mode</a> const parse_mode=<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">colvarparse::parse_normal</a>)</td></tr>
 <tr class="memdesc:ab9abd034505e8223e4a80fc02b205505 inherit pro_methods_classcolvardeps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a keyword and enable a feature accordingly. <br/></td></tr>
@@ -707,7 +702,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 7 2017 15:07:19 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 8 2017 17:23:00 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
