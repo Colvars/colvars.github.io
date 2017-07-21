@@ -1,7 +1,7 @@
 var searchData=
 [
   ['n_5factive_5fcvcs',['n_active_cvcs',['../classcolvar.html#a5a3250f9830f6bbf7a84cec06c30e85d',1,'colvar']]],
-  ['name',['name',['../classcolvar.html#a3923a4894e1d95a8f15f3f2cd54de469',1,'colvar::name()'],['../classcolvarbias.html#a9d6e2e6cbb6866eeb5cf6cef8f8e31c2',1,'colvarbias::name()'],['../classcolvar_1_1cvc.html#a6eb2279897e7041605087e0d288e8ad2',1,'colvar::cvc::name()']]],
+  ['name',['name',['../classcolvar.html#a3923a4894e1d95a8f15f3f2cd54de469',1,'colvar::name()'],['../classcolvarmodule_1_1atom__group.html#a337392bb4c1e1145897fc828497074ea',1,'colvarmodule::atom_group::name()'],['../classcolvarbias.html#a9d6e2e6cbb6866eeb5cf6cef8f8e31c2',1,'colvarbias::name()'],['../classcolvar_1_1cvc.html#a6eb2279897e7041605087e0d288e8ad2',1,'colvar::cvc::name()']]],
   ['nd',['nd',['../classcolvar__grid.html#ad2917ddec512db6205e70b0f2f7e39fe',1,'colvar_grid']]],
   ['new_5fcount',['new_count',['../classcolvar__grid__count.html#aab6738acd50e1b87aa8f3576cc925ad1',1,'colvar_grid_count']]],
   ['new_5fdata',['new_data',['../classcolvar__grid.html#a20d09cac84efdd3a92c983e7bac02aa6',1,'colvar_grid']]],

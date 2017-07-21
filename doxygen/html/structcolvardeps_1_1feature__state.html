@@ -113,10 +113,27 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="separator:abc1639b17da2a354f36bad983b03ec53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b1ab8bb343c8287d1059350b3b6a3e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcolvardeps_1_1feature__state.html#a9b1ab8bb343c8287d1059350b3b6a3e0">enabled</a></td></tr>
 <tr class="separator:a9b1ab8bb343c8287d1059350b3b6a3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33bda34fbc03b41adc707720ff642ae6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcolvardeps_1_1feature__state.html#a33bda34fbc03b41adc707720ff642ae6">ref_count</a></td></tr>
+<tr class="separator:a33bda34fbc03b41adc707720ff642ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac429a624ce4478d95048e974ba68b5f1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcolvardeps_1_1feature__state.html#ac429a624ce4478d95048e974ba68b5f1">alternate_refs</a></td></tr>
+<tr class="separator:ac429a624ce4478d95048e974ba68b5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This contains the current state of each feature for each object. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ac429a624ce4478d95048e974ba68b5f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; colvardeps::feature_state::alternate_refs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>List of features that were enabled by this one as part of an alternate requirement (for ref counting purposes) This is necessary because we don't know which feature in the list we enabled, otherwise </p>
+
+</div>
+</div>
 <a class="anchor" id="a9b1ab8bb343c8287d1059350b3b6a3e0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -130,13 +147,30 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 
 </div>
 </div>
+<a class="anchor" id="a33bda34fbc03b41adc707720ff642ae6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvardeps::feature_state::ref_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Number of features requiring this one as a dependency When it falls to zero:</p>
+<ul>
+<li>a dynamic feature is disabled automatically</li>
+<li>other features may be disabled statically </li>
+</ul>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="colvardeps_8h_source.html">colvardeps.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 13 2017 14:56:45 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 21 2017 19:34:43 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -9,7 +9,7 @@ var searchData=
   ['theta',['theta',['../classcolvar_1_1alpha__angles.html#ad3001a74aa4e18dbef2f949e84d2522f',1,'colvar::alpha_angles']]],
   ['theta_5fref',['theta_ref',['../classcolvar_1_1alpha__angles.html#a2df3467bbb0eed44d650d6a2f5c3f695',1,'colvar::alpha_angles']]],
   ['theta_5ftol',['theta_tol',['../classcolvar_1_1alpha__angles.html#a06ad0aca07d64ff0c071227c7d57b889',1,'colvar::alpha_angles']]],
-  ['time_5fstep_5ffactor',['time_step_factor',['../classcolvar.html#aa48e17c2766b7933701618c68c07eb78',1,'colvar']]],
+  ['time_5fstep_5ffactor',['time_step_factor',['../classcolvardeps.html#af9fca6cfc343e41910514d00fcbc772a',1,'colvardeps']]],
   ['total_5fbias_5fenergy',['total_bias_energy',['../classcolvarmodule.html#a7a5a4cccf4d66137beac717cb7ea3e63',1,'colvarmodule']]],
   ['total_5fcharge',['total_charge',['../classcolvarmodule_1_1atom__group.html#a4c26f62873dcb096abb209e3beeea65c',1,'colvarmodule::atom_group']]],
   ['total_5fforce',['total_force',['../classcolvarmodule_1_1atom.html#ab7811c179d02b64da05a6d53279d201f',1,'colvarmodule::atom']]],

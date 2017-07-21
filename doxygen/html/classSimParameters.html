@@ -126,6 +126,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>scriptSet</b> (const 
 <tr class="memitem:a0bbf22e0392be438ccda188bb6739f20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bbf22e0392be438ccda188bb6739f20"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>close_dcdfile</b> ()</td></tr>
 <tr class="separator:a0bbf22e0392be438ccda188bb6739f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55b47909afcf8144237ca654631fb35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac55b47909afcf8144237ca654631fb35"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>close_veldcdfile</b> ()</td></tr>
+<tr class="separator:ac55b47909afcf8144237ca654631fb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ceb0295350f43724e52782008ca93d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ceb0295350f43724e52782008ca93d9"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>isSendSpanningTreeOn</b> ()</td></tr>
 <tr class="separator:a4ceb0295350f43724e52782008ca93d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -795,6 +798,9 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>qmParamPDB</b> [128]<
 <tr class="memitem:a6aac932ea6f63e7f3f209441c7520436"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6aac932ea6f63e7f3f209441c7520436"></a>
 Bool&#160;</td><td class="memItemRight" valign="bottom"><b>qmParamPDBDefined</b></td></tr>
 <tr class="separator:a6aac932ea6f63e7f3f209441c7520436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefb1ddd3eafbd2e4713813edaf2430cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefb1ddd3eafbd2e4713813edaf2430cb"></a>
+Bool&#160;</td><td class="memItemRight" valign="bottom"><b>qmChrgFromPSF</b></td></tr>
+<tr class="separator:aefb1ddd3eafbd2e4713813edaf2430cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cb5050ff3d901fb8c2cb4a4cf6e7c28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cb5050ff3d901fb8c2cb4a4cf6e7c28"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>qmExecPath</b> [256]</td></tr>
 <tr class="separator:a7cb5050ff3d901fb8c2cb4a4cf6e7c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -831,6 +837,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>qmFormat</b></td></tr>
 <tr class="memitem:a3cab639d554a75a1224294126cb81dec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cab639d554a75a1224294126cb81dec"></a>
 Bool&#160;</td><td class="memItemRight" valign="bottom"><b>qmReplaceAll</b></td></tr>
 <tr class="separator:a3cab639d554a75a1224294126cb81dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143fcc9ae83bb6d9ee42b97a48937847"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a143fcc9ae83bb6d9ee42b97a48937847"></a>
+Bool&#160;</td><td class="memItemRight" valign="bottom"><b>qmMOPACAddConfigChrg</b></td></tr>
+<tr class="separator:a143fcc9ae83bb6d9ee42b97a48937847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55c7ff54a0523c581701d89672104422"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55c7ff54a0523c581701d89672104422"></a>
 Bool&#160;</td><td class="memItemRight" valign="bottom"><b>qmBondOn</b></td></tr>
 <tr class="separator:a55c7ff54a0523c581701d89672104422"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -900,6 +909,12 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>qmLSSModeS</b> [16]</
 <tr class="memitem:a3c29bd1c38d58bc45a530bc97761061c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c29bd1c38d58bc45a530bc97761061c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>qmLSSMode</b></td></tr>
 <tr class="separator:a3c29bd1c38d58bc45a530bc97761061c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a161924b875e8672ffcad200d19c87400"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a161924b875e8672ffcad200d19c87400"></a>
+Bool&#160;</td><td class="memItemRight" valign="bottom"><b>qmCSMD</b></td></tr>
+<tr class="separator:a161924b875e8672ffcad200d19c87400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d221a25cf127870bb8cae538c6721ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d221a25cf127870bb8cae538c6721ea"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>qmCSMDFile</b> [128]</td></tr>
+<tr class="separator:a7d221a25cf127870bb8cae538c6721ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8c7ef624012b838321b4030eb0f3ae6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8c7ef624012b838321b4030eb0f3ae6"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>qmOutFreq</b></td></tr>
 <tr class="separator:ad8c7ef624012b838321b4030eb0f3ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1476,6 +1491,9 @@ Bool&#160;</td><td class="memItemRight" valign="bottom"><b>usePMECUDA</b></td></
 <tr class="memitem:a92730b413950352b8c6a70c875785460"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92730b413950352b8c6a70c875785460"></a>
 Bool&#160;</td><td class="memItemRight" valign="bottom"><b>useCUDA2</b></td></tr>
 <tr class="separator:a92730b413950352b8c6a70c875785460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ccc3eccff9c9f5a9fcc59029e7e578"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89ccc3eccff9c9f5a9fcc59029e7e578"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bondedCUDA</b></td></tr>
+<tr class="separator:a89ccc3eccff9c9f5a9fcc59029e7e578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62b9f43db894608bb5e6f5c25f431d67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62b9f43db894608bb5e6f5c25f431d67"></a>
 Bool&#160;</td><td class="memItemRight" valign="bottom"><b>useOptPME</b></td></tr>
 <tr class="separator:a62b9f43db894608bb5e6f5c25f431d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1779,6 +1797,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>IMDwait</b></td></tr>
 <tr class="memitem:a9d10657f3f571321206688bdc599e993"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d10657f3f571321206688bdc599e993"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>IMDignore</b></td></tr>
 <tr class="separator:a9d10657f3f571321206688bdc599e993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c5d67042f43c7c42617ec2f526c692b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c5d67042f43c7c42617ec2f526c692b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>IMDignoreForces</b></td></tr>
+<tr class="separator:a7c5d67042f43c7c42617ec2f526c692b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab534dd5989a7b2f996e6102b5be8a9dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab534dd5989a7b2f996e6102b5be8a9dd"></a>
 Bool&#160;</td><td class="memItemRight" valign="bottom"><b>amberOn</b></td></tr>
 <tr class="separator:ab534dd5989a7b2f996e6102b5be8a9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1904,7 +1925,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mic_singleKernel</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 13 2017 14:56:46 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 21 2017 19:34:43 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
