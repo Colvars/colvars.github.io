@@ -18,7 +18,7 @@ endif
 .PHONY: all clean clean-all doxygen readme
 all: pdf html doxygen readme
 pdf: $(PDF)
-html: colvars-refman-namd/colvars-refman-namd.html colvars-refman-vmd/colvars-refman-vmd.html colvars-refman-lammps/colvars-refman-lammps.html
+html: colvars-refman-namd/colvars-refman-namd.html colvars-refman-vmd/colvars-refman-vmd.html colvars-refman-lammps/colvars-refman-lammps.html fix_html_labels
 readme: $(COLVARSDIR)/README.md $(COLVARSDIR)/README-totalforce.md
 	cp -f $^ ./
 
@@ -34,6 +34,11 @@ colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvar
 	cd $(DOCSRCDIR); htlatex  colvars-refman-vmd.tex "xhtml, charset=utf-8" " -cunihtf -utf8" "-d$(DOCDIR)/colvars-refman-vmd/"
 colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-lammps.tex $(DOCSRCDIR)/colvars-cv.tex 
 	cd $(DOCSRCDIR); htlatex  colvars-refman-lammps.tex "xhtml, charset=utf-8" " -cunihtf -utf8" "-d$(DOCDIR)/colvars-refman-lammps/"
+
+fix_html_labels:
+	cd $(DOCDIR)/colvars-refman-namd; sh ../fix_section_labels.sh
+	cd $(DOCDIR)/colvars-refman-vmd; sh ../fix_section_labels.sh
+	cd $(DOCDIR)/colvars-refman-lammps; sh ../fix_section_labels.sh
 
 doxygen: doxygen/html/index.html
    
