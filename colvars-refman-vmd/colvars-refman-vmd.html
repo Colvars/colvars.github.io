@@ -4,13 +4,13 @@
 <!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
 <html xmlns="http://www.w3.org/1999/xhtml"  
 > 
-<head><title></title> 
+<head><title>Collective Variables Module - Reference Manual</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <!-- xhtml,charset=utf-8,html --> 
 <meta name="src" content="colvars-refman-vmd.tex" /> 
-<meta name="date" content="2017-09-19 16:51:00" /> 
+<meta name="date" content="2017-09-19 21:11:00" /> 
 <link rel="stylesheet" type="text/css" href="colvars-refman-vmd.css" /> 
 </head><body 
 >
@@ -83,7 +83,7 @@ href="#sec:colvar_atom_groups" id="QQ2-1-19">Selecting atoms for colvars: deﬁn
 <br />    <span class="subsectionToc" >5.1 <a 
 href="#sec:colvar_atom_groups_sel" id="QQ2-1-20">Selection keywords</a></span>
 <br />    <span class="subsectionToc" >5.2 <a 
-href="#key:colvars:atom_group:refPositions" id="QQ2-1-21">Moving frame of reference.</a></span>
+href="#sec:colvar_atom_groups_ref_frame" id="QQ2-1-21">Moving frame of reference.</a></span>
 <br />    <span class="subsectionToc" >5.3 <a 
 href="#x1-210005.3" id="QQ2-1-22">Treatment of periodic boundary conditions.</a></span>
 <br />    <span class="subsectionToc" >5.4 <a 
@@ -93,10 +93,10 @@ href="#sec:cvc" id="QQ2-1-24">Collective variable components (basis functions)</
 <br />    <span class="subsectionToc" >6.1 <a 
 href="#x1-240006.1" id="QQ2-1-25">List of available colvar components</a></span>
 <br />     <span class="subsubsectionToc" >6.1.1 <a 
-href="#colvar|distance|oneSiteTotalForce" id="QQ2-1-26"><span 
+href="#colvar|distance|forceNoPBC" id="QQ2-1-26"><span 
 class="ot1-zi4r-0-x-x-109">distance</span>: center-of-mass distance between two groups.</a></span>
 <br />     <span class="subsubsectionToc" >6.1.2 <a 
-href="#colvar|distanceZ|ref" id="QQ2-1-27"><span 
+href="#colvar|distanceZ|main" id="QQ2-1-27"><span 
 class="ot1-zi4r-0-x-x-109">distanceZ</span>: projection of a distance vector on an axis.</a></span>
 <br />     <span class="subsubsectionToc" >6.1.3 <a 
 href="#x1-270006.1.3" id="QQ2-1-28"><span 
@@ -132,7 +132,7 @@ class="ot1-zi4r-0-x-x-109">polarTheta</span>: polar angle in spherical coordinat
 href="#x1-370006.1.13" id="QQ2-1-38"><span 
 class="ot1-zi4r-0-x-x-109">polarPhi</span>: azimuthal angle in spherical coordinates.</a></span>
 <br />     <span class="subsubsectionToc" >6.1.14 <a 
-href="#colvar|coordNum|cutoff" id="QQ2-1-39"><span 
+href="#colvar|coordNum|group1" id="QQ2-1-39"><span 
 class="ot1-zi4r-0-x-x-109">coordNum</span>: coordination number between two groups.</a></span>
 <br />     <span class="subsubsectionToc" >6.1.15 <a 
 href="#x1-390006.1.15" id="QQ2-1-40"><span 
@@ -141,7 +141,7 @@ class="ot1-zi4r-0-x-x-109">selfCoordNum</span>: coordination number between atom
 href="#x1-400006.1.16" id="QQ2-1-41"><span 
 class="ot1-zi4r-0-x-x-109">hBond</span>: hydrogen bond between two atoms.</a></span>
 <br />     <span class="subsubsectionToc" >6.1.17 <a 
-href="#colvar|rmsd|refPositions" id="QQ2-1-42"><span 
+href="#colvar|rmsd|atoms" id="QQ2-1-42"><span 
 class="ot1-zi4r-0-x-x-109">rmsd</span>: root mean square displacement (RMSD) from reference positions.</a></span>
 <br />     <span class="subsubsectionToc" >6.1.18 <a 
 href="#x1-420006.1.18" id="QQ2-1-43">Advanced usage of the <span 
@@ -176,7 +176,7 @@ class="ot1-zi4r-0-x-x-109">spinAngle</span>: angle of rotation around a given ax
 href="#x1-510006.1.27" id="QQ2-1-52"><span 
 class="ot1-zi4r-0-x-x-109">tilt</span>: cosine of the rotation orthogonal to a given axis.</a></span>
 <br />     <span class="subsubsectionToc" >6.1.28 <a 
-href="#colvar|alpha|psfSegID" id="QQ2-1-53"><span 
+href="#colvar|alpha|residueRange" id="QQ2-1-53"><span 
 class="ot1-zi4r-0-x-x-109">alpha</span>: <span 
 class="zptmcm7m-x-x-109">α</span>-helix content of a protein segment.</a></span>
 <br />     <span class="subsubsectionToc" >6.1.29 <a 
@@ -2186,7 +2186,7 @@ class="ptmb7t-x-x-109">Description:  </span>Instead of selecting any atom, this 
 <!--l. 1036--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">5.2    </span> <a 
- id="key:colvars:atom_group:refPositions"></a>Moving frame of reference.</h4>
+ id="sec:colvar_atom_groups_ref_frame"></a>Moving frame of reference.</h4>
 <!--l. 1039--><p class="noindent" >The following options deﬁne an automatic calculation of an optimal translation (<span 
 class="ot1-zi4r-0-x-x-109">centerReference</span>) or optimal
 rotation (<span 
@@ -2693,7 +2693,7 @@ that keyword. The keywords that are available for all types of components are li
 <!--l. 1343--><p class="noindent" >
 </p>
    <h5 class="subsubsectionHead"><span class="titlemark">6.1.1    </span> <a 
- id="colvar|distance|oneSiteTotalForce"></a><span 
+ id="colvar|distance|forceNoPBC"></a><span 
 class="ot1-zi4r-0-x-x-109">distance</span>: center-of-mass distance between two groups.</h5>
 <!--l. 1345--><p class="noindent" >The <span 
 class="ot1-zi4r-0-x-x-109">distance </span><span 
@@ -2732,7 +2732,7 @@ class="ot1-zi4r-0-x-x-120">group2: </span>analogous to <span
 class="ot1-zi4r-0-x-x-109">group1</span>
      </li>
      <li class="itemize"><a 
- id="colvar|distance|oneSiteTotalForce"></a><a 
+ id="colvar|distance|forceNoPBC"></a><a 
  id="dx1-25003"></a><span 
 class="ot1-zi4r-0-x-x-120">forceNoPBC </span><span 
 class="zptmcm7y-x-x-109">⟨</span><span style="margin-left:0.3em" class="thinspace"></span>Calculate absolute rather than minimum-image distance?<span style="margin-left:0.3em" class="thinspace"></span><span 
@@ -2791,7 +2791,7 @@ is set).
 </p><!--l. 1402--><p class="noindent" >
 </p>
    <h5 class="subsubsectionHead"><span class="titlemark">6.1.2    </span> <a 
- id="colvar|distanceZ|ref"></a><span 
+ id="colvar|distanceZ|main"></a><span 
 class="ot1-zi4r-0-x-x-109">distanceZ</span>: projection of a distance vector on an axis.</h5>
 <!--l. 1403--><p class="noindent" >The <span 
 class="ot1-zi4r-0-x-x-109">distanceZ</span><span 
@@ -2807,7 +2807,7 @@ class="ptmb7t-x-x-109">List of keywords </span>(see also <a
 href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional options): </p>
      <ul class="itemize1">
      <li class="itemize"><a 
- id="colvar|distanceZ|ref"></a> <a 
+ id="colvar|distanceZ|main"></a> <a 
  id="dx1-26001"></a><span 
 class="ot1-zi4r-0-x-x-120">main </span><span 
 class="zptmcm7y-x-x-109">⟨</span><span style="margin-left:0.3em" class="thinspace"></span>Main group of atoms<span style="margin-left:0.3em" class="thinspace"></span><span 
@@ -2946,9 +2946,9 @@ class="zptmcm7t-x-x-109">)</span>. The
      <li class="itemize"><a 
  id="dx1-26005"></a> <span 
 class="ot1-zi4r-0-x-x-120">forceNoPBC: </span>see deﬁnition of <a 
-href="#colvar|distance|oneSiteTotalForce"><span 
+href="#colvar|distance|forceNoPBC"><span 
 class="ot1-zi4r-0-x-x-109">forceNoPBC</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|forceNoPBC --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -2956,7 +2956,7 @@ class="ot1-zi4r-0-x-x-109">distance </span>component)
 class="ot1-zi4r-0-x-x-120">oneSiteTotalForce: </span>see deﬁnition of <a 
 href="#colvar|distance|oneSiteTotalForce"><span 
 class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li></ul>
 <!--l. 1466--><p class="noindent" >This component returns a number (in Å) whose range is determined by the chosen boundary conditions.
@@ -3013,9 +3013,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-27001"></a> <span 
 class="ot1-zi4r-0-x-x-120">main: </span>see deﬁnition of <a 
-href="#colvar|distanceZ|ref"><span 
+href="#colvar|distanceZ|main"><span 
 class="ot1-zi4r-0-x-x-109">main</span></a> in sec. <a 
-href="#colvar|distanceZ|ref">6.1.2<!--tex4ht:ref: colvar|distanceZ|ref2 --></a> (<span 
+href="#colvar|distanceZ|main">6.1.2<!--tex4ht:ref: colvar|distanceZ|main --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distanceZ </span>component)
      </li>
      <li class="itemize"><a 
@@ -3023,7 +3023,7 @@ class="ot1-zi4r-0-x-x-109">distanceZ </span>component)
 class="ot1-zi4r-0-x-x-120">ref: </span>see deﬁnition of <a 
 href="#colvar|distanceZ|ref"><span 
 class="ot1-zi4r-0-x-x-109">ref</span></a> in sec. <a 
-href="#colvar|distanceZ|ref">6.1.2<!--tex4ht:ref: colvar|distanceZ|ref --></a> (<span 
+href="#colvar|distanceZ|main">6.1.2<!--tex4ht:ref: colvar|distanceZ|ref --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distanceZ </span>component)
      </li>
      <li class="itemize"><a 
@@ -3031,7 +3031,7 @@ class="ot1-zi4r-0-x-x-109">distanceZ </span>component)
 class="ot1-zi4r-0-x-x-120">ref2: </span>see deﬁnition of <a 
 href="#colvar|distanceZ|ref2"><span 
 class="ot1-zi4r-0-x-x-109">ref2</span></a> in sec. <a 
-href="#colvar|distanceZ|ref">6.1.2<!--tex4ht:ref: colvar|distanceZ|ref2 --></a> (<span 
+href="#colvar|distanceZ|main">6.1.2<!--tex4ht:ref: colvar|distanceZ|ref2 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distanceZ </span>component)
      </li>
      <li class="itemize"><a 
@@ -3039,15 +3039,15 @@ class="ot1-zi4r-0-x-x-109">distanceZ </span>component)
 class="ot1-zi4r-0-x-x-120">axis: </span>see deﬁnition of <a 
 href="#colvar|distanceZ|axis"><span 
 class="ot1-zi4r-0-x-x-109">axis</span></a> in sec. <a 
-href="#colvar|distanceZ|ref">6.1.2<!--tex4ht:ref: colvar|distanceZ|axis --></a> (<span 
+href="#colvar|distanceZ|main">6.1.2<!--tex4ht:ref: colvar|distanceZ|axis --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distanceZ </span>component)
      </li>
      <li class="itemize"><a 
  id="dx1-27005"></a> <span 
 class="ot1-zi4r-0-x-x-120">forceNoPBC: </span>see deﬁnition of <a 
-href="#colvar|distance|oneSiteTotalForce"><span 
+href="#colvar|distance|forceNoPBC"><span 
 class="ot1-zi4r-0-x-x-109">forceNoPBC</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|forceNoPBC --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3055,7 +3055,7 @@ class="ot1-zi4r-0-x-x-109">distance </span>component)
 class="ot1-zi4r-0-x-x-120">oneSiteTotalForce: </span>see deﬁnition of <a 
 href="#colvar|distance|oneSiteTotalForce"><span 
 class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li></ul>
 <!--l. 1500--><p class="noindent" >
@@ -3086,7 +3086,7 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
 class="ot1-zi4r-0-x-x-120">group1: </span>see deﬁnition of <a 
 href="#colvar|distance|group1"><span 
 class="ot1-zi4r-0-x-x-109">group1</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3097,9 +3097,9 @@ class="ot1-zi4r-0-x-x-109">group1</span>
      <li class="itemize"><a 
  id="dx1-28003"></a><span 
 class="ot1-zi4r-0-x-x-120">forceNoPBC: </span>see deﬁnition of <a 
-href="#colvar|distance|oneSiteTotalForce"><span 
+href="#colvar|distance|forceNoPBC"><span 
 class="ot1-zi4r-0-x-x-109">forceNoPBC</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|forceNoPBC --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3107,7 +3107,7 @@ class="ot1-zi4r-0-x-x-109">distance </span>component)
 class="ot1-zi4r-0-x-x-120">oneSiteTotalForce: </span>see deﬁnition of <a 
 href="#colvar|distance|oneSiteTotalForce"><span 
 class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li></ul>
                                                                                          
@@ -3151,7 +3151,7 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
 class="ot1-zi4r-0-x-x-120">group1: </span>see deﬁnition of <a 
 href="#colvar|distance|group1"><span 
 class="ot1-zi4r-0-x-x-109">group1</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3162,9 +3162,9 @@ class="ot1-zi4r-0-x-x-109">group1</span>
      <li class="itemize"><a 
  id="dx1-29003"></a><span 
 class="ot1-zi4r-0-x-x-120">forceNoPBC: </span>see deﬁnition of <a 
-href="#colvar|distance|oneSiteTotalForce"><span 
+href="#colvar|distance|forceNoPBC"><span 
 class="ot1-zi4r-0-x-x-109">forceNoPBC</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|forceNoPBC --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3172,7 +3172,7 @@ class="ot1-zi4r-0-x-x-109">distance </span>component)
 class="ot1-zi4r-0-x-x-120">oneSiteTotalForce: </span>see deﬁnition of <a 
 href="#colvar|distance|oneSiteTotalForce"><span 
 class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li></ul>
 <!--l. 1540--><p class="noindent" >
@@ -3218,7 +3218,7 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
 class="ot1-zi4r-0-x-x-120">group1: </span>see deﬁnition of <a 
 href="#colvar|distance|group1"><span 
 class="ot1-zi4r-0-x-x-109">group1</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
                                                                                          
                                                                                          
@@ -3233,7 +3233,7 @@ class="ot1-zi4r-0-x-x-109">group1</span>
 class="ot1-zi4r-0-x-x-120">oneSiteTotalForce: </span>see deﬁnition of <a 
 href="#colvar|distance|oneSiteTotalForce"><span 
 class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3285,7 +3285,7 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
 class="ot1-zi4r-0-x-x-120">group1: </span>see deﬁnition of <a 
 href="#colvar|distance|group1"><span 
 class="ot1-zi4r-0-x-x-109">group1</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3296,9 +3296,9 @@ class="ot1-zi4r-0-x-x-109">group1</span>
      <li class="itemize"><a 
  id="dx1-31003"></a><span 
 class="ot1-zi4r-0-x-x-120">forceNoPBC: </span>see deﬁnition of <a 
-href="#colvar|distance|oneSiteTotalForce"><span 
+href="#colvar|distance|forceNoPBC"><span 
 class="ot1-zi4r-0-x-x-109">forceNoPBC</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|forceNoPBC --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component) </li></ul>
 <!--l. 1578--><p class="noindent" >This component returns a <span 
 class="zptmcm7m-x-x-109">N</span><sub><span 
@@ -3385,7 +3385,7 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
 class="ot1-zi4r-0-x-x-120">group1: </span>see deﬁnition of <a 
 href="#colvar|distance|group1"><span 
 class="ot1-zi4r-0-x-x-109">group1</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3401,9 +3401,9 @@ class="ot1-zi4r-0-x-x-109">group1</span>
      <li class="itemize"><a 
  id="dx1-33004"></a><span 
 class="ot1-zi4r-0-x-x-120">forceNoPBC: </span>see deﬁnition of <a 
-href="#colvar|distance|oneSiteTotalForce"><span 
+href="#colvar|distance|forceNoPBC"><span 
 class="ot1-zi4r-0-x-x-109">forceNoPBC</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|forceNoPBC --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3411,7 +3411,7 @@ class="ot1-zi4r-0-x-x-109">distance </span>component)
 class="ot1-zi4r-0-x-x-120">oneSiteTotalForce: </span>see deﬁnition of <a 
 href="#colvar|distance|oneSiteTotalForce"><span 
 class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li></ul>
 <!--l. 1620--><p class="noindent" >
@@ -3441,7 +3441,7 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
 class="ot1-zi4r-0-x-x-120">group1: </span>see deﬁnition of <a 
 href="#colvar|distance|group1"><span 
 class="ot1-zi4r-0-x-x-109">group1</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3457,9 +3457,9 @@ class="ot1-zi4r-0-x-x-109">group1</span>
      <li class="itemize"><a 
  id="dx1-34004"></a><span 
 class="ot1-zi4r-0-x-x-120">forceNoPBC: </span>see deﬁnition of <a 
-href="#colvar|distance|oneSiteTotalForce"><span 
+href="#colvar|distance|forceNoPBC"><span 
 class="ot1-zi4r-0-x-x-109">forceNoPBC</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|forceNoPBC --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
                                                                                          
                                                                                          
@@ -3469,7 +3469,7 @@ class="ot1-zi4r-0-x-x-109">distance </span>component)
 class="ot1-zi4r-0-x-x-120">oneSiteTotalForce: </span>see deﬁnition of <a 
 href="#colvar|distance|oneSiteTotalForce"><span 
 class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li></ul>
 <!--l. 1640--><p class="noindent" >
@@ -3503,7 +3503,7 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
 class="ot1-zi4r-0-x-x-120">group1: </span>see deﬁnition of <a 
 href="#colvar|distance|group1"><span 
 class="ot1-zi4r-0-x-x-109">group1</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3524,9 +3524,9 @@ class="ot1-zi4r-0-x-x-109">group1</span>
      <li class="itemize"><a 
  id="dx1-35005"></a><span 
 class="ot1-zi4r-0-x-x-120">forceNoPBC: </span>see deﬁnition of <a 
-href="#colvar|distance|oneSiteTotalForce"><span 
+href="#colvar|distance|forceNoPBC"><span 
 class="ot1-zi4r-0-x-x-109">forceNoPBC</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|forceNoPBC --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3534,7 +3534,7 @@ class="ot1-zi4r-0-x-x-109">distance </span>component)
 class="ot1-zi4r-0-x-x-120">oneSiteTotalForce: </span>see deﬁnition of <a 
 href="#colvar|distance|oneSiteTotalForce"><span 
 class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|oneSiteTotalForce --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li></ul>
 <!--l. 1665--><p class="noindent" >
@@ -3553,7 +3553,7 @@ class="ot1-zi4r-0-x-x-109">atoms</span>. It returns an angle (in degrees) within
 class="zptmcm7t-x-x-109">[0 : 180]</span>. To obtain spherical
 coordinates in a frame of reference tied to another group of atoms, use the <span 
 class="ot1-zi4r-0-x-x-109">fittingGroup</span><a 
-href="#key:colvars:atom_group:refPositions">5.2<!--tex4ht:ref: key:colvars:atom_group:refPositionsFile --></a> option within the
+href="#sec:colvar_atom_groups_ref_frame">5.2<!--tex4ht:ref: sec:colvar_atom_groups_ref_frame --></a> option within the
 <span 
 class="ot1-zi4r-0-x-x-109">atoms </span>block.
 </p><!--l. 1674--><p class="noindent" ><span 
@@ -3624,7 +3624,7 @@ class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the group of atoms for the 
 <!--l. 1709--><p class="noindent" >
 </p>
    <h5 class="subsubsectionHead"><span class="titlemark">6.1.14    </span> <a 
- id="colvar|coordNum|cutoff"></a><span 
+ id="colvar|coordNum|group1"></a><span 
 class="ot1-zi4r-0-x-x-109">coordNum</span>: coordination number between two groups.</h5>
 <!--l. 1710--><p class="noindent" >The <span 
 class="ot1-zi4r-0-x-x-109">coordNum </span><span 
@@ -3674,12 +3674,12 @@ class="ptmb7t-x-x-109">List of keywords </span>(see also <a
 href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional options): </p>
      <ul class="itemize1">
      <li class="itemize"><a 
- id="colvar|coordNum|cutoff"></a> <a 
+ id="colvar|coordNum|group1"></a> <a 
  id="dx1-38002"></a><span 
 class="ot1-zi4r-0-x-x-120">group1: </span>see deﬁnition of <a 
 href="#colvar|distance|group1"><span 
 class="ot1-zi4r-0-x-x-109">group1</span></a> in sec. <a 
-href="#colvar|distance|oneSiteTotalForce">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
+href="#colvar|distance|forceNoPBC">6.1.1<!--tex4ht:ref: colvar|distance|group1 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">distance </span>component)
      </li>
      <li class="itemize"><a 
@@ -3895,9 +3895,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-39002"></a> <span 
 class="ot1-zi4r-0-x-x-120">group1: </span>see deﬁnition of <a 
-href="#colvar|coordNum|cutoff"><span 
+href="#colvar|coordNum|group1"><span 
 class="ot1-zi4r-0-x-x-109">group1</span></a> in sec. <a 
-href="#colvar|coordNum|cutoff">6.1.14<!--tex4ht:ref: colvar|coordNum|cutoff3 --></a> (<span 
+href="#colvar|coordNum|group1">6.1.14<!--tex4ht:ref: colvar|coordNum|group1 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">coordNum </span>component)
      </li>
      <li class="itemize"><a 
@@ -3905,7 +3905,7 @@ class="ot1-zi4r-0-x-x-109">coordNum </span>component)
 class="ot1-zi4r-0-x-x-120">cutoff: </span>see deﬁnition of <a 
 href="#colvar|coordNum|cutoff"><span 
 class="ot1-zi4r-0-x-x-109">cutoff</span></a> in sec. <a 
-href="#colvar|coordNum|cutoff">6.1.14<!--tex4ht:ref: colvar|coordNum|cutoff --></a> (<span 
+href="#colvar|coordNum|group1">6.1.14<!--tex4ht:ref: colvar|coordNum|cutoff --></a> (<span 
 class="ot1-zi4r-0-x-x-109">coordNum </span>component)
      </li>
      <li class="itemize"><a 
@@ -3913,7 +3913,7 @@ class="ot1-zi4r-0-x-x-109">coordNum </span>component)
 class="ot1-zi4r-0-x-x-120">cutoff3: </span>see deﬁnition of <a 
 href="#colvar|coordNum|cutoff3"><span 
 class="ot1-zi4r-0-x-x-109">cutoff3</span></a> in sec. <a 
-href="#colvar|coordNum|cutoff">6.1.14<!--tex4ht:ref: colvar|coordNum|cutoff3 --></a> (<span 
+href="#colvar|coordNum|group1">6.1.14<!--tex4ht:ref: colvar|coordNum|cutoff3 --></a> (<span 
 class="ot1-zi4r-0-x-x-109">coordNum </span>component)
      </li>
      <li class="itemize"><a 
@@ -3921,7 +3921,7 @@ class="ot1-zi4r-0-x-x-109">coordNum </span>component)
 class="ot1-zi4r-0-x-x-120">expNumer: </span>see deﬁnition of <a 
 href="#colvar|coordNum|expNumer"><span 
 class="ot1-zi4r-0-x-x-109">expNumer</span></a> in sec. <a 
-href="#colvar|coordNum|cutoff">6.1.14<!--tex4ht:ref: colvar|coordNum|expNumer --></a> (<span 
+href="#colvar|coordNum|group1">6.1.14<!--tex4ht:ref: colvar|coordNum|expNumer --></a> (<span 
 class="ot1-zi4r-0-x-x-109">coordNum </span>component)
      </li>
      <li class="itemize"><a 
@@ -3929,7 +3929,7 @@ class="ot1-zi4r-0-x-x-109">coordNum </span>component)
 class="ot1-zi4r-0-x-x-120">expDenom: </span>see deﬁnition of <a 
 href="#colvar|coordNum|expDenom"><span 
 class="ot1-zi4r-0-x-x-109">expDenom</span></a> in sec. <a 
-href="#colvar|coordNum|cutoff">6.1.14<!--tex4ht:ref: colvar|coordNum|expDenom --></a> (<span 
+href="#colvar|coordNum|group1">6.1.14<!--tex4ht:ref: colvar|coordNum|expDenom --></a> (<span 
 class="ot1-zi4r-0-x-x-109">coordNum </span>component) </li></ul>
 <!--l. 1836--><p class="indent" >   This component returns a dimensionless number, which ranges from approximately 0 (all interatomic
 distances much larger than the cutoﬀ) to <span 
@@ -4001,7 +4001,7 @@ class="ot1-zi4r-0-x-x-109">acceptor</span>
 class="ot1-zi4r-0-x-x-120">cutoff: </span>see deﬁnition of <a 
 href="#colvar|coordNum|cutoff"><span 
 class="ot1-zi4r-0-x-x-109">cutoff</span></a> in sec. <a 
-href="#colvar|coordNum|cutoff">6.1.14<!--tex4ht:ref: colvar|coordNum|cutoff --></a> (<span 
+href="#colvar|coordNum|group1">6.1.14<!--tex4ht:ref: colvar|coordNum|cutoff --></a> (<span 
 class="ot1-zi4r-0-x-x-109">coordNum </span>component)<br 
 class="newline" /><span 
 class="ptmb7t-x-x-109">Note: </span>default value is 3.3 Å.
@@ -4011,7 +4011,7 @@ class="ptmb7t-x-x-109">Note: </span>default value is 3.3 Å.
 class="ot1-zi4r-0-x-x-120">expNumer: </span>see deﬁnition of <a 
 href="#colvar|coordNum|expNumer"><span 
 class="ot1-zi4r-0-x-x-109">expNumer</span></a> in sec. <a 
-href="#colvar|coordNum|cutoff">6.1.14<!--tex4ht:ref: colvar|coordNum|expNumer --></a> (<span 
+href="#colvar|coordNum|group1">6.1.14<!--tex4ht:ref: colvar|coordNum|expNumer --></a> (<span 
 class="ot1-zi4r-0-x-x-109">coordNum </span>component)<br 
 class="newline" /><span 
 class="ptmb7t-x-x-109">Note: </span>default value is 6.
@@ -4021,14 +4021,14 @@ class="ptmb7t-x-x-109">Note: </span>default value is 6.
 class="ot1-zi4r-0-x-x-120">expDenom: </span>see deﬁnition of <a 
 href="#colvar|coordNum|expDenom"><span 
 class="ot1-zi4r-0-x-x-109">expDenom</span></a> in sec. <a 
-href="#colvar|coordNum|cutoff">6.1.14<!--tex4ht:ref: colvar|coordNum|expDenom --></a> (<span 
+href="#colvar|coordNum|group1">6.1.14<!--tex4ht:ref: colvar|coordNum|expDenom --></a> (<span 
 class="ot1-zi4r-0-x-x-109">coordNum </span>component)<br 
 class="newline" /><span 
 class="ptmb7t-x-x-109">Note: </span>default value is 8. </li></ul>
 <!--l. 1878--><p class="noindent" >
 </p>
    <h5 class="subsubsectionHead"><span class="titlemark">6.1.17    </span> <a 
- id="colvar|rmsd|refPositions"></a><span 
+ id="colvar|rmsd|atoms"></a><span 
 class="ot1-zi4r-0-x-x-109">rmsd</span>: root mean square displacement (RMSD) from reference positions.</h5>
 <!--l. 1879--><p class="noindent" >The block <span 
 class="ot1-zi4r-0-x-x-109">rmsd</span><span 
@@ -4146,7 +4146,7 @@ class="ptmb7t-x-x-109">List of keywords </span>(see also <a
 href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional options): </p>
      <ul class="itemize1">
      <li class="itemize"><a 
- id="colvar|rmsd|refPositions"></a> <a 
+ id="colvar|rmsd|atoms"></a> <a 
  id="dx1-41002"></a><span 
 class="ot1-zi4r-0-x-x-120">atoms </span><span 
 class="zptmcm7y-x-x-109">⟨</span><span style="margin-left:0.3em" class="thinspace"></span>Atom group<span style="margin-left:0.3em" class="thinspace"></span><span 
@@ -4196,7 +4196,7 @@ class="ot1-zi4r-0-x-x-109"> </span><span
 class="cmsy-10x-x-109">{</span><span 
 class="ot1-zi4r-0-x-x-109">...</span><span 
 class="cmsy-10x-x-109">} </span>block (see <a 
-href="#key:colvars:atom_group:refPositions">5.2<!--tex4ht:ref: key:colvars:atom_group:refPositions --></a>). The latter (and related ﬁtting
+href="#sec:colvar_atom_groups_ref_frame">5.2<!--tex4ht:ref: key:colvars:atom_group:refPositions --></a>). The latter (and related ﬁtting
      options for the atom group) are normally not needed, and should be omitted altogether except for
      advanced usage cases.
      </li>
@@ -4217,7 +4217,7 @@ class="ot1-zi4r-0-x-x-109">refPositions</span>) sets the ﬁle name for the refe
      coordinates to be compared with. The format is the same as that provided by <span 
 class="ot1-zi4r-0-x-x-109">refPositionsFile</span>
      within an atom group&#x2019;s deﬁnition (see <a 
-href="#key:colvars:atom_group:refPositions">5.2<!--tex4ht:ref: key:colvars:atom_group:refPositionsFile --></a>).
+href="#sec:colvar_atom_groups_ref_frame">5.2<!--tex4ht:ref: key:colvars:atom_group:refPositionsFile --></a>).
      </li>
      <li class="itemize"><a 
  id="colvar|rmsd|refPositionsCol"></a> <a 
@@ -4367,9 +4367,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-43002"></a> <span 
 class="ot1-zi4r-0-x-x-120">atoms: </span>see deﬁnition of <a 
-href="#colvar|rmsd|refPositions"><span 
+href="#colvar|rmsd|atoms"><span 
 class="ot1-zi4r-0-x-x-109">atoms</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|atoms --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -4377,7 +4377,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositions: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositions"><span 
 class="ot1-zi4r-0-x-x-109">refPositions</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -4385,7 +4385,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsFile: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsFile"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsFile</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -4393,7 +4393,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsCol: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsCol"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsCol</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -4401,7 +4401,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsColValue: </span>see   deﬁnition   of   <a 
 href="#colvar|rmsd|refPositionsColValue"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsColValue</span></a> in   sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
 class="ot1-zi4r-0-x-x-109">rmsd</span>
      component)
      </li>
@@ -4586,9 +4586,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-44002"></a> <span 
 class="ot1-zi4r-0-x-x-120">atoms: </span>see deﬁnition of <a 
-href="#colvar|rmsd|refPositions"><span 
+href="#colvar|rmsd|atoms"><span 
 class="ot1-zi4r-0-x-x-109">atoms</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|atoms --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component) </li></ul>
                                                                                          
                                                                                          
@@ -4656,9 +4656,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-45002"></a> <span 
 class="ot1-zi4r-0-x-x-120">atoms: </span>see deﬁnition of <a 
-href="#colvar|rmsd|refPositions"><span 
+href="#colvar|rmsd|atoms"><span 
 class="ot1-zi4r-0-x-x-109">atoms</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|atoms --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component) </li></ul>
 <!--l. 2151--><p class="noindent" >
 </p>
@@ -4725,9 +4725,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-46002"></a> <span 
 class="ot1-zi4r-0-x-x-120">atoms: </span>see deﬁnition of <a 
-href="#colvar|rmsd|refPositions"><span 
+href="#colvar|rmsd|atoms"><span 
 class="ot1-zi4r-0-x-x-109">atoms</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|atoms --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -4850,9 +4850,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-47001"></a> <span 
 class="ot1-zi4r-0-x-x-120">atoms: </span>see deﬁnition of <a 
-href="#colvar|rmsd|refPositions"><span 
+href="#colvar|rmsd|atoms"><span 
 class="ot1-zi4r-0-x-x-109">atoms</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|atoms --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -4860,7 +4860,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositions: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositions"><span 
 class="ot1-zi4r-0-x-x-109">refPositions</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -4868,7 +4868,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsFile: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsFile"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsFile</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -4876,7 +4876,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsCol: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsCol"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsCol</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
                                                                                          
                                                                                          
@@ -4886,7 +4886,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsColValue: </span>see   deﬁnition   of   <a 
 href="#colvar|rmsd|refPositionsColValue"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsColValue</span></a> in   sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
 class="ot1-zi4r-0-x-x-109">rmsd</span>
      component)
      </li>
@@ -4983,9 +4983,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-48001"></a> <span 
 class="ot1-zi4r-0-x-x-120">atoms: </span>see deﬁnition of <a 
-href="#colvar|rmsd|refPositions"><span 
+href="#colvar|rmsd|atoms"><span 
 class="ot1-zi4r-0-x-x-109">atoms</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|atoms --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -4993,7 +4993,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositions: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositions"><span 
 class="ot1-zi4r-0-x-x-109">refPositions</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5001,7 +5001,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsFile: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsFile"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsFile</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5009,7 +5009,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsCol: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsCol"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsCol</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5017,7 +5017,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsColValue: </span>see   deﬁnition   of   <a 
 href="#colvar|rmsd|refPositionsColValue"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsColValue</span></a> in   sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
 class="ot1-zi4r-0-x-x-109">rmsd</span>
      component)
      </li></ul>
@@ -5051,9 +5051,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-49001"></a> <span 
 class="ot1-zi4r-0-x-x-120">atoms: </span>see deﬁnition of <a 
-href="#colvar|rmsd|refPositions"><span 
+href="#colvar|rmsd|atoms"><span 
 class="ot1-zi4r-0-x-x-109">atoms</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|atoms --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5061,7 +5061,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositions: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositions"><span 
 class="ot1-zi4r-0-x-x-109">refPositions</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5069,7 +5069,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsFile: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsFile"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsFile</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5077,7 +5077,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsCol: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsCol"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsCol</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5085,7 +5085,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsColValue: </span>see   deﬁnition   of   <a 
 href="#colvar|rmsd|refPositionsColValue"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsColValue</span></a> in   sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
 class="ot1-zi4r-0-x-x-109">rmsd</span>
      component)  </li></ul>
 <!--l. 2293--><p class="noindent" >
@@ -5110,9 +5110,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-50001"></a> <span 
 class="ot1-zi4r-0-x-x-120">atoms: </span>see deﬁnition of <a 
-href="#colvar|rmsd|refPositions"><span 
+href="#colvar|rmsd|atoms"><span 
 class="ot1-zi4r-0-x-x-109">atoms</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|atoms --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5120,7 +5120,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositions: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositions"><span 
 class="ot1-zi4r-0-x-x-109">refPositions</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5128,7 +5128,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsFile: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsFile"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsFile</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5136,7 +5136,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsCol: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsCol"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsCol</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5144,7 +5144,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsColValue: </span>see   deﬁnition   of   <a 
 href="#colvar|rmsd|refPositionsColValue"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsColValue</span></a> in   sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
 class="ot1-zi4r-0-x-x-109">rmsd</span>
      component)
                                                                                          
@@ -5223,9 +5223,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-51001"></a> <span 
 class="ot1-zi4r-0-x-x-120">atoms: </span>see deﬁnition of <a 
-href="#colvar|rmsd|refPositions"><span 
+href="#colvar|rmsd|atoms"><span 
 class="ot1-zi4r-0-x-x-109">atoms</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|atoms --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5233,7 +5233,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositions: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositions"><span 
 class="ot1-zi4r-0-x-x-109">refPositions</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositions --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5241,7 +5241,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsFile: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsFile"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsFile</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsFile --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5249,7 +5249,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsCol: </span>see deﬁnition of <a 
 href="#colvar|rmsd|refPositionsCol"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsCol</span></a> in sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsCol --></a> (<span 
 class="ot1-zi4r-0-x-x-109">rmsd </span>component)
      </li>
      <li class="itemize"><a 
@@ -5257,7 +5257,7 @@ class="ot1-zi4r-0-x-x-109">rmsd </span>component)
 class="ot1-zi4r-0-x-x-120">refPositionsColValue: </span>see   deﬁnition   of   <a 
 href="#colvar|rmsd|refPositionsColValue"><span 
 class="ot1-zi4r-0-x-x-109">refPositionsColValue</span></a> in   sec. <a 
-href="#colvar|rmsd|refPositions">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
+href="#colvar|rmsd|atoms">6.1.17<!--tex4ht:ref: colvar|rmsd|refPositionsColValue --></a>   (<span 
 class="ot1-zi4r-0-x-x-109">rmsd</span>
      component)
      </li>
@@ -5273,7 +5273,7 @@ class="ot1-zi4r-0-x-x-109">spinAngle </span>component) </li></ul>
 <!--l. 2589--><p class="noindent" >
 </p>
    <h5 class="subsubsectionHead"><span class="titlemark">6.1.28    </span> <a 
- id="colvar|alpha|psfSegID"></a><span 
+ id="colvar|alpha|residueRange"></a><span 
 class="ot1-zi4r-0-x-x-109">alpha</span>: <span 
 class="zptmcm7m-x-x-109">α</span>-helix content of a protein segment.</h5>
 <!--l. 2589--><p class="noindent" >The block <span 
@@ -5341,7 +5341,7 @@ class="ptmb7t-x-x-109">List of keywords </span>(see also <a
 href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional options): </p>
      <ul class="itemize1">
      <li class="itemize"><a 
- id="colvar|alpha|psfSegID"></a> <a 
+ id="colvar|alpha|residueRange"></a> <a 
  id="dx1-52003"></a><span 
 class="ot1-zi4r-0-x-x-120">residueRange </span><span 
 class="zptmcm7y-x-x-109">⟨</span><span style="margin-left:0.3em" class="thinspace"></span>Potential <span 
@@ -5617,9 +5617,9 @@ href="#sec:cvc_superp">6.4<!--tex4ht:ref: sec:cvc_superp --></a> for additional 
      <li class="itemize"><a 
  id="dx1-53002"></a> <span 
 class="ot1-zi4r-0-x-x-120">residueRange: </span>see deﬁnition of <a 
-href="#colvar|alpha|psfSegID"><span 
+href="#colvar|alpha|residueRange"><span 
 class="ot1-zi4r-0-x-x-109">residueRange</span></a> in sec. <a 
-href="#colvar|alpha|psfSegID">6.1.28<!--tex4ht:ref: colvar|alpha|hBondCoeff --></a> (<span 
+href="#colvar|alpha|residueRange">6.1.28<!--tex4ht:ref: colvar|alpha|residueRange --></a> (<span 
 class="ot1-zi4r-0-x-x-109">alpha </span>component)
      </li>
      <li class="itemize"><a 
@@ -5627,7 +5627,7 @@ class="ot1-zi4r-0-x-x-109">alpha </span>component)
 class="ot1-zi4r-0-x-x-120">psfSegID: </span>see deﬁnition of <a 
 href="#colvar|alpha|psfSegID"><span 
 class="ot1-zi4r-0-x-x-109">psfSegID</span></a> in sec. <a 
-href="#colvar|alpha|psfSegID">6.1.28<!--tex4ht:ref: colvar|alpha|psfSegID --></a> (<span 
+href="#colvar|alpha|residueRange">6.1.28<!--tex4ht:ref: colvar|alpha|psfSegID --></a> (<span 
 class="ot1-zi4r-0-x-x-109">alpha </span>component)
      </li>
      <li class="itemize"><a 
@@ -5635,7 +5635,7 @@ class="ot1-zi4r-0-x-x-109">alpha </span>component)
 class="ot1-zi4r-0-x-x-120">hBondCoeff: </span>see deﬁnition of <a 
 href="#colvar|alpha|hBondCoeff"><span 
 class="ot1-zi4r-0-x-x-109">hBondCoeff</span></a> in sec. <a 
-href="#colvar|alpha|psfSegID">6.1.28<!--tex4ht:ref: colvar|alpha|hBondCoeff --></a> (<span 
+href="#colvar|alpha|residueRange">6.1.28<!--tex4ht:ref: colvar|alpha|hBondCoeff --></a> (<span 
 class="ot1-zi4r-0-x-x-109">alpha </span>component)
      </li>
      <li class="itemize"><a 
@@ -5643,7 +5643,7 @@ class="ot1-zi4r-0-x-x-109">alpha </span>component)
 class="ot1-zi4r-0-x-x-120">angleRef: </span>see deﬁnition of <a 
 href="#colvar|alpha|angleRef"><span 
 class="ot1-zi4r-0-x-x-109">angleRef</span></a> in sec. <a 
-href="#colvar|alpha|psfSegID">6.1.28<!--tex4ht:ref: colvar|alpha|angleRef --></a> (<span 
+href="#colvar|alpha|residueRange">6.1.28<!--tex4ht:ref: colvar|alpha|angleRef --></a> (<span 
 class="ot1-zi4r-0-x-x-109">alpha </span>component)
      </li>
      <li class="itemize"><a 
@@ -5651,7 +5651,7 @@ class="ot1-zi4r-0-x-x-109">alpha </span>component)
 class="ot1-zi4r-0-x-x-120">angleTol: </span>see deﬁnition of <a 
 href="#colvar|alpha|angleTol"><span 
 class="ot1-zi4r-0-x-x-109">angleTol</span></a> in sec. <a 
-href="#colvar|alpha|psfSegID">6.1.28<!--tex4ht:ref: colvar|alpha|angleTol --></a> (<span 
+href="#colvar|alpha|residueRange">6.1.28<!--tex4ht:ref: colvar|alpha|angleTol --></a> (<span 
 class="ot1-zi4r-0-x-x-109">alpha </span>component)
                                                                                          
                                                                                          
@@ -5661,7 +5661,7 @@ class="ot1-zi4r-0-x-x-109">alpha </span>component)
 class="ot1-zi4r-0-x-x-120">hBondCutoff: </span>see deﬁnition of <a 
 href="#colvar|alpha|hBondCutoff"><span 
 class="ot1-zi4r-0-x-x-109">hBondCutoff</span></a> in sec. <a 
-href="#colvar|alpha|psfSegID">6.1.28<!--tex4ht:ref: colvar|alpha|hBondCutoff --></a> (<span 
+href="#colvar|alpha|residueRange">6.1.28<!--tex4ht:ref: colvar|alpha|hBondCutoff --></a> (<span 
 class="ot1-zi4r-0-x-x-109">alpha </span>component)
      </li>
      <li class="itemize"><a 
@@ -5669,7 +5669,7 @@ class="ot1-zi4r-0-x-x-109">alpha </span>component)
 class="ot1-zi4r-0-x-x-120">hBondExpNumer: </span>see deﬁnition of <a 
 href="#colvar|alpha|hBondExpNumer"><span 
 class="ot1-zi4r-0-x-x-109">hBondExpNumer</span></a> in sec. <a 
-href="#colvar|alpha|psfSegID">6.1.28<!--tex4ht:ref: colvar|alpha|hBondExpNumer --></a> (<span 
+href="#colvar|alpha|residueRange">6.1.28<!--tex4ht:ref: colvar|alpha|hBondExpNumer --></a> (<span 
 class="ot1-zi4r-0-x-x-109">alpha </span>component)
      </li>
      <li class="itemize"><a 
@@ -5677,7 +5677,7 @@ class="ot1-zi4r-0-x-x-109">alpha </span>component)
 class="ot1-zi4r-0-x-x-120">hBondExpDenom: </span>see deﬁnition of <a 
 href="#colvar|alpha|hBondExpDenom"><span 
 class="ot1-zi4r-0-x-x-109">hBondExpDenom</span></a> in sec. <a 
-href="#colvar|alpha|psfSegID">6.1.28<!--tex4ht:ref: colvar|alpha|hBondExpDenom --></a> (<span 
+href="#colvar|alpha|residueRange">6.1.28<!--tex4ht:ref: colvar|alpha|hBondExpDenom --></a> (<span 
 class="ot1-zi4r-0-x-x-109">alpha </span>component)
      </li>
      <li class="itemize"><a 

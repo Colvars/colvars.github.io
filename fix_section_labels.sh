@@ -10,4 +10,6 @@ do
   sed 's/href="#\(.*\)">.*<!--tex4ht:ref: \(.*\) --><\/a>.*/s\/\1"\/\2"\//' | \
   awk 'BEGIN {printf "\"{ "} {printf $0 " ; "} END {printf " }\""}' | \
   xargs sed -i $i -e
+
+  sed -i 's/<title><\/title>/<title>Collective Variables Module - Reference Manual<\/title>/' $i
 done
