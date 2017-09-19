@@ -27,6 +27,7 @@ var searchData=
   ['positions',['positions',['../classcolvarmodule_1_1atom__group.html#ad50937008b117e3c41a92df7304cffea',1,'colvarmodule::atom_group']]],
   ['positions_5fshifted',['positions_shifted',['../classcolvarmodule_1_1atom__group.html#a1ed66f164ba036949f9cd00666bfe9c2',1,'colvarmodule::atom_group']]],
   ['prev_5ftimestep',['prev_timestep',['../classcolvar.html#accf3eb0e6ade872676842f0d6c1cc1b4',1,'colvar']]],
+  ['previous_5fcolvar_5fforces',['previous_colvar_forces',['../classcolvarbias.html#a881b022eeedaeabdbd7c5dd1b5a1510c',1,'colvarbias']]],
   ['print_5fstate',['print_state',['../classcolvardeps.html#aff2f719a18e6880cc94eefc53693321a',1,'colvardeps']]],
   ['project_5fhills',['project_hills',['../classcolvarbias__meta.html#a45ff2641ceb0a9c13d8fa4f9c53fccd5',1,'colvarbias_meta']]],
   ['promote',['promote',['../classcolvarmodule_1_1quaternion.html#afa78beaed4b19c68640d96b5f7e28d81',1,'colvarmodule::quaternion']]],

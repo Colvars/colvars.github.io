@@ -1,6 +1,7 @@
 var searchData=
 [
   ['temperature',['temperature',['../classcolvarmodule.html#a6061dea4d61b7b0058012d0eac5c1dee',1,'colvarmodule::temperature()'],['../classcolvarproxy__system.html#ab8a081a472d7399a8cc04f74a789e5dd',1,'colvarproxy_system::temperature()'],['../classcolvarproxy__namd.html#ac9c99f38bfa3e0ebacf23ffd68a5c344',1,'colvarproxy_namd::temperature()'],['../classcolvarproxy__vmd.html#ad72033de6f7169271cd7dd862e0fdf3a',1,'colvarproxy_vmd::temperature()']]],
+  ['time_5fdependent_5fbiases',['time_dependent_biases',['../classcolvarmodule.html#a01c0559a27559ab36af34b80ee39df23',1,'colvarmodule']]],
   ['to_5flower_5fcppstr',['to_lower_cppstr',['../classcolvarparse.html#a81e37fa76a4d6741f04e43403f077952',1,'colvarparse']]],
   ['to_5fsimple_5fstring',['to_simple_string',['../classcolvarvalue.html#a43058a21364becf77d6342f158d052a1',1,'colvarvalue']]],
   ['to_5fstr',['to_str',['../classcolvarmodule.html#a4353744c64962acfe8de893d6ac94417',1,'colvarmodule::to_str(T const &amp;x, size_t const &amp;width=0, size_t const &amp;prec=0)'],['../classcolvarmodule.html#af7fc2a905f5a0bbc97e0fe53e19a13f0',1,'colvarmodule::to_str(std::vector&lt; T &gt; const &amp;x, size_t const &amp;width=0, size_t const &amp;prec=0)']]],

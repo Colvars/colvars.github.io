@@ -295,6 +295,8 @@ static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a9c910f3c66324ad1f3bbff8149c8d7da">num_dimensions</a> (<a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50">Type</a> t)</td></tr>
 <tr class="memdesc:a9c910f3c66324ad1f3bbff8149c8d7da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of dimensions for each supported type (used to allocate vector1d_value) <br/></td></tr>
 <tr class="separator:a9c910f3c66324ad1f3bbff8149c8d7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c742a2b93624561fec47e67ad1c7986"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcolvarvalue.html">colvarvalue</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#a6c742a2b93624561fec47e67ad1c7986">interpolate</a> (<a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x1, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x2, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const lambda=0.5)</td></tr>
+<tr class="separator:a6c742a2b93624561fec47e67ad1c7986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6dc18df5029a40ed092677ba1925246"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6dc18df5029a40ed092677ba1925246"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#ae6dc18df5029a40ed092677ba1925246">check_types</a> (<a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x1, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x2)</td></tr>
 <tr class="memdesc:ae6dc18df5029a40ed092677ba1925246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure that the two types are the same within a binary operator. <br/></td></tr>
@@ -460,6 +462,47 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
+<a class="anchor" id="a6c742a2b93624561fec47e67ad1c7986"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcolvarvalue.html">colvarvalue</a> const colvarvalue::interpolate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const&#160;</td>
+          <td class="paramname"><em>lambda</em> = <code>0.5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the midpoint between x1 and x2, optionally weighted by lambda (which must be between 0.0 and 1.0) </p>
+
+</div>
+</div>
 <a class="anchor" id="a492bcdcf8fc8024b0784d4392a5df9e3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -500,7 +543,7 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 21 2017 19:34:43 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 19 2017 17:07:48 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

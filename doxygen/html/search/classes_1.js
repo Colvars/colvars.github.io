@@ -23,6 +23,7 @@ var searchData=
   ['colvarbias_5frestraint_5fk_5fmoving',['colvarbias_restraint_k_moving',['../classcolvarbias__restraint__k__moving.html',1,'']]],
   ['colvarbias_5frestraint_5flinear',['colvarbias_restraint_linear',['../classcolvarbias__restraint__linear.html',1,'']]],
   ['colvarbias_5frestraint_5fmoving',['colvarbias_restraint_moving',['../classcolvarbias__restraint__moving.html',1,'']]],
+  ['colvarbias_5fti',['colvarbias_ti',['../classcolvarbias__ti.html',1,'']]],
   ['colvardeps',['colvardeps',['../classcolvardeps.html',1,'']]],
   ['colvarmodule',['colvarmodule',['../classcolvarmodule.html',1,'']]],
   ['colvarparse',['colvarparse',['../classcolvarparse.html',1,'']]],

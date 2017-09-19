@@ -2,7 +2,7 @@ var searchData=
 [
   ['acc_5fforce',['acc_force',['../classcolvar__grid__gradient.html#acac83eddf39894c3ef58c58e3ab45d9d',1,'colvar_grid_gradient']]],
   ['acc_5fgrad',['acc_grad',['../classcolvar__grid__gradient.html#a68c516fa188e22db0f0e9463fdf97637',1,'colvar_grid_gradient']]],
-  ['acc_5fvalue',['acc_value',['../classcolvar__grid__scalar.html#a0254ff3f51e3b2b97af2a1e982aa0223',1,'colvar_grid_scalar']]],
+  ['acc_5fvalue',['acc_value',['../classcolvar__grid__scalar.html#a0254ff3f51e3b2b97af2a1e982aa0223',1,'colvar_grid_scalar::acc_value()'],['../classcolvar__grid__gradient.html#a3413a62dbef5105bdb40f816e0e3029f',1,'colvar_grid_gradient::acc_value()']]],
   ['acc_5fwork',['acc_work',['../classcolvarbias__restraint__centers__moving.html#a3385dd8a19cccc4782ab1fd9f042671a',1,'colvarbias_restraint_centers_moving']]],
   ['acf',['acf',['../classcolvar.html#a5b82753cac4c6408e66d98876f1a21ac',1,'colvar']]],
   ['acf_5fcolvar_5fname',['acf_colvar_name',['../classcolvar.html#ad403c0b1869ae4335677273c87e0016a',1,'colvar']]],

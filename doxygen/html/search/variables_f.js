@@ -8,6 +8,7 @@ var searchData=
   ['pos',['pos',['../classcolvarmodule_1_1atom.html#ad69c11b6395fdda6f0c84783ade07a88',1,'colvarmodule::atom']]],
   ['pos1',['pos1',['../classcolvarmodule_1_1rotation.html#a0f69b414490e94fa96d23795da907aaf',1,'colvarmodule::rotation']]],
   ['prev_5ftimestep',['prev_timestep',['../classcolvar.html#accf3eb0e6ade872676842f0d6c1cc1b4',1,'colvar']]],
+  ['previous_5fcolvar_5fforces',['previous_colvar_forces',['../classcolvarbias.html#a881b022eeedaeabdbd7c5dd1b5a1510c',1,'colvarbias']]],
   ['proxy',['proxy',['../classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c',1,'colvarmodule']]],
   ['proxy_5ferror',['proxy_error',['../classcolvarscript.html#a61c5ae742fd47324198ac53873e7f877',1,'colvarscript']]]
 ];

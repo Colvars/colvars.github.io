@@ -2,7 +2,7 @@ var searchData=
 [
   ['acc_5fforce',['acc_force',['../classcolvar__grid__gradient.html#acac83eddf39894c3ef58c58e3ab45d9d',1,'colvar_grid_gradient']]],
   ['acc_5fgrad',['acc_grad',['../classcolvar__grid__gradient.html#a68c516fa188e22db0f0e9463fdf97637',1,'colvar_grid_gradient']]],
-  ['acc_5fvalue',['acc_value',['../classcolvar__grid__scalar.html#a0254ff3f51e3b2b97af2a1e982aa0223',1,'colvar_grid_scalar']]],
+  ['acc_5fvalue',['acc_value',['../classcolvar__grid__scalar.html#a0254ff3f51e3b2b97af2a1e982aa0223',1,'colvar_grid_scalar::acc_value()'],['../classcolvar__grid__gradient.html#a3413a62dbef5105bdb40f816e0e3029f',1,'colvar_grid_gradient::acc_value()']]],
   ['actual_5fvalue',['actual_value',['../classcolvar.html#ab92e63e0c862084a5c446fbf632e8090',1,'colvar']]],
   ['add_5fatom',['add_atom',['../classcolvarmodule_1_1atom__group.html#a50eaf44474aa1b0f1edfa8342451ed64',1,'colvarmodule::atom_group']]],
   ['add_5fatom_5fgroup_5fslot',['add_atom_group_slot',['../classcolvarproxy__atom__groups.html#a4de551c4cdac5d6228201a00c274ecc8',1,'colvarproxy_atom_groups']]],

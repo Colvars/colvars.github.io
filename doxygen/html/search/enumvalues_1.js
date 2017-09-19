@@ -33,9 +33,13 @@ var searchData=
   ['f_5fcvb_5fapply_5fforce',['f_cvb_apply_force',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa191a887ed32bb04f586deda10448ddb3',1,'colvardeps']]],
   ['f_5fcvb_5fawake',['f_cvb_awake',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa778b53fc725ed378e46ae9d5cf0b805a',1,'colvardeps']]],
   ['f_5fcvb_5fcalc_5fpmf',['f_cvb_calc_pmf',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa372e0dd997a2be9d2aa8ac51958db92b',1,'colvardeps']]],
+  ['f_5fcvb_5fcalc_5fti_5fsamples',['f_cvb_calc_ti_samples',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa719d12558cabca9abc0a2a07d04b4cd5',1,'colvardeps']]],
   ['f_5fcvb_5fget_5ftotal_5fforce',['f_cvb_get_total_force',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa8bd56fac60a24ac7a46b36564ab41cf8',1,'colvardeps']]],
   ['f_5fcvb_5fhistory_5fdependent',['f_cvb_history_dependent',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa6e94694ea9386f1714deafa543268709',1,'colvardeps']]],
   ['f_5fcvb_5fscalar_5fvariables',['f_cvb_scalar_variables',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daae4ea421cae3fab1c6adaecfc6fe7d9be',1,'colvardeps']]],
+  ['f_5fcvb_5ftime_5fdependent',['f_cvb_time_dependent',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa68f77d099c88ce72d991d147b0ad44c5',1,'colvardeps']]],
+  ['f_5fcvb_5fwrite_5fti_5fpmf',['f_cvb_write_ti_pmf',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daaa252e60229e97de897fdfbcf566ea6f8',1,'colvardeps']]],
+  ['f_5fcvb_5fwrite_5fti_5fsamples',['f_cvb_write_ti_samples',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daaed2e6329d57143fb6f8faffd65ce352f',1,'colvardeps']]],
   ['f_5fcvc_5fdebug_5fgradient',['f_cvc_debug_gradient',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a9502bf695d9ec5fabcc5a6f965719985',1,'colvardeps']]],
   ['f_5fcvc_5fimplicit_5fgradient',['f_cvc_implicit_gradient',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a8c13a8c03363bc9e5046e033d4231e55',1,'colvardeps']]]
 ];

@@ -225,6 +225,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a6f7425a44105a54b166a1550c2995b32">append_new_config</a> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:a6f7425a44105a54b166a1550c2995b32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new configuration during parsing (e.g. to implement back-compatibility); cannot be nested, i.e. conf should not contain anything that triggers another call. <br/></td></tr>
 <tr class="separator:a6f7425a44105a54b166a1550c2995b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa18ca4cf5c42ae287e74b30a885905"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4aa18ca4cf5c42ae287e74b30a885905"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a4aa18ca4cf5c42ae287e74b30a885905">num_biases_feature</a> (int feature_id) const </td></tr>
+<tr class="memdesc:a4aa18ca4cf5c42ae287e74b30a885905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return how many biases have this feature enabled. <br/></td></tr>
+<tr class="separator:a4aa18ca4cf5c42ae287e74b30a885905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad71159b0d79e1c926b3ec0266b5eb259"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad71159b0d79e1c926b3ec0266b5eb259"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ad71159b0d79e1c926b3ec0266b5eb259">num_biases_type</a> (std::string const &amp;type) const </td></tr>
+<tr class="memdesc:ad71159b0d79e1c926b3ec0266b5eb259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return how many biases are defined with this type. <br/></td></tr>
+<tr class="separator:ad71159b0d79e1c926b3ec0266b5eb259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c0559a27559ab36af34b80ee39df23"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01c0559a27559ab36af34b80ee39df23"></a>
+std::vector&lt; std::string &gt; const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a01c0559a27559ab36af34b80ee39df23">time_dependent_biases</a> () const </td></tr>
+<tr class="memdesc:a01c0559a27559ab36af34b80ee39df23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the names of time-dependent biases with forces enabled. <br/></td></tr>
+<tr class="separator:a01c0559a27559ab36af34b80ee39df23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a200768da390b0eba3b9190d00921dad5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a200768da390b0eba3b9190d00921dad5">setup</a> ()</td></tr>
 <tr class="separator:a200768da390b0eba3b9190d00921dad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49979648aa93f1379a3954995d49177"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af49979648aa93f1379a3954995d49177"></a>
@@ -356,14 +368,6 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="separator:ac415ee66c310e474dd0b41d41c7da954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd9f035364ca1b14cabdeb9ca016dd97"><td class="memItemLeft" align="right" valign="top">static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#acd9f035364ca1b14cabdeb9ca016dd97">getline</a> (std::istream &amp;is, std::string &amp;line)</td></tr>
 <tr class="separator:acd9f035364ca1b14cabdeb9ca016dd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85c6edc39cc755e3da03f133782fae34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85c6edc39cc755e3da03f133782fae34"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a85c6edc39cc755e3da03f133782fae34">num_biases_feature</a> (int feature_id)</td></tr>
-<tr class="memdesc:a85c6edc39cc755e3da03f133782fae34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return how many biases have this feature enabled. <br/></td></tr>
-<tr class="separator:a85c6edc39cc755e3da03f133782fae34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefbbc4b8fd30d64c954062276d605430"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefbbc4b8fd30d64c954062276d605430"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aefbbc4b8fd30d64c954062276d605430">num_biases_type</a> (std::string const &amp;type)</td></tr>
-<tr class="memdesc:aefbbc4b8fd30d64c954062276d605430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return how many biases are defined with this type. <br/></td></tr>
-<tr class="separator:aefbbc4b8fd30d64c954062276d605430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49efc5129a53b498b9238d3561a0440a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49efc5129a53b498b9238d3561a0440a"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">backup_file</a> (char const *filename)</td></tr>
 <tr class="memdesc:a49efc5129a53b498b9238d3561a0440a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backup a file before writing it. <br/></td></tr>
@@ -981,7 +985,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 21 2017 19:34:43 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 19 2017 17:07:47 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
