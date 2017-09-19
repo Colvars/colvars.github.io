@@ -1,5 +1,7 @@
 # This is slightly convoluted as it makes the PDF doc in a separate dir and copies them
-# and the HTML doc from within that dir, targeting this one
+# The HTML doc is made from within that dir, targeting this one
+
+# Safe order of operations: make clean; make pdf; make html
 
 COLVARSDIR=../colvars
 SRCDIR=$(COLVARSDIR)/src
