@@ -12,4 +12,6 @@ do
   xargs sed -i $i -e
 
   sed -i 's/<title><\/title>/<title>Collective Variables Module - Reference Manual<\/title>/' $i
+
+  python ../remove_selfrefs.py $i
 done
