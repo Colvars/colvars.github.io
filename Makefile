@@ -17,7 +17,7 @@ ifneq (master, $(branch))
 $(error Source repo has branch $(branch) checked out, rather than master - update manually if you must)
 endif
 
-.PHONY: all clean clean-all doxygen readme
+.PHONY: all clean veryclean doxygen readme
 all: pdf html doxygen readme
 pdf: $(PDF)
 html: colvars-refman-namd/colvars-refman-namd.html colvars-refman-vmd/colvars-refman-vmd.html colvars-refman-lammps/colvars-refman-lammps.html fix_html_labels
@@ -50,6 +50,6 @@ doxygen/html/index.html: $(SRCDIR)/*.h doxygen/Doxyfile
 clean:
 	make -C $(DOCSRCDIR) clean
 
-clean-all: 
+veryclean: clean
 	rm -f $(PDF) colvars-refman-namd/* colvars-refman-vmd/* colvars-refman-lammps/*
 
