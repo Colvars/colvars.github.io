@@ -6,7 +6,7 @@
 <meta content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" name="originator"/>
 <!-- xhtml,charset=utf-8,html -->
 <meta content="colvars-refman-vmd.tex" name="src"/>
-<meta content="2017-10-04 18:10:00" name="date"/>
+<meta content="2017-10-09 16:03:00" name="date"/>
 <link href="colvars-refman-vmd.css" rel="stylesheet" type="text/css"/>
 </head><body>
 <!--l. 41--><p class="noindent">
@@ -316,7 +316,7 @@ inside other keywords: </p>
      select atoms are described in <a href="#sec:colvar_atom_groups">5<!--tex4ht:ref: sec:colvar_atom_groups --></a>.
      </li>
 <li class="itemize"><a id="Colvars-global|smp"></a> <a id="dx1-10004"></a><span class="ot1-zi4r-0-x-x-120">smp </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Whether SMP parallelism should be used<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>global <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">on</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If this ﬂag is enabled (default), SMP parallelism over threads will be used to compute
-     variables and biases, provided that this is supported by VMD.
+     variables and biases, provided that this is supported by the VMD build in use.
      </li>
 <li class="itemize"><a id="dx1-10005"></a> <span class="ot1-zi4r-0-x-x-120">analysis </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Turn on run-time statistical analysis<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>global <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If this ﬂag is enabled, each colvar is instructed to perform whatever run-time statistical
      analysis it is conﬁgured to, such as correlation functions, or running averages and standard deviations.
@@ -1694,14 +1694,14 @@ all components: </p>
 <!--l. 2774--><p class="indent"> <span class="ptmb7t-x-x-109">Example: </span>To deﬁne the <span class="ptmri7t-x-x-109">average </span>of a colvar across diﬀerent parts of the system, simply deﬁne within the same
 colvar block a series of components of the same type (applied to diﬀerent atom groups), and assign to each
 component a <span class="ot1-zi4r-0-x-x-109">componentCoeff </span>of <span class="zptmcm7t-x-x-109">1</span><span class="zptmcm7m-x-x-109">∕N</span>.
-</p><!--l. 2909--><p class="noindent">
+</p><!--l. 2911--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">6.5    </span> <a id="sec:colvar_scripted"></a>Colvars as scripted functions of components</h4>
-<!--l. 2909--><p class="noindent"> When scripting is supported (default in VMD), a colvar may be deﬁned as a scripted function of its components,
+<!--l. 2911--><p class="noindent"> When scripting is supported (default in VMD), a colvar may be deﬁned as a scripted function of its components,
 rather than a linear or polynomial combination. When implementing generic functions of Cartesian
 coordinates rather than functions of existing components, the <span class="ot1-zi4r-0-x-x-109">cartesian </span>component may be particularly
 useful.
-</p><!--l. 2909--><p class="indent">   An example of elaborate scripted colvar is given in example 10, in the form of path-based collective
+</p><!--l. 2911--><p class="indent">   An example of elaborate scripted colvar is given in example 10, in the form of path-based collective
 variables as deﬁned by Branduardi et al<span class="cite">[<a href="#XBranduardi2007">7</a>]</span>. The required Tcl procedures are provided in the <span class="ot1-zi4r-0-x-x-109">colvartools</span>
 directory.
 </p>
@@ -1727,11 +1727,11 @@ directory.
      </li>
 <li class="itemize"><a id="dx1-60003"></a> <span class="ot1-zi4r-0-x-x-120">scriptedFunctionVectorSize </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Dimension of the vector value of a scripted colvar<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">colvar</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive integer <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This parameter is only valid when <span class="ot1-zi4r-0-x-x-109">scriptedFunctionType </span>is set to <span class="ot1-zi4r-0-x-x-109">vector</span>. It deﬁnes
      the vector length of the colvar value returned by the function.</li></ul>
-<!--l. 2912--><p class="noindent">
+<!--l. 2914--><p class="noindent">
 </p>
 <h3 class="sectionHead"><span class="titlemark">7    </span> <a id="sec:colvarbias"></a>Biasing and analysis methods</h3>
-<!--l. 2912--><p class="noindent">
-</p><!--l. 2914--><p class="indent">   All of the biasing and analysis methods implemented (<span class="ot1-zi4r-0-x-x-109">abf</span>, <span class="ot1-zi4r-0-x-x-109">harmonic</span>, <span class="ot1-zi4r-0-x-x-109">histogram </span>and <span class="ot1-zi4r-0-x-x-109">metadynamics</span>)
+<!--l. 2914--><p class="noindent">
+</p><!--l. 2916--><p class="indent">   All of the biasing and analysis methods implemented (<span class="ot1-zi4r-0-x-x-109">abf</span>, <span class="ot1-zi4r-0-x-x-109">harmonic</span>, <span class="ot1-zi4r-0-x-x-109">histogram </span>and <span class="ot1-zi4r-0-x-x-109">metadynamics</span>)
 recognize the following options: </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-61001"></a> <span class="ot1-zi4r-0-x-x-120">name </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Identiﬁer for the bias<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>colvar bias <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>string <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="zptmcm7m-x-x-109">&lt;</span><span class="ot1-zi4r-0-x-x-109">type of bias</span><span class="zptmcm7m-x-x-109">&gt;&lt;</span><span class="ot1-zi4r-0-x-x-109">bias index</span><span class="zptmcm7m-x-x-109">&gt; </span><br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>This string is used to identify the bias or analysis method in output messages and to
@@ -1742,7 +1742,7 @@ recognize the following options: </p>
 <li class="itemize"><a id="dx1-61003"></a> <span class="ot1-zi4r-0-x-x-120">outputEnergy </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Write the current bias energy to the trajectory ﬁle<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>colvar bias <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If this option is chosen and <span class="ot1-zi4r-0-x-x-109">colvarsTrajFrequency </span>is not zero, the current value of
      the biasing energy will be written to the trajectory ﬁle during the simulation.
      </li></ul>
-<!--l. 2950--><p class="indent">   In addition, restraint biases (<a href="#sec:colvarbias_harmonic">7.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a>, <a href="#sec:colvarbias_harmonic_walls">7.5<!--tex4ht:ref: sec:colvarbias_harmonic_walls --></a>, <a href="#sec:colvarbias_linear">7.6<!--tex4ht:ref: sec:colvarbias_linear --></a>, ...) and metadynamics biases (<a href="#sec:colvarbias_meta">7.3<!--tex4ht:ref: sec:colvarbias_meta --></a>) oﬀer the following optional
+<!--l. 2952--><p class="indent">   In addition, restraint biases (<a href="#sec:colvarbias_harmonic">7.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a>, <a href="#sec:colvarbias_harmonic_walls">7.5<!--tex4ht:ref: sec:colvarbias_harmonic_walls --></a>, <a href="#sec:colvarbias_linear">7.6<!--tex4ht:ref: sec:colvarbias_linear --></a>, ...) and metadynamics biases (<a href="#sec:colvarbias_meta">7.3<!--tex4ht:ref: sec:colvarbias_meta --></a>) oﬀer the following optional
 keywords, which allow the use of thermodynamic integration (TI) to compute potentials of mean force (PMFs). In
 adaptive biasing force (ABF) biases (<a href="#sec:colvarbias_abf">7.1<!--tex4ht:ref: sec:colvarbias_abf --></a>) the same keywords are not recognized because their functionality is
 always included.
@@ -1765,18 +1765,18 @@ always included.
      to more than one variable, making not possible the direct integration of the PMF at runtime. If any
      bias applies time-dependent forces besides the one using this option, an error is raised.
      </li></ul>
-<!--l. 2983--><p class="noindent">
+<!--l. 2985--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">7.1    </span> <a id="sec:colvarbias_abf"></a>Adaptive Biasing Force</h4>
-<!--l. 2983--><p class="noindent">
-</p><!--l. 2985--><p class="indent">   For a full description of the Adaptive Biasing Force method, see reference <span class="cite">[<a href="#XDarve2008">8</a>]</span>. For details about this
+<!--l. 2985--><p class="noindent">
+</p><!--l. 2987--><p class="indent">   For a full description of the Adaptive Biasing Force method, see reference <span class="cite">[<a href="#XDarve2008">8</a>]</span>. For details about this
 implementation, see references <span class="cite">[<a href="#XHenin2004">9</a>]</span> and <span class="cite">[<a href="#XHenin2010">10</a>]</span>. <span class="ptmb7t-x-x-109">When publishing research that makes use of this functionality,</span>
 <span class="ptmb7t-x-x-109">please cite references</span><span class="ptmb7t-x-x-109"> </span><span class="cite"><span class="ptmb7t-x-x-109">[</span><a href="#XDarve2008"><span class="ptmb7t-x-x-109">8</span></a><span class="ptmb7t-x-x-109">]</span></span> <span class="ptmb7t-x-x-109">and </span><span class="cite"><span class="ptmb7t-x-x-109">[</span><a href="#XHenin2010"><span class="ptmb7t-x-x-109">10</span></a><span class="ptmb7t-x-x-109">]</span></span><span class="ptmb7t-x-x-109">.</span>
-</p><!--l. 2991--><p class="indent">   An alternate usage of this feature is the application of custom tabulated biasing potentials to one or more colvars.
+</p><!--l. 2993--><p class="indent">   An alternate usage of this feature is the application of custom tabulated biasing potentials to one or more colvars.
 See <span class="ot1-zi4r-0-x-x-109">inputPrefix </span>and <span class="ot1-zi4r-0-x-x-109">updateBias </span>below.
-</p><!--l. 2995--><p class="indent">   Combining ABF with the extended Lagrangian feature (<a href="#sec:colvar_extended">4.3<!--tex4ht:ref: sec:colvar_extended --></a>) of the variables produces the extended-system ABF
+</p><!--l. 2997--><p class="indent">   Combining ABF with the extended Lagrangian feature (<a href="#sec:colvar_extended">4.3<!--tex4ht:ref: sec:colvar_extended --></a>) of the variables produces the extended-system ABF
 variant of the method (<a href="#sec:eABF">7.2<!--tex4ht:ref: sec:eABF --></a>).
-</p><!--l. 2999--><p class="indent">   ABF is based on the thermodynamic integration (TI) scheme for computing free energy proﬁles. The free energy
+</p><!--l. 3001--><p class="indent">   ABF is based on the thermodynamic integration (TI) scheme for computing free energy proﬁles. The free energy
 as a function of a set of collective variables <span class="zptmcm7m-x-x-109">ξ</span> <span class="zptmcm7t-x-x-109">= (</span><span class="zptmcm7m-x-x-109">ξ</span><sub><span class="zptmcm7m-x-x-80">i</span></sub><span class="zptmcm7t-x-x-109">)</span><sub><span class="zptmcm7m-x-x-80">i</span><span class="zptmcm7y-x-x-80">∈</span><span class="zptmcm7t-x-x-80">[1</span><span class="zptmcm7m-x-x-80">,n</span><span class="zptmcm7t-x-x-80">]</span></sub> is deﬁned from the canonical distribution of <span class="zptmcm7m-x-x-109">ξ</span> ,
 <span class="zptmcm7y-x-x-109">𝒫</span><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">ξ</span><span class="zptmcm7t-x-x-109">)</span>:
 </p>
@@ -1785,8 +1785,8 @@ as a function of a set of collective variables <span class="zptmcm7m-x-x-109">ξ
 <img alt="A(ξ)= − 1-ln𝒫 (ξ)+ A0
         β
 " class="math-display" src="colvars-refman-vmd21x.png"/></center></td><td class="equation-label">(15)</td></tr></table>
-<!--l. 3007--><p class="nopar">
-</p><!--l. 3009--><p class="indent">   In the TI formalism, the free energy is obtained from its gradient, which is generally calculated in the form of
+<!--l. 3009--><p class="nopar">
+</p><!--l. 3011--><p class="indent">   In the TI formalism, the free energy is obtained from its gradient, which is generally calculated in the form of
 the average of a force <span class="zptmcm7m-x-x-109">F</span><sub><span class="zptmcm7m-x-x-80">ξ</span></sub> exerted on <span class="zptmcm7m-x-x-109">ξ</span> , taken over an iso-<span class="zptmcm7m-x-x-109">ξ</span> surface:
                                                                                          
                                                                                          
@@ -1796,8 +1796,8 @@ the average of a force <span class="zptmcm7m-x-x-109">F</span><sub><span class="
 <img alt="         ⟨    ⟩
 ∇ ξA(ξ)=  − Fξ ξ
 " class="math-display" src="colvars-refman-vmd22x.png"/></center></td><td class="equation-label">(16)</td></tr></table>
-<!--l. 3016--><p class="nopar">
-</p><!--l. 3018--><p class="indent">   Several formulae that take the form of (<a href="#eq:gradient">16<!--tex4ht:ref: eq:gradient --></a>) have been proposed. This implementation relies partly on the classic
+<!--l. 3018--><p class="nopar">
+</p><!--l. 3020--><p class="indent">   Several formulae that take the form of (<a href="#eq:gradient">16<!--tex4ht:ref: eq:gradient --></a>) have been proposed. This implementation relies partly on the classic
 formulation <span class="cite">[<a href="#XCarter1989">11</a>]</span>, and partly on a more versatile scheme originating in a work by Ruiz-Montero et al. <span class="cite">[<a href="#XRuiz-Montero1997">12</a>]</span>,
 generalized by den Otter <span class="cite">[<a href="#XdenOtter2000">13</a>]</span> and extended to multiple variables by Ciccotti et al. <span class="cite">[<a href="#XCiccotti2005">14</a>]</span>. Consider a system subject
 to constraints of the form <span class="zptmcm7m-x-x-109">σ</span><sub><span class="zptmcm7m-x-x-80">k</span></sub><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">x</span><span class="zptmcm7t-x-x-109">) = 0</span>. Let (<span class="zptmcm7m-x-x-109">v</span><sub><span class="zptmcm7m-x-x-80">i</span></sub><span class="zptmcm7t-x-x-109">)</span><sub><span class="zptmcm7m-x-x-80">i</span><span class="zptmcm7y-x-x-80">∈</span><span class="zptmcm7t-x-x-80">[1</span><span class="zptmcm7m-x-x-80">,n</span><span class="zptmcm7t-x-x-80">]</span></sub> be arbitrarily chosen vector ﬁelds (<span class="msbm-10x-x-109">ℝ</span><sup><span class="zptmcm7t-x-x-80">3</span><span class="zptmcm7m-x-x-80">N</span></sup> <span class="zptmcm7y-x-x-109">→ </span><span class="msbm-10x-x-109">ℝ</span><sup><span class="zptmcm7t-x-x-80">3</span><span class="zptmcm7m-x-x-80">N</span></sup>) verifying, for all
@@ -1810,23 +1810,23 @@ to constraints of the form <span class="zptmcm7m-x-x-109">σ</span><sub><span cl
 vi⋅∇xσk  =   0                                   (1 8)
 " class="math-display" src="colvars-refman-vmd23x.png"/><a id="eq:ortho_gradient"></a><a id="eq:ortho_constraints"></a></center>
 </div>
-<!--l. 3036--><p class="indent">   then the following holds <span class="cite">[<a href="#XCiccotti2005">14</a>]</span>:
+<!--l. 3038--><p class="indent">   then the following holds <span class="cite">[<a href="#XCiccotti2005">14</a>]</span>:
 </p>
 <table class="equation"><tr><td><a id="eq:gradient_vector"></a>
 <center class="math-display">
 <img alt="∂A-= ⟨vi⋅∇xV − kBT∇x ⋅vi⟩
 ∂ξi                     ξ
 " class="math-display" src="colvars-refman-vmd24x.png"/></center></td><td class="equation-label">(19)</td></tr></table>
-<!--l. 3042--><p class="nopar">
-</p><!--l. 3044--><p class="indent">   where <span class="zptmcm7m-x-x-109">V </span>is the potential energy function. <span class="zptmcm7m-x-x-109">v</span><sub><span class="zptmcm7m-x-x-80">i</span></sub> can be interpreted as the direction along which the force acting on
+<!--l. 3044--><p class="nopar">
+</p><!--l. 3046--><p class="indent">   where <span class="zptmcm7m-x-x-109">V </span>is the potential energy function. <span class="zptmcm7m-x-x-109">v</span><sub><span class="zptmcm7m-x-x-80">i</span></sub> can be interpreted as the direction along which the force acting on
 variable <span class="zptmcm7m-x-x-109">ξ</span><sub><span class="zptmcm7m-x-x-80">i</span></sub> is measured, whereas the second term in the average corresponds to the geometric entropy contribution
 that appears as a Jacobian correction in the classic formalism <span class="cite">[<a href="#XCarter1989">11</a>]</span>. Condition (<a href="#eq:ortho_gradient">17<!--tex4ht:ref: eq:ortho_gradient --></a>) states that the direction along
 which the total force on <span class="zptmcm7m-x-x-109">ξ</span><sub><span class="zptmcm7m-x-x-80">i</span></sub> is measured is orthogonal to the gradient of <span class="zptmcm7m-x-x-109">ξ</span><sub><span class="zptmcm7m-x-x-80">j</span></sub>, which means that the force measured on
 <span class="zptmcm7m-x-x-109">ξ</span><sub><span class="zptmcm7m-x-x-80">i</span></sub> does not act on <span class="zptmcm7m-x-x-109">ξ</span><sub><span class="zptmcm7m-x-x-80">j</span></sub>.
-</p><!--l. 3054--><p class="indent">   Equation (<a href="#eq:ortho_constraints">18<!--tex4ht:ref: eq:ortho_constraints --></a>) implies that constraint forces are orthogonal to the directions along which the free energy
+</p><!--l. 3056--><p class="indent">   Equation (<a href="#eq:ortho_constraints">18<!--tex4ht:ref: eq:ortho_constraints --></a>) implies that constraint forces are orthogonal to the directions along which the free energy
 gradient is measured, so that the measurement is eﬀectively performed on unconstrained degrees of
 freedom.
-</p><!--l. 3061--><p class="indent">   In the framework of ABF, <span class="zptmcm7m-x-x-109">F</span><sub><span class="zptmcm7m-x-x-80">ξ</span></sub> is accumulated in bins of ﬁnite size <span class="zptmcm7m-x-x-109">δξ </span>, thereby providing an estimate of the free
+</p><!--l. 3063--><p class="indent">   In the framework of ABF, <span class="zptmcm7m-x-x-109">F</span><sub><span class="zptmcm7m-x-x-80">ξ</span></sub> is accumulated in bins of ﬁnite size <span class="zptmcm7m-x-x-109">δξ </span>, thereby providing an estimate of the free
 energy gradient according to equation (<a href="#eq:gradient">16<!--tex4ht:ref: eq:gradient --></a>). The biasing force applied along the collective variables to overcome
 free energy barriers is calculated as:
 </p>
@@ -1835,12 +1835,12 @@ free energy barriers is calculated as:
 <img alt=" ABF
 F    = α(N ξ)× ∇x^A(ξ)
 " class="math-display" src="colvars-refman-vmd25x.png"/></center></td><td class="equation-label">(20)</td></tr></table>
-<!--l. 3071--><p class="nopar">
-</p><!--l. 3073--><p class="indent">   where <span class="zptmcm7y-x-x-109">∇</span><sub><span class="thinspace" style="margin-left:0.3em"></span><span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7m-x-x-80">x</span></sub><span class="thinspace" style="margin-left:0.3em"></span><img alt="A^" class="widetilde" src="colvars-refman-vmd26x.png"/> denotes the current estimate of the free energy gradient at the current point <span class="zptmcm7m-x-x-109">ξ</span> in the collective
+<!--l. 3073--><p class="nopar">
+</p><!--l. 3075--><p class="indent">   where <span class="zptmcm7y-x-x-109">∇</span><sub><span class="thinspace" style="margin-left:0.3em"></span><span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7m-x-x-80">x</span></sub><span class="thinspace" style="margin-left:0.3em"></span><img alt="A^" class="widetilde" src="colvars-refman-vmd26x.png"/> denotes the current estimate of the free energy gradient at the current point <span class="zptmcm7m-x-x-109">ξ</span> in the collective
 variable subspace, and <span class="zptmcm7m-x-x-109">α</span><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">N</span><sub><span class="zptmcm7m-x-x-80">ξ</span></sub><span class="zptmcm7t-x-x-109">) </span>is a scaling factor that is ramped from 0 to 1 as the local number of samples <span class="zptmcm7m-x-x-109">N</span><sub><span class="zptmcm7m-x-x-80">ξ</span></sub>
 increases to prevent nonequilibrium eﬀects in the early phase of the simulation, when the gradient estimate has a
 large variance. See the <span class="ot1-zi4r-0-x-x-109">fullSamples </span>parameter below for details.
-</p><!--l. 3081--><p class="indent">   As sampling of the phase space proceeds, the estimate <span class="zptmcm7y-x-x-109">∇</span><sub><span class="thinspace" style="margin-left:0.3em"></span><span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7m-x-x-80">x</span></sub><span class="thinspace" style="margin-left:0.3em"></span><img alt="^
+</p><!--l. 3083--><p class="indent">   As sampling of the phase space proceeds, the estimate <span class="zptmcm7y-x-x-109">∇</span><sub><span class="thinspace" style="margin-left:0.3em"></span><span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7m-x-x-80">x</span></sub><span class="thinspace" style="margin-left:0.3em"></span><img alt="^
 A" class="widetilde" src="colvars-refman-vmd27x.png"/> is progressively reﬁned. The biasing force
 introduced in the equations of motion guarantees that in the bin centered around <span class="zptmcm7m-x-x-109">ξ</span> , the forces acting along the
 selected collective variables average to zero over time. Eventually, as the undelying free energy surface is canceled
@@ -1848,14 +1848,14 @@ by the adaptive bias, evolution of the system along <span class="zptmcm7m-x-x-10
 implementation of ABF can in principle be used in arbitrary dimension, a higher-dimension collective variable
 space is likely to result in sampling diﬃculties. Most commonly, the number of variables is one or
 two.
-</p><!--l. 3095--><p class="noindent">
+</p><!--l. 3097--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.1.1    </span> <a id="sec:colvarbias_abf_req"></a>ABF requirements on collective variables</h5>
-<!--l. 3095--><p class="noindent">
-</p><!--l. 3097--><p class="indent">   The following conditions must be met for an ABF simulation to be possible and to produce an accurate estimate
+<!--l. 3097--><p class="noindent">
+</p><!--l. 3099--><p class="indent">   The following conditions must be met for an ABF simulation to be possible and to produce an accurate estimate
 of the free energy proﬁle. Note that these requirements do not apply when using the extended-system ABF method
 (<a href="#sec:eABF">7.2<!--tex4ht:ref: sec:eABF --></a>).
-</p><!--l. 3102--><p class="indent">
+</p><!--l. 3104--><p class="indent">
 </p><ol class="enumerate1">
 <li class="enumerate" id="x1-63002x1"><span class="ptmri7t-x-x-109">Only linear combinations </span>of colvar components can be used in ABF calculations.
      </li>
@@ -1887,11 +1887,11 @@ of the free energy proﬁle. Note that these requirements do not apply when usin
      contributions of the two atoms to the left-hand side of equation <a href="#eq:ortho_constraints">18<!--tex4ht:ref: eq:ortho_constraints --></a> cancel out. For example, all atoms
      of a rigid TIP3P water molecule can safely be included in an atom group used in a <span class="ot1-zi4r-0-x-x-109">distance</span>
      component.</li></ol>
-<!--l. 3136--><p class="noindent">
+<!--l. 3138--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.1.2    </span> <a id="sec:colvarbias_abf_params"></a>Parameters for ABF</h5>
-<!--l. 3136--><p class="noindent">
-</p><!--l. 3138--><p class="indent">   ABF depends on parameters from collective variables to deﬁne the grid on which free energy gradients are
+<!--l. 3138--><p class="noindent">
+</p><!--l. 3140--><p class="indent">   ABF depends on parameters from collective variables to deﬁne the grid on which free energy gradients are
 computed. In the direction of each colvar, the grid ranges from <span class="ot1-zi4r-0-x-x-109">lowerBoundary </span>to <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, and the bin
 width (grid spacing) is set by the <span class="ot1-zi4r-0-x-x-109">width </span>parameter (see <a href="#sec:colvar_general">4.1<!--tex4ht:ref: sec:colvar_general --></a>). The following speciﬁc parameters can be set in the
 ABF conﬁguration block:
@@ -1948,40 +1948,40 @@ ABF conﬁguration block:
      one should prepare a gradient ﬁle containing the gradient of the potential to be applied (negative of
      the bias force), and a count ﬁle containing only values greater than <span class="ot1-zi4r-0-x-x-109">fullSamples</span>. These ﬁles must
      match the grid parameters of the colvars.  </li></ul>
-<!--l. 3282--><p class="noindent">
+<!--l. 3284--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.1.3    </span> <a id="sec:colvarbias_abf_output"></a>Output ﬁles</h5>
-<!--l. 3282--><p class="noindent">
-</p><!--l. 3284--><p class="indent">   The ABF bias produces the following ﬁles, all in multicolumn text format: </p>
+<!--l. 3284--><p class="noindent">
+</p><!--l. 3286--><p class="indent">   The ABF bias produces the following ﬁles, all in multicolumn text format: </p>
 <ul class="itemize1">
 <li class="itemize"><span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.grad</span>: current estimate of the free energy gradient (grid), in multicolumn;
      </li>
 <li class="itemize"><span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.count</span>: histogram of samples collected, on the same grid;
      </li>
 <li class="itemize"><span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.pmf</span>: only for one-dimensional calculations, integrated free energy proﬁle or PMF.</li></ul>
-<!--l. 3293--><p class="indent">   If several ABF biases are deﬁned concurrently, their name is inserted to produce unique ﬁlenames for output, as
+<!--l. 3295--><p class="indent">   If several ABF biases are deﬁned concurrently, their name is inserted to produce unique ﬁlenames for output, as
 in <span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.abf1.grad</span>. This should not be done routinely and could lead to meaningless results: only do it if
 you know what you are doing!
-</p><!--l. 3298--><p class="indent">   If the colvar space has been partitioned into sections (<span class="ptmri7t-x-x-109">windows</span>) in which independent ABF simulations have
+</p><!--l. 3300--><p class="indent">   If the colvar space has been partitioned into sections (<span class="ptmri7t-x-x-109">windows</span>) in which independent ABF simulations have
 been run, the resulting data can be merged using the <span class="ot1-zi4r-0-x-x-109">inputPrefix </span>option described above (a run of 0 steps is
 enough).
-</p><!--l. 3303--><p class="noindent">
+</p><!--l. 3305--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.1.4    </span> <a id="sec:colvarbias_abf_post"></a>Post-processing: reconstructing a multidimensional free energy surface</h5>
-<!--l. 3303--><p class="noindent">
-</p><!--l. 3305--><p class="indent">   If a one-dimensional calculation is performed, the estimated free energy gradient is automatically integrated and
+<!--l. 3305--><p class="noindent">
+</p><!--l. 3307--><p class="indent">   If a one-dimensional calculation is performed, the estimated free energy gradient is automatically integrated and
 a potential of mean force is written under the ﬁle name <span class="ot1-zi4r-0-x-x-109"><outputname>.pmf</outputname></span>, in a plain text format that can be read
 by most data plotting and analysis programs (e.g. gnuplot).
-</p><!--l. 3310--><p class="indent">   In dimension 2 or greater, integrating the discretized gradient becomes non-trivial. The standalone utility
+</p><!--l. 3312--><p class="indent">   In dimension 2 or greater, integrating the discretized gradient becomes non-trivial. The standalone utility
 <span class="ot1-zi4r-0-x-x-109">abf</span><span class="ot1-zi4r-0-x-x-109">_integrate </span>is provided to perform that task. <span class="ot1-zi4r-0-x-x-109">abf</span><span class="ot1-zi4r-0-x-x-109">_integrate </span>reads the gradient data and uses it to perform a
 Monte-Carlo (M-C) simulation in discretized collective variable space (speciﬁcally, on the same grid used by ABF
 to discretize the free energy gradient). By default, a history-dependent bias (similar in spirit to metadynamics) is
 used: at each M-C step, the bias at the current position is incremented by a preset amount (the <span class="ptmri7t-x-x-109">hill height</span>). Upon
 convergence, this bias counteracts optimally the underlying gradient; it is negated to obtain the estimate of the free
 energy surface.
-</p><!--l. 3321--><p class="indent"> <span class="ot1-zi4r-0-x-x-109">abf</span><span class="ot1-zi4r-0-x-x-109">_integrate </span>is invoked using the command-line:<br class="newline"/><span class="ot1-zi4r-0-">abf</span><span class="ot1-zi4r-0-">_integrate <gradient><span class="ot1-zi4r-0-">_file&gt; [-n <nsteps>] [-t <temp>] [-m (0|1)] [-h <hill><span class="ot1-zi4r-0-">_height&gt;] [-f</span>
+</p><!--l. 3323--><p class="indent"> <span class="ot1-zi4r-0-x-x-109">abf</span><span class="ot1-zi4r-0-x-x-109">_integrate </span>is invoked using the command-line:<br class="newline"/><span class="ot1-zi4r-0-">abf</span><span class="ot1-zi4r-0-">_integrate <gradient><span class="ot1-zi4r-0-">_file&gt; [-n <nsteps>] [-t <temp>] [-m (0|1)] [-h <hill><span class="ot1-zi4r-0-">_height&gt;] [-f</span>
 <span class="ot1-zi4r-0-"><factor>]</factor></span>
-</hill></temp></nsteps></span></gradient></span></p><!--l. 3326--><p class="indent">   The gradient ﬁle name is provided ﬁrst, followed by other parameters in any order. They are described below,
+</hill></temp></nsteps></span></gradient></span></p><!--l. 3328--><p class="indent">   The gradient ﬁle name is provided ﬁrst, followed by other parameters in any order. They are described below,
 with their default value in square brackets: </p>
 <ul class="itemize1">
 <li class="itemize"><span class="ot1-zi4r-0-x-x-109">-n</span>: number of M-C steps to be performed; by default, a minimal number of steps is chosen based on
@@ -1998,8 +1998,8 @@ with their default value in square brackets: </p>
      </li>
 <li class="itemize"><span class="ot1-zi4r-0-x-x-109">-f</span>: if non-zero, this factor is used to scale the increment stepwise in the second half of the M-C
      sampling to reﬁne the free energy estimate [0.5]</li></ul>
-<!--l. 3341--><p class="indent">   Using the default values of all parameters should give reasonable results in most cases.
-</p><!--l. 3344--><p class="indent"> <span class="ot1-zi4r-0-x-x-109">abf</span><span class="ot1-zi4r-0-x-x-109">_integrate </span>produces the following output ﬁles: </p>
+<!--l. 3343--><p class="indent">   Using the default values of all parameters should give reasonable results in most cases.
+</p><!--l. 3346--><p class="indent"> <span class="ot1-zi4r-0-x-x-109">abf</span><span class="ot1-zi4r-0-x-x-109">_integrate </span>produces the following output ﬁles: </p>
 <ul class="itemize1">
 <li class="itemize"><span class="ot1-zi4r-0-x-x-109"><gradient><span class="ot1-zi4r-0-x-x-109">_file&gt;.pmf</span>: computed free energy surface
      </gradient></span></li>
@@ -2012,28 +2012,28 @@ with their default value in square brackets: </p>
 <li class="itemize"><span class="ot1-zi4r-0-x-x-109"><gradient><span class="ot1-zi4r-0-x-x-109">_file&gt;.dev</span>:  deviation  between  the  user-provided  numerical  gradient  and  the  actual
      gradient  of  the  calculated  free  energy  surface.  The  RMS  norm  of  this  vector  ﬁeld  is  used  as  a
      convergence criteria and displayed periodically during the integration.</gradient></span></li></ul>
-<!--l. 3357--><p class="indent"> <span class="ptmb7t-x-x-109">Note: </span>Typically, the “deviation” vector ﬁeld does not vanish as the integration converges. This happens because
+<!--l. 3359--><p class="indent"> <span class="ptmb7t-x-x-109">Note: </span>Typically, the “deviation” vector ﬁeld does not vanish as the integration converges. This happens because
 the numerical estimate of the gradient does not exactly derive from a potential, due to numerical approximations
 used to obtain it (ﬁnite sampling and discretization on a grid).
-</p><!--l. 3365--><p class="noindent">
+</p><!--l. 3367--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">7.2    </span> <a id="sec:eABF"></a>Extended-system Adaptive Biasing Force (eABF)</h4>
-<!--l. 3365--><p class="noindent">
-</p><!--l. 3368--><p class="indent">   Extended-system ABF (eABF) is a variant of ABF (<a href="#sec:colvarbias_abf">7.1<!--tex4ht:ref: sec:colvarbias_abf --></a>) where the bias is not applied directly to the collective
+<!--l. 3367--><p class="noindent">
+</p><!--l. 3370--><p class="indent">   Extended-system ABF (eABF) is a variant of ABF (<a href="#sec:colvarbias_abf">7.1<!--tex4ht:ref: sec:colvarbias_abf --></a>) where the bias is not applied directly to the collective
 variable, but to an extended coordinate (“ﬁctitious variable”) <span class="zptmcm7m-x-x-109">λ </span>that evolves dynamically according to Newtonian or
 Langevin dynamics. Such an extended coordinate is enabled for a given colvar using the <span class="ot1-zi4r-0-x-x-109">extendedLagrangian </span>and
 associated keywords (<a href="#sec:colvar_extended">4.3<!--tex4ht:ref: sec:colvar_extended --></a>). The theory of eABF and the present implementation are documented in detail in
 reference <span class="cite">[<a href="#XLesage2017">15</a>]</span>.
-</p><!--l. 3377--><p class="indent">   Deﬁning an ABF bias on a colvar wherein the <span class="ot1-zi4r-0-x-x-109">extendedLagrangian </span>option is active will perform eABF; there
+</p><!--l. 3379--><p class="indent">   Deﬁning an ABF bias on a colvar wherein the <span class="ot1-zi4r-0-x-x-109">extendedLagrangian </span>option is active will perform eABF; there
 is no dedicated option.
-</p><!--l. 3380--><p class="indent">   The extended variable <span class="zptmcm7m-x-x-109">λ </span>is coupled to the colvar <span class="zptmcm7m-x-x-109">z </span><span class="zptmcm7t-x-x-109">= </span><span class="zptmcm7m-x-x-109">ξ</span><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">q</span><span class="zptmcm7t-x-x-109">) </span>by the harmonic potential <span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">k∕</span><span class="zptmcm7t-x-x-109">2)(</span><span class="zptmcm7m-x-x-109">z</span><span class="zptmcm7y-x-x-109">−</span><span class="zptmcm7m-x-x-109">λ</span><span class="zptmcm7t-x-x-109">)</span><sup><span class="zptmcm7t-x-x-80">2</span></sup>. Under eABF
+</p><!--l. 3382--><p class="indent">   The extended variable <span class="zptmcm7m-x-x-109">λ </span>is coupled to the colvar <span class="zptmcm7m-x-x-109">z </span><span class="zptmcm7t-x-x-109">= </span><span class="zptmcm7m-x-x-109">ξ</span><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">q</span><span class="zptmcm7t-x-x-109">) </span>by the harmonic potential <span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">k∕</span><span class="zptmcm7t-x-x-109">2)(</span><span class="zptmcm7m-x-x-109">z</span><span class="zptmcm7y-x-x-109">−</span><span class="zptmcm7m-x-x-109">λ</span><span class="zptmcm7t-x-x-109">)</span><sup><span class="zptmcm7t-x-x-80">2</span></sup>. Under eABF
 dynamics, the adaptive bias on <span class="zptmcm7m-x-x-109">λ </span>is the running estimate of the average spring force:
 </p>
 <table class="equation"><tr><td><a id="x1-67001r21"></a>
 <center class="math-display">
 <img alt="Fbias(λ∗)= ⟨k(λ − z)⟩λ∗
 " class="math-display" src="colvars-refman-vmd28x.png"/></center></td><td class="equation-label">(21)</td></tr></table>
-<!--l. 3386--><p class="nopar">
+<!--l. 3388--><p class="nopar">
 where the angle brackets indicate a canonical average conditioned by <span class="zptmcm7m-x-x-109">λ </span><span class="zptmcm7t-x-x-109">= </span><span class="zptmcm7m-x-x-109">λ</span><sup><span class="zptmcm7y-x-x-80">∗</span></sup>. At long simulation
 times, eABF produces a ﬂat histogram of the extended variable <span class="zptmcm7m-x-x-109">λ</span>, and a ﬂattened histogram of <span class="zptmcm7m-x-x-109">ξ </span>,
 whose exact shape depends on the strength of the coupling as deﬁned by <span class="ot1-zi4r-0-x-x-109">extendedFluctuation </span>in the
@@ -2044,27 +2044,27 @@ simulation. Note that a <span class="ot1-zi4r-0-x-x-109">histogram </span>bias (
 extended degree of freedom <span class="zptmcm7m-x-x-109">λ</span>, not the original colvar <span class="zptmcm7m-x-x-109">ξ </span>; however, the joint histogram may be explicitly
 requested by listing the name of the colvar twice in a row within the <span class="ot1-zi4r-0-x-x-109">colvars </span>parameter of the <span class="ot1-zi4r-0-x-x-109">histogram</span>
 block.
-</p><!--l. 3401--><p class="indent">   The eABF PMF is that of the coordinate <span class="zptmcm7m-x-x-109">λ</span>, it is not exactly the free energy proﬁle of <span class="zptmcm7m-x-x-109">ξ </span>. That quantity can be
+</p><!--l. 3403--><p class="indent">   The eABF PMF is that of the coordinate <span class="zptmcm7m-x-x-109">λ</span>, it is not exactly the free energy proﬁle of <span class="zptmcm7m-x-x-109">ξ </span>. That quantity can be
 calculated based on  the CZAR estimator.
-</p><!--l. 3406--><p class="noindent">
+</p><!--l. 3408--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.2.1    </span> <a id="sec:colvarbias_ti_ext_czar"></a>CZAR estimator of the free energy</h5>
-<!--l. 3406--><p class="noindent">
-</p><!--l. 3408--><p class="indent">   The <span class="ptmri7t-x-x-109">corrected z-averaged restraint </span>(CZAR) estimator is described in detail in reference <span class="cite">[<a href="#XLesage2017">15</a>]</span>. It is computed
+<!--l. 3408--><p class="noindent">
+</p><!--l. 3410--><p class="indent">   The <span class="ptmri7t-x-x-109">corrected z-averaged restraint </span>(CZAR) estimator is described in detail in reference <span class="cite">[<a href="#XLesage2017">15</a>]</span>. It is computed
 automatically in eABF simulations, regardless of the number of colvars involved. Note that ABF may also be
 applied on a combination of extended and non-extended colvars; in that case, CZAR still provides an unbiased
 estimate of the free energy gradient.
-</p><!--l. 3415--><p class="indent">   CZAR estimates the free energy gradient as:
+</p><!--l. 3417--><p class="indent">   CZAR estimates the free energy gradient as:
 </p>
 <table class="equation"><tr><td><a id="x1-68001r22"></a>
 <center class="math-display">
 <img alt="A′(z)= − 1-dlnρ~(z) + k(⟨λ⟩ − z).
         β    dz         z
 " class="math-display" src="colvars-refman-vmd29x.png"/></center></td><td class="equation-label">(22)</td></tr></table>
-<!--l. 3419--><p class="nopar">
+<!--l. 3421--><p class="nopar">
 where <span class="zptmcm7m-x-x-109">z </span><span class="zptmcm7t-x-x-109">= </span><span class="zptmcm7m-x-x-109">ξ</span><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">q</span><span class="zptmcm7t-x-x-109">) </span>is the colvar, <span class="zptmcm7m-x-x-109">λ </span>is the extended variable harmonically coupled to <span class="zptmcm7m-x-x-109">z </span>with a force constant <span class="zptmcm7m-x-x-109">k</span>, and <img alt="ρ~" class="tilde" src="colvars-refman-vmd30x.png"/><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">z</span><span class="zptmcm7t-x-x-109">)</span>
 is the observed distribution (histogram) of <span class="zptmcm7m-x-x-109">z</span>, aﬀected by the eABF bias.
-</p><!--l. 3424--><p class="indent">   Parameters for the CZAR estimator are: </p>
+</p><!--l. 3426--><p class="indent">   Parameters for the CZAR estimator are: </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-68002"></a> <span class="ot1-zi4r-0-x-x-120">CZARestimator </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Calculate CZAR estimator of the free energy?<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">abf</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">yes</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This option is only available when ABF is performed on extended-Lagrangian colvars.
      When enabled, it triggers calculation of the free energy following the CZAR estimator.
@@ -2075,18 +2075,18 @@ is the observed distribution (histogram) of <span class="zptmcm7m-x-x-109">z</sp
      ﬁle is only useful when joining adjacent windows from a stratiﬁed eABF simulation, either to continue
      the simulation in a broader window or to compute a CZAR estimate of the PMF over the full range of
      the coordinate(s). </li></ul>
-<!--l. 3446--><p class="indent">   Similar to ABF, the CZAR estimator produces two output ﬁles in multicolumn text format: </p>
+<!--l. 3448--><p class="indent">   Similar to ABF, the CZAR estimator produces two output ﬁles in multicolumn text format: </p>
 <ul class="itemize1">
 <li class="itemize"><span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.czar.grad</span>: current estimate of the free energy gradient (grid), in multicolumn;
      </li>
 <li class="itemize"><span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.czar.pmf</span>: only for one-dimensional calculations, integrated free energy proﬁle or PMF.</li></ul>
-<!--l. 3453--><p class="noindent">The sampling histogram associated with the CZAR estimator is the <span class="zptmcm7m-x-x-109">z</span>-histogram, which is written in the ﬁle
+<!--l. 3455--><p class="noindent">The sampling histogram associated with the CZAR estimator is the <span class="zptmcm7m-x-x-109">z</span>-histogram, which is written in the ﬁle
 <span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.zcount</span>.
-</p><!--l. 3526--><p class="noindent">
+</p><!--l. 3528--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">7.3    </span> <a id="sec:colvarbias_meta"></a>Metadynamics</h4>
-<!--l. 3526--><p class="noindent">
-</p><!--l. 3528--><p class="indent">   The metadynamics method uses a history-dependent potential <span class="cite">[<a href="#XLaio2002">16</a>]</span> that generalizes to any type of colvars the
+<!--l. 3528--><p class="noindent">
+</p><!--l. 3530--><p class="indent">   The metadynamics method uses a history-dependent potential <span class="cite">[<a href="#XLaio2002">16</a>]</span> that generalizes to any type of colvars the
 conformational ﬂooding <span class="cite">[<a href="#XGrubmuller1995">17</a>]</span> and local elevation <span class="cite">[<a href="#XHuber1994">18</a>]</span> methods, originally formulated to use as colvars the principal
 components of a covariance matrix or a set of dihedral angles, respectively. The metadynamics potential on the
 colvars <span class="zptmcm7m-x-x-109">ξ</span> <span class="zptmcm7t-x-x-109">= (</span><span class="zptmcm7m-x-x-109">ξ</span><sub><span class="zptmcm7t-x-x-80">1</span></sub><span class="zptmcm7m-x-x-109">,ξ</span><sub><span class="zptmcm7t-x-x-80">2</span></sub><span class="zptmcm7m-x-x-109">,</span><span class="zptmcm7m-x-x-109">…</span><span class="zptmcm7m-x-x-109">,ξ</span><sub><span class="zptmcm7m-x-x-80">N</span><sub><span class="zptmcm7t-x-x-60">cv</span></sub></sub><span class="zptmcm7t-x-x-109">) </span>is deﬁned as:
@@ -2098,12 +2098,12 @@ V   (ξ(t))=    t&lt;t  W  cvexp  − (ξi(t)−-ξi(t′))2 ,
  meta       t′=δ∑t,2δt,... ∏i=1           2σξ2
                                        i
 " class="math-display" src="colvars-refman-vmd31x.png"/></center></td><td class="equation-label">(23)</td></tr></table>
-<!--l. 3538--><p class="nopar">
+<!--l. 3540--><p class="nopar">
 where <span class="zptmcm7m-x-x-109">V</span><sub><span class="zptmcm7t-x-x-80">meta</span></sub> is the history-dependent potential acting on the <span class="ptmri7t-x-x-109">current </span>values of the colvars <span class="zptmcm7m-x-x-109">ξ</span> , and depends only
 parametrically on the <span class="ptmri7t-x-x-109">previous </span>values of the colvars. <span class="zptmcm7m-x-x-109">V</span><sub><span class="zptmcm7t-x-x-80">meta</span></sub> is constructed as a sum of <span class="zptmcm7m-x-x-109">N</span><sub><span class="zptmcm7t-x-x-80">cv</span></sub>-dimensional repulsive
 Gaussian “hills”, whose height is a chosen energy constant <span class="zptmcm7m-x-x-109">W </span>, and whose centers are the previously explored
 conﬁgurations <img align="middle" alt="(ξ(δt),ξ (2δt),...)" class="left" src="colvars-refman-vmd32x.png"/>.
-</p><!--l. 3542--><p class="indent">   During the simulation, the system evolves towards the nearest minimum of the “eﬀective” potential of mean
+</p><!--l. 3544--><p class="indent">   During the simulation, the system evolves towards the nearest minimum of the “eﬀective” potential of mean
 force <span class="zptmcm7m-x-x-109">Ã</span><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">ξ</span><span class="zptmcm7t-x-x-109">)</span>, which is the sum of the “real” underlying potential of mean force <span class="zptmcm7m-x-x-109">A</span><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">ξ</span><span class="zptmcm7t-x-x-109">) </span>and the the metadynamics
 potential, <span class="zptmcm7m-x-x-109">V</span><sub><span class="zptmcm7t-x-x-80">meta</span></sub><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">ξ</span><span class="zptmcm7t-x-x-109">)</span>. Therefore, at any given time the probability of observing the conﬁguration <span class="zptmcm7m-x-x-109">ξ</span><sup><span class="zptmcm7y-x-x-80">∗</span></sup> is
 proportional to <span class="zptmcm7t-x-x-109">exp</span><img align="middle" alt="(  ~  ∗     )
@@ -2117,13 +2117,13 @@ constant:
 <center class="math-display">
 <img alt="A(ξ) ≃ − Vmeta(ξ )+ K
 " class="math-display" src="colvars-refman-vmd34x.png"/></center></td><td class="equation-label">(24)</td></tr></table>
-<!--l. 3551--><p class="nopar">
-</p><!--l. 3553--><p class="indent">   Assuming that the set of collective variables includes all relevant degrees of freedom, the predicted error of the
+<!--l. 3553--><p class="nopar">
+</p><!--l. 3555--><p class="indent">   Assuming that the set of collective variables includes all relevant degrees of freedom, the predicted error of the
 estimate is a simple function of the correlation times of the colvars <span class="zptmcm7m-x-x-109">τ</span><sub><span class="zptmcm7m-x-x-80">ξ</span><sub><span class="zptmcm7m-x-x-60">i</span></sub></sub>, and of the user-deﬁned parameters <span class="zptmcm7m-x-x-109">W </span>, <span class="zptmcm7m-x-x-109">σ</span><sub><span class="zptmcm7m-x-x-80">ξ</span><sub><span class="zptmcm7m-x-x-60">i</span></sub></sub>
 and <span class="zptmcm7m-x-x-109">δt </span><span class="cite">[<a href="#XBussi2006">19</a>]</span>. In typical applications, a good rule of thumb can be to choose the ratio <span class="zptmcm7m-x-x-109">W∕δt </span>much smaller than
 <span class="zptmcm7m-x-x-109">κ</span><sub><span class="zptmcm7t-x-x-80">B</span></sub><span class="zptmcm7m-x-x-109">T ∕τ</span><sub><span class="zptmcm7m-x-x-109">ξ</span></sub>, where <span class="zptmcm7m-x-x-109">τ</span><sub><span class="zptmcm7m-x-x-109">ξ</span></sub> is the longest among <span class="zptmcm7m-x-x-109">ξ</span> ’s correlation times: <span class="zptmcm7m-x-x-109">σ</span><sub><span class="zptmcm7m-x-x-80">ξ</span><sub><span class="zptmcm7m-x-x-60">i</span></sub></sub> then dictates the resolution of the calculated
 PMF.
-</p><!--l. 3560--><p class="indent">   To enable a metadynamics calculation, a <span class="ot1-zi4r-0-x-x-109">metadynamics </span>block must be deﬁned in the Colvars conﬁguration ﬁle.
+</p><!--l. 3562--><p class="indent">   To enable a metadynamics calculation, a <span class="ot1-zi4r-0-x-x-109">metadynamics </span>block must be deﬁned in the Colvars conﬁguration ﬁle.
 Its mandatory keywords are <span class="ot1-zi4r-0-x-x-109">colvars</span>, which lists all the variables involved, and <span class="ot1-zi4r-0-x-x-109">hillWeight</span>, which speciﬁes the
 weight parameter <span class="zptmcm7m-x-x-109">W </span>. The parameters <span class="zptmcm7m-x-x-109">δt </span>and <span class="zptmcm7m-x-x-109">σ</span><sub><span class="zptmcm7m-x-x-80">ξ</span></sub> speciﬁed by the optional keywords <span class="ot1-zi4r-0-x-x-109">newHillFrequency </span>and
 <span class="ot1-zi4r-0-x-x-109">hillWidth</span>: </p>
@@ -2151,10 +2151,10 @@ weight parameter <span class="zptmcm7m-x-x-109">W </span>. The parameters <span 
      When <span class="ot1-zi4r-0-x-x-109">useGrids </span>is on, the default value also gives acceptable discretization errors <span class="cite">[<a href="#XFiorin2013">1</a>]</span>: for smoother
      visualization, this parameter may be increased and the <span class="ot1-zi4r-0-x-x-109">width </span><span class="zptmcm7m-x-x-109">w</span><sub><span class="zptmcm7m-x-x-80">i</span></sub> decreased in the same proportion.
      <span class="ptmb7t-x-x-109">Note: </span><span class="ptmri7t-x-x-109">values smaller than 1 are not recommended</span>. </li></ul>
-<!--l. 3606--><p class="noindent">
+<!--l. 3608--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.3.1    </span> <a id="sec:colvarbias_meta_output"></a>Output ﬁles</h5>
-<!--l. 3606--><p class="noindent"> When interpolating grids are enabled (default behavior), the PMF is written every <span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency</span>
+<!--l. 3608--><p class="noindent"> When interpolating grids are enabled (default behavior), the PMF is written every <span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency</span>
 steps to the ﬁle <span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.pmf</span>. The following two options allow to control this behavior and to visually track
 statistical convergence:
 </p>
@@ -2166,7 +2166,7 @@ statistical convergence:
      ﬁle name, thus generating a series of PMF ﬁles. Activating this option can be useful to follow more
      closely the convergence of the simulation, by comparing PMFs separated by short times.
      </li></ul>
-<!--l. 3634--><p class="indent"> <span class="ptmb7t-x-x-109">Note: </span>when Gaussian hills are deposited near <span class="ot1-zi4r-0-x-x-109">lowerBoundary </span>or <span class="ot1-zi4r-0-x-x-109">upperBoundary </span>(see <a href="#sec:colvar_general">4.1<!--tex4ht:ref: sec:colvar_general --></a>) and interpolating
+<!--l. 3636--><p class="indent"> <span class="ptmb7t-x-x-109">Note: </span>when Gaussian hills are deposited near <span class="ot1-zi4r-0-x-x-109">lowerBoundary </span>or <span class="ot1-zi4r-0-x-x-109">upperBoundary </span>(see <a href="#sec:colvar_general">4.1<!--tex4ht:ref: sec:colvar_general --></a>) and interpolating
 grids are used (default behavior), their truncation can give rise to accumulating errors. In these cases, as a measure
 of fault-tolerance all Gaussian hills near the boundaries are included in the output state ﬁle, and are recalculated
 analytically whenever the colvar falls outside the grid’s boundaries. (Such measure protects the accuracy of the
@@ -2179,10 +2179,10 @@ of performance and growth of the state ﬁle, either one of the following soluti
      </li>
 <li class="itemize">applying  a  <span class="ot1-zi4r-0-x-x-109">harmonicWalls </span>bias  with  the  wall  locations  well  within  the  interval  delimited  by
      <span class="ot1-zi4r-0-x-x-109">lowerBoundary </span>and <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>.</li></ul>
-<!--l. 3644--><p class="noindent">
+<!--l. 3646--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.3.2    </span> <a id="sec:colvarbias_meta_performance"></a>Performance tuning</h5>
-<!--l. 3644--><p class="noindent"> The following options control the computational cost of metadynamics calculations, but do not aﬀect results.
+<!--l. 3646--><p class="noindent"> The following options control the computational cost of metadynamics calculations, but do not aﬀect results.
 Default values are chosen to minimize such cost with no loss of accuracy.
 </p>
 <ul class="itemize1">
@@ -2199,10 +2199,10 @@ Default values are chosen to minimize such cost with no loss of accuracy.
      in the state ﬁle override those in the conﬁguration ﬁle. Enabling this option forces the grids to match
      those in the current conﬁguration ﬁle.
      </li></ul>
-<!--l. 3683--><p class="noindent">
+<!--l. 3685--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.3.3    </span> <a id="sec:colvarbias_well_tempered"></a>Well-tempered metadynamics</h5>
-<!--l. 3683--><p class="noindent"> The following options deﬁne the conﬁguration for the “well-tempered” metadynamics approach
+<!--l. 3685--><p class="noindent"> The following options deﬁne the conﬁguration for the “well-tempered” metadynamics approach
 <span class="cite">[<a href="#XBarducci2008">20</a>]</span>:
 </p>
 <ul class="itemize1">
@@ -2217,10 +2217,10 @@ Default values are chosen to minimize such cost with no loss of accuracy.
      user via <span class="ot1-zi4r-0-x-x-109">biasTemperature</span>. The written PMF includes the scaling factor <span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">T </span><span class="zptmcm7t-x-x-109">+Δ</span><span class="zptmcm7m-x-x-109">T </span><span class="zptmcm7t-x-x-109">)</span><span class="zptmcm7m-x-x-109">∕</span><span class="zptmcm7t-x-x-109">Δ</span><span class="zptmcm7m-x-x-109">T </span><span class="cite">[<a href="#XBarducci2008">20</a>]</span>. A careful
      choice of <span class="zptmcm7t-x-x-109">Δ</span><span class="zptmcm7m-x-x-109">T </span>determines the sampling and convergence rate, and is hence crucial to the success of a
      well-tempered metadynamics simulation.</li></ul>
-<!--l. 3717--><p class="noindent">
+<!--l. 3719--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.3.4    </span> <a id="sec:colvarbias_meta_mr"></a>Multiple-replicas metadynamics</h5>
-<!--l. 3717--><p class="noindent"> The following options deﬁne metadynamics calculations with more than one replica:
+<!--l. 3719--><p class="noindent"> The following options deﬁne metadynamics calculations with more than one replica:
 </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-73001"></a> <span class="ot1-zi4r-0-x-x-120">multipleReplicas </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Multiple replicas metadynamics<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">metadynamics</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If this option is <span class="ot1-zi4r-0-x-x-109">on</span>, multiple (independent) replica of the same system can be run at the
@@ -2253,10 +2253,10 @@ Default values are chosen to minimize such cost with no loss of accuracy.
      ﬁle  <span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.partial.pmf</span>,  which  can  be  useful  to  quickly  monitor  the  contribution  of  each
      replica to the PMF.
      </li></ul>
-<!--l. 3816--><p class="noindent">
+<!--l. 3818--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.3.5    </span> <a id="sec:colvarbias_meta_post"></a>Compatibility and post-processing</h5>
-<!--l. 3816--><p class="noindent"> The following options may be useful only for applications that go beyond the calculation of a PMF by
+<!--l. 3818--><p class="noindent"> The following options may be useful only for applications that go beyond the calculation of a PMF by
 metadynamics: </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-74001"></a> <span class="ot1-zi4r-0-x-x-120">name </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Name of this metadynamics instance<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">metadynamics</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>string <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>“<span class="ot1-zi4r-0-x-x-109">meta</span>” + rank number <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This option sets the name for this metadynamics instance. While it is not advisable to
@@ -2277,11 +2277,11 @@ metadynamics: </p>
      visualize  the  positions  of  all  added  hills,  in  case  <span class="ot1-zi4r-0-x-x-109">newHillFrequency </span>does  not  coincide  with
      <span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency</span>.
      </li></ul>
-<!--l. 3879--><p class="noindent">
+<!--l. 3881--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">7.4    </span> <a id="sec:colvarbias_harmonic"></a>Harmonic restraints</h4>
-<!--l. 3879--><p class="noindent">
-</p><!--l. 3881--><p class="indent">   The harmonic biasing method may be used to enforce ﬁxed or moving restraints, including variants of Steered
+<!--l. 3881--><p class="noindent">
+</p><!--l. 3883--><p class="indent">   The harmonic biasing method may be used to enforce ﬁxed or moving restraints, including variants of Steered
 and Targeted MD. Within energy minimization runs, it allows for restrained minimization, e.g. to calculate relaxed
 potential energy surfaces. In the context of the Colvars module, harmonic potentials are meant according to their
 textbook deﬁnition:
@@ -2292,10 +2292,10 @@ textbook deﬁnition:
 V(ξ) = 1k  ξ-−-ξ0
        2     wξ
 " class="math-display" src="colvars-refman-vmd36x.png"/></center></td><td class="equation-label">(25)</td></tr></table>
-<!--l. 3889--><p class="nopar">
+<!--l. 3891--><p class="nopar">
 Note that this diﬀers from harmonic bond and angle potentials in common force ﬁelds, where the factor of one half
 is typically omitted, resulting in a non-standard deﬁnition of the force constant.
-</p><!--l. 3894--><p class="indent">   The formula above includes the characteristic length scale <span class="zptmcm7m-x-x-109">w</span><sub><span class="zptmcm7m-x-x-80">ξ</span></sub> of the colvar <span class="zptmcm7m-x-x-109">ξ </span>(keyword <span class="ot1-zi4r-0-x-x-109">width</span>, see <a href="#sec:colvar_general">4.1<!--tex4ht:ref: sec:colvar_general --></a>) to allow
+</p><!--l. 3896--><p class="indent">   The formula above includes the characteristic length scale <span class="zptmcm7m-x-x-109">w</span><sub><span class="zptmcm7m-x-x-80">ξ</span></sub> of the colvar <span class="zptmcm7m-x-x-109">ξ </span>(keyword <span class="ot1-zi4r-0-x-x-109">width</span>, see <a href="#sec:colvar_general">4.1<!--tex4ht:ref: sec:colvar_general --></a>) to allow
 the deﬁnition of a multi-dimensional restraint with a uniﬁed force constant:
 </p>
 <table class="equation"><tr><td><a id="eq:colvarbias_harmonic_multi"></a>
@@ -2304,10 +2304,10 @@ the deﬁnition of a multi-dimensional restraint with a uniﬁed force constant:
 V(ξ1,...,ξM) = -k ∑   -i---0
               2 i=1   w ξ
 " class="math-display" src="colvars-refman-vmd37x.png"/></center></td><td class="equation-label">(26)</td></tr></table>
-<!--l. 3898--><p class="nopar">
-</p><!--l. 3900--><p class="indent">   If one-dimensional or homogeneous multi-dimensional restraints are deﬁned, and there are no other uses for the
+<!--l. 3900--><p class="nopar">
+</p><!--l. 3902--><p class="indent">   If one-dimensional or homogeneous multi-dimensional restraints are deﬁned, and there are no other uses for the
 parameter <span class="zptmcm7m-x-x-109">w</span><sub><span class="zptmcm7m-x-x-80">ξ</span></sub>, <span class="ptmri7t-x-x-109">the parameter </span><span class="ot1-zi4r-0-x-x-109">width </span><span class="ptmri7t-x-x-109">can be left at its default value of </span><span class="zptmcm7t-x-x-109">1</span>.
-</p><!--l. 3904--><p class="indent">   A harmonic restraint is set up by a <span class="ot1-zi4r-0-x-x-109">harmonic</span><span class="ot1-zi4r-0-x-x-109"> </span><span class="cmsy-10x-x-109">{</span><span class="ot1-zi4r-0-x-x-109">...</span><span class="cmsy-10x-x-109">} </span>block, which may contain (in addition to the standard
+</p><!--l. 3906--><p class="indent">   A harmonic restraint is set up by a <span class="ot1-zi4r-0-x-x-109">harmonic</span><span class="ot1-zi4r-0-x-x-109"> </span><span class="cmsy-10x-x-109">{</span><span class="ot1-zi4r-0-x-x-109">...</span><span class="cmsy-10x-x-109">} </span>block, which may contain (in addition to the standard
 option <span class="ot1-zi4r-0-x-x-109">colvars</span>) the following keywords: </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-75003"></a> <span class="ot1-zi4r-0-x-x-120">name: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">name</span></a> in sec. <a href="#sec:colvarbias">7<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
@@ -2328,16 +2328,16 @@ option <span class="ot1-zi4r-0-x-x-109">colvars</span>) the following keywords: 
      colvar returns a scalar, a “<span class="ot1-zi4r-0-x-x-109">(x, y, z)</span>” triplet if it returns a unit vector or a vector, and a “<span class="ot1-zi4r-0-x-x-109">(q0, q1,</span>
 <span class="ot1-zi4r-0-x-x-109">q2, q3)</span>” quadruplet if it returns a rotational quaternion. If a colvar has periodicities or symmetries,
      its closest image to the restraint center is considered when calculating the harmonic potential.</li></ul>
-<!--l. 3947--><p class="indent"> <span class="ptmb7t-x-x-109">Tip: </span>A complex set of restraints can be applied to a system, by deﬁning several colvars, and applying one
+<!--l. 3949--><p class="indent"> <span class="ptmb7t-x-x-109">Tip: </span>A complex set of restraints can be applied to a system, by deﬁning several colvars, and applying one
 or more harmonic restraints to diﬀerent groups of colvars. In some cases, dozens of colvars can be
 deﬁned, but their value may not be relevant: to limit the size of the colvars trajectory ﬁle, it may be
 wise to disable <span class="ot1-zi4r-0-x-x-109">outputValue </span>for such “ancillary” variables, and leave it enabled only for “relevant”
 ones.
-</p><!--l. 3956--><p class="noindent">
+</p><!--l. 3958--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.4.1    </span> <a id="sec:colvarbias_smd"></a>Moving restraints: steered molecular dynamics</h5>
-<!--l. 3956--><p class="noindent">
-</p><!--l. 3958--><p class="indent">   The following options allow to change gradually the centers of the harmonic restraints during a simulations.
+<!--l. 3958--><p class="noindent">
+</p><!--l. 3960--><p class="indent">   The following options allow to change gradually the centers of the harmonic restraints during a simulations.
 When the centers are changed continuously, a steered MD in a collective variable space is carried
 out.
                                                                                          
@@ -2370,24 +2370,24 @@ out.
      included in the integral. This option allows to conveniently extract the PMF from the colvars trajectory
      ﬁles in a steered MD calculation.
      </li></ul>
-<!--l. 4027--><p class="indent"> <span class="ptmb7t-x-x-109">Note on restarting moving restraint simulations: </span>Information about the current step and stage of a
+<!--l. 4029--><p class="indent"> <span class="ptmb7t-x-x-109">Note on restarting moving restraint simulations: </span>Information about the current step and stage of a
                                                                                          
                                                                                          
 simulation with moving restraints is stored in the restart ﬁle (state ﬁle). Thus, such simulations can be
 run in several chunks, and restarted directly using the same colvars conﬁguration ﬁle. In case of a
 restart, the values of parameters such as <span class="ot1-zi4r-0-x-x-109">targetCenters</span>, <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>, etc. should not be changed
 manually.
-</p><!--l. 4036--><p class="noindent">
+</p><!--l. 4038--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.4.2    </span> <a id="sec:colvarbias_us"></a>Moving restraints: umbrella sampling</h5>
-<!--l. 4036--><p class="noindent">
-</p><!--l. 4038--><p class="indent">   The centers of the harmonic restraints can also be changed in discrete stages: in this cases a one-dimensional
+<!--l. 4038--><p class="noindent">
+</p><!--l. 4040--><p class="indent">   The centers of the harmonic restraints can also be changed in discrete stages: in this cases a one-dimensional
 umbrella sampling simulation is performed. The sampling windows in simulation are calculated in sequence. The
 colvars trajectory ﬁle may then be used both to evaluate the correlation times between consecutive windows, and to
 calculate the frequency distribution of the colvar of interest in each window. Furthermore, frequency
 distributions on a predeﬁned grid can be automatically obtained by using the <span class="ot1-zi4r-0-x-x-109">histogram </span>bias (see
 <a href="#sec:colvarbias_histogram">7.8<!--tex4ht:ref: sec:colvarbias_histogram --></a>).
-</p><!--l. 4043--><p class="indent">   To activate an umbrella sampling simulation, the same keywords as in the previous section can be used, with the
+</p><!--l. 4045--><p class="indent">   To activate an umbrella sampling simulation, the same keywords as in the previous section can be used, with the
 addition of the following: </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-77001"></a> <span class="ot1-zi4r-0-x-x-120">targetNumStages </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Number of stages for steering<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>non-negative integer <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If non-zero, sets the number of stages in which the restraint centers or force constant are
@@ -2395,11 +2395,11 @@ addition of the following: </p>
      steps. To sample both ends of the transformation, the simulation should be run for <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>
 <span class="zptmcm7y-x-x-109">× </span>(<span class="ot1-zi4r-0-x-x-109">targetNumStages </span>+ 1).
      </li></ul>
-<!--l. 4062--><p class="noindent">
+<!--l. 4064--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.4.3    </span> <a id="sec:colvarbias_force_k_ti"></a>Changing force constant</h5>
-<!--l. 4062--><p class="noindent">
-</p><!--l. 4064--><p class="indent">   The force constant of the harmonic restraint may also be changed to equilibrate <span class="cite">[<a href="#XDeng2009">22</a>]</span>.
+<!--l. 4064--><p class="noindent">
+</p><!--l. 4066--><p class="indent">   The force constant of the harmonic restraint may also be changed to equilibrate <span class="cite">[<a href="#XDeng2009">22</a>]</span>.
 </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-78001"></a> <span class="ot1-zi4r-0-x-x-120">targetForceConstant </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Change the force constant towards this value<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>When deﬁned, the current <span class="ot1-zi4r-0-x-x-109">forceConstant </span>will be moved towards this value during the
@@ -2433,11 +2433,11 @@ addition of the following: </p>
 <li class="itemize"><a id="dx1-78004"></a> <span class="ot1-zi4r-0-x-x-120">lambdaSchedule </span><span class="zptmcm7y-x-x-109">⟨</span><span class="thinspace" style="margin-left:0.3em"></span>Schedule of lambda-points for changing force constant<span class="thinspace" style="margin-left:0.3em"></span><span class="zptmcm7y-x-x-109">⟩</span><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>list of real numbers between 0 and 1 <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If speciﬁed together with targetForceConstant, sets the sequence of discrete <span class="zptmcm7m-x-x-109">λ </span>values
      that will be used for diﬀerent stages.
      </li></ul>
-<!--l. 4140--><p class="noindent">
+<!--l. 4142--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">7.5    </span> <a id="sec:colvarbias_harmonic_walls"></a>Harmonic wall restraints</h4>
-<!--l. 4140--><p class="noindent">
-</p><!--l. 4142--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">harmonicWalls</span><span class="ot1-zi4r-0-x-x-109"> </span><span class="cmsy-10x-x-109">{</span><span class="ot1-zi4r-0-x-x-109">...</span><span class="cmsy-10x-x-109">} </span>bias is closely related to the harmonic bias (see <a href="#sec:colvarbias_harmonic">7.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a>), with the following two
+<!--l. 4142--><p class="noindent">
+</p><!--l. 4144--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">harmonicWalls</span><span class="ot1-zi4r-0-x-x-109"> </span><span class="cmsy-10x-x-109">{</span><span class="ot1-zi4r-0-x-x-109">...</span><span class="cmsy-10x-x-109">} </span>bias is closely related to the harmonic bias (see <a href="#sec:colvarbias_harmonic">7.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a>), with the following two
 diﬀerences: <span class="ptmri7t-x-x-109">(i) </span>instead of a center a <span class="ptmri7t-x-x-109">lower wall </span>and/or an <span class="ptmri7t-x-x-109">upper wall </span>are deﬁned, outside of which the bias
 implements a half-harmonic potential;
 </p>
@@ -2449,14 +2449,14 @@ V (ξ)=    0             if ξlower ≤ ξ ≥ ξupper
        ||(  1  (ξ−ξlower)2
           2k    wξ      if ξ &lt; ξlower
 " class="math-display" src="colvars-refman-vmd38x.png"/></center></td><td class="equation-label">(27)</td></tr></table>
-<!--l. 4152--><p class="nopar">
+<!--l. 4154--><p class="nopar">
 where <span class="zptmcm7m-x-x-109">ξ</span><sub><span class="zptmcm7t-x-x-80">lower</span></sub> and <span class="zptmcm7m-x-x-109">ξ</span><sub><span class="zptmcm7t-x-x-80">upper</span></sub> are the lower and upper wall thresholds, respectively; <span class="ptmri7t-x-x-109">(ii) </span>because an interval between two
 walls is deﬁned, only scalar variables can be used (but any number of variables can be deﬁned, and the wall bias is
 intrinsically multi-dimensional).
-</p><!--l. 4155--><p class="indent"> <span class="ptmb7t-x-x-109">Note: </span>this bias replaces the keywords <span class="ot1-zi4r-0-x-x-109">lowerWall</span>, <span class="ot1-zi4r-0-x-x-109">lowerWallConstant</span>, <span class="ot1-zi4r-0-x-x-109">upperWall </span>and <span class="ot1-zi4r-0-x-x-109">upperWallConstant</span>
+</p><!--l. 4157--><p class="indent"> <span class="ptmb7t-x-x-109">Note: </span>this bias replaces the keywords <span class="ot1-zi4r-0-x-x-109">lowerWall</span>, <span class="ot1-zi4r-0-x-x-109">lowerWallConstant</span>, <span class="ot1-zi4r-0-x-x-109">upperWall </span>and <span class="ot1-zi4r-0-x-x-109">upperWallConstant</span>
 deﬁned in the <span class="ot1-zi4r-0-x-x-109">colvar </span>context (see <a href="#sec:colvar">4<!--tex4ht:ref: sec:colvar --></a>). These keywords are still supported, but will be deprecated in the
 future.
-</p><!--l. 4158--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">harmonicWalls </span>bias implements the following options: </p>
+</p><!--l. 4160--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">harmonicWalls </span>bias implements the following options: </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-79002"></a> <span class="ot1-zi4r-0-x-x-120">name: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">name</span></a> in sec. <a href="#sec:colvarbias">7<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
@@ -2494,11 +2494,11 @@ future.
      </li>
 <li class="itemize"><a id="dx1-79015"></a> <span class="ot1-zi4r-0-x-x-120">lambdaSchedule: </span>see deﬁnition of <a href="#sec:colvarbias_harmonic"><span class="ot1-zi4r-0-x-x-109">lambdaSchedule</span></a> in sec. <a href="#sec:colvarbias_harmonic">7.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a> (Harmonic restraints)
      </li></ul>
-<!--l. 4208--><p class="noindent">
+<!--l. 4210--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">7.6    </span> <a id="sec:colvarbias_linear"></a>Linear restraints</h4>
-<!--l. 4208--><p class="noindent">
-</p><!--l. 4210--><p class="indent">   The linear restraint biasing method is used to minimally bias a simulation. There is generally a unique strength
+<!--l. 4210--><p class="noindent">
+</p><!--l. 4212--><p class="indent">   The linear restraint biasing method is used to minimally bias a simulation. There is generally a unique strength
 of bias for each CV center, which means you must know the bias force constant speciﬁcally for the center of the CV.
 This force constant may be found by using experiment directed simulation described in section <a href="#sec:colvarbias_alb">7.7<!--tex4ht:ref: sec:colvarbias_alb --></a>. Please cite
 Pitera and Chodera when using <span class="cite">[<a href="#XPitera2012">23</a>]</span>.
@@ -2519,11 +2519,11 @@ Pitera and Chodera when using <span class="cite">[<a href="#XPitera2012">23</a>]
      returns a scalar, a “<span class="ot1-zi4r-0-x-x-109">(x, y, z)</span>” triplet if it returns a unit vector or a vector, and a “<span class="ot1-zi4r-0-x-x-109">q0, q1, q2, q3)</span>”
      quadruplet if it returns a rotational quaternion. If a colvar has periodicities or symmetries, its closest
      image to the restraint center is considered when calculating the linear potential.</li></ul>
-<!--l. 4253--><p class="noindent">
+<!--l. 4255--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">7.7    </span> <a id="sec:colvarbias_alb"></a>Adaptive Linear Bias/Experiment Directed Simulation</h4>
-<!--l. 4253--><p class="noindent">
-</p><!--l. 4255--><p class="indent">   Experiment directed simulation applies a linear bias with a changing force constant. Please cite White and Voth
+<!--l. 4255--><p class="noindent">
+</p><!--l. 4257--><p class="indent">   Experiment directed simulation applies a linear bias with a changing force constant. Please cite White and Voth
 <span class="cite">[<a href="#XWhite2014">24</a>]</span> when using this feature. As opposed to that reference, the force constant here is scaled by the <span class="ot1-zi4r-0-x-x-109">width</span>
 corresponding to the biased colvar. In White and Voth, each force constant is scaled by the colvars set center. The
 bias converges to a linear bias, after which it will be the minimal possible bias. You may also stop the simulation,
@@ -2568,21 +2568,21 @@ with that constant. All the notes about units described in sections <a href="#se
      Tuning this separately from the <span class="ot1-zi4r-0-x-x-109">updateFrequency </span>and <span class="ot1-zi4r-0-x-x-109">forceRange </span>can allow for large bias changes
      but with a low <span class="ot1-zi4r-0-x-x-109">rateMax </span>prevents large energy changes that can lead to instability in the simulation.
      </li></ul>
-<!--l. 4334--><p class="noindent">
+<!--l. 4336--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">7.8    </span> <a id="sec:colvarbias_histogram"></a>Multidimensional histograms</h4>
-<!--l. 4334--><p class="noindent">
-</p><!--l. 4336--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">histogram </span>feature is used to record the distribution of a set of collective variables in the form of a
+<!--l. 4336--><p class="noindent">
+</p><!--l. 4338--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">histogram </span>feature is used to record the distribution of a set of collective variables in the form of a
 N-dimensional histogram. It functions as a “collective variable bias”, and is invoked by adding a <span class="ot1-zi4r-0-x-x-109">histogram </span>block
 to the Colvars conﬁguration ﬁle.
                                                                                          
                                                                                          
-</p><!--l. 4341--><p class="indent">   As with any other biasing and analysis method, when a histogram is applied to an extended-system colvar (<a href="#sec:colvar_extended">4.3<!--tex4ht:ref: sec:colvar_extended --></a>),
+</p><!--l. 4343--><p class="indent">   As with any other biasing and analysis method, when a histogram is applied to an extended-system colvar (<a href="#sec:colvar_extended">4.3<!--tex4ht:ref: sec:colvar_extended --></a>),
 it accesses the value of the ﬁctitious coordinate rather than that of the “true” colvar. A joint histogram of the “true”
 colvar and the ﬁctitious coordinate may be obtained by specifying the colvar name twice in a row in the <span class="ot1-zi4r-0-x-x-109">colvars</span>
 parameter: the ﬁrst instance will be understood as the “true” colvar, and the second, as the ﬁctitious
 coordinate.
-</p><!--l. 4349--><p class="indent">   In addition to the common parameters <span class="ot1-zi4r-0-x-x-109">name </span>and <span class="ot1-zi4r-0-x-x-109">colvars </span>described above, a <span class="ot1-zi4r-0-x-x-109">histogram </span>block may deﬁne the
+</p><!--l. 4351--><p class="indent">   In addition to the common parameters <span class="ot1-zi4r-0-x-x-109">name </span>and <span class="ot1-zi4r-0-x-x-109">colvars </span>described above, a <span class="ot1-zi4r-0-x-x-109">histogram </span>block may deﬁne the
 following parameter:
 </p>
 <ul class="itemize1">
@@ -2616,11 +2616,11 @@ following parameter:
      basis: to compute an electron density map, it is possible to use <span class="ot1-zi4r-0-x-x-109">weights [</span><span class="ts1-zi4r-x-x-109">$</span><span class="ot1-zi4r-0-x-x-109">sel get atomicnumber]</span>
      in the deﬁnition of <span class="ot1-zi4r-0-x-x-109">histogram</span>.
      </li></ul>
-<!--l. 4417--><p class="noindent">
+<!--l. 4419--><p class="noindent">
 </p>
 <h5 class="subsubsectionHead"><span class="titlemark">7.8.1    </span> <a id="sec:colvarbias_histogram_grid"></a>Grid deﬁnition for multidimensional histograms</h5>
-<!--l. 4417--><p class="noindent">
-</p><!--l. 4419--><p class="indent">   Like the ABF and metadynamics biases, <span class="ot1-zi4r-0-x-x-109">histogram </span>uses the parameters <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>, <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, and
+<!--l. 4419--><p class="noindent">
+</p><!--l. 4421--><p class="indent">   Like the ABF and metadynamics biases, <span class="ot1-zi4r-0-x-x-109">histogram </span>uses the parameters <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>, <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, and
 <span class="ot1-zi4r-0-x-x-109">width </span>to deﬁne its grid. These values can be overridden if a conﬁguration block <span class="ot1-zi4r-0-x-x-109">histogramGrid </span><span class="cmsy-10x-x-109">{ </span><span class="ot1-zi4r-0-x-x-109">…</span><span class="cmsy-10x-x-109">} </span>is
 provided inside the conﬁguration of <span class="ot1-zi4r-0-x-x-109">histogram</span>. The options supported inside this conﬁguration block are:
 </p>
@@ -2632,11 +2632,11 @@ provided inside the conﬁguration of <span class="ot1-zi4r-0-x-x-109">histogram
 <li class="itemize"><a id="dx1-83002"></a> <span class="ot1-zi4r-0-x-x-120">upperBoundaries: </span>analogous to <span class="ot1-zi4r-0-x-x-109">lowerBoundaries</span>
 </li>
 <li class="itemize"><a id="dx1-83003"></a><span class="ot1-zi4r-0-x-x-120">widths: </span>analogous to <span class="ot1-zi4r-0-x-x-109">lowerBoundaries</span></li></ul>
-<!--l. 4439--><p class="noindent">
+<!--l. 4441--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">7.9    </span> <a id="sec:colvarbias_restraint_histogram"></a>Probability distribution-restraints</h4>
-<!--l. 4439--><p class="noindent">
-</p><!--l. 4441--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">histogramRestraint </span>bias implements a continuous potential of many variables (or of a single
+<!--l. 4441--><p class="noindent">
+</p><!--l. 4443--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">histogramRestraint </span>bias implements a continuous potential of many variables (or of a single
 high-dimensional variable) aimed at reproducing a one-dimensional statistical distribution that is provided by the
 user. The <span class="zptmcm7m-x-x-109">M </span>variables <span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">ξ</span><sub><span class="zptmcm7t-x-x-80">1</span></sub><span class="zptmcm7m-x-x-109">,</span><span class="zptmcm7m-x-x-109">…</span><span class="zptmcm7m-x-x-109">,ξ</span><sub><span class="zptmcm7m-x-x-80">M</span></sub><span class="zptmcm7t-x-x-109">) </span>are interpreted as multiple observations of a random variable <span class="zptmcm7m-x-x-109">ξ </span>with unknown
 probability distribution. The potential is minimized when the histogram <span class="zptmcm7m-x-x-109">h</span><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">ξ</span><span class="zptmcm7t-x-x-109">)</span>, estimated as a sum of Gaussian
@@ -2648,7 +2648,7 @@ functions centered at <span class="zptmcm7t-x-x-109">(</span><span class="zptmcm
               1-               2
 V (ξ1,...,ξM )= 2 k  (h(ξ)− h0(ξ)) dξ
 " class="math-display" src="colvars-refman-vmd39x.png"/></center></td><td class="equation-label">(28)</td></tr></table>
-<!--l. 4447--><p class="nopar">
+<!--l. 4449--><p class="nopar">
 </p>
 <table class="equation"><tr><td><a id="eq:colvarbias_restraint_histogram_gaussian"></a>
 <center class="math-display">
@@ -2656,13 +2656,13 @@ V (ξ1,...,ξM )= 2 k  (h(ξ)− h0(ξ)) dξ
 h(ξ )= --√------∑ exp  − -----i2--
        M   2πσ 2i=1         2σ
 " class="math-display" src="colvars-refman-vmd40x.png"/></center></td><td class="equation-label">(29)</td></tr></table>
-<!--l. 4451--><p class="nopar">
+<!--l. 4453--><p class="nopar">
 When used in combination with a <span class="ot1-zi4r-0-x-x-109">distancePairs </span>multi-dimensional variable, this bias implements the reﬁnement
 algorithm against ESR/DEER experiments published by Shen <span class="ptmri7t-x-x-109">et al </span><span class="cite">[<a href="#XShen2015">25</a>]</span>.
-</p><!--l. 4454--><p class="indent">   This bias behaves similarly to the <span class="ot1-zi4r-0-x-x-109">histogram </span>bias with the <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars </span>option, with the important
+</p><!--l. 4456--><p class="indent">   This bias behaves similarly to the <span class="ot1-zi4r-0-x-x-109">histogram </span>bias with the <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars </span>option, with the important
 diﬀerence that <span class="ptmri7t-x-x-109">all </span>variables are gathered, resulting in a one-dimensional histogram. Future versions will include
 support for multi-dimensional histograms.
-</p><!--l. 4457--><p class="indent">   The list of options is as follows: </p>
+</p><!--l. 4459--><p class="indent">   The list of options is as follows: </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-84003"></a> <span class="ot1-zi4r-0-x-x-120">name: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">name</span></a> in sec. <a href="#sec:colvarbias">7<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
@@ -2698,11 +2698,11 @@ support for multi-dimensional histograms.
      with the name <span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.</span><span class="zptmcm7m-x-x-109">&lt;</span><span class="ot1-zi4r-0-x-x-109">name</span><span class="zptmcm7m-x-x-109">&gt;</span><span class="ot1-zi4r-0-x-x-109">.hist.dat </span>This is useful to diagnose the convergence of <span class="zptmcm7m-x-x-109">h</span><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">ξ</span><span class="zptmcm7t-x-x-109">)</span>
      against <span class="zptmcm7m-x-x-109">h</span><sub><span class="zptmcm7t-x-x-80">0</span></sub><span class="zptmcm7t-x-x-109">(</span><span class="zptmcm7m-x-x-109">ξ</span><span class="zptmcm7t-x-x-109">)</span>.
      </li></ul>
-<!--l. 4565--><p class="noindent">
+<!--l. 4567--><p class="noindent">
 </p>
 <h4 class="subsectionHead"><span class="titlemark">7.10    </span> <a id="sec:scripted_biases"></a>Scripted biases</h4>
-<!--l. 4565--><p class="noindent">
-</p><!--l. 4565--><p class="indent">   Rather than using the biasing methods described above, it is possible to apply biases provided at run time as a
+<!--l. 4567--><p class="noindent">
+</p><!--l. 4567--><p class="indent">   Rather than using the biasing methods described above, it is possible to apply biases provided at run time as a
 Tcl script. This option, also available in NAMD, can be useful to test a new algorithm to be used in a MD
 simulation.
 </p>
@@ -2713,9 +2713,341 @@ simulation.
      may use the <span class="ot1-zi4r-0-x-x-109">cv </span>command to access the values of colvars and apply forces on them, eﬀectively deﬁning
      custom collective variable biases. </li></ul>
 <!--l. 123--><p class="indent">
-</p><!--l. 126--><p class="indent">
 </p>
-<h3 class="likesectionHead"><a id="x1-860007.10"></a>References</h3>
+<h3 class="likesectionHead"><a id="x1-860007.10"></a>Index</h3>
+<div class="theindex"><span class="index-item"><span class="ot1-zi4r-0-x-x-109">abf</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">CZARestimator</span>, 48 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">applyBias</span>, 45 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 44 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">fullSamples</span>, 44 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hideJacobian</span>, 44 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">historyFreq</span>, 45 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">inputPrefix</span>, 45 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">maxForce</span>, 44 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 44 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFreq</span>, 45 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">updateBias</span>, 45 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeCZARwindowFile</span>, 48 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">alb</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centers</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceRange</span>, 59 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">rateMax</span>, 59 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">updateFrequency</span>, 59 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">alpha</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">angleRef</span>, 36 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">angleTol</span>, 36 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hBondCoeff</span>, 36 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hBondCutoff</span>, 36 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hBondExpDenom</span>, 36 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hBondExpNumer</span>, 36 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">psfSegID</span>, 36 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">residueRange</span>, 36 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">angle</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 25 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 25 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 25 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group3</span>, 25 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 25 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">angle</span>, <span class="ot1-zi4r-0-x-x-109">dipoleAngle</span>, <span class="ot1-zi4r-0-x-x-109">dihedral</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 22 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">cartesian</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 25 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">colvar</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncLength</span>, 13 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncNormalize</span>, 13 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncOffset</span>, 13 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncOutputFile</span>, 13 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncStride</span>, 13 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncType</span>, 13 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncWithColvar</span>, 13 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFunc</span>, 12 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expandBoundaries</span>, 10 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedFluctuation</span>, 12 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedLagrangian</span>, 11 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedLangevinDamping</span>, 12 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedTemp</span>, 12 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedTimeConstant</span>, 12 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hardLowerBoundary</span>, 10 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hardUpperBoundary</span>, 10 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>, 9 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerWalls</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 9 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputAppliedForce</span>, 11 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 11 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputTotalForce</span>, 11 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputValue</span>, 10 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputVelocity</span>, 11 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAveLength</span>, 14 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAveOutputFile</span>, 14 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAveStride</span>, 14 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAve</span>, 14 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">scriptedFunctionType</span>, 40 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">scriptedFunctionVectorSize</span>, 41 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">scriptedFunction</span>, 40 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">subtractAppliedForce</span>, 10 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, 9 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperWalls</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">width</span>, 9 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">coordNum</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff3</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expDenom</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expNumer</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2CenterOnly</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 27 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">dihedralPC</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">psfSegID</span>, 37 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">residueRange</span>, 37 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">vectorFile</span>, 37 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">vectorNumber</span>, 37 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">dihedral</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 26 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 26 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 26 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group3</span>, 26 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group4</span>, 26 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 26 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">dipoleAngle</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 25 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 25 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 25 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group3</span>, 25 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 25 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceDir</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 24 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 24 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 24 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 24 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceInv</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">exponent</span>, 24 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 24 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 24 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 24 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distancePairs</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 24 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 24 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 24 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceVec</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 23 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceXY</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">main</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref2</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref</span>, 23 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceZ</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">main</span>, 22 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">period</span>, 38 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref2</span>, 22 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref</span>, 22 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceZ</span>, <span class="ot1-zi4r-0-x-x-109">dihedral </span>or <span class="ot1-zi4r-0-x-x-109">spinAngle</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">wrapAround</span>, 38 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distance</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 22 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 21 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 21 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">eigenvector</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 31 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">differenceVector</span>, 31 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsColValue</span>, 31 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsCol</span>, 31 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 31 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 31 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">vectorColValue</span>, 31 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">vectorCol</span>, 31 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">vectorFile</span>, 31 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">vector</span>, 31 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gyration</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 32 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">hBond</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">acceptor</span>, 28 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff</span>, 28 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">donor</span>, 28 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expDenom</span>, 29 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expNumer</span>, 29 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">harmonicWalls</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lambdaSchedule</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerWallConstant</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetEquilSteps</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceConstant</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceExponent</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumStages</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>, 57 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperWallConstant</span>, 57 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">harmonic</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centers</span>, 54 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 53 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 53 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lambdaSchedule</span>, 56 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 53 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputAccumulatedWork</span>, 55 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputCenters</span>, 54 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 53 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetCenters</span>, 54 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetEquilSteps</span>, 56 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceConstant</span>, 55 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceExponent</span>, 56 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumStages</span>, 55 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>, 54 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">histogramGrid</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerBoundaries</span>, 61 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperBoundaries</span>, 61 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">widths</span>, 61 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 61 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 62 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">gaussianSigma</span>, 62 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>, 61 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 61 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 61 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refHistogramFile</span>, 62 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refHistogram</span>, 62 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, 62 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">width</span>, 62 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">histogram</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 60 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars</span>, 60 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 60 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFileDX</span>, 60 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFile</span>, 60 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFreq</span>, 60 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">weights</span>, 60 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">inertiaZ</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 32 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 32 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">inertia</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 32 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">linear</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centers</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 58 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">metadynamics</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">biasTemperature</span>, 51 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 49 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">dumpPartialFreeEnergyFile</span>, 52 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hillWeight</span>, 49 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hillWidth</span>, 49 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">keepFreeEnergyFiles</span>, 50 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">keepHills</span>, 52 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">multipleReplicas</span>, 51 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 49, 52 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">newHillFrequency</span>, 49 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 49 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">rebinGrids</span>, 50 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">replicaID</span>, 52 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">replicaUpdateFrequency</span>, 52 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">replicasRegistry</span>, 52 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useGrids</span>, 50 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">wellTempered</span>, 51 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeFreeEnergyFile</span>, 50 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeHillsTrajectory</span>, 53 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeHistogram</span>, 62 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">orientationAngle</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsColValue</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsCol</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 34 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">orientationProj</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsColValue</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsCol</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 34 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">orientation</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 33 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">closestToQuaternion</span>, 33 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsColValue</span>, 33 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsCol</span>, 33 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 33 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 33 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">polarPhi</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 26 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">rmsd</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 29 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsColValue</span>, 30 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsCol</span>, 29 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 29 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 29 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">selfCoordNum</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff3</span>, 28 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff</span>, 28 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expDenom</span>, 28 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expNumer</span>, 28 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 28 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">spinAngle</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsColValue</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsCol</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 34 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">tilt</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 35 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 34, 35 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsColValue</span>, 35 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsCol</span>, 35 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 35 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 35 <br/></span>
+<p class="theindex">
+<span class="index-item">any component <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">componentCoeff</span>, 39 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">componentExp</span>, 40 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 37 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">scalable</span>, 38 <br/></span>
+<span class="index-item">atom group <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomNameResidueRange</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomNumbersRange</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomNumbers</span>, 15 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomsColValue</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomsCol</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomsFile</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomsOfGroup</span>, 15 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centerReference</span>, 17 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">dummyAtom</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">enableFitGradients</span>, 19 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">enableForces</span>, 19 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">fittingGroup</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">indexGroup</span>, 15 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 14 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">psfSegID</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsColValue</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsCol</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 17 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 17 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">rotateReference</span>, 17 <br/></span>
+</p><p class="theindex">
+<span class="index-item">colvar bias <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 41 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 41 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 41 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 41 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 41 <br/></span>
+</p><p class="theindex">
+<span class="index-item">global <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">analysis</span>, 6 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency</span>, 5 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvarsTrajFrequency</span>, 5 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">indexFile</span>, 5 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">scriptedColvarForces</span>, 62 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">smp</span>, 6 <br/></span>
+</p></div>
+<!--l. 126--><p class="noindent">
+</p>
+<h3 class="likesectionHead"><a id="x1-870007.10"></a>References</h3>
 <!--l. 1--><p class="noindent">
 </p><div class="thebibliography">
 <p class="bibitem"><span class="biblabel">
