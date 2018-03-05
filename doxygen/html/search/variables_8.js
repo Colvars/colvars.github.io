@@ -1,14 +1,20 @@
 var searchData=
 [
-  ['id',['id',['../classcolvarmodule_1_1atom.html#a111fa0ff469f82452e66b8bfe626996e',1,'colvarmodule::atom']]],
-  ['index',['index',['../classcolvarmodule_1_1atom.html#a96a9b423774a3c3b9b722978f1319e2f',1,'colvarmodule::atom::index()'],['../classcolvarmodule_1_1atom__group.html#a291b9af048b8eae87cdffb431cbbdd76',1,'colvarmodule::atom_group::index()']]],
-  ['index_5fgroup_5fnames',['index_group_names',['../classcolvarmodule.html#a5473b3a7e637854b0a5bb929efcc6dd0',1,'colvarmodule']]],
-  ['index_5fgroups',['index_groups',['../classcolvarmodule.html#ac1ad444197f6916564dc191493422eb6',1,'colvarmodule']]],
-  ['initial_5fcenters',['initial_centers',['../classcolvarbias__restraint__centers__moving.html#a0fe9078b5755279dc2dddcf2cd6b7f1f',1,'colvarbias_restraint_centers_moving']]],
-  ['input_5fprefix_5fstr',['input_prefix_str',['../classcolvarproxy__io.html#a674409e6fc8eda9a663ecac160c9582c',1,'colvarproxy_io']]],
-  ['interp',['interp',['../classcolvarproxy__vmd.html#a732750e9e853e49dbb588f99a1ab0c16',1,'colvarproxy_vmd']]],
-  ['it',['it',['../classcolvarbias__meta_1_1hill.html#a515037786831639b2a9971467ec929dd',1,'colvarbias_meta::hill::it()'],['../classcolvarmodule.html#aa18d04676cef52dbe7e577a0ba42c334',1,'colvarmodule::it()']]],
-  ['it_5frestart',['it_restart',['../classcolvarmodule.html#ae81fbab6654f0294c5592280d8b46aef',1,'colvarmodule']]],
-  ['it_5frestart_5ffrom_5fstate_5ffile',['it_restart_from_state_file',['../classcolvarmodule.html#af36560323d0894fdf59312617dcffbd8',1,'colvarmodule']]],
-  ['it_5fwidth',['it_width',['../classcolvarmodule.html#a7f7355658f6d709f9787cb7b792b2ebe',1,'colvarmodule']]]
+  ['hard_5flower_5fboundaries',['hard_lower_boundaries',['../classcolvar__grid.html#aae4b6fde4775d004cb9e8872833d01be',1,'colvar_grid']]],
+  ['hard_5flower_5fboundary',['hard_lower_boundary',['../classcolvar.html#a4bcf57c92b57b4ad5549d51cbacbe02a',1,'colvar']]],
+  ['hard_5fupper_5fboundaries',['hard_upper_boundaries',['../classcolvar__grid.html#a3537a8b9704b79a68da7eb5e75313e6d',1,'colvar_grid']]],
+  ['hard_5fupper_5fboundary',['hard_upper_boundary',['../classcolvar.html#abf7e85af4740b382ab2f7d74b3a85009',1,'colvar']]],
+  ['has_5fdata',['has_data',['../classcolvarbias.html#aa33d58dccf5a5c2a1cab78a4412b8ed1',1,'colvarbias::has_data()'],['../classcolvar__grid.html#a5fbd378c88cf06662a64d6ccd27a8d63',1,'colvar_grid::has_data()']]],
+  ['has_5fparent_5fdata',['has_parent_data',['../classcolvar__grid.html#a95468da24b815194702cb7dbb1257af8',1,'colvar_grid']]],
+  ['have_5fscripts',['have_scripts',['../classcolvarproxy__script.html#a0ed6215a91e384bad57bfe828e3396a0',1,'colvarproxy_script']]],
+  ['hb',['hb',['../classcolvar_1_1alpha__angles.html#ac3551da536129b984cd8c59a126f4575',1,'colvar::alpha_angles']]],
+  ['hb_5fcoeff',['hb_coeff',['../classcolvar_1_1alpha__angles.html#a437db360057dda8296863ac63803a357',1,'colvar::alpha_angles']]],
+  ['hill_5fvalue',['hill_value',['../classcolvarbias__meta_1_1hill.html#a4cc4853ad716c9b64fab0057c36c3172',1,'colvarbias_meta::hill']]],
+  ['hill_5fweight',['hill_weight',['../classcolvarbias__meta.html#a160a28ad5159e1c1353f095d25694cfe',1,'colvarbias_meta']]],
+  ['hill_5fwidth',['hill_width',['../classcolvarbias__meta.html#aaa86ac9569427981a0fb3fafd809d64e',1,'colvarbias_meta']]],
+  ['hills',['hills',['../classcolvarbias__meta.html#a4d0e709df9e4164eaeaf31f62d918bbc',1,'colvarbias_meta']]],
+  ['hills_5fenergy',['hills_energy',['../classcolvarbias__meta.html#a904bd068ebebf693e6f0edbe18d0b131',1,'colvarbias_meta']]],
+  ['hills_5fenergy_5fgradients',['hills_energy_gradients',['../classcolvarbias__meta.html#a0b58348a2342fefab617cc54595a4b82',1,'colvarbias_meta']]],
+  ['hills_5foff_5fgrid',['hills_off_grid',['../classcolvarbias__meta.html#a0ee2898acc21548126d39092a1388789',1,'colvarbias_meta']]],
+  ['hills_5ftraj_5fos',['hills_traj_os',['../classcolvarbias__meta.html#a5baf54113afd07b7ddfe94779c6d1a24',1,'colvarbias_meta']]]
 ];

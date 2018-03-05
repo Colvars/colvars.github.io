@@ -36,6 +36,7 @@ var searchData=
   ['f_5fcvb_5fcalc_5fti_5fsamples',['f_cvb_calc_ti_samples',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa719d12558cabca9abc0a2a07d04b4cd5',1,'colvardeps']]],
   ['f_5fcvb_5fget_5ftotal_5fforce',['f_cvb_get_total_force',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa8bd56fac60a24ac7a46b36564ab41cf8',1,'colvardeps']]],
   ['f_5fcvb_5fhistory_5fdependent',['f_cvb_history_dependent',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa6e94694ea9386f1714deafa543268709',1,'colvardeps']]],
+  ['f_5fcvb_5foutput_5facc_5fwork',['f_cvb_output_acc_work',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daaff0e5ad033914cb2b6d1cd949cc570ae',1,'colvardeps']]],
   ['f_5fcvb_5fscalar_5fvariables',['f_cvb_scalar_variables',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daae4ea421cae3fab1c6adaecfc6fe7d9be',1,'colvardeps']]],
   ['f_5fcvb_5ftime_5fdependent',['f_cvb_time_dependent',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa68f77d099c88ce72d991d147b0ad44c5',1,'colvardeps']]],
   ['f_5fcvb_5fwrite_5fti_5fpmf',['f_cvb_write_ti_pmf',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daaa252e60229e97de897fdfbcf566ea6f8',1,'colvardeps']]],

@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['n_5factive_5fcvcs',['n_active_cvcs',['../classcolvar.html#a5a3250f9830f6bbf7a84cec06c30e85d',1,'colvar']]],
-  ['name',['name',['../classcolvar.html#a3923a4894e1d95a8f15f3f2cd54de469',1,'colvar::name()'],['../classcolvarmodule_1_1atom__group.html#a337392bb4c1e1145897fc828497074ea',1,'colvarmodule::atom_group::name()'],['../classcolvarbias.html#a9d6e2e6cbb6866eeb5cf6cef8f8e31c2',1,'colvarbias::name()'],['../classcolvar_1_1cvc.html#a6eb2279897e7041605087e0d288e8ad2',1,'colvar::cvc::name()']]],
-  ['nd',['nd',['../classcolvar__grid.html#ad2917ddec512db6205e70b0f2f7e39fe',1,'colvar_grid']]],
-  ['new_5fdata',['new_data',['../classcolvar__grid.html#a20d09cac84efdd3a92c983e7bac02aa6',1,'colvar_grid']]],
-  ['new_5fhill_5ffreq',['new_hill_freq',['../classcolvarbias__meta.html#a1a34eaaa1dc280404794cf841ac3188b',1,'colvarbias_meta']]],
-  ['new_5fhills_5fbegin',['new_hills_begin',['../classcolvarbias__meta.html#ad3fac5e8913488c5754055c4bc5c11e2',1,'colvarbias_meta']]],
-  ['new_5fhills_5foff_5fgrid_5fbegin',['new_hills_off_grid_begin',['../classcolvarbias__meta.html#af2be3c99c6b0e56118c1ee6f026951ba',1,'colvarbias_meta']]],
-  ['noforce',['noforce',['../classcolvarmodule_1_1atom__group.html#a339452c536f41b8eb5b249337b8fee7d',1,'colvarmodule::atom_group']]],
-  ['nt',['nt',['../classcolvar__grid.html#a77ec57aa6dfc304bcd743bdae48830c5',1,'colvar_grid']]],
-  ['nx',['nx',['../classcolvar__grid.html#ac02db43c4299d1d8cc1fa395de1b48b0',1,'colvar_grid']]],
-  ['nxc',['nxc',['../classcolvar__grid.html#aaae45c549d3df32f8dd85ec6870de7b1',1,'colvar_grid']]]
+  ['main',['main',['../classcolvar_1_1distance__z.html#a28518aa5c21b928dbde766a9da6812dd',1,'colvar::distance_z']]],
+  ['mass',['mass',['../classcolvarmodule_1_1atom.html#ac62f1528c0cc97068d0e6218687c0bcd',1,'colvarmodule::atom']]],
+  ['max_5fcoupling_5frange',['max_coupling_range',['../classcolvarbias__alb.html#ac6965e52376cd8271c7caafe80b9616e',1,'colvarbias_alb']]],
+  ['means',['means',['../classcolvarbias__alb.html#a0dd7f01418c21d32eca3fdfa905e9791',1,'colvarbias_alb']]],
+  ['monitor_5fcrossings',['monitor_crossings',['../classcolvarmodule_1_1rotation.html#a9967b62b87d70fd7cf35b1a5b4fd8513',1,'colvarmodule::rotation']]],
+  ['msgcolvars',['msgColvars',['../classcolvarproxy__vmd.html#a11d498ad34c25eee1264d11a5c56923b',1,'colvarproxy_vmd']]],
+  ['mult',['mult',['../classcolvar__grid.html#a44046656fa8400d6bf6583416ddb4c85',1,'colvar_grid']]]
 ];

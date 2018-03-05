@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['keep_5fhills',['keep_hills',['../classcolvarbias__meta.html#a4d8cf0fb72781af77ed7bc94ad65b096',1,'colvarbias_meta']]],
-  ['key',['key',['../classcolvarmodule_1_1atom__group.html#a329a4a86cd59e5617727349662bd965d',1,'colvarmodule::atom_group']]],
-  ['kinetic_5fenergy',['kinetic_energy',['../classcolvar.html#a479b832e3912c29f8fa097378f8460e8',1,'colvar']]]
+  ['jd',['jd',['../classcolvar_1_1cvc.html#a12e8a53f1077996e42a4791e3d3074ca',1,'colvar::cvc']]]
 ];

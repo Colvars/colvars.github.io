@@ -1,11 +1,19 @@
 var searchData=
 [
-  ['gaussian_5fwidth',['gaussian_width',['../classcolvarbias__restraint__histogram.html#af93a6a0eaebcda947e396cefbe199c26',1,'colvarbias_restraint_histogram']]],
-  ['grad',['grad',['../classcolvarmodule_1_1atom.html#a4025f9073c212c8603dea8f61450225e',1,'colvarmodule::atom']]],
-  ['grid',['grid',['../classcolvarbias__histogram.html#aec5424ae0dbc963108317ec5bf3fd9e7',1,'colvarbias_histogram']]],
-  ['grids_5ffreq',['grids_freq',['../classcolvarbias__meta.html#a11d9c2c7e59fba6a32103628b9f448f3',1,'colvarbias_meta']]],
-  ['group1',['group1',['../classcolvar_1_1distance.html#abc311def7962f17330488a0ad2f6a084',1,'colvar::distance::group1()'],['../classcolvar_1_1distance__inv.html#abb5feb6477b8c56c2c8d5f118b6fa09d',1,'colvar::distance_inv::group1()'],['../classcolvar_1_1distance__pairs.html#aeaf83bb992ab4f3ae0e4826ddb6ea191',1,'colvar::distance_pairs::group1()'],['../classcolvar_1_1angle.html#aea832689367c337342d24c74dfe00ddb',1,'colvar::angle::group1()'],['../classcolvar_1_1dipole__angle.html#a6daefbf0bb5e9414a43ac92cf5da783f',1,'colvar::dipole_angle::group1()'],['../classcolvar_1_1dihedral.html#a7ecfca4724473afae4c6424e51d6ef82',1,'colvar::dihedral::group1()'],['../classcolvar_1_1coordnum.html#adb330d18cd9cb2199fedfa9b50c71451',1,'colvar::coordnum::group1()'],['../classcolvar_1_1selfcoordnum.html#a481d7ecf93458fd61d56be66b86b33ee',1,'colvar::selfcoordnum::group1()']]],
-  ['group2',['group2',['../classcolvar_1_1distance.html#a24915db5e005defc572f7d3a6e74d245',1,'colvar::distance::group2()'],['../classcolvar_1_1distance__inv.html#a264001f5b0eb827faa9fe93f9d47fae0',1,'colvar::distance_inv::group2()'],['../classcolvar_1_1distance__pairs.html#a2bfbf6879506f619a0fad01890ae34b8',1,'colvar::distance_pairs::group2()'],['../classcolvar_1_1angle.html#a6168e669f28c49956a1f86cfc5bab1b8',1,'colvar::angle::group2()'],['../classcolvar_1_1dipole__angle.html#ae09b7aa9a663f63a98f2b6677636d9ec',1,'colvar::dipole_angle::group2()'],['../classcolvar_1_1dihedral.html#ad225acfcaf5cf8d6c08c75797eb034c0',1,'colvar::dihedral::group2()'],['../classcolvar_1_1coordnum.html#a39d855fcc7ef7046406ee1197be9f884',1,'colvar::coordnum::group2()']]],
-  ['group3',['group3',['../classcolvar_1_1angle.html#a196f28e8322901b94b2f7dbc68a84bf6',1,'colvar::angle::group3()'],['../classcolvar_1_1dipole__angle.html#a9449871b7d5120f3b52d0d0b1d90612f',1,'colvar::dipole_angle::group3()'],['../classcolvar_1_1dihedral.html#a84f04b4ec21fd4e0eb549c7939e231ed',1,'colvar::dihedral::group3()']]],
-  ['group4',['group4',['../classcolvar_1_1dihedral.html#a115b67a86a2fcf0e671e629707ceb4da',1,'colvar::dihedral']]]
+  ['f',['f',['../classcolvar.html#a1c2a22a1016d075fb0c178160a6a343b',1,'colvar']]],
+  ['f_5fold',['f_old',['../classcolvar.html#ac997604e3ad9e85c1a98efbc7c42fad0',1,'colvar']]],
+  ['fb',['fb',['../classcolvar.html#a5797e399be3f07656ca629c5357b7ad0',1,'colvar']]],
+  ['fb_5factual',['fb_actual',['../classcolvar.html#ad895a0fa650aff226071de92e973e763',1,'colvar']]],
+  ['fit_5fgradients',['fit_gradients',['../classcolvarmodule_1_1atom__group.html#a9f47e14ce3b47efa8b6a77ffb9e57834',1,'colvarmodule::atom_group']]],
+  ['fitting_5fgroup',['fitting_group',['../classcolvarmodule_1_1atom__group.html#ad32c2b3700219d15f8d9965bcabb2e65',1,'colvarmodule::atom_group']]],
+  ['fixed_5faxis',['fixed_axis',['../classcolvar_1_1distance__z.html#a4ddacce652519a4f3a63665a25aed83a',1,'colvar::distance_z']]],
+  ['fj',['fj',['../classcolvar.html#a653233a31027628d61c3f08d0c21de58',1,'colvar']]],
+  ['force_5fk',['force_k',['../classcolvarbias__restraint__k.html#a146c3e4ddc97733b73469e76dd912ec6',1,'colvarbias_restraint_k::force_k()'],['../classcolvarbias__restraint__histogram.html#a517858459d101946c1351e9721f4a609',1,'colvarbias_restraint_histogram::force_k()']]],
+  ['force_5fk_5fexp',['force_k_exp',['../classcolvarbias__restraint__k__moving.html#ae56126c8418eddeb31292ea41a09211d',1,'colvarbias_restraint_k_moving']]],
+  ['force_5fk_5fincr',['force_k_incr',['../classcolvarbias__restraint__k__moving.html#a5568f8986d427c8aba19ccdbdfd56c8e',1,'colvarbias_restraint_k_moving']]],
+  ['force_5fscript_5fdefined',['force_script_defined',['../classcolvarproxy__script.html#ab7a704267f58260ce68d5e6913fda57a',1,'colvarproxy_script']]],
+  ['fr',['fr',['../classcolvar.html#a96afb151773f647bf182a4e679127366',1,'colvar']]],
+  ['ft',['ft',['../classcolvar.html#ad27fad6f1211cccf9b2dafaf4787f9f2',1,'colvar::ft()'],['../classcolvar_1_1cvc.html#a65f2cc4aad4a485579a3d8bb096ac78a',1,'colvar::cvc::ft()']]],
+  ['ft_5freported',['ft_reported',['../classcolvar.html#ab61e0b9d2a9de816b587262ee9a9142e',1,'colvar']]],
+  ['function_5ftype',['function_type',['../classcolvar_1_1cvc.html#a0964a6c8a3ef14d8489fbfc4e75a0ea7',1,'colvar::cvc']]]
 ];

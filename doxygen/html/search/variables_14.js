@@ -1,12 +1,22 @@
 var searchData=
 [
-  ['update_5ffreq',['update_freq',['../classcolvarbias__alb.html#a3c5b0adc33fff5da40cbc87a5731f6ad',1,'colvarbias_alb']]],
-  ['update_5fstatus',['update_status',['../classcolvarbias__meta.html#a761766480539f23515161a2ed4aa325d',1,'colvarbias_meta']]],
-  ['upper_5fboundaries',['upper_boundaries',['../classcolvar__grid.html#a032ecf8dfc1d8f6d25edfb71eaaaf014',1,'colvar_grid']]],
-  ['upper_5fboundary',['upper_boundary',['../classcolvar.html#a9dbee4623a73b2650a3ab75ded20cf0c',1,'colvar::upper_boundary()'],['../classcolvarbias__restraint__histogram.html#afdfe817243e46ed24fd6c9478ab5e04f',1,'colvarbias_restraint_histogram::upper_boundary()']]],
-  ['upper_5fwall',['upper_wall',['../classcolvar.html#ae7aadc4293c9fac473d26a9f7bb3491a',1,'colvar']]],
-  ['upper_5fwall_5fk',['upper_wall_k',['../classcolvar.html#afe47a52e627bee7d44668f7fca203875',1,'colvar::upper_wall_k()'],['../classcolvarbias__restraint__harmonic__walls.html#a06020b2090b2a50d09a6134b6147ae9d',1,'colvarbias_restraint_harmonic_walls::upper_wall_k()']]],
-  ['upper_5fwalls',['upper_walls',['../classcolvarbias__restraint__harmonic__walls.html#adbedc0cf45c404dcd81c58c01d314444',1,'colvarbias_restraint_harmonic_walls']]],
-  ['use_5fgrids',['use_grids',['../classcolvarbias__meta.html#a1893ca0c315f92104b541250a69b4494',1,'colvarbias_meta']]],
-  ['use_5fscripted_5fforces',['use_scripted_forces',['../classcolvarmodule.html#a82833852c8b01bf6fa889906575bc9cf',1,'colvarmodule']]]
+  ['target_5fcenters',['target_centers',['../classcolvarbias__restraint__centers__moving.html#a0332728290c37d74867a836e9bc32219',1,'colvarbias_restraint_centers_moving']]],
+  ['target_5fequil_5fsteps',['target_equil_steps',['../classcolvarbias__restraint__k__moving.html#a2ecdb6836f3ed8864112b90e52e5392b',1,'colvarbias_restraint_k_moving']]],
+  ['target_5fforce_5fk',['target_force_k',['../classcolvarbias__restraint__k__moving.html#ab79f6091ee6544017c9e944634a2d403',1,'colvarbias_restraint_k_moving']]],
+  ['target_5fnstages',['target_nstages',['../classcolvarbias__restraint__moving.html#aea1ed7b9d7e3618eb958613db28ae7c0',1,'colvarbias_restraint_moving']]],
+  ['target_5fnsteps',['target_nsteps',['../classcolvarbias__restraint__moving.html#a1da29b1e57bbb6efa45a7ebb5a5a4a90',1,'colvarbias_restraint_moving']]],
+  ['thermostat_5ftemperature',['thermostat_temperature',['../classcolvarproxy__namd.html#aa82e64a81d203cea0bd15a7861b07758',1,'colvarproxy_namd']]],
+  ['theta',['theta',['../classcolvar_1_1alpha__angles.html#ad3001a74aa4e18dbef2f949e84d2522f',1,'colvar::alpha_angles']]],
+  ['theta_5fref',['theta_ref',['../classcolvar_1_1alpha__angles.html#a2df3467bbb0eed44d650d6a2f5c3f695',1,'colvar::alpha_angles']]],
+  ['theta_5ftol',['theta_tol',['../classcolvar_1_1alpha__angles.html#a06ad0aca07d64ff0c071227c7d57b889',1,'colvar::alpha_angles']]],
+  ['ti_5favg_5fforces',['ti_avg_forces',['../classcolvarbias__ti.html#a83fadb0019a4b78af957ad7475c4426d',1,'colvarbias_ti']]],
+  ['ti_5fbin',['ti_bin',['../classcolvarbias__ti.html#aaa11493120dccc706684569b14b73d46',1,'colvarbias_ti']]],
+  ['ti_5fcount',['ti_count',['../classcolvarbias__ti.html#ae3e4616ebce96db0e5b1a532d9a60663',1,'colvarbias_ti']]],
+  ['ti_5fsystem_5fforces',['ti_system_forces',['../classcolvarbias__ti.html#a4380810d8d03cd1126e8ad59e0d4c3c1',1,'colvarbias_ti']]],
+  ['time_5fstep_5ffactor',['time_step_factor',['../classcolvardeps.html#af9fca6cfc343e41910514d00fcbc772a',1,'colvardeps']]],
+  ['total_5fbias_5fenergy',['total_bias_energy',['../classcolvarmodule.html#a7a5a4cccf4d66137beac717cb7ea3e63',1,'colvarmodule']]],
+  ['total_5fcharge',['total_charge',['../classcolvarmodule_1_1atom__group.html#a4c26f62873dcb096abb209e3beeea65c',1,'colvarmodule::atom_group']]],
+  ['total_5fforce',['total_force',['../classcolvarmodule_1_1atom.html#ab7811c179d02b64da05a6d53279d201f',1,'colvarmodule::atom']]],
+  ['total_5fmass',['total_mass',['../classcolvarmodule_1_1atom__group.html#a73528e59fe1cfccf557f612f5681f57b',1,'colvarmodule::atom_group']]],
+  ['type',['type',['../classcolvardeps_1_1feature.html#aaae3a01a03ab51e01f6fb8449c71fee0',1,'colvardeps::feature']]]
 ];

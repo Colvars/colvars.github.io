@@ -1,14 +1,12 @@
 var searchData=
 [
-  ['v12',['v12',['../classcolvar_1_1distance__xy.html#a5a0f5384636bf9ddba2dde23cd457664',1,'colvar::distance_xy']]],
-  ['v_5ffdiff',['v_fdiff',['../classcolvar.html#aa62f01db7e5b063e9f9ab18fac3e5cb4',1,'colvar']]],
-  ['v_5freported',['v_reported',['../classcolvar.html#a95f2fece7c36c4f27664256330054cc5',1,'colvar']]],
-  ['value_5ftype',['value_type',['../classcolvarvalue.html#ae5dd1b418a731a80e4d90bc431cd12c0',1,'colvarvalue']]],
-  ['vector1d_5fvalue',['vector1d_value',['../classcolvarvalue.html#ad01f76030670a7789f3c6bf2141fc2a0',1,'colvarvalue']]],
-  ['vel',['vel',['../classcolvarmodule_1_1atom.html#ad5833d775723908cfcaf325b0308bfbb',1,'colvarmodule::atom']]],
-  ['vmd',['vmd',['../classcolvarproxy__vmd.html#a78dff91177b772a99db73a2821649043',1,'colvarproxy_vmd']]],
-  ['vmdmol',['vmdmol',['../classcolvarproxy__vmd.html#a93653170953144fa86a880181e589023',1,'colvarproxy_vmd']]],
-  ['vmdmol_5fframe',['vmdmol_frame',['../classcolvarproxy__vmd.html#aa23e9eac128153a22834f9a21e252a41',1,'colvarproxy_vmd']]],
-  ['vmdmolid',['vmdmolid',['../classcolvarproxy__vmd.html#aab69b4890507b87575e754ecabab8614',1,'colvarproxy_vmd']]],
-  ['vr',['vr',['../classcolvar.html#a089931b0743de631c3a5d5237faf05df',1,'colvar']]]
+  ['update_5ffreq',['update_freq',['../classcolvarbias__alb.html#a3c5b0adc33fff5da40cbc87a5731f6ad',1,'colvarbias_alb']]],
+  ['update_5fstatus',['update_status',['../classcolvarbias__meta.html#a761766480539f23515161a2ed4aa325d',1,'colvarbias_meta']]],
+  ['upper_5fboundaries',['upper_boundaries',['../classcolvar__grid.html#a032ecf8dfc1d8f6d25edfb71eaaaf014',1,'colvar_grid']]],
+  ['upper_5fboundary',['upper_boundary',['../classcolvar.html#a9dbee4623a73b2650a3ab75ded20cf0c',1,'colvar::upper_boundary()'],['../classcolvarbias__restraint__histogram.html#afdfe817243e46ed24fd6c9478ab5e04f',1,'colvarbias_restraint_histogram::upper_boundary()']]],
+  ['upper_5fwall',['upper_wall',['../classcolvar.html#ae7aadc4293c9fac473d26a9f7bb3491a',1,'colvar']]],
+  ['upper_5fwall_5fk',['upper_wall_k',['../classcolvar.html#afe47a52e627bee7d44668f7fca203875',1,'colvar::upper_wall_k()'],['../classcolvarbias__restraint__harmonic__walls.html#a06020b2090b2a50d09a6134b6147ae9d',1,'colvarbias_restraint_harmonic_walls::upper_wall_k()']]],
+  ['upper_5fwalls',['upper_walls',['../classcolvarbias__restraint__harmonic__walls.html#adbedc0cf45c404dcd81c58c01d314444',1,'colvarbias_restraint_harmonic_walls']]],
+  ['use_5fgrids',['use_grids',['../classcolvarbias__meta.html#a1893ca0c315f92104b541250a69b4494',1,'colvarbias_meta']]],
+  ['use_5fscripted_5fforces',['use_scripted_forces',['../classcolvarmodule.html#a82833852c8b01bf6fa889906575bc9cf',1,'colvarmodule']]]
 ];
