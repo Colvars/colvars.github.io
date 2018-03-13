@@ -15,6 +15,7 @@ var searchData=
   ['update_5finput',['update_input',['../classcolvarproxy.html#a00d8ea11d8f36f0891af3ae75c00c36d',1,'colvarproxy::update_input()'],['../classcolvarproxy__vmd.html#afcacde3711de761ce9e07b8e1c8c5f66',1,'colvarproxy_vmd::update_input()']]],
   ['update_5fmass',['update_mass',['../classcolvarmodule_1_1atom.html#afe5193ee5de40315abb7e97d7032d23a',1,'colvarmodule::atom']]],
   ['update_5foutput',['update_output',['../classcolvarproxy.html#a11b92f0b22498a20ca7cbfbc0d5e0ad4',1,'colvarproxy']]],
+  ['update_5fpbc_5flattice',['update_pbc_lattice',['../classcolvarproxy__system.html#a3c66f44f9884db5aecce398652cb4fe3',1,'colvarproxy_system']]],
   ['update_5freplicas_5fregistry',['update_replicas_registry',['../classcolvarbias__meta.html#af6af2e0b3e5ac7cb985fe1af790971c0',1,'colvarbias_meta']]],
   ['update_5fsystem_5fforces',['update_system_forces',['../classcolvarbias__ti.html#a74dae24feb767d957bf4f5917028749d',1,'colvarbias_ti']]]
 ];

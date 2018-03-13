@@ -120,7 +120,7 @@ var searchData=
   ['coupling_5faccum',['coupling_accum',['../classcolvarbias__alb.html#a12b8271dbc9cfa7ed761c1a7bdb10904',1,'colvarbias_alb']]],
   ['coupling_5frate',['coupling_rate',['../classcolvarbias__alb.html#aa453e4b21260b198a7714277d30413c1',1,'colvarbias_alb']]],
   ['create_5fhill',['create_hill',['../classcolvarbias__meta.html#a759df492d7a9c75feeddb262b27c7c68',1,'colvarbias_meta']]],
-  ['create_5fsorted_5fids',['create_sorted_ids',['../classcolvarmodule_1_1atom__group.html#addd59dd45db2a6418f9e6dd02c9ee8ca',1,'colvarmodule::atom_group']]],
+  ['create_5fsorted_5fids',['create_sorted_ids',['../classcolvarmodule_1_1atom__group.html#acfe51fc9d7cf7a8c2ac620e668bda3f1',1,'colvarmodule::atom_group']]],
   ['crossing_5fthreshold',['crossing_threshold',['../classcolvarmodule_1_1rotation.html#a7d01297c081c23c54711871319c35e68',1,'colvarmodule::rotation']]],
   ['current_5fbin',['current_bin',['../classcolvarbias.html#a57c20dbf532a0d33c4eb060090d6422d',1,'colvarbias']]],
   ['current_5fbin_5fscalar',['current_bin_scalar',['../classcolvar__grid.html#ae7b0139651ce17ce4a0a9c73607533a4',1,'colvar_grid::current_bin_scalar(int const i) const '],['../classcolvar__grid.html#a70258e5ce02e2807922ae9e4039e6a1d',1,'colvar_grid::current_bin_scalar(int const i, int const iv) const ']]],

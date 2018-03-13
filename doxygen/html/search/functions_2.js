@@ -82,7 +82,7 @@ var searchData=
   ['cos_5ftheta',['cos_theta',['../classcolvarmodule_1_1rotation.html#aa1254c093aea4ce10f4b3eb38324a340',1,'colvarmodule::rotation']]],
   ['cosine',['cosine',['../classcolvarmodule_1_1quaternion.html#af4ae6ac1adcf12727507d65102c51dc9',1,'colvarmodule::quaternion']]],
   ['create_5fhill',['create_hill',['../classcolvarbias__meta.html#a759df492d7a9c75feeddb262b27c7c68',1,'colvarbias_meta']]],
-  ['create_5fsorted_5fids',['create_sorted_ids',['../classcolvarmodule_1_1atom__group.html#addd59dd45db2a6418f9e6dd02c9ee8ca',1,'colvarmodule::atom_group']]],
+  ['create_5fsorted_5fids',['create_sorted_ids',['../classcolvarmodule_1_1atom__group.html#acfe51fc9d7cf7a8c2ac620e668bda3f1',1,'colvarmodule::atom_group']]],
   ['current_5fbin',['current_bin',['../classcolvarbias.html#a57c20dbf532a0d33c4eb060090d6422d',1,'colvarbias']]],
   ['current_5fbin_5fscalar',['current_bin_scalar',['../classcolvar__grid.html#ae7b0139651ce17ce4a0a9c73607533a4',1,'colvar_grid::current_bin_scalar(int const i) const '],['../classcolvar__grid.html#a70258e5ce02e2807922ae9e4039e6a1d',1,'colvar_grid::current_bin_scalar(int const i, int const iv) const ']]],
   ['current_5fbin_5fscalar_5fbound',['current_bin_scalar_bound',['../classcolvar__grid.html#a2644d6b3fbaf6050f0bdf8157c0539e4',1,'colvar_grid']]],

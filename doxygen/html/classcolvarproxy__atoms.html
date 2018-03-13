@@ -127,13 +127,12 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a84999b9c229071947063f378b988f873">clear_atom</a> (int index)</td></tr>
 <tr class="memdesc:a84999b9c229071947063f378b988f873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by the atom class destructor: rather than deleting the array slot (costly) set the corresponding atoms_ncopies to zero. <br/></td></tr>
 <tr class="separator:a84999b9c229071947063f378b988f873"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1581bee2fca0c00f9d25541219e0cc2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#ac1581bee2fca0c00f9d25541219e0cc2">load_atoms</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double const pdb_field_value=0.0)</td></tr>
-<tr class="memdesc:ac1581bee2fca0c00f9d25541219e0cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read atom identifiers from a file.  <a href="#ac1581bee2fca0c00f9d25541219e0cc2">More...</a><br/></td></tr>
-<tr class="separator:ac1581bee2fca0c00f9d25541219e0cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac063588d9dfbe9c2f7a4d815eb973a42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac063588d9dfbe9c2f7a4d815eb973a42"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#ac063588d9dfbe9c2f7a4d815eb973a42">load_coords</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;pos, const std::vector&lt; int &gt; &amp;indices, std::string const &amp;pdb_field, double const pdb_field_value=0.0)</td></tr>
-<tr class="memdesc:ac063588d9dfbe9c2f7a4d815eb973a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the coordinates for a group of atoms from a file (usually a PDB); if "pos" is already allocated, the number of its elements must match the number of atoms in "filename". <br/></td></tr>
-<tr class="separator:ac063588d9dfbe9c2f7a4d815eb973a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94d5673604728900dfa0708799f20953"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a94d5673604728900dfa0708799f20953">load_atoms</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
+<tr class="memdesc:a94d5673604728900dfa0708799f20953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select atom IDs from a file (usually PDB)  <a href="#a94d5673604728900dfa0708799f20953">More...</a><br/></td></tr>
+<tr class="separator:a94d5673604728900dfa0708799f20953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5dfd5ce53c303ecbaf69c4ec897f415"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#ae5dfd5ce53c303ecbaf69c4ec897f415">load_coords</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;pos, std::vector&lt; int &gt; const &amp;sorted_ids, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
+<tr class="memdesc:ae5dfd5ce53c303ecbaf69c4ec897f415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a set of coordinates from a file (usually PDB); if "pos" is already allocated, the number of its elements must match the number of entries in "filename".  <a href="#ae5dfd5ce53c303ecbaf69c4ec897f415">More...</a><br/></td></tr>
+<tr class="separator:ae5dfd5ce53c303ecbaf69c4ec897f415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1277f250913b30defe77773d25e878c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1277f250913b30defe77773d25e878c2"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a1277f250913b30defe77773d25e878c2">reset</a> ()</td></tr>
 <tr class="memdesc:a1277f250913b30defe77773d25e878c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear atomic data. <br/></td></tr>
@@ -346,7 +345,7 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 
 </div>
 </div>
-<a class="anchor" id="ac1581bee2fca0c00f9d25541219e0cc2"></a>
+<a class="anchor" id="a94d5673604728900dfa0708799f20953"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -374,7 +373,7 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double const&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>pdb_field_value</em> = <code>0.0</code>&#160;</td>
         </tr>
         <tr>
@@ -390,17 +389,84 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 </table>
 </div><div class="memdoc">
 
-<p>Read atom identifiers from a file. </p>
+<p>Select atom IDs from a file (usually PDB) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>name of the file (usually a PDB) </td></tr>
+    <tr><td class="paramname">filename</td><td>name of the file </td></tr>
     <tr><td class="paramname">atoms</td><td>array to which atoms read from "filename" will be appended </td></tr>
-    <tr><td class="paramname">pdb_field</td><td>(optiona) if "filename" is a PDB file, use this field to determine which are the atoms to be set </td></tr>
+    <tr><td class="paramname">pdb_field</td><td>(optional) if the file is a PDB and this string is non-empty, select atoms for which this field is non-zero </td></tr>
+    <tr><td class="paramname">pdb_field_value</td><td>(optional) if non-zero, select only atoms whose pdb_field equals this </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a473f5fcbdbbf4e781f2f03df1e1f5cd3">colvarproxy_namd</a>, and <a class="el" href="classcolvarproxy__vmd.html#ad80979c544a218d40222bf074021c9e1">colvarproxy_vmd</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5dfd5ce53c303ecbaf69c4ec897f415"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvarproxy_atoms::load_coords </td>
+          <td>(</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>sorted_ids</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>pdb_field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pdb_field_value</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load a set of coordinates from a file (usually PDB); if "pos" is already allocated, the number of its elements must match the number of entries in "filename". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of the file </td></tr>
+    <tr><td class="paramname">pos</td><td>array of coordinates </td></tr>
+    <tr><td class="paramname">sorted_ids</td><td>array of sorted internal IDs, used to loop through the file only once </td></tr>
+    <tr><td class="paramname">pdb_field</td><td>(optional) if the file is a PDB and this string is non-empty, select atoms for which this field is non-zero </td></tr>
+    <tr><td class="paramname">pdb_field_value</td><td>(optional) if non-zero, select only atoms whose pdb_field equals this </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a755fdf621ea41208dd6e2e39ac6a2955">colvarproxy_namd</a>, and <a class="el" href="classcolvarproxy__vmd.html#a8fbc95e759cbb5969bd570004c057582">colvarproxy_vmd</a>.</p>
 
 </div>
 </div>
@@ -411,7 +477,7 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 5 2018 08:24:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 14 2018 13:19:04 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

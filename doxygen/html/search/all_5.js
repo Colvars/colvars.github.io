@@ -19,7 +19,6 @@ var searchData=
   ['error',['error',['../classcolvarmodule.html#a9a852c1136dcc84494b1c8d9b6323793',1,'colvarmodule::error()'],['../classcolvarproxy.html#a7529d2446ea51946818bd0271e66b28b',1,'colvarproxy::error()'],['../classcolvarproxy__namd.html#aa2ed7a4d0fdeb0ea2498dbefeb0bc0c1',1,'colvarproxy_namd::error()'],['../classcolvarproxy__vmd.html#ac65a9f9d7a3df3a5c6c689bada07ff2b',1,'colvarproxy_vmd::error()']]],
   ['errorcode',['errorCode',['../classcolvarmodule.html#a9d228802609d99aaee261e01b8768e06',1,'colvarmodule']]],
   ['exec_5fcommand',['exec_command',['../classcolvarscript.html#a75c1d2b42a6eccc49fd787465b79d0cc',1,'colvarscript']]],
-  ['exit',['exit',['../classcolvarmodule.html#ac3b193f142c6661ca2d188ec03f2375a',1,'colvarmodule']]],
   ['expand_5fboundaries',['expand_boundaries',['../classcolvar.html#a8cc773ce95f9533b84099a4119979c27',1,'colvar']]],
   ['expand_5fgrids',['expand_grids',['../classcolvarbias__meta.html#a5c94fb8cc68b41763ee7fece1017d532',1,'colvarbias_meta']]],
   ['exponent',['exponent',['../classcolvar_1_1distance__inv.html#aa42f5573b439ba9700c80d0d4d273a06',1,'colvar::distance_inv']]],

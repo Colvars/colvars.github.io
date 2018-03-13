@@ -9,6 +9,7 @@ var searchData=
   ['rank',['rank',['../classcolvarbias.html#ae52ca5fbd5a4b782c41884e1b81ccacb',1,'colvarbias']]],
   ['real_5fvalue',['real_value',['../classcolvarvalue.html#a3d8306bfe40191ebabdf0448db42ae7d',1,'colvarvalue']]],
   ['rebin_5fgrids',['rebin_grids',['../classcolvarbias__meta.html#a5474168b9843a9fe5fce5f4e261fafba',1,'colvarbias_meta']]],
+  ['reciprocal_5fcell_5fx',['reciprocal_cell_x',['../classcolvarproxy__system.html#a73887f740b0a2c7b2e4b3cd8e0bd3096',1,'colvarproxy_system']]],
   ['reduction',['reduction',['../classcolvarproxy__namd.html#adb099b35dd2457a711f177111c297704',1,'colvarproxy_namd']]],
   ['ref1',['ref1',['../classcolvar_1_1distance__z.html#a8eb8fab874c6370e247aff2fe799ded3',1,'colvar::distance_z']]],
   ['ref2',['ref2',['../classcolvar_1_1distance__z.html#abe77b74ab1e5f8ee3d0f7456c59f0508',1,'colvar::distance_z']]],
