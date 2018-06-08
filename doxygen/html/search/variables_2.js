@@ -9,7 +9,6 @@ var searchData=
   ['b_5fdebug_5fgradients',['b_debug_gradients',['../classcolvarmodule_1_1rotation.html#aa4a250ae92a59d20a6dd2d9c3de8820d',1,'colvarmodule::rotation']]],
   ['b_5fdelete_5frequested',['b_delete_requested',['../classcolvarproxy.html#a50b00959ecfae8456b70c278cf9b1d74',1,'colvarproxy']]],
   ['b_5fdummy',['b_dummy',['../classcolvarmodule_1_1atom__group.html#ab6eedc3e64db231962f90bbb56659192',1,'colvarmodule::atom_group']]],
-  ['b_5fgroup2_5fcenter_5fonly',['b_group2_center_only',['../classcolvar_1_1coordnum.html#a509ab793160d4675dfd0c1ae89e96204',1,'colvar::coordnum']]],
   ['b_5fhills_5ftraj',['b_hills_traj',['../classcolvarbias__meta.html#a9e4580ba8205f845de2a5880bc03495a',1,'colvarbias_meta']]],
   ['b_5fno_5fpbc',['b_no_PBC',['../classcolvar_1_1distance.html#aaf60a77886014e242d33ccd49b96e451',1,'colvar::distance::b_no_PBC()'],['../classcolvar_1_1distance__z.html#af70d72d427e994d9f7321fdc31d17c87',1,'colvar::distance_z::b_no_PBC()'],['../classcolvar_1_1distance__inv.html#a8b2c78350ad90eea73aa55231ab10b6d',1,'colvar::distance_inv::b_no_PBC()'],['../classcolvar_1_1distance__pairs.html#a0f1c665cc255610ae81ee237f7d0e76b',1,'colvar::distance_pairs::b_no_PBC()']]],
   ['b_5foutput_5fcenters',['b_output_centers',['../classcolvarbias__alb.html#aa99d2a49b960d04456b3924df92425ce',1,'colvarbias_alb::b_output_centers()'],['../classcolvarbias__restraint__centers__moving.html#add6eb54c21cb7a07f72c95ba1538e0c5',1,'colvarbias_restraint_centers_moving::b_output_centers()']]],

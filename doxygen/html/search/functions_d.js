@@ -9,6 +9,7 @@ var searchData=
   ['num_5fbiases',['num_biases',['../classcolvarmodule.html#a56a0436c1efda04bdf3f503db07658da',1,'colvarmodule']]],
   ['num_5fbiases_5ffeature',['num_biases_feature',['../classcolvarmodule.html#a9087a53828f77cfb79b25f37b1d3c55d',1,'colvarmodule']]],
   ['num_5fbiases_5ftype',['num_biases_type',['../classcolvarmodule.html#a1e288f93d71a0f745431f6641536cd4f',1,'colvarmodule']]],
+  ['num_5fcvcs',['num_cvcs',['../classcolvar.html#a0c88a6ef353925882058275680483817',1,'colvar']]],
   ['num_5fdf',['num_df',['../classcolvarvalue.html#aeb5b6fc408dd1a9c2900ebdc6074e599',1,'colvarvalue']]],
   ['num_5fdimensions',['num_dimensions',['../classcolvarvalue.html#a9c910f3c66324ad1f3bbff8149c8d7da',1,'colvarvalue']]],
   ['num_5fvariables',['num_variables',['../classcolvarbias.html#aa71330cb0c995ed407850ec20c2284da',1,'colvarbias::num_variables()'],['../classcolvar__grid.html#a26635480259449bb7d54a0a217be2353',1,'colvar_grid::num_variables()'],['../classcolvarmodule.html#a644f91cead60f3384aed6fabb3e651d8',1,'colvarmodule::num_variables()']]],

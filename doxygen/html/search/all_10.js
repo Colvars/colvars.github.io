@@ -3,6 +3,8 @@ var searchData=
   ['p',['p',['../classcolvarbias__restraint__histogram.html#ae4077310bbd78d15fab0f607a847d848',1,'colvarbias_restraint_histogram']]],
   ['p2leg_5fopt',['p2leg_opt',['../classcolvarvalue.html#ae966c9f2a1bccc6a9b71b50a608db771',1,'colvarvalue::p2leg_opt(colvarvalue const &amp;x, std::vector&lt; colvarvalue &gt;::iterator &amp;xv, std::vector&lt; colvarvalue &gt;::iterator const &amp;xv_end, std::vector&lt; cvm::real &gt;::iterator &amp;result)'],['../classcolvarvalue.html#a4a0a055da195738c64a61a89630664f3',1,'colvarvalue::p2leg_opt(colvarvalue const &amp;x, std::list&lt; colvarvalue &gt;::iterator &amp;xv, std::list&lt; colvarvalue &gt;::iterator const &amp;xv_end, std::vector&lt; cvm::real &gt;::iterator &amp;result)']]],
   ['p_5fdiff',['p_diff',['../classcolvarbias__restraint__histogram.html#a37d8bf520e3e89ae2e686a2944f77bff',1,'colvarbias_restraint_histogram']]],
+  ['pairlist',['pairlist',['../classcolvar_1_1coordnum.html#ac34aed3502bb218fdf9fe156e646de76',1,'colvar::coordnum']]],
+  ['pairlist_5ffreq',['pairlist_freq',['../classcolvar_1_1coordnum.html#a83cdf6eeee9e876e2e3f28620ab8119d',1,'colvar::coordnum']]],
   ['parse',['parse',['../classcolvarmodule.html#a8be73a0b3c3d72211fbd8349e7d1d41e',1,'colvarmodule::parse()'],['../classcolvarmodule_1_1atom__group.html#aeeaec3b0308cc2446cf72abb162ef560',1,'colvarmodule::atom_group::parse()']]],
   ['parse_5fanalysis',['parse_analysis',['../classcolvar.html#a2fb6d950b3dec7303a0d5fe3d5170774',1,'colvar']]],
   ['parse_5fbiases',['parse_biases',['../classcolvarmodule.html#af51dcd2d41b68e0c0842a15bdac82355',1,'colvarmodule']]],

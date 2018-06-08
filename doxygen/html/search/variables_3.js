@@ -9,6 +9,7 @@ var searchData=
   ['colvar_5fforces',['colvar_forces',['../classcolvarbias.html#ae99956532b05dbf016b208ada82ac943',1,'colvarbias']]],
   ['colvars',['colvars',['../classcolvarbias.html#a981fef00c9f3bdd8dd03c0617297e56b',1,'colvarbias::colvars()'],['../classcolvarproxy.html#a24379da129608ec8fbbb3effa820bd1d',1,'colvarproxy::colvars()']]],
   ['comm',['comm',['../classcolvarbias__meta.html#a9a0ec395c17ab9d9be88222a30244bb8',1,'colvarbias_meta']]],
+  ['config_5fkey',['config_key',['../classcolvar_1_1cvc.html#ae961414532e6af255b32cddb35c8e1cf',1,'colvar::cvc']]],
   ['config_5fs',['config_s',['../classcolvarmodule.html#a309ffe35101eeb952334ca2f3eeded37',1,'colvarmodule']]],
   ['coupling_5faccum',['coupling_accum',['../classcolvarbias__alb.html#a12b8271dbc9cfa7ed761c1a7bdb10904',1,'colvarbias_alb']]],
   ['coupling_5frate',['coupling_rate',['../classcolvarbias__alb.html#aa453e4b21260b198a7714277d30413c1',1,'colvarbias_alb']]],
