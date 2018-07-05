@@ -6,8 +6,8 @@
 
 for i in *.html
 do
-  grep 'tex4ht:ref:'  $i | \
-  sed 's/href="#\(.*\)">.*<!--tex4ht:ref: \(.*\) --><\/a>.*/s\/\1"\/\2"\//' | \
+  grep '^href=.*tex4ht:ref:' $i | \
+  sed 's/href="#\(.*\)">.*<!--tex4ht:ref: \(.*\) --><\/a>.*/s\/"\1"\/"\2"\//' | \
   awk 'BEGIN {printf "\"{ "} {printf $0 " ; "} END {printf " }\""}' | \
   xargs sed -i $i -e
 

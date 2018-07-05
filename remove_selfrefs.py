@@ -10,7 +10,7 @@ html_file = open(sys.argv[1], 'r')
 html = html_file.read()
 html_file.close()
 
-soup = BeautifulSoup(html)
+soup = BeautifulSoup(html, 'lxml')
 
 for ref in soup('selfref'):
     ref.decompose()
