@@ -7,7 +7,7 @@ var searchData=
   ['x_5freported',['x_reported',['../classcolvar.html#ade2aae897f0573a2f038f5c0603b6661',1,'colvar']]],
   ['x_5frestart',['x_restart',['../classcolvar.html#a175f754e7062d91c1e8fd213afa6f8c3',1,'colvar']]],
   ['xr',['xr',['../classcolvar.html#a6a027b5139f0165c2527e90772761407',1,'colvar']]],
-  ['xx',['xx',['../classcolvarmodule_1_1rmatrix.html#a1f6a860e2ebfea5a09b6c7f3548b93b4',1,'colvarmodule::rmatrix::xx()'],['../classcolvarmodule_1_1rmatrix.html#a7ea5d3f82bd897bc60bc6b9b6d6135f2',1,'colvarmodule::rmatrix::xx() const ']]],
-  ['xy',['xy',['../classcolvarmodule_1_1rmatrix.html#aac160a171463ed8a8f0074a1402ea8ab',1,'colvarmodule::rmatrix::xy()'],['../classcolvarmodule_1_1rmatrix.html#ada8731f747b1504090a287c460dca671',1,'colvarmodule::rmatrix::xy() const ']]],
-  ['xz',['xz',['../classcolvarmodule_1_1rmatrix.html#a72d591c7257dfb11674b401dea072bcd',1,'colvarmodule::rmatrix::xz()'],['../classcolvarmodule_1_1rmatrix.html#a90dafcdcdaa4b636d97ea92e392cd022',1,'colvarmodule::rmatrix::xz() const ']]]
+  ['xx',['xx',['../classcolvarmodule_1_1rmatrix.html#a1f6a860e2ebfea5a09b6c7f3548b93b4',1,'colvarmodule::rmatrix::xx()'],['../classcolvarmodule_1_1rmatrix.html#abfbe21937b5cfc4c50eafa390eeca565',1,'colvarmodule::rmatrix::xx() const']]],
+  ['xy',['xy',['../classcolvarmodule_1_1rmatrix.html#aac160a171463ed8a8f0074a1402ea8ab',1,'colvarmodule::rmatrix::xy()'],['../classcolvarmodule_1_1rmatrix.html#a24314b70fda07e6168894643f53f14d2',1,'colvarmodule::rmatrix::xy() const']]],
+  ['xz',['xz',['../classcolvarmodule_1_1rmatrix.html#a72d591c7257dfb11674b401dea072bcd',1,'colvarmodule::rmatrix::xz()'],['../classcolvarmodule_1_1rmatrix.html#a7893081c6bb9d55f99e0404b24c5b76a',1,'colvarmodule::rmatrix::xz() const']]]
 ];

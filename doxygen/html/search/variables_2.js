@@ -26,5 +26,6 @@ var searchData=
   ['bias_5ftemperature',['bias_temperature',['../classcolvarbias__meta.html#a54607f583f3e1d3c36a52ec3a6852c42',1,'colvarbias_meta']]],
   ['bias_5ftype',['bias_type',['../classcolvarbias.html#acb2e5c8601ca9f25869c8197d62c5450',1,'colvarbias']]],
   ['biases',['biases',['../classcolvar.html#a1eebc46ed5c021fc18a1b8f374db4a21',1,'colvar::biases()'],['../classcolvarmodule.html#ac843326ecf8cf46c7852ccdc746d31a9',1,'colvarmodule::biases()']]],
+  ['bondedcuda',['bondedCUDA',['../classSimParameters.html#a89ccc3eccff9c9f5a9fcc59029e7e578',1,'SimParameters']]],
   ['boundaries_5ftype',['boundaries_type',['../classcolvarproxy__system.html#ada312da21ae5b62d1f31032537cadfaf',1,'colvarproxy_system']]]
 ];

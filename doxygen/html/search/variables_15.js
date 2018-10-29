@@ -9,5 +9,8 @@ var searchData=
   ['upper_5fwall_5fk',['upper_wall_k',['../classcolvar.html#afe47a52e627bee7d44668f7fca203875',1,'colvar::upper_wall_k()'],['../classcolvarbias__restraint__harmonic__walls.html#a06020b2090b2a50d09a6134b6147ae9d',1,'colvarbias_restraint_harmonic_walls::upper_wall_k()']]],
   ['upper_5fwalls',['upper_walls',['../classcolvarbias__restraint__harmonic__walls.html#adbedc0cf45c404dcd81c58c01d314444',1,'colvarbias_restraint_harmonic_walls']]],
   ['use_5fgrids',['use_grids',['../classcolvarbias__meta.html#a1893ca0c315f92104b541250a69b4494',1,'colvarbias_meta']]],
-  ['use_5fscripted_5fforces',['use_scripted_forces',['../classcolvarmodule.html#a82833852c8b01bf6fa889906575bc9cf',1,'colvarmodule']]]
+  ['use_5fscripted_5fforces',['use_scripted_forces',['../classcolvarmodule.html#a82833852c8b01bf6fa889906575bc9cf',1,'colvarmodule']]],
+  ['usecuda2',['useCUDA2',['../classSimParameters.html#a92730b413950352b8c6a70c875785460',1,'SimParameters']]],
+  ['usecudadisable',['useCUDAdisable',['../classSimParameters.html#a0633d392cc258df1a5b006cad604f699',1,'SimParameters']]],
+  ['usepmecuda',['usePMECUDA',['../classSimParameters.html#a023b239a30743ee3cac49605bc2b5fc7',1,'SimParameters']]]
 ];

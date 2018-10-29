@@ -18,6 +18,7 @@ var searchData=
   ['starting_5fforce_5fk',['starting_force_k',['../classcolvarbias__restraint__k__moving.html#a9e10d74c1a5be37d01ecf2a2c85d1d40',1,'colvarbias_restraint_k_moving']]],
   ['state_5ffile_5fstep',['state_file_step',['../classcolvarbias.html#a9d3579aa09b94763fa62778d65ab3844',1,'colvarbias']]],
   ['stochrescalefreq',['stochRescaleFreq',['../classSimParameters.html#a17365c2005f6c993a053d93d190e6be0',1,'SimParameters']]],
+  ['stochrescaleheat',['stochRescaleHeat',['../classSimParameters.html#ad5c54d0c8d44c66b6e7c911310279d17',1,'SimParameters']]],
   ['stochrescaleon',['stochRescaleOn',['../classSimParameters.html#adcffd1bcbf1d2f4e641c5457d9ce6645',1,'SimParameters']]],
   ['stochrescaleperiod',['stochRescalePeriod',['../classSimParameters.html#a6cfab20692ca380b5618eb91c3eba46a',1,'SimParameters']]],
   ['stochrescaletemp',['stochRescaleTemp',['../classSimParameters.html#af3270ef0caec6fcfa234cdf9c7f3b5ce',1,'SimParameters']]],
