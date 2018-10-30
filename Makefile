@@ -29,16 +29,36 @@ $(PDFDIR)/%.pdf: $(DOCSRCDIR)/%.tex $(BIBTEX) $(DOCSRCDIR)/colvars-refman-main.t
 	mv -f $(DOCSRCDIR)/`basename $@` $(PDFDIR)
 	make -C $(DOCSRCDIR) clean
 
+HTLATEX = htlatex
+HTLATEX_OPTS = "html5mjlatex.cfg, charset=utf-8" " -cunihtf -utf8"
+
 # Note: this relies on up-to-date bbl files; run pdflatex first!
-colvars-refman-namd/colvars-refman-namd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-namd.tex 
-	cd $(DOCSRCDIR); htlatex  colvars-refman-namd.tex "xhtml, charset=utf-8" " -cunihtf -utf8" "-d$(DOCDIR)/colvars-refman-namd/"; cd $(DOCDIR)/colvars-refman-namd; sh ../fix_section_labels.sh
-colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-vmd.tex 
-	cd $(DOCSRCDIR); htlatex  colvars-refman-vmd.tex "xhtml, charset=utf-8" " -cunihtf -utf8" "-d$(DOCDIR)/colvars-refman-vmd/"; cd $(DOCDIR)/colvars-refman-vmd; sh ../fix_section_labels.sh
-colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-lammps.tex 
-	cd $(DOCSRCDIR); htlatex  colvars-refman-lammps.tex "xhtml, charset=utf-8" " -cunihtf -utf8" "-d$(DOCDIR)/colvars-refman-lammps/"; cd $(DOCDIR)/colvars-refman-lammps; sh ../fix_section_labels.sh
+colvars-refman-namd/colvars-refman-namd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-namd.tex
+	cd $(DOCSRCDIR); \
+	cp -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
+	$(HTLATEX) colvars-refman-namd.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-namd/"; \
+	rm -f html5mjlatex.cfg; \
+	cd $(DOCDIR)/colvars-refman-namd; \
+	sh ../fix_section_labels.sh
+
+colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-vmd.tex
+	cd $(DOCSRCDIR); \
+	cp -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
+	$(HTLATEX) colvars-refman-vmd.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-vmd/"; \
+	rm -f html5mjlatex.cfg; \
+	cd $(DOCDIR)/colvars-refman-vmd; \
+	sh ../fix_section_labels.sh
+
+colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-lammps.tex
+	cd $(DOCSRCDIR); \
+	cp -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
+	$(HTLATEX) colvars-refman-lammps.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-lammps/"; \
+	rm -f html5mjlatex.cfg; \
+	cd $(DOCDIR)/colvars-refman-lammps; \
+	sh ../fix_section_labels.sh
 
 doxygen: doxygen/html/index.html
-   
+
 doxygen/html/index.html: $(SRCDIR)/*.h doxygen/Doxyfile
 	cd doxygen; doxygen
 
@@ -47,4 +67,3 @@ clean:
 
 veryclean: clean
 	rm -f $(PDF) colvars-refman-namd/* colvars-refman-vmd/* colvars-refman-lammps/*
-
