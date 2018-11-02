@@ -39,6 +39,7 @@ colvars-refman-namd/colvars-refman-namd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colv
 	$(HTLATEX) colvars-refman-namd.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-namd/"; \
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-namd; \
+	cp -f $(DOCDIR)/images/colvars_diagram.png ./ ; \
 	sh ../fix_section_labels.sh
 
 colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-vmd.tex
@@ -47,6 +48,7 @@ colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvar
 	$(HTLATEX) colvars-refman-vmd.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-vmd/"; \
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-vmd; \
+	cp -f $(DOCDIR)/images/colvars_diagram.png ./ ; \
 	sh ../fix_section_labels.sh
 
 colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-lammps.tex
@@ -55,6 +57,7 @@ colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/
 	$(HTLATEX) colvars-refman-lammps.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-lammps/"; \
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-lammps; \
+	cp -f $(DOCDIR)/images/colvars_diagram.png ./ ; \
 	sh ../fix_section_labels.sh
 
 doxygen: doxygen/html/index.html
