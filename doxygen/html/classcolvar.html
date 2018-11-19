@@ -276,6 +276,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a437a8f73c7044c5587e50f9ca56bed4f">calc</a> ()</td></tr>
 <tr class="memdesc:a437a8f73c7044c5587e50f9ca56bed4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the colvar's value and related quantities. <br /></td></tr>
 <tr class="separator:a437a8f73c7044c5587e50f9ca56bed4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08856c74809cbe1428821ebe83426dab"><td class="memItemLeft" align="right" valign="top"><a id="a08856c74809cbe1428821ebe83426dab"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a08856c74809cbe1428821ebe83426dab">end_of_step</a> ()</td></tr>
+<tr class="memdesc:a08856c74809cbe1428821ebe83426dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out operations needed before next step is run. <br /></td></tr>
+<tr class="separator:a08856c74809cbe1428821ebe83426dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb5aa1af38fd3d4937913d178d35156c"><td class="memItemLeft" align="right" valign="top"><a id="adb5aa1af38fd3d4937913d178d35156c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#adb5aa1af38fd3d4937913d178d35156c">calc_cvcs</a> (int first=0, size_t <a class="el" href="classcolvar.html#a07f6d9b3b01cc8442922eed499f0af01">num_cvcs</a>=0)</td></tr>
 <tr class="memdesc:adb5aa1af38fd3d4937913d178d35156c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate a subset of the colvar components (CVCs) currently active (default: all active CVCs) Note: both arguments refer to the sect of <em>active</em> CVCs, not all CVCs. <br /></td></tr>
@@ -384,10 +388,10 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a2fb6d950b3dec7303a0d5fe3d5170774">parse_analysis</a> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:a2fb6d950b3dec7303a0d5fe3d5170774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the analysis tasks. <br /></td></tr>
 <tr class="separator:a2fb6d950b3dec7303a0d5fe3d5170774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9467b434d2255a7a4df2f45252dc267d"><td class="memItemLeft" align="right" valign="top"><a id="a9467b434d2255a7a4df2f45252dc267d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a9467b434d2255a7a4df2f45252dc267d">analyze</a> ()</td></tr>
-<tr class="memdesc:a9467b434d2255a7a4df2f45252dc267d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform analysis tasks. <br /></td></tr>
-<tr class="separator:a9467b434d2255a7a4df2f45252dc267d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb915570da486a02e1804c587cb1a03d"><td class="memItemLeft" align="right" valign="top"><a id="afb915570da486a02e1804c587cb1a03d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#afb915570da486a02e1804c587cb1a03d">analyze</a> ()</td></tr>
+<tr class="memdesc:afb915570da486a02e1804c587cb1a03d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform analysis tasks. <br /></td></tr>
+<tr class="separator:afb915570da486a02e1804c587cb1a03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55ebf8e1aa59606243ddb475ad52b7ea"><td class="memItemLeft" align="right" valign="top"><a id="a55ebf8e1aa59606243ddb475ad52b7ea"></a>
 std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a55ebf8e1aa59606243ddb475ad52b7ea">read_traj</a> (std::istream &amp;is)</td></tr>
 <tr class="memdesc:a55ebf8e1aa59606243ddb475ad52b7ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the value from a collective variable trajectory file. <br /></td></tr>
@@ -702,10 +706,10 @@ Protected Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a03a552bdc729990fc7d5a28dc9958575">update_active_cvc_square_norm</a> ()</td></tr>
 <tr class="memdesc:a03a552bdc729990fc7d5a28dc9958575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the sum of square coefficients for active cvcs. <br /></td></tr>
 <tr class="separator:a03a552bdc729990fc7d5a28dc9958575"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70e2c2e2745ac0731010183dddd9294c"><td class="memItemLeft" align="right" valign="top"><a id="a70e2c2e2745ac0731010183dddd9294c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a70e2c2e2745ac0731010183dddd9294c">calc_vel_acf</a> (std::list&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt; &amp;v_history, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;v)</td></tr>
-<tr class="memdesc:a70e2c2e2745ac0731010183dddd9294c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity ACF, scalar product between v(0) and v(t) <br /></td></tr>
-<tr class="separator:a70e2c2e2745ac0731010183dddd9294c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1ba06690602612f399653fbaef8ef5"><td class="memItemLeft" align="right" valign="top"><a id="a4a1ba06690602612f399653fbaef8ef5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a4a1ba06690602612f399653fbaef8ef5">calc_vel_acf</a> (std::list&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt; &amp;v_history, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;v)</td></tr>
+<tr class="memdesc:a4a1ba06690602612f399653fbaef8ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity ACF, scalar product between v(0) and v(t) <br /></td></tr>
+<tr class="separator:a4a1ba06690602612f399653fbaef8ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d5da73d6cfc56acb702dd5d27b8942d"><td class="memItemLeft" align="right" valign="top"><a id="a8d5da73d6cfc56acb702dd5d27b8942d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a8d5da73d6cfc56acb702dd5d27b8942d">calc_coor_acf</a> (std::list&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt; &amp;<a class="el" href="classcolvar.html#a91bb29f700c82550b8768b4f1965b366">x_history</a>, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;<a class="el" href="classcolvar.html#ae1c53c1f1ea0a589203738d39f8b2d11">x</a>)</td></tr>
 <tr class="memdesc:a8d5da73d6cfc56acb702dd5d27b8942d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate ACF, scalar product between x(0) and x(t) (does not work with scalar numbers) <br /></td></tr>
@@ -718,14 +722,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#acf55528be59d7c525401f56888564103">calc_acf</a> ()</td></tr>
 <tr class="memdesc:acf55528be59d7c525401f56888564103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the auto-correlation function (ACF) <br /></td></tr>
 <tr class="separator:acf55528be59d7c525401f56888564103"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a361d96836f280a1c14df59306827af15"><td class="memItemLeft" align="right" valign="top"><a id="a361d96836f280a1c14df59306827af15"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a361d96836f280a1c14df59306827af15">write_acf</a> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:a361d96836f280a1c14df59306827af15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the ACF to a file. <br /></td></tr>
-<tr class="separator:a361d96836f280a1c14df59306827af15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dfecf1977e29d97045d41f9d12036c0"><td class="memItemLeft" align="right" valign="top"><a id="a9dfecf1977e29d97045d41f9d12036c0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a9dfecf1977e29d97045d41f9d12036c0">calc_runave</a> ()</td></tr>
-<tr class="memdesc:a9dfecf1977e29d97045d41f9d12036c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the running average and its standard deviation. <br /></td></tr>
-<tr class="separator:a9dfecf1977e29d97045d41f9d12036c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e0d6d4ebd2cfdf481f16434f5a0d30"><td class="memItemLeft" align="right" valign="top"><a id="af6e0d6d4ebd2cfdf481f16434f5a0d30"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#af6e0d6d4ebd2cfdf481f16434f5a0d30">write_acf</a> (std::ostream &amp;os)</td></tr>
+<tr class="memdesc:af6e0d6d4ebd2cfdf481f16434f5a0d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the ACF to a file. <br /></td></tr>
+<tr class="separator:af6e0d6d4ebd2cfdf481f16434f5a0d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70dce16d078328dea9a1f05984e1fba0"><td class="memItemLeft" align="right" valign="top"><a id="a70dce16d078328dea9a1f05984e1fba0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a70dce16d078328dea9a1f05984e1fba0">calc_runave</a> ()</td></tr>
+<tr class="memdesc:a70dce16d078328dea9a1f05984e1fba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the running average and its standard deviation. <br /></td></tr>
+<tr class="separator:a70dce16d078328dea9a1f05984e1fba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd1d2096d4f67abd3a492638eef6dbfe"><td class="memItemLeft" align="right" valign="top"><a id="abd1d2096d4f67abd3a492638eef6dbfe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#abd1d2096d4f67abd3a492638eef6dbfe">build_atom_list</a> (void)</td></tr>
 <tr class="memdesc:abd1d2096d4f67abd3a492638eef6dbfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the sorted list of atom IDs for atoms involved in all cvcs (called when enabling f_cv_collect_gradients) <br /></td></tr>
@@ -1366,7 +1370,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 31 2018 14:13:07 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 19 2018 09:06:29 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

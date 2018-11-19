@@ -1,7 +1,6 @@
 var searchData=
 [
   ['b_5f1site_5fforce',['b_1site_force',['../classcolvar_1_1angle.html#a0428e37e93de5982102686ba284c35ac',1,'colvar::angle::b_1site_force()'],['../classcolvar_1_1dipole__angle.html#a351b436c4d6718cd8b5b7eec1f78e457',1,'colvar::dipole_angle::b_1site_force()'],['../classcolvar_1_1dihedral.html#aa5747f706808995a29337e79f93d4be8',1,'colvar::dihedral::b_1site_force()']]],
-  ['b_5fanalysis',['b_analysis',['../classcolvarmodule.html#a71b25d76d6dcfb95b6e704c031efba83',1,'colvarmodule']]],
   ['b_5fanisotropic',['b_anisotropic',['../classcolvar_1_1coordnum.html#abef15fca699acc101e3896265dba773e',1,'colvar::coordnum::b_anisotropic()'],['../classcolvar_1_1groupcoordnum.html#a120e920110c5018d51642c9e337fe326',1,'colvar::groupcoordnum::b_anisotropic()']]],
   ['b_5fcenter',['b_center',['../classcolvarmodule_1_1atom__group.html#a60f0c94819a26e9d576316fd0e73b3da',1,'colvarmodule::atom_group']]],
   ['b_5fchg_5fcenters',['b_chg_centers',['../classcolvarbias__restraint__moving.html#a32cb1e8e6b463ee18b9cdc8bf5637d95',1,'colvarbias_restraint_moving']]],
@@ -36,7 +35,7 @@ var searchData=
   ['bin_5fto_5fvalue_5fscalar',['bin_to_value_scalar',['../classcolvar__grid.html#a533507da3f51b60ac4d9dba2549e961c',1,'colvar_grid::bin_to_value_scalar(int const &amp;i_bin, int const i) const'],['../classcolvar__grid.html#aefe2261db501aa739f49d90eaab2dca3',1,'colvar_grid::bin_to_value_scalar(int const &amp;i_bin, colvarvalue const &amp;new_offset, cvm::real const &amp;new_width) const']]],
   ['boltzmann',['boltzmann',['../classcolvarmodule.html#af4927fe43c6763740531b419aa2afa62',1,'colvarmodule::boltzmann()'],['../classcolvarproxy__system.html#af9d03a32b14a83f2c63807ec6cbeec0a',1,'colvarproxy_system::boltzmann()'],['../classcolvarproxy__namd.html#ade83ea25f55df5629f761f885bf3fce6',1,'colvarproxy_namd::boltzmann()'],['../classcolvarproxy__vmd.html#aa5b92beecc11fac09a44439fc8caf21c',1,'colvarproxy_vmd::boltzmann()']]],
   ['bondedcuda',['bondedCUDA',['../classSimParameters.html#a89ccc3eccff9c9f5a9fcc59029e7e578',1,'SimParameters']]],
-  ['boundaries_5ftype',['boundaries_type',['../classcolvarproxy__system.html#ada312da21ae5b62d1f31032537cadfaf',1,'colvarproxy_system::boundaries_type()'],['../classcolvarproxy__system.html#a207331557018b66dce3c71407bef9a77',1,'colvarproxy_system::Boundaries_type()']]],
+  ['boundaries_5ftype',['Boundaries_type',['../classcolvarproxy__system.html#a207331557018b66dce3c71407bef9a77',1,'colvarproxy_system::Boundaries_type()'],['../classcolvarproxy__system.html#ada312da21ae5b62d1f31032537cadfaf',1,'colvarproxy_system::boundaries_type()']]],
   ['build_5fatom_5flist',['build_atom_list',['../classcolvar.html#abd1d2096d4f67abd3a492638eef6dbfe',1,'colvar']]],
   ['build_5fmatrix',['build_matrix',['../classcolvarmodule_1_1rotation.html#a2895722231e8ff0b8d6100a914620558',1,'colvarmodule::rotation']]]
 ];

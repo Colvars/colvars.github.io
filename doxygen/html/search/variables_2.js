@@ -1,7 +1,6 @@
 var searchData=
 [
   ['b_5f1site_5fforce',['b_1site_force',['../classcolvar_1_1angle.html#a0428e37e93de5982102686ba284c35ac',1,'colvar::angle::b_1site_force()'],['../classcolvar_1_1dipole__angle.html#a351b436c4d6718cd8b5b7eec1f78e457',1,'colvar::dipole_angle::b_1site_force()'],['../classcolvar_1_1dihedral.html#aa5747f706808995a29337e79f93d4be8',1,'colvar::dihedral::b_1site_force()']]],
-  ['b_5fanalysis',['b_analysis',['../classcolvarmodule.html#a71b25d76d6dcfb95b6e704c031efba83',1,'colvarmodule']]],
   ['b_5fanisotropic',['b_anisotropic',['../classcolvar_1_1coordnum.html#abef15fca699acc101e3896265dba773e',1,'colvar::coordnum::b_anisotropic()'],['../classcolvar_1_1groupcoordnum.html#a120e920110c5018d51642c9e337fe326',1,'colvar::groupcoordnum::b_anisotropic()']]],
   ['b_5fcenter',['b_center',['../classcolvarmodule_1_1atom__group.html#a60f0c94819a26e9d576316fd0e73b3da',1,'colvarmodule::atom_group']]],
   ['b_5fchg_5fcenters',['b_chg_centers',['../classcolvarbias__restraint__moving.html#a32cb1e8e6b463ee18b9cdc8bf5637d95',1,'colvarbias_restraint_moving']]],
