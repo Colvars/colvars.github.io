@@ -153,12 +153,14 @@ the moving harmonic restraint (<a href="#sec:colvarbias_harmonic">6.4<!--tex4ht:
 </p><!--l. 96--><p class="indent">   Reading this input in plain English: the variable here named <span class="ptmri7t-x-x-109">dist </span>consists in a
 distance function between the centers of two groups: the ligand (atoms 42 to 55) and the
 <!--l. 96--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>-carbon
-atoms of residues 15 to 30 in the protein (selected from the index group “<span class="ot1-zi4r-0-x-x-109">C-alpha</span><span class="ot1-zi4r-0-x-x-109">_15-30</span>”).
-To the “<span class="ptmri7t-x-x-109">dist</span>” variable, we apply a <span class="ot1-zi4r-0-x-x-109">harmonic </span>potential of force constant 20 energy
-units/Å<!--l. 97--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>,
-initially centered around a value of 4 Å, which will increase to 15 Å over 500,000 simulation steps.
-</p><!--l. 99--><p class="indent">   The atom selection keywords is detailed in section <a href="#sec:colvar_atom_groups">5<!--tex4ht:ref: sec:colvar_atom_groups --></a>. If the selection is too complex to implement only via
-internal keywords, an external index ﬁle may be created following the format used in GROMACS:<br class="newline"/><a class="url" href="http://manual.gromacs.org/documentation/current/user-guide/file-formats.html\#ndx"><span class="ot1-zi4r-0-x-x-109">http://manual.gromacs.org/documentation/current/user-guide/file-formats.html</span><span class="zptmcm7y-x-x-109">∖</span><span class="ot1-zi4r-0-x-x-109">#ndx</span></a><br class="newline"/>or by using the <span class="ot1-zi4r-0-x-x-109">group2ndx </span>LAMMPS command.
+atoms of residues 15 to 30 in the protein (selected from the index group “<span class="ot1-zi4r-0-x-x-109">C-alpha</span><span class="ot1-zi4r-0-x-x-109">_15-30</span>”). To
+the “<span class="ptmri7t-x-x-109">dist</span>” variable, we apply a <span class="ot1-zi4r-0-x-x-109">harmonic </span>potential of force constant 20 (energy units)/(length
+unit)<!--l. 97--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>,
+initially centered around a value of 4 (length unit), which will increase to 15 (length unit) over 500,000 simulation
+steps.
+</p><!--l. 99--><p class="indent">   The atom selection keywords is detailed in section <a href="#sec:colvar_atom_groups">5<!--tex4ht:ref: sec:colvar_atom_groups --></a>. If the selection is too complex to implement
+only via internal keywords, an external index ﬁle may be created following the NDX format used in
+GROMACS:<br class="newline"/><a class="url" href="http://manual.gromacs.org/documentation/current/user-guide/file-formats.html"><span class="ot1-zi4r-0-x-x-109">http://manual.gromacs.org/documentation/current/user-guide/file-formats.html</span></a><br class="newline"/>or by using the <span class="ot1-zi4r-0-x-x-109">group2ndx </span>LAMMPS command.
 </p><!--l. 106--><p class="indent">
 </p><!--l. 106--><p class="noindent"><a id="sec:colvarmodule">
 </a></p>
@@ -176,7 +178,7 @@ conﬁguration ﬁle for the Colvars module, followed by one or more of the foll
 corresponding arguments:
 </p>
 <ul class="itemize1">
-<li class="itemize"><a id="dx1-5001"></a> <span class="ot1-zi4r-0-x-x-120">input </span><!--l. 222--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">⟨<mspace class="thinspace" width="0.3em"></mspace></mo></math>Name
+<li class="itemize"><a id="dx1-5001"></a> <span class="ot1-zi4r-0-x-x-120">input </span><!--l. 222--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Name
      or preﬁx of the input state ﬁle<!--l. 222--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>Keyword of the <span class="ot1-zi4r-0-x-x-109">fix colvars </span>command <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>string <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If a value is provided, it is interpreted as either the name of the input state ﬁle, or as the
      preﬁx of the ﬁle named <span class="ptmri7t-x-x-109">input</span><span class="ot1-zi4r-0-x-x-109">.colvars.state</span>. This ﬁle contains information needed to continue a
