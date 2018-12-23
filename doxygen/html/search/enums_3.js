@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['feature_5ftype',['feature_type',['../classcolvardeps.html#a507771dd1cc74ce0d9a549a6f8d8cd9c',1,'colvardeps']]],
   ['features_5fatomgroup',['features_atomgroup',['../classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95',1,'colvardeps']]],
   ['features_5fbiases',['features_biases',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603da',1,'colvardeps']]],
   ['features_5fcolvar',['features_colvar',['../classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628',1,'colvardeps']]],

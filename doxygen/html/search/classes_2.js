@@ -3,6 +3,7 @@ var searchData=
   ['dihedpc',['dihedPC',['../classcolvar_1_1dihedPC.html',1,'colvar']]],
   ['dihedral',['dihedral',['../classcolvar_1_1dihedral.html',1,'colvar']]],
   ['dipole_5fangle',['dipole_angle',['../classcolvar_1_1dipole__angle.html',1,'colvar']]],
+  ['dipole_5fmagnitude',['dipole_magnitude',['../classcolvar_1_1dipole__magnitude.html',1,'colvar']]],
   ['distance',['distance',['../classcolvar_1_1distance.html',1,'colvar']]],
   ['distance_5fdir',['distance_dir',['../classcolvar_1_1distance__dir.html',1,'colvar']]],
   ['distance_5finv',['distance_inv',['../classcolvar_1_1distance__inv.html',1,'colvar']]],

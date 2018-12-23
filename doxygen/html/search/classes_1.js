@@ -30,7 +30,9 @@ var searchData=
   ['colvarproxy',['colvarproxy',['../classcolvarproxy.html',1,'']]],
   ['colvarproxy_5fatom_5fgroups',['colvarproxy_atom_groups',['../classcolvarproxy__atom__groups.html',1,'']]],
   ['colvarproxy_5fatoms',['colvarproxy_atoms',['../classcolvarproxy__atoms.html',1,'']]],
+  ['colvarproxy_5fgromacs',['colvarproxy_gromacs',['../classcolvarproxy__gromacs.html',1,'']]],
   ['colvarproxy_5fio',['colvarproxy_io',['../classcolvarproxy__io.html',1,'']]],
+  ['colvarproxy_5flammps',['colvarproxy_lammps',['../classcolvarproxy__lammps.html',1,'']]],
   ['colvarproxy_5fnamd',['colvarproxy_namd',['../classcolvarproxy__namd.html',1,'']]],
   ['colvarproxy_5freplicas',['colvarproxy_replicas',['../classcolvarproxy__replicas.html',1,'']]],
   ['colvarproxy_5fscript',['colvarproxy_script',['../classcolvarproxy__script.html',1,'']]],
@@ -40,6 +42,7 @@ var searchData=
   ['colvarproxy_5fvmd',['colvarproxy_vmd',['../classcolvarproxy__vmd.html',1,'']]],
   ['colvarscript',['colvarscript',['../classcolvarscript.html',1,'']]],
   ['colvarvalue',['colvarvalue',['../classcolvarvalue.html',1,'']]],
+  ['commdata',['commdata',['../structcommdata.html',1,'']]],
   ['coordnum',['coordnum',['../classcolvar_1_1coordnum.html',1,'colvar']]],
   ['cvc',['cvc',['../classcolvar_1_1cvc.html',1,'colvar']]]
 ];
