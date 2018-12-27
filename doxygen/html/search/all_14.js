@@ -8,7 +8,6 @@ var searchData=
   ['update_5facc_5fwork',['update_acc_work',['../classcolvarbias__restraint__centers__moving.html#a88a09e538e10fd6375bfd9449fb32bbf',1,'colvarbias_restraint_centers_moving::update_acc_work()'],['../classcolvarbias__restraint__k__moving.html#a945db7f4cc11a9c54e26595f31c79225',1,'colvarbias_restraint_k_moving::update_acc_work()']]],
   ['update_5factive_5fcvc_5fsquare_5fnorm',['update_active_cvc_square_norm',['../classcolvar.html#a03a552bdc729990fc7d5a28dc9958575',1,'colvar']]],
   ['update_5fatomic_5fproperties',['update_atomic_properties',['../classcolvarproxy__vmd.html#a5e48973581840e812cd8e090ff1fbcaf',1,'colvarproxy_vmd']]],
-  ['update_5fbias',['update_bias',['../classcolvarbias__abf.html#aaeebc1316149545fb7a750ee49b68d3c',1,'colvarbias_abf']]],
   ['update_5fcenters',['update_centers',['../classcolvarbias__restraint__centers__moving.html#a448b2bf5aa89043a1ab8888974ddd7a7',1,'colvarbias_restraint_centers_moving']]],
   ['update_5fcharge',['update_charge',['../classcolvarmodule_1_1atom.html#a62145583a266fbf40bd6d5840238cf13',1,'colvarmodule::atom']]],
   ['update_5fcolvar_5fforces',['update_colvar_forces',['../classcolvarmodule.html#a325fc7ac57e99a5513e72a2c9dee48e1',1,'colvarmodule']]],

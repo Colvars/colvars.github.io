@@ -80,6 +80,5 @@ var searchData=
   ['sup_5fcoeff',['sup_coeff',['../classcolvar_1_1cvc.html#a0fcbf9fc6484f6ea71deb01472d90f95',1,'colvar::cvc']]],
   ['sup_5fnp',['sup_np',['../classcolvar_1_1cvc.html#a0a5b794497d12e7a37a5666f1eb1c85c',1,'colvar::cvc']]],
   ['sw',['sW',['../classcolvarbias__meta_1_1hill.html#aa8583e52b1545df70c27b2fc440384e0',1,'colvarbias_meta::hill']]],
-  ['switching_5ffunction',['switching_function',['../classcolvar_1_1coordnum.html#a1831a3130fc937dab9c4cbb1280b05c0',1,'colvar::coordnum']]],
-  ['system_5fforce',['system_force',['../classcolvarbias__abf.html#a8caac1b2850ae8c7d6add4456307d214',1,'colvarbias_abf']]]
+  ['switching_5ffunction',['switching_function',['../classcolvar_1_1coordnum.html#a1831a3130fc937dab9c4cbb1280b05c0',1,'colvar::coordnum']]]
 ];
