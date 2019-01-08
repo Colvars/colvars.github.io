@@ -2967,7 +2967,7 @@ half is typically omitted, resulting in a non-standard deﬁnition of the force 
 </p><!--l. 4133--><p class="indent">   The formula above includes the characteristic length scale
 <!--l. 4133--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></math> of the
 colvar <!--l. 4133--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
-(keyword <a href="#colvar|lowerBoundary"><span class="ot1-zi4r-0-x-x-109">lowerBoundary</span></a>) to allow the deﬁnition of a multi-dimensional restraint with a uniﬁed force constant: </p><table class="equation"><tr><td>
+(keyword <a href="#colvar|width"><span class="ot1-zi4r-0-x-x-109">width</span></a>) to allow the deﬁnition of a multi-dimensional restraint with a uniﬁed force constant: </p><table class="equation"><tr><td>
 <a id="eq:colvarbias_harmonic_multi"></a>
 <!--l. 4134--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
 <mi>V</mi> <mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mfrac><mrow><mn>1</mn></mrow>
@@ -2975,10 +2975,10 @@ colvar <!--l. 4133--><math display="inline" xmlns="http://www.w3.org/1998/Math/M
 <mrow><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></mrow></mfrac> </mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup>
 </math></td><td class="eq-no">(26)</td></tr></table>
 <!--l. 4139--><p class="indent">   If one-dimensional or homogeneous multi-dimensional restraints are deﬁned, and there are no other uses for the parameter
-<!--l. 4139--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></math>, <span class="ptmri7t-x-x-109">the parameter </span><span class="ot1-zi4r-0-x-x-109">width </span><span class="ptmri7t-x-x-109">can</span>
-<span class="ptmri7t-x-x-109">be left at its default value of </span><!--l. 4139--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math>.
-</p><!--l. 4143--><p class="indent">   A harmonic restraint is set up by a <span class="ot1-zi4r-0-x-x-109">harmonic</span><span class="ot1-zi4r-0-x-x-109"> </span><span class="cmsy-10x-x-109">{</span><span class="ot1-zi4r-0-x-x-109">...</span><span class="cmsy-10x-x-109">} </span>block, which may contain (in addition to the standard
-option <span class="ot1-zi4r-0-x-x-109">colvars</span>) the following keywords: </p>
+<!--l. 4139--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></math>, <span class="ot1-zi4r-0-x-x-109">width </span><span class="ptmri7t-x-x-109">can be left at</span>
+<span class="ptmri7t-x-x-109">its default value of </span><!--l. 4139--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math>.
+</p><!--l. 4143--><p class="indent">   A harmonic restraint is set up by a <span class="ot1-zi4r-0-x-x-109">harmonic</span><span class="ot1-zi4r-0-x-x-109"> </span><span class="cmsy-10x-x-109">{</span><span class="ot1-zi4r-0-x-x-109">...</span><span class="cmsy-10x-x-109">} </span>block, which may contain the following keywords:
+</p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-87003"></a> <span class="ot1-zi4r-0-x-x-120">name: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">name</span></a> in sec. <a href="#sec:colvarbias">6<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
@@ -2990,102 +2990,102 @@ option <span class="ot1-zi4r-0-x-x-109">colvars</span>) the following keywords: 
      </li>
 <li class="itemize"><a id="dx1-87007"></a> <span class="ot1-zi4r-0-x-x-120">writeTISamples: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">writeTISamples</span></a> in sec. <a href="#sec:colvarbias">6<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><a id="dx1-87008"></a> <span class="ot1-zi4r-0-x-x-120">forceConstant </span><!--l. 4166--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Scaled
-     force constant (kcal/mol)<!--l. 4166--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">1.0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This option deﬁnes a scaled force constant <!--l. 4166--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
+<li class="itemize"><a id="dx1-87008"></a> <span class="ot1-zi4r-0-x-x-120">forceConstant </span><!--l. 4164--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Scaled
+     force constant (kcal/mol)<!--l. 4164--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">1.0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This option deﬁnes a scaled force constant <!--l. 4164--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
      for the harmonic potential (eq. <a href="#eq:colvarbias_harmonic_multi">26<!--tex4ht:ref: eq:colvarbias_harmonic_multi --></a>). To ensure consistency for multidimensional restraints, it is divided
      internally by the square of the speciﬁc <span class="ot1-zi4r-0-x-x-109">width </span>of each variable (which is 1 by default). This makes
      all values eﬀectively dimensionless and of commensurate size. For instance, setting a scaled force
      constant of 10 kcal/mol acting on two variables, an angle with a <span class="ot1-zi4r-0-x-x-109">width </span>of 5 degrees and a distance
-     with a width of 0.5 Å, will apply actual force constants of 0.4 kcal/mol<!--l. 4166--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>degree<!--l. 4166--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow></mrow><mrow><mo class="MathClass-bin">−</mo><mn>2</mn></mrow></msup></math>
-     for the angle and 40 kcal/mol/Å<!--l. 4166--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>
+     with a width of 0.5 Å, will apply actual force constants of 0.4 kcal/mol<!--l. 4164--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>degree<!--l. 4164--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow></mrow><mrow><mo class="MathClass-bin">−</mo><mn>2</mn></mrow></msup></math>
+     for the angle and 40 kcal/mol/Å<!--l. 4164--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>
      for the distance. <span class="ptmri7t-x-x-109">The values of the actual force constants are always printed when the restraint is</span>
 <span class="ptmri7t-x-x-109">deﬁned.</span>
 </li>
-<li class="itemize"><a id="harmonic|centers"></a> <a id="dx1-87009"></a><span class="ot1-zi4r-0-x-x-120">centers </span><!--l. 4182--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Initial
-     harmonic restraint centers<!--l. 4182--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>space-separated list of colvar values <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>The centers (equilibrium values) of the restraint, <!--l. 4182--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mn>0</mn></mrow></msub></math>,
+<li class="itemize"><a id="harmonic|centers"></a> <a id="dx1-87009"></a><span class="ot1-zi4r-0-x-x-120">centers </span><!--l. 4180--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Initial
+     harmonic restraint centers<!--l. 4180--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>space-separated list of colvar values <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>The centers (equilibrium values) of the restraint, <!--l. 4180--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mn>0</mn></mrow></msub></math>,
      are entered here. The number of values must be the number of requested colvars. Each value is a
      decimal number if the corresponding colvar returns a scalar, a “<span class="ot1-zi4r-0-x-x-109">(x, y, z)</span>” triplet if it returns a unit
      vector or a vector, and a “<span class="ot1-zi4r-0-x-x-109">(q0, q1, q2, q3)</span>” quadruplet if it returns a rotational quaternion. If
      a colvar has periodicities or symmetries, its closest image to the restraint center is considered when
      calculating the harmonic potential.</li></ul>
-<!--l. 4185--><p class="indent"> <span class="ptmb7t-x-x-109">Tip: </span>A complex set of restraints can be applied to a system, by deﬁning several colvars, and applying one
+<!--l. 4183--><p class="indent"> <span class="ptmb7t-x-x-109">Tip: </span>A complex set of restraints can be applied to a system, by deﬁning several colvars, and applying one
 or more harmonic restraints to diﬀerent groups of colvars. In some cases, dozens of colvars can be
 deﬁned, but their value may not be relevant: to limit the size of the colvars trajectory ﬁle, it may be
 wise to disable <span class="ot1-zi4r-0-x-x-109">outputValue </span>for such “ancillary” variables, and leave it enabled only for “relevant”
 ones.
-</p><!--l. 4194--><p class="noindent"><a id="sec:colvarbias_smd">
+</p><!--l. 4192--><p class="noindent"><a id="sec:colvarbias_smd">
 </a></p>
 <h5 class="subsubsectionHead"><span class="titlemark">6.4.1    </span> <a id="sec:colvarbias_smd"></a>Moving restraints: steered molecular dynamics</h5>
-<!--l. 4194--><p class="noindent">
-</p><!--l. 4196--><p class="indent">   The following options allow to change gradually the centers of the harmonic restraints during a simulations.
+<!--l. 4192--><p class="noindent">
+</p><!--l. 4194--><p class="indent">   The following options allow to change gradually the centers of the harmonic restraints during a simulations.
 When the centers are changed continuously, a steered MD in a collective variable space is carried
 out.
 </p>
 <ul class="itemize1">
-<li class="itemize"><a id="dx1-88001"></a> <span class="ot1-zi4r-0-x-x-120">targetCenters </span><!--l. 4224--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Steer
-     the restraint centers towards these targets<!--l. 4224--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-88001"></a> <span class="ot1-zi4r-0-x-x-120">targetCenters </span><!--l. 4222--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Steer
+     the restraint centers towards these targets<!--l. 4222--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>space-separated list of colvar values <br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>When deﬁned, the current <span class="ot1-zi4r-0-x-x-109">centers </span>will be moved towards these values during the
      simulation.  By  default,  the  centers  are  moved  over  a  total  of  <span class="ot1-zi4r-0-x-x-109">targetNumSteps </span>steps  by  a  linear
      interpolation, in the spirit of Steered MD. If <span class="ot1-zi4r-0-x-x-109">targetNumStages </span>is set to a nonzero value, the change
      is performed in discrete stages, lasting <span class="ot1-zi4r-0-x-x-109">targetNumSteps </span>steps <span class="ptmri7t-x-x-109">each</span>. This second mode may be used
      to sample successive windows in the context of an Umbrella Sampling simulation. When continuing a
-     simulation run, the <span class="ot1-zi4r-0-x-x-109">centers </span>speciﬁed in the conﬁguration ﬁle <!--l. 4224--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">colvarsConfig</span><!--l. 4224--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math>
-     are overridden by those saved in the restart ﬁle <!--l. 4224--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">colvarsInput</span><!--l. 4224--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math>.
+     simulation run, the <span class="ot1-zi4r-0-x-x-109">centers </span>speciﬁed in the conﬁguration ﬁle <!--l. 4222--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">colvarsConfig</span><!--l. 4222--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math>
+     are overridden by those saved in the restart ﬁle <!--l. 4222--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">colvarsInput</span><!--l. 4222--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math>.
      To perform Steered MD in an arbitrary space of colvars, it is suﬃcient to use this option and enable
      <span class="ot1-zi4r-0-x-x-109">outputAccumulatedWork </span>and/or <span class="ot1-zi4r-0-x-x-109">outputAppliedForce </span>within each of the colvars involved.
      </li>
-<li class="itemize"><a id="dx1-88002"></a> <span class="ot1-zi4r-0-x-x-120">targetNumSteps </span><!--l. 4238--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Number
-     of steps for steering<!--l. 4238--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-88002"></a> <span class="ot1-zi4r-0-x-x-120">targetNumSteps </span><!--l. 4236--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Number
+     of steps for steering<!--l. 4236--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive integer <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>In single-stage (continuous) transformations, deﬁnes the number of MD steps required
      to move the restraint centers (or force constant) towards the values speciﬁed with <span class="ot1-zi4r-0-x-x-109">targetCenters </span>or
      <span class="ot1-zi4r-0-x-x-109">targetForceConstant</span>. After the target values have been reached, the centers (resp. force constant)
      are kept ﬁxed. In multi-stage transformations, this sets the number of MD steps <span class="ptmri7t-x-x-109">per stage</span>.
      </li>
-<li class="itemize"><a id="dx1-88003"></a> <span class="ot1-zi4r-0-x-x-120">outputCenters </span><!--l. 4249--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Write
-     the current centers to the trajectory ﬁle<!--l. 4249--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-88003"></a> <span class="ot1-zi4r-0-x-x-120">outputCenters </span><!--l. 4247--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Write
+     the current centers to the trajectory ﬁle<!--l. 4247--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>If this option is chosen and <span class="ot1-zi4r-0-x-x-109">colvarsTrajFrequency </span>is not zero, the positions of the
      restraint  centers  will  be  written  to  the  trajectory  ﬁle  during  the  simulation.  This  option  allows  to
      conveniently extract the PMF from the colvars trajectory ﬁles in a steered MD calculation.
      </li></ul>
-<!--l. 4253--><p class="indent"> <span class="ptmb7t-x-x-109">Note on restarting moving restraint simulations: </span>Information about the current step and stage of a
+<!--l. 4251--><p class="indent"> <span class="ptmb7t-x-x-109">Note on restarting moving restraint simulations: </span>Information about the current step and stage of a
 simulation with moving restraints is stored in the restart ﬁle (state ﬁle). Thus, such simulations can be
 run in several chunks, and restarted directly using the same colvars conﬁguration ﬁle. In case of a
 restart, the values of parameters such as <span class="ot1-zi4r-0-x-x-109">targetCenters</span>, <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>, etc. should not be changed
 manually.
-</p><!--l. 4262--><p class="noindent"><a id="sec:colvarbias_us">
+</p><!--l. 4260--><p class="noindent"><a id="sec:colvarbias_us">
 </a></p>
 <h5 class="subsubsectionHead"><span class="titlemark">6.4.2    </span> <a id="sec:colvarbias_us"></a>Moving restraints: umbrella sampling</h5>
-<!--l. 4262--><p class="noindent">
-</p><!--l. 4264--><p class="indent">   The centers of the harmonic restraints can also be changed in discrete stages: in this cases a one-dimensional
+<!--l. 4260--><p class="noindent">
+</p><!--l. 4262--><p class="indent">   The centers of the harmonic restraints can also be changed in discrete stages: in this cases a one-dimensional
 umbrella sampling simulation is performed. The sampling windows in simulation are calculated in sequence. The
 colvars trajectory ﬁle may then be used both to evaluate the correlation times between consecutive windows, and to
 calculate the frequency distribution of the colvar of interest in each window. Furthermore, frequency
 distributions on a predeﬁned grid can be automatically obtained by using the <span class="ot1-zi4r-0-x-x-109">histogram </span>bias (see
 <a href="#sec:colvarbias_histogram">6.9<!--tex4ht:ref: sec:colvarbias_histogram --></a>).
-</p><!--l. 4269--><p class="indent">   To activate an umbrella sampling simulation, the same keywords as in the previous section can be used, with the
+</p><!--l. 4267--><p class="indent">   To activate an umbrella sampling simulation, the same keywords as in the previous section can be used, with the
 addition of the following: </p>
 <ul class="itemize1">
-<li class="itemize"><a id="dx1-89001"></a> <span class="ot1-zi4r-0-x-x-120">targetNumStages </span><!--l. 4283--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Number
-     of stages for steering<!--l. 4283--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-89001"></a> <span class="ot1-zi4r-0-x-x-120">targetNumStages </span><!--l. 4281--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Number
+     of stages for steering<!--l. 4281--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>non-negative integer <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If non-zero, sets the number of stages in which the restraint centers or force constant are
      changed to their target values. If zero, the change is continuous. Each stage lasts <span class="ot1-zi4r-0-x-x-109">targetNumSteps </span>MD
      steps. To sample both ends of the transformation, the simulation should be run for <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>
-<!--l. 4283--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>
+<!--l. 4281--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>
      (<span class="ot1-zi4r-0-x-x-109">targetNumStages </span>+ 1).
      </li></ul>
-<!--l. 4288--><p class="noindent"><a id="sec:colvarbias_force_k_ti">
+<!--l. 4286--><p class="noindent"><a id="sec:colvarbias_force_k_ti">
 </a></p>
 <h5 class="subsubsectionHead"><span class="titlemark">6.4.3    </span> <a id="sec:colvarbias_force_k_ti"></a>Changing force constant</h5>
-<!--l. 4288--><p class="noindent">
-</p><!--l. 4290--><p class="indent">   The force constant of the harmonic restraint may also be changed to equilibrate <span class="cite">[<a href="#XDeng2009">22</a>]</span>.
+<!--l. 4286--><p class="noindent">
+</p><!--l. 4288--><p class="indent">   The force constant of the harmonic restraint may also be changed to equilibrate <span class="cite">[<a href="#XDeng2009">22</a>]</span>.
                                                                                          
                                                                                          
 </p>
 <ul class="itemize1">
-<li class="itemize"><a id="harmonic|targetForceConstant"></a> <a id="dx1-90001"></a><span class="ot1-zi4r-0-x-x-120">targetForceConstant </span><!--l. 4319--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Change
-     the force constant towards this value<!--l. 4319--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="harmonic|targetForceConstant"></a> <a id="dx1-90001"></a><span class="ot1-zi4r-0-x-x-120">targetForceConstant </span><!--l. 4317--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Change
+     the force constant towards this value<!--l. 4317--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>When deﬁned, the current <span class="ot1-zi4r-0-x-x-109">forceConstant </span>will be moved towards this value during the
      simulation. Time evolution of the force constant is dictated by the <span class="ot1-zi4r-0-x-x-109">targetForceExponent </span>parameter
      (see below). By default, the force constant is changed smoothly over a total of <span class="ot1-zi4r-0-x-x-109">targetNumSteps </span>steps.
@@ -3099,17 +3099,17 @@ addition of the following: </p>
      however, that restraint free energy calculations may be handled more eﬃciently by an indirect route,
      through the determination of a PMF for the restrained coordinate.<span class="cite">[<a href="#XDeng2009">22</a>]</span>
 </li>
-<li class="itemize"><a id="dx1-90002"></a> <span class="ot1-zi4r-0-x-x-120">targetForceExponent </span><!--l. 4342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Exponent
-     in the time-dependence of the force constant<!--l. 4342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>decimal equal to or greater than 1.0 <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">1.0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Sets the exponent, <!--l. 4342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>,
+<li class="itemize"><a id="dx1-90002"></a> <span class="ot1-zi4r-0-x-x-120">targetForceExponent </span><!--l. 4340--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Exponent
+     in the time-dependence of the force constant<!--l. 4340--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>decimal equal to or greater than 1.0 <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">1.0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Sets the exponent, <!--l. 4340--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>,
      in the function used to vary the force constant as a function of time. The force is varied according to a
-     coupling parameter <!--l. 4342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>,
-     raised to the power <!--l. 4342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>:
-     <!--l. 4342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub> <mo class="MathClass-rel">=</mo> <msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-bin">+</mo><msup><mrow><mi>λ</mi></mrow><mrow><mi>α</mi></mrow></msup><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>k</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin">−</mo><msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>,
-     where <!--l. 4342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub></math>,
-     <!--l. 4342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub></math>,
-     and <!--l. 4342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
-     are the initial, current, and ﬁnal values of the force constant. The parameter <!--l. 4342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
+     coupling parameter <!--l. 4340--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>,
+     raised to the power <!--l. 4340--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>:
+     <!--l. 4340--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub> <mo class="MathClass-rel">=</mo> <msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-bin">+</mo><msup><mrow><mi>λ</mi></mrow><mrow><mi>α</mi></mrow></msup><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>k</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin">−</mo><msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>,
+     where <!--l. 4340--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub></math>,
+     <!--l. 4340--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub></math>,
+     and <!--l. 4340--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
+     are the initial, current, and ﬁnal values of the force constant. The parameter <!--l. 4340--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
      evolves linearly from 0 to 1, either smoothly, or in <span class="ot1-zi4r-0-x-x-109">targetNumStages </span>equally spaced discrete stages,
      or according to an arbitrary schedule set with <span class="ot1-zi4r-0-x-x-109">lambdaSchedule</span>. When the initial value of the force
      constant is zero, an exponent greater than 1.0 distributes the eﬀects of introducing the restraint more
@@ -3117,39 +3117,39 @@ addition of the following: </p>
      of the restraint free energy with respect to lambda. A value of 4 has been found to give good results
      in some tests.
      </li>
-<li class="itemize"><a id="dx1-90003"></a> <span class="ot1-zi4r-0-x-x-120">targetEquilSteps </span><!--l. 4352--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Number
-     of steps discarded from TI estimate<!--l. 4352--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-90003"></a> <span class="ot1-zi4r-0-x-x-120">targetEquilSteps </span><!--l. 4350--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Number
+     of steps discarded from TI estimate<!--l. 4350--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive integer <br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>Deﬁnes the number of steps within each stage that are considered equilibration and
      discarded from the restraint free energy derivative estimate reported reported in the output.
      </li>
-<li class="itemize"><a id="dx1-90004"></a> <span class="ot1-zi4r-0-x-x-120">lambdaSchedule </span><!--l. 4362--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Schedule
-     of lambda-points for changing force constant<!--l. 4362--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>list of real numbers between 0 and 1 <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If speciﬁed together with targetForceConstant, sets the sequence of discrete <!--l. 4362--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
+<li class="itemize"><a id="dx1-90004"></a> <span class="ot1-zi4r-0-x-x-120">lambdaSchedule </span><!--l. 4360--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Schedule
+     of lambda-points for changing force constant<!--l. 4360--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>list of real numbers between 0 and 1 <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If speciﬁed together with targetForceConstant, sets the sequence of discrete <!--l. 4360--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
      values that will be used for diﬀerent stages.
      </li></ul>
-<!--l. 4367--><p class="noindent"><a id="sec:colvarbias_acc_work">
+<!--l. 4365--><p class="noindent"><a id="sec:colvarbias_acc_work">
 </a></p>
 <h4 class="subsectionHead"><span class="titlemark">6.5    </span> <a id="sec:colvarbias_acc_work"></a>Computing the work of a changing restraint</h4>
-<!--l. 4367--><p class="noindent">
-</p><!--l. 4369--><p class="indent">   If the restraint centers or force constant are changed continuosly (<span class="ot1-zi4r-0-x-x-109">targetNumStages </span>undeﬁned) it is possible to
+<!--l. 4365--><p class="noindent">
+</p><!--l. 4367--><p class="indent">   If the restraint centers or force constant are changed continuosly (<span class="ot1-zi4r-0-x-x-109">targetNumStages </span>undeﬁned) it is possible to
 record the net work performed by the changing restraint: </p>
 <ul class="itemize1">
-<li class="itemize"><a id="dx1-91001"></a> <span class="ot1-zi4r-0-x-x-120">outputAccumulatedWork </span><!--l. 4381--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Write
-     the accumulated work of the changing restraint to the Colvars trajectory ﬁle<!--l. 4381--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-91001"></a> <span class="ot1-zi4r-0-x-x-120">outputAccumulatedWork </span><!--l. 4379--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Write
+     the accumulated work of the changing restraint to the Colvars trajectory ﬁle<!--l. 4379--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonic</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>If <span class="ot1-zi4r-0-x-x-109">targetCenters </span>or <span class="ot1-zi4r-0-x-x-109">targetForceConstant </span>are deﬁned and this option is enabled,
      the  accumulated  work  from  the  beginning  of  the  simulation  will  be  written  to  the  trajectory  ﬁle
      (<span class="ot1-zi4r-0-x-x-109">colvarsTrajFrequency </span>must be non-zero). When the simulation is continued from a state ﬁle, the
      previously accumulated work is included in the integral. This option allows to conveniently extract
      the estimated PMF of a steered MD calculation (when <span class="ot1-zi4r-0-x-x-109">targetCenters </span>is used), or of other simulation
      protocols.  </li></ul>
-<!--l. 4385--><p class="noindent"><a id="sec:colvarbias_harmonic_walls">
+<!--l. 4383--><p class="noindent"><a id="sec:colvarbias_harmonic_walls">
 </a></p>
 <h4 class="subsectionHead"><span class="titlemark">6.6    </span> <a id="sec:colvarbias_harmonic_walls"></a>Harmonic wall restraints</h4>
-<!--l. 4385--><p class="noindent">
-</p><!--l. 4387--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">harmonicWalls</span><span class="ot1-zi4r-0-x-x-109"> </span><span class="cmsy-10x-x-109">{</span><span class="ot1-zi4r-0-x-x-109">...</span><span class="cmsy-10x-x-109">} </span>bias is closely related to the harmonic bias (see <a href="#sec:colvarbias_harmonic">6.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a>), with the following two
+<!--l. 4383--><p class="noindent">
+</p><!--l. 4385--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">harmonicWalls</span><span class="ot1-zi4r-0-x-x-109"> </span><span class="cmsy-10x-x-109">{</span><span class="ot1-zi4r-0-x-x-109">...</span><span class="cmsy-10x-x-109">} </span>bias is closely related to the harmonic bias (see <a href="#sec:colvarbias_harmonic">6.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a>), with the following two
 diﬀerences: <span class="ptmri7t-x-x-109">(i) </span>instead of a center a <span class="ptmri7t-x-x-109">lower wall </span>and/or an <span class="ptmri7t-x-x-109">upper wall </span>are deﬁned, outside of which the bias
 implements a half-harmonic potential; </p><table class="equation"><tr><td> <a id="x1-92001r27"></a>
-<!--l. 4388--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<!--l. 4386--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
 <mi>V</mi> <mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mfenced close="" open="{" separators=""><mrow> <mtable align="axis" class="array" columnlines="none" equalcolumns="false" equalrows="false" style=""> <mtr><mtd class="array" columnalign="left"> <mfrac><mrow><mn>1</mn></mrow> <mrow><mn>2</mn></mrow></mfrac><mi>k</mi><msup><mrow> <mfenced close=")" open="(" separators=""><mrow><mfrac><mrow><mi>ξ</mi><mo class="MathClass-bin">−</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">upper</mi></mrow></msub></mrow>
 <mrow><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi> </mrow></msub></mrow></mfrac> </mrow></mfenced> </mrow><mrow><mn>2</mn></mrow></msup> </mtd><mtd class="array" columnalign="left"> <mi mathvariant="normal">if</mi><mspace class="nbsp" width="1em"></mspace><mi>ξ</mi> <mo class="MathClass-rel">&gt;</mo> <msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">upper</mi></mrow></msub> </mtd>
 </mtr> <mtr><mtd class="array" columnalign="left"> <mn>0</mn> </mtd><mtd class="array" columnalign="left"> <mi mathvariant="normal">if</mi><mspace class="nbsp" width="1em"></mspace><msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">lower</mi></mrow></msub> <mo class="MathClass-rel">≤</mo> <mi>ξ</mi> <mo class="MathClass-rel">≥</mo> <msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">upper</mi></mrow></msub> </mtd>
@@ -3157,15 +3157,15 @@ implements a half-harmonic potential; </p><table class="equation"><tr><td> <a id
 <mrow><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi> </mrow></msub></mrow></mfrac> </mrow></mfenced> </mrow><mrow><mn>2</mn></mrow></msup> </mtd><mtd class="array" columnalign="left"> <mi mathvariant="normal">if</mi><mspace class="nbsp" width="1em"></mspace><mi>ξ</mi> <mo class="MathClass-rel">&lt;</mo> <msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">lower</mi></mrow></msub> </mtd>
 </mtr> <!--l l--></mtable> </mrow></mfenced>
 </math></td><td class="eq-no">(27)</td></tr></table>
-<!--l. 4398--><p class="indent">   where <!--l. 4398--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">lower</mi></mrow></msub></math>
-and <!--l. 4398--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">upper</mi></mrow></msub></math> are
+<!--l. 4396--><p class="indent">   where <!--l. 4396--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">lower</mi></mrow></msub></math>
+and <!--l. 4396--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">upper</mi></mrow></msub></math> are
 the lower and upper wall thresholds, respectively; <span class="ptmri7t-x-x-109">(ii) </span>because an interval between two walls is deﬁned, only scalar
 variables can be used (but any number of variables can be deﬁned, and the wall bias is intrinsically
 multi-dimensional).
-</p><!--l. 4400--><p class="indent"> <span class="ptmb7t-x-x-109">Note: </span>this bias replaces the keywords <span class="ot1-zi4r-0-x-x-109">lowerWall</span>, <span class="ot1-zi4r-0-x-x-109">lowerWallConstant</span>, <span class="ot1-zi4r-0-x-x-109">upperWall </span>and <span class="ot1-zi4r-0-x-x-109">upperWallConstant</span>
+</p><!--l. 4398--><p class="indent"> <span class="ptmb7t-x-x-109">Note: </span>this bias replaces the keywords <span class="ot1-zi4r-0-x-x-109">lowerWall</span>, <span class="ot1-zi4r-0-x-x-109">lowerWallConstant</span>, <span class="ot1-zi4r-0-x-x-109">upperWall </span>and <span class="ot1-zi4r-0-x-x-109">upperWallConstant</span>
 deﬁned in the <span class="ot1-zi4r-0-x-x-109">colvar </span>context (see <a href="#sec:colvar">4<!--tex4ht:ref: sec:colvar --></a>). These keywords are still supported, but are deprecated for future
 uses.
-</p><!--l. 4403--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">harmonicWalls </span>bias implements the following options: </p>
+</p><!--l. 4401--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">harmonicWalls </span>bias implements the following options: </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-92002"></a> <span class="ot1-zi4r-0-x-x-120">name: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">name</span></a> in sec. <a href="#sec:colvarbias">6<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
@@ -3177,22 +3177,22 @@ uses.
      </li>
 <li class="itemize"><a id="dx1-92006"></a> <span class="ot1-zi4r-0-x-x-120">writeTISamples: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">writeTISamples</span></a> in sec. <a href="#sec:colvarbias">6<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><a id="dx1-92007"></a> <span class="ot1-zi4r-0-x-x-120">lowerWalls </span><!--l. 4417--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Position
-     of the lower wall<!--l. 4417--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">colvar</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>Space-separated list of decimals <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the values <!--l. 4417--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">lower</mi></mrow></msub></math>
-     below which a conﬁning restraint on the colvar is applied to each colvar <!--l. 4417--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>.
+<li class="itemize"><a id="dx1-92007"></a> <span class="ot1-zi4r-0-x-x-120">lowerWalls </span><!--l. 4415--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Position
+     of the lower wall<!--l. 4415--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">colvar</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>Space-separated list of decimals <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the values <!--l. 4415--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">lower</mi></mrow></msub></math>
+     below which a conﬁning restraint on the colvar is applied to each colvar <!--l. 4415--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>.
      </li>
-<li class="itemize"><a id="dx1-92008"></a> <span class="ot1-zi4r-0-x-x-120">upperWalls </span><!--l. 4425--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Position
-     of the lower wall<!--l. 4425--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">colvar</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>Space-separated list of decimals <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the values <!--l. 4425--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">upper</mi></mrow></msub></math>
-     above which a conﬁning restraint on the colvar is applied to each colvar <!--l. 4425--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>.
+<li class="itemize"><a id="dx1-92008"></a> <span class="ot1-zi4r-0-x-x-120">upperWalls </span><!--l. 4423--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Position
+     of the lower wall<!--l. 4423--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">colvar</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>Space-separated list of decimals <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the values <!--l. 4423--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi mathvariant="normal">upper</mi></mrow></msub></math>
+     above which a conﬁning restraint on the colvar is applied to each colvar <!--l. 4423--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>.
      </li>
 <li class="itemize"><a id="dx1-92009"></a> <span class="ot1-zi4r-0-x-x-120">forceConstant: </span>see deﬁnition of <a href="#sec:colvarbias_harmonic"><span class="ot1-zi4r-0-x-x-109">forceConstant</span></a> in sec. <a href="#sec:colvarbias_harmonic">6.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a> (Harmonic restraints)
      </li>
-<li class="itemize"><a id="dx1-92010"></a> <span class="ot1-zi4r-0-x-x-120">lowerWallConstant </span><!--l. 4438--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Force
-     constant for the lower wall<!--l. 4438--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-92010"></a> <span class="ot1-zi4r-0-x-x-120">lowerWallConstant </span><!--l. 4436--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Force
+     constant for the lower wall<!--l. 4436--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonicWalls</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">forceConstant</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>When both sets of walls are deﬁned (lower and upper), this keyword allows setting
-     diﬀerent force constants for them. The force constant reported in the output as “<!--l. 4438--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>”,
+     diﬀerent force constants for them. The force constant reported in the output as “<!--l. 4436--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>”,
      and used in the change of force constant scheme, is the geometric mean of the two.
      </li>
 <li class="itemize"><a id="dx1-92011"></a> <span class="ot1-zi4r-0-x-x-120">upperWallConstant: </span>analogous to <span class="ot1-zi4r-0-x-x-109">lowerWallConstant</span>
@@ -3200,8 +3200,8 @@ uses.
 <li class="itemize"><a id="dx1-92012"></a> <span class="ot1-zi4r-0-x-x-120">targetForceConstant: </span>see   deﬁnition   of   <a href="#sec:colvarbias_harmonic"><span class="ot1-zi4r-0-x-x-109">targetForceConstant</span></a> in   sec. <a href="#sec:colvarbias_harmonic">6.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a>   (Harmonic
      restraints)
      </li>
-<li class="itemize"><a id="dx1-92013"></a> <span class="ot1-zi4r-0-x-x-120">targetForceConstant </span><!--l. 4455--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Change
-     the force constant(s) towards this value<!--l. 4455--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-92013"></a> <span class="ot1-zi4r-0-x-x-120">targetForceConstant </span><!--l. 4453--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Change
+     the force constant(s) towards this value<!--l. 4453--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">harmonicWalls</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This keyword allows changing either one or both of the wall force constants over time.
      In the case that <span class="ot1-zi4r-0-x-x-109">lowerWallConstant </span>and <span class="ot1-zi4r-0-x-x-109">upperWallConstant </span>have the same value, the behavior
      of this keyword is identical to the corresponding keyword in the <span class="ot1-zi4r-0-x-x-109">harmonic </span>restraint; otherwise, the
@@ -3226,11 +3226,11 @@ uses.
 <li class="itemize"><a id="dx1-92019"></a> <span class="ot1-zi4r-0-x-x-120">outputAccumulatedWork: </span>see  deﬁnition  of  <a href="#sec:colvarbias_harmonic"><span class="ot1-zi4r-0-x-x-109">outputAccumulatedWork</span></a> in  sec. <a href="#sec:colvarbias_harmonic">6.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a>  (Harmonic
      restraints)
      </li></ul>
-<!--l. 4468--><p class="noindent"><a id="sec:colvarbias_linear">
+<!--l. 4466--><p class="noindent"><a id="sec:colvarbias_linear">
 </a></p>
 <h4 class="subsectionHead"><span class="titlemark">6.7    </span> <a id="sec:colvarbias_linear"></a>Linear restraints</h4>
-<!--l. 4468--><p class="noindent">
-</p><!--l. 4470--><p class="indent">   The linear restraint biasing method is used to minimally bias a simulation. There is generally a unique strength
+<!--l. 4466--><p class="noindent">
+</p><!--l. 4468--><p class="indent">   The linear restraint biasing method is used to minimally bias a simulation. There is generally a unique strength
 of bias for each CV center, which means you must know the bias force constant speciﬁcally for the center of the CV.
 This force constant may be found by using experiment directed simulation described in section <a href="#sec:colvarbias_alb">6.8<!--tex4ht:ref: sec:colvarbias_alb --></a>. Please cite
 Pitera and Chodera when using <span class="cite">[<a href="#XPitera2012">23</a>]</span>.
@@ -3242,15 +3242,15 @@ Pitera and Chodera when using <span class="cite">[<a href="#XPitera2012">23</a>]
      </li>
 <li class="itemize"><a id="dx1-93003"></a> <span class="ot1-zi4r-0-x-x-120">outputEnergy: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">outputEnergy</span></a> in sec. <a href="#sec:colvarbias">6<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><a id="dx1-93004"></a> <span class="ot1-zi4r-0-x-x-120">forceConstant </span><!--l. 4494--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Scaled
-     force constant (kcal/mol)<!--l. 4494--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-93004"></a> <span class="ot1-zi4r-0-x-x-120">forceConstant </span><!--l. 4492--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Scaled
+     force constant (kcal/mol)<!--l. 4492--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">linear</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">1.0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This option deﬁnes a scaled force constant for the linear bias. To ensure consistency for
      multidimensional restraints, it is divided internally by the speciﬁc <span class="ot1-zi4r-0-x-x-109">width </span>of each variable (which is 1
      by default), so that all variables are eﬀectively dimensionless and of commensurate size. <span class="ptmri7t-x-x-109">The values</span>
 <span class="ptmri7t-x-x-109">of the actual force constants are always printed when the restraint is deﬁned.</span>
 </li>
-<li class="itemize"><a id="dx1-93005"></a> <span class="ot1-zi4r-0-x-x-120">centers </span><!--l. 4503--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Initial
-     linear restraint centers<!--l. 4503--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-93005"></a> <span class="ot1-zi4r-0-x-x-120">centers </span><!--l. 4501--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Initial
+     linear restraint centers<!--l. 4501--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">linear</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>space-separated list of colvar values <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>These are analogous to the <a href="#harmonic|centers"><span class="ot1-zi4r-0-x-x-109">centers</span></a> keyword of the harmonic restraint. Although they
      do not aﬀect dynamics, they are here necessary to ensure a well-deﬁned energy for the linear bias.
                                                                                          
@@ -3277,11 +3277,11 @@ Pitera and Chodera when using <span class="cite">[<a href="#XPitera2012">23</a>]
 <li class="itemize"><a id="dx1-93014"></a> <span class="ot1-zi4r-0-x-x-120">outputAccumulatedWork: </span>see  deﬁnition  of  <a href="#sec:colvarbias_harmonic"><span class="ot1-zi4r-0-x-x-109">outputAccumulatedWork</span></a> in  sec. <a href="#sec:colvarbias_harmonic">6.4<!--tex4ht:ref: sec:colvarbias_harmonic --></a>  (Harmonic
      restraints)
      </li></ul>
-<!--l. 4518--><p class="noindent"><a id="sec:colvarbias_alb">
+<!--l. 4516--><p class="noindent"><a id="sec:colvarbias_alb">
 </a></p>
 <h4 class="subsectionHead"><span class="titlemark">6.8    </span> <a id="sec:colvarbias_alb"></a>Adaptive Linear Bias/Experiment Directed Simulation</h4>
-<!--l. 4518--><p class="noindent">
-</p><!--l. 4520--><p class="indent">   Experiment directed simulation applies a linear bias with a changing force constant. Please cite White and Voth
+<!--l. 4516--><p class="noindent">
+</p><!--l. 4518--><p class="indent">   Experiment directed simulation applies a linear bias with a changing force constant. Please cite White and Voth
 <span class="cite">[<a href="#XWhite2014">24</a>]</span> when using this feature. As opposed to that reference, the force constant here is scaled by the <span class="ot1-zi4r-0-x-x-109">width</span>
 corresponding to the biased colvar. In White and Voth, each force constant is scaled by the colvars set center. The
 bias converges to a linear bias, after which it will be the minimal possible bias. You may also stop the simulation,
@@ -3297,8 +3297,8 @@ with that constant. All the notes about units described in sections <a href="#se
      </li>
 <li class="itemize"><a id="dx1-94002"></a> <span class="ot1-zi4r-0-x-x-120">colvars: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">colvars</span></a> in sec. <a href="#sec:colvarbias">6<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><a id="dx1-94003"></a> <span class="ot1-zi4r-0-x-x-120">centers </span><!--l. 4552--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Collective
-     variable centers<!--l. 4552--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-94003"></a> <span class="ot1-zi4r-0-x-x-120">centers </span><!--l. 4550--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Collective
+     variable centers<!--l. 4550--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">alb</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>space-separated list of colvar values <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>The desired center (equilibrium values) which will be sought during the adaptive linear
      biasing. The number of values must be the number of requested colvars. Each value is a decimal
      number if the corresponding colvar returns a scalar, a “<span class="ot1-zi4r-0-x-x-109">(x, y, z)</span>” triplet if it returns a unit vector
@@ -3306,29 +3306,29 @@ with that constant. All the notes about units described in sections <a href="#se
      periodicities or symmetries, its closest image to the restraint center is considered when calculating the
      linear potential.
      </li>
-<li class="itemize"><a id="dx1-94004"></a> <span class="ot1-zi4r-0-x-x-120">updateFrequency </span><!--l. 4570--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>The
-     duration of updates<!--l. 4570--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">alb</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>An integer <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This is, <!--l. 4570--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>,
+<li class="itemize"><a id="dx1-94004"></a> <span class="ot1-zi4r-0-x-x-120">updateFrequency </span><!--l. 4568--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>The
+     duration of updates<!--l. 4568--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">alb</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>An integer <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This is, <!--l. 4568--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>,
      the number of simulation steps to use for each update to the bias. This determines how long the system
-     requires to equilibrate after a change in force constant (<!--l. 4570--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>),
-     how long statistics are collected for an iteration (<!--l. 4570--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>),
-     and how quickly energy is added to the system (at most, <!--l. 4570--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo class="MathClass-bin">∕</mo><mn>2</mn><mi>N</mi></math>,
-     where <!--l. 4570--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>
+     requires to equilibrate after a change in force constant (<!--l. 4568--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>),
+     how long statistics are collected for an iteration (<!--l. 4568--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>),
+     and how quickly energy is added to the system (at most, <!--l. 4568--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo class="MathClass-bin">∕</mo><mn>2</mn><mi>N</mi></math>,
+     where <!--l. 4568--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>
      is the <span class="ot1-zi4r-0-x-x-109">forceRange</span>). Until the force constant has converged, the method as described is an optimization
      procedure and not an integration of a particular statistical ensemble. It is important that each step
-     should be uncorrelated from the last so that iterations are independent. Therefore, <!--l. 4570--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>
+     should be uncorrelated from the last so that iterations are independent. Therefore, <!--l. 4568--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>
      should be at least twice the autocorrelation time of the collective variable. The system should also be
-     able to dissipate energy as fast as <!--l. 4570--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>,
-     which can be done by adjusting thermostat parameters. Practically, <!--l. 4570--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>
+     able to dissipate energy as fast as <!--l. 4568--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>,
+     which can be done by adjusting thermostat parameters. Practically, <!--l. 4568--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>
      has been tested successfully at signiﬁcantly shorter than the autocorrelation time of the collective
      variables being biased and still converge correctly.
      </li>
-<li class="itemize"><a id="dx1-94005"></a> <span class="ot1-zi4r-0-x-x-120">forceRange </span><!--l. 4585--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>The
-     expected range of the force constant in units of energy<!--l. 4585--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">alb</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>A space-separated list of decimal numbers <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>3 <!--l. 4585--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>b</mi></mrow></msub><mi>T</mi> </math>
+<li class="itemize"><a id="dx1-94005"></a> <span class="ot1-zi4r-0-x-x-120">forceRange </span><!--l. 4583--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>The
+     expected range of the force constant in units of energy<!--l. 4583--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">alb</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>A space-separated list of decimal numbers <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>3 <!--l. 4583--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>b</mi></mrow></msub><mi>T</mi> </math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This is largest magnitude of the force constant which one expects. If this parameter is
      too low, the simulation will not converge. If it is too high the simulation will waste time exploring
-     values that are too large. A value of 3 <!--l. 4585--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>b</mi></mrow></msub><mi>T</mi> </math>
+     values that are too large. A value of 3 <!--l. 4583--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>b</mi></mrow></msub><mi>T</mi> </math>
      has worked well in the systems presented as a ﬁrst choice. This parameter is dynamically adjusted
                                                                                          
                                                                                          
@@ -3336,84 +3336,84 @@ with that constant. All the notes about units described in sections <a href="#se
      However, this can lead to large amounts of energy being added over time to the system. To prevent
      this dynamic update, add <span class="ot1-zi4r-0-x-x-109">hardForceRange yes </span>as a parameter
      </li>
-<li class="itemize"><a id="dx1-94006"></a> <span class="ot1-zi4r-0-x-x-120">rateMax </span><!--l. 4595--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>The
-     maximum rate of change of force constant<!--l. 4595--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-94006"></a> <span class="ot1-zi4r-0-x-x-120">rateMax </span><!--l. 4593--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>The
+     maximum rate of change of force constant<!--l. 4593--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">alb</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>A list of space-separated real numbers <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This optional parameter controls how much energy is added to the system from this bias.
      Tuning this separately from the <span class="ot1-zi4r-0-x-x-109">updateFrequency </span>and <span class="ot1-zi4r-0-x-x-109">forceRange </span>can allow for large bias changes
      but with a low <span class="ot1-zi4r-0-x-x-109">rateMax </span>prevents large energy changes that can lead to instability in the simulation.
      </li></ul>
-<!--l. 4600--><p class="noindent"><a id="sec:colvarbias_histogram">
+<!--l. 4598--><p class="noindent"><a id="sec:colvarbias_histogram">
 </a></p>
 <h4 class="subsectionHead"><span class="titlemark">6.9    </span> <a id="sec:colvarbias_histogram"></a>Multidimensional histograms</h4>
-<!--l. 4600--><p class="noindent">
-</p><!--l. 4602--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">histogram </span>feature is used to record the distribution of a set of collective variables in the form of a
+<!--l. 4598--><p class="noindent">
+</p><!--l. 4600--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">histogram </span>feature is used to record the distribution of a set of collective variables in the form of a
 N-dimensional histogram.
-</p><!--l. 4605--><p class="indent">   As with any other biasing and analysis method, when a histogram is applied to an extended-system colvar
+</p><!--l. 4603--><p class="indent">   As with any other biasing and analysis method, when a histogram is applied to an extended-system colvar
 (<a href="#sec:colvar_extended">4.16<!--tex4ht:ref: sec:colvar_extended --></a>), it accesses the value of the ﬁctitious coordinate rather than that of the “true” colvar. A joint histogram of the
 “true” colvar and the ﬁctitious coordinate may be obtained by specifying the colvar name twice in a row in the
 <span class="ot1-zi4r-0-x-x-109">colvars </span>parameter: the ﬁrst instance will be understood as the “true” colvar, and the second, as the ﬁctitious
 coordinate.
-</p><!--l. 4613--><p class="indent">   A <span class="ot1-zi4r-0-x-x-109">histogram </span>block may deﬁne the following parameters:
+</p><!--l. 4611--><p class="indent">   A <span class="ot1-zi4r-0-x-x-109">histogram </span>block may deﬁne the following parameters:
 </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-95001"></a> <span class="ot1-zi4r-0-x-x-120">name: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">name</span></a> in sec. <a href="#sec:colvarbias">6<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
 <li class="itemize"><a id="dx1-95002"></a> <span class="ot1-zi4r-0-x-x-120">colvars: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">colvars</span></a> in sec. <a href="#sec:colvarbias">6<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><a id="dx1-95003"></a> <span class="ot1-zi4r-0-x-x-120">outputFreq </span><!--l. 4629--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Frequency
-     (in timesteps) at which the histogram ﬁles are refreshed<!--l. 4629--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-95003"></a> <span class="ot1-zi4r-0-x-x-120">outputFreq </span><!--l. 4627--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Frequency
+     (in timesteps) at which the histogram ﬁles are refreshed<!--l. 4627--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogram</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive integer <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>The histogram data are written to ﬁles at the given time interval. A value of 0 disables
      the creation of these ﬁles (<span class="ptmb7t-x-x-109">note: </span>all data to continue a simulation are still included in the state ﬁle).
                                                                                          
                                                                                          
      </li>
-<li class="itemize"><a id="dx1-95004"></a> <span class="ot1-zi4r-0-x-x-120">outputFile </span><!--l. 4640--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Write
-     the histogram to a ﬁle<!--l. 4640--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogram</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>UNIX ﬁlename <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.</span><!--l. 4640--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">name</span><!--l. 4640--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ot1-zi4r-0-x-x-109">.dat</span>
+<li class="itemize"><a id="dx1-95004"></a> <span class="ot1-zi4r-0-x-x-120">outputFile </span><!--l. 4638--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Write
+     the histogram to a ﬁle<!--l. 4638--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogram</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>UNIX ﬁlename <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.</span><!--l. 4638--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">name</span><!--l. 4638--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ot1-zi4r-0-x-x-109">.dat</span>
 <br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>Name  of  the  ﬁle  containing  histogram  data  (multicolumn  format),  which  is  written
      every <span class="ot1-zi4r-0-x-x-109">outputFreq </span>steps. For the special case of 2 variables, Gnuplot may be used to visualize this
      ﬁle.
      </li>
-<li class="itemize"><a id="dx1-95005"></a> <span class="ot1-zi4r-0-x-x-120">outputFileDX </span><!--l. 4651--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Write
-     the histogram to a ﬁle<!--l. 4651--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogram</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>UNIX ﬁlename <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.</span><!--l. 4651--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">name</span><!--l. 4651--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ot1-zi4r-0-x-x-109">.dat</span>
+<li class="itemize"><a id="dx1-95005"></a> <span class="ot1-zi4r-0-x-x-120">outputFileDX </span><!--l. 4649--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Write
+     the histogram to a ﬁle<!--l. 4649--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogram</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>UNIX ﬁlename <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.</span><!--l. 4649--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">name</span><!--l. 4649--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ot1-zi4r-0-x-x-109">.dat</span>
 <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Name of the ﬁle containing histogram data (OpenDX format), which is written every
      <span class="ot1-zi4r-0-x-x-109">outputFreq </span>steps. For the special case of 3 variables, VMD may be used to visualize this ﬁle.
      </li>
-<li class="itemize"><a id="dx1-95006"></a> <span class="ot1-zi4r-0-x-x-120">gatherVectorColvars </span><!--l. 4665--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Treat
-     vector variables as multiple observations of a scalar variable?<!--l. 4665--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-95006"></a> <span class="ot1-zi4r-0-x-x-120">gatherVectorColvars </span><!--l. 4663--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Treat
+     vector variables as multiple observations of a scalar variable?<!--l. 4663--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogram</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>UNIX ﬁlename <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>When this is set to <span class="ot1-zi4r-0-x-x-109">on</span>, the components of a multi-dimensional colvar (e.g. one based on
      <span class="ot1-zi4r-0-x-x-109">cartesian</span>, <span class="ot1-zi4r-0-x-x-109">distancePairs</span>, or a vector of scalar numbers given by <span class="ot1-zi4r-0-x-x-109">scriptedFunction</span>) are treated
      as multiple observations of a scalar variable. This results in the histogram being accumulated multiple
      times for each simulation step or iteration of <span class="ot1-zi4r-0-x-x-109">cv update</span>). When multiple vector variables are included
      in <span class="ot1-zi4r-0-x-x-109">histogram</span>, these must have the same length because their components are accumulated together.
-     For example, if <!--l. 4665--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>,
-     <!--l. 4665--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
-     and <!--l. 4665--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>τ</mi></math>
-     are three variables of dimensions 5, 5 and 1, respectively, for each iteration 5 triplets <!--l. 4665--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-punc">,</mo><msub><mrow><mi>λ</mi></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-punc">,</mo><mi>τ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
-     (<!--l. 4665--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi> <mo class="MathClass-rel">=</mo> <mn>1</mn><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mn>5</mn></math>)
+     For example, if <!--l. 4663--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>,
+     <!--l. 4663--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
+     and <!--l. 4663--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>τ</mi></math>
+     are three variables of dimensions 5, 5 and 1, respectively, for each iteration 5 triplets <!--l. 4663--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-punc">,</mo><msub><mrow><mi>λ</mi></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-punc">,</mo><mi>τ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+     (<!--l. 4663--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi> <mo class="MathClass-rel">=</mo> <mn>1</mn><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mn>5</mn></math>)
      are accumulated into a 3-dimensional histogram.
      </li>
-<li class="itemize"><a id="dx1-95007"></a> <span class="ot1-zi4r-0-x-x-120">weights </span><!--l. 4676--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Treat
-     vector variables as multiple observations of a scalar variable?<!--l. 4676--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-95007"></a> <span class="ot1-zi4r-0-x-x-120">weights </span><!--l. 4674--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Treat
+     vector variables as multiple observations of a scalar variable?<!--l. 4674--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogram</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>list of space-separated decimals <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>all weights equal to 1 <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>When <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars </span>is <span class="ot1-zi4r-0-x-x-109">on</span>, the components of each multi-dimensional colvar
-     are accumulated with a diﬀerent weight. For example, if <!--l. 4676--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>
-     and <!--l. 4676--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math>
+     are accumulated with a diﬀerent weight. For example, if <!--l. 4674--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>
+     and <!--l. 4674--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math>
      are  two  distinct  <span class="ot1-zi4r-0-x-x-109">cartesian </span>variables  deﬁned  on  the  same  group  of  atoms,  the  corresponding  2D
      histogram can be weighted on a per-atom basis: to compute an electron density map, it is possible to
      use <span class="ot1-zi4r-0-x-x-109">weights [</span><span class="ts1-zi4r-x-x-109">$</span><span class="ot1-zi4r-0-x-x-109">sel get atomicnumber] </span>in the deﬁnition of <span class="ot1-zi4r-0-x-x-109">histogram</span>.
      </li></ul>
-<!--l. 4680--><p class="noindent"><a id="sec:colvarbias_histogram_grid">
+<!--l. 4678--><p class="noindent"><a id="sec:colvarbias_histogram_grid">
 </a></p>
 <h5 class="subsubsectionHead"><span class="titlemark">6.9.1    </span> <a id="sec:colvarbias_histogram_grid"></a>Grid deﬁnition for multidimensional histograms</h5>
-<!--l. 4680--><p class="noindent">
-</p><!--l. 4682--><p class="indent">   Like the ABF and metadynamics biases, <span class="ot1-zi4r-0-x-x-109">histogram </span>uses the parameters <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>, <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, and
+<!--l. 4678--><p class="noindent">
+</p><!--l. 4680--><p class="indent">   Like the ABF and metadynamics biases, <span class="ot1-zi4r-0-x-x-109">histogram </span>uses the parameters <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>, <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, and
 <span class="ot1-zi4r-0-x-x-109">width </span>to deﬁne its grid. These values can be overridden if a conﬁguration block <span class="ot1-zi4r-0-x-x-109">histogramGrid </span><span class="cmsy-10x-x-109">{ </span><span class="ot1-zi4r-0-x-x-109">…</span><span class="cmsy-10x-x-109">} </span>is
 provided inside the conﬁguration of <span class="ot1-zi4r-0-x-x-109">histogram</span>. The options supported inside this conﬁguration block are:
 </p>
 <ul class="itemize1">
-<li class="itemize"><a id="dx1-96001"></a> <span class="ot1-zi4r-0-x-x-120">lowerBoundaries </span><!--l. 4694--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Lower
-     boundaries of the grid<!--l. 4694--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-96001"></a> <span class="ot1-zi4r-0-x-x-120">lowerBoundaries </span><!--l. 4692--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Lower
+     boundaries of the grid<!--l. 4692--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramGrid</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>list of space-separated decimals <br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>This option deﬁnes the lower boundaries of the grid, overriding any values deﬁned
      by the <span class="ot1-zi4r-0-x-x-109">lowerBoundary </span>keyword of each colvar. Note that when <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars </span>is <span class="ot1-zi4r-0-x-x-109">on</span>, each
      vector variable is automatically treated as a scalar, and a single value should be provided for it.
@@ -3421,39 +3421,39 @@ provided inside the conﬁguration of <span class="ot1-zi4r-0-x-x-109">histogram
 <li class="itemize"><a id="dx1-96002"></a> <span class="ot1-zi4r-0-x-x-120">upperBoundaries: </span>analogous to <span class="ot1-zi4r-0-x-x-109">lowerBoundaries</span>
 </li>
 <li class="itemize"><a id="dx1-96003"></a><span class="ot1-zi4r-0-x-x-120">widths: </span>analogous to <span class="ot1-zi4r-0-x-x-109">lowerBoundaries</span></li></ul>
-<!--l. 4702--><p class="noindent"><a id="sec:colvarbias_restraint_histogram">
+<!--l. 4700--><p class="noindent"><a id="sec:colvarbias_restraint_histogram">
 </a></p>
 <h4 class="subsectionHead"><span class="titlemark">6.10    </span> <a id="sec:colvarbias_restraint_histogram"></a>Probability distribution-restraints</h4>
-<!--l. 4702--><p class="noindent">
-</p><!--l. 4704--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">histogramRestraint </span>bias implements a continuous potential of many variables (or of a single high-dimensional
+<!--l. 4700--><p class="noindent">
+</p><!--l. 4702--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">histogramRestraint </span>bias implements a continuous potential of many variables (or of a single high-dimensional
 variable) aimed at reproducing a one-dimensional statistical distribution that is provided by the user. The
-<!--l. 4705--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math> variables
-<!--l. 4705--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math> are interpreted as multiple
-observations of a random variable <!--l. 4705--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+<!--l. 4703--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math> variables
+<!--l. 4703--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math> are interpreted as multiple
+observations of a random variable <!--l. 4703--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
 with unknown probability distribution. The potential is minimized when the histogram
-<!--l. 4706--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>, estimated as a sum of Gaussian
-functions centered at <!--l. 4706--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>, is equal
+<!--l. 4704--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>, estimated as a sum of Gaussian
+functions centered at <!--l. 4704--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>, is equal
                                                                                          
                                                                                          
-to the reference histogram <!--l. 4706--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>:
+to the reference histogram <!--l. 4704--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>:
 </p><table class="equation"><tr><td> <a id="eq:colvarbias_restraint_histogram"></a>
-<!--l. 4707--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<!--l. 4705--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
 <mi>V</mi> <mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mfrac><mrow><mn>1</mn></mrow>
 <mrow><mn>2</mn></mrow></mfrac><mi>k</mi><mo class="MathClass-op">∫
  <!--nolimits--></mo><!--nolimits--><msup><mrow><mfenced close=")" open="(" separators=""><mrow><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow><mo class="MathClass-bin">−</mo><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup><mi mathvariant="normal">d</mi><mi>ξ</mi>
 </math></td><td class="eq-no">(28)</td></tr></table>
 <table class="equation"><tr><td> <a id="eq:colvarbias_restraint_histogram_gaussian"></a>
-<!--l. 4711--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<!--l. 4709--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
 <mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mfrac><mrow><mn>1</mn></mrow>
 <mrow><mi>M</mi><msqrt><mrow><mn>2</mn><mi>π</mi><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></msqrt></mrow></mfrac><munderover accent="false" accentunder="false"><mrow><mo mathsize="big">∑</mo></mrow><mrow><mi>i</mi><mo class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow><mi>M</mi></mrow></munderover><mo class="qopname">exp</mo><!--nolimits--> <mfenced close=")" open="(" separators=""><mrow><mo class="MathClass-bin">−</mo><mfrac><mrow><msup><mrow><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi> <mo class="MathClass-bin">−</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup></mrow>
 <mrow><mn>2</mn><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> </mrow></mfenced>
 </math></td><td class="eq-no">(29)</td></tr></table>
-<!--l. 4715--><p class="indent">   When used in combination with a <span class="ot1-zi4r-0-x-x-109">distancePairs </span>multi-dimensional variable, this bias implements the
+<!--l. 4713--><p class="indent">   When used in combination with a <span class="ot1-zi4r-0-x-x-109">distancePairs </span>multi-dimensional variable, this bias implements the
 reﬁnement algorithm against ESR/DEER experiments published by Shen <span class="ptmri7t-x-x-109">et al </span><span class="cite">[<a href="#XShen2015">25</a>]</span>.
-</p><!--l. 4717--><p class="indent">   This bias behaves similarly to the <span class="ot1-zi4r-0-x-x-109">histogram </span>bias with the <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars </span>option, with the important
+</p><!--l. 4715--><p class="indent">   This bias behaves similarly to the <span class="ot1-zi4r-0-x-x-109">histogram </span>bias with the <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars </span>option, with the important
 diﬀerence that <span class="ptmri7t-x-x-109">all </span>variables are gathered, resulting in a one-dimensional histogram. Future versions will include
 support for multi-dimensional histograms.
-</p><!--l. 4720--><p class="indent">   The list of options is as follows: </p>
+</p><!--l. 4718--><p class="indent">   The list of options is as follows: </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-97003"></a> <span class="ot1-zi4r-0-x-x-120">name: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">name</span></a> in sec. <a href="#sec:colvarbias">6<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
@@ -3461,9 +3461,9 @@ support for multi-dimensional histograms.
      </li>
 <li class="itemize"><a id="dx1-97005"></a> <span class="ot1-zi4r-0-x-x-120">outputEnergy: </span>see deﬁnition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">outputEnergy</span></a> in sec. <a href="#sec:colvarbias">6<!--tex4ht:ref: sec:colvarbias --></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><a id="dx1-97006"></a> <span class="ot1-zi4r-0-x-x-120">lowerBoundary </span><!--l. 4735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Lower
-     boundary of the colvar grid<!--l. 4735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the lowest end of the interval where the reference distribution <!--l. 4735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+<li class="itemize"><a id="dx1-97006"></a> <span class="ot1-zi4r-0-x-x-120">lowerBoundary </span><!--l. 4733--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Lower
+     boundary of the colvar grid<!--l. 4733--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the lowest end of the interval where the reference distribution <!--l. 4733--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
      is deﬁned. Exactly one value must be provided, because only one-dimensional histograms are supported
      by the current version.
                                                                                          
@@ -3471,71 +3471,71 @@ support for multi-dimensional histograms.
      </li>
 <li class="itemize"><a id="dx1-97007"></a> <span class="ot1-zi4r-0-x-x-120">upperBoundary: </span>analogous to <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>
 </li>
-<li class="itemize"><a id="dx1-97008"></a><span class="ot1-zi4r-0-x-x-120">width </span><!--l. 4747--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Width
-     of the colvar grid<!--l. 4747--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the spacing of the grid where the reference distribution <!--l. 4747--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+<li class="itemize"><a id="dx1-97008"></a><span class="ot1-zi4r-0-x-x-120">width </span><!--l. 4745--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Width
+     of the colvar grid<!--l. 4745--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the spacing of the grid where the reference distribution <!--l. 4745--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
      is deﬁned.
      </li>
-<li class="itemize"><a id="dx1-97009"></a> <span class="ot1-zi4r-0-x-x-120">gaussianSigma </span><!--l. 4757--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Standard
-     deviation of the approximating Gaussian<!--l. 4757--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>2 <!--l. 4757--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>
-<span class="ot1-zi4r-0-x-x-109">width</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the parameter <!--l. 4757--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+<li class="itemize"><a id="dx1-97009"></a> <span class="ot1-zi4r-0-x-x-120">gaussianSigma </span><!--l. 4755--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Standard
+     deviation of the approximating Gaussian<!--l. 4755--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>2 <!--l. 4755--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>
+<span class="ot1-zi4r-0-x-x-109">width</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the parameter <!--l. 4755--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
      in eq. <a href="#eq:colvarbias_restraint_histogram_gaussian">29<!--tex4ht:ref: eq:colvarbias_restraint_histogram_gaussian --></a>.
      </li>
-<li class="itemize"><a id="dx1-97010"></a> <span class="ot1-zi4r-0-x-x-120">forceConstant </span><!--l. 4767--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Force
-     constant (kcal/mol)<!--l. 4767--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">1.0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the parameter <!--l. 4767--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
+<li class="itemize"><a id="dx1-97010"></a> <span class="ot1-zi4r-0-x-x-120">forceConstant </span><!--l. 4765--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Force
+     constant (kcal/mol)<!--l. 4765--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">1.0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the parameter <!--l. 4765--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
      in eq. <a href="#eq:colvarbias_restraint_histogram">28<!--tex4ht:ref: eq:colvarbias_restraint_histogram --></a>.
      </li>
-<li class="itemize"><a id="dx1-97011"></a> <span class="ot1-zi4r-0-x-x-120">refHistogram </span><!--l. 4778--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Reference
-     histogram <!--l. 4778--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 4778--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>space-separated list of <!--l. 4778--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math>
-     positive decimals <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Provides the values of <!--l. 4778--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+<li class="itemize"><a id="dx1-97011"></a> <span class="ot1-zi4r-0-x-x-120">refHistogram </span><!--l. 4776--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Reference
+     histogram <!--l. 4776--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 4776--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>space-separated list of <!--l. 4776--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math>
+     positive decimals <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Provides the values of <!--l. 4776--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
      consecutively. The mid-point convention is used, i.e. the ﬁrst point that should be included is for
-     <!--l. 4778--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
-     = <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>+<span class="ot1-zi4r-0-x-x-109">width</span>/2. If the integral of <!--l. 4778--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
-     is not normalized to 1, <!--l. 4778--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+     <!--l. 4776--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+     = <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>+<span class="ot1-zi4r-0-x-x-109">width</span>/2. If the integral of <!--l. 4776--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+     is not normalized to 1, <!--l. 4776--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
      is rescaled automatically before use.
      </li>
-<li class="itemize"><a id="dx1-97012"></a> <span class="ot1-zi4r-0-x-x-120">refHistogramFile </span><!--l. 4789--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Reference
-     histogram <!--l. 4789--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 4789--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>UNIX ﬁle name <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Provides the values of <!--l. 4789--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+<li class="itemize"><a id="dx1-97012"></a> <span class="ot1-zi4r-0-x-x-120">refHistogramFile </span><!--l. 4787--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Reference
+     histogram <!--l. 4787--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 4787--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>UNIX ﬁle name <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Provides the values of <!--l. 4787--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
      as contents of the corresponding ﬁle (mutually exclusive with <span class="ot1-zi4r-0-x-x-109">refHistogram</span>). The format is that of a
-     text ﬁle, with each line containing the space-separated values of <!--l. 4789--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
-     and <!--l. 4789--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
+     text ﬁle, with each line containing the space-separated values of <!--l. 4787--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+     and <!--l. 4787--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
      The same numerical conventions as <span class="ot1-zi4r-0-x-x-109">refHistogram </span>are used.
      </li>
-<li class="itemize"><a id="dx1-97013"></a> <span class="ot1-zi4r-0-x-x-120">writeHistogram </span><!--l. 4798--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Periodically
-     write the instantaneous histogram <!--l. 4798--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 4798--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
-<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">metadynamics</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If <span class="ot1-zi4r-0-x-x-109">on</span>, the histogram <!--l. 4798--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
-     is written every <span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency </span>steps to a ﬁle with the name <span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.</span><!--l. 4798--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">name</span><!--l. 4798--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ot1-zi4r-0-x-x-109">.hist.dat</span>
-     This is useful to diagnose the convergence of <!--l. 4799--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
-     against <!--l. 4799--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
+<li class="itemize"><a id="dx1-97013"></a> <span class="ot1-zi4r-0-x-x-120">writeHistogram </span><!--l. 4796--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Periodically
+     write the instantaneous histogram <!--l. 4796--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 4796--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">metadynamics</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If <span class="ot1-zi4r-0-x-x-109">on</span>, the histogram <!--l. 4796--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+     is written every <span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency </span>steps to a ﬁle with the name <span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.</span><!--l. 4796--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">name</span><!--l. 4796--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ot1-zi4r-0-x-x-109">.hist.dat</span>
+     This is useful to diagnose the convergence of <!--l. 4797--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+     against <!--l. 4797--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
      </li></ul>
-<!--l. 4863--><p class="noindent"><a id="sec:scripted_biases">
+<!--l. 4861--><p class="noindent"><a id="sec:scripted_biases">
 </a></p>
 <h4 class="subsectionHead"><span class="titlemark">6.11    </span> <a id="sec:scripted_biases"></a>Deﬁning scripted biases</h4>
-<!--l. 4863--><p class="noindent">
-</p><!--l. 4863--><p class="indent">   Rather than using the biasing methods described above, it is possible to apply biases provided at run time as a
+<!--l. 4861--><p class="noindent">
+</p><!--l. 4861--><p class="indent">   Rather than using the biasing methods described above, it is possible to apply biases provided at run time as a
 Tcl script. This option, also available in NAMD, can be useful to test a new algorithm to be used in a MD
 simulation.
 </p>
 <ul class="itemize1">
-<li class="itemize"><a id="Colvars-global|scriptedColvarForces"></a> <a id="dx1-98001"></a><span class="ot1-zi4r-0-x-x-120">scriptedColvarForces </span><!--l. 4863--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Enable
-     custom, scripted forces on colvars <!--l. 4863--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="Colvars-global|scriptedColvarForces"></a> <a id="dx1-98001"></a><span class="ot1-zi4r-0-x-x-120">scriptedColvarForces </span><!--l. 4861--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Enable
+     custom, scripted forces on colvars <!--l. 4861--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>global <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>If this ﬂag is enabled, a Tcl procedure named <span class="ot1-zi4r-0-x-x-109">calc</span><span class="ot1-zi4r-0-x-x-109">_colvar</span><span class="ot1-zi4r-0-x-x-109">_forces </span>accepting one
      parameter should be deﬁned by the user. It is executed at each timestep, with the current step number
      as parameter, between the calculation of colvars and the application of bias forces. This procedure
      may use the <span class="ot1-zi4r-0-x-x-109">cv </span>command to access the values of colvars and apply forces on them, eﬀectively deﬁning
      custom collective variable biases. </li></ul>
-<!--l. 4863--><p class="noindent"><a id="sec:cv_scripting_opt">
+<!--l. 4861--><p class="noindent"><a id="sec:cv_scripting_opt">
 </a></p>
 <h4 class="subsectionHead"><span class="titlemark">6.12    </span> <a id="sec:cv_scripting_opt"></a>Performance of scripted biases</h4>
-<!--l. 4863--><p class="noindent">
-</p><!--l. 4863--><p class="indent">   If concurrent computation over multiple threads is available (this is indicated by the message “SMP parallelism
+<!--l. 4861--><p class="noindent">
+</p><!--l. 4861--><p class="indent">   If concurrent computation over multiple threads is available (this is indicated by the message “SMP parallelism
 is available.” printed at initialization time), it is useful to take advantage of the scripting interface to combine many
 components, all computed in parallel, into a single variable.
-</p><!--l. 4863--><p class="indent">   The default SMP schedule is the following:
+</p><!--l. 4861--><p class="indent">   The default SMP schedule is the following:
      </p><ol class="enumerate1">
 <li class="enumerate" id="x1-99002x1">distribute the computation of all components across available threads;
      </li>
@@ -3548,10 +3548,10 @@ components, all computed in parallel, into a single variable.
      <a href="#Colvars-global|scriptedColvarForces"><span class="ot1-zi4r-0-x-x-109">scriptedColvarForces</span></a>.
      </li>
 <li class="enumerate" id="x1-99010x5">communicate on a single thread forces to VMD.</li></ol>
-<!--l. 4863--><p class="indent">   The following options allow to ﬁne-tune this schedule: </p>
+<!--l. 4861--><p class="indent">   The following options allow to ﬁne-tune this schedule: </p>
 <ul class="itemize1">
-<li class="itemize"><a id="dx1-99011"></a> <span class="ot1-zi4r-0-x-x-120">scriptingAfterBiases </span><!--l. 4863--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Scripted
-     colvar forces need updated biases?<!--l. 4863--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
+<li class="itemize"><a id="dx1-99011"></a> <span class="ot1-zi4r-0-x-x-120">scriptingAfterBiases </span><!--l. 4861--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Scripted
+     colvar forces need updated biases?<!--l. 4861--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>global <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">on</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This ﬂag speciﬁes that the <span class="ot1-zi4r-0-x-x-109">calc</span><span class="ot1-zi4r-0-x-x-109">_colvar</span><span class="ot1-zi4r-0-x-x-109">_forces </span>procedure (last step in the list above)
      is executed only after all biases have been updated (next-to-last step) For example, this allows using
      the energy of a restraint bias, or the force applied on a colvar, to calculate additional scripted forces,
@@ -3559,16 +3559,16 @@ components, all computed in parallel, into a single variable.
      variables (but not the energy of the biases or applied forces) will be used by <span class="ot1-zi4r-0-x-x-109">calc</span><span class="ot1-zi4r-0-x-x-109">_colvar</span><span class="ot1-zi4r-0-x-x-109">_forces</span>:
      this can be used to schedule the calculation of scripted forces and biases concurrently to increase
      performance. </li></ul>
-<!--l. 4866--><p class="indent">
-</p><!--l. 4866--><p class="noindent"><a id="sec:colvars_config_changes">
+<!--l. 4864--><p class="indent">
+</p><!--l. 4864--><p class="noindent"><a id="sec:colvars_config_changes">
 </a></p>
 <h3 class="sectionHead"><span class="titlemark">7    </span> <a id="sec:colvars_config_changes"></a>Syntax changes from older versions</h3>
-<!--l. 4866--><p class="noindent">
-</p><!--l. 4868--><p class="indent">   The following is a list of syntax changes in Colvars since its ﬁrst release. Many of the older keywords are still
+<!--l. 4864--><p class="noindent">
+</p><!--l. 4866--><p class="indent">   The following is a list of syntax changes in Colvars since its ﬁrst release. Many of the older keywords are still
 recognized by the current code, thanks to speciﬁc compatibility code. <span class="ptmri7t-x-x-109">This is not a list of new features: </span>its primary
 purpose is to make you aware of those improvements that aﬀect the use of old conﬁguration ﬁles with new versions
 of the code.
-</p><!--l. 4872--><p class="noindent"><span class="ptmb7t-x-x-109">Note: </span>if you are using any of the NAMD and VMD tutorials:<br class="newline"/><a class="url" href="https://www.ks.uiuc.edu/Training/Tutorials/"><span class="ot1-zi4r-0-x-x-109">https://www.ks.uiuc.edu/Training/Tutorials/</span></a><br class="newline"/>please be aware that <span class="ptmri7t-x-x-109">several of these tutorials are not actively maintained</span>: for those cases, this list will help you
+</p><!--l. 4870--><p class="noindent"><span class="ptmb7t-x-x-109">Note: </span>if you are using any of the NAMD and VMD tutorials:<br class="newline"/><a class="url" href="https://www.ks.uiuc.edu/Training/Tutorials/"><span class="ot1-zi4r-0-x-x-109">https://www.ks.uiuc.edu/Training/Tutorials/</span></a><br class="newline"/>please be aware that <span class="ptmri7t-x-x-109">several of these tutorials are not actively maintained</span>: for those cases, this list will help you
 reconcile any inconsistencies.
 </p>
 <ul class="itemize1">
@@ -3592,7 +3592,7 @@ reconcile any inconsistencies.
      between the grid boundaries and the wall potentials. See also <a href="#colvar|expandBoundaries"><span class="ot1-zi4r-0-x-x-109">expandBoundaries</span></a> for an automatic
      deﬁnition of the PMF grid boundaries.
      </li></ul>
-<!--l. 4899--><p class="noindent">Up-to-date documentation can always be accessed at:<br class="newline"/> <a class="url" href="https://colvars.github.io/colvars-refman-vmd/colvars-refman-vmd.html"><span class="ot1-zi4r-0-x-x-109">https://colvars.github.io/colvars-refman-vmd/colvars-refman-vmd.html</span></a>
+<!--l. 4897--><p class="noindent">Up-to-date documentation can always be accessed at:<br class="newline"/> <a class="url" href="https://colvars.github.io/colvars-refman-vmd/colvars-refman-vmd.html"><span class="ot1-zi4r-0-x-x-109">https://colvars.github.io/colvars-refman-vmd/colvars-refman-vmd.html</span></a>
 </p><!--l. 137--><p class="indent">
 </p><!--l. 140--><p class="indent">
 </p>
