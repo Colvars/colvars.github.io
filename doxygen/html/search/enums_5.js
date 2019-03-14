@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type',['Type',['../classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50',1,'colvarvalue']]]
+  ['parse_5fmode',['Parse_Mode',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4',1,'colvarparse']]]
 ];

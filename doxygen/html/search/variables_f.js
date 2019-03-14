@@ -12,8 +12,8 @@ var searchData=
   ['pmf',['pmf',['../classcolvarbias__abf.html#a1469913367a714dc4d95a04dad91b8e2',1,'colvarbias_abf']]],
   ['pos',['pos',['../classcolvarmodule_1_1atom.html#ad69c11b6395fdda6f0c84783ade07a88',1,'colvarmodule::atom']]],
   ['prev_5ftimestep',['prev_timestep',['../classcolvar.html#accf3eb0e6ade872676842f0d6c1cc1b4',1,'colvar']]],
-  ['prev_5fvr',['prev_vr',['../classcolvar.html#a17757758667fe3349c4afc1d54392330',1,'colvar']]],
-  ['prev_5fxr',['prev_xr',['../classcolvar.html#ae0a24f4b1fadbb4e75ea288fd945d0dd',1,'colvar']]],
+  ['prev_5fv_5fext',['prev_v_ext',['../classcolvar.html#aa7f43820f71f58307d8d8c7a8de0c7ae',1,'colvar']]],
+  ['prev_5fx_5fext',['prev_x_ext',['../classcolvar.html#a75d391e937bd036d1c732e37dc3e0322',1,'colvar']]],
   ['previous_5fcolvar_5fforces',['previous_colvar_forces',['../classcolvarbias.html#a881b022eeedaeabdbd7c5dd1b5a1510c',1,'colvarbias']]],
   ['proxy',['proxy',['../classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c',1,'colvarmodule']]],
   ['proxy_5ferror',['proxy_error',['../classcolvarscript.html#a61c5ae742fd47324198ac53873e7f877',1,'colvarscript']]]

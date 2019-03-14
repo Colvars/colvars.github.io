@@ -1,8 +1,10 @@
 var searchData=
 [
   ['unit_5fcell_5fx',['unit_cell_x',['../classcolvarproxy__system.html#ab496f8debd2b4768ac11b24594bf4299',1,'colvarproxy_system']]],
+  ['update_5fbias',['update_bias',['../classcolvarbias__abf.html#aaeebc1316149545fb7a750ee49b68d3c',1,'colvarbias_abf']]],
   ['update_5ffreq',['update_freq',['../classcolvarbias__alb.html#a3c5b0adc33fff5da40cbc87a5731f6ad',1,'colvarbias_alb']]],
   ['update_5fstatus',['update_status',['../classcolvarbias__meta.html#a761766480539f23515161a2ed4aa325d',1,'colvarbias_meta']]],
+  ['updated_5fmasses_5f',['updated_masses_',['../classcolvarproxy__atoms.html#aa3cf1e7c3299380e02953ad5308d5b62',1,'colvarproxy_atoms']]],
   ['upper_5fboundaries',['upper_boundaries',['../classcolvar__grid.html#a032ecf8dfc1d8f6d25edfb71eaaaf014',1,'colvar_grid']]],
   ['upper_5fboundary',['upper_boundary',['../classcolvar.html#a9dbee4623a73b2650a3ab75ded20cf0c',1,'colvar::upper_boundary()'],['../classcolvarbias__restraint__histogram.html#afdfe817243e46ed24fd6c9478ab5e04f',1,'colvarbias_restraint_histogram::upper_boundary()']]],
   ['upper_5fwall',['upper_wall',['../classcolvar.html#ae7aadc4293c9fac473d26a9f7bb3491a',1,'colvar']]],

@@ -1,13 +1,18 @@
 var searchData=
 [
-  ['obj_5fto_5fstr',['obj_to_str',['../classcolvarscript.html#aad7c48d0e8d9e4758422047d36f9a6d8',1,'colvarscript']]],
-  ['ones',['ones',['../classcolvarvalue.html#a68e193f9bcce67743ce6109a4811088a',1,'colvarvalue']]],
-  ['open_5ftraj_5ffile',['open_traj_file',['../classcolvarmodule.html#af3ba4e8b5f9e28e143d8e19551de35b6',1,'colvarmodule']]],
-  ['operator_3d',['operator=',['../classcolvarmodule_1_1matrix2d.html#a769e738b7e31640fe09d0d5623ebd72c',1,'colvarmodule::matrix2d::operator=()'],['../classcolvarvalue.html#a42b71407ccc332aa248cbcdbdfadbd42',1,'colvarvalue::operator=()']]],
-  ['operator_5b_5d',['operator[]',['../classcolvarmodule_1_1rvector.html#af713c0fdabe1c9911143066ea2dfb8c3',1,'colvarmodule::rvector::operator[](int i)'],['../classcolvarmodule_1_1rvector.html#a13dbbb10e173ed1c2ecdf83d0055fa79',1,'colvarmodule::rvector::operator[](int i) const'],['../classcolvarmodule_1_1quaternion.html#a5eac37b2cdd3fa6f676d41625637707b',1,'colvarmodule::quaternion::operator[](int i)'],['../classcolvarmodule_1_1quaternion.html#af82048fb9d15f5267c37a231f89df14f',1,'colvarmodule::quaternion::operator[](int i) const'],['../classcolvarvalue.html#a48102ae3ec0ed443d4723dd82b863017',1,'colvarvalue::operator[](int const i) const'],['../classcolvarvalue.html#a1f08d4baa5dedb5f34ebf5da99463d41',1,'colvarvalue::operator[](int const i)']]],
-  ['output_5fprefix',['output_prefix',['../classcolvarmodule.html#ab1960ab86b41e37f33be0ade82c1dd11',1,'colvarmodule::output_prefix()'],['../classcolvarproxy__io.html#ac79ec93f4c871902494e4ff3121fa955',1,'colvarproxy_io::output_prefix()']]],
-  ['output_5fstream',['output_stream',['../classcolvarproxy__io.html#ae8388eaf13fdd0dc2e8af6e2b94d7e4f',1,'colvarproxy_io::output_stream()'],['../classcolvarproxy__namd.html#aa1299021da5d38d4c3d0a7004383e291',1,'colvarproxy_namd::output_stream()']]],
-  ['output_5ftraj',['output_traj',['../classcolvarbias__meta_1_1hill.html#ace9d0b2e01e7e042961b0c80d25001b5',1,'colvarbias_meta::hill']]],
-  ['output_5fwidth',['output_width',['../classcolvarmodule_1_1vector1d.html#a0b2f3eae6b2979d7875bd57d5ffb263b',1,'colvarmodule::vector1d::output_width()'],['../classcolvarmodule_1_1quaternion.html#a980121b944bad5f114b2489bcaebd573',1,'colvarmodule::quaternion::output_width()'],['../classcolvarvalue.html#aab59ee77ce03e0527e503c10a3702ba6',1,'colvarvalue::output_width()']]],
-  ['overlap',['overlap',['../classcolvarmodule_1_1atom__group.html#aeb24361d99ecb81fd3f262948c0cac95',1,'colvarmodule::atom_group']]]
+  ['new_5fcount',['new_count',['../classcolvar__grid__count.html#aab6738acd50e1b87aa8f3576cc925ad1',1,'colvar_grid_count']]],
+  ['new_5findex',['new_index',['../classcolvar__grid.html#a77d2af2858f9081521b14ccad4ca0cc1',1,'colvar_grid']]],
+  ['norm',['norm',['../classcolvarmodule_1_1quaternion.html#a5ada8b87a2ff0d22cd9d435f51423065',1,'colvarmodule::quaternion::norm()'],['../classcolvarvalue.html#a47497ef53222a1cd9901e006372003be',1,'colvarvalue::norm()']]],
+  ['norm2',['norm2',['../classcolvarmodule_1_1vector1d.html#a4dd1f69b3febb6f2dee5ec41ba1ca205',1,'colvarmodule::vector1d::norm2()'],['../classcolvarmodule_1_1quaternion.html#a9a0053a4107069d63c6aa89c8ba1d906',1,'colvarmodule::quaternion::norm2()'],['../classcolvarvalue.html#afe75dcec4c913e8a1d195670d1c2b125',1,'colvarvalue::norm2()']]],
+  ['nr_5flinbcg_5fsym',['nr_linbcg_sym',['../classintegrate__potential.html#ae7e067676ca2362e0415d4e8710ac563',1,'integrate_potential']]],
+  ['num_5factive_5fcvcs',['num_active_cvcs',['../classcolvar.html#ae4b38ab767676a204aba0b09af3c24e9',1,'colvar']]],
+  ['num_5fbiases',['num_biases',['../classcolvarmodule.html#a442582d0f8485fb4a5f4ad4150950483',1,'colvarmodule']]],
+  ['num_5fbiases_5ffeature',['num_biases_feature',['../classcolvarmodule.html#a10f9b55e09eae2b12cb04fb199ac28f0',1,'colvarmodule']]],
+  ['num_5fbiases_5ftype',['num_biases_type',['../classcolvarmodule.html#a7cac96b352c255c05f97626f4bc44536',1,'colvarmodule']]],
+  ['num_5fcvcs',['num_cvcs',['../classcolvar.html#a07f6d9b3b01cc8442922eed499f0af01',1,'colvar']]],
+  ['num_5fdf',['num_df',['../classcolvarvalue.html#aeb5b6fc408dd1a9c2900ebdc6074e599',1,'colvarvalue']]],
+  ['num_5fdimensions',['num_dimensions',['../classcolvarvalue.html#a9c910f3c66324ad1f3bbff8149c8d7da',1,'colvarvalue']]],
+  ['num_5fvariables',['num_variables',['../classcolvarbias.html#a34c8c1c27c7bad8083e373eb89d5c1c4',1,'colvarbias::num_variables()'],['../classcolvar__grid.html#a81eac89843540fdf1136e5f9bf9224ea',1,'colvar_grid::num_variables()'],['../classcolvarmodule.html#abe6388fb31654c1a3ad663f375b62453',1,'colvarmodule::num_variables()']]],
+  ['num_5fvariables_5ffeature',['num_variables_feature',['../classcolvarmodule.html#ae7b5451d681ad21766087b0a929b255e',1,'colvarmodule']]],
+  ['number_5fof_5fpoints',['number_of_points',['../classcolvar__grid.html#a300a5781e3b323d2fe48c4df463c265e',1,'colvar_grid']]]
 ];
