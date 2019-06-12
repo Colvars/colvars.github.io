@@ -1,6 +1,8 @@
 var searchData=
 [
   ['eabf_5fui',['eabf_UI',['../classcolvarbias__abf.html#ad680131e7e1e853acff9d7e46bd16746',1,'colvarbias_abf']]],
+  ['ebmeta',['ebmeta',['../classcolvarbias__meta.html#a30d66214dac18c72f617e246cc567aa2',1,'colvarbias_meta']]],
+  ['ebmeta_5fequil_5fsteps',['ebmeta_equil_steps',['../classcolvarbias__meta.html#a43257446427ef51e51edb3c505c44c65',1,'colvarbias_meta']]],
   ['ed',['ed',['../classcolvar_1_1coordnum.html#a5b08fe61b6f95b13d48910f664d634cc',1,'colvar::coordnum::ed()'],['../classcolvar_1_1selfcoordnum.html#acffd14de3196a3f4bf5f004d0f833cc7',1,'colvar::selfcoordnum::ed()'],['../classcolvar_1_1groupcoordnum.html#a32607bb41036095b1c59fd822db97842',1,'colvar::groupcoordnum::ed()'],['../classcolvar_1_1h__bond.html#a06324ff4ad94e61fbd3bfdbf14707a7d',1,'colvar::h_bond::ed()']]],
   ['eigenvec',['eigenvec',['../classcolvar_1_1eigenvector.html#a94c568800e24a1324f2803fa01cad387',1,'colvar::eigenvector']]],
   ['eigenvec_5finvnorm2',['eigenvec_invnorm2',['../classcolvar_1_1eigenvector.html#ab8332c7cbc965486d3b02856e0fcec14',1,'colvar::eigenvector']]],
@@ -20,6 +22,7 @@ var searchData=
   ['error',['error',['../classcolvarmodule.html#a9a852c1136dcc84494b1c8d9b6323793',1,'colvarmodule::error()'],['../classcolvarproxy.html#a7529d2446ea51946818bd0271e66b28b',1,'colvarproxy::error()'],['../classcolvarproxy__namd.html#aa2ed7a4d0fdeb0ea2498dbefeb0bc0c1',1,'colvarproxy_namd::error()'],['../classcolvarproxy__vmd.html#ac65a9f9d7a3df3a5c6c689bada07ff2b',1,'colvarproxy_vmd::error()'],['../classcolvarproxy__lammps.html#a95c0cc831425a895ac53d58d3ddd9143',1,'colvarproxy_lammps::error()'],['../classcolvarproxy__gromacs.html#afabb0ecf23598258d2c99d285a6429d6',1,'colvarproxy_gromacs::error()']]],
   ['error_5fkey_5frequired',['error_key_required',['../classcolvarparse.html#aa5c937676c5f42a4f624c2cf9264929d',1,'colvarparse']]],
   ['errorcode',['errorCode',['../classcolvarmodule.html#a9d228802609d99aaee261e01b8768e06',1,'colvarmodule']]],
+  ['exclude_5ffeature_5fself',['exclude_feature_self',['../classcolvardeps.html#abcee45fc45d7997eb2811af75e384c77',1,'colvardeps']]],
   ['exec_5fcommand',['exec_command',['../classcolvarscript.html#a75c1d2b42a6eccc49fd787465b79d0cc',1,'colvarscript']]],
   ['exit',['exit',['../classcolvarproxy__gromacs.html#a211b1f4a5b98b482d7d93804b38b7ba8',1,'colvarproxy_gromacs']]],
   ['exp',['exp',['../classcolvarmodule.html#a3a3baa8868433119af4068bcf480841e',1,'colvarmodule']]],

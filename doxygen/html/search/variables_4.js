@@ -1,6 +1,8 @@
 var searchData=
 [
   ['eabf_5fui',['eabf_UI',['../classcolvarbias__abf.html#ad680131e7e1e853acff9d7e46bd16746',1,'colvarbias_abf']]],
+  ['ebmeta',['ebmeta',['../classcolvarbias__meta.html#a30d66214dac18c72f617e246cc567aa2',1,'colvarbias_meta']]],
+  ['ebmeta_5fequil_5fsteps',['ebmeta_equil_steps',['../classcolvarbias__meta.html#a43257446427ef51e51edb3c505c44c65',1,'colvarbias_meta']]],
   ['ed',['ed',['../classcolvar_1_1coordnum.html#a5b08fe61b6f95b13d48910f664d634cc',1,'colvar::coordnum::ed()'],['../classcolvar_1_1selfcoordnum.html#acffd14de3196a3f4bf5f004d0f833cc7',1,'colvar::selfcoordnum::ed()'],['../classcolvar_1_1groupcoordnum.html#a32607bb41036095b1c59fd822db97842',1,'colvar::groupcoordnum::ed()'],['../classcolvar_1_1h__bond.html#a06324ff4ad94e61fbd3bfdbf14707a7d',1,'colvar::h_bond::ed()']]],
   ['eigenvec',['eigenvec',['../classcolvar_1_1eigenvector.html#a94c568800e24a1324f2803fa01cad387',1,'colvar::eigenvector']]],
   ['eigenvec_5finvnorm2',['eigenvec_invnorm2',['../classcolvar_1_1eigenvector.html#ab8332c7cbc965486d3b02856e0fcec14',1,'colvar::eigenvector']]],

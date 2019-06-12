@@ -1,10 +1,11 @@
 var searchData=
 [
   ['target_5fcenters',['target_centers',['../classcolvarbias__restraint__centers__moving.html#a0332728290c37d74867a836e9bc32219',1,'colvarbias_restraint_centers_moving']]],
+  ['target_5fdist',['target_dist',['../classcolvarbias__meta.html#a20c7796dcc6a6841540349d2be2ecd2d',1,'colvarbias_meta']]],
   ['target_5fequil_5fsteps',['target_equil_steps',['../classcolvarbias__restraint__k__moving.html#a2ecdb6836f3ed8864112b90e52e5392b',1,'colvarbias_restraint_k_moving']]],
   ['target_5fforce_5fk',['target_force_k',['../classcolvarbias__restraint__k__moving.html#ab79f6091ee6544017c9e944634a2d403',1,'colvarbias_restraint_k_moving']]],
   ['target_5fnstages',['target_nstages',['../classcolvarbias__restraint__moving.html#aea1ed7b9d7e3618eb958613db28ae7c0',1,'colvarbias_restraint_moving']]],
-  ['target_5fnsteps',['target_nsteps',['../classcolvarbias__restraint__moving.html#a1da29b1e57bbb6efa45a7ebb5a5a4a90',1,'colvarbias_restraint_moving']]],
+  ['target_5fnsteps',['target_nsteps',['../classcolvarbias__restraint__moving.html#a560cf68b8f876ef2ad4ee895769dc792',1,'colvarbias_restraint_moving']]],
   ['tcl_5finterp_5f',['tcl_interp_',['../classcolvarproxy__tcl.html#af0338cbdb54f3f6e99ee3b9cf7020dd9',1,'colvarproxy_tcl']]],
   ['thermostat_5ftemperature',['thermostat_temperature',['../classcolvarproxy__namd.html#aa82e64a81d203cea0bd15a7861b07758',1,'colvarproxy_namd']]],
   ['theta',['theta',['../classcolvar_1_1alpha__angles.html#ad3001a74aa4e18dbef2f949e84d2522f',1,'colvar::alpha_angles']]],

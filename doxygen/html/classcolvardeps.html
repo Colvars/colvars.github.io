@@ -63,9 +63,9 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcolvardeps-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -208,7 +208,7 @@ Public Types</h2></td></tr>
 &#160;&#160;<b>f_cvc_active</b>, 
 <b>f_cvc_scalar</b>, 
 <b>f_cvc_gradient</b>, 
-<a class="el" href="classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a8c13a8c03363bc9e5046e033d4231e55">f_cvc_implicit_gradient</a>, 
+<a class="el" href="classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a2dbc5b47a96365f05bb438afc485a078">f_cvc_explicit_gradient</a>, 
 <br />
 &#160;&#160;<b>f_cvc_inv_gradient</b>, 
 <a class="el" href="classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a9502bf695d9ec5fabcc5a6f965719985">f_cvc_debug_gradient</a>, 
@@ -230,7 +230,7 @@ Public Types</h2></td></tr>
 <b>f_ag_rotate</b>, 
 <b>f_ag_fitting_group</b>, 
 <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95a27cda1e12907c1d7199528d8bbb35ce8">f_ag_implicit_gradient</a>, 
+&#160;&#160;<a class="el" href="classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95a10e7eff973d62aa84843c8b11c9f5acd">f_ag_explicit_gradient</a>, 
 <b>f_ag_fit_gradients</b>, 
 <b>f_ag_atom_forces</b>, 
 <b>f_ag_scalable</b>, 
@@ -247,10 +247,13 @@ Public Member Functions</h2></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a8f5b07edb59e5da8a08ecb9a8385ba12">get_time_step_factor</a> () const</td></tr>
 <tr class="memdesc:a8f5b07edb59e5da8a08ecb9a8385ba12"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns time_step_factor <br /></td></tr>
 <tr class="separator:a8f5b07edb59e5da8a08ecb9a8385ba12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa589190785f194b8ba2be25b0783428e"><td class="memItemLeft" align="right" valign="top"><a id="aa589190785f194b8ba2be25b0783428e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#aa589190785f194b8ba2be25b0783428e">init_feature</a> (int feature_id, const char *description, <a class="el" href="classcolvardeps.html#a507771dd1cc74ce0d9a549a6f8d8cd9c">feature_type</a> type=f_type_not_set)</td></tr>
-<tr class="memdesc:aa589190785f194b8ba2be25b0783428e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pair a numerical feature ID with a description and type. <br /></td></tr>
-<tr class="separator:aa589190785f194b8ba2be25b0783428e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06cc9ac1a5418ff05b7ba28fd371cbe2"><td class="memItemLeft" align="right" valign="top"><a id="a06cc9ac1a5418ff05b7ba28fd371cbe2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a06cc9ac1a5418ff05b7ba28fd371cbe2">init_feature</a> (int feature_id, const char *description, <a class="el" href="classcolvardeps.html#a507771dd1cc74ce0d9a549a6f8d8cd9c">feature_type</a> type)</td></tr>
+<tr class="memdesc:a06cc9ac1a5418ff05b7ba28fd371cbe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pair a numerical feature ID with a description and type. <br /></td></tr>
+<tr class="separator:a06cc9ac1a5418ff05b7ba28fd371cbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb93a03089a21faabbbc2b46a5c12fde"><td class="memItemLeft" align="right" valign="top"><a id="aeb93a03089a21faabbbc2b46a5c12fde"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_not_set</b> (int id)</td></tr>
+<tr class="separator:aeb93a03089a21faabbbc2b46a5c12fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d10967b85cce7cb8788daa0c4e0aaf"><td class="memItemLeft" align="right" valign="top"><a id="a07d10967b85cce7cb8788daa0c4e0aaf"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_dynamic</b> (int id)</td></tr>
 <tr class="separator:a07d10967b85cce7cb8788daa0c4e0aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,9 +263,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_static</b> (int id
 <tr class="memitem:aee7b0ed746752f5a5f32b1d9ae48acf8"><td class="memItemLeft" align="right" valign="top"><a id="aee7b0ed746752f5a5f32b1d9ae48acf8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_user</b> (int id)</td></tr>
 <tr class="separator:aee7b0ed746752f5a5f32b1d9ae48acf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94ba15a2dd33ce5bb926ee50ce41d817"><td class="memItemLeft" align="right" valign="top"><a id="a94ba15a2dd33ce5bb926ee50ce41d817"></a>
-virtual const std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>features</b> ()=0</td></tr>
-<tr class="separator:a94ba15a2dd33ce5bb926ee50ce41d817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01bb45160cca4b39feb4187c33577bb"><td class="memItemLeft" align="right" valign="top"><a id="aa01bb45160cca4b39feb4187c33577bb"></a>
+virtual const std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>features</b> () const =0</td></tr>
+<tr class="separator:aa01bb45160cca4b39feb4187c33577bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9788bfc503bffbc066ee16e076dc71f"><td class="memItemLeft" align="right" valign="top"><a id="ab9788bfc503bffbc066ee16e076dc71f"></a>
 virtual std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>modify_features</b> ()=0</td></tr>
 <tr class="separator:ab9788bfc503bffbc066ee16e076dc71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,28 +303,58 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a8be1d5a26aa37cbd4eb3dc6180a128af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a199099c009e10b57915c67a36c33f494"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a199099c009e10b57915c67a36c33f494">do_feature_side_effects</a> (int id)</td></tr>
 <tr class="separator:a199099c009e10b57915c67a36c33f494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2bfe73eb93212e466e006cb9a963ca2"><td class="memItemLeft" align="right" valign="top"><a id="ab2bfe73eb93212e466e006cb9a963ca2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init_cvb_requires</b> ()</td></tr>
-<tr class="separator:ab2bfe73eb93212e466e006cb9a963ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f099f10793cc81e2917768b30d66c1c"><td class="memItemLeft" align="right" valign="top"><a id="a9f099f10793cc81e2917768b30d66c1c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init_cv_requires</b> ()</td></tr>
-<tr class="separator:a9f099f10793cc81e2917768b30d66c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31542777f1ba4bbe1e36536df1b4cf37"><td class="memItemLeft" align="right" valign="top"><a id="a31542777f1ba4bbe1e36536df1b4cf37"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init_cvc_requires</b> ()</td></tr>
-<tr class="separator:a31542777f1ba4bbe1e36536df1b4cf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2c18f093e71dc21ba4c675cdabd6571"><td class="memItemLeft" align="right" valign="top"><a id="ab2c18f093e71dc21ba4c675cdabd6571"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init_ag_requires</b> ()</td></tr>
-<tr class="separator:ab2c18f093e71dc21ba4c675cdabd6571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8311d1b501e2b1a28261f0fc181b45"><td class="memItemLeft" align="right" valign="top"><a id="a5e8311d1b501e2b1a28261f0fc181b45"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a5e8311d1b501e2b1a28261f0fc181b45">init_dependencies</a> ()=0</td></tr>
+<tr class="memdesc:a5e8311d1b501e2b1a28261f0fc181b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize dependency tree for object of a derived class. <br /></td></tr>
+<tr class="separator:a5e8311d1b501e2b1a28261f0fc181b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa901ba16dc2c979b7c599d9a4e130a9e"><td class="memItemLeft" align="right" valign="top"><a id="aa901ba16dc2c979b7c599d9a4e130a9e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#aa901ba16dc2c979b7c599d9a4e130a9e">require_feature_self</a> (int f, int g)</td></tr>
+<tr class="memdesc:aa901ba16dc2c979b7c599d9a4e130a9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make feature f require feature g within the same object. <br /></td></tr>
+<tr class="separator:aa901ba16dc2c979b7c599d9a4e130a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcee45fc45d7997eb2811af75e384c77"><td class="memItemLeft" align="right" valign="top"><a id="abcee45fc45d7997eb2811af75e384c77"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#abcee45fc45d7997eb2811af75e384c77">exclude_feature_self</a> (int f, int g)</td></tr>
+<tr class="memdesc:abcee45fc45d7997eb2811af75e384c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make features f and g mutually exclusive within the same object. <br /></td></tr>
+<tr class="separator:abcee45fc45d7997eb2811af75e384c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32857bdc44fcc478e2bc97ae06b6305"><td class="memItemLeft" align="right" valign="top"><a id="ab32857bdc44fcc478e2bc97ae06b6305"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ab32857bdc44fcc478e2bc97ae06b6305">require_feature_children</a> (int f, int g)</td></tr>
+<tr class="memdesc:ab32857bdc44fcc478e2bc97ae06b6305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make feature f require feature g within children. <br /></td></tr>
+<tr class="separator:ab32857bdc44fcc478e2bc97ae06b6305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13db33b90a19ed4f0285204822f7d8d4"><td class="memItemLeft" align="right" valign="top"><a id="a13db33b90a19ed4f0285204822f7d8d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a13db33b90a19ed4f0285204822f7d8d4">require_feature_alt</a> (int f, int g, int h)</td></tr>
+<tr class="memdesc:a13db33b90a19ed4f0285204822f7d8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make feature f require either g or h within the same object. <br /></td></tr>
+<tr class="separator:a13db33b90a19ed4f0285204822f7d8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74941e15ca5eb4c1d43a555c3926a83"><td class="memItemLeft" align="right" valign="top"><a id="ae74941e15ca5eb4c1d43a555c3926a83"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ae74941e15ca5eb4c1d43a555c3926a83">require_feature_alt</a> (int f, int g, int h, int i)</td></tr>
+<tr class="memdesc:ae74941e15ca5eb4c1d43a555c3926a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make feature f require any of g, h, or i within the same object. <br /></td></tr>
+<tr class="separator:ae74941e15ca5eb4c1d43a555c3926a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e648d299fafd96ac769985554b961e"><td class="memItemLeft" align="right" valign="top"><a id="ab2e648d299fafd96ac769985554b961e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ab2e648d299fafd96ac769985554b961e">require_feature_alt</a> (int f, int g, int h, int i, int j)</td></tr>
+<tr class="memdesc:ab2e648d299fafd96ac769985554b961e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make feature f require any of g, h, i, or j within the same object. <br /></td></tr>
+<tr class="separator:ab2e648d299fafd96ac769985554b961e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff2f719a18e6880cc94eefc53693321a"><td class="memItemLeft" align="right" valign="top"><a id="aff2f719a18e6880cc94eefc53693321a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#aff2f719a18e6880cc94eefc53693321a">print_state</a> ()</td></tr>
 <tr class="memdesc:aff2f719a18e6880cc94eefc53693321a"><td class="mdescLeft">&#160;</td><td class="mdescRight">print all enabled features and those of children, for debugging <br /></td></tr>
 <tr class="separator:aff2f719a18e6880cc94eefc53693321a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab523803ef20a5349cb1bdc3b17cb81cf"><td class="memItemLeft" align="right" valign="top"><a id="ab523803ef20a5349cb1bdc3b17cb81cf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ab523803ef20a5349cb1bdc3b17cb81cf">check_enabled</a> (int f, std::string const &amp;reason) const</td></tr>
+<tr class="memdesc:ab523803ef20a5349cb1bdc3b17cb81cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a feature is enabled, raising BUG_ERROR if not. <br /></td></tr>
+<tr class="separator:ab523803ef20a5349cb1bdc3b17cb81cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad272099c249484986af5428e5d12880f"><td class="memItemLeft" align="right" valign="top"><a id="ad272099c249484986af5428e5d12880f"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b></td></tr>
 <tr class="separator:ad272099c249484986af5428e5d12880f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a507771dd1cc74ce0d9a549a6f8d8cd9c"><td class="memItemLeft" align="right" valign="top"><a id="a507771dd1cc74ce0d9a549a6f8d8cd9c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a507771dd1cc74ce0d9a549a6f8d8cd9c">feature_type</a> { <b>f_type_not_set</b>, 
+<b>f_type_dynamic</b>, 
+<b>f_type_user</b>, 
+<b>f_type_static</b>
+ }<tr class="memdesc:a507771dd1cc74ce0d9a549a6f8d8cd9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of possible feature types. <br /></td></tr>
+</td></tr>
+<tr class="separator:a507771dd1cc74ce0d9a549a6f8d8cd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -334,23 +367,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Protected Attributes</h2></td></tr>
 <tr class="memitem:af9fca6cfc343e41910514d00fcbc772a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#af9fca6cfc343e41910514d00fcbc772a">time_step_factor</a></td></tr>
 <tr class="separator:af9fca6cfc343e41910514d00fcbc772a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
-Private Types</h2></td></tr>
-<tr class="memitem:a507771dd1cc74ce0d9a549a6f8d8cd9c"><td class="memItemLeft" align="right" valign="top"><a id="a507771dd1cc74ce0d9a549a6f8d8cd9c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a507771dd1cc74ce0d9a549a6f8d8cd9c">feature_type</a> { <b>f_type_not_set</b>, 
-<b>f_type_dynamic</b>, 
-<b>f_type_user</b>, 
-<b>f_type_static</b>
- }<tr class="memdesc:a507771dd1cc74ce0d9a549a6f8d8cd9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of possible feature types. <br /></td></tr>
-</td></tr>
-<tr class="separator:a507771dd1cc74ce0d9a549a6f8d8cd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
 <tr class="memitem:adc849741d178135bfbb193077a83b722"><td class="memItemLeft" align="right" valign="top"><a id="adc849741d178135bfbb193077a83b722"></a>
 std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">feature_state</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#adc849741d178135bfbb193077a83b722">feature_states</a></td></tr>
 <tr class="memdesc:adc849741d178135bfbb193077a83b722"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of the states of all features. <br /></td></tr>
 <tr class="separator:adc849741d178135bfbb193077a83b722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
 <tr class="memitem:a19a4738fde9dc43be9880077badecbe1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcolvardeps.html">colvardeps</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a19a4738fde9dc43be9880077badecbe1">children</a></td></tr>
 <tr class="separator:a19a4738fde9dc43be9880077badecbe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0b2b33dae9fdb9de73aad8d0f4d292a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcolvardeps.html">colvardeps</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ae0b2b33dae9fdb9de73aad8d0f4d292a">parents</a></td></tr>
@@ -380,7 +403,7 @@ std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">fea
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a65d8eea75a4a6cb5b047b79ffac26f95a27cda1e12907c1d7199528d8bbb35ce8"></a>f_ag_implicit_gradient&#160;</td><td class="fielddoc"><p>Does not have explicit atom gradients from parent CVC. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a65d8eea75a4a6cb5b047b79ffac26f95a10e7eff973d62aa84843c8b11c9f5acd"></a>f_ag_explicit_gradient&#160;</td><td class="fielddoc"><p>Does not have explicit atom gradients from parent CVC. </p>
 <p>Perform a standard minimum msd fit for given atoms ie. not using refpositionsgroup </p>
 </td></tr>
 </table>
@@ -511,7 +534,7 @@ std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">fea
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3ba5bed19d1e8c68b30b2bc3648c8ef6a8c13a8c03363bc9e5046e033d4231e55"></a>f_cvc_implicit_gradient&#160;</td><td class="fielddoc"><p>CVC doesn't calculate and store explicit atom gradients. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3ba5bed19d1e8c68b30b2bc3648c8ef6a2dbc5b47a96365f05bb438afc485a078"></a>f_cvc_explicit_gradient&#160;</td><td class="fielddoc"><p>CVC calculates and stores explicit atom gradients. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3ba5bed19d1e8c68b30b2bc3648c8ef6a9502bf695d9ec5fabcc5a6f965719985"></a>f_cvc_debug_gradient&#160;</td><td class="fielddoc"><p>If enabled, calc_gradients() will call debug_gradients() for every group needed. </p>
 </td></tr>
@@ -618,7 +641,13 @@ std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">fea
         </tr>
       </table>
 </div><div class="memdoc">
-<p>enable a feature and recursively solve its dependencies for proper reference counting, one should not add spurious calls to <a class="el" href="classcolvardeps.html#a0af270540fcec97efae2733a63bb7f0b">enable()</a> dry_run is set to true to recursively test if a feature is available, without enabling it </p>
+<p>Enable a feature and recursively solve its dependencies. For accurate reference counting, do not add spurious calls to <a class="el" href="classcolvardeps.html#a0af270540fcec97efae2733a63bb7f0b">enable()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dry_run</td><td>Recursively test if a feature is available, without enabling it </td></tr>
+    <tr><td class="paramname">toplevel</td><td>False if this is called as part of a chain of dependency resolution. This is used to diagnose failed dependencies by displaying the full stack: only the toplevel dependency will throw a fatal error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -764,7 +793,7 @@ std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">fea
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 14 2019 21:36:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 12 2019 16:01:10 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

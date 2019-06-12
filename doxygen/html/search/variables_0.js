@@ -13,7 +13,6 @@ var searchData=
   ['acf_5fx_5fhistory',['acf_x_history',['../classcolvar.html#a9fd9ae0c47c1613fdafbd368e5bd0580',1,'colvar']]],
   ['acf_5fx_5fhistory_5fp',['acf_x_history_p',['../classcolvar.html#a3e4fe8593e4d7308055f7341b6ece5d4',1,'colvar']]],
   ['active_5fcvc_5fsquare_5fnorm',['active_cvc_square_norm',['../classcolvar.html#a1578ec614ef2afd196c6a3be5e3a092f',1,'colvar']]],
-  ['actual_5fvalue',['actual_value',['../classcolvar__grid.html#a7a3082ef54e173b0abaf1b8a4a034c0f',1,'colvar_grid']]],
   ['after_5frestart',['after_restart',['../classcolvar.html#a374d1799f5620d218c0e44cd307ebb06',1,'colvar']]],
   ['ag_5ffeatures',['ag_features',['../classcolvarmodule_1_1atom__group.html#a3ba079f52a38408f6044404b68cc4f01',1,'colvarmodule::atom_group']]],
   ['allowed_5fkeywords',['allowed_keywords',['../classcolvarparse.html#a9e3abe5ee9dc4dc42bd5d4e13d385844',1,'colvarparse']]],

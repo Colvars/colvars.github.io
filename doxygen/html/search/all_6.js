@@ -1,7 +1,7 @@
 var searchData=
 [
   ['f',['f',['../classcolvar.html#a1c2a22a1016d075fb0c178160a6a343b',1,'colvar']]],
-  ['f_5fag_5fimplicit_5fgradient',['f_ag_implicit_gradient',['../classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95a27cda1e12907c1d7199528d8bbb35ce8',1,'colvardeps']]],
+  ['f_5fag_5fexplicit_5fgradient',['f_ag_explicit_gradient',['../classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95a10e7eff973d62aa84843c8b11c9f5acd',1,'colvardeps']]],
   ['f_5fcv_5factive',['f_cv_active',['../classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ad478a534f6bd3427975c03f1a4d0eb85',1,'colvardeps']]],
   ['f_5fcv_5fawake',['f_cv_awake',['../classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a9e82a2df3f706d8d39d65394962cbe11',1,'colvardeps']]],
   ['f_5fcv_5fcollect_5fgradient',['f_cv_collect_gradient',['../classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a494285836f63920df037f280ca1a7a67',1,'colvardeps']]],
@@ -43,7 +43,7 @@ var searchData=
   ['f_5fcvb_5fwrite_5fti_5fpmf',['f_cvb_write_ti_pmf',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daaa252e60229e97de897fdfbcf566ea6f8',1,'colvardeps']]],
   ['f_5fcvb_5fwrite_5fti_5fsamples',['f_cvb_write_ti_samples',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daaed2e6329d57143fb6f8faffd65ce352f',1,'colvardeps']]],
   ['f_5fcvc_5fdebug_5fgradient',['f_cvc_debug_gradient',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a9502bf695d9ec5fabcc5a6f965719985',1,'colvardeps']]],
-  ['f_5fcvc_5fimplicit_5fgradient',['f_cvc_implicit_gradient',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a8c13a8c03363bc9e5046e033d4231e55',1,'colvardeps']]],
+  ['f_5fcvc_5fexplicit_5fgradient',['f_cvc_explicit_gradient',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a2dbc5b47a96365f05bb438afc485a078',1,'colvardeps']]],
   ['f_5fold',['f_old',['../classcolvar.html#ac997604e3ad9e85c1a98efbc7c42fad0',1,'colvar']]],
   ['fabs',['fabs',['../classcolvarmodule.html#ad5ce0647c16742ac8d96566c6aa5daee',1,'colvarmodule']]],
   ['fatal_5ferror',['fatal_error',['../classcolvarmodule.html#a866a0fd67764bc52bf4660b44e59dbf7',1,'colvarmodule::fatal_error()'],['../classcolvarproxy.html#a54246644b5154492e2e71f112f973847',1,'colvarproxy::fatal_error()'],['../classcolvarproxy__namd.html#a157515a3173dc5ae141565a37a7b800f',1,'colvarproxy_namd::fatal_error()'],['../classcolvarproxy__vmd.html#a8f1d0a1980457aaf72890831a4110607',1,'colvarproxy_vmd::fatal_error()'],['../classcolvarproxy__lammps.html#ac71f5b45c36f94d940cd0e54bde0cf07',1,'colvarproxy_lammps::fatal_error()'],['../classcolvarproxy__gromacs.html#a77fa0ee833c931ba3930090196872f66',1,'colvarproxy_gromacs::fatal_error()']]],
@@ -53,7 +53,7 @@ var searchData=
   ['feature_5fstate',['feature_state',['../structcolvardeps_1_1feature__state.html',1,'colvardeps']]],
   ['feature_5fstates',['feature_states',['../classcolvardeps.html#adc849741d178135bfbb193077a83b722',1,'colvardeps']]],
   ['feature_5ftype',['feature_type',['../classcolvardeps.html#a507771dd1cc74ce0d9a549a6f8d8cd9c',1,'colvardeps']]],
-  ['features',['features',['../classcolvar.html#a99f31574c71a1e1e34443c21a7b80155',1,'colvar::features()'],['../classcolvarmodule_1_1atom__group.html#a17be9187e77ba76982fd52ab939849c9',1,'colvarmodule::atom_group::features()'],['../classcolvarbias.html#a76a6b8e54f1155a5c8957f86495bf404',1,'colvarbias::features()'],['../classcolvar_1_1cvc.html#abbb54ec8e3021072826878f442eb8b14',1,'colvar::cvc::features()']]],
+  ['features',['features',['../classcolvar.html#aeb70708ca12c8d8a7abc6ecd4b08c1f2',1,'colvar::features()'],['../classcolvarmodule_1_1atom__group.html#a98700c85699a131f7dcec343821a00f8',1,'colvarmodule::atom_group::features()'],['../classcolvarbias.html#ab64c2fb5c6eb1a07746cc7aef9f7effb',1,'colvarbias::features()'],['../classcolvar_1_1cvc.html#a26b3922d2a4738ff80755c1202a20eb9',1,'colvar::cvc::features()']]],
   ['features_5fatomgroup',['features_atomgroup',['../classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95',1,'colvardeps']]],
   ['features_5fbiases',['features_biases',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603da',1,'colvardeps']]],
   ['features_5fcolvar',['features_colvar',['../classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628',1,'colvardeps']]],

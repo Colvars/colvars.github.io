@@ -435,6 +435,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval</b> (std::
 <tr class="memitem:a15da5ef6b0a09e9b8ed12ea839754bd2 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a15da5ef6b0a09e9b8ed12ea839754bd2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval</b> (std::string const &amp;conf, char const *key, long &amp;value, long const &amp;def_value=0, <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">Parse_Mode</a> const parse_mode=<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a>)</td></tr>
 <tr class="separator:a15da5ef6b0a09e9b8ed12ea839754bd2 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ed611b69634ecaa3deb38c2785fe17c inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a1ed611b69634ecaa3deb38c2785fe17c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval</b> (std::string const &amp;conf, char const *key, <a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a> &amp;value, <a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a> const &amp;def_value=0, <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">Parse_Mode</a> const parse_mode=<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a>)</td></tr>
+<tr class="separator:a1ed611b69634ecaa3deb38c2785fe17c inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af400a8acae4b6251dd06cc55f8255541 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="af400a8acae4b6251dd06cc55f8255541"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval</b> (std::string const &amp;conf, char const *key, std::string &amp;value, std::string const &amp;def_value=std::string(&quot;&quot;), <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">Parse_Mode</a> const parse_mode=<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a>)</td></tr>
 <tr class="separator:af400a8acae4b6251dd06cc55f8255541 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -610,10 +613,10 @@ std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> *&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#af677742f27496b127887c4443c1fb5fd">cv</a></td></tr>
 <tr class="memdesc:af677742f27496b127887c4443c1fb5fd inherit pro_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colvars collected in this grid. <br /></td></tr>
 <tr class="separator:af677742f27496b127887c4443c1fb5fd inherit pro_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a3082ef54e173b0abaf1b8a4a034c0f inherit pro_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a7a3082ef54e173b0abaf1b8a4a034c0f"></a>
-std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a7a3082ef54e173b0abaf1b8a4a034c0f">actual_value</a></td></tr>
-<tr class="memdesc:a7a3082ef54e173b0abaf1b8a4a034c0f inherit pro_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we request actual value (for extended-system colvars)? <br /></td></tr>
-<tr class="separator:a7a3082ef54e173b0abaf1b8a4a034c0f inherit pro_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bab821472067686e64ac3395063634 inherit pro_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="ab2bab821472067686e64ac3395063634"></a>
+std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#ab2bab821472067686e64ac3395063634">use_actual_value</a></td></tr>
+<tr class="memdesc:ab2bab821472067686e64ac3395063634 inherit pro_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we request actual value (for extended-system colvars)? <br /></td></tr>
+<tr class="separator:ab2bab821472067686e64ac3395063634 inherit pro_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
 <tr class="memitem:a9e3abe5ee9dc4dc42bd5d4e13d385844 inherit pro_attribs_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a9e3abe5ee9dc4dc42bd5d4e13d385844"></a>
 std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a9e3abe5ee9dc4dc42bd5d4e13d385844">allowed_keywords</a></td></tr>
@@ -802,7 +805,7 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a c
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 14 2019 21:36:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 12 2019 16:01:10 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

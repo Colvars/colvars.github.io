@@ -129,6 +129,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:af5c180df4b713800d770d96612c59489"><td class="memItemLeft" align="right" valign="top"><a id="af5c180df4b713800d770d96612c59489"></a>
+typedef long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">step_number</a></td></tr>
+<tr class="memdesc:af5c180df4b713800d770d96612c59489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a 64-bit integer to store the step number. <br /></td></tr>
+<tr class="separator:af5c180df4b713800d770d96612c59489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ef542d23cf36504a8154c281eba2d5b"><td class="memItemLeft" align="right" valign="top"><a id="a1ef542d23cf36504a8154c281eba2d5b"></a>
 typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a></td></tr>
 <tr class="memdesc:a1ef542d23cf36504a8154c281eba2d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defining an abstract real number allows to switch precision. <br /></td></tr>
@@ -158,6 +162,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a1ece56309fcfb1de303e9cd0813299a7">register_named_atom_group</a> (<a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *ag)</td></tr>
 <tr class="memdesc:a1ece56309fcfb1de303e9cd0813299a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a named atom group into named_atom_groups. <br /></td></tr>
 <tr class="separator:a1ece56309fcfb1de303e9cd0813299a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af09e174650ea1e7a824385ac9bc5f8fe"><td class="memItemLeft" align="right" valign="top"><a id="af09e174650ea1e7a824385ac9bc5f8fe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af09e174650ea1e7a824385ac9bc5f8fe">unregister_named_atom_group</a> (<a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *ag)</td></tr>
+<tr class="memdesc:af09e174650ea1e7a824385ac9bc5f8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a named atom group from named_atom_groups. <br /></td></tr>
+<tr class="separator:af09e174650ea1e7a824385ac9bc5f8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6dbf186f9cfd9edf6ee9b24dc88f48e"><td class="memItemLeft" align="right" valign="top"><a id="ad6dbf186f9cfd9edf6ee9b24dc88f48e"></a>
 std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ad6dbf186f9cfd9edf6ee9b24dc88f48e">variables</a> ()</td></tr>
 <tr class="memdesc:ad6dbf186f9cfd9edf6ee9b24dc88f48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of collective variables. <br /></td></tr>
@@ -404,12 +412,12 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>get_error</b> (
 <tr class="memitem:a77087c0ffd76c1dc2b11f791eab252b0"><td class="memItemLeft" align="right" valign="top"><a id="a77087c0ffd76c1dc2b11f791eab252b0"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_error</b> ()</td></tr>
 <tr class="separator:a77087c0ffd76c1dc2b11f791eab252b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae121921c9f14f74f93dd8a2cae1a2778"><td class="memItemLeft" align="right" valign="top"><a id="ae121921c9f14f74f93dd8a2cae1a2778"></a>
-static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ae121921c9f14f74f93dd8a2cae1a2778">step_relative</a> ()</td></tr>
-<tr class="memdesc:ae121921c9f14f74f93dd8a2cae1a2778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current step number from the beginning of this run. <br /></td></tr>
-<tr class="separator:ae121921c9f14f74f93dd8a2cae1a2778"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88e4e27ebf27eaa302f080be6ea31ac5"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a88e4e27ebf27eaa302f080be6ea31ac5">step_absolute</a> ()</td></tr>
-<tr class="separator:a88e4e27ebf27eaa302f080be6ea31ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4389d7af99ed3d120843889f5cac6d5"><td class="memItemLeft" align="right" valign="top"><a id="ae4389d7af99ed3d120843889f5cac6d5"></a>
+static <a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ae4389d7af99ed3d120843889f5cac6d5">step_relative</a> ()</td></tr>
+<tr class="memdesc:ae4389d7af99ed3d120843889f5cac6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current step number from the beginning of this run. <br /></td></tr>
+<tr class="separator:ae4389d7af99ed3d120843889f5cac6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeefe0d9d151a9d6ca4f8a9b9a72c8ee6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aeefe0d9d151a9d6ca4f8a9b9a72c8ee6">step_absolute</a> ()</td></tr>
+<tr class="separator:aeefe0d9d151a9d6ca4f8a9b9a72c8ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1960ab86b41e37f33be0ade82c1dd11"><td class="memItemLeft" align="right" valign="top"><a id="ab1960ab86b41e37f33be0ade82c1dd11"></a>
 static std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ab1960ab86b41e37f33be0ade82c1dd11">output_prefix</a> ()</td></tr>
 <tr class="memdesc:ab1960ab86b41e37f33be0ade82c1dd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for the above. <br /></td></tr>
@@ -460,6 +468,10 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a6a4a48e3d3420f3f278e484434e34609">to_str</a> (long int const &amp;x, size_t width=0, size_t prec=0)</td></tr>
 <tr class="memdesc:a6a4a48e3d3420f3f278e484434e34609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string for output purposes. <br /></td></tr>
 <tr class="separator:a6a4a48e3d3420f3f278e484434e34609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad549ac85457366757d3233bc24e6b61a"><td class="memItemLeft" align="right" valign="top"><a id="ad549ac85457366757d3233bc24e6b61a"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ad549ac85457366757d3233bc24e6b61a">to_str</a> (<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">step_number</a> const &amp;x, size_t width=0, size_t prec=0)</td></tr>
+<tr class="memdesc:ad549ac85457366757d3233bc24e6b61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string for output purposes. <br /></td></tr>
+<tr class="separator:ad549ac85457366757d3233bc24e6b61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac77943ffd0757988a01be076a3464151"><td class="memItemLeft" align="right" valign="top"><a id="ac77943ffd0757988a01be076a3464151"></a>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac77943ffd0757988a01be076a3464151">to_str</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a> const &amp;x, size_t width=0, size_t prec=0)</td></tr>
 <tr class="memdesc:ac77943ffd0757988a01be076a3464151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string for output purposes. <br /></td></tr>
@@ -655,14 +667,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aa18d04676cef52dbe7e577a0ba42c334"><td class="memItemLeft" align="right" valign="top"><a id="aa18d04676cef52dbe7e577a0ba42c334"></a>
-static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aa18d04676cef52dbe7e577a0ba42c334">it</a> = 0</td></tr>
-<tr class="memdesc:aa18d04676cef52dbe7e577a0ba42c334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current step number. <br /></td></tr>
-<tr class="separator:aa18d04676cef52dbe7e577a0ba42c334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae81fbab6654f0294c5592280d8b46aef"><td class="memItemLeft" align="right" valign="top"><a id="ae81fbab6654f0294c5592280d8b46aef"></a>
-static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ae81fbab6654f0294c5592280d8b46aef">it_restart</a> = 0</td></tr>
-<tr class="memdesc:ae81fbab6654f0294c5592280d8b46aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting step number for this run. <br /></td></tr>
-<tr class="separator:ae81fbab6654f0294c5592280d8b46aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1295c39b7d73afaded97f8b0a98cbf5c"><td class="memItemLeft" align="right" valign="top"><a id="a1295c39b7d73afaded97f8b0a98cbf5c"></a>
+static <a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a1295c39b7d73afaded97f8b0a98cbf5c">it</a> = 0</td></tr>
+<tr class="memdesc:a1295c39b7d73afaded97f8b0a98cbf5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current step number. <br /></td></tr>
+<tr class="separator:a1295c39b7d73afaded97f8b0a98cbf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59112c0c7ad46673f4c47626bac2d2cc"><td class="memItemLeft" align="right" valign="top"><a id="a59112c0c7ad46673f4c47626bac2d2cc"></a>
+static <a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a59112c0c7ad46673f4c47626bac2d2cc">it_restart</a> = 0</td></tr>
+<tr class="memdesc:a59112c0c7ad46673f4c47626bac2d2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting step number for this run. <br /></td></tr>
+<tr class="separator:a59112c0c7ad46673f4c47626bac2d2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af60268f7e2d5ec410d43a0013f74081b"><td class="memItemLeft" align="right" valign="top"><a id="af60268f7e2d5ec410d43a0013f74081b"></a>
 static <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af60268f7e2d5ec410d43a0013f74081b">debug_gradients_step_size</a> = 1.0e-07</td></tr>
 <tr class="memdesc:af60268f7e2d5ec410d43a0013f74081b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finite difference step size (if there is no dynamics, or if gradients need to be tested independently from the size of dt) <br /></td></tr>
@@ -1229,8 +1241,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 
 </div>
 </div>
-<a id="a88e4e27ebf27eaa302f080be6ea31ac5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88e4e27ebf27eaa302f080be6ea31ac5">&#9670;&nbsp;</a></span>step_absolute()</h2>
+<a id="aeefe0d9d151a9d6ca4f8a9b9a72c8ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeefe0d9d151a9d6ca4f8a9b9a72c8ee6">&#9670;&nbsp;</a></span>step_absolute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1239,7 +1251,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static long colvarmodule::step_absolute </td>
+          <td class="memname">static <a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">step_number</a> colvarmodule::step_absolute </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1393,7 +1405,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 14 2019 21:36:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 12 2019 16:01:10 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

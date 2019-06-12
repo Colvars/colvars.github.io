@@ -8,6 +8,7 @@ var searchData=
   ['entropy',['entropy',['../classcolvar__grid__scalar.html#abd4d8eff1118da7501b02ef7134d8ca4',1,'colvar_grid_scalar']]],
   ['error',['error',['../classcolvarmodule.html#a9a852c1136dcc84494b1c8d9b6323793',1,'colvarmodule::error()'],['../classcolvarproxy.html#a7529d2446ea51946818bd0271e66b28b',1,'colvarproxy::error()'],['../classcolvarproxy__namd.html#aa2ed7a4d0fdeb0ea2498dbefeb0bc0c1',1,'colvarproxy_namd::error()'],['../classcolvarproxy__vmd.html#ac65a9f9d7a3df3a5c6c689bada07ff2b',1,'colvarproxy_vmd::error()'],['../classcolvarproxy__lammps.html#a95c0cc831425a895ac53d58d3ddd9143',1,'colvarproxy_lammps::error()'],['../classcolvarproxy__gromacs.html#afabb0ecf23598258d2c99d285a6429d6',1,'colvarproxy_gromacs::error()']]],
   ['error_5fkey_5frequired',['error_key_required',['../classcolvarparse.html#aa5c937676c5f42a4f624c2cf9264929d',1,'colvarparse']]],
+  ['exclude_5ffeature_5fself',['exclude_feature_self',['../classcolvardeps.html#abcee45fc45d7997eb2811af75e384c77',1,'colvardeps']]],
   ['exec_5fcommand',['exec_command',['../classcolvarscript.html#a75c1d2b42a6eccc49fd787465b79d0cc',1,'colvarscript']]],
   ['exit',['exit',['../classcolvarproxy__gromacs.html#a211b1f4a5b98b482d7d93804b38b7ba8',1,'colvarproxy_gromacs']]],
   ['exp',['exp',['../classcolvarmodule.html#a3a3baa8868433119af4068bcf480841e',1,'colvarmodule']]]

@@ -41,8 +41,8 @@ var searchData=
   ['sorted_5fids_5fmap',['sorted_ids_map',['../classcolvarmodule_1_1atom__group.html#a47ac37bdcc7a65bf8fe17280edfa07e9',1,'colvarmodule::atom_group']]],
   ['spin_5fangle',['spin_angle',['../classcolvarmodule_1_1rotation.html#a59f0effc6b852eca20555c7d2cf78caa',1,'colvarmodule::rotation']]],
   ['sqrt',['sqrt',['../classcolvarmodule.html#aac6077fb3afe0575e76729fca37dc2f3',1,'colvarmodule']]],
-  ['step_5fabsolute',['step_absolute',['../classcolvarmodule.html#a88e4e27ebf27eaa302f080be6ea31ac5',1,'colvarmodule']]],
-  ['step_5frelative',['step_relative',['../classcolvarmodule.html#ae121921c9f14f74f93dd8a2cae1a2778',1,'colvarmodule']]],
+  ['step_5fabsolute',['step_absolute',['../classcolvarmodule.html#aeefe0d9d151a9d6ca4f8a9b9a72c8ee6',1,'colvarmodule']]],
+  ['step_5frelative',['step_relative',['../classcolvarmodule.html#ae4389d7af99ed3d120843889f5cac6d5',1,'colvarmodule']]],
   ['strip_5fvalues',['strip_values',['../classcolvarparse.html#acb077a5cdd16f48b0ffd70d1cbd21d12',1,'colvarparse']]],
   ['sum',['sum',['../classcolvarvalue.html#adc9ad41fa76496e4a426ddff8a4101b1',1,'colvarvalue']]],
   ['switching_5ffunction',['switching_function',['../classcolvar_1_1coordnum.html#a1831a3130fc937dab9c4cbb1280b05c0',1,'colvar::coordnum']]]

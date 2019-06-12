@@ -22,7 +22,7 @@ var searchData=
   ['acf_5fx_5fhistory_5fp',['acf_x_history_p',['../classcolvar.html#a3e4fe8593e4d7308055f7341b6ece5d4',1,'colvar']]],
   ['acos',['acos',['../classcolvarmodule.html#ab69c2efe46105c6d2c524b888bd9f1fd',1,'colvarmodule']]],
   ['active_5fcvc_5fsquare_5fnorm',['active_cvc_square_norm',['../classcolvar.html#a1578ec614ef2afd196c6a3be5e3a092f',1,'colvar']]],
-  ['actual_5fvalue',['actual_value',['../classcolvar__grid.html#a7a3082ef54e173b0abaf1b8a4a034c0f',1,'colvar_grid::actual_value()'],['../classcolvar.html#a0f703b5ef65ef6da568befd08851a49c',1,'colvar::actual_value()']]],
+  ['actual_5fvalue',['actual_value',['../classcolvar.html#a0f703b5ef65ef6da568befd08851a49c',1,'colvar']]],
   ['add_5fatom',['add_atom',['../classcolvarmodule_1_1atom__group.html#a50eaf44474aa1b0f1edfa8342451ed64',1,'colvarmodule::atom_group']]],
   ['add_5fatom_5fgroup_5fslot',['add_atom_group_slot',['../classcolvarproxy__atom__groups.html#a4de551c4cdac5d6228201a00c274ecc8',1,'colvarproxy_atom_groups']]],
   ['add_5fatom_5fid',['add_atom_id',['../classcolvarmodule_1_1atom__group.html#a5f9f5f57c520a1420b2fbfb9e672edd2',1,'colvarmodule::atom_group']]],
