@@ -21,7 +21,7 @@ endif
 all: pdf html doxygen readme
 pdf: $(PDF)
 html: colvars-refman-namd/colvars-refman-namd.html colvars-refman-vmd/colvars-refman-vmd.html colvars-refman-lammps/colvars-refman-lammps.html
-readme: $(COLVARSDIR)/README.md $(COLVARSDIR)/README-totalforce.md
+readme: $(COLVARSDIR)/README.md $(COLVARSDIR)/README-totalforce.md $(COLVARSDIR)/README-c++11.md
 	cp -f $^ ./
 
 $(PDFDIR)/%.pdf: $(DOCSRCDIR)/%.tex $(BIBTEX) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex
