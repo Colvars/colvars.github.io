@@ -10,5 +10,6 @@ var searchData=
   ['distance_5fpairs',['distance_pairs',['../classcolvar_1_1distance__pairs.html',1,'colvar']]],
   ['distance_5fvec',['distance_vec',['../classcolvar_1_1distance__vec.html',1,'colvar']]],
   ['distance_5fxy',['distance_xy',['../classcolvar_1_1distance__xy.html',1,'colvar']]],
-  ['distance_5fz',['distance_z',['../classcolvar_1_1distance__z.html',1,'colvar']]]
+  ['distance_5fz',['distance_z',['../classcolvar_1_1distance__z.html',1,'colvar']]],
+  ['docompareframedistance',['doCompareFrameDistance',['../structGeometricPathCV_1_1GeometricPathBase_1_1doCompareFrameDistance.html',1,'GeometricPathCV::GeometricPathBase']]]
 ];

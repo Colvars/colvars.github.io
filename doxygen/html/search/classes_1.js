@@ -1,6 +1,7 @@
 var searchData=
 [
   ['cartesian',['cartesian',['../classcolvar_1_1cartesian.html',1,'colvar']]],
+  ['cartesianbasedpath',['CartesianBasedPath',['../classcolvar_1_1CartesianBasedPath.html',1,'colvar']]],
   ['colvar',['colvar',['../classcolvar.html',1,'']]],
   ['colvar_5fgrid',['colvar_grid',['../classcolvar__grid.html',1,'']]],
   ['colvar_5fgrid_3c_20cvm_3a_3areal_20_3e',['colvar_grid&lt; cvm::real &gt;',['../classcolvar__grid.html',1,'']]],
@@ -42,7 +43,9 @@ var searchData=
   ['colvarproxy_5fvmd',['colvarproxy_vmd',['../classcolvarproxy__vmd.html',1,'']]],
   ['colvarscript',['colvarscript',['../classcolvarscript.html',1,'']]],
   ['colvarvalue',['colvarvalue',['../classcolvarvalue.html',1,'']]],
-  ['commdata',['commdata',['../structcommdata.html',1,'']]],
+  ['commdata',['commdata',['../structLAMMPS__NS_1_1commdata.html',1,'LAMMPS_NS']]],
+  ['componentdisabled',['componentDisabled',['../classcolvar_1_1componentDisabled.html',1,'colvar']]],
   ['coordnum',['coordnum',['../classcolvar_1_1coordnum.html',1,'colvar']]],
+  ['cvbasedpath',['CVBasedPath',['../classcolvar_1_1CVBasedPath.html',1,'colvar']]],
   ['cvc',['cvc',['../classcolvar_1_1cvc.html',1,'colvar']]]
 ];

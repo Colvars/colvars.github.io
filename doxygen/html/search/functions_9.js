@@ -26,7 +26,7 @@ var searchData=
   ['integer_5fpower',['integer_power',['../classcolvarmodule.html#a5c3c6107b0f716e6673008a62ff5b766',1,'colvarmodule']]],
   ['integral',['integral',['../classcolvar__grid__scalar.html#aa54f97f71c73fc77b113a2ffbadc64bf',1,'colvar_grid_scalar']]],
   ['integrate',['integrate',['../classintegrate__potential.html#a6444281b7f5f213cbc0a333b481aeed1',1,'integrate_potential']]],
-  ['integrate_5fpotential',['integrate_potential',['../classintegrate__potential.html#a3b63cbd9a6d41635961f8167eee35943',1,'integrate_potential']]],
+  ['integrate_5fpotential',['integrate_potential',['../classintegrate__potential.html#a6273462e3fa8db10a5261df8eefd1fcb',1,'integrate_potential']]],
   ['interpolate',['interpolate',['../classcolvarvalue.html#a6c742a2b93624561fec47e67ad1c7986',1,'colvarvalue']]],
   ['inverse',['inverse',['../classcolvarmodule_1_1rotation.html#af8c63ded415d5004e54f3d09d277db05',1,'colvarmodule::rotation']]],
   ['is_5fderivative',['is_derivative',['../classcolvarvalue.html#a492bcdcf8fc8024b0784d4392a5df9e3',1,'colvarvalue']]],

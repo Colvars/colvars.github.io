@@ -1,7 +1,8 @@
 var searchData=
 [
   ['main_20page',['Main page',['../index.html',1,'']]],
-  ['main',['main',['../classcolvar_1_1distance__z.html#a28518aa5c21b928dbde766a9da6812dd',1,'colvar::distance_z::main()'],['../classcolvarmodule.html#a206644393814e3df7d772f0d731d6443',1,'colvarmodule::main()']]],
+  ['main',['main',['../classcolvar_1_1distance__z.html#a28518aa5c21b928dbde766a9da6812dd',1,'colvar::distance_z::main()'],['../classcolvarmodule.html#a78f44f0e9e70a6daa0ae5c45d5694a12',1,'colvarmodule::main()']]],
+  ['main_5floop',['main_loop',['../classcolvar_1_1coordnum.html#adb0961965c055eb19c546049365ced84',1,'colvar::coordnum']]],
   ['map_5fgrid',['map_grid',['../classcolvar__grid.html#ae5730d70387aaad037d79794f4e594ac',1,'colvar_grid']]],
   ['mark_5fkey_5fset_5fdefault',['mark_key_set_default',['../classcolvarparse.html#af698c38d74eaa9aabcf2ceb8f8bb897a',1,'colvarparse']]],
   ['mark_5fkey_5fset_5fuser',['mark_key_set_user',['../classcolvarparse.html#a7601cb725e04e7cfcb6ced0cec859829',1,'colvarparse']]],

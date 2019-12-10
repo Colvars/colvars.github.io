@@ -1,6 +1,7 @@
 var searchData=
 [
   ['unit_5fcell_5fx',['unit_cell_x',['../classcolvarproxy__system.html#ab496f8debd2b4768ac11b24594bf4299',1,'colvarproxy_system']]],
+  ['units',['units',['../classcolvarproxy__system.html#a8a5e36132ec3e2a88b606d21a2f73ffc',1,'colvarproxy_system']]],
   ['update_5fbias',['update_bias',['../classcolvarbias__abf.html#aaeebc1316149545fb7a750ee49b68d3c',1,'colvarbias_abf']]],
   ['update_5ffreq',['update_freq',['../classcolvarbias__alb.html#a3c5b0adc33fff5da40cbc87a5731f6ad',1,'colvarbias_alb']]],
   ['update_5fstatus',['update_status',['../classcolvarbias__meta.html#a761766480539f23515161a2ed4aa325d',1,'colvarbias_meta']]],
