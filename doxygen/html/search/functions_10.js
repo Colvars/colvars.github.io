@@ -1,6 +1,7 @@
 var searchData=
 [
   ['p2leg_5fopt',['p2leg_opt',['../classcolvarvalue.html#ae966c9f2a1bccc6a9b71b50a608db771',1,'colvarvalue::p2leg_opt(colvarvalue const &amp;x, std::vector&lt; colvarvalue &gt;::iterator &amp;xv, std::vector&lt; colvarvalue &gt;::iterator const &amp;xv_end, std::vector&lt; cvm::real &gt;::iterator &amp;result)'],['../classcolvarvalue.html#a4a0a055da195738c64a61a89630664f3',1,'colvarvalue::p2leg_opt(colvarvalue const &amp;x, std::list&lt; colvarvalue &gt;::iterator &amp;xv, std::list&lt; colvarvalue &gt;::iterator const &amp;xv_end, std::vector&lt; cvm::real &gt;::iterator &amp;result)']]],
+  ['param_5fexists',['param_exists',['../classcolvarparams.html#ad3eae078689959aee7ec36a7111c9d4d',1,'colvarparams']]],
   ['parse',['parse',['../classcolvarmodule_1_1atom__group.html#aeeaec3b0308cc2446cf72abb162ef560',1,'colvarmodule::atom_group']]],
   ['parse_5fanalysis',['parse_analysis',['../classcolvar.html#a2fb6d950b3dec7303a0d5fe3d5170774',1,'colvar']]],
   ['parse_5fbiases',['parse_biases',['../classcolvarmodule.html#af51dcd2d41b68e0c0842a15bdac82355',1,'colvarmodule']]],

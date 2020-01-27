@@ -1,9 +1,7 @@
 var searchData=
 [
   ['hard_5flower_5fboundaries',['hard_lower_boundaries',['../classcolvar__grid.html#aae4b6fde4775d004cb9e8872833d01be',1,'colvar_grid']]],
-  ['hard_5flower_5fboundary',['hard_lower_boundary',['../classcolvar.html#a4bcf57c92b57b4ad5549d51cbacbe02a',1,'colvar']]],
   ['hard_5fupper_5fboundaries',['hard_upper_boundaries',['../classcolvar__grid.html#a3537a8b9704b79a68da7eb5e75313e6d',1,'colvar_grid']]],
-  ['hard_5fupper_5fboundary',['hard_upper_boundary',['../classcolvar.html#abf7e85af4740b382ab2f7d74b3a85009',1,'colvar']]],
   ['has_5fdata',['has_data',['../classcolvarbias.html#aa33d58dccf5a5c2a1cab78a4412b8ed1',1,'colvarbias::has_data()'],['../classcolvar__grid.html#a5fbd378c88cf06662a64d6ccd27a8d63',1,'colvar_grid::has_data()']]],
   ['has_5fparent_5fdata',['has_parent_data',['../classcolvar__grid.html#a95468da24b815194702cb7dbb1257af8',1,'colvar_grid']]],
   ['have_5fscripts',['have_scripts',['../classcolvarproxy__script.html#a0ed6215a91e384bad57bfe828e3396a0',1,'colvarproxy_script']]],

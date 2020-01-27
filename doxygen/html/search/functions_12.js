@@ -29,6 +29,8 @@ var searchData=
   ['recount_5fhills_5foff_5fgrid',['recount_hills_off_grid',['../classcolvarbias__meta.html#a4c96654ba4b7f6ffb6c2b53105624c5a',1,'colvarbias_meta']]],
   ['register_5fatom_5fgroup',['register_atom_group',['../classcolvar_1_1cvc.html#aafb2a4829b2f971e9044fa4d9e703688',1,'colvar::cvc']]],
   ['register_5fnamed_5fatom_5fgroup',['register_named_atom_group',['../classcolvarmodule.html#a1ece56309fcfb1de303e9cd0813299a7',1,'colvarmodule']]],
+  ['register_5fparam',['register_param',['../classcolvarparams.html#a059395dd0c0b2f75d2454ff9df633ff8',1,'colvarparams']]],
+  ['register_5fparam_5fgrad',['register_param_grad',['../classcolvarparams.html#aa100fed51577e32a6b418fccd926e418',1,'colvarparams']]],
   ['remove_5fall_5fchildren',['remove_all_children',['../classcolvardeps.html#afe08e2746bab22b025133761e99e50d1',1,'colvardeps']]],
   ['remove_5fatom',['remove_atom',['../classcolvarmodule_1_1atom__group.html#a1803efdb8d699520dfc7a2676cd9f64c',1,'colvarmodule::atom_group']]],
   ['remove_5ffile',['remove_file',['../classcolvarproxy__io.html#aacece7f2c2938cdd9f27b7d7e033f0fd',1,'colvarproxy_io::remove_file(char const *filename)'],['../classcolvarproxy__io.html#a89c33602fc2f601dcd7b3d97f2dfce7b',1,'colvarproxy_io::remove_file(std::string const &amp;filename)']]],

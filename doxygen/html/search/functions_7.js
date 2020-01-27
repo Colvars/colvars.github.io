@@ -16,6 +16,9 @@ var searchData=
   ['get_5fcolvars_5findex',['get_colvars_index',['../classcolvar__grid.html#a1786953f1a1333301e52f431c75e183a',1,'colvar_grid::get_colvars_index(std::vector&lt; colvarvalue &gt; const &amp;values) const'],['../classcolvar__grid.html#adc2e9749054ac299f211c7624485a144',1,'colvar_grid::get_colvars_index() const']]],
   ['get_5fcolvars_5findex_5fbound',['get_colvars_index_bound',['../classcolvar__grid.html#a547b58b5140ae2a7ff1fe42c65d36028',1,'colvar_grid']]],
   ['get_5fconfig',['get_config',['../classcolvarmodule.html#a92a4be89e021c073aea18c946c0dc67a',1,'colvarmodule::get_config()'],['../classcolvarparse.html#ad13d2c4a907cef7550661cbfb0ba9145',1,'colvarparse::get_config()']]],
+  ['get_5fcvc_5fparam',['get_cvc_param',['../classcolvar.html#ac1a4f809d026dcc8e53460f7645dad7f',1,'colvar']]],
+  ['get_5fcvc_5fparam_5fgrad',['get_cvc_param_grad',['../classcolvar.html#a0cf87b88c965b210af738fe66740a7c7',1,'colvar']]],
+  ['get_5fcvc_5fparam_5fptr',['get_cvc_param_ptr',['../classcolvar.html#ab1d1a45ed46a75dc19990f8fdcd7bd99',1,'colvar']]],
   ['get_5felem',['get_elem',['../classcolvarvalue.html#a3af3d4950929f52e705a36738c847136',1,'colvarvalue::get_elem(int const i_begin, int const i_end, Type const vt) const'],['../classcolvarvalue.html#a50678f7adbaf71225bbb820d966c64a6',1,'colvarvalue::get_elem(int const icv) const']]],
   ['get_5fframe',['get_frame',['../classcolvarproxy__io.html#a4a67e47e06c5b376645c06aae20a3b0f',1,'colvarproxy_io::get_frame()'],['../classcolvarproxy__vmd.html#a723b2b58e02e1fae2bb3b69fa025bbd4',1,'colvarproxy_vmd::get_frame()']]],
   ['get_5fgrad',['get_grad',['../classintegrate__potential.html#ae373d0d339e746146bb574b13eeaa184',1,'integrate_potential']]],
@@ -23,6 +26,12 @@ var searchData=
   ['get_5fkey_5fstring_5fvalue',['get_key_string_value',['../classcolvarparse.html#ad05ee4a070fed61e86edcf9ac5f04006',1,'colvarparse']]],
   ['get_5fkeyval_5ffeature',['get_keyval_feature',['../classcolvardeps.html#ab9abd034505e8223e4a80fc02b205505',1,'colvardeps']]],
   ['get_5foutput_5fstream',['get_output_stream',['../classcolvarproxy__io.html#ad47a28400d534d43478cabeaa23af56a',1,'colvarproxy_io']]],
+  ['get_5fparam',['get_param',['../classcolvarparams.html#a0fbf419d3cfb624a806ec696d0b77cc2',1,'colvarparams']]],
+  ['get_5fparam_5fgrad',['get_param_grad',['../classcolvar_1_1cvc.html#a45e02ee52f68f85dd9af82d29243959a',1,'colvar::cvc']]],
+  ['get_5fparam_5fgrad_5fnames',['get_param_grad_names',['../classcolvarparams.html#a8ec6519045c02c4ee14381c43bed43b2',1,'colvarparams']]],
+  ['get_5fparam_5fgrad_5fptr',['get_param_grad_ptr',['../classcolvarparams.html#abb283cbd8253ebcdc15e350d285107ea',1,'colvarparams']]],
+  ['get_5fparam_5fnames',['get_param_names',['../classcolvarparams.html#a182d84f9689656c02a160c05288cf004',1,'colvarparams']]],
+  ['get_5fparam_5fptr',['get_param_ptr',['../classcolvarparams.html#a445cda9ad11f665d53b274e5f6341b10',1,'colvarparams']]],
   ['get_5fstate_5fparams',['get_state_params',['../classcolvarbias.html#a773a0adb49e85c629940ce8049058f3f',1,'colvarbias::get_state_params()'],['../classcolvarbias__ti.html#a3d6dbd3e7e63507a7120e849058f43a2',1,'colvarbias_ti::get_state_params()'],['../classcolvarbias__alb.html#aec1ad2f38e833f18b084104e6c9e6dd0',1,'colvarbias_alb::get_state_params()'],['../classcolvarbias__meta.html#a506fd8d47227a253016b64cffdfaa759',1,'colvarbias_meta::get_state_params()'],['../classcolvarbias__restraint.html#a892e3a2d0bc92e0e5a3349bf9abc8837',1,'colvarbias_restraint::get_state_params()']]],
   ['get_5ftime_5fstep_5ffactor',['get_time_step_factor',['../classcolvardeps.html#a8f5b07edb59e5da8a08ecb9a8385ba12',1,'colvardeps']]],
   ['get_5fvector',['get_vector',['../classcolvarmodule_1_1quaternion.html#a4c64fd2e217ced1146dabf1474735d64',1,'colvarmodule::quaternion']]],
@@ -31,6 +40,5 @@ var searchData=
   ['getline',['getline',['../classcolvarmodule.html#acd9f035364ca1b14cabdeb9ca016dd97',1,'colvarmodule']]],
   ['getline_5fnocomments',['getline_nocomments',['../classcolvarparse.html#a9e5f005643af0e7c5d846f60081e49bf',1,'colvarparse']]],
   ['gradient_5ffinite_5fdiff',['gradient_finite_diff',['../classcolvar__grid__count.html#a49377403b3afa0a0a864b476f0eb7ba5',1,'colvar_grid_count']]],
-  ['groupcoordnum',['groupcoordnum',['../classcolvar_1_1groupcoordnum.html#a76040dc91ddd884798406fcca66e5420',1,'colvar::groupcoordnum']]],
-  ['gyration',['gyration',['../classcolvar_1_1gyration.html#afe606e63d3b23d8172a6dcaaadc27302',1,'colvar::gyration']]]
+  ['groupcoordnum',['groupcoordnum',['../classcolvar_1_1groupcoordnum.html#a76040dc91ddd884798406fcca66e5420',1,'colvar::groupcoordnum']]]
 ];

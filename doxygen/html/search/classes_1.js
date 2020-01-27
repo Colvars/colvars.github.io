@@ -27,6 +27,7 @@ var searchData=
   ['colvarbias_5fti',['colvarbias_ti',['../classcolvarbias__ti.html',1,'']]],
   ['colvardeps',['colvardeps',['../classcolvardeps.html',1,'']]],
   ['colvarmodule',['colvarmodule',['../classcolvarmodule.html',1,'']]],
+  ['colvarparams',['colvarparams',['../classcolvarparams.html',1,'']]],
   ['colvarparse',['colvarparse',['../classcolvarparse.html',1,'']]],
   ['colvarproxy',['colvarproxy',['../classcolvarproxy.html',1,'']]],
   ['colvarproxy_5fatom_5fgroups',['colvarproxy_atom_groups',['../classcolvarproxy__atom__groups.html',1,'']]],

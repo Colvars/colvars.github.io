@@ -1,7 +1,6 @@
 var searchData=
 [
   ['geometricpathbase',['GeometricPathBase',['../classGeometricPathCV_1_1GeometricPathBase.html',1,'GeometricPathCV']]],
-  ['group2ndx',['Group2Ndx',['../classLAMMPS__NS_1_1Group2Ndx.html',1,'LAMMPS_NS']]],
   ['groupcoordnum',['groupcoordnum',['../classcolvar_1_1groupcoordnum.html',1,'colvar']]],
   ['gspath',['gspath',['../classcolvar_1_1gspath.html',1,'colvar']]],
   ['gspathcv',['gspathCV',['../classcolvar_1_1gspathCV.html',1,'colvar']]],

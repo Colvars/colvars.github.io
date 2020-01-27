@@ -19,7 +19,6 @@ var searchData=
   ['b_5foutput_5fcoupling',['b_output_coupling',['../classcolvarbias__alb.html#ad8f5a99b760ce31a91ffbd2b05ceba32',1,'colvarbias_alb']]],
   ['b_5foutput_5fenergy',['b_output_energy',['../classcolvarbias.html#ad108a73cf444f59c16e68966ffc2495c',1,'colvarbias']]],
   ['b_5foutput_5fgrad',['b_output_grad',['../classcolvarbias__alb.html#a44fe18efec92ae1b008b0b8c9f86b008',1,'colvarbias_alb']]],
-  ['b_5fperiodic',['b_periodic',['../classcolvar_1_1cvc.html#afafe83c23041e8684733fbf90c0161f7',1,'colvar::cvc']]],
   ['b_5frotate',['b_rotate',['../classcolvarmodule_1_1atom__group.html#a33ceef25b618e34c046ddf6c5f2acaac',1,'colvarmodule::atom_group']]],
   ['b_5fsimulation_5frunning',['b_simulation_running',['../classcolvarproxy.html#ae1bf730e928539e61f869530e7969e82',1,'colvarproxy']]],
   ['b_5fsmp_5factive',['b_smp_active',['../classcolvarproxy__smp.html#a995f9429f7808a7adb7a325fed236c8f',1,'colvarproxy_smp']]],

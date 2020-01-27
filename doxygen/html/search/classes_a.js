@@ -4,6 +4,5 @@ var searchData=
   ['n_5fvector',['n_vector',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
   ['n_5fvector_3c_20double_20_3e',['n_vector&lt; double &gt;',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
   ['n_5fvector_3c_20int_20_3e',['n_vector&lt; int &gt;',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
-  ['n_5fvector_3c_20std_3a_3avector_3c_20double_20_3e_20_3e',['n_vector&lt; std::vector&lt; double &gt; &gt;',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
-  ['ndx2group',['Ndx2Group',['../classLAMMPS__NS_1_1Ndx2Group.html',1,'LAMMPS_NS']]]
+  ['n_5fvector_3c_20std_3a_3avector_3c_20double_20_3e_20_3e',['n_vector&lt; std::vector&lt; double &gt; &gt;',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]]
 ];
