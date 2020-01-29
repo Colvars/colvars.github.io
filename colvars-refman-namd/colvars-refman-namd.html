@@ -2201,7 +2201,7 @@ times in restraints, time-dependent biases or analysis methods.
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">colvar</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>natural boundary of the function <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Deﬁnes the lowest end of the interval of “relevant” values for the variable. This number
      can be, for example, a true physical boundary imposed by the choice of function (e.g. the <span class="ot1-zi4r-0-x-x-109">distance</span>
      function is always larger than zero): if this is the case, and only one function is used to deﬁne the
-     variable, tthe default value of this number is set to the lowest end of the range of values of that function,
+     variable, the default value of this number is set to the lowest end of the range of values of that function,
      if available (see Section <a href="#sec:cvc_list">4.1<!--tex4ht:ref: sec:cvc_list --></a>). Alternatively, this value may be provided by the user, to represent for
      example the left-most point of a PMF calculation along this variable. In the latter case, it is the user’s
      responsibility to either <span class="ptmri7t-x-x-109">(a) </span>ensure the variable does not go signiﬁcantly beyond the boundary (for
@@ -2218,9 +2218,9 @@ times in restraints, time-dependent biases or analysis methods.
      the lower boundary is the physical lower limit<!--l. 2955--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">colvar</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>provided by the component <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>When the colvar has a “natural” boundary (for example, a <span class="ot1-zi4r-0-x-x-109">distance </span>colvar cannot go
      below 0) this ﬂag is automatically enabled. For more complex variable deﬁnitions, or when <a href="#colvar|lowerBoundary"><span class="ot1-zi4r-0-x-x-109">lowerBoundary</span></a>
-     is provided directly by the user, it may be necessary useful to set this ﬂag explicitly. This option does
-     not aﬀect simulation results, but enables some internal optimizations by letting the code know that the
-     variable is unable to cross the lower boundary, regardless of whether restraints are applied to it.
+     is provided directly by the user, it may be useful to set this ﬂag explicitly. This option does not aﬀect
+     simulation results, but enables some internal optimizations by letting the code know that the variable
+     is unable to cross the lower boundary, regardless of whether restraints are applied to it.
      </li>
 <li class="itemize"><a id="colvar|hardUpperBoundary"></a> <a id="dx1-71005"></a><span class="ot1-zi4r-0-x-x-120">hardUpperBoundary </span><!--l. 2965--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Whether
      the upper boundary is the physical upper limit of the colvar’s values<!--l. 2965--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math>
@@ -3325,7 +3325,7 @@ which is written in the ﬁle <span class="ptmri7t-x-x-109">outputName</span><sp
 </p><!--l. 4481--><p class="indent">
 </p><div class="quote">
 <!--l. 4481--><p class="noindent">Haohao Fu and Christophe Chipot<br class="newline"/> Laboratoire International Associé Centre National de la Recherche Scientiﬁque et University
-     of Illinois at Urbana–Champaign, <br class="newline"/>Unité Mixte de Recherche No. 7565, Université de Lorraine, <br class="newline"/>B.P. 70239, 54506 Vandœuvre-ls-Nancy cedex, France</p></div>
+     of Illinois at Urbana–Champaign, <br class="newline"/>Unité Mixte de Recherche No. 7565, Université de Lorraine, <br class="newline"/>B.P. 70239, 54506 Vandœuvre-lès-Nancy cedex, France</p></div>
 <!--l. 4481--><p class="indent"> <span class="ptmr8c-x-x-109">©</span> 2016, <span class="ptmrc7t-x-x-109">C<span class="small-caps">e</span><span class="small-caps">n</span><span class="small-caps">t</span><span class="small-caps">r</span><span class="small-caps">e</span> N<span class="small-caps">a</span><span class="small-caps">t</span><span class="small-caps">i</span><span class="small-caps">o</span><span class="small-caps">n</span><span class="small-caps">a</span><span class="small-caps">l</span> <span class="small-caps">d</span><span class="small-caps">e</span> <span class="small-caps">l</span><span class="small-caps">a</span> R<span class="small-caps">e</span><span class="small-caps">c</span><span class="small-caps">h</span><span class="small-caps">e</span><span class="small-caps">r</span><span class="small-caps">c</span><span class="small-caps">h</span><span class="small-caps">e</span> S<span class="small-caps">c</span><span class="small-caps">i</span><span class="small-caps">e</span><span class="small-caps">n</span><span class="small-caps">t</span><span class="small-caps">i</span><span class="small-caps">ﬁ</span><span class="small-caps">q</span><span class="small-caps">u</span><span class="small-caps">e</span></span>
 </p><!--l. 4481--><p class="indent">   This implementation is fully documented in <span class="cite">[<a href="#XFu2016">21</a>]</span>. The Zheng and Yang estimator <span class="cite">[<a href="#XZheng2012">22</a>]</span> is based on Umbrella
 Integration <span class="cite">[<a href="#XKastner2005">23</a>]</span>. The free energy gradient is estimated as :
@@ -3618,11 +3618,11 @@ energy can be obtained by averaging (after an equilibration time) multiple time-
 <br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">metadynamics</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>It is useful to set a minimum value of the target probability distribution to avoid values
      of the latter that are nearly zero, leading to very large hills. This parameter sets the minimum value of
      the target probability distribution that is expressed as a fraction of its <span class="ot1-zi4r-0-x-x-109">maximum value</span>: <span class="ot1-zi4r-0-x-x-109">minumum value</span>
-<span class="ot1-zi4r-0-x-x-109">=  maximum value X targetDistMinVal</span>. This implies that 0 <span class="ot1-zi4r-0-x-x-109">&lt; targetDistMinVal &lt; </span>1 and its
-     default value is set to 1/1000000. To avoid divisions by zero (see eq. <a href="#eq:colvars_ebmeta_pot">32<!--tex4ht:ref: eq:colvars_ebmeta_pot --></a>), if <span class="ot1-zi4r-0-x-x-109">targetDistMinVal </span>is set
-     as zero, values of <!--l. 4736--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ρ</mi></mrow><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></msub></math>
+<span class="ot1-zi4r-0-x-x-109">= maximum value X targetDistMinVal</span>. This implies that 0 <span class="ot1-zi4r-0-x-x-109"><targetdistminval>1 and its default
+     value is set to 1/1000000. To avoid divisions by zero (see eq. <a href="#eq:colvars_ebmeta_pot">32<!--tex4ht:ref: eq:colvars_ebmeta_pot --></a>), if <span class="ot1-zi4r-0-x-x-109">targetDistMinVal </span>is set as zero,
+     values of <!--l. 4736--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ρ</mi></mrow><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></msub></math>
      equal to zero are replaced by the smallest positive value read in the same ﬁle.
-     </li></ul>
+     </targetdistminval></span></li></ul>
 <!--l. 4740--><p class="indent">   As with standard metadynamics, multidimensional probability distributions can be targeted using a single
 <span class="ot1-zi4r-0-x-x-109">metadynamics </span>block using multiple <span class="ot1-zi4r-0-x-x-109">colvars </span>and a multidimensional target distribution ﬁle (see <a href="#sec:colvar_multicolumn_grid">4.17.1<!--tex4ht:ref: sec:colvar_multicolumn_grid --></a>). Instead,
 multiple probability distributions on diﬀerent variables can be targeted separately in the same simulation by
@@ -4465,7 +4465,7 @@ aﬀects features in the Colvars module.
                                                                                          
      </p>
 <p class="bibitem"><span class="biblabel">
- [10]<span class="bibsp">   </span></span><a id="XFerrarotti2015"></a>Marco Jacopo  Ferrarotti,  Sandro  Bottaro,  Andrea  Prez-Villa,  and  Giovanni  Bussi.    Accurate
+ [10]<span class="bibsp">   </span></span><a id="XFerrarotti2015"></a>Marco Jacopo  Ferrarotti,  Sandro  Bottaro,  Andrea  Pérez-Villa,  and  Giovanni  Bussi.   Accurate
      multiple  time  step  in  biased  molecular  simulations.   <span class="ptmri7t-x-x-109">Journal  of  chemical  theory  and  computation</span>,
      11:139–146, 2015.
      </p>
@@ -4556,7 +4556,7 @@ aﬀects features in the Colvars module.
      convergence law in a multidimensional system. <span class="ptmri7t-x-x-109">Phys. Rev. E</span>, 81:055701, May 2010.
      </p>
 <p class="bibitem"><span class="biblabel">
- [30]<span class="bibsp">   </span></span><a id="XMarinelli2015"></a>Fabrizio Marinelli and José D. Faraldo-Gómez.  Ensemble-biased metadynamics: A molecular
+ [30]<span class="bibsp">   </span></span><a id="XMarinelli2015"></a>Fabrizio Marinelli and José  D. Faraldo-Gómez. Ensemble-biased metadynamics: A molecular
      simulation method to sample experimental distributions.  <span class="ptmri7t-x-x-109">Biophysical Journal</span>, 108(12):2779 – 2782,
      2015.
      </p>
