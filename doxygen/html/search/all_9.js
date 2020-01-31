@@ -38,7 +38,7 @@ var searchData=
   ['integrate_5finitial_5fiterations',['integrate_initial_iterations',['../classcolvarbias__abf.html#a65440a5279b30cd47ba8f49b6254244a',1,'colvarbias_abf']]],
   ['integrate_5finitial_5ftol',['integrate_initial_tol',['../classcolvarbias__abf.html#a4d5ac8bbc7d7218a0f880a98993f7ff4',1,'colvarbias_abf']]],
   ['integrate_5fiterations',['integrate_iterations',['../classcolvarbias__abf.html#acc07c7f78869cdce21478f072a8f490d',1,'colvarbias_abf']]],
-  ['integrate_5fpotential',['integrate_potential',['../classintegrate__potential.html',1,'integrate_potential'],['../classintegrate__potential.html#a3b63cbd9a6d41635961f8167eee35943',1,'integrate_potential::integrate_potential()']]],
+  ['integrate_5fpotential',['integrate_potential',['../classintegrate__potential.html',1,'integrate_potential'],['../classintegrate__potential.html#a6273462e3fa8db10a5261df8eefd1fcb',1,'integrate_potential::integrate_potential()']]],
   ['integrate_5ftol',['integrate_tol',['../classcolvarbias__abf.html#a7b33cadf0e4538e1554a7d63f7a5700c',1,'colvarbias_abf']]],
   ['interpolate',['interpolate',['../classcolvarvalue.html#a6c742a2b93624561fec47e67ad1c7986',1,'colvarvalue']]],
   ['inthash_5fnode_5ft',['inthash_node_t',['../structinthash__node__t.html',1,'']]],

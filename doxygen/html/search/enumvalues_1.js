@@ -35,6 +35,7 @@ var searchData=
   ['f_5fcvb_5factive',['f_cvb_active',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daae2b343bf68e6cafb71559d22be9af155',1,'colvardeps']]],
   ['f_5fcvb_5fapply_5fforce',['f_cvb_apply_force',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa191a887ed32bb04f586deda10448ddb3',1,'colvardeps']]],
   ['f_5fcvb_5fawake',['f_cvb_awake',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa778b53fc725ed378e46ae9d5cf0b805a',1,'colvardeps']]],
+  ['f_5fcvb_5fbias_5factual_5fcolvar',['f_cvb_bias_actual_colvar',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa79eae3c024623a997c7629971ccf86a1',1,'colvardeps']]],
   ['f_5fcvb_5fcalc_5fpmf',['f_cvb_calc_pmf',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa372e0dd997a2be9d2aa8ac51958db92b',1,'colvardeps']]],
   ['f_5fcvb_5fcalc_5fti_5fsamples',['f_cvb_calc_ti_samples',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa719d12558cabca9abc0a2a07d04b4cd5',1,'colvardeps']]],
   ['f_5fcvb_5fget_5ftotal_5fforce',['f_cvb_get_total_force',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa8bd56fac60a24ac7a46b36564ab41cf8',1,'colvardeps']]],
