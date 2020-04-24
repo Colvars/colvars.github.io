@@ -106,22 +106,6 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a7a63ab0af74cdfd5c175fe6e5dc00a82">set_frame</a> (long int)</td></tr>
 <tr class="memdesc:a7a63ab0af74cdfd5c175fe6e5dc00a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current frame number (as well as <a class="el" href="classcolvarmodule.html#a1295c39b7d73afaded97f8b0a98cbf5c" title="Current step number.">colvarmodule::it</a>) <br /></td></tr>
 <tr class="separator:a7a63ab0af74cdfd5c175fe6e5dc00a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8388eaf13fdd0dc2e8af6e2b94d7e4f"><td class="memItemLeft" align="right" valign="top"><a id="ae8388eaf13fdd0dc2e8af6e2b94d7e4f"></a>
-virtual std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#ae8388eaf13fdd0dc2e8af6e2b94d7e4f">output_stream</a> (std::string const &amp;output_name, std::ios_base::openmode mode=std::ios_base::out)</td></tr>
-<tr class="memdesc:ae8388eaf13fdd0dc2e8af6e2b94d7e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the given output channel; if this is not open already, then open it. <br /></td></tr>
-<tr class="separator:ae8388eaf13fdd0dc2e8af6e2b94d7e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad47a28400d534d43478cabeaa23af56a"><td class="memItemLeft" align="right" valign="top"><a id="ad47a28400d534d43478cabeaa23af56a"></a>
-virtual std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#ad47a28400d534d43478cabeaa23af56a">get_output_stream</a> (std::string const &amp;output_name)</td></tr>
-<tr class="memdesc:ad47a28400d534d43478cabeaa23af56a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to output_name if it exists, NULL otherwise. <br /></td></tr>
-<tr class="separator:ad47a28400d534d43478cabeaa23af56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbf4725c6c073c42a5b0a66d8a4ba3a7"><td class="memItemLeft" align="right" valign="top"><a id="abbf4725c6c073c42a5b0a66d8a4ba3a7"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#abbf4725c6c073c42a5b0a66d8a4ba3a7">flush_output_stream</a> (std::ostream *os)</td></tr>
-<tr class="memdesc:abbf4725c6c073c42a5b0a66d8a4ba3a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flushes the given output channel. <br /></td></tr>
-<tr class="separator:abbf4725c6c073c42a5b0a66d8a4ba3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bd315e7520bf6cb0b0f829b3d16dc7b"><td class="memItemLeft" align="right" valign="top"><a id="a0bd315e7520bf6cb0b0f829b3d16dc7b"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a0bd315e7520bf6cb0b0f829b3d16dc7b">close_output_stream</a> (std::string const &amp;output_name)</td></tr>
-<tr class="memdesc:a0bd315e7520bf6cb0b0f829b3d16dc7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the given output channel. <br /></td></tr>
-<tr class="separator:a0bd315e7520bf6cb0b0f829b3d16dc7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fc47c258f554a7da5102bb3e6c05a03"><td class="memItemLeft" align="right" valign="top"><a id="a2fc47c258f554a7da5102bb3e6c05a03"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a2fc47c258f554a7da5102bb3e6c05a03">backup_file</a> (char const *filename)</td></tr>
 <tr class="memdesc:a2fc47c258f554a7da5102bb3e6c05a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename the given file, before overwriting it. <br /></td></tr>
@@ -148,29 +132,43 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="separator:a4d4664469e289026424ad0ba4db3d0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0823a0f95c333d0e1b53b720a1c00bfe"><td class="memItemLeft" align="right" valign="top"><a id="a0823a0f95c333d0e1b53b720a1c00bfe"></a>
 std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a0823a0f95c333d0e1b53b720a1c00bfe">input_prefix</a> ()</td></tr>
-<tr class="memdesc:a0823a0f95c333d0e1b53b720a1c00bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix of the input state file. <br /></td></tr>
+<tr class="memdesc:a0823a0f95c333d0e1b53b720a1c00bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix of the input state file to be read next. <br /></td></tr>
 <tr class="separator:a0823a0f95c333d0e1b53b720a1c00bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7b87989a9761ffe9d10d51798f820d5"><td class="memItemLeft" align="right" valign="top"><a id="ad7b87989a9761ffe9d10d51798f820d5"></a>
-std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#ad7b87989a9761ffe9d10d51798f820d5">restart_output_prefix</a> ()</td></tr>
-<tr class="memdesc:ad7b87989a9761ffe9d10d51798f820d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix to be used for output restart files. <br /></td></tr>
-<tr class="separator:ad7b87989a9761ffe9d10d51798f820d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac79ec93f4c871902494e4ff3121fa955"><td class="memItemLeft" align="right" valign="top"><a id="ac79ec93f4c871902494e4ff3121fa955"></a>
 std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#ac79ec93f4c871902494e4ff3121fa955">output_prefix</a> ()</td></tr>
-<tr class="memdesc:ac79ec93f4c871902494e4ff3121fa955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix to be used for output files (final system configuration) <br /></td></tr>
+<tr class="memdesc:ac79ec93f4c871902494e4ff3121fa955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default prefix to be used for all output files (final configuration) <br /></td></tr>
 <tr class="separator:ac79ec93f4c871902494e4ff3121fa955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b87989a9761ffe9d10d51798f820d5"><td class="memItemLeft" align="right" valign="top"><a id="ad7b87989a9761ffe9d10d51798f820d5"></a>
+std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#ad7b87989a9761ffe9d10d51798f820d5">restart_output_prefix</a> ()</td></tr>
+<tr class="memdesc:ad7b87989a9761ffe9d10d51798f820d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix of the restart (checkpoint) file to be written next. <br /></td></tr>
+<tr class="separator:ad7b87989a9761ffe9d10d51798f820d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78938e510424b12ff9a971c1b05503d3"><td class="memItemLeft" align="right" valign="top"><a id="a78938e510424b12ff9a971c1b05503d3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a78938e510424b12ff9a971c1b05503d3">default_restart_frequency</a> () const</td></tr>
+<tr class="memdesc:a78938e510424b12ff9a971c1b05503d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default restart frequency (as set by the simulation engine) <br /></td></tr>
+<tr class="separator:a78938e510424b12ff9a971c1b05503d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227f8e223cbd600015f45366255eaf87"><td class="memItemLeft" align="right" valign="top"><a id="a227f8e223cbd600015f45366255eaf87"></a>
+char const  *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a227f8e223cbd600015f45366255eaf87">input_buffer</a> ()</td></tr>
+<tr class="memdesc:a227f8e223cbd600015f45366255eaf87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer from which the input state information may be read. <br /></td></tr>
+<tr class="separator:a227f8e223cbd600015f45366255eaf87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a674409e6fc8eda9a663ecac160c9582c"><td class="memItemLeft" align="right" valign="top"><a id="a674409e6fc8eda9a663ecac160c9582c"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a674409e6fc8eda9a663ecac160c9582c">input_prefix_str</a></td></tr>
-<tr class="memdesc:a674409e6fc8eda9a663ecac160c9582c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix to be used for input files (restarts, not configuration) <br /></td></tr>
+<tr class="memdesc:a674409e6fc8eda9a663ecac160c9582c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix of the input state file to be read next. <br /></td></tr>
 <tr class="separator:a674409e6fc8eda9a663ecac160c9582c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3218271b970fc670e6a6361897d1f998"><td class="memItemLeft" align="right" valign="top"><a id="a3218271b970fc670e6a6361897d1f998"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>output_prefix_str</b></td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a3218271b970fc670e6a6361897d1f998">output_prefix_str</a></td></tr>
+<tr class="memdesc:a3218271b970fc670e6a6361897d1f998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default prefix to be used for all output files (final configuration) <br /></td></tr>
 <tr class="separator:a3218271b970fc670e6a6361897d1f998"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6f034ad2e0cb11646e4428d212ad1e2"><td class="memItemLeft" align="right" valign="top"><a id="aa6f034ad2e0cb11646e4428d212ad1e2"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>restart_output_prefix_str</b></td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#aa6f034ad2e0cb11646e4428d212ad1e2">restart_output_prefix_str</a></td></tr>
+<tr class="memdesc:aa6f034ad2e0cb11646e4428d212ad1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix of the restart (checkpoint) file to be written next. <br /></td></tr>
 <tr class="separator:aa6f034ad2e0cb11646e4428d212ad1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b9ae3c570dc29607dab1040e471d9d"><td class="memItemLeft" align="right" valign="top"><a id="a78b9ae3c570dc29607dab1040e471d9d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a78b9ae3c570dc29607dab1040e471d9d">restart_frequency_engine</a></td></tr>
+<tr class="memdesc:a78b9ae3c570dc29607dab1040e471d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">How often the simulation engine will write its own restart. <br /></td></tr>
+<tr class="separator:a78b9ae3c570dc29607dab1040e471d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4b55cb044e5acb2b97c28668c75e88c"><td class="memItemLeft" align="right" valign="top"><a id="aa4b55cb044e5acb2b97c28668c75e88c"></a>
 std::list&lt; std::ostream * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#aa4b55cb044e5acb2b97c28668c75e88c">output_files</a></td></tr>
 <tr class="memdesc:aa4b55cb044e5acb2b97c28668c75e88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently opened output files: by default, these are ofstream objects. Allows redefinition to implement different output mechanisms. <br /></td></tr>
@@ -179,6 +177,10 @@ std::list&lt; std::ostream * &gt;&#160;</td><td class="memItemRight" valign="bot
 std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a29d880cfb913d20285a01b053d8bfff2">output_stream_names</a></td></tr>
 <tr class="memdesc:a29d880cfb913d20285a01b053d8bfff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifiers for output_stream objects: by default, these are the names of the files. <br /></td></tr>
 <tr class="separator:a29d880cfb913d20285a01b053d8bfff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa828d8f846788500cd1ac6af15d23c91"><td class="memItemLeft" align="right" valign="top"><a id="aa828d8f846788500cd1ac6af15d23c91"></a>
+char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#aa828d8f846788500cd1ac6af15d23c91">input_buffer_</a></td></tr>
+<tr class="memdesc:aa828d8f846788500cd1ac6af15d23c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer from which the input state information may be read. <br /></td></tr>
+<tr class="separator:aa828d8f846788500cd1ac6af15d23c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Methods for data input/output. </p>
@@ -189,7 +191,7 @@ std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 31 2020 11:25:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 24 2020 14:04:56 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

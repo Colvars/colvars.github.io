@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data',['data',['../classcolvar__grid.html#a55315b2161c9487ade559bf1174b31dd',1,'colvar_grid']]],
+  ['data',['data',['../classcolvar__grid.html#a55315b2161c9487ade559bf1174b31dd',1,'colvar_grid::data()'],['../classcolvarparse_1_1read__block.html#a4ac899a6327487c41a0e5af396b8f79e',1,'colvarparse::read_block::data()']]],
   ['data_5fbegin_5fpos',['data_begin_pos',['../classcolvarparse.html#a39c128c5f96f1d6d74038024c1e25ce9',1,'colvarparse']]],
   ['data_5fend_5fpos',['data_end_pos',['../classcolvarparse.html#a953417bf426b3f6743ad08a5d6f5549c',1,'colvarparse']]],
   ['debug_5fgradients_5fstep_5fsize',['debug_gradients_step_size',['../classcolvarmodule.html#af60268f7e2d5ec410d43a0013f74081b',1,'colvarmodule']]],

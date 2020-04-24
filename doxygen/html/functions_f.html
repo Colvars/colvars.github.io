@@ -139,6 +139,12 @@ $(function() {
 <li>f_cv_periodic
 : <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a56c0fbe7f5f121a88f3432d9db82cb77">colvardeps</a>
 </li>
+<li>f_cv_reflecting_lower_boundary
+: <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a8e4790308fe92caa3f69d8d0016e7976">colvardeps</a>
+</li>
+<li>f_cv_reflecting_upper_boundary
+: <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a86b47705aad1d6df8b3dc97d3eb398b0">colvardeps</a>
+</li>
 <li>f_cv_runave
 : <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a4aef777d2b61168d4c3387f9e7e2b95b">colvardeps</a>
 </li>
@@ -172,8 +178,8 @@ $(function() {
 <li>f_cvb_awake
 : <a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa778b53fc725ed378e46ae9d5cf0b805a">colvardeps</a>
 </li>
-<li>f_cvb_bias_actual_colvar
-: <a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa79eae3c024623a997c7629971ccf86a1">colvardeps</a>
+<li>f_cvb_bypass_ext_lagrangian
+: <a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daad613eb808616b9d63612114c9caa0fd3">colvardeps</a>
 </li>
 <li>f_cvb_calc_pmf
 : <a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa372e0dd997a2be9d2aa8ac51958db92b">colvardeps</a>
@@ -192,6 +198,9 @@ $(function() {
 </li>
 <li>f_cvb_scalar_variables
 : <a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daae4ea421cae3fab1c6adaecfc6fe7d9be">colvardeps</a>
+</li>
+<li>f_cvb_step_zero_data
+: <a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daab53a9f3aee74142837ada541c44db19a">colvardeps</a>
 </li>
 <li>f_cvb_time_dependent
 : <a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa68f77d099c88ce72d991d147b0ad44c5">colvardeps</a>
@@ -261,11 +270,7 @@ $(function() {
 </li>
 <li>fatal_error()
 : <a class="el" href="classcolvarmodule.html#a866a0fd67764bc52bf4660b44e59dbf7">colvarmodule</a>
-, <a class="el" href="classcolvarproxy.html#a54246644b5154492e2e71f112f973847">colvarproxy</a>
 , <a class="el" href="classcolvarproxy__gromacs.html#a77fa0ee833c931ba3930090196872f66">colvarproxy_gromacs</a>
-, <a class="el" href="classcolvarproxy__lammps.html#ac71f5b45c36f94d940cd0e54bde0cf07">colvarproxy_lammps</a>
-, <a class="el" href="classcolvarproxy__namd.html#a157515a3173dc5ae141565a37a7b800f">colvarproxy_namd</a>
-, <a class="el" href="classcolvarproxy__vmd.html#a8f1d0a1980457aaf72890831a4110607">colvarproxy_vmd</a>
 </li>
 <li>fb
 : <a class="el" href="classcolvar.html#a5797e399be3f07656ca629c5357b7ad0">colvar</a>
@@ -313,8 +318,11 @@ $(function() {
 : <a class="el" href="classcolvarmodule.html#a28f5a33059a5423fe5d724965ad822c6">colvarmodule</a>
 </li>
 <li>flush_output_stream()
-: <a class="el" href="classcolvarproxy__io.html#abbf4725c6c073c42a5b0a66d8a4ba3a7">colvarproxy_io</a>
+: <a class="el" href="classcolvarproxy.html#a84d0c13d3b58bf4249c68a8fcc23f1f5">colvarproxy</a>
 , <a class="el" href="classcolvarproxy__namd.html#a66ff8aff51e6474196ac640419c2f71c">colvarproxy_namd</a>
+</li>
+<li>flush_output_streams()
+: <a class="el" href="classcolvarproxy.html#aa17049ee16c4f8cd8369cbbe637cf10f">colvarproxy</a>
 </li>
 <li>force_bin
 : <a class="el" href="classcolvarbias__abf.html#a8bef8bc1790956132203b724ab293bc0">colvarbias_abf</a>
@@ -361,7 +369,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 31 2020 11:25:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 24 2020 14:04:56 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

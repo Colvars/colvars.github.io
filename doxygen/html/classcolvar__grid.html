@@ -148,13 +148,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a6a87eb04caf1d01dee90cf3b98a138f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a6a87eb04caf1d01dee90cf3b98a138f3">colvar_grid</a> (std::vector&lt; int &gt; const &amp;nx_i, T const &amp;t=T(), size_t mult_i=1)</td></tr>
 <tr class="memdesc:a6a87eb04caf1d01dee90cf3b98a138f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from explicit grid sizes.  <a href="#a6a87eb04caf1d01dee90cf3b98a138f3">More...</a><br /></td></tr>
 <tr class="separator:a6a87eb04caf1d01dee90cf3b98a138f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb7220d5bd2a9b0a08b1446364cdc58b"><td class="memItemLeft" align="right" valign="top"><a id="abb7220d5bd2a9b0a08b1446364cdc58b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#abb7220d5bd2a9b0a08b1446364cdc58b">colvar_grid</a> (std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; const &amp;colvars, T const &amp;t=T(), size_t mult_i=1, bool margin=false)</td></tr>
-<tr class="memdesc:abb7220d5bd2a9b0a08b1446364cdc58b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a vector of colvars. <br /></td></tr>
-<tr class="separator:abb7220d5bd2a9b0a08b1446364cdc58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59c0be89ff3aa734c2eb0b7dc25f0f9d"><td class="memItemLeft" align="right" valign="top"><a id="a59c0be89ff3aa734c2eb0b7dc25f0f9d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>init_from_colvars</b> (std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; const &amp;colvars, T const &amp;t=T(), size_t mult_i=1, bool margin=false)</td></tr>
-<tr class="separator:a59c0be89ff3aa734c2eb0b7dc25f0f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7197ebc515ef0ff4108ac41e91d651"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a8a7197ebc515ef0ff4108ac41e91d651">colvar_grid</a> (std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; const &amp;colvars, T const &amp;t=T(), size_t mult_i=1, bool add_extra_bin=false)</td></tr>
+<tr class="memdesc:a8a7197ebc515ef0ff4108ac41e91d651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a vector of colvars.  <a href="#a8a7197ebc515ef0ff4108ac41e91d651">More...</a><br /></td></tr>
+<tr class="separator:a8a7197ebc515ef0ff4108ac41e91d651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a23677234ab243d5b30b6b4dea6c2d2"><td class="memItemLeft" align="right" valign="top"><a id="a4a23677234ab243d5b30b6b4dea6c2d2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>init_from_colvars</b> (std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; const &amp;colvars, T const &amp;t=T(), size_t mult_i=1, bool add_extra_bin=false)</td></tr>
+<tr class="separator:a4a23677234ab243d5b30b6b4dea6c2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58caf37200a618e03d58b871a231c342"><td class="memItemLeft" align="right" valign="top"><a id="a58caf37200a618e03d58b871a231c342"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>init_from_boundaries</b> ()</td></tr>
 <tr class="separator:a58caf37200a618e03d58b871a231c342"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -273,10 +272,10 @@ std::vector&lt; int &gt; const&#160;</td><td class="memItemRight" valign="bottom
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a63d95204067fdf2ffe59ee17d6e49315">add_grid</a> (<a class="el" href="classcolvar__grid.html">colvar_grid</a>&lt; T &gt; const &amp;other_grid, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> scale_factor=1.0)</td></tr>
 <tr class="memdesc:a63d95204067fdf2ffe59ee17d6e49315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add data from another grid of the same type, AND identical definition (boundaries, widths) <br /></td></tr>
 <tr class="separator:a63d95204067fdf2ffe59ee17d6e49315"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f17248b2392c914673a5a741f38987d"><td class="memItemLeft" align="right" valign="top"><a id="a8f17248b2392c914673a5a741f38987d"></a>
-virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a8f17248b2392c914673a5a741f38987d">value_output</a> (std::vector&lt; int &gt; const &amp;ix, size_t const &amp;imult=0)</td></tr>
-<tr class="memdesc:a8f17248b2392c914673a5a741f38987d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value suitable for output purposes (so that it may be rescaled or manipulated without changing it permanently) <br /></td></tr>
-<tr class="separator:a8f17248b2392c914673a5a741f38987d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4dcf2f50185200905c01061462ce1c5"><td class="memItemLeft" align="right" valign="top"><a id="ad4dcf2f50185200905c01061462ce1c5"></a>
+virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#ad4dcf2f50185200905c01061462ce1c5">value_output</a> (std::vector&lt; int &gt; const &amp;ix, size_t const &amp;imult=0) const</td></tr>
+<tr class="memdesc:ad4dcf2f50185200905c01061462ce1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value suitable for output purposes (so that it may be rescaled or manipulated without changing it permanently) <br /></td></tr>
+<tr class="separator:ad4dcf2f50185200905c01061462ce1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38d00c25455794f8a98c6f62ce23057e"><td class="memItemLeft" align="right" valign="top"><a id="a38d00c25455794f8a98c6f62ce23057e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a38d00c25455794f8a98c6f62ce23057e">value_input</a> (std::vector&lt; int &gt; const &amp;ix, T const &amp;t, size_t const &amp;imult=0, bool add=false)</td></tr>
 <tr class="memdesc:a38d00c25455794f8a98c6f62ce23057e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value from a formatted output and transform it into the internal representation (the two may be different, e.g. when using <a class="el" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n-dim colvar space.">colvar_grid_count</a>) <br /></td></tr>
@@ -317,25 +316,25 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a597b35c5ea00d9af618287510652a6a9">write_restart</a> (std::ostream &amp;os)</td></tr>
 <tr class="memdesc:a597b35c5ea00d9af618287510652a6a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write grid entry in restart file. <br /></td></tr>
 <tr class="separator:a597b35c5ea00d9af618287510652a6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf164f1da7dc5f9f7869aee5736126cf"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#adf164f1da7dc5f9f7869aee5736126cf">write_raw</a> (std::ostream &amp;os, size_t const buf_size=3)</td></tr>
-<tr class="memdesc:adf164f1da7dc5f9f7869aee5736126cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the grid data without labels, as they are represented in memory.  <a href="#adf164f1da7dc5f9f7869aee5736126cf">More...</a><br /></td></tr>
-<tr class="separator:adf164f1da7dc5f9f7869aee5736126cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e2b45df88f1ad86a5d50aba7fba2c4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#ac9e2b45df88f1ad86a5d50aba7fba2c4">write_raw</a> (std::ostream &amp;os, size_t const buf_size=3) const</td></tr>
+<tr class="memdesc:ac9e2b45df88f1ad86a5d50aba7fba2c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the grid data without labels, as they are represented in memory.  <a href="#ac9e2b45df88f1ad86a5d50aba7fba2c4">More...</a><br /></td></tr>
+<tr class="separator:ac9e2b45df88f1ad86a5d50aba7fba2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a452a21b13e84d566c4bdcf1cd04525ad"><td class="memItemLeft" align="right" valign="top"><a id="a452a21b13e84d566c4bdcf1cd04525ad"></a>
 std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a452a21b13e84d566c4bdcf1cd04525ad">read_raw</a> (std::istream &amp;is)</td></tr>
-<tr class="memdesc:a452a21b13e84d566c4bdcf1cd04525ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data written by <a class="el" href="classcolvar__grid.html#adf164f1da7dc5f9f7869aee5736126cf" title="Write the grid data without labels, as they are represented in memory.">colvar_grid::write_raw()</a> <br /></td></tr>
+<tr class="memdesc:a452a21b13e84d566c4bdcf1cd04525ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data written by <a class="el" href="classcolvar__grid.html#ac9e2b45df88f1ad86a5d50aba7fba2c4" title="Write the grid data without labels, as they are represented in memory.">colvar_grid::write_raw()</a> <br /></td></tr>
 <tr class="separator:a452a21b13e84d566c4bdcf1cd04525ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72534d43e7c344501fa16bde632871e7"><td class="memItemLeft" align="right" valign="top"><a id="a72534d43e7c344501fa16bde632871e7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a72534d43e7c344501fa16bde632871e7">write_multicol</a> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:a72534d43e7c344501fa16bde632871e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the grid in a format which is both human readable and suitable for visualization e.g. with gnuplot. <br /></td></tr>
-<tr class="separator:a72534d43e7c344501fa16bde632871e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abddfd4930c7ffeb7790b10a42e794132"><td class="memItemLeft" align="right" valign="top"><a id="abddfd4930c7ffeb7790b10a42e794132"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#abddfd4930c7ffeb7790b10a42e794132">write_multicol</a> (std::ostream &amp;os) const</td></tr>
+<tr class="memdesc:abddfd4930c7ffeb7790b10a42e794132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the grid in a format which is both human readable and suitable for visualization e.g. with gnuplot. <br /></td></tr>
+<tr class="separator:abddfd4930c7ffeb7790b10a42e794132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcbe6300587c56a66ed76f6bfcba7b77"><td class="memItemLeft" align="right" valign="top"><a id="adcbe6300587c56a66ed76f6bfcba7b77"></a>
 std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#adcbe6300587c56a66ed76f6bfcba7b77">read_multicol</a> (std::istream &amp;is, bool add=false)</td></tr>
-<tr class="memdesc:adcbe6300587c56a66ed76f6bfcba7b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a grid written by <a class="el" href="classcolvar__grid.html#a72534d43e7c344501fa16bde632871e7" title="Write the grid in a format which is both human readable and suitable for visualization e....">colvar_grid::write_multicol()</a> Adding data if add is true, replacing if false. <br /></td></tr>
+<tr class="memdesc:adcbe6300587c56a66ed76f6bfcba7b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a grid written by <a class="el" href="classcolvar__grid.html#abddfd4930c7ffeb7790b10a42e794132" title="Write the grid in a format which is both human readable and suitable for visualization e....">colvar_grid::write_multicol()</a> Adding data if add is true, replacing if false. <br /></td></tr>
 <tr class="separator:adcbe6300587c56a66ed76f6bfcba7b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7df5209fda0a24542904c9f4958bb0f"><td class="memItemLeft" align="right" valign="top"><a id="ac7df5209fda0a24542904c9f4958bb0f"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#ac7df5209fda0a24542904c9f4958bb0f">write_opendx</a> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:ac7df5209fda0a24542904c9f4958bb0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the grid data without labels, as they are represented in memory. <br /></td></tr>
-<tr class="separator:ac7df5209fda0a24542904c9f4958bb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9feca0ac7cf047d6296865e852cd9f"><td class="memItemLeft" align="right" valign="top"><a id="aaa9feca0ac7cf047d6296865e852cd9f"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#aaa9feca0ac7cf047d6296865e852cd9f">write_opendx</a> (std::ostream &amp;os) const</td></tr>
+<tr class="memdesc:aaa9feca0ac7cf047d6296865e852cd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the grid data without labels, as they are represented in memory. <br /></td></tr>
+<tr class="separator:aaa9feca0ac7cf047d6296865e852cd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
 <tr class="memitem:ad1163ce6827f1ced025996d9cb72efa0 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="ad1163ce6827f1ced025996d9cb72efa0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#ad1163ce6827f1ced025996d9cb72efa0">colvarparse</a> ()</td></tr>
@@ -709,7 +708,7 @@ class colvar_grid&lt; T &gt;</h3>
 <p>Only scalar colvars supported so far: vector colvars are treated as arrays </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6a87eb04caf1d01dee90cf3b98a138f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a87eb04caf1d01dee90cf3b98a138f3">&#9670;&nbsp;</a></span>colvar_grid()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a87eb04caf1d01dee90cf3b98a138f3">&#9670;&nbsp;</a></span>colvar_grid() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -756,6 +755,64 @@ template&lt;class T&gt; </div>
     <tr><td class="paramname">nx_i</td><td>Number of grid points along each dimension</td></tr>
     <tr><td class="paramname">t</td><td>Initial value for the function at each point (optional)</td></tr>
     <tr><td class="paramname">mult_i</td><td>Multiplicity of each value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a7197ebc515ef0ff4108ac41e91d651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7197ebc515ef0ff4108ac41e91d651">&#9670;&nbsp;</a></span>colvar_grid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcolvar__grid.html">colvar_grid</a>&lt; T &gt;::<a class="el" href="classcolvar__grid.html">colvar_grid</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>colvars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const &amp;&#160;</td>
+          <td class="paramname"><em>t</em> = <code>T()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>mult_i</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>add_extra_bin</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor from a vector of colvars. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">add_extra_bin</td><td>requests that non-periodic dimensions are extended by 1 bin to accommodate the integral (PMF) of another gridded quantity (gradient) </td></tr>
   </table>
   </dd>
 </dl>
@@ -881,8 +938,8 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a id="adf164f1da7dc5f9f7869aee5736126cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf164f1da7dc5f9f7869aee5736126cf">&#9670;&nbsp;</a></span>write_raw()</h2>
+<a id="ac9e2b45df88f1ad86a5d50aba7fba2c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e2b45df88f1ad86a5d50aba7fba2c4">&#9670;&nbsp;</a></span>write_raw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -907,7 +964,7 @@ template&lt;class T&gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -933,7 +990,7 @@ template&lt;class T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 31 2020 11:25:17 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 24 2020 14:04:55 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

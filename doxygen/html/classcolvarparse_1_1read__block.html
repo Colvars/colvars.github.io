@@ -82,17 +82,19 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9c8baff1c39554c146c1ec6307350590"><td class="memItemLeft" align="right" valign="top"><a id="a9c8baff1c39554c146c1ec6307350590"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>read_block</b> (std::string const &amp;key_in, std::string &amp;data_in)</td></tr>
-<tr class="separator:a9c8baff1c39554c146c1ec6307350590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458f613cd1da878ad2e9703e2ffd9da5"><td class="memItemLeft" align="right" valign="top"><a id="a458f613cd1da878ad2e9703e2ffd9da5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>read_block</b> (std::string const &amp;key_in, std::string *data_in=NULL)</td></tr>
+<tr class="separator:a458f613cd1da878ad2e9703e2ffd9da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a2051f52dd884dd01a4dfff4033b0019e"><td class="memItemLeft" align="right" valign="top"><a id="a2051f52dd884dd01a4dfff4033b0019e"></a>
-std::string const&#160;</td><td class="memItemRight" valign="bottom"><b>key</b></td></tr>
+std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse_1_1read__block.html#a2051f52dd884dd01a4dfff4033b0019e">key</a></td></tr>
+<tr class="memdesc:a2051f52dd884dd01a4dfff4033b0019e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The keyword that identifies the block. <br /></td></tr>
 <tr class="separator:a2051f52dd884dd01a4dfff4033b0019e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac899a6327487c41a0e5af396b8f79e"><td class="memItemLeft" align="right" valign="top"><a id="a4ac899a6327487c41a0e5af396b8f79e"></a>
-std::string *const&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+std::string *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse_1_1read__block.html#a4ac899a6327487c41a0e5af396b8f79e">data</a></td></tr>
+<tr class="memdesc:a4ac899a6327487c41a0e5af396b8f79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Where to keep the data (may be NULL) <br /></td></tr>
 <tr class="separator:a4ac899a6327487c41a0e5af396b8f79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -104,13 +106,14 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Helper class to read a block of the type "key { ... }" from a stream and store it in a string. </p>
 <p>Useful on restarts, where the file is too big to be loaded in a string by key_lookup; it can only check that the keyword is correct and the block is properly delimited by braces, not skipping other blocks </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvarparse_8h_source.html">colvarparse.h</a></li>
+<li>colvarparse.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 31 2020 11:25:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 24 2020 14:04:56 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

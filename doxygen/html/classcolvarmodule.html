@@ -90,7 +90,7 @@ Collaboration diagram for colvarmodule:</div>
 <map name="colvarmodule_coll__map" id="colvarmodule_coll__map">
 <area shape="rect"  title="Collective variables module (main class)" alt="" coords="481,464,579,491"/>
 <area shape="rect"  href="classcolvarproxy.html" title="Interface between the collective variables module and the simulation or analysis program (NAMD,..." alt="" coords="708,332,795,359"/>
-<area shape="rect"  href="classcolvarscript.html" title=" " alt="" coords="876,383,965,409"/>
+<area shape="rect"  href="classcolvarscript.html" title=" " alt="" coords="884,383,973,409"/>
 <area shape="rect"  href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="183,464,272,491"/>
 <area shape="rect"  href="classcolvarparams.html" title=" " alt="" coords="5,464,105,491"/>
 <area shape="rect"  href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="462,109,598,136"/>
@@ -99,7 +99,7 @@ Collaboration diagram for colvarmodule:</div>
 <area shape="rect"  href="classcolvarproxy__atom__groups.html" title="Container of atom group data (allow collection of aggregated atomic data)" alt="" coords="445,211,615,237"/>
 <area shape="rect"  href="classcolvarproxy__smp.html" title="Methods for SMP parallelization." alt="" coords="471,261,589,288"/>
 <area shape="rect"  href="classcolvarproxy__replicas.html" title="Methods for multiple&#45;replica communication." alt="" coords="461,312,599,339"/>
-<area shape="rect"  href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1049,357,1176,384"/>
+<area shape="rect"  href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1057,357,1184,384"/>
 <area shape="rect"  href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="476,363,584,389"/>
 <area shape="rect"  href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="478,413,582,440"/>
 </map>
@@ -234,6 +234,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a6f7425a44105a54b166a1550c2995b32">append_new_config</a> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:a6f7425a44105a54b166a1550c2995b32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new configuration during parsing (e.g. to implement back-compatibility); cannot be nested, i.e. conf should not contain anything that triggers another call. <br /></td></tr>
 <tr class="separator:a6f7425a44105a54b166a1550c2995b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1de6760a950751faa819670cc9c866"><td class="memItemLeft" align="right" valign="top"><a id="aeb1de6760a950751faa819670cc9c866"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aeb1de6760a950751faa819670cc9c866">config_changed</a> ()</td></tr>
+<tr class="memdesc:aeb1de6760a950751faa819670cc9c866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signals to the module object that the configuration has changed. <br /></td></tr>
+<tr class="separator:aeb1de6760a950751faa819670cc9c866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe6388fb31654c1a3ad663f375b62453"><td class="memItemLeft" align="right" valign="top"><a id="abe6388fb31654c1a3ad663f375b62453"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#abe6388fb31654c1a3ad663f375b62453">num_variables</a> () const</td></tr>
 <tr class="memdesc:abe6388fb31654c1a3ad663f375b62453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return how many variables are defined. <br /></td></tr>
@@ -260,7 +264,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="separator:a200768da390b0eba3b9190d00921dad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49979648aa93f1379a3954995d49177"><td class="memItemLeft" align="right" valign="top"><a id="af49979648aa93f1379a3954995d49177"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af49979648aa93f1379a3954995d49177">setup_input</a> ()</td></tr>
-<tr class="memdesc:af49979648aa93f1379a3954995d49177"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)initialize and (re)read the input state file calling <a class="el" href="classcolvarmodule.html#a1bd1a4c8bda768a5125515e74e4154cf" title="Read the input restart file.">read_restart()</a> <br /></td></tr>
+<tr class="memdesc:af49979648aa93f1379a3954995d49177"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)initialize and (re)read the input state file calling <a class="el" href="classcolvarmodule.html#a1bd1a4c8bda768a5125515e74e4154cf" title="Read a restart file.">read_restart()</a> <br /></td></tr>
 <tr class="separator:af49979648aa93f1379a3954995d49177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a448add9df80f0f3a9b4a96ebb2be1d91"><td class="memItemLeft" align="right" valign="top"><a id="a448add9df80f0f3a9b4a96ebb2be1d91"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a448add9df80f0f3a9b4a96ebb2be1d91">setup_output</a> ()</td></tr>
@@ -268,8 +272,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="separator:a448add9df80f0f3a9b4a96ebb2be1d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bd1a4c8bda768a5125515e74e4154cf"><td class="memItemLeft" align="right" valign="top"><a id="a1bd1a4c8bda768a5125515e74e4154cf"></a>
 std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a1bd1a4c8bda768a5125515e74e4154cf">read_restart</a> (std::istream &amp;is)</td></tr>
-<tr class="memdesc:a1bd1a4c8bda768a5125515e74e4154cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the input restart file. <br /></td></tr>
+<tr class="memdesc:a1bd1a4c8bda768a5125515e74e4154cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a restart file. <br /></td></tr>
 <tr class="separator:a1bd1a4c8bda768a5125515e74e4154cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7821478729c3281c0ebe30ed9a2a5e74"><td class="memItemLeft" align="right" valign="top"><a id="a7821478729c3281c0ebe30ed9a2a5e74"></a>
+std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a7821478729c3281c0ebe30ed9a2a5e74">read_objects_state</a> (std::istream &amp;is)</td></tr>
+<tr class="memdesc:a7821478729c3281c0ebe30ed9a2a5e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the states of individual objects; allows for changes. <br /></td></tr>
+<tr class="separator:a7821478729c3281c0ebe30ed9a2a5e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae276b217eeb817627890efd7b9774666"><td class="memItemLeft" align="right" valign="top"><a id="ae276b217eeb817627890efd7b9774666"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ae276b217eeb817627890efd7b9774666">print_total_forces_errning</a> (bool warn_total_forces)</td></tr>
+<tr class="memdesc:ae276b217eeb817627890efd7b9774666"><td class="mdescLeft">&#160;</td><td class="mdescRight">If needed (old restart file), print the warning that cannot be ignored. <br /></td></tr>
+<tr class="separator:ae276b217eeb817627890efd7b9774666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6aaeceb4cdf51dde27aff40af4c3e53"><td class="memItemLeft" align="right" valign="top"><a id="ac6aaeceb4cdf51dde27aff40af4c3e53"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac6aaeceb4cdf51dde27aff40af4c3e53">write_restart</a> (std::ostream &amp;os)</td></tr>
 <tr class="memdesc:ac6aaeceb4cdf51dde27aff40af4c3e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the output restart file. <br /></td></tr>
@@ -302,6 +314,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aa890feaf20b33e29c091778e2968b988">write_output_files</a> ()</td></tr>
 <tr class="memdesc:aa890feaf20b33e29c091778e2968b988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all other output files. <br /></td></tr>
 <tr class="separator:aa890feaf20b33e29c091778e2968b988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4b9d8655d1a17792a537598e9654f9"><td class="memItemLeft" align="right" valign="top"><a id="acd4b9d8655d1a17792a537598e9654f9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#acd4b9d8655d1a17792a537598e9654f9">write_restart_string</a> (std::string &amp;output)</td></tr>
+<tr class="memdesc:acd4b9d8655d1a17792a537598e9654f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the state into a string. <br /></td></tr>
+<tr class="separator:acd4b9d8655d1a17792a537598e9654f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac73c2f5e8836309d4794044adebd32a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac73c2f5e8836309d4794044adebd32a3">change_configuration</a> (std::string const &amp;bias_name, std::string const &amp;conf)</td></tr>
 <tr class="separator:ac73c2f5e8836309d4794044adebd32a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc138957ee1375fa6b5e19ef0788abcc"><td class="memItemLeft" align="right" valign="top"><a id="abc138957ee1375fa6b5e19ef0788abcc"></a>
@@ -310,20 +326,6 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="separator:abc138957ee1375fa6b5e19ef0788abcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7a80dcc060a2ef314005497693e8491"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ad7a80dcc060a2ef314005497693e8491">energy_difference</a> (std::string const &amp;bias_name, std::string const &amp;conf)</td></tr>
 <tr class="separator:ad7a80dcc060a2ef314005497693e8491"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ac6b6f6f3e3ddb06a06a724929bc465"><td class="memItemLeft" align="right" valign="top"><a id="a2ac6b6f6f3e3ddb06a06a724929bc465"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a2ac6b6f6f3e3ddb06a06a724929bc465">bias_bin_num</a> (std::string const &amp;bias_name)</td></tr>
-<tr class="memdesc:a2ac6b6f6f3e3ddb06a06a724929bc465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Give the total number of bins for a given bias. <br /></td></tr>
-<tr class="separator:a2ac6b6f6f3e3ddb06a06a724929bc465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f5542a1c26e5143d37a41712c49674c"><td class="memItemLeft" align="right" valign="top"><a id="a6f5542a1c26e5143d37a41712c49674c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a6f5542a1c26e5143d37a41712c49674c">bias_current_bin</a> (std::string const &amp;bias_name)</td></tr>
-<tr class="memdesc:a6f5542a1c26e5143d37a41712c49674c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the bin index for a given bias. <br /></td></tr>
-<tr class="separator:a6f5542a1c26e5143d37a41712c49674c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c2d9ef81a24061ad980c7d7628ee947"><td class="memItemLeft" align="right" valign="top"><a id="a3c2d9ef81a24061ad980c7d7628ee947"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>bias_bin_count</b> (std::string const &amp;bias_name, size_t bin_index)</td></tr>
-<tr class="separator:a3c2d9ef81a24061ad980c7d7628ee947"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eb6515e75a7ddf7d4a25d75d8a868f8"><td class="memItemLeft" align="right" valign="top"><a id="a8eb6515e75a7ddf7d4a25d75d8a868f8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>bias_share</b> (std::string const &amp;bias_name)</td></tr>
-<tr class="separator:a8eb6515e75a7ddf7d4a25d75d8a868f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="memItemLeft" align="right" valign="top"><a id="a4a93b8ea3ad9da8e3a7f1303fbb72143"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a4a93b8ea3ad9da8e3a7f1303fbb72143">calc</a> ()</td></tr>
 <tr class="memdesc:a4a93b8ea3ad9da8e3a7f1303fbb72143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main worker function. <br /></td></tr>
@@ -441,6 +443,10 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="separator:ac415ee66c310e474dd0b41d41c7da954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd9f035364ca1b14cabdeb9ca016dd97"><td class="memItemLeft" align="right" valign="top">static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#acd9f035364ca1b14cabdeb9ca016dd97">getline</a> (std::istream &amp;is, std::string &amp;line)</td></tr>
 <tr class="separator:acd9f035364ca1b14cabdeb9ca016dd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec2a243a95db3bc8df0062c6bd71e75"><td class="memItemLeft" align="right" valign="top"><a id="a0ec2a243a95db3bc8df0062c6bd71e75"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a0ec2a243a95db3bc8df0062c6bd71e75">state_file_prefix</a> (char const *filename)</td></tr>
+<tr class="memdesc:a0ec2a243a95db3bc8df0062c6bd71e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strips .colvars.state from filename and checks that it is not empty. <br /></td></tr>
+<tr class="separator:a0ec2a243a95db3bc8df0062c6bd71e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49efc5129a53b498b9238d3561a0440a"><td class="memItemLeft" align="right" valign="top"><a id="a49efc5129a53b498b9238d3561a0440a"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">backup_file</a> (char const *filename)</td></tr>
 <tr class="memdesc:a49efc5129a53b498b9238d3561a0440a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backup a file before writing it. <br /></td></tr>
@@ -561,8 +567,8 @@ static <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af7f01abb124eba3a0571cd094f4c5681">request_total_force</a> ()</td></tr>
 <tr class="memdesc:af7f01abb124eba3a0571cd094f4c5681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request calculation of total force from MD engine. <br /></td></tr>
 <tr class="separator:af7f01abb124eba3a0571cd094f4c5681"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d734762470a3b22b1017b73b09ed164"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a5d734762470a3b22b1017b73b09ed164">log</a> (std::string const &amp;message, int min_log_level=10)</td></tr>
-<tr class="separator:a5d734762470a3b22b1017b73b09ed164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8577e7cbc07b18b4fa46c5cb66ac95dd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a8577e7cbc07b18b4fa46c5cb66ac95dd">log</a> (std::string const &amp;message, int min_log_level=10)</td></tr>
+<tr class="separator:a8577e7cbc07b18b4fa46c5cb66ac95dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a866a0fd67764bc52bf4660b44e59dbf7"><td class="memItemLeft" align="right" valign="top"><a id="a866a0fd67764bc52bf4660b44e59dbf7"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a866a0fd67764bc52bf4660b44e59dbf7">fatal_error</a> (std::string const &amp;message)</td></tr>
 <tr class="memdesc:a866a0fd67764bc52bf4660b44e59dbf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a message to the main log and exit with error code. <br /></td></tr>
@@ -609,25 +615,25 @@ static <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a>&#160;<
 static <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#abe75f1954f1a16adcfd958243b584497">rand_gaussian</a> (void)</td></tr>
 <tr class="memdesc:abe75f1954f1a16adcfd958243b584497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pseudo-random number with Gaussian distribution. <br /></td></tr>
 <tr class="separator:abe75f1954f1a16adcfd958243b584497"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b4611b450fca5e8a78b7da106a32a4b"><td class="memItemLeft" align="right" valign="top"><a id="a4b4611b450fca5e8a78b7da106a32a4b"></a>
-static size_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a4b4611b450fca5e8a78b7da106a32a4b">depth</a> ()</td></tr>
-<tr class="memdesc:a4b4611b450fca5e8a78b7da106a32a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current object depth in the hierarchy. <br /></td></tr>
-<tr class="separator:a4b4611b450fca5e8a78b7da106a32a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac778f4d52a81d6ab418749030b5d495e"><td class="memItemLeft" align="right" valign="top"><a id="ac778f4d52a81d6ab418749030b5d495e"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac778f4d52a81d6ab418749030b5d495e">increase_depth</a> ()</td></tr>
-<tr class="memdesc:ac778f4d52a81d6ab418749030b5d495e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the depth (number of indentations in the output) <br /></td></tr>
-<tr class="separator:ac778f4d52a81d6ab418749030b5d495e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaab45ce811c00d46ec74a1297c6a5a3"><td class="memItemLeft" align="right" valign="top"><a id="aeaab45ce811c00d46ec74a1297c6a5a3"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aeaab45ce811c00d46ec74a1297c6a5a3">decrease_depth</a> ()</td></tr>
-<tr class="memdesc:aeaab45ce811c00d46ec74a1297c6a5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the depth (number of indentations in the output) <br /></td></tr>
-<tr class="separator:aeaab45ce811c00d46ec74a1297c6a5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90d1207e60399389e4a724c51f444fc1"><td class="memItemLeft" align="right" valign="top"><a id="a90d1207e60399389e4a724c51f444fc1"></a>
+static size_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a90d1207e60399389e4a724c51f444fc1">depth</a> ()</td></tr>
+<tr class="memdesc:a90d1207e60399389e4a724c51f444fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current object depth in the hierarchy. <br /></td></tr>
+<tr class="separator:a90d1207e60399389e4a724c51f444fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb785fede401509fd78ba4fd5124ff2c"><td class="memItemLeft" align="right" valign="top"><a id="acb785fede401509fd78ba4fd5124ff2c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#acb785fede401509fd78ba4fd5124ff2c">increase_depth</a> ()</td></tr>
+<tr class="memdesc:acb785fede401509fd78ba4fd5124ff2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the depth (number of indentations in the output) <br /></td></tr>
+<tr class="separator:acb785fede401509fd78ba4fd5124ff2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c517b9d9719ac59874cd87785e85bfe"><td class="memItemLeft" align="right" valign="top"><a id="a8c517b9d9719ac59874cd87785e85bfe"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a8c517b9d9719ac59874cd87785e85bfe">decrease_depth</a> ()</td></tr>
+<tr class="memdesc:a8c517b9d9719ac59874cd87785e85bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the depth (number of indentations in the output) <br /></td></tr>
+<tr class="separator:a8c517b9d9719ac59874cd87785e85bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd786a59c8820f2b48060f28b6067ac1"><td class="memItemLeft" align="right" valign="top"><a id="acd786a59c8820f2b48060f28b6067ac1"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>scripted_forces</b> ()</td></tr>
 <tr class="separator:acd786a59c8820f2b48060f28b6067ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78f44f0e9e70a6daa0ae5c45d5694a12"><td class="memItemLeft" align="right" valign="top"><a id="a78f44f0e9e70a6daa0ae5c45d5694a12"></a>
-static <a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a78f44f0e9e70a6daa0ae5c45d5694a12">main</a> ()</td></tr>
-<tr class="memdesc:a78f44f0e9e70a6daa0ae5c45d5694a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the one instance of the Colvars module. <br /></td></tr>
-<tr class="separator:a78f44f0e9e70a6daa0ae5c45d5694a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaade094070e7dbdddc1f4c4d99041d07"><td class="memItemLeft" align="right" valign="top"><a id="aaade094070e7dbdddc1f4c4d99041d07"></a>
+static <a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">main</a> ()</td></tr>
+<tr class="memdesc:aaade094070e7dbdddc1f4c4d99041d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the one instance of the Colvars module. <br /></td></tr>
+<tr class="separator:aaade094070e7dbdddc1f4c4d99041d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -1092,8 +1098,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 
 </div>
 </div>
-<a id="a5d734762470a3b22b1017b73b09ed164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d734762470a3b22b1017b73b09ed164">&#9670;&nbsp;</a></span>log()</h2>
+<a id="a8577e7cbc07b18b4fa46c5cb66ac95dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8577e7cbc07b18b4fa46c5cb66ac95dd">&#9670;&nbsp;</a></span>log()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1102,7 +1108,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cvm::log </td>
+          <td class="memname">void colvarmodule::log </td>
           <td>(</td>
           <td class="paramtype">std::string const &amp;&#160;</td>
           <td class="paramname"><em>message</em>, </td>
@@ -1158,7 +1164,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Reimplemented to work around MS compiler issues. Note: <a class="el" href="classcolvarmodule.html#a5d734762470a3b22b1017b73b09ed164">log()</a> is currently defined as the text logging function, but this can be changed at a later time </p>
+<p>Reimplemented to work around MS compiler issues. Note: <a class="el" href="classcolvarmodule.html#a8577e7cbc07b18b4fa46c5cb66ac95dd">log()</a> is currently defined as the text logging function, but this can be changed at a later time </p>
 
 </div>
 </div>
@@ -1391,12 +1397,12 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvarmodule_8h_source.html">colvarmodule.h</a></li>
 <li>colvarmodule.cpp</li>
-<li><a class="el" href="colvarscript_8h_source.html">colvarscript.h</a></li>
+<li><a class="el" href="colvarscript__commands__colvar_8h_source.html">colvarscript_commands_colvar.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 31 2020 11:25:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 24 2020 14:04:56 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

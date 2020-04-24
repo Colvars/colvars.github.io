@@ -1,9 +1,11 @@
 var searchData=
 [
   ['tcl_5favailable',['tcl_available',['../classcolvarproxy__tcl.html#a26c3b6ba1ad842aaa872a0788bfdfc49',1,'colvarproxy_tcl']]],
-  ['tcl_5fobj_5fto_5fstr',['tcl_obj_to_str',['../classcolvarproxy__tcl.html#af3f64c6270f41561ba152f95892e6b8b',1,'colvarproxy_tcl']]],
+  ['tcl_5fget_5fstr',['tcl_get_str',['../classcolvarproxy__tcl.html#a684579524c36cbcbd864209c23c8b8ea',1,'colvarproxy_tcl']]],
+  ['tcl_5frun_5fcolvar_5fcallback',['tcl_run_colvar_callback',['../classcolvarproxy__tcl.html#a41a113fb813db58eeeb6e832d101a879',1,'colvarproxy_tcl']]],
+  ['tcl_5frun_5fcolvar_5fgradient_5fcallback',['tcl_run_colvar_gradient_callback',['../classcolvarproxy__tcl.html#a0d2345d3b513ef463301ad19feac0519',1,'colvarproxy_tcl']]],
   ['tcl_5frun_5fforce_5fcallback',['tcl_run_force_callback',['../classcolvarproxy__tcl.html#ab2cdac45d887d147c037ce4c682c3139',1,'colvarproxy_tcl']]],
-  ['temperature',['temperature',['../classcolvarmodule.html#a6061dea4d61b7b0058012d0eac5c1dee',1,'colvarmodule::temperature()'],['../classcolvarproxy__system.html#ab8a081a472d7399a8cc04f74a789e5dd',1,'colvarproxy_system::temperature()'],['../classcolvarproxy__namd.html#ac9c99f38bfa3e0ebacf23ffd68a5c344',1,'colvarproxy_namd::temperature()'],['../classcolvarproxy__vmd.html#ad72033de6f7169271cd7dd862e0fdf3a',1,'colvarproxy_vmd::temperature()'],['../classcolvarproxy__lammps.html#a7af0dc648470c4c572b77825e86efdb7',1,'colvarproxy_lammps::temperature()'],['../classcolvarproxy__gromacs.html#aa737de4c75d18c4c6140c8648a7aa0a9',1,'colvarproxy_gromacs::temperature()']]],
+  ['temperature',['temperature',['../classcolvarmodule.html#a6061dea4d61b7b0058012d0eac5c1dee',1,'colvarmodule::temperature()'],['../classcolvarproxy__system.html#ab8a081a472d7399a8cc04f74a789e5dd',1,'colvarproxy_system::temperature()'],['../classcolvarproxy__namd.html#ac9c99f38bfa3e0ebacf23ffd68a5c344',1,'colvarproxy_namd::temperature()'],['../classcolvarproxy__vmd.html#a6b5b306a1b91f6b84ee41128a1d9318b',1,'colvarproxy_vmd::temperature()'],['../classcolvarproxy__lammps.html#a7af0dc648470c4c572b77825e86efdb7',1,'colvarproxy_lammps::temperature()'],['../classcolvarproxy__gromacs.html#aa737de4c75d18c4c6140c8648a7aa0a9',1,'colvarproxy_gromacs::temperature()']]],
   ['time_5fdependent_5fbiases',['time_dependent_biases',['../classcolvarmodule.html#a15bcfdbb482dcc64dcfbd723ee0da686',1,'colvarmodule']]],
   ['to_5flower_5fcppstr',['to_lower_cppstr',['../classcolvarparse.html#a81e37fa76a4d6741f04e43403f077952',1,'colvarparse']]],
   ['to_5fsimple_5fstring',['to_simple_string',['../classcolvarvalue.html#af940c35eac449d1a96d4fa8422d375f5',1,'colvarvalue']]],

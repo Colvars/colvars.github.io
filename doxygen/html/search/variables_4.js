@@ -13,6 +13,7 @@ var searchData=
   ['en_5fprec',['en_prec',['../classcolvarmodule.html#a22242f577e20cca7651e504bb18aa650',1,'colvarmodule']]],
   ['en_5fwidth',['en_width',['../classcolvarmodule.html#aff3e7d63a68af0c7b3b6444914b7c545',1,'colvarmodule']]],
   ['enabled',['enabled',['../structcolvardeps_1_1feature__state.html#a9b1ab8bb343c8287d1059350b3b6a3e0',1,'colvardeps::feature_state']]],
+  ['error_5foutput',['error_output',['../classcolvarproxy.html#a1165ea0cdb0069c641b145a0ef462df3',1,'colvarproxy']]],
   ['errorcode',['errorCode',['../classcolvarmodule.html#a9d228802609d99aaee261e01b8768e06',1,'colvarmodule']]],
   ['expand_5fboundaries',['expand_boundaries',['../classcolvar.html#a8cc773ce95f9533b84099a4119979c27',1,'colvar']]],
   ['expand_5fgrids',['expand_grids',['../classcolvarbias__meta.html#a5c94fb8cc68b41763ee7fece1017d532',1,'colvarbias_meta']]],

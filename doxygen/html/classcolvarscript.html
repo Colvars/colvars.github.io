@@ -97,91 +97,121 @@ Collaboration diagram for colvarscript:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4762b77de87959c61288f913f9b974a6"><td class="memItemLeft" align="right" valign="top"><a id="a4762b77de87959c61288f913f9b974a6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>command</b> { <br />
-&#160;&#160;<b>cv_help</b>, 
-<b>cv_version</b>, 
-<b>cv_config</b>, 
-<b>cv_getconfig</b>, 
-<br />
-&#160;&#160;<b>cv_configfile</b>, 
-<b>cv_reset</b>, 
-<b>cv_resetindexgroups</b>, 
-<b>cv_delete</b>, 
-<br />
-&#160;&#160;<b>cv_list</b>, 
-<b>cv_list_biases</b>, 
-<b>cv_load</b>, 
-<b>cv_save</b>, 
-<br />
-&#160;&#160;<b>cv_update</b>, 
-<b>cv_addenergy</b>, 
-<b>cv_getenergy</b>, 
-<b>cv_printframe</b>, 
-<br />
-&#160;&#160;<b>cv_printframelabels</b>, 
-<b>cv_frame</b>, 
-<b>cv_units</b>, 
-<b>cv_colvar</b>, 
-<br />
-&#160;&#160;<b>cv_colvar_value</b>, 
-<b>cv_colvar_update</b>, 
-<b>cv_colvar_type</b>, 
-<b>cv_colvar_delete</b>, 
-<br />
-&#160;&#160;<b>cv_colvar_addforce</b>, 
-<b>cv_colvar_getappliedforce</b>, 
-<b>cv_colvar_gettotalforce</b>, 
-<b>cv_colvar_cvcflags</b>, 
-<br />
-&#160;&#160;<b>cv_colvar_getconfig</b>, 
-<b>cv_colvar_get</b>, 
-<b>cv_colvar_set</b>, 
-<b>cv_bias</b>, 
-<br />
-&#160;&#160;<b>cv_bias_energy</b>, 
-<b>cv_bias_update</b>, 
-<b>cv_bias_delete</b>, 
-<b>cv_bias_getconfig</b>, 
-<br />
-&#160;&#160;<b>cv_bias_get</b>, 
-<b>cv_bias_set</b>, 
-<b>cv_n_commands</b>
-<br />
+<tr class="memitem:a4762b77de87959c61288f913f9b974a6"><td class="memItemLeft" align="right" valign="top"><a id="a4762b77de87959c61288f913f9b974a6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a4762b77de87959c61288f913f9b974a6">command</a> { <b>cv_n_commands</b>
  }</td></tr>
+<tr class="memdesc:a4762b77de87959c61288f913f9b974a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commands available. <br /></td></tr>
 <tr class="separator:a4762b77de87959c61288f913f9b974a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc1532886360feefd66e515e433afd8"><td class="memItemLeft" align="right" valign="top"><a id="aacc1532886360feefd66e515e433afd8"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#aacc1532886360feefd66e515e433afd8">Object_type</a> { <b>use_module</b>, 
+<b>use_colvar</b>, 
+<b>use_bias</b>
+ }</td></tr>
+<tr class="memdesc:aacc1532886360feefd66e515e433afd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of object handling a script command. <br /></td></tr>
+<tr class="separator:aacc1532886360feefd66e515e433afd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0f359a8b18473de2a027543ef8bd9e6c"><td class="memItemLeft" align="right" valign="top"><a id="a0f359a8b18473de2a027543ef8bd9e6c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>colvarscript</b> (<a class="el" href="classcolvarproxy.html">colvarproxy</a> *p)</td></tr>
 <tr class="separator:a0f359a8b18473de2a027543ef8bd9e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a281c226da014c976d0d628c7d0b9854a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a281c226da014c976d0d628c7d0b9854a">run</a> (int objc, unsigned char *const objv[])</td></tr>
-<tr class="memdesc:a281c226da014c976d0d628c7d0b9854a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run script command with given positional arguments (objects)  <a href="#a281c226da014c976d0d628c7d0b9854a">More...</a><br /></td></tr>
+<tr class="memitem:a281c226da014c976d0d628c7d0b9854a"><td class="memItemLeft" align="right" valign="top"><a id="a281c226da014c976d0d628c7d0b9854a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a281c226da014c976d0d628c7d0b9854a">run</a> (int objc, unsigned char *const objv[])</td></tr>
+<tr class="memdesc:a281c226da014c976d0d628c7d0b9854a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a script command with space-separated positional arguments (objects) <br /></td></tr>
 <tr class="separator:a281c226da014c976d0d628c7d0b9854a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ea52a1c4f478ae9c2d4a4e592944548"><td class="memItemLeft" align="right" valign="top"><a id="a5ea52a1c4f478ae9c2d4a4e592944548"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a5ea52a1c4f478ae9c2d4a4e592944548">set_str_result</a> (std::string const &amp;s)</td></tr>
-<tr class="memdesc:a5ea52a1c4f478ae9c2d4a4e592944548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the return value of the script command to the given string. <br /></td></tr>
-<tr class="separator:a5ea52a1c4f478ae9c2d4a4e592944548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5fc41436a317d1d3bb6bf3dae57ab86"><td class="memItemLeft" align="right" valign="top"><a id="ad5fc41436a317d1d3bb6bf3dae57ab86"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ad5fc41436a317d1d3bb6bf3dae57ab86">help_string</a> (void) const</td></tr>
-<tr class="memdesc:ad5fc41436a317d1d3bb6bf3dae57ab86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build and return a short help. <br /></td></tr>
-<tr class="separator:ad5fc41436a317d1d3bb6bf3dae57ab86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38667307f14ad7065ad9c666e90f2116"><td class="memItemLeft" align="right" valign="top"><a id="a38667307f14ad7065ad9c666e90f2116"></a>
+std::string const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a38667307f14ad7065ad9c666e90f2116">str_result</a> () const</td></tr>
+<tr class="memdesc:a38667307f14ad7065ad9c666e90f2116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string result of the current scripting call. <br /></td></tr>
+<tr class="separator:a38667307f14ad7065ad9c666e90f2116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d51f6c3375410f4ff76bc49deec0da"><td class="memItemLeft" align="right" valign="top"><a id="aa3d51f6c3375410f4ff76bc49deec0da"></a>
+std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#aa3d51f6c3375410f4ff76bc49deec0da">modify_str_result</a> ()</td></tr>
+<tr class="memdesc:aa3d51f6c3375410f4ff76bc49deec0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modify the string result of the current scripting call. <br /></td></tr>
+<tr class="separator:aa3d51f6c3375410f4ff76bc49deec0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a290b34eacd2166fd2225d82e9587dba9"><td class="memItemLeft" align="right" valign="top"><a id="a290b34eacd2166fd2225d82e9587dba9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a290b34eacd2166fd2225d82e9587dba9">set_result_str</a> (std::string const &amp;s)</td></tr>
+<tr class="memdesc:a290b34eacd2166fd2225d82e9587dba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the return value to the given string. <br /></td></tr>
+<tr class="separator:a290b34eacd2166fd2225d82e9587dba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0459d6e8c3ec8b28645d1bd46b7670cf"><td class="memItemLeft" align="right" valign="top"><a id="a0459d6e8c3ec8b28645d1bd46b7670cf"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a0459d6e8c3ec8b28645d1bd46b7670cf">clear_str_result</a> ()</td></tr>
+<tr class="memdesc:a0459d6e8c3ec8b28645d1bd46b7670cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the string result. <br /></td></tr>
+<tr class="separator:a0459d6e8c3ec8b28645d1bd46b7670cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a23f1d5cd8e3fa7015ba08c9b601da5"><td class="memItemLeft" align="right" valign="top"><a id="a1a23f1d5cd8e3fa7015ba08c9b601da5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a1a23f1d5cd8e3fa7015ba08c9b601da5">add_error_msg</a> (std::string const &amp;s)</td></tr>
+<tr class="memdesc:a1a23f1d5cd8e3fa7015ba08c9b601da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the given string to the error message of the script interface. <br /></td></tr>
+<tr class="separator:a1a23f1d5cd8e3fa7015ba08c9b601da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4e90da52ede5fd3211dd5bc433071e"><td class="memItemLeft" align="right" valign="top"><a id="ade4e90da52ede5fd3211dd5bc433071e"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ade4e90da52ede5fd3211dd5bc433071e">get_cmd_prefix</a> (<a class="el" href="classcolvarscript.html#aacc1532886360feefd66e515e433afd8">Object_type</a> t)</td></tr>
+<tr class="memdesc:ade4e90da52ede5fd3211dd5bc433071e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the prefix of the individual command for each object function. <br /></td></tr>
+<tr class="separator:ade4e90da52ede5fd3211dd5bc433071e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f09fb6b2e1baa12a69297d479976ae4"><td class="memTemplParams" colspan="2"><a id="a9f09fb6b2e1baa12a69297d479976ae4"></a>
+template&lt;Object_type T&gt; </td></tr>
+<tr class="memitem:a9f09fb6b2e1baa12a69297d479976ae4"><td class="memTemplItemLeft" align="right" valign="top">unsigned char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a9f09fb6b2e1baa12a69297d479976ae4">get_cmd_arg</a> (int iarg, int objc, unsigned char *const objv[])</td></tr>
+<tr class="memdesc:a9f09fb6b2e1baa12a69297d479976ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the i-th argument of the command (NULL if not given) <br /></td></tr>
+<tr class="separator:a9f09fb6b2e1baa12a69297d479976ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab251e3d860403095d75a6b37b9526b83"><td class="memItemLeft" align="right" valign="top"><a id="ab251e3d860403095d75a6b37b9526b83"></a>
+unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ab251e3d860403095d75a6b37b9526b83">get_module_cmd_arg</a> (int iarg, int objc, unsigned char *const objv[])</td></tr>
+<tr class="memdesc:ab251e3d860403095d75a6b37b9526b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiation of get_cmd_arg&lt;&gt; for module-level commands. <br /></td></tr>
+<tr class="separator:ab251e3d860403095d75a6b37b9526b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88f090954c6d6145214307569897064a"><td class="memItemLeft" align="right" valign="top"><a id="a88f090954c6d6145214307569897064a"></a>
+unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a88f090954c6d6145214307569897064a">get_colvar_cmd_arg</a> (int iarg, int objc, unsigned char *const objv[])</td></tr>
+<tr class="memdesc:a88f090954c6d6145214307569897064a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiation of get_cmd_arg&lt;&gt; for colvar-level commands. <br /></td></tr>
+<tr class="separator:a88f090954c6d6145214307569897064a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab953f19e962f7a2c72b322b738f25dd"><td class="memItemLeft" align="right" valign="top"><a id="aab953f19e962f7a2c72b322b738f25dd"></a>
+unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#aab953f19e962f7a2c72b322b738f25dd">get_bias_cmd_arg</a> (int iarg, int objc, unsigned char *const objv[])</td></tr>
+<tr class="memdesc:aab953f19e962f7a2c72b322b738f25dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiation of get_cmd_arg&lt;&gt; for bias-level commands. <br /></td></tr>
+<tr class="separator:aab953f19e962f7a2c72b322b738f25dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5c56d5964fe5f3ed487659d909d1ca8"><td class="memTemplParams" colspan="2"><a id="ad5c56d5964fe5f3ed487659d909d1ca8"></a>
+template&lt;Object_type T&gt; </td></tr>
+<tr class="memitem:ad5c56d5964fe5f3ed487659d909d1ca8"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ad5c56d5964fe5f3ed487659d909d1ca8">check_cmd_nargs</a> (char const *cmd, int objc, int n_args_min, int n_args_max)</td></tr>
+<tr class="memdesc:ad5c56d5964fe5f3ed487659d909d1ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the argument count of the command. <br /></td></tr>
+<tr class="separator:ad5c56d5964fe5f3ed487659d909d1ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7239552ea18ba1e17a3683607a255bbb"><td class="memItemLeft" align="right" valign="top"><a id="a7239552ea18ba1e17a3683607a255bbb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a7239552ea18ba1e17a3683607a255bbb">check_module_cmd_nargs</a> (char const *cmd, int objc, int n_args_min, int n_args_max)</td></tr>
+<tr class="memdesc:a7239552ea18ba1e17a3683607a255bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiation of check_cmd_nargs&lt;&gt; for module-level commands. <br /></td></tr>
+<tr class="separator:a7239552ea18ba1e17a3683607a255bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee1cc991907794e82bca762464c71d6"><td class="memItemLeft" align="right" valign="top"><a id="a7ee1cc991907794e82bca762464c71d6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a7ee1cc991907794e82bca762464c71d6">check_colvar_cmd_nargs</a> (char const *cmd, int objc, int n_args_min, int n_args_max)</td></tr>
+<tr class="memdesc:a7ee1cc991907794e82bca762464c71d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiation of check_cmd_nargs&lt;&gt; for colvar-level commands. <br /></td></tr>
+<tr class="separator:a7ee1cc991907794e82bca762464c71d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94995bcdc77211beaa35cc018a015e27"><td class="memItemLeft" align="right" valign="top"><a id="a94995bcdc77211beaa35cc018a015e27"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a94995bcdc77211beaa35cc018a015e27">check_bias_cmd_nargs</a> (char const *cmd, int objc, int n_args_min, int n_args_max)</td></tr>
+<tr class="memdesc:a94995bcdc77211beaa35cc018a015e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiation of get_cmd_arg&lt;&gt; for bias-level commands. <br /></td></tr>
+<tr class="separator:a94995bcdc77211beaa35cc018a015e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fcc26ea9e7571fa0e19aefe7372cf44"><td class="memTemplParams" colspan="2"><a id="a7fcc26ea9e7571fa0e19aefe7372cf44"></a>
+template&lt;colvarscript::Object_type T&gt; </td></tr>
+<tr class="memitem:a7fcc26ea9e7571fa0e19aefe7372cf44"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a7fcc26ea9e7571fa0e19aefe7372cf44">cmd_arg_shift</a> ()</td></tr>
+<tr class="memdesc:a7fcc26ea9e7571fa0e19aefe7372cf44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of positional arguments to shift for each object type. <br /></td></tr>
+<tr class="separator:a7fcc26ea9e7571fa0e19aefe7372cf44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad7c48d0e8d9e4758422047d36f9a6d8"><td class="memItemLeft" align="right" valign="top"><a id="aad7c48d0e8d9e4758422047d36f9a6d8"></a>
 char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#aad7c48d0e8d9e4758422047d36f9a6d8">obj_to_str</a> (unsigned char *const obj)</td></tr>
 <tr class="memdesc:aad7c48d0e8d9e4758422047d36f9a6d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use scripting language to get the string representation of an object. <br /></td></tr>
 <tr class="separator:aad7c48d0e8d9e4758422047d36f9a6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75c1d2b42a6eccc49fd787465b79d0cc"><td class="memItemLeft" align="right" valign="top"><a id="a75c1d2b42a6eccc49fd787465b79d0cc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a75c1d2b42a6eccc49fd787465b79d0cc">exec_command</a> (command c, void *pobj, int objc, unsigned char *const *objv)</td></tr>
-<tr class="memdesc:a75c1d2b42a6eccc49fd787465b79d0cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a script command. <br /></td></tr>
-<tr class="separator:a75c1d2b42a6eccc49fd787465b79d0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1559cd1d74e968172ff4c2024239ce03"><td class="memItemLeft" align="right" valign="top"><a id="a1559cd1d74e968172ff4c2024239ce03"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a1559cd1d74e968172ff4c2024239ce03">command_help</a> (colvarscript::command c) const</td></tr>
-<tr class="memdesc:a1559cd1d74e968172ff4c2024239ce03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get help for a command (TODO reformat for each language?) <br /></td></tr>
-<tr class="separator:a1559cd1d74e968172ff4c2024239ce03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b5547857e383763a4dcdb6db9b5aa35"><td class="memItemLeft" align="right" valign="top"><a id="a8b5547857e383763a4dcdb6db9b5aa35"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a8b5547857e383763a4dcdb6db9b5aa35">clear_results</a> ()</td></tr>
-<tr class="memdesc:a8b5547857e383763a4dcdb6db9b5aa35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all object results. <br /></td></tr>
-<tr class="separator:a8b5547857e383763a4dcdb6db9b5aa35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafd61d51a16da1e96669e157fe18f5d2"><td class="memItemLeft" align="right" valign="top"><a id="aafd61d51a16da1e96669e157fe18f5d2"></a>
+char const  **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#aafd61d51a16da1e96669e157fe18f5d2">get_command_names</a> () const</td></tr>
+<tr class="memdesc:aafd61d51a16da1e96669e157fe18f5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get names of all commands. <br /></td></tr>
+<tr class="separator:aafd61d51a16da1e96669e157fe18f5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06f552b6ea25a96fa9842069190b12a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#aa06f552b6ea25a96fa9842069190b12a">get_command_help</a> (char const *cmd)</td></tr>
+<tr class="separator:aa06f552b6ea25a96fa9842069190b12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c55e508008682322d71de4276b1383"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ad4c55e508008682322d71de4276b1383">get_cmdline_help_summary</a> (<a class="el" href="classcolvarscript.html#aacc1532886360feefd66e515e433afd8">Object_type</a> t)</td></tr>
+<tr class="separator:ad4c55e508008682322d71de4276b1383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab58788d539bcaeb514f04a924703699c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ab58788d539bcaeb514f04a924703699c">get_command_cmdline_syntax</a> (<a class="el" href="classcolvarscript.html#aacc1532886360feefd66e515e433afd8">Object_type</a> t, <a class="el" href="classcolvarscript.html#a4762b77de87959c61288f913f9b974a6">command</a> c)</td></tr>
+<tr class="separator:ab58788d539bcaeb514f04a924703699c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea2a78733b0bd57021818715c64c69cc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#aea2a78733b0bd57021818715c64c69cc">get_command_cmdline_help</a> (<a class="el" href="classcolvarscript.html#aacc1532886360feefd66e515e433afd8">Object_type</a> t, std::string const &amp;cmd)</td></tr>
+<tr class="separator:aea2a78733b0bd57021818715c64c69cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57453e151dd2b65517200169fa7b584f"><td class="memItemLeft" align="right" valign="top"><a id="a57453e151dd2b65517200169fa7b584f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a57453e151dd2b65517200169fa7b584f">unsupported_op</a> ()</td></tr>
+<tr class="memdesc:a57453e151dd2b65517200169fa7b584f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set error code for unsupported script operation. <br /></td></tr>
+<tr class="separator:a57453e151dd2b65517200169fa7b584f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0f16658766502ed520da153575bd5a"><td class="memItemLeft" align="right" valign="top"><a id="afc0f16658766502ed520da153575bd5a"></a>
+<a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#afc0f16658766502ed520da153575bd5a">module</a> ()</td></tr>
+<tr class="memdesc:afc0f16658766502ed520da153575bd5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the Colvars main object. <br /></td></tr>
+<tr class="separator:afc0f16658766502ed520da153575bd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3032ed920674e9f516009599f206d1"><td class="memItemLeft" align="right" valign="top"><a id="a0a3032ed920674e9f516009599f206d1"></a>
+<a class="el" href="classcolvarproxy.html">colvarproxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a0a3032ed920674e9f516009599f206d1">proxy</a> ()</td></tr>
+<tr class="memdesc:a0a3032ed920674e9f516009599f206d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the colvarproxy object (interface with host engine) <br /></td></tr>
+<tr class="separator:a0a3032ed920674e9f516009599f206d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1972d88606c488092d944c43da2a92c1"><td class="memItemLeft" align="right" valign="top"><a id="a1972d88606c488092d944c43da2a92c1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a1972d88606c488092d944c43da2a92c1">proc_features</a> (<a class="el" href="classcolvardeps.html">colvardeps</a> *obj, int argc, unsigned char *const argv[])</td></tr>
+<tr class="memdesc:a1972d88606c488092d944c43da2a92c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run subcommands on base colvardeps object (colvar, bias, ...) <br /></td></tr>
+<tr class="separator:a1972d88606c488092d944c43da2a92c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -192,47 +222,59 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a187a3e5af49057abeb2c903116af8c67"><td class="memItemLeft" align="right" valign="top"><a id="a187a3e5af49057abeb2c903116af8c67"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a187a3e5af49057abeb2c903116af8c67">proc_colvar</a> (<a class="el" href="classcolvar.html">colvar</a> *cv, int argc, unsigned char *const argv[])</td></tr>
-<tr class="memdesc:a187a3e5af49057abeb2c903116af8c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run subcommands on colvar. <br /></td></tr>
-<tr class="separator:a187a3e5af49057abeb2c903116af8c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec4cd3bf345c0eeaa25a7cee5f3d029"><td class="memItemLeft" align="right" valign="top"><a id="a5ec4cd3bf345c0eeaa25a7cee5f3d029"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a5ec4cd3bf345c0eeaa25a7cee5f3d029">proc_bias</a> (<a class="el" href="classcolvarbias.html">colvarbias</a> *b, int argc, unsigned char *const argv[])</td></tr>
-<tr class="memdesc:a5ec4cd3bf345c0eeaa25a7cee5f3d029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run subcommands on bias. <br /></td></tr>
-<tr class="separator:a5ec4cd3bf345c0eeaa25a7cee5f3d029"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1972d88606c488092d944c43da2a92c1"><td class="memItemLeft" align="right" valign="top"><a id="a1972d88606c488092d944c43da2a92c1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a1972d88606c488092d944c43da2a92c1">proc_features</a> (<a class="el" href="classcolvardeps.html">colvardeps</a> *obj, int argc, unsigned char *const argv[])</td></tr>
-<tr class="memdesc:a1972d88606c488092d944c43da2a92c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run subcommands on base colvardeps object (colvar, bias, ...) <br /></td></tr>
-<tr class="separator:a1972d88606c488092d944c43da2a92c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab47f664e1ba21c4da025f452205a627e"><td class="memItemLeft" align="right" valign="top"><a id="ab47f664e1ba21c4da025f452205a627e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ab47f664e1ba21c4da025f452205a627e">init_commands</a> ()</td></tr>
+<tr class="memdesc:ab47f664e1ba21c4da025f452205a627e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up all script API functions. <br /></td></tr>
+<tr class="separator:ab47f664e1ba21c4da025f452205a627e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c099335b14dd243ad116ca4db7b168e"><td class="memItemLeft" align="right" valign="top"><a id="a7c099335b14dd243ad116ca4db7b168e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a7c099335b14dd243ad116ca4db7b168e">init_command</a> (<a class="el" href="classcolvarscript.html#a4762b77de87959c61288f913f9b974a6">colvarscript::command</a> const &amp;comm, char const *name, char const *help, int n_args_min, int n_args_max, char const *arghelp, int(*fn)(void *, int, unsigned char *const *))</td></tr>
+<tr class="memdesc:a7c099335b14dd243ad116ca4db7b168e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up a single script API function. <br /></td></tr>
+<tr class="separator:a7c099335b14dd243ad116ca4db7b168e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c1d2b42a6eccc49fd787465b79d0cc"><td class="memItemLeft" align="right" valign="top"><a id="a75c1d2b42a6eccc49fd787465b79d0cc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a75c1d2b42a6eccc49fd787465b79d0cc">exec_command</a> (<a class="el" href="classcolvarscript.html#a4762b77de87959c61288f913f9b974a6">command</a> c, void *pobj, int objc, unsigned char *const *objv)</td></tr>
+<tr class="memdesc:a75c1d2b42a6eccc49fd787465b79d0cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a script command. <br /></td></tr>
+<tr class="separator:a75c1d2b42a6eccc49fd787465b79d0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a10686e2fa56bcc9e9f3d00d523485f15"><td class="memItemLeft" align="right" valign="top"><a id="a10686e2fa56bcc9e9f3d00d523485f15"></a>
-<a class="el" href="classcolvarproxy.html">colvarproxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy</b></td></tr>
-<tr class="separator:a10686e2fa56bcc9e9f3d00d523485f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4af90f47d69a394d2655988b5fe92c"><td class="memItemLeft" align="right" valign="top"><a id="ade4af90f47d69a394d2655988b5fe92c"></a>
+<a class="el" href="classcolvarproxy.html">colvarproxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy_</b></td></tr>
+<tr class="separator:ade4af90f47d69a394d2655988b5fe92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2119c1efe94e13f5729b15b2595a50a"><td class="memItemLeft" align="right" valign="top"><a id="aa2119c1efe94e13f5729b15b2595a50a"></a>
 <a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>colvars</b></td></tr>
 <tr class="separator:aa2119c1efe94e13f5729b15b2595a50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af597d2d3ff8f50426ff5a5616f2f773e"><td class="memItemLeft" align="right" valign="top"><a id="af597d2d3ff8f50426ff5a5616f2f773e"></a>
-std::map&lt; std::string, command &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#af597d2d3ff8f50426ff5a5616f2f773e">comm_str_map</a></td></tr>
-<tr class="memdesc:af597d2d3ff8f50426ff5a5616f2f773e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal identifiers of command strings. <br /></td></tr>
-<tr class="separator:af597d2d3ff8f50426ff5a5616f2f773e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad89d125e523a25f488802d904dbc1cb0"><td class="memItemLeft" align="right" valign="top"><a id="ad89d125e523a25f488802d904dbc1cb0"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ad89d125e523a25f488802d904dbc1cb0">comm_help</a></td></tr>
-<tr class="memdesc:ad89d125e523a25f488802d904dbc1cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Help strings for each command. <br /></td></tr>
-<tr class="separator:ad89d125e523a25f488802d904dbc1cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ccbdbbbfab46791f6f7d1052de6eb8e"><td class="memItemLeft" align="right" valign="top"><a id="a6ccbdbbbfab46791f6f7d1052de6eb8e"></a>
-std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a6ccbdbbbfab46791f6f7d1052de6eb8e">comm_n_args</a></td></tr>
-<tr class="memdesc:a6ccbdbbbfab46791f6f7d1052de6eb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of arguments for each command. <br /></td></tr>
-<tr class="separator:a6ccbdbbbfab46791f6f7d1052de6eb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af96b2f2dc91dc355c0c480f3c3065f2e"><td class="memItemLeft" align="right" valign="top"><a id="af96b2f2dc91dc355c0c480f3c3065f2e"></a>
-std::vector&lt; std::vector&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#af96b2f2dc91dc355c0c480f3c3065f2e">comm_args</a></td></tr>
-<tr class="memdesc:af96b2f2dc91dc355c0c480f3c3065f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arguments for each command. <br /></td></tr>
-<tr class="separator:af96b2f2dc91dc355c0c480f3c3065f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3366236dd87676bcff93998c19892d42"><td class="memItemLeft" align="right" valign="top"><a id="a3366236dd87676bcff93998c19892d42"></a>
-std::vector&lt; int(*)(void *, int, unsigned char *const *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a3366236dd87676bcff93998c19892d42">comm_fns</a></td></tr>
-<tr class="memdesc:a3366236dd87676bcff93998c19892d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementations of each command. <br /></td></tr>
-<tr class="separator:a3366236dd87676bcff93998c19892d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a615189e4579199c00cea0acf92dc19ea"><td class="memItemLeft" align="right" valign="top"><a id="a615189e4579199c00cea0acf92dc19ea"></a>
+std::map&lt; std::string, <a class="el" href="classcolvarscript.html#a4762b77de87959c61288f913f9b974a6">command</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a615189e4579199c00cea0acf92dc19ea">cmd_str_map</a></td></tr>
+<tr class="memdesc:a615189e4579199c00cea0acf92dc19ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal identifiers of command strings. <br /></td></tr>
+<tr class="separator:a615189e4579199c00cea0acf92dc19ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa264028dbe67edbb7484323914785eff"><td class="memItemLeft" align="right" valign="top"><a id="aa264028dbe67edbb7484323914785eff"></a>
+char const  **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#aa264028dbe67edbb7484323914785eff">cmd_names</a></td></tr>
+<tr class="memdesc:aa264028dbe67edbb7484323914785eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse of cmd_str_map (to be exported outside this class) <br /></td></tr>
+<tr class="separator:aa264028dbe67edbb7484323914785eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6890642ff32461193f3ee49da47ab7"><td class="memItemLeft" align="right" valign="top"><a id="add6890642ff32461193f3ee49da47ab7"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#add6890642ff32461193f3ee49da47ab7">cmd_help</a></td></tr>
+<tr class="memdesc:add6890642ff32461193f3ee49da47ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Help strings for each command. <br /></td></tr>
+<tr class="separator:add6890642ff32461193f3ee49da47ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba5f1addbc03cad24d3fc884ea131c5"><td class="memItemLeft" align="right" valign="top"><a id="a9ba5f1addbc03cad24d3fc884ea131c5"></a>
+std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a9ba5f1addbc03cad24d3fc884ea131c5">cmd_n_args_min</a></td></tr>
+<tr class="memdesc:a9ba5f1addbc03cad24d3fc884ea131c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum number of arguments for each command. <br /></td></tr>
+<tr class="separator:a9ba5f1addbc03cad24d3fc884ea131c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83d379c4d30a8717272b491c00aa0f7b"><td class="memItemLeft" align="right" valign="top"><a id="a83d379c4d30a8717272b491c00aa0f7b"></a>
+std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a83d379c4d30a8717272b491c00aa0f7b">cmd_n_args_max</a></td></tr>
+<tr class="memdesc:a83d379c4d30a8717272b491c00aa0f7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of arguments for each command. <br /></td></tr>
+<tr class="separator:a83d379c4d30a8717272b491c00aa0f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ab8544790b1614bc7732e0e10fcf9a"><td class="memItemLeft" align="right" valign="top"><a id="ab6ab8544790b1614bc7732e0e10fcf9a"></a>
+std::vector&lt; std::vector&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ab6ab8544790b1614bc7732e0e10fcf9a">cmd_arghelp</a></td></tr>
+<tr class="memdesc:ab6ab8544790b1614bc7732e0e10fcf9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Help strings for each command argument. <br /></td></tr>
+<tr class="separator:ab6ab8544790b1614bc7732e0e10fcf9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcdd153daa41a8b046af00075a27a269"><td class="memItemLeft" align="right" valign="top"><a id="afcdd153daa41a8b046af00075a27a269"></a>
+std::vector&lt; int(*)(void *, int, unsigned char *const *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#afcdd153daa41a8b046af00075a27a269">cmd_fns</a></td></tr>
+<tr class="memdesc:afcdd153daa41a8b046af00075a27a269"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementations of each command. <br /></td></tr>
+<tr class="separator:afcdd153daa41a8b046af00075a27a269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce7e15f60dc65173d2231dd05285591"><td class="memItemLeft" align="right" valign="top"><a id="afce7e15f60dc65173d2231dd05285591"></a>
+int(*)(void *, int, unsigned char *const *)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#afce7e15f60dc65173d2231dd05285591">get_cmd_fn</a> (std::string const &amp;cmd_key)</td></tr>
+<tr class="memdesc:afce7e15f60dc65173d2231dd05285591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the implementation of the given command. <br /></td></tr>
+<tr class="separator:afce7e15f60dc65173d2231dd05285591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -241,23 +283,47 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>colvarproxy</b></td>
 <tr class="separator:ad68d35098550c238468bef3392491a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a281c226da014c976d0d628c7d0b9854a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a281c226da014c976d0d628c7d0b9854a">&#9670;&nbsp;</a></span>run()</h2>
+<a id="ad4c55e508008682322d71de4276b1383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4c55e508008682322d71de4276b1383">&#9670;&nbsp;</a></span>get_cmdline_help_summary()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int colvarscript::run </td>
+          <td class="memname">std::string colvarscript::get_cmdline_help_summary </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>objc</em>, </td>
+          <td class="paramtype"><a class="el" href="classcolvarscript.html#aacc1532886360feefd66e515e433afd8">colvarscript::Object_type</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get summary of command line syntax for all commands of a given context </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>One of use_module, use_colvar or use_bias </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea2a78733b0bd57021818715c64c69cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea2a78733b0bd57021818715c64c69cc">&#9670;&nbsp;</a></span>get_command_cmdline_help()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string colvarscript::get_command_cmdline_help </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcolvarscript.html#aacc1532886360feefd66e515e433afd8">colvarscript::Object_type</a>&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned char *const&#160;</td>
-          <td class="paramname"><em>objv</em>[]&#160;</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -266,15 +332,72 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>colvarproxy</b></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the command line syntax following by the help string </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>One of use_module, use_colvar or use_bias </td></tr>
+    <tr><td class="paramname">cmd</td><td>Name of the subcommand (e.g. "units") </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Run script command with given positional arguments (objects) </p>
-<p>Run method based on given arguments. </p>
-<p>Delete every child object</p>
-<p>Parse config from file</p>
-<p>Parse config from string</p>
-<p>Load an input state file</p>
-<p>Save to an output state file</p>
-<p>Print the values that would go on colvars.traj </p>
+</div>
+</div>
+<a id="ab58788d539bcaeb514f04a924703699c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab58788d539bcaeb514f04a924703699c">&#9670;&nbsp;</a></span>get_command_cmdline_syntax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string colvarscript::get_command_cmdline_syntax </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcolvarscript.html#aacc1532886360feefd66e515e433afd8">colvarscript::Object_type</a>&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarscript.html#a4762b77de87959c61288f913f9b974a6">colvarscript::command</a>&#160;</td>
+          <td class="paramname"><em>cmd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a description of how the command should be used in a command line </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>One of use_module, use_colvar or use_bias </td></tr>
+    <tr><td class="paramname">c</td><td>Value of the <a class="el" href="classcolvarscript.html#a4762b77de87959c61288f913f9b974a6">command</a> enum </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa06f552b6ea25a96fa9842069190b12a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa06f552b6ea25a96fa9842069190b12a">&#9670;&nbsp;</a></span>get_command_help()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string colvarscript::get_command_help </td>
+          <td>(</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get help string for a command (does not specify how it is launched) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>Name of the command's function (e.g. "cv_units") </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -316,7 +439,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>colvarproxy</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 31 2020 11:25:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 24 2020 14:04:56 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

@@ -74,7 +74,7 @@ $(function() {
 <p>Methods for using Tcl within Colvars.  
  <a href="classcolvarproxy__tcl.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="colvarproxy_8h_source.html">colvarproxy.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="colvarproxy__tcl_8h_source.html">colvarproxy_tcl.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for colvarproxy_tcl:</div>
 <div class="dyncontent">
@@ -103,20 +103,26 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a26c3b6ba1ad842aaa872a0788bfdfc49">tcl_available</a> ()</td></tr>
 <tr class="memdesc:a26c3b6ba1ad842aaa872a0788bfdfc49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is Tcl available? (trigger initialization if needed) <br /></td></tr>
 <tr class="separator:a26c3b6ba1ad842aaa872a0788bfdfc49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3f64c6270f41561ba152f95892e6b8b"><td class="memItemLeft" align="right" valign="top"><a id="af3f64c6270f41561ba152f95892e6b8b"></a>
-char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#af3f64c6270f41561ba152f95892e6b8b">tcl_obj_to_str</a> (unsigned char *obj)</td></tr>
-<tr class="memdesc:af3f64c6270f41561ba152f95892e6b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tcl implementation of script_obj_to_str() <br /></td></tr>
-<tr class="separator:af3f64c6270f41561ba152f95892e6b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684579524c36cbcbd864209c23c8b8ea"><td class="memItemLeft" align="right" valign="top"><a id="a684579524c36cbcbd864209c23c8b8ea"></a>
+char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a684579524c36cbcbd864209c23c8b8ea">tcl_get_str</a> (void *obj)</td></tr>
+<tr class="memdesc:a684579524c36cbcbd864209c23c8b8ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tcl implementation of script_obj_to_str() <br /></td></tr>
+<tr class="separator:a684579524c36cbcbd864209c23c8b8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2cdac45d887d147c037ce4c682c3139"><td class="memItemLeft" align="right" valign="top"><a id="ab2cdac45d887d147c037ce4c682c3139"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#ab2cdac45d887d147c037ce4c682c3139">tcl_run_force_callback</a> ()</td></tr>
-<tr class="memdesc:ab2cdac45d887d147c037ce4c682c3139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a user-defined colvar forces script. <br /></td></tr>
+<tr class="memdesc:ab2cdac45d887d147c037ce4c682c3139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tcl implementation of run_force_callback() <br /></td></tr>
 <tr class="separator:ab2cdac45d887d147c037ce4c682c3139"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a113fb813db58eeeb6e832d101a879"><td class="memItemLeft" align="right" valign="top"><a id="a41a113fb813db58eeeb6e832d101a879"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>tcl_run_colvar_callback</b> (std::string const &amp;name, std::vector&lt; const <a class="el" href="classcolvarvalue.html">colvarvalue</a> * &gt; const &amp;cvcs, <a class="el" href="classcolvarvalue.html">colvarvalue</a> &amp;value)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a41a113fb813db58eeeb6e832d101a879">tcl_run_colvar_callback</a> (std::string const &amp;name, std::vector&lt; const <a class="el" href="classcolvarvalue.html">colvarvalue</a> * &gt; const &amp;cvcs, <a class="el" href="classcolvarvalue.html">colvarvalue</a> &amp;value)</td></tr>
+<tr class="memdesc:a41a113fb813db58eeeb6e832d101a879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tcl implementation of run_colvar_callback() <br /></td></tr>
 <tr class="separator:a41a113fb813db58eeeb6e832d101a879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d2345d3b513ef463301ad19feac0519"><td class="memItemLeft" align="right" valign="top"><a id="a0d2345d3b513ef463301ad19feac0519"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>tcl_run_colvar_gradient_callback</b> (std::string const &amp;name, std::vector&lt; const <a class="el" href="classcolvarvalue.html">colvarvalue</a> * &gt; const &amp;cvcs, std::vector&lt; <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt; &amp;gradient)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a0d2345d3b513ef463301ad19feac0519">tcl_run_colvar_gradient_callback</a> (std::string const &amp;name, std::vector&lt; const <a class="el" href="classcolvarvalue.html">colvarvalue</a> * &gt; const &amp;cvcs, std::vector&lt; <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt; &amp;gradient)</td></tr>
+<tr class="memdesc:a0d2345d3b513ef463301ad19feac0519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tcl implementation of run_colvar_gradient_callback() <br /></td></tr>
 <tr class="separator:a0d2345d3b513ef463301ad19feac0519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0baa0fb599c1fb81e2bd96f91a2daab8"><td class="memItemLeft" align="right" valign="top"><a id="a0baa0fb599c1fb81e2bd96f91a2daab8"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a0baa0fb599c1fb81e2bd96f91a2daab8">get_tcl_interp</a> ()</td></tr>
+<tr class="memdesc:a0baa0fb599c1fb81e2bd96f91a2daab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the Tcl interpreter. <br /></td></tr>
+<tr class="separator:a0baa0fb599c1fb81e2bd96f91a2daab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -135,13 +141,13 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Methods for using Tcl within Colvars. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="colvarproxy_8h_source.html">colvarproxy.h</a></li>
-<li>colvarproxy.cpp</li>
+<li><a class="el" href="colvarproxy__tcl_8h_source.html">colvarproxy_tcl.h</a></li>
+<li>colvarproxy_tcl.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 31 2020 11:25:18 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 24 2020 14:04:56 for Collective Variables Module - Developer Documentation by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

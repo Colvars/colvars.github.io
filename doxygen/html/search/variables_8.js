@@ -5,6 +5,7 @@ var searchData=
   ['index_5fgroup_5fnames',['index_group_names',['../classcolvarmodule.html#a2db24c08bb98b1fd5beba926a323bafc',1,'colvarmodule']]],
   ['index_5fgroups',['index_groups',['../classcolvarmodule.html#a616a6f4ef799ac663bd50beaa9d07cca',1,'colvarmodule']]],
   ['initial_5fcenters',['initial_centers',['../classcolvarbias__restraint__centers__moving.html#a0fe9078b5755279dc2dddcf2cd6b7f1f',1,'colvarbias_restraint_centers_moving']]],
+  ['input_5fbuffer_5f',['input_buffer_',['../classcolvarproxy__io.html#aa828d8f846788500cd1ac6af15d23c91',1,'colvarproxy_io']]],
   ['input_5fprefix',['input_prefix',['../classcolvarbias__abf.html#a42b9812a14ecf708d350f34f182498f1',1,'colvarbias_abf']]],
   ['input_5fprefix_5fstr',['input_prefix_str',['../classcolvarproxy__io.html#a674409e6fc8eda9a663ecac160c9582c',1,'colvarproxy_io']]],
   ['integrate_5finitial_5fiterations',['integrate_initial_iterations',['../classcolvarbias__abf.html#a65440a5279b30cd47ba8f49b6254244a',1,'colvarbias_abf']]],

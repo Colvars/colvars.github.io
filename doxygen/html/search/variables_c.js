@@ -2,6 +2,7 @@ var searchData=
 [
   ['main',['main',['../classcolvar_1_1distance__z.html#a28518aa5c21b928dbde766a9da6812dd',1,'colvar::distance_z']]],
   ['mass',['mass',['../classcolvarmodule_1_1atom.html#ac62f1528c0cc97068d0e6218687c0bcd',1,'colvarmodule::atom']]],
+  ['matching_5fstate',['matching_state',['../classcolvarbias.html#a11e947b5d4c578a6f019ec8c14b99282',1,'colvarbias']]],
   ['max_5fcoupling_5frange',['max_coupling_range',['../classcolvarbias__alb.html#ac6965e52376cd8271c7caafe80b9616e',1,'colvarbias_alb']]],
   ['max_5fforce',['max_force',['../classcolvarbias__abf.html#a22609cc69894961a4eeecd66a08c9efd',1,'colvarbias_abf']]],
   ['means',['means',['../classcolvarbias__alb.html#a0dd7f01418c21d32eca3fdfa905e9791',1,'colvarbias_alb']]],

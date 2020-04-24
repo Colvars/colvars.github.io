@@ -2,6 +2,7 @@ var searchData=
 [
   ['n_5factive_5fcvcs',['n_active_cvcs',['../classcolvar.html#a5a3250f9830f6bbf7a84cec06c30e85d',1,'colvar']]],
   ['n_5fmatrix',['n_matrix',['../classUIestimator_1_1n__matrix.html',1,'UIestimator']]],
+  ['n_5fpermutations',['n_permutations',['../classcolvar_1_1rmsd.html#a85be6f6db4ecd62479c19086aa88fa0c',1,'colvar::rmsd']]],
   ['n_5fvector',['n_vector',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
   ['n_5fvector_3c_20double_20_3e',['n_vector&lt; double &gt;',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
   ['n_5fvector_3c_20int_20_3e',['n_vector&lt; int &gt;',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
@@ -27,7 +28,7 @@ var searchData=
   ['num_5fcvcs',['num_cvcs',['../classcolvar.html#a07f6d9b3b01cc8442922eed499f0af01',1,'colvar']]],
   ['num_5fdf',['num_df',['../classcolvarvalue.html#aeb5b6fc408dd1a9c2900ebdc6074e599',1,'colvarvalue']]],
   ['num_5fdimensions',['num_dimensions',['../classcolvar.html#a181047ec917f47f372be2a18db2711c1',1,'colvar::num_dimensions()'],['../classcolvarvalue.html#a9c910f3c66324ad1f3bbff8149c8d7da',1,'colvarvalue::num_dimensions()']]],
-  ['num_5freplicas',['num_replicas',['../classcolvarproxy__replicas.html#ac26bb75e2914bde2223d64a3ad7373c2',1,'colvarproxy_replicas::num_replicas()'],['../classcolvarproxy__lammps.html#a9e2fa423d58c4728b62baee14320eca6',1,'colvarproxy_lammps::num_replicas()']]],
+  ['num_5freplicas',['num_replicas',['../classcolvarproxy__replicas.html#ac26bb75e2914bde2223d64a3ad7373c2',1,'colvarproxy_replicas::num_replicas()'],['../classcolvarproxy__namd.html#acf9f1cdfb4fb941997e3461815d27bb6',1,'colvarproxy_namd::num_replicas()'],['../classcolvarproxy__lammps.html#a9e2fa423d58c4728b62baee14320eca6',1,'colvarproxy_lammps::num_replicas()']]],
   ['num_5fvariables',['num_variables',['../classcolvarbias.html#a34c8c1c27c7bad8083e373eb89d5c1c4',1,'colvarbias::num_variables()'],['../classcolvar__grid.html#a81eac89843540fdf1136e5f9bf9224ea',1,'colvar_grid::num_variables()'],['../classcolvarmodule.html#abe6388fb31654c1a3ad663f375b62453',1,'colvarmodule::num_variables()']]],
   ['num_5fvariables_5ffeature',['num_variables_feature',['../classcolvarmodule.html#ae7b5451d681ad21766087b0a929b255e',1,'colvarmodule']]],
   ['number_5fof_5fpoints',['number_of_points',['../classcolvar__grid.html#a300a5781e3b323d2fe48c4df463c265e',1,'colvar_grid']]],

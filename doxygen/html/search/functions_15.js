@@ -2,6 +2,7 @@ var searchData=
 [
   ['undef_5fop',['undef_op',['../classcolvarvalue.html#acfaf70ffbc8c7fff129208928b7f8079',1,'colvarvalue']]],
   ['unregister_5fnamed_5fatom_5fgroup',['unregister_named_atom_group',['../classcolvarmodule.html#af09e174650ea1e7a824385ac9bc5f8fe',1,'colvarmodule']]],
+  ['unsupported_5fop',['unsupported_op',['../classcolvarscript.html#a57453e151dd2b65517200169fa7b584f',1,'colvarscript']]],
   ['update',['update',['../classcolvarbias.html#af09b6980caa98d0a2c3e3c14f7f1a763',1,'colvarbias::update()'],['../classcolvarbias__ti.html#a5ca99eeb18a287442f349951ac95403c',1,'colvarbias_ti::update()'],['../classcolvarbias__abf.html#ac9e7320af0829207530dfe24c1490d41',1,'colvarbias_abf::update()'],['../classcolvarbias__alb.html#a557ae8b7f2b90c20784ffb915f9f8652',1,'colvarbias_alb::update()'],['../classcolvarbias__histogram.html#a23d83572981df634ef1d8f2660713c34',1,'colvarbias_histogram::update()'],['../classcolvarbias__meta.html#a123bb2eca444be312ce66757b3a21e1b',1,'colvarbias_meta::update()'],['../classcolvarbias__restraint.html#a770d8d2aa235a6bba2f0ef12db47eb49',1,'colvarbias_restraint::update()'],['../classcolvarbias__restraint__histogram.html#a845cdacadf31c571da8d68641846f31a',1,'colvarbias_restraint_histogram::update()']]],
   ['update_5facc_5fwork',['update_acc_work',['../classcolvarbias__restraint__centers__moving.html#a88a09e538e10fd6375bfd9449fb32bbf',1,'colvarbias_restraint_centers_moving::update_acc_work()'],['../classcolvarbias__restraint__k__moving.html#a945db7f4cc11a9c54e26595f31c79225',1,'colvarbias_restraint_k_moving::update_acc_work()']]],
   ['update_5factive_5fcvc_5fsquare_5fnorm',['update_active_cvc_square_norm',['../classcolvar.html#a03a552bdc729990fc7d5a28dc9958575',1,'colvar']]],
@@ -14,7 +15,7 @@ var searchData=
   ['update_5fdiv_5flocal',['update_div_local',['../classintegrate__potential.html#a2d96f52f2503f183eb8b9ac2c65a8123',1,'integrate_potential']]],
   ['update_5fdiv_5fneighbors',['update_div_neighbors',['../classintegrate__potential.html#a7483ce77d0fd7f041b1d5ec79479b1cb',1,'integrate_potential']]],
   ['update_5fforces_5fenergy',['update_forces_energy',['../classcolvar.html#ae07d24ed45bdae0276bbdbe8a4b82c1d',1,'colvar']]],
-  ['update_5finput',['update_input',['../classcolvarproxy.html#a00d8ea11d8f36f0891af3ae75c00c36d',1,'colvarproxy::update_input()'],['../classcolvarproxy__vmd.html#afcacde3711de761ce9e07b8e1c8c5f66',1,'colvarproxy_vmd::update_input()']]],
+  ['update_5finput',['update_input',['../classcolvarproxy.html#a00d8ea11d8f36f0891af3ae75c00c36d',1,'colvarproxy::update_input()'],['../classcolvarproxy__vmd.html#a9634a940a930db5c795364b9056e08a7',1,'colvarproxy_vmd::update_input()']]],
   ['update_5fmass',['update_mass',['../classcolvarmodule_1_1atom.html#afe5193ee5de40315abb7e97d7032d23a',1,'colvarmodule::atom']]],
   ['update_5foutput',['update_output',['../classcolvarproxy.html#a11b92f0b22498a20ca7cbfbc0d5e0ad4',1,'colvarproxy']]],
   ['update_5fpbc_5flattice',['update_pbc_lattice',['../classcolvarproxy__system.html#a3c66f44f9884db5aecce398652cb4fe3',1,'colvarproxy_system']]],

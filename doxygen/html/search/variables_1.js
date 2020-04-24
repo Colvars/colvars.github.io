@@ -26,6 +26,7 @@ var searchData=
   ['b_5fui_5festimator',['b_UI_estimator',['../classcolvarbias__abf.html#abee66a669b67f0a2e17f8d4233611a76',1,'colvarbias_abf']]],
   ['b_5fuser_5fdefined_5ffit',['b_user_defined_fit',['../classcolvarmodule_1_1atom__group.html#a7d985d9fb4a666dde3011681b190cccc',1,'colvarmodule::atom_group']]],
   ['b_5fwrite_5fhistogram',['b_write_histogram',['../classcolvarbias__restraint__histogram.html#a96a52b1e26d7b88d5e7e865f67d806f0',1,'colvarbias_restraint_histogram']]],
+  ['best_5fperm_5findex',['best_perm_index',['../classcolvar_1_1rmsd.html#a0f45e0e3e56a02680c32e9d8d1053f7f',1,'colvar::rmsd']]],
   ['bias_5fenergy',['bias_energy',['../classcolvarbias.html#a33f857771c16fc663e0efc8ad549e829',1,'colvarbias']]],
   ['bias_5ftemperature',['bias_temperature',['../classcolvarbias__meta.html#a54607f583f3e1d3c36a52ec3a6852c42',1,'colvarbias_meta']]],
   ['bias_5ftype',['bias_type',['../classcolvarbias.html#acb2e5c8601ca9f25869c8197d62c5450',1,'colvarbias']]],
