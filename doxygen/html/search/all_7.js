@@ -52,6 +52,8 @@ var searchData=
   ['get_5ftime_5fstep_5ffactor',['get_time_step_factor',['../classcolvardeps.html#a8f5b07edb59e5da8a08ecb9a8385ba12',1,'colvardeps']]],
   ['get_5fvector',['get_vector',['../classcolvarmodule_1_1quaternion.html#a4c64fd2e217ced1146dabf1474735d64',1,'colvarmodule::quaternion']]],
   ['get_5fversion_5ffrom_5fstring',['get_version_from_string',['../classcolvarproxy.html#a74c299c32d6e1ed013b399c8214354cd',1,'colvarproxy']]],
+  ['get_5fvolmap_5fid',['get_volmap_id',['../classcolvarproxy__volmaps.html#a03349dd3470c9d263b19e0a8a6fb9e2a',1,'colvarproxy_volmaps']]],
+  ['get_5fvolmap_5fvalue',['get_volmap_value',['../classcolvarproxy__volmaps.html#a1f17e2f45215726e0efa4206eff7f72f',1,'colvarproxy_volmaps']]],
   ['getline',['getline',['../classcolvarmodule.html#acd9f035364ca1b14cabdeb9ca016dd97',1,'colvarmodule']]],
   ['getline_5fnocomments',['getline_nocomments',['../classcolvarparse.html#a9e5f005643af0e7c5d846f60081e49bf',1,'colvarparse']]],
   ['grad',['grad',['../classcolvarmodule_1_1atom.html#a4025f9073c212c8603dea8f61450225e',1,'colvarmodule::atom']]],

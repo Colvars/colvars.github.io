@@ -42,7 +42,7 @@ var searchData=
   ['setup_5foutput',['setup_output',['../classcolvarbias.html#aa85f1378271f7dcf2f3613a4b6ac23a8',1,'colvarbias::setup_output()'],['../classcolvarbias__meta.html#a6bfa77ca40b177ede3ce5e662a6ca11a',1,'colvarbias_meta::setup_output()'],['../classcolvarmodule.html#a448add9df80f0f3a9b4a96ebb2be1d91',1,'colvarmodule::setup_output()']]],
   ['sigmas',['sigmas',['../classcolvarbias__meta_1_1hill.html#adb262a253c58b81a24701ab174d12df3',1,'colvarbias_meta::hill']]],
   ['simparameters',['SimParameters',['../classSimParameters.html',1,'']]],
-  ['simparams',['simparams',['../classcolvarproxy__namd.html#ab68d6f9bc1254d57ecf5e1dce4ba4843',1,'colvarproxy_namd']]],
+  ['simparams',['simparams',['../classcolvarproxy__namd.html#a42f6ee08cc1a43c077cda44b0f248110',1,'colvarproxy_namd']]],
   ['simulation_5frunning',['simulation_running',['../classcolvarproxy.html#a780f5d1eb9d1e3dd70f44752c18e4eb8',1,'colvarproxy']]],
   ['sin',['sin',['../classcolvarmodule.html#ae823fb3bb3eb57bad9b050fa27aa7951',1,'colvarmodule']]],
   ['single_5freplica',['single_replica',['../classcolvarbias__meta.html#a795c12aae8c0ae64166839531e1b7841afbefd6e10dd2f72844b3d3ce104b6b24',1,'colvarbias_meta']]],

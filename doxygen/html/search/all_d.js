@@ -4,6 +4,8 @@ var searchData=
   ['main',['main',['../classcolvar_1_1distance__z.html#a28518aa5c21b928dbde766a9da6812dd',1,'colvar::distance_z::main()'],['../classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07',1,'colvarmodule::main()']]],
   ['main_5floop',['main_loop',['../classcolvar_1_1coordnum.html#adb0961965c055eb19c546049365ced84',1,'colvar::coordnum']]],
   ['map_5fgrid',['map_grid',['../classcolvar__grid.html#ae5730d70387aaad037d79794f4e594ac',1,'colvar_grid']]],
+  ['map_5fname',['map_name',['../classcolvar_1_1map__total.html#a925ce5f99620861032dd53b8e5684773',1,'colvar::map_total']]],
+  ['map_5ftotal',['map_total',['../classcolvar_1_1map__total.html',1,'colvar']]],
   ['mark_5fkey_5fset_5fdefault',['mark_key_set_default',['../classcolvarparse.html#af698c38d74eaa9aabcf2ceb8f8bb897a',1,'colvarparse']]],
   ['mark_5fkey_5fset_5fuser',['mark_key_set_user',['../classcolvarparse.html#a7601cb725e04e7cfcb6ced0cec859829',1,'colvarparse']]],
   ['mass',['mass',['../classcolvarmodule_1_1atom.html#ac62f1528c0cc97068d0e6218687c0bcd',1,'colvarmodule::atom']]],

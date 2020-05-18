@@ -11,5 +11,10 @@ var searchData=
   ['vmd',['vmd',['../classcolvarproxy__vmd.html#a78dff91177b772a99db73a2821649043',1,'colvarproxy_vmd']]],
   ['vmdmol',['vmdmol',['../classcolvarproxy__vmd.html#a93653170953144fa86a880181e589023',1,'colvarproxy_vmd']]],
   ['vmdmol_5fframe',['vmdmol_frame',['../classcolvarproxy__vmd.html#aa23e9eac128153a22834f9a21e252a41',1,'colvarproxy_vmd']]],
-  ['vmdmolid',['vmdmolid',['../classcolvarproxy__vmd.html#aab69b4890507b87575e754ecabab8614',1,'colvarproxy_vmd']]]
+  ['vmdmolid',['vmdmolid',['../classcolvarproxy__vmd.html#aab69b4890507b87575e754ecabab8614',1,'colvarproxy_vmd']]],
+  ['volmap_5findex',['volmap_index',['../classcolvar_1_1map__total.html#a39e3a19f371b390200ec1104ef54f135',1,'colvar::map_total']]],
+  ['volmaps_5fids',['volmaps_ids',['../classcolvarproxy__volmaps.html#a488e58f67402c0c9058a94f3640a7020',1,'colvarproxy_volmaps']]],
+  ['volmaps_5fncopies',['volmaps_ncopies',['../classcolvarproxy__volmaps.html#a53927b938ec49454e58c7e5a50e24462',1,'colvarproxy_volmaps']]],
+  ['volmaps_5fnew_5fcolvar_5fforces',['volmaps_new_colvar_forces',['../classcolvarproxy__volmaps.html#aee898cb3b1bf3823a3991e2d606911f7',1,'colvarproxy_volmaps']]],
+  ['volmaps_5fvalues',['volmaps_values',['../classcolvarproxy__volmaps.html#a855f34c4a358cdc62964437098a33739',1,'colvarproxy_volmaps']]]
 ];

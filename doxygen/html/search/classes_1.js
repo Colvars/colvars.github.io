@@ -42,6 +42,7 @@ var searchData=
   ['colvarproxy_5fsystem',['colvarproxy_system',['../classcolvarproxy__system.html',1,'']]],
   ['colvarproxy_5ftcl',['colvarproxy_tcl',['../classcolvarproxy__tcl.html',1,'']]],
   ['colvarproxy_5fvmd',['colvarproxy_vmd',['../classcolvarproxy__vmd.html',1,'']]],
+  ['colvarproxy_5fvolmaps',['colvarproxy_volmaps',['../classcolvarproxy__volmaps.html',1,'']]],
   ['colvarscript',['colvarscript',['../classcolvarscript.html',1,'']]],
   ['colvarvalue',['colvarvalue',['../classcolvarvalue.html',1,'']]],
   ['commdata',['commdata',['../structLAMMPS__NS_1_1commdata.html',1,'LAMMPS_NS']]],

@@ -15,5 +15,6 @@ var searchData=
   ['vector_5fvalue',['vector_value',['../classcolvar__grid__gradient.html#af6d9cd5c2426f707960c009b961bf968',1,'colvar_grid_gradient']]],
   ['velocities',['velocities',['../classcolvarmodule_1_1atom__group.html#ae5f071cb658046c0461300fc746986f6',1,'colvarmodule::atom_group']]],
   ['velocity',['velocity',['../classcolvar.html#a143b113defbb00d4bc55fc7be0e9f1dd',1,'colvar']]],
-  ['version_5fnumber',['version_number',['../classcolvarmodule.html#abffa8e9f749d0aa415c0925f64c9a81a',1,'colvarmodule::version_number()'],['../classcolvarproxy.html#ab1003f752c8c9c5b154ad7512be430f8',1,'colvarproxy::version_number()']]]
+  ['version_5fnumber',['version_number',['../classcolvarmodule.html#abffa8e9f749d0aa415c0925f64c9a81a',1,'colvarmodule::version_number()'],['../classcolvarproxy.html#ab1003f752c8c9c5b154ad7512be430f8',1,'colvarproxy::version_number()']]],
+  ['volmaps_5favailable',['volmaps_available',['../classcolvarproxy__volmaps.html#ab161216aac88b23bb7b405960b29cb17',1,'colvarproxy_volmaps']]]
 ];

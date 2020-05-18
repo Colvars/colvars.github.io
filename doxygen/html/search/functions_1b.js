@@ -21,6 +21,7 @@ var searchData=
   ['_7ecolvarproxy_5fsmp',['~colvarproxy_smp',['../classcolvarproxy__smp.html#ac56f76444af11764c4ca899f9183b74e',1,'colvarproxy_smp']]],
   ['_7ecolvarproxy_5fsystem',['~colvarproxy_system',['../classcolvarproxy__system.html#a00ee67db869190f8fe23ad44e0a96f9e',1,'colvarproxy_system']]],
   ['_7ecolvarproxy_5ftcl',['~colvarproxy_tcl',['../classcolvarproxy__tcl.html#a46d183d4bc83aeb09752b30887bc3836',1,'colvarproxy_tcl']]],
+  ['_7ecolvarproxy_5fvolmaps',['~colvarproxy_volmaps',['../classcolvarproxy__volmaps.html#aae88edf15708067d9482278ba60f896e',1,'colvarproxy_volmaps']]],
   ['_7ecvc',['~cvc',['../classcolvar_1_1cvc.html#a2c7968e6dce6fb671a52c557a748ada4',1,'colvar::cvc']]],
   ['_7ehill',['~hill',['../classcolvarbias__meta_1_1hill.html#a579a38b44f318b0dd279f49b00ec45ca',1,'colvarbias_meta::hill']]],
   ['_7ematrix2d',['~matrix2d',['../classcolvarmodule_1_1matrix2d.html#a5c14ecf2b1131685fc173fe9f2c19083',1,'colvarmodule::matrix2d']]],

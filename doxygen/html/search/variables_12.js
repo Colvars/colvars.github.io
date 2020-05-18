@@ -12,7 +12,7 @@ var searchData=
   ['scripting_5fafter_5fbiases',['scripting_after_biases',['../classcolvarmodule.html#a92366ee715bcb65e9e569f63f76e14fd',1,'colvarmodule']]],
   ['set_5fcoupling',['set_coupling',['../classcolvarbias__alb.html#ac6390852bde5c825bcf9352b055f5fce',1,'colvarbias_alb']]],
   ['sigmas',['sigmas',['../classcolvarbias__meta_1_1hill.html#adb262a253c58b81a24701ab174d12df3',1,'colvarbias_meta::hill']]],
-  ['simparams',['simparams',['../classcolvarproxy__namd.html#ab68d6f9bc1254d57ecf5e1dce4ba4843',1,'colvarproxy_namd']]],
+  ['simparams',['simparams',['../classcolvarproxy__namd.html#a42f6ee08cc1a43c077cda44b0f248110',1,'colvarproxy_namd']]],
   ['solutescalingall',['soluteScalingAll',['../classSimParameters.html#aab686b1b828fc45f2757a0b9178ec06f',1,'SimParameters']]],
   ['solutescalingfactor',['soluteScalingFactor',['../classSimParameters.html#ad0b35f03b9e534fa2ebf888c30c666cb',1,'SimParameters']]],
   ['solutescalingfactorcharge',['soluteScalingFactorCharge',['../classSimParameters.html#a57f40a34ef70fd32531fb04af3c9aa7e',1,'SimParameters']]],
