@@ -15,7 +15,7 @@
 </p><!--l. 59--><p class="noindent"><span class="colorbox" id="colorbox1"> </span></p><div class="minipage"><!--l. 70--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace></math><br class="newline"/>
 <!--l. 70--><p class="noindent"><span class="phvb7t-x-x-248">COLLECTIVE VARIABLES MODULE</span><br class="newline"/>
 </p><!--l. 70--><p class="noindent"><span class="phvb7t-x-x-248">Reference manual for LAMMPS</span>
-</p><!--l. 70--><p class="noindent"><br class="newline"/><span class="phvr7t-x-x-109">Code version: 2020-05-07</span><br class="newline"/></p></div>
+</p><!--l. 70--><p class="noindent"><br class="newline"/><span class="phvr7t-x-x-109">Code version: 2020-07-07</span><br class="newline"/></p></div>
 <!--l. 74--><p class="indent"> <img alt="Colvars logo" class="cover_picture" src="cover-512px.jpg"/> <br class="newline"/><span class="phvr7t-x-x-120">Alejandro Bernardin, Haochuan Chen, Jeﬀrey R. Comer, Giacomo Fiorin, Haohao Fu,</span>
 <span class="phvr7t-x-x-120">J</span><span class="phvr7t-x-x-120">é</span><span class="phvr7t-x-x-120">r</span><span class="phvr7t-x-x-120">ô</span><span class="phvr7t-x-x-120">me H</span><span class="phvr7t-x-x-120">é</span><span class="phvr7t-x-x-120">nin, Axel Kohlmeyer, Fabrizio Marinelli, Joshua V. Vermaas, Andrew D.</span>
 <span class="phvr7t-x-x-120">White</span>
@@ -474,7 +474,7 @@ found, an error is raised.
      </li>
 <li class="itemize"><a href="#colvar|dipoleAngle"><span class="ot1-zi4r-0-x-x-109">dipoleAngle</span></a>: angle between two groups and dipole of a third group;
      </li>
-<li class="itemize"><a href="#:"><span class="ot1-zi4r-0-x-x-109">dipoleMagnitude</span></a> magnitude of the dipole of a group of atoms;
+<li class="itemize"><a href="#colvar|dipoleMagnitude"><span class="ot1-zi4r-0-x-x-109">dipoleMagnitude</span></a>: magnitude of the dipole of a group of atoms;
      </li>
 <li class="itemize"><a href="#colvar|polarTheta"><span class="ot1-zi4r-0-x-x-109">polarTheta</span></a>: polar angle of a group in spherical coordinates;
      </li>
@@ -3977,7 +3977,7 @@ reconcile any inconsistencies.
 <li class="itemize"><span class="ptmb7t-x-x-109">Colvars version 2020-02-25 or later.</span><br class="newline"/>The parameter <a href="#metadynamics|hillWidth"><span class="ot1-zi4r-0-x-x-109">hillWidth</span></a>, expressing the Gaussian width <!--l. 6160--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>σ</mi></math>
      in relative units (number of grid points), does not have a default value any more. A new alternative
      parameter <a href="#metadynamics|gaussianSigmas"><span class="ot1-zi4r-0-x-x-109">gaussianSigmas</span></a> allows setting the <!--l. 6161--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
-     parameters explicitly for each variable if needed.<br class="newline"/>Furthermore, to facilitate the use of other analysis tools such as for example <span class="ot1-zi4r-0-x-x-109">sum</span><span class="ot1-zi4r-0-x-x-109">_hills</span>:<br class="newline"/><a class="url" href="https://www.plumed.org/doc-v2.6/user-doc/html/sum_hills.html"><span class="ot1-zi4r-0-x-x-109">https://www.plumed.org/doc-v2.6/user-doc/html/sum</span><mstyle class="text"><mtext><span class="ot1-zi4r-0-x-x-109">_</span></mtext></mstyle><span class="ot1-zi4r-0-x-x-109">hills.html</span></a><br class="newline"/>the format of the ﬁle written by <a href="#metadynamics|writeHillsTrajectory"><span class="ot1-zi4r-0-x-x-109">writeHillsTrajectory</span></a> has also been changed to use <!--l. 6164--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+     parameters explicitly for each variable if needed.<br class="newline"/>Furthermore, to facilitate the use of other analysis tools such as for example <span class="ot1-zi4r-0-x-x-109">sum</span><span class="ot1-zi4r-0-x-x-109">_hills</span>:<br class="newline"/><a class="url" href="https://www.plumed.org/doc-v2.6/user-doc/html/sum\_hills.html"><span class="ot1-zi4r-0-x-x-109">https://www.plumed.org/doc-v2.6/user-doc/html/sum</span><span class="zptmcm7y-x-x-109">∖</span><mstyle class="text"><mtext><span class="ot1-zi4r-0-x-x-109">_</span></mtext></mstyle><span class="ot1-zi4r-0-x-x-109">hills.html</span></a><br class="newline"/>the format of the ﬁle written by <a href="#metadynamics|writeHillsTrajectory"><span class="ot1-zi4r-0-x-x-109">writeHillsTrajectory</span></a> has also been changed to use <!--l. 6164--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
      instead of <!--l. 6164--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>σ</mi></math>.
      This change does not aﬀect how the biasing potential is written in the state ﬁle, or the simulated
      trajectory.
@@ -4017,366 +4017,366 @@ aﬀects features in the Colvars module.
 </p>
 <h3 class="likesectionHead"><a id="x1-1060008"></a>Index</h3>
 <div class="theindex"><span class="index-item"><span class="ot1-zi4r-0-x-x-109">abf</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">CZARestimator</span>, 59 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">applyBias</span>, 56 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 55 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">fullSamples</span>, 55 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hideJacobian</span>, 56 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">historyFreq</span>, 56 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">inputPrefix</span>, 56 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">maxForce</span>, 55 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 55 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 55 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFreq</span>, 55 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 55 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">updateBias</span>, 56 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeCZARwindowFile</span>, 59 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">CZARestimator</span>, 62 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">applyBias</span>, 59 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">fullSamples</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hideJacobian</span>, 59 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">historyFreq</span>, 59 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">inputPrefix</span>, 59 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">maxForce</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFreq</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 58 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">updateBias</span>, 59 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeCZARwindowFile</span>, 62 <br/></span>
 <span class="index-item"><span class="ot1-zi4r-0-x-x-109">alb</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centers</span>, 77 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 77 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceRange</span>, 77 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 77 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">rateMax</span>, 77 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">updateFrequency</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centers</span>, 80 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 80 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceRange</span>, 80 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 80 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">rateMax</span>, 80 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">updateFrequency</span>, 80 <br/></span>
 <span class="index-item"><span class="ot1-zi4r-0-x-x-109">angle</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 15 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 15 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 15 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group3</span>, 15 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 15 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">angle</span>, <span class="ot1-zi4r-0-x-x-109">dipoleAngle</span>, <span class="ot1-zi4r-0-x-x-109">dihedral</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 12 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">aspathCV </span>and <span class="ot1-zi4r-0-x-x-109">azpathCV</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lambda</span>, 32 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">pathFile</span>, 32 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">weights</span>, 31 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">cartesian</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 26 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">colvar</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncLength</span>, 44 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncNormalize</span>, 44 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncOffset</span>, 44 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncOutputFile</span>, 44 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncStride</span>, 44 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncType</span>, 44 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncWithColvar</span>, 44 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFunc</span>, 43 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">customFunctionType</span>, 36 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">customFunction</span>, 36 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expandBoundaries</span>, 39 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedFluctuation</span>, 42 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedLagrangian</span>, 42 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedLangevinDamping</span>, 42 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedTemp</span>, 42 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedTimeConstant</span>, 42 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hardLowerBoundary</span>, 38 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hardUpperBoundary</span>, 39 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>, 38 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerWalls</span>, 74 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 10 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputAppliedForce</span>, 41 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 41 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputTotalForce</span>, 41 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputValue</span>, 40 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputVelocity</span>, 41 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAveLength</span>, 45 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAveOutputFile</span>, 45 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAveStride</span>, 45 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAve</span>, 44 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">subtractAppliedForce</span>, 43 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">timeStepFactor</span>, 43 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, 38 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperWalls</span>, 74 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">width</span>, 38 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">coordNum</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff3</span>, 18 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff</span>, 17 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expDenom</span>, 18 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expNumer</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 17 <br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 17 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2CenterOnly</span>, 18 <br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 17 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">pairListFrequency</span>, 18 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">tolerance</span>, 18 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">dihedral</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 16 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 16 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 16 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group3</span>, 16 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group4</span>, 16 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 16 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">dipoleAngle</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 16 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 16 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 16 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group3</span>, 16 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 16 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">dipoleMagnitude</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 23 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceDir</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 14 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 14 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 14 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group3</span>, 17 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 17 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">angle</span>, <span class="ot1-zi4r-0-x-x-109">dipoleAngle</span>, <span class="ot1-zi4r-0-x-x-109">dihedral</span><br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 14 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceInv</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">exponent</span>, 15 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 15 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 15 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 15 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distancePairs</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 26 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 26 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 26 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceVec</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 14 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 14 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 14 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 14 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceXY</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 14 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 14 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">main</span>, 14 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref2</span>, 14 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref</span>, 14 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceZ</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 13 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 13 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">main</span>, 13 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 13, 14 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref2</span>, 13 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref</span>, 13 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceZ</span>, <span class="ot1-zi4r-0-x-x-109">dihedral</span>, <span class="ot1-zi4r-0-x-x-109">spinAngle</span>, custom colvars <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">wrapAround</span>, 34 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceZ</span>, custom colvars <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">period</span>, 34 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distance</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 12 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 12 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 12 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">eigenvector</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 22 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">differenceVector</span>, 22 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 22 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 22 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">vectorFile</span>, 22 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">vector</span>, 22 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gspathCV </span>and <span class="ot1-zi4r-0-x-x-109">gzpathCV</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">pathFile</span>, 30 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useSecondClosestFrame</span>, 29 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useThirdClosestFrame</span>, 29 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gspath </span>and <span class="ot1-zi4r-0-x-x-109">gspath</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">fittingAtoms</span>, 28 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gspath </span>and <span class="ot1-zi4r-0-x-x-109">gzpath</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 27 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsCol</span>, 27 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFileN</span>, 27 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useSecondClosestFrame</span>, 28 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useThirdClosestFrame</span>, 28 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gyration</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 23 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gzpathCV</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useZsquare</span>, 30 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gzpath</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useZsquare</span>, 28 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">hBond</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">acceptor</span>, 19 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff</span>, 20 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">donor</span>, 20 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">aspathCV </span>and <span class="ot1-zi4r-0-x-x-109">azpathCV</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lambda</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">pathFile</span>, 34 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">weights</span>, 34 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">cartesian</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 28 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">colvar</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncLength</span>, 47 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncNormalize</span>, 46 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncOffset</span>, 47 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncOutputFile</span>, 47 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncStride</span>, 47 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncType</span>, 46 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFuncWithColvar</span>, 46 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">corrFunc</span>, 46 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">customFunctionType</span>, 38 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">customFunction</span>, 38 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expandBoundaries</span>, 41 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedFluctuation</span>, 44 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedLagrangian</span>, 44 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedLangevinDamping</span>, 45 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedTemp</span>, 45 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">extendedTimeConstant</span>, 45 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hardLowerBoundary</span>, 41 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hardUpperBoundary</span>, 41 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>, 41 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerWalls</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 12 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputAppliedForce</span>, 44 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 43 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputTotalForce</span>, 44 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputValue</span>, 43 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputVelocity</span>, 43 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAveLength</span>, 47 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAveOutputFile</span>, 47 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAveStride</span>, 47 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">runAve</span>, 47 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">subtractAppliedForce</span>, 46 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">timeStepFactor</span>, 45 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, 41 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperWalls</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">width</span>, 40 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">coordNum</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff3</span>, 20 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff</span>, 19 <br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expDenom</span>, 20 <br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expNumer</span>, 20 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">harmonicWalls</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">bypassExtendedLagrangian</span>, 75 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 73 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 74 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lambdaSchedule</span>, 75 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerWallConstant</span>, 74 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 73 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputAccumulatedWork</span>, 75 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 73 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 74 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetEquilSteps</span>, 75 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceConstant</span>, 74 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceExponent</span>, 74 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumStages</span>, 75 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>, 74 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperWallConstant</span>, 74 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 74 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 74 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">harmonic</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centers</span>, 70 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 70 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 70 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lambdaSchedule</span>, 73 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 70 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputAccumulatedWork</span>, 73 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputCenters</span>, 71 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 70 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 70 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetCenters</span>, 71 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetEquilSteps</span>, 72 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceConstant</span>, 72 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceExponent</span>, 72 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumStages</span>, 72 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>, 71 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 70 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 70 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">histogramGrid</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerBoundaries</span>, 79 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperBoundaries</span>, 79 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">widths</span>, 79 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 80 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 80 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">gaussianSigma</span>, 80 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>, 80 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 80 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 80 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refHistogramFile</span>, 80 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refHistogram</span>, 80 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, 80 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">width</span>, 80 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">histogram</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">bypassExtendedLagrangian</span>, 79 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 78 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars</span>, 78 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 78 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFileDX</span>, 78 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFile</span>, 78 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFreq</span>, 78 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 78 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">weights</span>, 78 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">inertiaZ</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 24 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 24 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">inertia</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 23 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">linear</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centers</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lambdaSchedule</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 75 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputAccumulatedWork</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetEquilSteps</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceConstant</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceExponent</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumStages</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 76 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 76 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">metadynamics</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">biasTemperature</span>, 67 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 62 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ebMetaEquilSteps</span>, 65 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ebMeta</span>, 65 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">gaussianSigmas</span>, 63 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hillWeight</span>, 62 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hillWidth</span>, 63 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">keepFreeEnergyFiles</span>, 63 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">keepHills</span>, 64 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">multipleReplicas</span>, 68 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 62 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">newHillFrequency</span>, 63 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 62 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFreq</span>, 62 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">rebinGrids</span>, 64 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">replicaID</span>, 69 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">replicaUpdateFrequency</span>, 68 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">replicasRegistry</span>, 68 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 62 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetDistFile</span>, 65 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetDistMinVal</span>, 66 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useGrids</span>, 64 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">wellTempered</span>, 67 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeFreeEnergyFile</span>, 63 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeHillsTrajectory</span>, 64 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeHistogram</span>, 80 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writePartialFreeEnergyFile</span>, 69 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 62 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 62 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">orientationAngle</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 19 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2CenterOnly</span>, 20 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 19 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">pairListFrequency</span>, 20 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">tolerance</span>, 20 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">dihedral</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group3</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group4</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 18 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">dipoleAngle</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group3</span>, 18 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 18 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">dipoleMagnitude</span><br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 25 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 25 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 25 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">orientationProj</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 25 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 25 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 25 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">orientation</span><br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceDir</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 16 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceInv</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">exponent</span>, 17 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 17 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 17 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 17 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distancePairs</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 29 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 29 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 29 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceVec</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 16 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceXY</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">main</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref2</span>, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref</span>, 16 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceZ</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 15 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 15 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">main</span>, 15 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">oneSiteTotalForce</span>, 15, 16 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref2</span>, 15 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ref</span>, 15 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceZ</span>, <span class="ot1-zi4r-0-x-x-109">dihedral</span>, <span class="ot1-zi4r-0-x-x-109">spinAngle</span>, custom colvars <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">wrapAround</span>, 36 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distanceZ</span>, custom colvars <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">period</span>, 36 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">distance</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceNoPBC</span>, 14 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 14 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group2</span>, 14 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">eigenvector</span><br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 24 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">closestToQuaternion</span>, 24 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">differenceVector</span>, 24 <br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 24 <br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 24 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">polarPhi</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 17 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">rmsd</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomPermutation</span>, 21 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 20 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 20 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 20 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">selfCoordNum</span><br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff3</span>, 19 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff</span>, 19 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expDenom</span>, 19 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expNumer</span>, 19 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 19 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">pairListFrequency</span>, 19 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">tolerance</span>, 19 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">spinAngle</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">vectorFile</span>, 24 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">vector</span>, 24 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gspathCV </span>and <span class="ot1-zi4r-0-x-x-109">gzpathCV</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">pathFile</span>, 32 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useSecondClosestFrame</span>, 31 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useThirdClosestFrame</span>, 32 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gspath </span>and <span class="ot1-zi4r-0-x-x-109">gspath</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">fittingAtoms</span>, 30 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gspath </span>and <span class="ot1-zi4r-0-x-x-109">gzpath</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 29 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsCol</span>, 30 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFileN</span>, 30 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useSecondClosestFrame</span>, 30 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useThirdClosestFrame</span>, 30 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gyration</span><br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 25 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 25 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 25 <br/></span>
-<span class="index-item"><span class="ot1-zi4r-0-x-x-109">tilt</span><br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gzpathCV</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useZsquare</span>, 32 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">gzpath</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useZsquare</span>, 30 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">hBond</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">acceptor</span>, 21 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff</span>, 22 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">donor</span>, 22 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expDenom</span>, 22 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expNumer</span>, 22 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">harmonicWalls</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">bypassExtendedLagrangian</span>, 78 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 76 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lambdaSchedule</span>, 78 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerWallConstant</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 76 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputAccumulatedWork</span>, 78 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 76 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetEquilSteps</span>, 78 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceConstant</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceExponent</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumStages</span>, 78 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperWallConstant</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 77 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 77 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">harmonic</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centers</span>, 73 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 73 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 73 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lambdaSchedule</span>, 76 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 73 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputAccumulatedWork</span>, 76 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputCenters</span>, 74 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 73 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 73 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetCenters</span>, 74 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetEquilSteps</span>, 75 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceConstant</span>, 75 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceExponent</span>, 75 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumStages</span>, 75 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>, 74 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 73 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 73 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">histogramGrid</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerBoundaries</span>, 82 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperBoundaries</span>, 82 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">widths</span>, 82 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 83 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 83 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">gaussianSigma</span>, 83 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>, 83 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 83 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 83 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refHistogramFile</span>, 83 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refHistogram</span>, 83 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">upperBoundary</span>, 83 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">width</span>, 83 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">histogram</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">bypassExtendedLagrangian</span>, 82 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 81 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars</span>, 81 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 81 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFileDX</span>, 81 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFile</span>, 81 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFreq</span>, 81 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 81 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">weights</span>, 81 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">inertiaZ</span><br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 26 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 25, 26 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 26 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">inertia</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 25 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">linear</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centers</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">forceConstant</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">lambdaSchedule</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputAccumulatedWork</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetEquilSteps</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceConstant</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetForceExponent</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumStages</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetNumSteps</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 79 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 79 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">metadynamics</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">biasTemperature</span>, 70 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 65 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ebMetaEquilSteps</span>, 68 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">ebMeta</span>, 68 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">gaussianSigmas</span>, 66 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hillWeight</span>, 65 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">hillWidth</span>, 66 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">keepFreeEnergyFiles</span>, 66 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">keepHills</span>, 67 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">multipleReplicas</span>, 71 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 65 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">newHillFrequency</span>, 66 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 65 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFreq</span>, 65 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">rebinGrids</span>, 67 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">replicaID</span>, 72 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">replicaUpdateFrequency</span>, 71 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">replicasRegistry</span>, 71 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 65 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetDistFile</span>, 68 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">targetDistMinVal</span>, 69 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">useGrids</span>, 67 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">wellTempered</span>, 70 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeFreeEnergyFile</span>, 66 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeHillsTrajectory</span>, 67 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeHistogram</span>, 84 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writePartialFreeEnergyFile</span>, 72 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 65 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 65 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">orientationAngle</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 27 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">orientationProj</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 27 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">orientation</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 26 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">closestToQuaternion</span>, 26 <br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 26 <br/></span>
 <span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 26 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">polarPhi</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 19 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">rmsd</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomPermutation</span>, 23 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 22 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 22 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 22 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">selfCoordNum</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff3</span>, 21 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">cutoff</span>, 21 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expDenom</span>, 21 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">expNumer</span>, 21 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">group1</span>, 21 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">pairListFrequency</span>, 21 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">tolerance</span>, 21 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">spinAngle</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 27 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 27 <br/></span>
+<span class="index-item"><span class="ot1-zi4r-0-x-x-109">tilt</span><br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atoms</span>, 28 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">axis</span>, 28 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 28 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 28 <br/></span>
 <p class="theindex">
 <span class="index-item">any component <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">componentCoeff</span>, 35 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">componentExp</span>, 35 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 33 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">scalable</span>, 33 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">componentCoeff</span>, 38 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">componentExp</span>, 38 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 35 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">scalable</span>, 35 <br/></span>
 <span class="index-item">atom group <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomNumbersRange</span>, 47 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomNumbers</span>, 46 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomsOfGroup</span>, 47 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centerReference</span>, 48 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">dummyAtom</span>, 47 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">enableFitGradients</span>, 49 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">enableForces</span>, 49 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">fittingGroup</span>, 49 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">indexGroup</span>, 47 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 46 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 48 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 48 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">rotateReference</span>, 48 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomNumbersRange</span>, 50 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomNumbers</span>, 49 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">atomsOfGroup</span>, 50 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">centerReference</span>, 51 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">dummyAtom</span>, 50 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">enableFitGradients</span>, 52 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">enableForces</span>, 52 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">fittingGroup</span>, 52 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">indexGroup</span>, 50 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 49 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositionsFile</span>, 51 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">refPositions</span>, 51 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">rotateReference</span>, 51 <br/></span>
 </p><p class="theindex">
 <span class="index-item">colvar bias <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">bypassExtendedLagrangian</span>, 52 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 51 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 51 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 51 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFreq</span>, 51 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 52 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 52 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 52 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">bypassExtendedLagrangian</span>, 55 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvars</span>, 54 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">name</span>, 54 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputEnergy</span>, 54 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">outputFreq</span>, 54 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">stepZeroData</span>, 55 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTIPMF</span>, 55 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">writeTISamples</span>, 55 <br/></span>
 </p><p class="theindex">
 <span class="index-item">global <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency</span>, 6 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvarsTrajFrequency</span>, 6 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">indexFile</span>, 6 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">smp</span>, 6 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">units</span>, 4 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency</span>, 8 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">colvarsTrajFrequency</span>, 8 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">indexFile</span>, 8 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">smp</span>, 8 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">units</span>, 6 <br/></span>
 </p><p class="theindex">
 <span class="index-item">Keyword of the <span class="ot1-zi4r-0-x-x-109">fix colvars </span>command <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">input</span>, 4 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">output</span>, 5 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">seed</span>, 5 <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">tstat</span>, 5 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">input</span>, 6 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">output</span>, 7 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">seed</span>, 7 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">tstat</span>, 7 <br/></span>
 <span class="index-item">keyword of the <span class="ot1-zi4r-0-x-x-109">fix colvars </span>command <br/></span>
-<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">unwrap</span>, 5 <br/></span>
+<span class="index-subitem">    <span class="ot1-zi4r-0-x-x-109">unwrap</span>, 7 <br/></span>
 </p></div>
 <!--l. 129--><p class="noindent">
 </p>
