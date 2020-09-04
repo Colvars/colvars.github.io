@@ -136,8 +136,9 @@ span.LATEX span.TEX{ position:relative; left: -0.4em; }
 div.float, div.figure {margin-left: auto; margin-right: auto;}
 div.float img {text-align:center;}
 div.figure img {text-align:center;}
-.marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
-.marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+.marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+.marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+.reversemarginpar{float:left;}
 .equation td{text-align:center; vertical-align:middle; }
 td.eq-no{ width:5%; }
 table.equation { width:100%; } 
@@ -180,6 +181,7 @@ mtd.align-even{margin-right:2em; text-align:left;}
 .boxed{border: 1px solid black; padding-left:2px; padding-right:2px;}
 mo.qopname + mi{margin-left:0.3em}
 mi + mo.qopname{margin-left:0.3em}
+.rotatebox{display: inline-block;}
 .figure img.graphics {margin-left:10%;}
 div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
 table.tabular td p{margin-top:0em;}
