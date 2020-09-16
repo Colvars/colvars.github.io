@@ -16,5 +16,20 @@ do
 
   sed -i 's/<title><\/title>/<title>Collective Variables Module - Reference Manual<\/title>/' $i
 
+  # Remove ligatures
+  # https://orbythebeach.wordpress.com/2014/09/23/removing-ligatures-in-html-files-generated-from-latex-files/
+  sed -i 's/\xef\xac\x80/ff/g' $i
+  sed -i 's/\xef\xac\x81/fi/g' $i
+  sed -i 's/\xef\xac\x82/fl/g' $i
+  sed -i 's/\xef\xac\x83/ffi/g' $i
+  sed -i 's/\xef\xac\x84/ffl/g' $i
+  # sed -i 's/\xc5\x92/OE/g' $i
+  # sed -i 's/\xc5\x93/oe/g' $i
+  # sed -i 's/\xc3\x86/AE/g' $i
+  # sed -i 's/\xc3\xa6/ae/g' $i
+  # sed -i 's/\xef\xac\x86/st/g' $i
+  # sed -i 's/\xc4\xb2/IJ/g' $i
+  # sed -i 's/\xc4\xb3/ij/g' $i
+
   python ../remove_htmltags.py $i selfref
 done
