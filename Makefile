@@ -13,8 +13,10 @@ BIBTEX=$(DOCSRCDIR)/colvars-refman.bib
 
 # Check that we are updating the doc for the master branch
 branch := $(shell git -C $(DOCSRCDIR) symbolic-ref --short -q HEAD)
-ifneq ($(branch), $(filter $(branch), master documentation))
-$(error Source repo has branch $(branch) checked out, instead of master or documentation - update manually if you must)
+ifneq ($(FORCE), 1)
+  ifneq ($(branch), $(filter $(branch), master documentation) )
+  $(error Source repo has branch $(branch) checked out, instead of master or documentation. Use FORCE=1 to override)
+  endif
 endif
 
 .PHONY: all clean veryclean doxygen readme
