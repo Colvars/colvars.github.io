@@ -32,4 +32,7 @@ do
   # sed -i 's/\xc4\xb3/ij/g' $i
 
   python ../remove_htmltags.py $i selfref
+
+  sed -i 's/<p class="noindent"><\/p><pre> /<p class="noindent"><\/p><pre>/' $i
+
 done
