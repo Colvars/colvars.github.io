@@ -8,21 +8,21 @@ SRCDIR=$(COLVARSDIR)/src
 DOCSRCDIR=$(COLVARSDIR)/doc
 DOCDIR=$(PWD)
 PDFDIR=pdf
-PDF=$(PDFDIR)/colvars-refman-lammps.pdf $(PDFDIR)/colvars-refman-namd.pdf $(PDFDIR)/colvars-refman-vmd.pdf
+PDF=$(PDFDIR)/colvars-refman-lammps.pdf $(PDFDIR)/colvars-refman-namd.pdf $(PDFDIR)/colvars-refman-vmd.pdf $(PDFDIR)/colvars-refman-gromacs.pdf
 BIBTEX=$(DOCSRCDIR)/colvars-refman.bib
 
 # Check that we are updating the doc for the master branch
 branch := $(shell git -C $(DOCSRCDIR) symbolic-ref --short -q HEAD)
 ifneq ($(FORCE), 1)
-  ifneq ($(branch), $(filter $(branch), master documentation) )
-  $(error Source repo has branch $(branch) checked out, instead of master or documentation. Use FORCE=1 to override)
+  ifneq ($(branch), master)
+  $(error Source repo has branch $(branch) checked out, instead of master. Use FORCE=1 to override)
   endif
 endif
 
 .PHONY: all clean veryclean doxygen readme
 all: pdf html doxygen readme
 pdf: $(PDF)
-html: colvars-refman-namd/colvars-refman-namd.html colvars-refman-vmd/colvars-refman-vmd.html colvars-refman-lammps/colvars-refman-lammps.html
+html: colvars-refman-namd/colvars-refman-namd.html colvars-refman-vmd/colvars-refman-vmd.html colvars-refman-lammps/colvars-refman-lammps.html colvars-refman-gromacs/colvars-refman-gromacs.html
 readme: $(COLVARSDIR)/README.md $(COLVARSDIR)/README-totalforce.md $(COLVARSDIR)/README-c++11.md
 	cp -f $^ ./
 
@@ -62,6 +62,15 @@ colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/
 	cp -f $(DOCDIR)/images/colvars_diagram.png ./ ; \
 	sh ../postprocess_html.sh
 
+colvars-refman-gromacs/colvars-refman-gromacs.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-gromacs.tex
+	cd $(DOCSRCDIR); \
+	cp -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
+	$(HTLATEX) colvars-refman-gromacs.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-gromacs/"; \
+	rm -f html5mjlatex.cfg; \
+	cd $(DOCDIR)/colvars-refman-gromacs; \
+	cp -f $(DOCDIR)/images/colvars_diagram.png ./ ; \
+	sh ../postprocess_html.sh
+
 doxygen: doxygen/html/index.html
 
 doxygen/html/index.html: $(SRCDIR)/*.h doxygen/Doxyfile
@@ -71,4 +80,5 @@ clean:
 	make -C $(DOCSRCDIR) clean
 
 veryclean: clean
-	rm -f $(PDF) colvars-refman-namd/* colvars-refman-vmd/* colvars-refman-lammps/*
+	rm -f $(PDF) colvars-refman-namd/* colvars-refman-vmd/* colvars-refman-lammps/*  colvars-refman-gromacs/*
+

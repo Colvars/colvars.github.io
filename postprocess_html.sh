@@ -14,7 +14,7 @@ do
   awk 'BEGIN {printf "\"{ "} {printf $0 " ; "} END {printf " }\""}' | \
   xargs sed -i $i -e
 
-  sed -i 's/<title><\/title>/<title>Collective Variables Module - Reference Manual<\/title>/' $i
+  sed -i 's/<title><\/title>/<title>Collective Variables Module - Colvars Module - Reference Manual<\/title>/' $i
 
   # Remove ligatures
   # https://orbythebeach.wordpress.com/2014/09/23/removing-ligatures-in-html-files-generated-from-latex-files/
