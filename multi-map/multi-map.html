@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Preparing and using Multi-Map collective variables</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" name="generator"/>
+<link href="multi-map.css" rel="stylesheet" type="text/css"/>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<style type="text/css"> 
+.MathJax_MathML {text-indent: 0;} 
+</style>
+</head><body>
+<div class="maketitle">
+<h2 class="titleHead">Preparing and using Multi-Map collective variables</h2>
+<div class="author"></div><br/>
+<div class="date"></div>
+</div>
+<!--l. 77--><p class="indent"> </p><div id="container"> <div class="inner">
+<!--l. 80--><p class="indent">   Multi-Map variables are a flexible method to accelerate changes in macromolecular shape during MD
+simulations <span class="cite">[<a href="#XFiorin2020">1</a>]</span>. The method, originally developed to describe lipid membranes and water
+clusters <span class="cite">[<a href="#XFiorin2020">1</a>]</span>, has also been successfully applied to protein conformational transitions as well
+<span class="cite">[<a href="#XVant2020">2</a>]</span>.
+</p><!--l. 83--><p class="indent">   This article describes in detail how to prepare and analyze simulations using Multi-Map variables. The
+following resources are used:
+      </p><ol class="enumerate1">
+<li class="enumerate" id="x1-3x1">A  biomolecular  system  already  prepared  and  equilibrated  for  MD  simulation:  the  two
+      examples  shown  below  are  a  lipid  bilayer  in  coarse-grained  resolution  and  a  protein  in
+      atomistic resolution.
+      </li>
+<li class="enumerate" id="x1-5x2">Two or more volumetric maps that identify distinct <span class="ptmri7t-x-x-120">shapes </span>of the system of interest. For
+      the bilayer, these may be computed following a chosen deformation shape, wherease for the
+      protein, they will be computed from experimental structures.
+      </li>
+<li class="enumerate" id="x1-7x3"><a href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a> version <a href="https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD">1.9.4a49</a> or later (i.e. including the <a href="https://github.com/Colvars/colvars">Colvars</a> module version 2020-10-22 or
+      later).
+      </li>
+<li class="enumerate" id="x1-9x4"><a href="https://www.ks.uiuc.edu/Research/namd/">NAMD</a> version 2.14 or later, to run MD simulations with biasing forces acting on Multi-Map
+      variables.
+                                                                                         
+                                                                                         
+      </li>
+<li class="enumerate" id="x1-11x5">The <a href="https://www.mdanalysis.org/">MDAnalysis</a> library, which provides utility functions to manipulate atomic coordinates
+      and volumetric maps used in the Python code here shown.</li></ol>
+<!--l. 94--><p class="noindent">(<a href="multi-map.pdf">PDF version</a>)
+</p>
+<h3 class="likesectionHead"><a id="x1-1000"></a>Contents</h3>
+<div class="tableofcontents">
+<span class="sectionToc">1 <a href="#x1-20001" id="QQ2-1-2">Setting up a Multi-Map variable</a></span>
+<br/>    <span class="subsectionToc">1.1 <a href="#x1-30001.1" id="QQ2-1-3">Selecting atoms.</a></span>
+<br/>    <span class="subsectionToc">1.2 <a href="#x1-40001.2" id="QQ2-1-4">Preparing the volumetric maps: lipid bilayer.</a></span>
+<br/>    <span class="subsectionToc">1.3 <a href="#x1-60001.3" id="QQ2-1-6">Preparing the volumetric maps: protein structure.</a></span>
+<br/> <span class="sectionToc">2 <a href="#sec:syntax" id="QQ2-1-7">Syntax of Multi-Map variables explained: VMD vs. NAMD</a></span>
+<br/> <span class="sectionToc">3 <a href="#x1-110003" id="QQ2-1-11">Interactive visualization with the Colvars Dashboard</a></span>
+<br/>    <span class="subsectionToc">3.1 <a href="#x1-120003.1" id="QQ2-1-12">Loading the system and defining the variable.</a></span>
+<br/>    <span class="subsectionToc">3.2 <a href="#x1-130003.2" id="QQ2-1-13">Plotting the trajectory of Multi-Map variables.</a></span>
+<br/>    <span class="subsectionToc">3.3 <a href="#x1-140003.3" id="QQ2-1-14">Visualizing the maps associated to a variable.</a></span>
+<br/>    <span class="subsectionToc">3.4 <a href="#x1-150003.4" id="QQ2-1-15">Visualizing atoms and atomic gradients of map-based variables</a></span>
+</div>
+<!--l. 101--><p class="noindent">
+</p>
+<h3 class="sectionHead"><span class="titlemark">1    </span> <a id="x1-20001"></a>Setting up a Multi-Map variable</h3>
+<!--l. 103--><p class="noindent">Given the atomic coordinates, <!--l. 103--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">X</mi> <mo class="MathClass-rel">=</mo> <mfenced close=")" open="(" separators=""><mrow><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>N</mi></mrow></msub></mrow></mfenced></math>, and
+a small set of 3D volumetric maps, <!--l. 103--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ϕ</mi></mrow><mrow><mi>k</mi></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>,
+the Multi-Map variable is defined as: </p><table class="equation"><tr><td> <a id="eq:Multi-Map_variable"></a>
+<!--l. 104--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<mi>ξ</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">X</mi></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo><munderover accent="false" accentunder="false"><mrow><mo mathsize="big"> ∑</mo></mrow><mrow><mi>k</mi><mo class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow><mi>K</mi></mrow></munderover><msub><mrow><mi>ξ</mi></mrow><mrow>
+<mi>k</mi></mrow></msub><munderover accent="false" accentunder="false"><mrow><mo mathsize="big">∑</mo></mrow><mrow><mi>i</mi><mo class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow><mi>N</mi></mrow></munderover><msub><mrow><mi>ϕ</mi></mrow><mrow>
+<mi>k</mi></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(1)</td></tr></table>
+<!--l. 108--><p class="noindent">where the first sum is done over all volumetric maps, and the second sum over the atoms that fit in that map. The
+coefficients <!--l. 109--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi>k</mi></mrow></msub></math>
+are chosen before the simulation, one for each map: a typical choice is, for example,
+<!--l. 109--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi>k</mi></mrow></msub> <mo class="MathClass-rel">=</mo> <mi>k</mi></math>. The Multi-Map
+variable <!--l. 110--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math> is
+thus a linear superposition of multiple terms, each quantifying the similarity between the corresponding map
+<!--l. 110--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ϕ</mi></mrow><mrow><mi>k</mi></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math> and the atomic
+coordinates <!--l. 110--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">X</mi></math>.
+It is also technically possible to use non-linear functions instead of fixed coefficients
+<!--l. 111--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi>k</mi></mrow></msub></math>, but
+this has not been investigated yet.
+</p><!--l. 113--><p class="noindent">
+</p>
+<h4 class="subsectionHead"><span class="titlemark">1.1    </span> <a id="x1-30001.1"></a>Selecting atoms.</h4>
+<!--l. 113--><p class="noindent">To define the Multi-Map variable, the relevant atoms must be selected. For portability reasons it is not
+advisable to use atom selection keywords available <a href="https://www.ks.uiuc.edu/Research/vmd/vmd-1.9.4/ug/node90.html#ug:topic:selections">in VMD</a>, or <a href="https://colvars.github.io/colvars-refman-vmd/colvars-refman-vmd.html#sec:colvar_atom_groups">in the Colvars module</a>. This is due to
+the fact that the Multi-Map implementation in NAMD leverages the <a href="https://www.ks.uiuc.edu/Research/namd/2.14/ug/node43.html">GridForces</a> feature of
+NAMD <span class="cite">[<a href="#XWells2007">3</a>]</span> to perform input/output operations from OpenDX files and interpolate over the
+points of the corresponding grid. Consistently with many other native features of NAMD,
+atoms for GridForces are selected through the numeric values in selected columns of PDB
+files.
+</p><!--l. 118--><p class="indent">   In the first example (lipid bilayer with 100 POPC molecules per leaflet) two PDB files are needed to
+select the phosphate groups of each leaflet:</p>
+<div class="mdframed" id="mdframed-1">
+<!--l. 119--><p class="noindent"></p><pre>mol new popc_100.psf type psf waitfor all<br class="newline"/>mol addfile popc_100.pdb type pdb waitfor all<br class="newline"/>set all [atomselect top "all"]<br class="newline"/><span class="ptmr8c-x-x-120">$</span>all set occupancy 0.0<br class="newline"/><span class="ptmr8c-x-x-120">$</span>all set beta 0.0<br class="newline"/>set upper [atomselect top "name PO4 and z > 0.0"]<br class="newline"/><span class="ptmr8c-x-x-120">$</span>upper set occupancy 1.0<br class="newline"/><span class="ptmr8c-x-x-120">$</span>upper set beta 1.0<br class="newline"/>animate write pdb popc_100.phosphates-upper.pdb<br class="newline"/><span class="ptmr8c-x-x-120">$</span>all set occupancy 0.0<br class="newline"/><span class="ptmr8c-x-x-120">$</span>all set beta 0.0<br class="newline"/>set lower [atomselect top "name PO4 and z < 0.0"]<br class="newline"/><span class="ptmr8c-x-x-120">$</span>lower set occupancy 1.0<br class="newline"/><span class="ptmr8c-x-x-120">$</span>lower set beta 1.0<br class="newline"/>animate write pdb popc_100.phosphates-lower.pdb </pre>
+</div>
+<!--l. 138--><p class="noindent">
+</p>
+<h4 class="subsectionHead"><span class="titlemark">1.2    </span> <a id="x1-40001.2"></a>Preparing the volumetric maps: lipid bilayer.</h4>
+<!--l. 140--><p class="noindent">The density maps of fluid-phase lipid bilayers contain a lot of structure, but generally not along the bilayer
+plane: therefore, the starting point for a bilayer is not a 3D map but a 1D profile. Undulations,
+contractions, and swellings are typically averaged out (i.e. not included) in 1D density profiles of
+bilayers, whose resolution is determined by the fluctuations of single lipid molecules and of the
+atoms therein. A density profile for a small bilayer (i.e. where spontaneous bending is very
+small) can be computed in a variety of ways. Below is an example using the <a href="https://www.mdanalysis.org/">MDAnalysis</a>
+library.</p>
+<div class="mdframed" id="mdframed-2">
+<!--l. 144--><p class="noindent"></p><pre><span class="phvb7t-x-x-120">Python code to compute the 1D number density profile.</span><br class="newline"/>import numpy as np<br class="newline"/>import matplotlib.pyplot as plt<br class="newline"/>import MDAnalysis<br class="newline"/><br class="newline"/>uni = MDAnalysis.Universe('popc_100.psf', 'popc_100.eq.coor.dcd')<br class="newline"/># Select phosphate groups <br class="newline"/>sel = uni.select_atoms('name PO4')<br class="newline"/>z_profile = np.arange(-40.0, 40.0, 0.4) + 0.2<br class="newline"/>n_profile = np.zeros(shape=z_profile.shape)<br class="newline"/>n_frames = 0<br class="newline"/>for ts in uni.trajectory:<br class="newline"/>    xyz, box = sel.positions, ts.dimensions[0:3]<br class="newline"/>    # Wrap and center the Z coordinates<br class="newline"/>    xyz[:,2] -= np.rint(np.divide(xyz[:,2], box[2])) * box[2]<br class="newline"/>    xyz[:,2] -= xyz[:,2].mean()<br class="newline"/>    n_z, _ = np.histogram(xyz[:,2], range=(-40.0, 40.0),<br class="newline"/>                         bins=z_profile.shape[0], density=True)<br class="newline"/>    n_profile[:] += n_z[:]<br class="newline"/>    n_frames += 1<br class="newline"/>n_profile /= np.float(n_frames)<br class="newline"/>plt.plot(z_profile, n_profile, '-')<br class="newline"/>plt.show() </pre>
+</div>
+<!--l. 168--><p class="indent">   The output of this script on the example trajectory (POPC bilayer) shows a distribution
+with two peaks, which can be well approximated by two Gaussian functions with centers at
+<!--l. 168--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-bin">±</mo><mn>2</mn><mn>1</mn></math> Å and
+standard deviations of 2 Å each.
+</p>
+<!--l. 170--><p class="noindent"><span class="likeparagraphHead"><a id="x1-50001.2"></a>From 1D profiles to 3D maps.</span>
+   Having obtained a 1D density profile for the group of interest (i.e. the phosphate groups), 3D density maps
+of flat bilayers are generated quite easily just by replicating the 1D density profile many times along a grid of
+<!--l. 170--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><mi>x</mi><mo class="MathClass-punc">,</mo><mi>y</mi></mrow><mo class="MathClass-close">)</mo></mrow></math> values, as wide as the
+bilayer being simulated. For a map of a bilayer with an undulatory deformation, the location of the 1D profile along the
+<!--l. 171--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>Z</mi></math> axis can be shifted
+by a 2D function <!--l. 171--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>x</mi><mo class="MathClass-punc">,</mo><mi>y</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
+Due to periodic boundary conditions, the simplest starting point for
+<!--l. 172--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>x</mi><mo class="MathClass-punc">,</mo><mi>y</mi></mrow><mo class="MathClass-close">)</mo></mrow></math> is a
+sinusoidal function: </p><table class="equation"><tr><td> <a id="eq:sinusoidal_2d_map"></a>
+<!--l. 173--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<mi>z</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>x</mi><mo class="MathClass-punc">,</mo><mi>y</mi></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mi>A</mi><mo class="qopname">cos</mo><!--nolimits--> <mfenced close=")" open="(" separators=""><mrow><mfrac><mrow><mn>2</mn><mi>π</mi><mi>x</mi></mrow>
+<mrow><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow></mfrac> </mrow></mfenced>
+</math></td><td class="eq-no">(2)</td></tr></table>
+<!--l. 177--><p class="noindent">where <!--l. 177--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></math> is the period of the
+simulation cell along the <!--l. 177--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>X</mi></math>
+axis at equilibrium, and <!--l. 177--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>
+is the amplitude of the deformation in units of length; for a flat bilayer,
+<!--l. 177--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi> <mo class="MathClass-rel">=</mo> <mn>0</mn></math>.
+</p><!--l. 179--><p class="indent">   Generating a 3D map <!--l. 179--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+given the 1D density profile <!--l. 179--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>z</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+and a deformation 2D map <!--l. 179--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>x</mi><mo class="MathClass-punc">,</mo><mi>y</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+is conceptually not complicated at all, yet it can be a bit tedious due to technical details. The script
+<a href="https://github.com/Colvars/colvars/colvartools/gen_multimap.py"><span class="ot1-zi4r-0-x-x-120">gen</span><span class="ot1-zi4r-0-x-x-120">_multimap.py</span></a> automates the process considerably and allows using either functions or tabulated maps to
+define <!--l. 180--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>x</mi><mo class="MathClass-punc">,</mo><mi>y</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
+The example below uses different options of the script to implement the following procedure:
+</p><!--l. 183--><p class="indent">
+</p><ol class="enumerate1">
+<li class="enumerate" id="x1-5003x1">Two sets of atoms are chosen, the <span class="ptmri7t-x-x-120">upper leaflet </span>with a label “<span class="ot1-zi4r-0-x-x-120">upper</span>" and the <span class="ptmri7t-x-x-120">lower leaflet</span>
+      with a label “<span class="ot1-zi4r-0-x-x-120">lower</span>"; output files will be named using these labels. Matching PDB files ar Of
+      course, it is possible to employ a single set of maps for both leaflets: beware, however, that
+      the density of the upper leaflet with a largely negative deformation (<!--l. 187--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi> <mo class="MathClass-rel">≪</mo> <mn>0</mn></math>)
+      may overlap with the density of the lower leaflet with a largely positive deformation (<!--l. 187--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi> <mo class="MathClass-rel">≫</mo> <mn>0</mn></math>).
+      For a small added computational cost, it safer to treat the leaflets independently.
+      </li>
+<li class="enumerate" id="x1-5005x2">The 1D density profiles of the phosphate groups of each leaflets are defined as Gaussians,
+      with means and standard deviations given by <span class="ot1-zi4r-0-x-x-120">--input-centers </span>and “<span class="ot1-zi4r-0-x-x-120">--input-sigmas</span>",
+      respectively. (Alternatively, “<span class="ot1-zi4r-0-x-x-120">--input-files</span>" allows using directly density profiles such as
+      those computed from the above Python script.)
+      </li>
+<li class="enumerate" id="x1-5007x3">To make the values of the terms <!--l. 193--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mo class="MathClass-op">∑</mo><!--nolimits--></mrow><mrow><mi>i</mi></mrow></msub><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>
+      consistent for bilayers of different sizes, the depth/intensity of each volumetric map <!--l. 193--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+      may be scaled automatically through “<span class="ot1-zi4r-0-x-x-120">--normalize-maps</span>", such that <!--l. 193--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mo class="MathClass-op">∑</mo><!--nolimits--></mrow><mrow><mi>i</mi></mrow></msub><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>,
+      equals 1 when all atom positions <!--l. 193--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></math>
+      are at the peak of the distribution. By default, the number of atoms is computed as the sum
+      of the products of the occupancy and temperature factors (assuming that they are both 1
+      for each selected atom); alternatively, “<span class="ot1-zi4r-0-x-x-120">--input-num-particles</span>" would allow setting these
+      explicitly.
+      </li>
+<li class="enumerate" id="x1-5009x4">The dimensions of the simulation cell are defined from an existing NAMD XSC file using
+      the “<span class="ot1-zi4r-0-x-x-120">--xsc-file</span>" option; for a more accurate definition, an XST trajectory can be provided
+      to it, and the mean simulation cell over all frames will be used. Alternatively, dimensions
+      may also be given explicitly with “<span class="ot1-zi4r-0-x-x-120">--cell</span>". All volumetric maps generated will have these
+      dimensions.
+      </li>
+<li class="enumerate" id="x1-5011x5">The 2D deformation function <!--l. 200--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>x</mi><mo class="MathClass-punc">,</mo><mi>y</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+      is chosen using “<span class="ot1-zi4r-0-x-x-120">--deformation-function</span>"; for example, the keyword “<span class="ot1-zi4r-0-x-x-120">map</span><span class="ot1-zi4r-0-x-x-120">_bend</span><span class="ot1-zi4r-0-x-x-120">_cosine</span>"
+      chooses eq. <a href="#eq:sinusoidal_2d_map">2<!--tex4ht:ref: eq:sinusoidal_2d_map --></a>. (For a tabulated map, use “<span class="ot1-zi4r-0-x-x-120">--deformation-map</span>").
+      </li>
+<li class="enumerate" id="x1-5013x6">The numbers of grid points along each dimension are defined through “<span class="ot1-zi4r-0-x-x-120">--grid-npoints</span>":
+      because the functions are smooth, there is no need for very fine grids.
+      </li>
+<li class="enumerate" id="x1-5015x7">A series of deformation amplitudes <!--l. 204--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>
+      is given by “<span class="ot1-zi4r-0-x-x-120">--deformation-amplitudes</span>": the example here uses <!--l. 204--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi> <mo class="MathClass-rel">=</mo> <mo class="MathClass-bin">−</mo><mn>6</mn><mo class="MathClass-punc">,</mo><mo class="MathClass-bin">−</mo><mn>2</mn><mo class="MathClass-punc">,</mo><mn>2</mn><mo class="MathClass-punc">,</mo><mn>6</mn><mo class="MathClass-punc">,</mo><mn>1</mn><mn>0</mn></math> Å.
+      The  spacing  of  4 Å  ensures  that  there  is  reasonable  overlap  between  consecutive  maps
+      (remember that along the <!--l. 205--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>Z</mi></math>
+      axis, these maps are Gaussians with <!--l. 205--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+      = 2 Å). Also, the set is asymmetric around zero: for a symmetric bilayer, it is not needed
+      to sample both positive and negative deformations, which would have the same energy for a
+      given absolute value <!--l. 206--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-rel">|</mo><mi>A</mi><mo class="MathClass-rel">|</mo></math>.
+      It is a good idea, though, to pad the set of <!--l. 207--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>
+      values with maps representingconfigurations slightly beyond the range considered: the fluctuations
+      of individual lipids/atoms can be significant, and it is necessary to lay down density maps
+      for any positions that they may take.
+      </li>
+<li class="enumerate" id="x1-5017x8">All map file names will start with the same label “<span class="ot1-zi4r-0-x-x-120">--output-prefix</span>". Optionally, VMD and
+      NAMD scripts are also written with “<span class="ot1-zi4r-0-x-x-120">--vmd-script</span>" and “<span class="ot1-zi4r-0-x-x-120">--namd-script</span>". This is done
+      not only to avoid additional typing (which we all prefer, don't we?), but also for more subtle
+      technical reasons as well: VMD and NAMD handle volumetric maps in entirely different
+      ways, thus the Colvars configuration used also needs to change slightly to accommodate
+      these differences. This point is discussed in more detail in the section <a href="#sec:syntax">2<!--tex4ht:ref: sec:syntax --></a>.</li></ol>
+<!--l. 215--><p class="indent">   Putting it all together, the following command generates the necessary input files (minus the PDB
+files):
+                                                                                         
+                                                                                         
+</p>
+<div class="mdframed" id="mdframed-3">
+<!--l. 216--><p class="noindent"></p><pre><span class="phvb7t-x-x-120">Generate a set of 3D sinusoidal maps for a bilayer.</span><br class="newline"/>python3 gen_multimap.py <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --input-labels upper lower <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --input-pdb-files popc_100.phosphates-<span class="cmsy-10x-x-120">{</span>upper,lower<span class="cmsy-10x-x-120">}</span>.pdb <span class="cmsy-10x-x-120">\</span><br class="newline"/>    <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --input-centers 21.0 -21.0 --input-sigmas 2.0 2.0 <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --normalize-maps <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --xsc-file popc_100.eq.xst <span class="cmsy-10x-x-120">\</span><br class="newline"/>    <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --deformation-function map_bend_cosine <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --grid-npoints 50 50 100 <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --deformation-amplitudes -6.0 -2.0 2.0 6.0 10.0 <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --output-prefix cosine <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --vmd-script cosine.vmd --namd-script cosine.namd </pre>
+</div>
+<!--l. 232--><p class="indent">   When running the “<span class="ot1-zi4r-0-x-x-120">gen</span><span class="ot1-zi4r-0-x-x-120">_multimap.py</span>" script, for each of the two selections the matrix of
+cross-correlation coefficients is printed on the standard output:
+                                                                                         
+                                                                                         
+</p>
+<div class="verbatim" id="verbatim-1">
+Cross-correlation matrix between maps:
+ <br/>  (elements far from the diagonal should be small)
+ <br/>[[1.000 0.646 0.309 0.194 0.144]
+ <br/> [0.646 1.000 0.646 0.309 0.195]
+ <br/> [0.309 0.646 1.000 0.646 0.309]
+ <br/> [0.194 0.309 0.646 1.000 0.646]
+ <br/> [0.144 0.195 0.309 0.646 1.000]]
+</div>
+<!--l. 241--><p class="nopar"> which shows that adjacent maps are inded very similar to each other (64.6% cross-correlation) at the
+chosen resolution of 2 Å, but also that the mutual cross-correlation gradually decays for maps with
+increasingly different deformations. The combination of these two features is essential for
+properly sampling a continuous pathway of molecular configurations across the different bilayer
+shapes.
+</p><!--l. 245--><p class="indent">   The ability of a Multi-Map variable to properly account for movement between shapes
+requires that the selected atoms or molecules only move in regions where the density of at least
+one map is not zero. Therefore, in the auto-generated script “<span class="ot1-zi4r-0-x-x-120">cosine.namd</span>" a restraint on
+the Z coordinate of the bilayer is also included, based on a <a href="https://colvars.github.io/colvars-refman-namd/colvars-refman-namd.html#sec:cvc_distanceZ">distanceZ</a>-type variable named
+“<span class="ot1-zi4r-0-x-x-120">com</span><span class="ot1-zi4r-0-x-x-120">_dist</span>".
+</p><!--l. 249--><p class="noindent">
+</p>
+<h4 class="subsectionHead"><span class="titlemark">1.3    </span> <a id="x1-60001.3"></a>Preparing the volumetric maps: protein structure.</h4>
+<!--l. 251--><p class="noindent">This example makes use input files prepred in the first section of the <a href="https://www.ks.uiuc.edu/Training/Tutorials/science/mdff/tutorial_mdff-html/">MDFF tutorial</a>, specifically the
+“closed" and “open" structures of the adenylate kinase protein (ADK). To enable a Multi-Map simulation
+for the same protein, two density maps one for each state, may be prepared:</p>
+<div class="mdframed" id="mdframed-4">
+<!--l. 253--><p class="noindent"></p><pre><span class="phvb7t-x-x-120">Generate a map for each protein structure.</span><br class="newline"/>mol new 1ake-initial-docked_autopsf.psf<br class="newline"/>mol addfile 1ake-initial-docked_autopsf.pdb type pdb waitfor all<br class="newline"/>mdff sim [atomselect top all] -o 1ake.density.dx<br class="newline"/>mol new 1ake-initial-docked_autopsf.psf<br class="newline"/>mol addfile 4ake-target_autopsf.pdb type pdb waitfor all<br class="newline"/>mdff sim [atomselect top all] -o 4ake.density.dx </pre>
+</div>
+<!--l. 261--><p class="noindent">where the default resolution of the <span class="ot1-zi4r-0-x-x-120">mdff sim </span>command is used, which is fairly coarse (10 Å) to improve
+the ability to simulate a smooth transition pathway. The mutual cross-correlation between the two maps
+may be computed directly in VMD:</p>
+<div class="mdframed" id="mdframed-5">
+<!--l. 263--><p class="noindent"></p><pre>voltool correlate -i1 1ake.density.dx -i2 4ake.density.dx<br class="newline"/>...<br class="newline"/>0.7627721242997564 </pre>
+</div>
+<!--l. 269--><p class="indent">   The above is a relatively high cross-correlation, especially considering that these are the only two maps
+considered. An undesirable consequence of this fact is that fluctuations in the region shared by the two
+densities <!--l. 270--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ϕ</mi></mrow><mrow><mn>1</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+and <!--l. 270--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ϕ</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+may affect the ability of the Multi-Map variable to discriminate between “true" transitions between the
+two states. Possible remedies may be using non-overlapping densities by considering only certain domains
+of the protein (which may be difficult for experimental density maps), or choosing Multi-Map coefficients
+<!--l. 271--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<!--l. 271--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mn>2</mn></mrow></msub></math> of opposite
+signs, so that fluctuations in the shared region effectively cancel each other out. The latter is the strategy adopted
+in ref. <span class="cite">[<a href="#XVant2020">2</a>]</span>, where conformational changes of several proteins are investigated using Multi-Map variables with
+coefficients <!--l. 272--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel">=</mo> <mo class="MathClass-bin">±</mo><mn>1</mn></math>.
+</p><!--l. 274--><p class="indent">   Using this choice of coefficients, it is possible to reuse the <span class="ot1-zi4r-0-x-x-120">gen</span><span class="ot1-zi4r-0-x-x-120">_multimap.py </span>script to generate input
+scripts for VMD and NAMD:</p>
+<div class="mdframed" id="mdframed-6">
+<!--l. 275--><p class="noindent"></p><pre><span class="phvb7t-x-x-120">Generate Multi-Map configuration syntax for two protein density maps.</span><br class="newline"/>python3 gen_multimap.py <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --input-label adk <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --input-pdb-file 1ake-initial-docked_autopsf-grid.pdb <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --input-map-files 1ake.density.dx 4ake.density.dx <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --normalize-map <span class="cmsy-10x-x-120">\</span><br class="newline"/>    <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --multimap-coefficients -1 1 <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --output-prefix adk-multimap <span class="cmsy-10x-x-120">\</span><br class="newline"/>    --vmd-script adk-multimap.vmd --namd-script adk-multimap.namd </pre>
+</div>
+<!--l. 286--><p class="noindent">where the option “<span class="ot1-zi4r-0-x-x-120">--multimap-coefficients</span>" overrides the default choice of
+                                                                                         
+                                                                                         
+<!--l. 286--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi>k</mi></mrow></msub> <mo class="MathClass-rel">=</mo> <mi>k</mi></math>.
+</p><!--l. 288--><p class="indent">   As in the bilayer example, a center-of-mass restraint is included in the auto-generated script
+“<span class="ot1-zi4r-0-x-x-120">adk-multimap.namd</span>". Because input 3D map files were provided, the <span class="ot1-zi4r-0-x-x-120">gen</span><span class="ot1-zi4r-0-x-x-120">_multimap.py </span>script assumed that
+the object under consideration (a protein in this case) can move freely in all three dimensions. Therefore, a
+restraint based on an isotropic <a href="https://colvars.github.io/colvars-refman-namd/colvars-refman-namd.html#sec:cvc_distance">distance</a>-type variable is included; the position of the center of mass is by default
+the origin <!--l. 290--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><mn>0</mn><mo class="MathClass-punc">,</mo><mn>0</mn><mo class="MathClass-punc">,</mo><mn>0</mn></mrow><mo class="MathClass-close">)</mo></mrow></math>,
+but it may be redefined via the Tcl variable “<span class="ot1-zi4r-0-x-x-120">com</span><span class="ot1-zi4r-0-x-x-120">_pos</span>".
+</p><!--l. 292--><p class="indent">   Also included is a restraint on an <a href="https://colvars.github.io/colvars-refman-namd/colvars-refman-namd.html#sec:cvc_orientation">orientation</a>-type variable, called “<span class="ot1-zi4r-0-x-x-120">ori</span>". This restraint is
+centered around an orientation that correspond to the atoms being aligned with the reference
+structure, avoiding loss of alignment with all maps simultaneously. Because this variable
+specifically cannot be computed in parallel in NAMD, it is generally recommended to use a
+much smaller selection of atoms than those used for the Multi-Map variable (e.g. only the
+C<!--l. 294--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow></mrow><mrow><mi>α</mi></mrow></msub></math> atoms
+instead of a whole protein).
+</p><!--l. 297--><p class="noindent">
+</p>
+<h3 class="sectionHead"><span class="titlemark">2    </span> <a id="sec:syntax"></a>Syntax of Multi-Map variables explained: VMD vs. NAMD</h3>
+<!--l. 300--><p class="noindent">This section explains the syntax of the VMD and NAMD scripts generated by <span class="ot1-zi4r-0-x-x-120">gen</span><span class="ot1-zi4r-0-x-x-120">_multimap.py</span>. The
+basic building block of a Multi-Map variable is the “<span class="ot1-zi4r-0-x-x-120">mapTotal</span>" function:<br class="newline"/><a class="url" href="https://colvars.github.io/colvars-refman-namd/colvars-refman-namd.html#sec:cvc_map_total"><span class="ot1-zi4r-0-x-x-120">https://colvars.github.io/colvars-refman-namd/colvars-refman-namd.html#sec:cvc</span><mstyle class="text"><mtext><span class="ot1-zi4r-0-x-x-120">_</span></mtext></mstyle><span class="ot1-zi4r-0-x-x-120">map</span><mstyle class="text"><mtext><span class="ot1-zi4r-0-x-x-120">_</span></mtext></mstyle><span class="ot1-zi4r-0-x-x-120">total</span></a><br class="newline"/>As its name implies, this function computes the total value of a map,
+<!--l. 303--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mo class="MathClass-op">∑</mo><!--nolimits--></mrow><mrow><mi>i</mi></mrow></msub><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>, and
+allows it to be treated as a collective variable. The simple example included in the link above defines
+the number of water molecules in a cavity, based on a <span class="ptmri7t-x-x-120">single map </span>that describes the shape of
+the cavity itself. A <span class="ptmri7t-x-x-120">Multi-Map </span>variable is nothing but a combination of multiple instances of
+<span class="ot1-zi4r-0-x-x-120">mapTotal</span>.
+</p><!--l. 307--><p class="indent">   Because VMD and NAMD have different ways of dealing with volumetric maps, how the <span class="ot1-zi4r-0-x-x-120">mapTotal</span>
+variables are defined in Colvars should be adjusted.
+</p><!--l. 309--><p class="noindent">
+</p>
+<h4 class="likesubsectionHead"><a id="x1-80002"></a>VMD syntax.</h4>
+<!--l. 309--><p class="noindent">In VMD, volumetric maps are loaded just like atomic coordinate files, from the graphical menu or from
+                                                                                         
+                                                                                         
+the command line.</p>
+<div class="mdframed" id="mdframed-7">
+<!--l. 310--><p class="noindent"></p><pre><span class="phvb7t-x-x-120">Loading volumetric maps (VMD version).</span><br class="newline"/>mol addfile map_001.dx type dx waitfor all<br class="newline"/>mol addfile map_002.dx type dx waitfor all </pre>
+</div>
+<!--l. 314--><p class="indent">   Once these are loaded, the Colvars module can refer to these maps by numeric index (starting at 0),
+consistently with their use in the rest of VMD, e.g. by the <a href="https://www.ks.uiuc.edu/Research/vmd/vmd-1.9.4/ug/node158.html"><span class="ot1-zi4r-0-x-x-120">voltool</span></a> command. An example Colvars
+configuration suitable for use in VMD is the following.</p>
+<div class="mdframed" id="mdframed-8">
+<!--l. 316--><p class="noindent"></p><pre><span class="phvb7t-x-x-120">Turning volumetric maps into collective variables (VMD version).</span><br class="newline"/>colvar <span class="cmsy-10x-x-120">{</span><br class="newline"/>    name xi<br class="newline"/>    mapTotal <span class="cmsy-10x-x-120">{</span><br class="newline"/>        name map_001<br class="newline"/>        componentCoeff 1.0<br class="newline"/>        mapID 0<br class="newline"/>        atoms <span class="cmsy-10x-x-120">{</span><br class="newline"/>            atomsFile atoms.pdb<br class="newline"/>            atomsCol O<br class="newline"/>        <span class="cmsy-10x-x-120">}</span><br class="newline"/>    <span class="cmsy-10x-x-120">}</span><br class="newline"/>    mapTotal <span class="cmsy-10x-x-120">{</span><br class="newline"/>        name map_002<br class="newline"/>        componentCoeff 2.0<br class="newline"/>        mapID 1<br class="newline"/>        atoms <span class="cmsy-10x-x-120">{</span><br class="newline"/>            atomsFile atoms.pdb<br class="newline"/>            atomsCol O<br class="newline"/>        <span class="cmsy-10x-x-120">}</span><br class="newline"/>    <span class="cmsy-10x-x-120">}</span><br class="newline"/><span class="cmsy-10x-x-120">}</span></pre>
+</div>
+<!--l. 339--><p class="noindent">In here, a collective variable named <span class="ot1-zi4r-0-x-x-120">xi </span>is built from two <span class="ot1-zi4r-0-x-x-120">mapTotal </span>functions named <span class="ot1-zi4r-0-x-x-120">map</span><span class="ot1-zi4r-0-x-x-120">_001 </span>and <span class="ot1-zi4r-0-x-x-120">map</span><span class="ot1-zi4r-0-x-x-120">_002</span>. The
+maps loaded in VMD's memory are accessed by Colvars using the values of <span class="ot1-zi4r-0-x-x-120">mapID </span>and the atoms assigned to
+each map are chosen based on non-zero values of the occupancy column in the file <span class="ot1-zi4r-0-x-x-120">atoms.pdb</span>. The coefficients
+<!--l. 341--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi>k</mi></mrow></msub></math> in eq. <a href="#eq:Multi-Map_variable">1<!--tex4ht:ref: eq:Multi-Map_variable --></a> are
+                                                                                         
+                                                                                         
+defined by the <span class="ot1-zi4r-0-x-x-120">componentCoeff </span>keywords. When the variable is computed, the values of each map at the coordinates
+of the atoms <!--l. 342--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>
+are computed: this is carried out using linear interpolation between the grid points, as is done by
+the <a href="https://www.ks.uiuc.edu/Research/vmd/vmd-1.9.4/ug/node91.html#table:ug:volkeywords"><span class="ot1-zi4r-0-x-x-120">interpvol</span></a> selection property. If a periodic cell is defined, the atomic coordinates
+<!--l. 343--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></math> are
+wrapped inside it internally to Colvars (so that they all fit inside the map's domain) and the resulting values of
+<!--l. 343--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math> are
+summed up inside the Colvars module.
+</p><!--l. 345--><p class="noindent">
+</p>
+<h4 class="likesubsectionHead"><a id="x1-90002"></a>NAMD syntax.</h4>
+<!--l. 347--><p class="noindent">Turning our attention to NAMD, things change slightly because <span class="ptmri7t-x-x-120">(i) </span>NAMD uses a different syntax to load
+volumetric maps, and <span class="ptmri7t-x-x-120">(ii) </span>a larger chunk of the computation is carried out by NAMD directly instead of
+using Colvars code. This is done to maximize parallel efficiency: NAMD computes the sum over atoms
+<!--l. 348--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mo class="MathClass-op">∑</mo><!--nolimits--></mrow><mrow><mi>i</mi></mrow></msub><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>
+in parallel, while Colvars carries out the much simpler sum over the maps,
+<!--l. 348--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mo class="MathClass-op">∑</mo><!--nolimits--></mrow><mrow><mi>k</mi></mrow></msub> <mfenced close=")" open="(" separators=""><mrow><mo class="MathClass-op">…</mo></mrow></mfenced></math>.
+(This capability was introduced into NAMD starting from version 2.14 as part of the
+implementation of the <span class="ot1-zi4r-0-x-x-120">mapTotal </span>function <span class="cite">[<a href="#XFiorin2020">1</a>]</span>; previous versions could compute the
+<!--l. 350--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math> <span class="cite">[<a href="#XWells2007">3</a>]</span>,
+but did not add them up.)
+</p><!--l. 352--><p class="indent">   The <a href="https://www.ks.uiuc.edu/Research/namd/2.14/ug/node43.html">GridForces</a> commands in NAMD are used to load each map, assigning an unique label to each
+one. The same labels are then used inside Colvars to reference the maps.</p>
+<div class="mdframed" id="mdframed-9">
+<!--l. 354--><p class="noindent"></p><pre><span class="phvb7t-x-x-120">Loading volumetric maps (NAMD version).</span><br class="newline"/>mGridForcePotFile       map_001 map_001.dx<br class="newline"/>mGridForceFile          map_001 atoms.pdb<br class="newline"/>mGridForceCol           map_001 O<br class="newline"/>mGridForceChargeCol     map_001 B<br class="newline"/># Disable this grid's scale factors; the Colvars module will compute the force<br class="newline"/>mGridForceScale         map_001 0.0 0.0 0.0<br class="newline"/># Continuously interpolate between periodic images of the map<br class="newline"/>mGridForceCont1         map_001 yes<br class="newline"/>mGridForceCont2         map_001 yes<br class="newline"/>mGridForceCont3         map_001 yes<br class="newline"/># Do not raise an error if the grid extends beyond the simulation cell<br class="newline"/>mGridForceCheckSize     map_001 off<br class="newline"/><br class="newline"/>mGridForcePotFile       map_002 map_002.dx<br class="newline"/>mGridForceFile          map_002 atoms.pdb<br class="newline"/>mGridForceCol           map_002 O<br class="newline"/>mGridForceChargeCol     map_002 B<br class="newline"/>mGridForceScale         map_002 0.0 0.0 0.0<br class="newline"/>mGridForceCont1         map_002 yes<br class="newline"/>mGridForceCont2         map_002 yes<br class="newline"/>mGridForceCont3         map_002 yes<br class="newline"/>mGridForceCheckSize     map_002 off </pre>
+</div>
+<!--l. 378--><p class="indent">   As implied by the keywords above, the selection of atoms is carried out using NAMD keywords.
+GridForces' syntax requires both a “magnitude" flag via <span class="ot1-zi4r-0-x-x-120">mGridForceCol </span>and a “charge" flag via
+<span class="ot1-zi4r-0-x-x-120">mGridForceChargeCol</span>. When a homogeneous set of particles is used, it is convenient to just use 1 for
+both fields in the PDB files.
+</p><!--l. 382--><p class="indent">   The keyword <span class="ot1-zi4b-0-x-x-120">mGridForceScale </span>is very important: if given non-zero values, a traditional GridForces
+simulation is carried out <span class="cite">[<a href="#XWells2007">3</a>]</span>: it is necessary to assign zero to disable GridForces and enable instead a
+Multi-Map simulation <span class="cite">[<a href="#XFiorin2020">1</a>]</span>. The flags <span class="ot1-zi4r-0-x-x-120">mGridForceContX </span>and <span class="ot1-zi4r-0-x-x-120">mGridForceCheckSize </span>are specific to an
+intrinsically periodic system like a lipid bilayer. When a constant-pressure simulation is carried out and
+the simulation cell expands beyond the boundaries of the maps, rather having atoms “fall off the map" it is
+much more robust to continuously interpolate between periodic images of the maps themselves, as <a href="https://www.ks.uiuc.edu/Research/namd/2.14/ug/node43.html">the
+GridForces syntax</a> allows.
+</p><!--l. 386--><p class="indent">   Do fluctuations in the simulation cell size affect simulation results? Unfortunately yes: for historical
+consistency with the original GridForces method <span class="cite">[<a href="#XWells2007">3</a>]</span>, volumetric maps are defined in <span class="ptmri7t-x-x-120">absolute </span>coordinates
+and are
+</p><!--l. 388--><p class="indent">   For this reason, it is best to use 2D deformation functions
+<!--l. 388--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>x</mi><mo class="MathClass-punc">,</mo><mi>y</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+whose slope is small or zero at the edges of the simulation cell. For sinusoids, using
+<!--l. 389--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="qopname">cos</mo><!--nolimits--><mrow><mo class="MathClass-open">(</mo><mrow><mn>2</mn><mi>π</mi><mi>x</mi><mo class="MathClass-bin">∕</mo><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math> is a much better
+choice than <!--l. 389--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="qopname">sin</mo><!--nolimits--><mrow><mo class="MathClass-open">(</mo><mrow><mn>2</mn><mi>π</mi><mi>x</mi><mo class="MathClass-bin">∕</mo><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>.
+If, for example, the simulation cell contracted by 1% compared to its equlibrium width
+<!--l. 390--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></math> , this
+fluctuation would cause the following changes at the cell's edges:
+                                                                                         
+                                                                                         
+<!--tex4ht:inline--></p><!--l. 391--><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<mtable class="eqnarray-star" columnalign="right center left">
+<mtr><mtd class="eqnarray-1"> <mfenced close="|" open="|" separators=""><mrow><mo class="qopname">cos</mo><!--nolimits--> <mfenced close=")" open="(" separators=""><mrow><mfrac><mrow><mn>2</mn><mi>π</mi><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow>
+<mrow><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow></mfrac> </mrow></mfenced><mo class="MathClass-bin">−</mo><mo class="qopname">cos</mo><!--nolimits--> <mfenced close=")" open="(" separators=""><mrow><mfrac><mrow><mn>2</mn><mi>π</mi><mn>0</mn><mo class="MathClass-punc">.</mo><mn>9</mn><mn>9</mn><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow>
+<mrow><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow></mfrac> </mrow></mfenced></mrow></mfenced></mtd><mtd class="eqnarray-2"> <mo class="MathClass-rel">≃</mo> <mn>0</mn><mo class="MathClass-punc">.</mo><mn>0</mn><mn>0</mn><mn>0</mn><mn>4</mn><mn>9</mn></mtd><mtd class="eqnarray-3"> </mtd><mtd class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd class="eqnarray-1"> <mfenced close="|" open="|" separators=""><mrow><mo class="qopname">sin</mo><!--nolimits--> <mfenced close=")" open="(" separators=""><mrow><mfrac><mrow><mn>2</mn><mi>π</mi><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow>
+<mrow><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow></mfrac> </mrow></mfenced><mo class="MathClass-bin">−</mo><mo class="qopname">sin</mo><!--nolimits--> <mfenced close=")" open="(" separators=""><mrow><mfrac><mrow><mn>2</mn><mi>π</mi><mn>0</mn><mo class="MathClass-punc">.</mo><mn>9</mn><mn>9</mn><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow>
+<mrow><msub><mrow><mi>L</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow></mfrac> </mrow></mfenced></mrow></mfenced></mtd><mtd class="eqnarray-2"> <mo class="MathClass-rel">≃</mo> <mn>0</mn><mo class="MathClass-punc">.</mo><mn>0</mn><mn>3</mn><mn>1</mn> </mtd><mtd class="eqnarray-3"> </mtd><mtd class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd> </mtr></mtable>
+</math>
+<!--l. 394--><p class="nopar">
+Therefore, there is a much smaller discontinuity when using a deformation function that is flat at the cell's edges (i.e.
+<!--l. 395--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="qopname">cos</mo><!--nolimits--><mrow><mo class="MathClass-open">(</mo><mrow><mo class="qopname">…</mo></mrow><mo class="MathClass-close">)</mo></mrow></math>) than one with a
+finite slope (i.e. <!--l. 395--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="qopname">sin</mo><!--nolimits--><mrow><mo class="MathClass-open">(</mo><mrow><mo class="qopname">…</mo></mrow><mo class="MathClass-close">)</mo></mrow></math>).
+</p><!--l. 397--><p class="indent">   For 2D deformation functions <!--l. 397--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>x</mi><mo class="MathClass-punc">,</mo><mi>y</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+that are not periodic to begin with, the simplest choice is generally to make them periodic by gradually
+switching them to zero near the cell's edges, i.e. assuming on average a flat bilayer shape as a boundary
+condition. Based on what shown above, this choice is not only the simplest but also the most robust
+one.
+</p><!--l. 402--><p class="indent">   Having defined both the maps and the atom selections through NAMD flags, the Colvars configuration
+is much simplified:</p>
+<div class="mdframed" id="mdframed-10">
+<!--l. 403--><p class="noindent"></p><pre><span class="phvb7t-x-x-120">Turning volumetric maps into collective variables (NAMD version).</span><br class="newline"/>colvar <span class="cmsy-10x-x-120">{</span><br class="newline"/>    name xi<br class="newline"/>    mapTotal <span class="cmsy-10x-x-120">{</span><br class="newline"/>        name map_001<br class="newline"/>        componentCoeff 1.0<br class="newline"/>        mapName map_001<br class="newline"/>    <span class="cmsy-10x-x-120">}</span><br class="newline"/>    mapTotal <span class="cmsy-10x-x-120">{</span><br class="newline"/>        name map_002<br class="newline"/>        componentCoeff 2.0<br class="newline"/>        mapName map_002<br class="newline"/>    <span class="cmsy-10x-x-120">}</span><br class="newline"/><span class="cmsy-10x-x-120">}</span></pre>
+</div>
+<!--l. 418--><p class="indent">   When the variable <span class="ot1-zi4r-0-x-x-120">xi </span>is computed, Colvars will simply retrieve the pre-computed
+value of each <span class="ot1-zi4r-0-x-x-120">mapTotal </span>function from NAMD. It should be noted that the values of
+<!--l. 419--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi mathvariant="bold">x</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math> are
+computed by default with a cubic interpolation between the neighboring grid points. Therefore,
+Multi-Map variables computed by VMD and NAMD over the same atomic configuration will be very
+similar, but not identical.
+</p><!--l. 422--><p class="noindent">
+</p>
+<h4 class="likesubsectionHead"><a id="x1-100002"></a>Key takeaways.</h4>
+<!--l. 424--><p class="noindent">The implementations of the Multi-Map variable in VMD and NAMD differ in several ways:
+</p>
+<ul class="itemize1">
+<li class="itemize">The VMD implementation loops over atoms internally to the Colvars module (thus requiring
+      selection and weights specified within it), whereas the NAMD implementation loops over
+      atoms externally to Colvars: atom selection syntax and parallel performance are different.
+      </li>
+<li class="itemize">In VMD, the value of a volumetric map is interpolated linearly over the neighboring grid
+      points, whereas in NAMD the interpolation is cubic (more accurate) and is provided by the
+      <a href="https://www.ks.uiuc.edu/Research/namd/2.14/ug/node43.html">GridForces</a> code.
+      </li>
+<li class="itemize">In VMD, periodic images of a map are not considered; in NAMD, it is possible to interpolate
+      between adjacent periodic images of the same map (again, using the existing <a href="https://www.ks.uiuc.edu/Research/namd/2.14/ug/node43.html">GridForces</a>
+      options).</li></ul>
+<!--l. 432--><p class="noindent">
+</p>
+<h3 class="sectionHead"><span class="titlemark">3    </span> <a id="x1-110003"></a>Interactive visualization with the Colvars Dashboard</h3>
+<!--l. 434--><p class="noindent">The <a href="http://colvars.github.io/colvars-refman-vmd/colvars-refman-vmd.html#sec:dashboard">Colvars Dashboard</a> is a graphical user interface for the Colvars module, implemented as a VMD
+plugin. It is used here to visualize how various atomic properties (in this case, atomic coordinates and
+volumetric maps) are used to compute a collective variable. The features exemplified here are
+shown using either the bilayer or the protein example, but may be used with either system
+interchangeably.
+</p><!--l. 438--><p class="noindent">
+</p>
+<h4 class="subsectionHead"><span class="titlemark">3.1    </span> <a id="x1-120003.1"></a>Loading the system and defining the variable.</h4>
+<!--l. 440--><p class="noindent">The molecular structure of the biilayer and an equilibrium MD trajectory may be loaded from the VMD
+GUI following the usual steps, or using the commands below.</p>
+<div class="mdframed" id="mdframed-11">
+<!--l. 441--><p class="noindent"></p><pre>mol new popc_100.psf type psf<br class="newline"/>mol addfile popc_100.eq.coor.dcd type dcd waitfor all </pre>
+</div>
+<!--l. 445--><p class="noindent">The bilayer was pre-equilibrated at a temperature of 300 K and a pressure of 1 atm semi-isotropically
+applied to the lateral and transverse directions. Shown in the snapshot below are the bilayer and its two
+nearest periodic images along the X axis (shown in “Ghost" material): </p>
+<div class="center">
+<!--l. 447--><p class="noindent">
+</p><!--l. 448--><p class="noindent"><img alt="PIC" src="bilayer-snapshot.jpg"/></p></div>
+<!--l. 451--><p class="indent">   Next, the Multi-Map collective variable needs to be defined, such that the Colvars module can
+compute it by accessing directly the atomic coordinates and volumetric maps from VMD's memory. For a
+single-map variable, this definition may be done from scratch <a href="https://colvars.github.io/colvars-refman-vmd/colvars-refman-vmd.html#sec:dashboard_config_editor">inside the Dashboard GUI</a>. However, it is
+good to remember that we plan on using <span class="ptmri7t-x-x-120">multiple </span>maps, and there are significant technical differences
+between VMD and NAMD. Manual definition from scratch for this variable is definitely possible, but a bit
+tedious. To automatically define the variable, one can run the VMD script generated by the
+<a href="https://github.com/Colvars/colvars/colvartools/gen_multimap.py"><span class="ot1-zi4r-0-x-x-120">gen</span><span class="ot1-zi4r-0-x-x-120">_multimap.py</span></a> tool:</p>
+<div class="mdframed" id="mdframed-12">
+<!--l. 456--><p class="noindent"></p><pre>source cosine.vmd </pre>
+</div>
+<!--l. 459--><p class="noindent">which automates the tasks of <span class="ptmri7t-x-x-120">(i) </span>loading the maps, <span class="ptmri7t-x-x-120">(ii) </span>defining the Multi-Map collective variable, and <span class="ptmri7t-x-x-120">(iii)</span>
+defining single-map variables useful to monitor the relative contribution of each map. The latter ones are
+particularly useful for plotting and visualization.
+                                                                                         
+                                                                                         
+</p><!--l. 463--><p class="noindent">
+</p>
+<h4 class="subsectionHead"><span class="titlemark">3.2    </span> <a id="x1-130003.2"></a>Plotting the trajectory of Multi-Map variables.</h4>
+<!--l. 465--><p class="noindent">The Dashboard window (shown right below) can be accessed under the “<span class="ot1-zi4r-0-x-x-120">Extensions/Analysis</span>"
+menu:<br class="newline"/><img alt="PIC" src="dashboard-open.png"/><br class="newline"/>
+</p><!--l. 468--><p class="noindent">In the central region of the window, the values of the collective variables currently defined are shown.
+These are the Multi-Map collective variable, named “<span class="ot1-zi4r-0-x-x-120">multimap</span>", and the single-map variables, named
+“<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_001</span>" through “<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_005</span>" for the upper-leaflet maps (and similarly for the lower leaflet. By
+default, the values correspond to the atomic configuration currently shown in the VMD Display
+window (see the “<span class="ot1-zi4r-0-x-x-120">Track VMD frame</span>" checkbox). Optionally, the values of “<span class="ot1-zi4r-0-x-x-120">multimap</span>" over the
+entire trajectory loaded in memory can be plotted. First, the variable “<span class="ot1-zi4r-0-x-x-120">multimap</span>" may be
+selected from the list by simply clicking on it, and then clicking on the “<span class="ot1-zi4r-0-x-x-120">Timeline plot</span>"
+button:<br class="newline"/><img alt="PIC" src="dashboard-multiplot-multimap.png"/> which shows the variable to be in equilibrium around an approximate value of 11 (dimensionless
+units).
+</p><!--l. 476--><p class="indent">   The contributions of the individual maps to the Multi-Map variable can also be shown over time.
+Multiple variables can be selected in the Dashboard by holding the “<span class="ot1-zi4r-0-x-x-120">Shift</span>" key while clicking on their
+names:<br class="newline"/><img alt="PIC" src="dashboard-upper.png"/><br class="newline"/>and then using again the “<span class="ot1-zi4r-0-x-x-120">Timeline plot</span>" button. For the single-map variables named “<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_001</span>"
+through “<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_005</span>", this plot shows five stable trajectories distinct different equilibrium
+values:<br class="newline"/><img alt="PIC" src="dashboard-multiplot-singlemaps.png"/> This correlates well with how the individual maps were generated: the two largest contributions are from
+“<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_002</span>" and “<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_003</span>", which model a nearly-flat leaflet with cosine-shaped deformations peaking at
+<!--l. 482--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-bin">−</mo><mn>2</mn></math> and
+<!--l. 482--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-bin">+</mo><mn>2</mn></math> Å,
+respectively. Next in order of relative importance are the two maps “<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_001</span>"
+and “<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_004</span>" correspond to stronger cosine-shaped deformations peaking at
+<!--l. 483--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-bin">−</mo><mn>6</mn></math> and
+<!--l. 483--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-bin">+</mo><mn>6</mn></math> Å.
+Lastly, the map “<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_005</span>" describes the shape of a strongly bent bilayer (a cosine of
+<!--l. 484--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mn>0</mn></math> Å in
+amplitude) and its contribution is the lowest.
+                                                                                         
+                                                                                         
+</p><!--l. 486--><p class="indent">   You have certainly noticed that the above plots are not optimal for being used as article figures or
+presentation slides: consider using the “File" menu of the “Multiplot" window to export the time series of
+the variables for further analysis. The most useful application of the Multiplot window is
+<span class="ptmri7t-x-x-120">interactive </span>visualization: for more information, see the <a href="https://colvars.github.io/colvars-refman-vmd/colvars-refman-vmd.html#sec:dashboard_visualization">visualization section</a> of the Dashboard
+documentation.
+</p><!--l. 490--><p class="noindent">
+</p>
+<h4 class="subsectionHead"><span class="titlemark">3.3    </span> <a id="x1-140003.3"></a>Visualizing the maps associated to a variable.</h4>
+<!--l. 492--><p class="noindent">The Colvars Dashboard can automate the creation of graphical representations of the atoms and the
+volumetric maps. First, one can use the the “<span class="ot1-zi4r-0-x-x-120">Settings</span>" tab of the Dashboard's main window to
+customize the representation parameters of the maps. For example, new maps may be shown with a
+“Transparent" material, a contour level equal to 80% of the range between the minimum and
+maximum values of the map, and enabling the display of two adjacent periodic images along the X
+axis):<br class="newline"/><img alt="PIC" src="dashboard-settings.png"/>
+</p><!--l. 497--><p class="noindent">To choose which maps to display, either the Multi-Map variable or a group of individual maps may be
+selected, as done earlier to display their values in the Multiplot window. For example, the five maps
+“<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_001</span>" through “<span class="ot1-zi4r-0-x-x-120">upper</span><span class="ot1-zi4r-0-x-x-120">_005</span>" are selected and displayed using on the “<span class="ot1-zi4r-0-x-x-120">Show volmaps</span>" button from
+the “<span class="ot1-zi4r-0-x-x-120">Actions</span>" tab: </p>
+<div class="center">
+<!--l. 499--><p class="noindent">
+</p><!--l. 500--><p class="noindent"><img alt="PIC" src="bilayer-maps-upper-snapshot.jpg"/></p></div>
+<!--l. 502--><p class="noindent">which shows the five selected maps as contour surfaces, each with a distinct color (chosen
+automatically) and a box representing their boundaries. Due to how the volumetric map's box is
+drawn in VMD, a gap appears between this box and its periodic images: the width of this gap
+is exactly one grid spacing (half on either side). During a simulation, for any coordinates
+<!--l. 504--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">x</mi></math> in this region the
+value of map <!--l. 504--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+would be computed by interpolation between its values at the two adjacent boundaries.
+</p><!--l. 507--><p class="noindent">
+</p>
+<h4 class="subsectionHead"><span class="titlemark">3.4    </span> <a id="x1-150003.4"></a>Visualizing atoms and atomic gradients of map-based variables</h4>
+<!--l. 509--><p class="noindent">To illustrate the ability of the Colvars Dashboard to visualize atomic properties associated
+with collective variables (i.e., atom positions and gradients), we return to the ADK protein
+example:</p>
+<div class="mdframed" id="mdframed-13">
+<!--l. 510--><p class="noindent"></p><pre><span class="phvb7t-x-x-120">Load ADK input files and Multi-Map definition into VMD.</span><br class="newline"/>mol new 1ake-initial-docked_autopsf.psf<br class="newline"/>mol addfile 1ake-initial-docked_autopsf.pdb type pdb waitfor all<br class="newline"/>mol addfile 4ake-target_autopsf.pdb type pdb waitfor all<br class="newline"/>source adk-multimap.vmd </pre>
+</div>
+<!--l. 517--><p class="indent">   Firstly, the volumetric maps can be shown as described in the previous section. Secondly,
+from the “<span class="ot1-zi4r-0-x-x-120">Settings</span>" tab of the Dashboard's main window it is useful to select which atoms
+to display alongside them. The list of atoms associated to each colvar is automatically
+retrieved by the Dashboard window from the Colvars module's memory, and does not need
+to be specified manually. However, because Multi-Map variables are typically defined over
+many atoms, the simultaneous representation of their positions and gradients may be rather
+crowded. It is preferable to define a relatively small selection of relevant atoms, e.g. the
+C<!--l. 521--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow></mrow><mrow><mi>α</mi></mrow></msub></math> atoms
+of the “lid" domain (approximately residues 122 to 156) :<br class="newline"/><img alt="PIC" src="dashboard-gradients-settings.png"/>
+</p><!--l. 525--><p class="indent">   Upon returning to the “<span class="ot1-zi4r-0-x-x-120">Actions</span>" tab, the “<span class="ot1-zi4r-0-x-x-120">Show atoms</span>" and “<span class="ot1-zi4r-0-x-x-120">Show gradients</span>" buttons can be
+used to visualize the contribution of these atoms to the dynamics of the Multi-Map variable:
+</p>
+<div class="center">
+<!--l. 526--><p class="noindent">
+</p><!--l. 527--><p class="noindent"><img alt="PIC" src="adk-gradients.jpg"/></p></div>
+<!--l. 530--><p class="indent">   The above figure shows that for the atoms in the “lid" domain, there are
+two alternative pathways to increase the value of the Multi-Map variable
+<!--l. 530--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>: <span class="ptmri7t-x-x-120">(i) </span>atoms moving toward
+regions where both <!--l. 530--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ϕ</mi></mrow><mrow><mn>1</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+and <!--l. 530--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ϕ</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math> are
+zero (i.e. away from any density contour), and <span class="ptmri7t-x-x-120">(ii) </span>atoms moving toward the region where
+<!--l. 530--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ϕ</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math> is
+non-zero (i.e. toward the density lobe shown in red, near the upper right corner). The former represents
+                                                                                         
+                                                                                         
+any movements away from both the initial and target shapes, and the latter a conformational change
+<span class="ptmri7t-x-x-120">toward </span>the target shape.
+</p><!--l. 533--><p class="indent">   Thanks to being located in a region where <!--l. 533--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ϕ</mi></mrow><mrow><mn>1</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+and <!--l. 533--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ϕ</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+overlap but are not identical, gradients of atoms between the initial ad target shapes appear larger than the
+others, and are likely to produce physically relevant transitions when a force is applied on the Multi-Map
+variable. Nonetheless, it is good to keep in mind that any force applied will also have some components
+leading away from either shape. The use of restraints can greatly alleviate but never resolve this issue
+completely. Careful examination of the simulated trajectory is an essential requirement for PMF
+computations along this type of variable.
+</p><!--l. 1--><p class="noindent">
+</p>
+<h3 class="likesectionHead"><a id="x1-160003.4"></a>References</h3>
+<!--l. 1--><p class="noindent">
+</p><div class="thebibliography">
+<p class="bibitem"><span class="biblabel">
+ [1]<span class="bibsp">   </span></span><a id="XFiorin2020"></a>Giacomo Fiorin, Fabrizio Marinelli, and José D. Faraldo-Gómez.  Direct derivation of
+    free energies of membrane deformation and other solvent density variations from enhanced
+    sampling molecular dynamics. <span class="ptmri7t-x-x-120">J. Comp. Chem.</span>, 41(5):449--459, 2020.
+    </p>
+<p class="bibitem"><span class="biblabel">
+ [2]<span class="bibsp">   </span></span><a id="XVant2020"></a>John W.  Vant,  Daipayan  Sarkar,  Giacomo  Fiorin,  Robert  Skeel,  Josh V.  Vermaas,  and
+    Abhishek Singharoy.  Data-guided multi-map variables for ensemble refinement of molecular
+    movies. <span class="ptmri7t-x-x-120">bioRxiv</span>, 2020.
+    </p>
+<p class="bibitem"><span class="biblabel">
+ [3]<span class="bibsp">   </span></span><a id="XWells2007"></a>David B. Wells, Volha Abramkina, and Aleksei Aksimentiev.  Exploring transmembrane
+    transport through <!--l. 21--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>-hemolysin
+    with grid-steered molecular dynamics. <span class="ptmri7t-x-x-120">J. Chem. Phys.</span>, 127(12):125101, sep 2007.
+</p>
+</div>
+______________________________________________________________________________________
+<!--l. 544--><p class="noindent">For questions or comments about: </p>
+<ul class="itemize1">
+<li class="itemize">technical details of the protocols shown here, contact the <a href="https://www.ks.uiuc.edu/Research/vmd/mailing_list/">VMD</a> or <a href="https://www.ks.uiuc.edu/Research/namd/mailing_list/">NAMD</a> mailing lists;
+      </li>
+<li class="itemize">code implementation, open an issue on the <a href="https://github.com/Colvars/colvars/issues">Colvars GitHub</a> repository;
+      </li>
+<li class="itemize">this article specifically, contact <a href="mailto:giacomo.fiorin@gmail.com">giacomo.fiorin@gmail.com</a>.</li></ul>
+<!--l. 553--><p class="noindent"></p></div> </div>
+</body>
+</html>
