@@ -89,16 +89,21 @@ Inheritance diagram for colvar::map_total:</div>
 Collaboration diagram for colvar::map_total:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvar_1_1map__total__coll__graph.png" border="0" usemap="#acolvar_1_1map__total_coll__map" alt="Collaboration graph"/></div>
-<map name="colvar_1_1map__total_coll__map" id="colvar_1_1map__total_coll__map">
-<area shape="rect" title=" " alt="" coords="753,56,889,83"/>
-<area shape="rect" href="classcolvar_1_1cvc.html" title="Colvar component (base class for collective variables)" alt="" coords="612,56,704,83"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="360,5,459,32"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="45,5,155,32"/>
-<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="363,56,456,83"/>
-<area shape="rect" href="classcolvarvalue.html" title="Value of a collective variable: this is a metatype which can be set at runtime. By default it is set ..." alt="" coords="360,164,459,191"/>
-<area shape="rect" href="classcolvarmodule_1_1vector1d.html" title=" " alt="" coords="12,98,188,139"/>
-<area shape="rect" href="classcolvarmodule_1_1quaternion.html" title="1&#45;dimensional vector of real numbers with four components and a quaternion algebra" alt="" coords="5,164,195,191"/>
-<area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="17,215,183,241"/>
+<map name="colvar_1_1map__total_coll__map" id="acolvar_1_1map__total_coll__map">
+<area shape="rect" title=" " alt="" coords="1159,164,1295,191"/>
+<area shape="rect" href="classcolvar_1_1cvc.html" title="Colvar component (base class for collective variables)" alt="" coords="943,108,1035,135"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="624,5,723,32"/>
+<area shape="rect" href="classcolvarmodule_1_1atom__group.html" title="Group of atom objects, mostly used by a colvar::cvc object to gather all atomic data." alt="" coords="912,205,1065,246"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="273,5,383,32"/>
+<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="627,311,720,337"/>
+<area shape="rect" href="classcolvarvalue.html" title="Value of a collective variable: this is a metatype which can be set at runtime. By default it is set ..." alt="" coords="624,260,723,287"/>
+<area shape="rect" href="classcolvarmodule_1_1vector1d.html" title=" " alt="" coords="240,301,416,342"/>
+<area shape="rect" href="classcolvarmodule_1_1rotation.html" title="A rotation between two sets of coordinates (for the moment a wrapper for colvarmodule::quaternion)" alt="" coords="588,429,759,456"/>
+<area shape="rect" href="classcolvarmodule_1_1quaternion.html" title="1&#45;dimensional vector of real numbers with four components and a quaternion algebra" alt="" coords="233,387,423,413"/>
+<area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="245,216,411,243"/>
+<area shape="rect" href="classcolvarmodule_1_1rmatrix.html" title="2&#45;dimensional array of real numbers with three components along each dimension (works with colvarmodu..." alt="" coords="245,475,411,501"/>
+<area shape="rect" href="classcolvarmodule_1_1matrix2d.html" title=" " alt="" coords="5,467,184,509"/>
+<area shape="rect" href="classcolvarmodule_1_1matrix2d.html" title=" " alt="" coords="239,542,417,583"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -438,14 +443,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a925ce5f99620861032dd53b8e5684773"><td class="memItemLeft" align="right" valign="top"><a id="a925ce5f99620861032dd53b8e5684773"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1map__total.html#a925ce5f99620861032dd53b8e5684773">map_name</a></td></tr>
-<tr class="memdesc:a925ce5f99620861032dd53b8e5684773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier of the map object (as used by the simulation engine) <br /></td></tr>
-<tr class="separator:a925ce5f99620861032dd53b8e5684773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1412bd97e60049b9aa8652a3b90cb876"><td class="memItemLeft" align="right" valign="top"><a id="a1412bd97e60049b9aa8652a3b90cb876"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1map__total.html#a1412bd97e60049b9aa8652a3b90cb876">volmap_name</a></td></tr>
+<tr class="memdesc:a1412bd97e60049b9aa8652a3b90cb876"><td class="mdescLeft">&#160;</td><td class="mdescRight">String identifier of the map object (as used by the simulation engine) <br /></td></tr>
+<tr class="separator:a1412bd97e60049b9aa8652a3b90cb876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2874edd95057d8dd3e1f2c9f9b70247"><td class="memItemLeft" align="right" valign="top"><a id="ae2874edd95057d8dd3e1f2c9f9b70247"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1map__total.html#ae2874edd95057d8dd3e1f2c9f9b70247">volmap_id</a></td></tr>
+<tr class="memdesc:ae2874edd95057d8dd3e1f2c9f9b70247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numeric identifier of the map object (as used by the simulation engine) <br /></td></tr>
+<tr class="separator:ae2874edd95057d8dd3e1f2c9f9b70247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39e3a19f371b390200ec1104ef54f135"><td class="memItemLeft" align="right" valign="top"><a id="a39e3a19f371b390200ec1104ef54f135"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1map__total.html#a39e3a19f371b390200ec1104ef54f135">volmap_index</a></td></tr>
 <tr class="memdesc:a39e3a19f371b390200ec1104ef54f135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the map objet in the proxy arrays. <br /></td></tr>
 <tr class="separator:a39e3a19f371b390200ec1104ef54f135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0044242f68801e6cf6811b953d8228"><td class="memItemLeft" align="right" valign="top"><a id="aac0044242f68801e6cf6811b953d8228"></a>
+<a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1map__total.html#aac0044242f68801e6cf6811b953d8228">atoms</a></td></tr>
+<tr class="memdesc:aac0044242f68801e6cf6811b953d8228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Group of atoms selected internally (optional) <br /></td></tr>
+<tr class="separator:aac0044242f68801e6cf6811b953d8228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acabca344a51707cecf0bc2bb754e47d8"><td class="memItemLeft" align="right" valign="top"><a id="acabca344a51707cecf0bc2bb754e47d8"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1map__total.html#acabca344a51707cecf0bc2bb754e47d8">atom_weights</a></td></tr>
+<tr class="memdesc:acabca344a51707cecf0bc2bb754e47d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights assigned to each atom (default: uniform weights) <br /></td></tr>
+<tr class="separator:acabca344a51707cecf0bc2bb754e47d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvar_1_1cvc"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvar_1_1cvc')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a></td></tr>
 <tr class="memitem:aaa9894ef456afa05985e26332abffeae inherit pro_attribs_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="aaa9894ef456afa05985e26332abffeae"></a>
 <a class="el" href="classcolvarvalue.html">colvarvalue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aaa9894ef456afa05985e26332abffeae">x</a></td></tr>
@@ -894,7 +911,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 18 2020 17:34:44 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Mon Oct 26 2020 15:08:22 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

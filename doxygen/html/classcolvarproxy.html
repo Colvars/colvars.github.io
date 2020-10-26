@@ -80,12 +80,11 @@ $(function() {
 Inheritance diagram for colvarproxy:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarproxy__inherit__graph.png" border="0" usemap="#acolvarproxy_inherit__map" alt="Inheritance graph"/></div>
-<map name="colvarproxy_inherit__map" id="colvarproxy_inherit__map">
+<map name="colvarproxy_inherit__map" id="acolvarproxy_inherit__map">
 <area shape="rect" title="Interface between the collective variables module and the simulation or analysis program (NAMD,..." alt="" coords="244,208,343,235"/>
-<area shape="rect" href="classcolvarproxy__gromacs.html" title=" " alt="" coords="391,132,553,159"/>
-<area shape="rect" href="classcolvarproxy__lammps.html" title="Communication between colvars and LAMMPS (implementation of colvarproxy)" alt="" coords="393,183,551,209"/>
-<area shape="rect" href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="401,233,543,260"/>
-<area shape="rect" href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="405,284,539,311"/>
+<area shape="rect" href="classcolvarproxy__lammps.html" title="Communication between colvars and LAMMPS (implementation of colvarproxy)" alt="" coords="391,157,549,184"/>
+<area shape="rect" href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="399,208,541,235"/>
+<area shape="rect" href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="403,259,537,285"/>
 <area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="23,5,178,32"/>
 <area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="27,56,174,83"/>
 <area shape="rect" href="classcolvarproxy__atom__groups.html" title="Container of atom group data (allow collection of aggregated atomic data)" alt="" coords="5,107,196,133"/>
@@ -236,6 +235,10 @@ virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a3a6993b19ec6076d62665000885f092f">angstrom_to_internal</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> l) const</td></tr>
 <tr class="memdesc:a3a6993b19ec6076d62665000885f092f inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a length from Angstrom to internal. <br /></td></tr>
 <tr class="separator:a3a6993b19ec6076d62665000885f092f inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbb96ce15cc52e7b77ce05cb044c5d9 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="acdbb96ce15cc52e7b77ce05cb044c5d9"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#acdbb96ce15cc52e7b77ce05cb044c5d9">internal_to_angstrom</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> l) const</td></tr>
+<tr class="memdesc:acdbb96ce15cc52e7b77ce05cb044c5d9 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a length from internal to Angstrom. <br /></td></tr>
+<tr class="separator:acdbb96ce15cc52e7b77ce05cb044c5d9 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9d03a32b14a83f2c63807ec6cbeec0a inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="af9d03a32b14a83f2c63807ec6cbeec0a"></a>
 virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#af9d03a32b14a83f2c63807ec6cbeec0a">boltzmann</a> ()=0</td></tr>
 <tr class="memdesc:af9d03a32b14a83f2c63807ec6cbeec0a inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boltzmann constant in internal Colvars units. <br /></td></tr>
@@ -443,22 +446,30 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a9b771e07fc726c0a9db4e9d96e03d606">add_volmap_slot</a> (int volmap_id)</td></tr>
 <tr class="memdesc:a9b771e07fc726c0a9db4e9d96e03d606 inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a slot for a volumetric map not requested yet. <br /></td></tr>
 <tr class="separator:a9b771e07fc726c0a9db4e9d96e03d606 inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab524a030dce0d28ea6a2a8f7bf3b689e inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="ab524a030dce0d28ea6a2a8f7bf3b689e"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#ab524a030dce0d28ea6a2a8f7bf3b689e">init_volmap</a> (int volmap_id)</td></tr>
-<tr class="memdesc:ab524a030dce0d28ea6a2a8f7bf3b689e inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request and prepare this volumetric map for use by Colvars. <br /></td></tr>
-<tr class="separator:ab524a030dce0d28ea6a2a8f7bf3b689e inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bae1f16f9e65bc793996b0c5f0edbc7 inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a3bae1f16f9e65bc793996b0c5f0edbc7"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a3bae1f16f9e65bc793996b0c5f0edbc7">init_volmap</a> (char const *volmap_name)</td></tr>
-<tr class="memdesc:a3bae1f16f9e65bc793996b0c5f0edbc7 inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request and prepare this volumetric map for use by Colvars. <br /></td></tr>
-<tr class="separator:a3bae1f16f9e65bc793996b0c5f0edbc7 inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c9e17e9b47f5a15d33eee1730183520 inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a4c9e17e9b47f5a15d33eee1730183520"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a4c9e17e9b47f5a15d33eee1730183520">init_volmap</a> (std::string const &amp;volmap_name)</td></tr>
-<tr class="memdesc:a4c9e17e9b47f5a15d33eee1730183520 inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request and prepare this volumetric map for use by Colvars. <br /></td></tr>
-<tr class="separator:a4c9e17e9b47f5a15d33eee1730183520 inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8194ecd9d5b7b91bcbad72843384da inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#ade8194ecd9d5b7b91bcbad72843384da">init_volmap_by_id</a> (int volmap_id)</td></tr>
+<tr class="separator:ade8194ecd9d5b7b91bcbad72843384da inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648c794cb6e7e2481694f827aed293b0 inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a648c794cb6e7e2481694f827aed293b0">init_volmap_by_name</a> (char const *volmap_name)</td></tr>
+<tr class="separator:a648c794cb6e7e2481694f827aed293b0 inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ad5ee0e8827350845e34ef490cde33 inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a25ad5ee0e8827350845e34ef490cde33">check_volmap_by_id</a> (int volmap_id)</td></tr>
+<tr class="separator:a25ad5ee0e8827350845e34ef490cde33 inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf1558ad3082a870fbec2412511a2ba inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#accf1558ad3082a870fbec2412511a2ba">check_volmap_by_name</a> (char const *volmap_name)</td></tr>
+<tr class="separator:accf1558ad3082a870fbec2412511a2ba inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d0c08131250747d98d9b58bd2b7efc inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="ab9d0c08131250747d98d9b58bd2b7efc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#ab9d0c08131250747d98d9b58bd2b7efc">init_volmap_by_name</a> (std::string const &amp;volmap_name)</td></tr>
+<tr class="memdesc:ab9d0c08131250747d98d9b58bd2b7efc inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request and prepare this volumetric map for use by Colvars. <br /></td></tr>
+<tr class="separator:ab9d0c08131250747d98d9b58bd2b7efc inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342a065a817ae132c72c1fd1d10800ee inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a342a065a817ae132c72c1fd1d10800ee"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a342a065a817ae132c72c1fd1d10800ee">check_volmap_by_name</a> (std::string const &amp;volmap_name)</td></tr>
+<tr class="memdesc:a342a065a817ae132c72c1fd1d10800ee inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that the given volmap name is valid (return COLVARS_OK if it is) <br /></td></tr>
+<tr class="separator:a342a065a817ae132c72c1fd1d10800ee inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a898d1ab387d2aab6328aa5d8840ead12 inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a898d1ab387d2aab6328aa5d8840ead12"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a898d1ab387d2aab6328aa5d8840ead12">clear_volmap</a> (int index)</td></tr>
 <tr class="memdesc:a898d1ab387d2aab6328aa5d8840ead12 inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by the CVC destructors. <br /></td></tr>
 <tr class="separator:a898d1ab387d2aab6328aa5d8840ead12 inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a379f7dbab51da7a626304c9806424e7b inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a379f7dbab51da7a626304c9806424e7b"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a379f7dbab51da7a626304c9806424e7b">get_volmap_id_from_name</a> (char const *volmap_name)</td></tr>
+<tr class="memdesc:a379f7dbab51da7a626304c9806424e7b inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the numeric ID of the given volumetric map (for the MD program) <br /></td></tr>
+<tr class="separator:a379f7dbab51da7a626304c9806424e7b inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03349dd3470c9d263b19e0a8a6fb9e2a inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a03349dd3470c9d263b19e0a8a6fb9e2a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a03349dd3470c9d263b19e0a8a6fb9e2a">get_volmap_id</a> (int index) const</td></tr>
 <tr class="memdesc:a03349dd3470c9d263b19e0a8a6fb9e2a inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the numeric ID of the given volumetric map (for the MD program) <br /></td></tr>
@@ -471,6 +482,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a4410425157eff0079a0797e6389fea4b">apply_volmap_force</a> (int index, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;new_force)</td></tr>
 <tr class="memdesc:a4410425157eff0079a0797e6389fea4b inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request that this force is applied to the given volumetric map. <br /></td></tr>
 <tr class="separator:a4410425157eff0079a0797e6389fea4b inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f5cd920c11c5ed7d30f181fb322b67 inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#ac3f5cd920c11c5ed7d30f181fb322b67">compute_volmap</a> (int flags, int volmap_id, cvm::atom_iter atom_begin, cvm::atom_iter atom_end, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *value, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *atom_field)</td></tr>
+<tr class="separator:ac3f5cd920c11c5ed7d30f181fb322b67 inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcolvarproxy__smp"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvarproxy__smp')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvarproxy__smp.html">colvarproxy_smp</a></td></tr>
 <tr class="memitem:afa754c1c0555780a44badab3e6b00a3c inherit pub_methods_classcolvarproxy__smp"><td class="memItemLeft" align="right" valign="top"><a id="afa754c1c0555780a44badab3e6b00a3c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__smp.html#afa754c1c0555780a44badab3e6b00a3c">colvarproxy_smp</a> ()</td></tr>
@@ -897,6 +910,13 @@ char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classcolvarproxy__volmaps"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__volmaps')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__volmaps.html">colvarproxy_volmaps</a></td></tr>
+<tr class="memitem:ad6904068a3e898a756104c3010d36903 inherit pub_types_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="ad6904068a3e898a756104c3010d36903"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>volmap_flag_null</b> = 0, 
+<b>volmap_flag_gradients</b> = 1, 
+<b>volmap_flag_use_atom_field</b> = (1&lt;&lt;8)
+ }</td></tr>
+<tr class="memdesc:ad6904068a3e898a756104c3010d36903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags controlling what computation is done on the map. <br /></td></tr>
+<tr class="separator:ad6904068a3e898a756104c3010d36903 inherit pub_types_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_types_classcolvarproxy__system"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classcolvarproxy__system')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classcolvarproxy__system.html">colvarproxy_system</a></td></tr>
 <tr class="memitem:a207331557018b66dce3c71407bef9a77 inherit pro_types_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a207331557018b66dce3c71407bef9a77">Boundaries_type</a> { <b>boundaries_non_periodic</b>, 
 <b>boundaries_pbc_ortho</b>, 
@@ -996,7 +1016,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 18 2020 17:34:45 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Mon Oct 26 2020 15:08:23 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
