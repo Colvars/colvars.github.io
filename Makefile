@@ -75,6 +75,21 @@ colvars-refman-gromacs/colvars-refman-gromacs.html: $(BIBTEX) $(PDF) $(DOCSRCDIR
 	cp -f $(DOCDIR)/images/cover-512px.jpg ./ ; \
 	sh ../postprocess_html.sh
 
+
+multi-map/multi-map.pdf: multi-map.src/multi-map.tex
+	cd multi-map.src; \
+	make; \
+	cp -f multi-map.pdf $(DOCDIR)/multi-map/
+
+multi-map/multi-map.html: multi-map/multi-map.pdf multi-map.src/multi-map.tex
+	cd multi-map.src; \
+	cp -f $(DOCDIR)/html5mjlatex.cfg $(DOCSRCDIR)/colvars-refman-css.tex ./ ; \
+	$(HTLATEX) multi-map.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/multi-map/"; \
+	rm -f html5mjlatex.cfg colvars-refman-css.tex; \
+	cd $(DOCDIR)/multi-map; \
+	sh ../postprocess_html.sh
+
+
 doxygen: doxygen/html/index.html
 
 doxygen/html/index.html: $(SRCDIR)/*.h doxygen/Doxyfile
