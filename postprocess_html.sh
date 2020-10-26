@@ -16,6 +16,8 @@ do
 
   sed -i 's/<title><\/title>/<title>Collective Variables Module - Colvars Module - Reference Manual<\/title>/' $i
 
+  python ../remove_htmltags.py $i selfref
+
   # Remove ligatures
   # https://orbythebeach.wordpress.com/2014/09/23/removing-ligatures-in-html-files-generated-from-latex-files/
   sed -i 's/\xef\xac\x80/ff/g' $i
@@ -31,8 +33,16 @@ do
   # sed -i 's/\xc4\xb2/IJ/g' $i
   # sed -i 's/\xc4\xb3/ij/g' $i
 
-  python ../remove_htmltags.py $i selfref
-
+  # Remove bogus spaces at first line of code blocks
   sed -i 's/<p class="noindent"><\/p><pre> /<p class="noindent"><\/p><pre>/' $i
+  sed -i 's/<br class="newline"\/> /<br class="newline"\/>/g' $i
+
+  # Fix characters in code blocks
+  sed -i "s/’/'/g" $i
+  sed -i 's/¿/\>/g' $i
+  sed -i 's/¡/\</g' $i
+  sed -i 's/”/"/g' $i
+  sed -i 's/∖/\\/g' $i
+  sed -i 's/–/--/g' $i
 
 done
