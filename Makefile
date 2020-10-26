@@ -3,10 +3,10 @@
 
 # Safe order of operations: make clean; make pdf; make html
 
-COLVARSDIR=../colvars
+DOCDIR=$(PWD)
+COLVARSDIR=$(PWD)/../colvars
 SRCDIR=$(COLVARSDIR)/src
 DOCSRCDIR=$(COLVARSDIR)/doc
-DOCDIR=$(PWD)
 PDFDIR=pdf
 PDF=$(PDFDIR)/colvars-refman-lammps.pdf $(PDFDIR)/colvars-refman-namd.pdf $(PDFDIR)/colvars-refman-vmd.pdf $(PDFDIR)/colvars-refman-gromacs.pdf
 BIBTEX=$(DOCSRCDIR)/colvars-refman.bib
