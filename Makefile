@@ -8,8 +8,18 @@ COLVARSDIR=$(PWD)/../colvars
 SRCDIR=$(COLVARSDIR)/src
 DOCSRCDIR=$(COLVARSDIR)/doc
 PDFDIR=pdf
-PDF=$(PDFDIR)/colvars-refman-lammps.pdf $(PDFDIR)/colvars-refman-namd.pdf $(PDFDIR)/colvars-refman-vmd.pdf $(PDFDIR)/colvars-refman-gromacs.pdf
+PDF=$(PDFDIR)/colvars-refman-gromacs.pdf \
+	$(PDFDIR)/colvars-refman-lammps.pdf \
+	$(PDFDIR)/colvars-refman-namd.pdf \
+	$(PDFDIR)/colvars-refman-vmd.pdf \
+	vmd-1.9.4/$(PDFDIR)/colvars-refman-vmd.pdf
+
 BIBTEX=$(DOCSRCDIR)/colvars-refman.bib
+HTML=colvars-refman-gromacs/colvars-refman-gromacs.html \
+	colvars-refman-lammps/colvars-refman-lammps.html \
+	colvars-refman-namd/colvars-refman-namd.html \
+	colvars-refman-vmd/colvars-refman-vmd.html \
+	vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html
 
 # Check that we are updating the doc for the master branch
 branch := $(shell git -C $(DOCSRCDIR) symbolic-ref --short -q HEAD)
@@ -20,9 +30,11 @@ ifneq ($(FORCE), 1)
 endif
 
 .PHONY: all clean veryclean doxygen readme
+
 all: pdf html doxygen readme
+
 pdf: $(PDF)
-html: colvars-refman-namd/colvars-refman-namd.html colvars-refman-vmd/colvars-refman-vmd.html colvars-refman-lammps/colvars-refman-lammps.html colvars-refman-gromacs/colvars-refman-gromacs.html
+html: $(HTML)
 readme: $(COLVARSDIR)/README.md $(COLVARSDIR)/README-totalforce.md $(COLVARSDIR)/README-c++11.md
 	cp -f $^ ./
 
@@ -54,6 +66,11 @@ colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvar
 	cp -f $(DOCDIR)/images/colvars_diagram.png ./ ; \
 	cp -f $(DOCDIR)/images/cover-512px.jpg ./ ; \
 	sh ../postprocess_html.sh
+
+vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html: colvars-refman-vmd/colvars-refman-vmd.html
+	cp -p -f $^ $@
+vmd-1.9.4/pdf/colvars-refman-vmd.pdf: pdf/colvars-refman-vmd.pdf
+	cp -p -f $^ $@
 
 colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-lammps.tex
 	cd $(DOCSRCDIR); \
