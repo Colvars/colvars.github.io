@@ -21,6 +21,8 @@ HTML=colvars-refman-gromacs/colvars-refman-gromacs.html \
 	colvars-refman-vmd/colvars-refman-vmd.html \
 	vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html
 
+IMAGES = cover-512px.jpg
+
 # Check that we are updating the doc for the master branch
 branch := $(shell git -C $(DOCSRCDIR) symbolic-ref --short -q HEAD)
 ifneq ($(FORCE), 1)
@@ -29,14 +31,19 @@ ifneq ($(FORCE), 1)
   endif
 endif
 
-.PHONY: all clean veryclean doxygen readme
+.PHONY: all clean veryclean doxygen readme images
 
-all: pdf html doxygen readme
+all: images pdf html doxygen readme
+
+images:
+	make -C images all
 
 pdf: $(PDF)
+
 html: $(HTML)
+
 readme: $(COLVARSDIR)/README.md $(COLVARSDIR)/README-totalforce.md $(COLVARSDIR)/README-c++11.md
-	cp -f $^ ./
+	cp -p -f $^ ./
 
 $(PDFDIR)/%.pdf: $(DOCSRCDIR)/%.tex $(BIBTEX) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex
 	make -C $(DOCSRCDIR) pdf
@@ -49,58 +56,56 @@ HTLATEX_OPTS = "html5mjlatex.cfg, charset=utf-8" " -cunihtf -utf8"
 # Note: this relies on up-to-date bbl files; run pdflatex first!
 colvars-refman-namd/colvars-refman-namd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-namd.tex
 	cd $(DOCSRCDIR); \
-	cp -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
+	cp -p -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
 	$(HTLATEX) colvars-refman-namd.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-namd/"; \
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-namd; \
-	cp -f $(DOCDIR)/images/colvars_diagram.png ./ ; \
-	cp -f $(DOCDIR)/images/cover-512px.jpg ./ ; \
+	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
 	sh ../postprocess_html.sh
 
 colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-vmd.tex
 	cd $(DOCSRCDIR); \
-	cp -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
+	cp -p -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
 	$(HTLATEX) colvars-refman-vmd.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-vmd/"; \
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-vmd; \
-	cp -f $(DOCDIR)/images/colvars_diagram.png ./ ; \
-	cp -f $(DOCDIR)/images/cover-512px.jpg ./ ; \
+	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
 	sh ../postprocess_html.sh
 
 vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html: colvars-refman-vmd/colvars-refman-vmd.html
-	cp -p -f $^ $@
+	cp -p -f $^ $@; \
+	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) vmd-1.9.4/colvars-refman-vmd/
+
 vmd-1.9.4/pdf/colvars-refman-vmd.pdf: pdf/colvars-refman-vmd.pdf
 	cp -p -f $^ $@
 
 colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-lammps.tex
 	cd $(DOCSRCDIR); \
-	cp -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
+	cp -p -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
 	$(HTLATEX) colvars-refman-lammps.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-lammps/"; \
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-lammps; \
-	cp -f $(DOCDIR)/images/colvars_diagram.png ./ ; \
-	cp -f $(DOCDIR)/images/cover-512px.jpg ./ ; \
+	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
 	sh ../postprocess_html.sh
 
 colvars-refman-gromacs/colvars-refman-gromacs.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-gromacs.tex
 	cd $(DOCSRCDIR); \
-	cp -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
+	cp -p -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
 	$(HTLATEX) colvars-refman-gromacs.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-gromacs/"; \
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-gromacs; \
-	cp -f $(DOCDIR)/images/colvars_diagram.png ./ ; \
-	cp -f $(DOCDIR)/images/cover-512px.jpg ./ ; \
+	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
 	sh ../postprocess_html.sh
 
 
 multi-map/multi-map.pdf: multi-map.src/multi-map.tex
 	cd multi-map.src; \
 	make; \
-	cp -f multi-map.pdf $(DOCDIR)/multi-map/
+	cp -p -f multi-map.pdf $(DOCDIR)/multi-map/
 
 multi-map/multi-map.html: multi-map/multi-map.pdf multi-map.src/multi-map.tex
 	cd multi-map.src; \
-	cp -f $(DOCDIR)/html5mjlatex.cfg $(DOCSRCDIR)/colvars-refman-css.tex ./ ; \
+	cp -p -f $(DOCDIR)/html5mjlatex.cfg $(DOCSRCDIR)/colvars-refman-css.tex ./ ; \
 	$(HTLATEX) multi-map.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/multi-map/"; \
 	rm -f html5mjlatex.cfg colvars-refman-css.tex; \
 	cd $(DOCDIR)/multi-map; \
