@@ -21,7 +21,7 @@ HTML=colvars-refman-gromacs/colvars-refman-gromacs.html \
 	colvars-refman-vmd/colvars-refman-vmd.html \
 	vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html
 
-IMAGES = cover-512px.jpg
+IMAGES = cover-512px.jpg eulerangles-512px.png
 
 # Check that we are updating the doc for the master branch
 branch := $(shell git -C $(DOCSRCDIR) symbolic-ref --short -q HEAD)
@@ -36,7 +36,8 @@ endif
 all: images pdf html doxygen readme
 
 images:
-	make -C images all
+	make -C images all; \
+	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) $(DOCSRCDIR)/
 
 pdf: $(PDF)
 
