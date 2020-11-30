@@ -1391,9 +1391,9 @@ one <span class="ot1-zi4r-0-x-x-109">atoms</span><span class="ot1-zi4r-0-x-x-109
 <h4 class="subsectionHead"><span class="titlemark">4.6    </span> <a id="sec:cvc_rotations"></a>Rotations</h4>
 <!--l. 2055--><p class="noindent"></p></a> </div> 
 <!--l. 2057--><p class="indent">   The variables discussed in this section quantify the rotations of macromolecules (or other quasi-rigid objects)
-from a given set reference coordinates to the current coordinates. Such rotations are computed following the same
-method used for best-fit RMSDs (see <a href="#colvar|rmsd"><span class="ot1-zi4r-0-x-x-109">rmsd</span></a> and <a href="#atom-group|fittinGroup"><span class="ot1-zi4r-0-x-x-109">fittinGroup</span></a>). The underlying mathematical formalism is described
-in reference <span class="cite">[<a href="#XCoutsias2004">4</a>]</span>, and the implementation in reference <span class="cite">[<a href="#XFiorin2013">1</a>]</span>.
+from a given set of reference coordinates to the current coordinates. Such rotations are computed following the same
+method used for best-fit RMSDs (see <a href="#colvar|rmsd"><span class="ot1-zi4r-0-x-x-109">rmsd</span></a> and <a href="#atom-group|fittingGroup"><span class="ot1-zi4r-0-x-x-109">fittingGroup</span></a>). The underlying mathematical formalism is
+described in reference <span class="cite">[<a href="#XCoutsias2004">4</a>]</span>, and the implementation in reference <span class="cite">[<a href="#XFiorin2013">1</a>]</span>.
 </p><!--l. 2061--><p class="indent">   The first of the functions described is the <a href="#colvar|orientation"><span class="ot1-zi4r-0-x-x-109">orientation</span></a>, which describes the full rotation as a unit quaternion
 <!--l. 2061--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="sans-serif">q</mi> <mo class="MathClass-rel">=</mo> <mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>q</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-punc">,</mo><msub><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><msub><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc">,</mo><msub><mrow><mi>q</mi></mrow><mrow><mn>3</mn></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>,
 i.e. 4 numbers with one constraint (3 degrees of freedom). The quaternion
@@ -1403,7 +1403,7 @@ is <span class="ptmri7t-x-x-109">one of only two representations that are both c
 parameters. Although <!--l. 2063--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="sans-serif">q</mi></math>
                                                                                          
                                                                                          
-is used internally in the Colvars module for features such as the <a href="#colvar|rmsd"><span class="ot1-zi4r-0-x-x-109">rmsd</span></a> function and the <a href="#atom-group|fittinGroup"><span class="ot1-zi4r-0-x-x-109">fittinGroup</span></a>
+is used internally in the Colvars module for features such as the <a href="#colvar|rmsd"><span class="ot1-zi4r-0-x-x-109">rmsd</span></a> function and the <a href="#atom-group|fittingGroup"><span class="ot1-zi4r-0-x-x-109">fittingGroup</span></a>
 option, its direct use as a collective variable is more difficult, and mostly limited to fixed or moving
 restraints.
 </p><!--l. 2065--><p class="indent">   The two functions <a href="#colvar|orientationAngle"><span class="ot1-zi4r-0-x-x-109">orientationAngle</span></a> and <a href="#colvar|orientationProj"><span class="ot1-zi4r-0-x-x-109">orientationProj</span></a>, with the latter being
@@ -1412,20 +1412,22 @@ the cosine of the former, represent the amplitude of the full rotation described
 regardless of the direction of its axis. As one-dimensional scalar variables, both <a href="#colvar|orientationAngle"><span class="ot1-zi4r-0-x-x-109">orientationAngle</span></a> and
 <a href="#colvar|orientationProj"><span class="ot1-zi4r-0-x-x-109">orientationProj</span></a> are a much reduced simplification of the full rotation. However, they can be used in a variety of
 methods including both restraints and PMF computations.
-</p><!--l. 2069--><p class="indent">   A slightly more complete parametrization decomposition into the two parameters, <a href="#colvar|tilt"><span class="ot1-zi4r-0-x-x-109">tilt</span></a> and
-<a href="#colvar|spinAngle"><span class="ot1-zi4r-0-x-x-109">spinAngle</span></a>. These quantify the amplitudes of two independent sub-rotations away from a certain axis
+</p><!--l. 2069--><p class="indent">   A slightly more complete parametrization is achieved by decomposing the full rotation into the two parameters,
+<a href="#colvar|tilt"><span class="ot1-zi4r-0-x-x-109">tilt</span></a> and <a href="#colvar|spinAngle"><span class="ot1-zi4r-0-x-x-109">spinAngle</span></a>. These quantify the amplitudes of two independent sub-rotations away from a certain axis
 <!--l. 2070--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">e</mi></math>, and around the same
 axis <!--l. 2070--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">e</mi></math>, respectively.
 The axis <!--l. 2071--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">e</mi></math> is
 chosen by the user, and is by default the Z axis: under that choice, <a href="#colvar|tilt"><span class="ot1-zi4r-0-x-x-109">tilt</span></a> is equivalent to the sine of the Euler “pitch" angle
 <!--l. 2072--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝜃</mi></math>, and <a href="#colvar|spinAngle"><span class="ot1-zi4r-0-x-x-109">spinAngle</span></a> to the sum
 of the other two angles, <!--l. 2072--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><mi>ϕ</mi> <mo class="MathClass-bin">+</mo><mi>ψ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
-This parameterization is mathematically well defined for almost all rotations, including small ones when the current
-coordinates are almost completely aligned with the reference ones. However, the presence of a mathematical singularity
-at <!--l. 2074--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝜃</mi> <mo class="MathClass-rel">=</mo> <mn>9</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin">∘</mo></mrow></msup></math>
-prevents using the <a href="#colvar|spinAngle"><span class="ot1-zi4r-0-x-x-109">spinAngle</span></a> function near those configurations. For these reasons, <a href="#colvar|tilt"><span class="ot1-zi4r-0-x-x-109">tilt</span></a> and <a href="#colvar|spinAngle"><span class="ot1-zi4r-0-x-x-109">spinAngle</span></a> are useful
-when the allowed rotations are known to have approximately the same axis, and differ only in the magnitude of the
-corresponding angle. In this use case, <a href="#colvar|spinAngle"><span class="ot1-zi4r-0-x-x-109">spinAngle</span></a> measures the angle of the sub-rotation around the chosen axis
+This parameterization is mathematically well defined for almost all full rotations, including small ones when the
+current coordinates are almost completely aligned with the reference ones. However, a mathematical singularity
+prevents using the <a href="#colvar|spinAngle"><span class="ot1-zi4r-0-x-x-109">spinAngle</span></a> function near configurations where the value of tilt <a href="#colvar|tilt"><span class="ot1-zi4r-0-x-x-109">tilt</span></a> is -1 (i.e. a
+-180<!--l. 2074--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow></mrow><mrow><mo class="MathClass-bin">∘</mo></mrow></msup></math> rotation around an
+axis orthogonal to <!--l. 2074--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">e</mi></math>).
+For these reasons, <a href="#colvar|tilt"><span class="ot1-zi4r-0-x-x-109">tilt</span></a> and <a href="#colvar|spinAngle"><span class="ot1-zi4r-0-x-x-109">spinAngle</span></a> are useful when the allowed rotations are known to
+have approximately the same axis, and differ only in the magnitude of the corresponding angle.
+In this use case, <a href="#colvar|spinAngle"><span class="ot1-zi4r-0-x-x-109">spinAngle</span></a> measures the angle of the sub-rotation around the chosen axis
 <!--l. 2076--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">e</mi></math>, whereas <a href="#colvar|tilt"><span class="ot1-zi4r-0-x-x-109">tilt</span></a> measures
 the dot product between <!--l. 2076--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">e</mi></math>
 and the actual axis of the full rotation.
@@ -1484,9 +1486,9 @@ variable itself.
 <!--l. 2140--><p class="indent"> <span class="ptmb7t-x-x-109">Tip: stopping the rotation of a protein. </span>To stop the rotation of an elongated macromolecule in solution (and
 use an anisotropic box to save water molecules), it is possible to define a colvar with an <span class="ot1-zi4r-0-x-x-109">orientation </span>component,
 and restrain it through the <span class="ot1-zi4r-0-x-x-109">harmonic </span>bias around the identity rotation, <span class="ot1-zi4r-0-x-x-109">(1.0, 0.0, 0.0, 0.0)</span>. Only
+                                                                                         
+                                                                                         
 the overall orientation of the macromolecule is affected, and <span class="ptmri7t-x-x-109">not </span>its internal degrees of freedom. The
-                                                                                         
-                                                                                         
 user should also take care that the macromolecule is composed by a single chain, or disable <span class="ot1-zi4r-0-x-x-109">wrapAll</span>
 otherwise.
 </p>
