@@ -82,16 +82,19 @@ $(function() {
 Inheritance diagram for colvar::orientation:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvar_1_1orientation__inherit__graph.png" border="0" usemap="#acolvar_1_1orientation_inherit__map" alt="Inheritance graph"/></div>
-<map name="colvar_1_1orientation_inherit__map" id="colvar_1_1orientation_inherit__map">
-<area shape="rect" title="Colvar component: orientation in space of an atom group, with respect to a set of reference coordinat..." alt="" coords="277,229,419,256"/>
-<area shape="rect" href="classcolvar_1_1orientation__angle.html" title="Colvar component: angle of rotation with respect to a set of reference coordinates (colvarvalue::type..." alt="" coords="5,304,147,345"/>
-<area shape="rect" href="classcolvar_1_1orientation__proj.html" title="Colvar component: cosine of the angle of rotation with respect to a set of reference coordinates (col..." alt="" coords="171,311,344,338"/>
-<area shape="rect" href="classcolvar_1_1spin__angle.html" title="Colvar component: angle of rotation around a predefined axis (colvarvalue::type_scalar type,..." alt="" coords="369,311,509,338"/>
-<area shape="rect" href="classcolvar_1_1tilt.html" title="Colvar component: projection of the orientation vector onto a predefined axis (colvarvalue::type_scal..." alt="" coords="533,311,621,338"/>
-<area shape="rect" href="classcolvar_1_1cvc.html" title="Colvar component (base class for collective variables)" alt="" coords="302,155,394,181"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="239,80,337,107"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="233,5,343,32"/>
-<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="361,80,455,107"/>
+<map name="colvar_1_1orientation_inherit__map" id="acolvar_1_1orientation_inherit__map">
+<area shape="rect" title="Colvar component: orientation in space of an atom group, with respect to a set of reference coordinat..." alt="" coords="451,165,592,192"/>
+<area shape="rect" href="classcolvar_1_1euler__phi.html" title=" " alt="" coords="661,5,792,32"/>
+<area shape="rect" href="classcolvar_1_1euler__psi.html" title=" " alt="" coords="662,56,791,83"/>
+<area shape="rect" href="classcolvar_1_1euler__theta.html" title=" " alt="" coords="655,107,799,133"/>
+<area shape="rect" href="classcolvar_1_1orientation__angle.html" title="Colvar component: angle of rotation with respect to a set of reference coordinates (colvarvalue::type..." alt="" coords="656,158,797,199"/>
+<area shape="rect" href="classcolvar_1_1orientation__proj.html" title="Colvar component: cosine of the angle of rotation with respect to a set of reference coordinates (col..." alt="" coords="640,224,813,251"/>
+<area shape="rect" href="classcolvar_1_1spin__angle.html" title="Colvar component: angle of rotation around a predefined axis (colvarvalue::type_scalar type,..." alt="" coords="657,275,797,301"/>
+<area shape="rect" href="classcolvar_1_1tilt.html" title="Colvar component: projection of the orientation vector onto a predefined axis (colvarvalue::type_scal..." alt="" coords="683,325,771,352"/>
+<area shape="rect" href="classcolvar_1_1cvc.html" title="Colvar component (base class for collective variables)" alt="" coords="311,165,403,192"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="164,140,263,167"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="5,140,116,167"/>
+<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="167,191,260,217"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -879,7 +882,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classcolvar_1_1cvc.html#ad3feee08d081e6cc4ad87153e73ae486">colvar::cvc</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvar_1_1spin__angle.html#a4d488f57b63f73d00b20b3b1d3e9d527">colvar::spin_angle</a>, <a class="el" href="classcolvar_1_1tilt.html#a02a7a4ecb463bcc65ebfa960d8fc468d">colvar::tilt</a>, <a class="el" href="classcolvar_1_1orientation__proj.html#a657c339e009daec2fad0fbe3d53e05a4">colvar::orientation_proj</a>, and <a class="el" href="classcolvar_1_1orientation__angle.html#a5387f8f5fd2e778821fe7148bf8f6ced">colvar::orientation_angle</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvar_1_1euler__theta.html#a69b23d5f90a277db46178fcca872f8c8">colvar::euler_theta</a>, <a class="el" href="classcolvar_1_1euler__psi.html#aa9553fc5cc15fda81c79eaa15f610293">colvar::euler_psi</a>, <a class="el" href="classcolvar_1_1euler__phi.html#aefb068fb960bf88beb408dcb12ffa6a9">colvar::euler_phi</a>, <a class="el" href="classcolvar_1_1spin__angle.html#a4d488f57b63f73d00b20b3b1d3e9d527">colvar::spin_angle</a>, <a class="el" href="classcolvar_1_1tilt.html#a02a7a4ecb463bcc65ebfa960d8fc468d">colvar::tilt</a>, <a class="el" href="classcolvar_1_1orientation__proj.html#a657c339e009daec2fad0fbe3d53e05a4">colvar::orientation_proj</a>, and <a class="el" href="classcolvar_1_1orientation__angle.html#a5387f8f5fd2e778821fe7148bf8f6ced">colvar::orientation_angle</a>.</p>
 
 </div>
 </div>
@@ -925,7 +928,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Reimplemented from <a class="el" href="classcolvar_1_1cvc.html#a9ce0b06785089e18d6c813fb19e3ad93">colvar::cvc</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvar_1_1spin__angle.html#a127c3e2f5da700b5e2b2b1ed7e3c5183">colvar::spin_angle</a>, <a class="el" href="classcolvar_1_1tilt.html#aae79a6e799897aa32b5891632ba86457">colvar::tilt</a>, <a class="el" href="classcolvar_1_1orientation__proj.html#a93788c654caac153c1b003c551a7d7e0">colvar::orientation_proj</a>, and <a class="el" href="classcolvar_1_1orientation__angle.html#a5c77a9e005befea81b7f36fa82893c76">colvar::orientation_angle</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvar_1_1euler__theta.html#a3c1004478f6e717222e8abb4f9d02c56">colvar::euler_theta</a>, <a class="el" href="classcolvar_1_1euler__psi.html#aec9d1b94a27274a39315a45933eca18a">colvar::euler_psi</a>, <a class="el" href="classcolvar_1_1euler__phi.html#a3edefc6ae07bb903e67e2e90877543cd">colvar::euler_phi</a>, <a class="el" href="classcolvar_1_1spin__angle.html#a127c3e2f5da700b5e2b2b1ed7e3c5183">colvar::spin_angle</a>, <a class="el" href="classcolvar_1_1tilt.html#aae79a6e799897aa32b5891632ba86457">colvar::tilt</a>, <a class="el" href="classcolvar_1_1orientation__proj.html#a93788c654caac153c1b003c551a7d7e0">colvar::orientation_proj</a>, and <a class="el" href="classcolvar_1_1orientation__angle.html#a5c77a9e005befea81b7f36fa82893c76">colvar::orientation_angle</a>.</p>
 
 </div>
 </div>
@@ -961,7 +964,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Reimplemented from <a class="el" href="classcolvar_1_1cvc.html#a20958d9050359e9200bf0e57e5ad33f3">colvar::cvc</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvar_1_1spin__angle.html#acd03dac953ba6d70d755dff0878c5be2">colvar::spin_angle</a>, <a class="el" href="classcolvar_1_1tilt.html#a70b1653dab7a0b2507cad18ebf8076fc">colvar::tilt</a>, <a class="el" href="classcolvar_1_1orientation__proj.html#a453d41c14324dcb746b442acac111745">colvar::orientation_proj</a>, and <a class="el" href="classcolvar_1_1orientation__angle.html#a043ed0a88bd96e31faee408a763a0fd3">colvar::orientation_angle</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvar_1_1euler__theta.html#a60013820a86bf41bfef4dd90f6627a59">colvar::euler_theta</a>, <a class="el" href="classcolvar_1_1euler__psi.html#a250881c1104354f2bdec9e0f8b7859b2">colvar::euler_psi</a>, <a class="el" href="classcolvar_1_1euler__phi.html#ae22b23f387cc9ae62ed0b5635c45aa4d">colvar::euler_phi</a>, <a class="el" href="classcolvar_1_1spin__angle.html#acd03dac953ba6d70d755dff0878c5be2">colvar::spin_angle</a>, <a class="el" href="classcolvar_1_1tilt.html#a70b1653dab7a0b2507cad18ebf8076fc">colvar::tilt</a>, <a class="el" href="classcolvar_1_1orientation__proj.html#a453d41c14324dcb746b442acac111745">colvar::orientation_proj</a>, and <a class="el" href="classcolvar_1_1orientation__angle.html#a043ed0a88bd96e31faee408a763a0fd3">colvar::orientation_angle</a>.</p>
 
 </div>
 </div>
@@ -972,7 +975,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 23 2020 09:30:23 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Mon Nov 30 2020 10:18:21 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
