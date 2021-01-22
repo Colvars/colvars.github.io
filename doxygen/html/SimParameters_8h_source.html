@@ -274,17 +274,17 @@ $(function() {
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                    <span class="comment">//  a force DCD file be updated</span></div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordtype">int</span> xstFrequency;       <span class="comment">//  How often (in timesteps) should</span></div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    <span class="comment">//  a XST trajectory file be updated</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">char</span> auxFilename[128];      <span class="comment">//  auxilary output filename</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">char</span> dcdFilename[128];      <span class="comment">//  DCD filename</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">char</span> velDcdFilename[128];       <span class="comment">//  Velocity DCD filename</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">char</span> forceDcdFilename[128];     <span class="comment">//  Force DCD filename</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">char</span> xstFilename[128];      <span class="comment">//  Extended system trajectory filename</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordtype">char</span> outputFilename[128];   <span class="comment">//  Output file name.  This name will</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">char</span> auxFilename[NAMD_FILENAME_BUFFER_SIZE];        <span class="comment">//  auxilary output filename</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">char</span> dcdFilename[NAMD_FILENAME_BUFFER_SIZE];        <span class="comment">//  DCD filename</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">char</span> velDcdFilename[NAMD_FILENAME_BUFFER_SIZE];       <span class="comment">//  Velocity DCD filename</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">char</span> forceDcdFilename[NAMD_FILENAME_BUFFER_SIZE];     <span class="comment">//  Force DCD filename</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">char</span> xstFilename[NAMD_FILENAME_BUFFER_SIZE];        <span class="comment">//  Extended system trajectory filename</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordtype">char</span> outputFilename[NAMD_FILENAME_BUFFER_SIZE]; <span class="comment">//  Output file name.  This name will</span></div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    <span class="comment">//  have .coor appended to it</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                    <span class="comment">//  for the coordinates and</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    <span class="comment">//  .vel appended to</span></div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    <span class="comment">//  it for the velocities</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">char</span> restartFilename[128];  <span class="comment">//  Base name of the restart file</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">char</span> restartFilename[NAMD_FILENAME_BUFFER_SIZE];    <span class="comment">//  Base name of the restart file</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">int</span> restartFrequency;       <span class="comment">//  How often (in timesteps) shoud the</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    <span class="comment">//  restart files be updated</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        Bool restartSave;       <span class="comment">//  unique filenames for restart files</span></div>
@@ -364,8 +364,8 @@ $(function() {
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="comment">// Ported by JLai -- JE - Go</span></div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        Bool goGroPair;           <span class="comment">//  FLAG FALSE-&gt;Explicit Gromacs pairs will be calculated</span></div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        Bool goForcesOn;          <span class="comment">//  FLAG TRUE-&gt; Go forces will be calculated</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordtype">char</span> goParameters[128];   <span class="comment">//  File for Go parameters</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordtype">char</span> goCoordinates[128];  <span class="comment">//  File for Go structure and atom chain types</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordtype">char</span> goParameters[NAMD_FILENAME_BUFFER_SIZE];   <span class="comment">//  File for Go parameters</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordtype">char</span> goCoordinates[NAMD_FILENAME_BUFFER_SIZE];  <span class="comment">//  File for Go structure and atom chain types</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="comment">//JLai 6.3.11</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    GoChoices  goMethod;      <span class="comment">//  Integer for Go method -- 1) Matrix-Go, 3) Low-mem-Go</span></div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="comment">// End of port -- JL</span></div>
@@ -385,30 +385,30 @@ $(function() {
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="comment">//****** BEGIN moving drag changes</span></div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        Bool movDragOn;               <span class="comment">//  Flag TRUE-&gt; moving drag active</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordtype">char</span> movDragFile[128];        <span class="comment">//  PDB file defining dragged atoms</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordtype">char</span> movDragFile[NAMD_FILENAME_BUFFER_SIZE];        <span class="comment">//  PDB file defining dragged atoms</span></div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                                      <span class="comment">//  by non-zero value in the column</span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    BigReal movDragGlobVel;       <span class="comment">//  global drag velocity (A/step)</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">char</span> movDragVelFile[128];     <span class="comment">//  PDB file; XYZ scale moving drag</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">char</span> movDragVelFile[NAMD_FILENAME_BUFFER_SIZE];     <span class="comment">//  PDB file; XYZ scale moving drag</span></div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                                      <span class="comment">//  velocity for each atom</span></div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="comment">//****** END moving drag changes</span></div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="comment">//****** BEGIN rotating drag changes</span></div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        Bool rotDragOn;               <span class="comment">//  Flag TRUE-&gt; rotating drag active</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordtype">char</span> rotDragFile[128];        <span class="comment">//  PDB file defining dragged atoms</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordtype">char</span> rotDragFile[NAMD_FILENAME_BUFFER_SIZE];        <span class="comment">//  PDB file defining dragged atoms</span></div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                                      <span class="comment">//  by non-zero value in the column</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordtype">char</span> rotDragAxisFile[128];    <span class="comment">//  PDB file; XYZ define axes for atoms;</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">char</span> rotDragPivotFile[128];   <span class="comment">//  PDB file; XYZ define pivots for atoms</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordtype">char</span> rotDragAxisFile[NAMD_FILENAME_BUFFER_SIZE];    <span class="comment">//  PDB file; XYZ define axes for atoms;</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">char</span> rotDragPivotFile[NAMD_FILENAME_BUFFER_SIZE];   <span class="comment">//  PDB file; XYZ define pivots for atoms</span></div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    BigReal rotDragGlobVel;       <span class="comment">//  global drag velocity (deg/step)</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordtype">char</span> rotDragVelFile[128];     <span class="comment">//  PDB file; B or O scales angular</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordtype">char</span> rotDragVelFile[NAMD_FILENAME_BUFFER_SIZE];     <span class="comment">//  PDB file; B or O scales angular</span></div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                                      <span class="comment">//  velocity for each atom</span></div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="comment">//****** END rotating drag changes</span></div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="comment">//****** BEGIN &quot;constant&quot; torque changes</span></div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        Bool consTorqueOn;            <span class="comment">//  Flag TRUE-&gt; &quot;constant&quot; torque active</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordtype">char</span> consTorqueFile[128];     <span class="comment">//  PDB file defining torqued atoms</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordtype">char</span> consTorqueFile[NAMD_FILENAME_BUFFER_SIZE];     <span class="comment">//  PDB file defining torqued atoms</span></div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                                      <span class="comment">//  by non-zero value in the column</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">char</span> consTorqueAxisFile[128]; <span class="comment">//  PDB file; XYZ define axes for atoms;</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">char</span> consTorquePivotFile[128];<span class="comment">//  PDB file; XYZ define pivots for atoms</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">char</span> consTorqueAxisFile[NAMD_FILENAME_BUFFER_SIZE]; <span class="comment">//  PDB file; XYZ define axes for atoms;</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">char</span> consTorquePivotFile[NAMD_FILENAME_BUFFER_SIZE];<span class="comment">//  PDB file; XYZ define pivots for atoms</span></div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    BigReal consTorqueGlobVal;    <span class="comment">//  global &quot;torque&quot; (Kcal/(mol*A^2))</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">char</span> consTorqueValFile[128];  <span class="comment">//  PDB file; B or O scales &quot;torque&quot;</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">char</span> consTorqueValFile[NAMD_FILENAME_BUFFER_SIZE];  <span class="comment">//  PDB file; B or O scales &quot;torque&quot;</span></div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                                      <span class="comment">//  for each atom</span></div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="comment">//****** END &quot;constant&quot; torque changes</span></div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
@@ -418,14 +418,14 @@ $(function() {
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        zVector SMDDir;                  <span class="comment">//  Direction of the movement</span></div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        BigReal SMDk;           <span class="comment">//  Elastic constant for SMD</span></div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    BigReal SMDk2;          <span class="comment">//  Transverse elastic constant for SMD</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">char</span> SMDFile[128];      <span class="comment">//  File for SMD information</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">char</span> SMDFile[NAMD_FILENAME_BUFFER_SIZE];        <span class="comment">//  File for SMD information</span></div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordtype">int</span> SMDOutputFreq;              <span class="comment">//  Output frequency for SMD constr.</span></div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="comment">//****** END SMD constraints changes</span></div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  <span class="comment">//****** BEGIN tabulated energy section</span></div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  Bool tabulatedEnergies;</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <span class="keywordtype">int</span> tableNumTypes;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keywordtype">char</span> tabulatedEnergiesFile[128];</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keywordtype">char</span> tabulatedEnergiesFile[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  <span class="keywordtype">char</span> tableInterpType[128];</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  Real tableSpacing;</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  BigReal tableMaxDist;</div>
@@ -434,7 +434,7 @@ $(function() {
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="comment">// TMD</span></div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        Bool TMDOn, TMDDiffRMSD;</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        BigReal TMDk;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordtype">char</span> TMDFile[128], TMDFile2[128];</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordtype">char</span> TMDFile[NAMD_FILENAME_BUFFER_SIZE], TMDFile2[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordtype">int</span> TMDOutputFreq;</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="keywordtype">int</span> TMDFirstStep, TMDLastStep;</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        BigReal TMDInitialRMSD, TMDFinalRMSD;</div>
@@ -442,9 +442,9 @@ $(function() {
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="comment">//Symmetry restraints</span></div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        Bool symmetryOn, symmetryScaleForces;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        BigReal symmetryk;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordtype">char</span> symmetrykfile[128];</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordtype">char</span> symmetryFile[128];</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordtype">char</span> symmetryMatrixFile[128];</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordtype">char</span> symmetrykfile[NAMD_FILENAME_BUFFER_SIZE];</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordtype">char</span> symmetryFile[NAMD_FILENAME_BUFFER_SIZE];</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordtype">char</span> symmetryMatrixFile[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordtype">int</span> symmetryFirstStep, symmetryLastStep, symmetryFirstFullStep, symmetryLastFullStep;</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
@@ -472,7 +472,7 @@ $(function() {
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  BigReal alchTemp;         <span class="comment">//  temperature for alchemical calculation</span></div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  <span class="keywordtype">int</span> alchOutFreq;          <span class="comment">//  freq. of alchemical output</span></div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  Bool alchEnsembleAvg;      <span class="comment">//if do ensemble average for the net free energy difference</span></div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  <span class="keywordtype">char</span> alchOutFile[128];    <span class="comment">//  alchemical output filename</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  <span class="keywordtype">char</span> alchOutFile[NAMD_FILENAME_BUFFER_SIZE];    <span class="comment">//  alchemical output filename</span></div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  <span class="keywordtype">int</span> alchEquilSteps;       <span class="comment">//  # of equil. steps in the window</span></div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  BigReal alchVdwShiftCoeff; <span class="comment">//  r2 shift coeff used for generating</span></div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                            <span class="comment">//  the alchemical altered vdW interactions</span></div>
@@ -515,25 +515,25 @@ $(function() {
 <div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="classSimParameters.html#a4c1bb64fa4a66b6a38e8c837307b4ae4">  453</a></span>&#160;  BigReal <a class="code" href="classSimParameters.html#a4c1bb64fa4a66b6a38e8c837307b4ae4">soluteScalingFactorVdw</a>;</div>
 <div class="line"><a name="l00456"></a><span class="lineno"><a class="line" href="classSimParameters.html#aab686b1b828fc45f2757a0b9178ec06f">  456</a></span>&#160;  Bool <a class="code" href="classSimParameters.html#aab686b1b828fc45f2757a0b9178ec06f">soluteScalingAll</a>;</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        Bool extForcesOn;       <span class="comment">//  Are ext command forces present?</span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordtype">char</span> extForcesCommand[256];</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="keywordtype">char</span> extCoordFilename[128];</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keywordtype">char</span> extForceFilename[128];</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordtype">char</span> extForcesCommand[NAMD_FILENAME_BUFFER_SIZE];</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="keywordtype">char</span> extCoordFilename[NAMD_FILENAME_BUFFER_SIZE];</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keywordtype">char</span> extForceFilename[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160; </div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="comment">// Defines variables for QM/MM calculations</span></div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        Bool qmForcesOn;               <span class="comment">//  Are QM/MM command forces present?</span></div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <span class="keywordtype">char</span> qmParamPDB[128];</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <span class="keywordtype">char</span> qmParamPDB[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        Bool qmParamPDBDefined;</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        Bool qmChrgFromPSF;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="keywordtype">char</span> qmExecPath[256];</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="keywordtype">char</span> qmExecPath[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        <span class="keywordtype">char</span> qmSoftware[128];</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="keywordtype">char</span> qmChrgModeS[16];</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordtype">int</span> qmChrgMode;</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordtype">char</span> qmColumn[16];</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        <span class="keywordtype">char</span> qmBaseDir[256];</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordtype">char</span> qmSecProc[256];</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        <span class="keywordtype">char</span> qmBaseDir[NAMD_FILENAME_BUFFER_SIZE];</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordtype">char</span> qmSecProc[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        Bool qmSecProcOn;</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        <span class="keywordtype">char</span> qmPrepProc[256];</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        <span class="keywordtype">char</span> qmPrepProc[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        Bool qmPrepProcOn;</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        <span class="keywordtype">int</span> qmFormat ;</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        Bool qmReplaceAll ;</div>
@@ -566,7 +566,7 @@ $(function() {
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keywordtype">int</span> qmLSSMode;</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160; </div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        Bool qmCSMD;</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        <span class="keywordtype">char</span> qmCSMDFile[128];</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        <span class="keywordtype">char</span> qmCSMDFile[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160; </div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        <span class="keywordtype">int</span> qmEnergyOutFreq ;</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        <span class="keywordtype">int</span> qmOutFreq ;</div>
@@ -613,7 +613,7 @@ $(function() {
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    Bool tclBCOn;           <span class="comment">//  Are Tcl boundary forces present</span></div>
 <div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    <span class="keywordtype">char</span> *tclBCScript;      <span class="comment">//  Script defining tclBC calcforces</span></div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    <span class="keywordtype">char</span> tclBCArgs[128];        <span class="comment">//  Extra args for calcforces command</span></div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    <span class="keywordtype">char</span> tclBCArgs[NAMD_FILENAME_BUFFER_SIZE];      <span class="comment">//  Extra args for calcforces command</span></div>
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    Bool freeEnergyOn;      <span class="comment">//  Doing free energy perturbation?</span></div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    Bool miscForcesOn;      <span class="comment">//  Using misc forces?</span></div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    Bool colvarsOn;         <span class="comment">//  Using the colvars module?</span></div>
@@ -678,7 +678,7 @@ $(function() {
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    BigReal accelMDGSigma0P;    <span class="comment">//  upper limit of std of total potential</span></div>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    BigReal accelMDGSigma0D;    <span class="comment">//  upper limit of std of dihedral potential</span></div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    Bool accelMDGRestart;       <span class="comment">//  Flag to set use restart file in Gaussian accelMD</span></div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    <span class="keywordtype">char</span> accelMDGRestartFile[128];  <span class="comment">//  restart file name</span></div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;  <span class="keywordtype">char</span> accelMDGRestartFile[NAMD_FILENAME_BUFFER_SIZE];  <span class="comment">//  restart file name</span></div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    Bool accelMDGresetVaftercmd;    <span class="comment">//  Flag to reset potential after first accelMDGcMDSteps steps</span></div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160; </div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        <span class="comment">/* Begin Adaptive Temperature Sampling */</span></div>
@@ -696,8 +696,8 @@ $(function() {
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        BigReal adaptTempCgamma;               <span class="comment">//  Cgamma variable for adaptive bin averaging Cgamma = 0 is normal Averaging. 1 &gt; Cgamma &gt;= 0</span></div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        Bool adaptTempLangevin;                <span class="comment">//  Couple to Langevin Thermostat</span></div>
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        Bool adaptTempRescale;                 <span class="comment">//  Couple to Vel. Rescaling</span></div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        <span class="keywordtype">char</span> adaptTempInFile[128];             <span class="comment">//  Restart information for adaptTemp to read</span></div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        <span class="keywordtype">char</span> adaptTempRestartFile[128];        <span class="comment">//  File to write restart information</span></div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        <span class="keywordtype">char</span> adaptTempInFile[NAMD_FILENAME_BUFFER_SIZE];             <span class="comment">//  Restart information for adaptTemp to read</span></div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        <span class="keywordtype">char</span> adaptTempRestartFile[NAMD_FILENAME_BUFFER_SIZE];        <span class="comment">//  File to write restart information</span></div>
 <div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        <span class="keywordtype">int</span>  adaptTempRestartFreq;             <span class="comment">//  Frequency of writing restart output</span></div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        Bool adaptTempRandom;                  <span class="comment">//  Do we assign random temperatures when we step out of [Tmin,Tmax]?</span></div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        <span class="comment">/* End Adaptive Temperature Sampling */</span></div>
@@ -840,7 +840,7 @@ $(function() {
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;    Bool FFTWEstimate;</div>
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    Bool FFTWPatient;</div>
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    Bool FFTWUseWisdom;</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    <span class="keywordtype">char</span> FFTWWisdomFile[128];</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    <span class="keywordtype">char</span> FFTWWisdomFile[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    <span class="keywordtype">char</span> *FFTWWisdomString;</div>
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160; </div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;<span class="preprocessor">        #ifdef OPENATOM_VERSION</span></div>
@@ -888,7 +888,7 @@ $(function() {
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    BigReal eFieldPhase;        <span class="comment">// Phase phi, cos(w*t-phi*PI/180)</span></div>
 <div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160; </div>
 <div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    Bool stirOn;                   <span class="comment">// Should a stirring torque be applied</span></div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    <span class="keywordtype">char</span> stirFilename[128];        <span class="comment">// Stirring filename (atoms marked)</span></div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    <span class="keywordtype">char</span> stirFilename[NAMD_FILENAME_BUFFER_SIZE];          <span class="comment">// Stirring filename (atoms marked)</span></div>
 <div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    <span class="comment">//do the below two even needed to be defined?</span></div>
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;    BigReal stirStartingTheta;     <span class="comment">// Stir starting theta offset</span></div>
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    BigReal stirVel;               <span class="comment">// Stir angular velocity</span></div>
@@ -901,7 +901,7 @@ $(function() {
 <div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    Bool extraBondsCosAnglesSetByUser; <span class="comment">// did the user set this explicitly</span></div>
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160; </div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    Bool consForceOn;       <span class="comment">//  Should constant force be applied</span></div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;  <span class="keywordtype">char</span> consForceFile[128];</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;  <span class="keywordtype">char</span> consForceFile[NAMD_FILENAME_BUFFER_SIZE];</div>
 <div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    BigReal consForceScaling;</div>
 <div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160; </div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordtype">int</span> outputEnergies;     <span class="comment">//  Number of timesteps between energy</span></div>
@@ -1057,7 +1057,7 @@ $(function() {
 <div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;    <span class="keywordtype">int</span> numoutputprocs;</div>
 <div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;    <span class="keywordtype">int</span> numoutputwrts;</div>
 <div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160; </div>
-<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;    <span class="keywordtype">char</span> computeMapFilename[128];       <span class="comment">//  store compute map</span></div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;    <span class="keywordtype">char</span> computeMapFilename[NAMD_FILENAME_BUFFER_SIZE];     <span class="comment">//  store compute map</span></div>
 <div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;        Bool storeComputeMap;</div>
 <div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;        Bool loadComputeMap;</div>
 <div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160; </div>
@@ -1168,7 +1168,7 @@ $(function() {
 <div class="ttc" id="aclassSimParameters_html_adcffd1bcbf1d2f4e641c5457d9ce6645"><div class="ttname"><a href="classSimParameters.html#adcffd1bcbf1d2f4e641c5457d9ce6645">SimParameters::stochRescaleOn</a></div><div class="ttdeci">Bool stochRescaleOn</div><div class="ttdef"><b>Definition:</b> SimParameters.h:593</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 30 2020 10:18:21 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Fri Jan 22 2021 11:53:41 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

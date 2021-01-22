@@ -258,11 +258,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a7c211018f48a1f704c862bfee2de853b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb6c4bdca117d2ea6140ecfc319f3ad2"><td class="memItemLeft" align="right" valign="top"><a id="afb6c4bdca117d2ea6140ecfc319f3ad2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#afb6c4bdca117d2ea6140ecfc319f3ad2">read_velocities</a> ()</td></tr>
-<tr class="memdesc:afb6c4bdca117d2ea6140ecfc319f3ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current velocities; this must be called always <em>after</em> <a class="el" href="classcolvarmodule_1_1atom__group.html#a15f98dae793cfecf0fe99cef25294828" title="Get the current positions.">read_positions()</a>; if b_rotate is defined, the same rotation applied to the coordinates will be used. <br /></td></tr>
+<tr class="memdesc:afb6c4bdca117d2ea6140ecfc319f3ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current velocities; this must be called always <em>after</em> <a class="el" href="classcolvarmodule_1_1atom__group.html#a15f98dae793cfecf0fe99cef25294828" title="Get the current positions.">read_positions()</a>; if f_ag_rotate is defined, the same rotation applied to the coordinates will be used. <br /></td></tr>
 <tr class="separator:afb6c4bdca117d2ea6140ecfc319f3ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26f4d76d206250d5e4e616d0ec66a824"><td class="memItemLeft" align="right" valign="top"><a id="a26f4d76d206250d5e4e616d0ec66a824"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#a26f4d76d206250d5e4e616d0ec66a824">read_total_forces</a> ()</td></tr>
-<tr class="memdesc:a26f4d76d206250d5e4e616d0ec66a824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current total_forces; this must be called always <em>after</em> <a class="el" href="classcolvarmodule_1_1atom__group.html#a15f98dae793cfecf0fe99cef25294828" title="Get the current positions.">read_positions()</a>; if b_rotate is defined, the same rotation applied to the coordinates will be used. <br /></td></tr>
+<tr class="memdesc:a26f4d76d206250d5e4e616d0ec66a824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current total_forces; this must be called always <em>after</em> <a class="el" href="classcolvarmodule_1_1atom__group.html#a15f98dae793cfecf0fe99cef25294828" title="Get the current positions.">read_positions()</a>; if f_ag_rotate is defined, the same rotation applied to the coordinates will be used. <br /></td></tr>
 <tr class="separator:a26f4d76d206250d5e4e616d0ec66a824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a7167f19717bc4dda79012aa4fbe198"><td class="memItemLeft" align="right" valign="top"><a id="a2a7167f19717bc4dda79012aa4fbe198"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#a2a7167f19717bc4dda79012aa4fbe198">reset_atoms_data</a> ()</td></tr>
@@ -589,32 +589,25 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#ab6eedc3e64db231962f90bbb56659192">b_dummy</a></td></tr>
 <tr class="memdesc:ab6eedc3e64db231962f90bbb56659192"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this option is on, this group merely acts as a wrapper for a fixed position; any calls to atoms within or to functions that return disaggregated data will fail. <br /></td></tr>
 <tr class="separator:ab6eedc3e64db231962f90bbb56659192"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60f0c94819a26e9d576316fd0e73b3da"><td class="memItemLeft" align="right" valign="top"><a id="a60f0c94819a26e9d576316fd0e73b3da"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#a60f0c94819a26e9d576316fd0e73b3da">b_center</a></td></tr>
-<tr class="memdesc:a60f0c94819a26e9d576316fd0e73b3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">When updating atomic coordinates, translate them to align with the center of mass of the reference coordinates. <br /></td></tr>
-<tr class="separator:a60f0c94819a26e9d576316fd0e73b3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33ceef25b618e34c046ddf6c5f2acaac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#a33ceef25b618e34c046ddf6c5f2acaac">b_rotate</a></td></tr>
-<tr class="memdesc:a33ceef25b618e34c046ddf6c5f2acaac"><td class="mdescLeft">&#160;</td><td class="mdescRight">When updating atom coordinates (and after centering them if b_center is set), rotate the group to align with the reference coordinates.  <a href="classcolvarmodule_1_1atom__group.html#a33ceef25b618e34c046ddf6c5f2acaac">More...</a><br /></td></tr>
-<tr class="separator:a33ceef25b618e34c046ddf6c5f2acaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac85a2f74ee74bd1fadc278199d690cf7"><td class="memItemLeft" align="right" valign="top"><a id="ac85a2f74ee74bd1fadc278199d690cf7"></a>
 <a class="el" href="classcolvarmodule_1_1rotation.html">cvm::rotation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#ac85a2f74ee74bd1fadc278199d690cf7">rot</a></td></tr>
-<tr class="memdesc:ac85a2f74ee74bd1fadc278199d690cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rotation calculated automatically if b_rotate is defined. <br /></td></tr>
+<tr class="memdesc:ac85a2f74ee74bd1fadc278199d690cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rotation calculated automatically if f_ag_rotate is defined. <br /></td></tr>
 <tr class="separator:ac85a2f74ee74bd1fadc278199d690cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d985d9fb4a666dde3011681b190cccc"><td class="memItemLeft" align="right" valign="top"><a id="a7d985d9fb4a666dde3011681b190cccc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#a7d985d9fb4a666dde3011681b190cccc">b_user_defined_fit</a></td></tr>
-<tr class="memdesc:a7d985d9fb4a666dde3011681b190cccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates that the user has explicitly set centerReference or rotateReference, and the corresponding reference: cvc's (eg rmsd, eigenvector) will not override the user's choice. <br /></td></tr>
+<tr class="memdesc:a7d985d9fb4a666dde3011681b190cccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates that the user has explicitly set centerToReference or rotateReference, and the corresponding reference: cvc's (eg rmsd, eigenvector) will not override the user's choice. <br /></td></tr>
 <tr class="separator:a7d985d9fb4a666dde3011681b190cccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46a532f30a3f6800b98e77fbcfb97a42"><td class="memItemLeft" align="right" valign="top"><a id="a46a532f30a3f6800b98e77fbcfb97a42"></a>
 std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#a46a532f30a3f6800b98e77fbcfb97a42">ref_pos</a></td></tr>
-<tr class="memdesc:a46a532f30a3f6800b98e77fbcfb97a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">use reference coordinates for b_center or b_rotate <br /></td></tr>
+<tr class="memdesc:a46a532f30a3f6800b98e77fbcfb97a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">use reference coordinates for f_ag_center or f_ag_rotate <br /></td></tr>
 <tr class="separator:a46a532f30a3f6800b98e77fbcfb97a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91f63d8f5976dce774fed331c0aaeabf"><td class="memItemLeft" align="right" valign="top"><a id="a91f63d8f5976dce774fed331c0aaeabf"></a>
 <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#a91f63d8f5976dce774fed331c0aaeabf">ref_pos_cog</a></td></tr>
-<tr class="memdesc:a91f63d8f5976dce774fed331c0aaeabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center of geometry of the reference coordinates; regardless of whether b_center is true, ref_pos is centered to zero at initialization, and ref_pos_cog serves to center the positions. <br /></td></tr>
+<tr class="memdesc:a91f63d8f5976dce774fed331c0aaeabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center of geometry of the reference coordinates; regardless of whether f_ag_center is true, ref_pos is centered to zero at initialization, and ref_pos_cog serves to center the positions. <br /></td></tr>
 <tr class="separator:a91f63d8f5976dce774fed331c0aaeabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad32c2b3700219d15f8d9965bcabb2e65"><td class="memItemLeft" align="right" valign="top"><a id="ad32c2b3700219d15f8d9965bcabb2e65"></a>
 <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#ad32c2b3700219d15f8d9965bcabb2e65">fitting_group</a></td></tr>
-<tr class="memdesc:ad32c2b3700219d15f8d9965bcabb2e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">If b_center or b_rotate is true, use this group to define the transformation (default: this group itself) <br /></td></tr>
+<tr class="memdesc:ad32c2b3700219d15f8d9965bcabb2e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">If f_ag_center or f_ag_rotate is true, use this group to define the transformation (default: this group itself) <br /></td></tr>
 <tr class="separator:ad32c2b3700219d15f8d9965bcabb2e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73528e59fe1cfccf557f612f5681f57b"><td class="memItemLeft" align="right" valign="top"><a id="a73528e59fe1cfccf557f612f5681f57b"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#a73528e59fe1cfccf557f612f5681f57b">total_mass</a></td></tr>
@@ -741,12 +734,15 @@ Additional Inherited Members</h2></td></tr>
 &#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4abce7c10a6511be0834645fc4e5081108">parse_null</a> = 0, 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a69e30b3dad01b154d4b229f213f68b12">parse_echo</a> = (1&lt;&lt;1), 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a1d66ba0e00dae5e9a0670bce1a00c026">parse_echo_default</a> = (1&lt;&lt;2), 
-<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4acd1135f68e4757747be4c0e586dcf82e">parse_silent</a> = 0, 
+<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a03e1154942f4fa21780c0802043bf646">parse_deprecation_warning</a> = (1&lt;&lt;3), 
 <br />
-&#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4aea8b5ea1146e79da1990cec345839063">parse_required</a> = (1&lt;&lt;16), 
+&#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4acd1135f68e4757747be4c0e586dcf82e">parse_silent</a> = 0, 
+<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4aea8b5ea1146e79da1990cec345839063">parse_required</a> = (1&lt;&lt;16), 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4ac18497c0e911807ddfd52b44e7cf674d">parse_override</a> = (1&lt;&lt;17), 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a907207b4cc805305732c158cd3204d5b">parse_restart</a> = (1&lt;&lt;18), 
-<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a> = (1&lt;&lt;2) | (1&lt;&lt;1) | (1&lt;&lt;17)
+<br />
+&#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a> = (1&lt;&lt;2) | (1&lt;&lt;1) | (1&lt;&lt;17), 
+<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a8a3d123c8009affbabea8ab2f9ad3a5b">parse_deprecated</a> = (1&lt;&lt;1) | (1&lt;&lt;3) | (1&lt;&lt;17)
 <br />
  }</td></tr>
 <tr class="memdesc:aa59ba1cad3b7c486df29d56f5feb6bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">How a keyword is parsed in a string.  <a href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">More...</a><br /></td></tr>
@@ -849,15 +845,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a65d8eea75a4a6cb5b047b79ffac26f95 inherit pub_types_classcolvardeps"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95">features_atomgroup</a> { <br />
 &#160;&#160;<b>f_ag_active</b>, 
 <b>f_ag_center</b>, 
+<b>f_ag_center_origin</b>, 
 <b>f_ag_rotate</b>, 
-<b>f_ag_fitting_group</b>, 
 <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95a10e7eff973d62aa84843c8b11c9f5acd">f_ag_explicit_gradient</a>, 
+&#160;&#160;<b>f_ag_fitting_group</b>, 
+<a class="el" href="classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95a10e7eff973d62aa84843c8b11c9f5acd">f_ag_explicit_gradient</a>, 
 <b>f_ag_fit_gradients</b>, 
 <b>f_ag_atom_forces</b>, 
-<b>f_ag_scalable</b>, 
 <br />
-&#160;&#160;<b>f_ag_scalable_com</b>, 
+&#160;&#160;<b>f_ag_scalable</b>, 
+<b>f_ag_scalable_com</b>, 
 <b>f_ag_ntot</b>
 <br />
  }</td></tr>
@@ -1113,23 +1110,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a33ceef25b618e34c046ddf6c5f2acaac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33ceef25b618e34c046ddf6c5f2acaac">&#9670;&nbsp;</a></span>b_rotate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool colvarmodule::atom_group::b_rotate</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>When updating atom coordinates (and after centering them if b_center is set), rotate the group to align with the reference coordinates. </p>
-<p>Note: gradients will be calculated in the rotated frame: when forces will be applied, they will rotated back to the original frame </p>
-
-</div>
-</div>
 <a id="a13caa6b4e1ae21c055ba86fa7a093861"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a13caa6b4e1ae21c055ba86fa7a093861">&#9670;&nbsp;</a></span>sorted_atoms_ids</h2>
 
@@ -1160,7 +1140,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 30 2020 10:18:22 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Fri Jan 22 2021 11:53:42 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

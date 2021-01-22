@@ -541,12 +541,15 @@ Additional Inherited Members</h2></td></tr>
 &#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4abce7c10a6511be0834645fc4e5081108">parse_null</a> = 0, 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a69e30b3dad01b154d4b229f213f68b12">parse_echo</a> = (1&lt;&lt;1), 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a1d66ba0e00dae5e9a0670bce1a00c026">parse_echo_default</a> = (1&lt;&lt;2), 
-<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4acd1135f68e4757747be4c0e586dcf82e">parse_silent</a> = 0, 
+<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a03e1154942f4fa21780c0802043bf646">parse_deprecation_warning</a> = (1&lt;&lt;3), 
 <br />
-&#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4aea8b5ea1146e79da1990cec345839063">parse_required</a> = (1&lt;&lt;16), 
+&#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4acd1135f68e4757747be4c0e586dcf82e">parse_silent</a> = 0, 
+<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4aea8b5ea1146e79da1990cec345839063">parse_required</a> = (1&lt;&lt;16), 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4ac18497c0e911807ddfd52b44e7cf674d">parse_override</a> = (1&lt;&lt;17), 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a907207b4cc805305732c158cd3204d5b">parse_restart</a> = (1&lt;&lt;18), 
-<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a> = (1&lt;&lt;2) | (1&lt;&lt;1) | (1&lt;&lt;17)
+<br />
+&#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a> = (1&lt;&lt;2) | (1&lt;&lt;1) | (1&lt;&lt;17), 
+<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a8a3d123c8009affbabea8ab2f9ad3a5b">parse_deprecated</a> = (1&lt;&lt;1) | (1&lt;&lt;3) | (1&lt;&lt;17)
 <br />
  }</td></tr>
 <tr class="memdesc:aa59ba1cad3b7c486df29d56f5feb6bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">How a keyword is parsed in a string.  <a href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">More...</a><br /></td></tr>
@@ -649,15 +652,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a65d8eea75a4a6cb5b047b79ffac26f95 inherit pub_types_classcolvardeps"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95">features_atomgroup</a> { <br />
 &#160;&#160;<b>f_ag_active</b>, 
 <b>f_ag_center</b>, 
+<b>f_ag_center_origin</b>, 
 <b>f_ag_rotate</b>, 
-<b>f_ag_fitting_group</b>, 
 <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95a10e7eff973d62aa84843c8b11c9f5acd">f_ag_explicit_gradient</a>, 
+&#160;&#160;<b>f_ag_fitting_group</b>, 
+<a class="el" href="classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95a10e7eff973d62aa84843c8b11c9f5acd">f_ag_explicit_gradient</a>, 
 <b>f_ag_fit_gradients</b>, 
 <b>f_ag_atom_forces</b>, 
-<b>f_ag_scalable</b>, 
 <br />
-&#160;&#160;<b>f_ag_scalable_com</b>, 
+&#160;&#160;<b>f_ag_scalable</b>, 
+<b>f_ag_scalable_com</b>, 
 <b>f_ag_ntot</b>
 <br />
  }</td></tr>
@@ -931,7 +935,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 30 2020 10:18:21 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Fri Jan 22 2021 11:53:42 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
