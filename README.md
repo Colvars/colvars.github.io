@@ -2,6 +2,8 @@
 
 A software module for molecular simulation and analysis that provides a high-performance implementation of sampling algorithms defined on a reduced space of continuously differentiable functions (aka collective variables).
 
+First released in 2008 as part of the standard distribution of [NAMD](https://www.ks.uiuc.edu/Research/namd/) version 2.7b1, Colvars has also been integrated in [LAMMPS](https://lammps.sandia.gov/download.html) and [VMD](https://www.ks.uiuc.edu/Research/vmd/).  Pre-patched [GROMACS](http://www.gromacs.org/) releases are also available ([see below](#gromacs-colvars-releases)).
+
 The module itself implements a variety of functions and algorithms, including free-energy estimators based on thermodynamic forces, non-equilibrium work and probability distributions.
 
 ## Obtaining and using
@@ -9,10 +11,11 @@ The module itself implements a variety of functions and algorithms, including fr
 The easiest way to obtain pre-compiled versions of Colvars is via one of following:
 - the molecular simulation program [LAMMPS](https://lammps.sandia.gov/download.html);
 - the molecular simulation program [NAMD](https://www.ks.uiuc.edu/Research/namd/);
-- the molecular visualization program [VMD](https://www.ks.uiuc.edu/Research/vmd/);
-- the molecular simulation program [GROMACS](http://www.gromacs.org/) through our [releases](#gromacs-colvars-releases).
+- the molecular visualization program [VMD](https://www.ks.uiuc.edu/Research/vmd/).
 
 Please check [here](https://github.com/Colvars/colvars/releases) to see which version of Colvars is included with the round-number or "stable" versions of each code.
+
+For the molecular simulation program [GROMACS](http://www.gromacs.org/), code may be compiled via our Colvars-patched [releases](#gromacs-colvars-releases).
 
 ## Documentation
 
@@ -86,30 +89,37 @@ and run the provided `update-colvars-code.sh` script against the unpacked source
 ```
 and recompile them.
 
-The `update-colvars-code.sh` script and its supporting files are synchronized with the latest version of each program:
-- the [LAMMPS Github repository](https://github.com/lammps/lammps);
-- the [NAMD Git repository](https://www.ks.uiuc.edu/Research/namd/development.html);
+The `update-colvars-code.sh` script support patching the latest development version of each program:
+- the [LAMMPS GitHub repository](https://github.com/lammps/lammps);
+- the [NAMD GitLab repository](https://gitlab.com/tcbgUIUC/namd);
 - the [CVS repositories of VMD and its plugins](https://www.ks.uiuc.edu/Research/vmd/doxygen/cvsget.html).
 
-Earlier versions are not supported.
-
-For GROMACS, the versions supported are 2018.X and 2020.X.
+**Note:** For [GROMACS](http://www.gromacs.org/), support for specific release series is currently maintained; pre-patched versions of specific releases are provided [below](#gromacs-colvars-releases).
 
 ## Gromacs-Colvars releases
 
-Here a list of GROMACS archives with Colvars patch:
+The following links allow to download several versions of Gromacs already patched to include the latest available version of Colvars:
 
- - [2018.8](https://github.com/Colvars/gromacs/releases/tag/v2018.8-colvars) with Colvars version 2020-10-22
- - [2020.1](https://github.com/Colvars/gromacs/releases/tag/v2020.1-colvars) with Colvars version 2020-10-22
- - [2020.2](https://github.com/Colvars/gromacs/releases/tag/v2020.2-colvars) with Colvars version 2020-10-22
- - [2020.3](https://github.com/Colvars/gromacs/releases/tag/v2020.3-colvars) with Colvars version 2020-10-22
- - [2020.4](https://github.com/Colvars/gromacs/releases/tag/v2020.4-colvars) with Colvars version 2020-10-22
+ - **Gromacs version 2020.5-colvars** in [Tar.gz](https://github.com/Colvars/gromacs/archive/v2020.5-colvars.tar.gz) and [Zip](https://github.com/Colvars/gromacs/archive/v2020.5-colvars.zip) formats
 
-## Which version is recommended?
+ - **Gromacs version 2018.8-colvars** in [Tar.gz](https://github.com/Colvars/gromacs/archive/v2018.8-colvars.tar.gz) and [Zip](https://github.com/Colvars/gromacs/archive/v2018.8-colvars.zip) formats
 
-The `master` branch is to be considered the "*stable*" release at any given time; any bugfixes are released through `master` first.  The input syntax is near-completely *backward-compatible* and output files are *forward-compatible*.  Feel free to download Colvars and update NAMD, VMD, LAMMPS or GROMACS as needed.
+Gromacs-Colvars versions not listed above are not supported, but the same [patching procedure](#updating-to-the-latest-version) is generally portable across the same Gromacs release series (i.e. labeled with the same year).
+
+When using the [Gromacs forum](https://gromacs.bioexcel.eu/) to discuss usage of any Colvars-patched versions, please specify "GROMACS modification: **Yes**".
+
+## Which version of Colvars is recommended?
+
+The Git `master` branch is to be considered the "*stable*" release at any given time; any bugfixes are released through `master` first.  The input syntax is near-completely *backward-compatible* and output files are *forward-compatible*.  Feel free to download Colvars and update NAMD, VMD, LAMMPS or GROMACS as needed.
 
 Other branches are dedicated to the development of specific features: please use them at your own discretion.
+
+## Which version of Colvars is included in package XX version YY?
+
+The specific version of Colvars is identified both in the code and in the documentation by the date of the most recent code revision (e.g. `2021-01-19`). 
+This date is printed to the standard output or log file as soon as Colvars is activated.
+
+If you are using a stable release of any of the codes mentioned above, feel free to use the version number of that code when asking questions.
 
 ## Feedback
 

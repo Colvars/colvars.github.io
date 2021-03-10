@@ -256,11 +256,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad479bca720fe4ba158e92cc30a7cdb9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current total force (previously obtained from <a class="el" href="classcolvar.html#a437a8f73c7044c5587e50f9ca56bed4f" title="Calculate the colvar&#39;s value and related quantities.">calc()</a> or <a class="el" href="classcolvar.html#a55ebf8e1aa59606243ddb475ad52b7ea" title="Read the value from a collective variable trajectory file.">read_traj()</a>). Note: this is calculated using the atomic forces from the last simulation step.  <a href="classcolvar.html#ad479bca720fe4ba158e92cc30a7cdb9d">More...</a><br /></td></tr>
 <tr class="separator:ad479bca720fe4ba158e92cc30a7cdb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb70708ca12c8d8a7abc6ecd4b08c1f2"><td class="memItemLeft" align="right" valign="top"><a id="aeb70708ca12c8d8a7abc6ecd4b08c1f2"></a>
-virtual const std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#aeb70708ca12c8d8a7abc6ecd4b08c1f2">features</a> () const</td></tr>
+virtual const std::vector&lt; feature * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#aeb70708ca12c8d8a7abc6ecd4b08c1f2">features</a> () const</td></tr>
 <tr class="memdesc:aeb70708ca12c8d8a7abc6ecd4b08c1f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the feature list accessor for colvar. <br /></td></tr>
 <tr class="separator:aeb70708ca12c8d8a7abc6ecd4b08c1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a229a37edd7c2c2563d8d09229b1f0cdf"><td class="memItemLeft" align="right" valign="top"><a id="a229a37edd7c2c2563d8d09229b1f0cdf"></a>
-virtual std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>modify_features</b> ()</td></tr>
+virtual std::vector&lt; feature * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>modify_features</b> ()</td></tr>
 <tr class="separator:a229a37edd7c2c2563d8d09229b1f0cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7020f73456c8e875356d3435dc4b480c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#a7020f73456c8e875356d3435dc4b480c">do_feature_side_effects</a> (int id)</td></tr>
 <tr class="separator:a7020f73456c8e875356d3435dc4b480c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -721,6 +721,9 @@ static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a 
 <tr class="memitem:a6440783bfcdbc5b9f215fd608418b9e8 inherit pub_static_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a6440783bfcdbc5b9f215fd608418b9e8">check_braces</a> (std::string const &amp;conf, size_t const start_pos)</td></tr>
 <tr class="memdesc:a6440783bfcdbc5b9f215fd608418b9e8 inherit pub_static_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the content of a config string has matching braces.  <a href="classcolvarparse.html#a6440783bfcdbc5b9f215fd608418b9e8">More...</a><br /></td></tr>
 <tr class="separator:a6440783bfcdbc5b9f215fd608418b9e8 inherit pub_static_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324475b683561f9334742718f97f9c52 inherit pub_static_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a324475b683561f9334742718f97f9c52">check_ascii</a> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a324475b683561f9334742718f97f9c52 inherit pub_static_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a config string contains non-ASCII characters.  <a href="classcolvarparse.html#a324475b683561f9334742718f97f9c52">More...</a><br /></td></tr>
+<tr class="separator:a324475b683561f9334742718f97f9c52 inherit pub_static_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a237d6ad8d95aeecea8bd55a800457b87 inherit pub_static_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a237d6ad8d95aeecea8bd55a800457b87">split_string</a> (const std::string &amp;data, const std::string &amp;delim, std::vector&lt; std::string &gt; &amp;dest)</td></tr>
 <tr class="memdesc:a237d6ad8d95aeecea8bd55a800457b87 inherit pub_static_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a string with a specified delimiter into a vector.  <a href="classcolvarparse.html#a237d6ad8d95aeecea8bd55a800457b87">More...</a><br /></td></tr>
 <tr class="separator:a237d6ad8d95aeecea8bd55a800457b87 inherit pub_static_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -794,7 +797,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:aa8be65fc3d2aea0de1a9209badd3e46d"><td class="memItemLeft" align="right" valign="top"><a id="aa8be65fc3d2aea0de1a9209badd3e46d"></a>
-static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#aa8be65fc3d2aea0de1a9209badd3e46d">cv_features</a></td></tr>
+static std::vector&lt; feature * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar.html#aa8be65fc3d2aea0de1a9209badd3e46d">cv_features</a></td></tr>
 <tr class="memdesc:aa8be65fc3d2aea0de1a9209badd3e46d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the feature list for colvar. <br /></td></tr>
 <tr class="separator:aa8be65fc3d2aea0de1a9209badd3e46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
@@ -1662,7 +1665,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 22 2021 11:53:41 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Wed Mar 10 2021 15:01:38 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

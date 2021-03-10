@@ -317,6 +317,9 @@ static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a 
 <tr class="memitem:a6440783bfcdbc5b9f215fd608418b9e8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a6440783bfcdbc5b9f215fd608418b9e8">check_braces</a> (std::string const &amp;conf, size_t const start_pos)</td></tr>
 <tr class="memdesc:a6440783bfcdbc5b9f215fd608418b9e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the content of a config string has matching braces.  <a href="classcolvarparse.html#a6440783bfcdbc5b9f215fd608418b9e8">More...</a><br /></td></tr>
 <tr class="separator:a6440783bfcdbc5b9f215fd608418b9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324475b683561f9334742718f97f9c52"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a324475b683561f9334742718f97f9c52">check_ascii</a> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a324475b683561f9334742718f97f9c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a config string contains non-ASCII characters.  <a href="classcolvarparse.html#a324475b683561f9334742718f97f9c52">More...</a><br /></td></tr>
+<tr class="separator:a324475b683561f9334742718f97f9c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a237d6ad8d95aeecea8bd55a800457b87"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a237d6ad8d95aeecea8bd55a800457b87">split_string</a> (const std::string &amp;data, const std::string &amp;delim, std::vector&lt; std::string &gt; &amp;dest)</td></tr>
 <tr class="memdesc:a237d6ad8d95aeecea8bd55a800457b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a string with a specified delimiter into a vector.  <a href="classcolvarparse.html#a237d6ad8d95aeecea8bd55a800457b87">More...</a><br /></td></tr>
 <tr class="separator:a237d6ad8d95aeecea8bd55a800457b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -485,6 +488,40 @@ std::map&lt; std::string, <a class="el" href="classcolvarvalue.html">colvarvalue
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a324475b683561f9334742718f97f9c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a324475b683561f9334742718f97f9c52">&#9670;&nbsp;</a></span>check_ascii()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvarparse::check_ascii </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>conf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check that a config string contains non-ASCII characters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf</td><td>The configuration string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a6440783bfcdbc5b9f215fd608418b9e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6440783bfcdbc5b9f215fd608418b9e8">&#9670;&nbsp;</a></span>check_braces()</h2>
 
@@ -677,7 +714,7 @@ std::map&lt; std::string, <a class="el" href="classcolvarvalue.html">colvarvalue
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 22 2021 11:53:42 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Wed Mar 10 2021 15:01:40 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
