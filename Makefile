@@ -43,7 +43,7 @@ pdf: $(PDF)
 
 html: $(HTML)
 
-readme: $(COLVARSDIR)/README.md $(COLVARSDIR)/README-totalforce.md $(COLVARSDIR)/README-c++11.md $(COLVARSDIR)/README-versions.md
+readme: $(COLVARSDIR)/README.md $(COLVARSDIR)/README-totalforce.md $(COLVARSDIR)/README-c++11.md
 	cp -p -f $^ ./
 
 $(PDFDIR)/%.pdf: $(DOCSRCDIR)/%.tex $(BIBTEX) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex
