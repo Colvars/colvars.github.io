@@ -15,7 +15,7 @@
 </p><!--l. 118--><p class="noindent"><span class="colorbox" id="colorbox1"> </span></p><div class="minipage"><!--l. 129--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace></math><br class="newline"/>
 <!--l. 129--><p class="noindent"><span class="phvb7t-x-x-248">COLLECTIVE VARIABLES MODULE</span><br class="newline"/>
 </p><!--l. 129--><p class="noindent"><span class="phvb7t-x-x-248">Reference manual for NAMD</span>
-</p><!--l. 129--><p class="noindent"><br class="newline"/><span class="phvr7t-x-x-109">Code version: 2021-08-06</span><br class="newline"/></p></div>
+</p><!--l. 129--><p class="noindent"><br class="newline"/><span class="phvr7t-x-x-109">Code version: 2021-08-11</span><br class="newline"/></p></div>
 <!--l. 133--><p class="indent"> <img alt="Colvars logo" class="cover_picture" src="cover-512px.jpg"/> <br class="newline"/><span class="phvr7t-x-x-120">Alejandro Bernardin, Haochuan Chen, Jeffrey R. Comer, Giacomo Fiorin, Haohao Fu,</span>
 <span class="phvr7t-x-x-120">J</span><span class="phvr7t-x-x-120">é</span><span class="phvr7t-x-x-120">r</span><span class="phvr7t-x-x-120">ô</span><span class="phvr7t-x-x-120">me H</span><span class="phvr7t-x-x-120">é</span><span class="phvr7t-x-x-120">nin, Axel Kohlmeyer, Fabrizio Marinelli, Joshua V. Vermaas, Andrew D.</span>
 <span class="phvr7t-x-x-120">White</span>
@@ -156,15 +156,16 @@ content of a protein segment.</a></span>
 <br/>    <span class="subsectionToc">6.9 <a href="#sec:colvarbias_alb" id="QQ2-1-130">Adaptive Linear Bias/Experiment Directed Simulation</a></span>
 <br/>    <span class="subsectionToc">6.10 <a href="#sec:colvarbias_histogram" id="QQ2-1-131">Multidimensional histograms</a></span>
 <br/>     <span class="subsubsectionToc">6.10.1 <a href="#sec:colvarbias_histogram_grid" id="QQ2-1-132">Grid definition for multidimensional histograms</a></span>
-<br/>    <span class="subsectionToc">6.11 <a href="#sec:colvarbias_restraint_histogram" id="QQ2-1-133">Probability distribution-restraints</a></span>
-<br/>    <span class="subsectionToc">6.12 <a href="#sec:scripted_biases" id="QQ2-1-134">Defining scripted biases</a></span>
-<br/>    <span class="subsectionToc">6.13 <a href="#sec:cv_scripting_opt" id="QQ2-1-135">Performance of scripted biases</a></span>
-<br/> <span class="sectionToc">7 <a href="#sec:cvscript_tcl" id="QQ2-1-136">Scripting interface (Tcl): list of commands</a></span>
-<br/>    <span class="subsectionToc">7.1 <a href="#sec:cvscript_tcl_cv" id="QQ2-1-137">Commands to manage the Colvars module</a></span>
-<br/>    <span class="subsectionToc">7.2 <a href="#sec:cvscript_tcl_colvar" id="QQ2-1-138">Commands to manage individual collective variables</a></span>
-<br/>    <span class="subsectionToc">7.3 <a href="#sec:cvscript_tcl_bias" id="QQ2-1-139">Commands to manage individual biases</a></span>
-<br/> <span class="sectionToc">8 <a href="#sec:colvars_config_changes" id="QQ2-1-140">Syntax changes from older versions</a></span>
-<br/> <span class="sectionToc">9 <a href="#sec:compilation_notes" id="QQ2-1-141">Compilation notes</a></span>
+<br/>    <span class="subsectionToc">6.11 <a href="#sec:reweighted_fel_from_aMD" id="QQ2-1-133">Reweighted free-energy landscapes from accelerated MD</a></span>
+<br/>    <span class="subsectionToc">6.12 <a href="#sec:colvarbias_restraint_histogram" id="QQ2-1-134">Probability distribution-restraints</a></span>
+<br/>    <span class="subsectionToc">6.13 <a href="#sec:scripted_biases" id="QQ2-1-135">Defining scripted biases</a></span>
+<br/>    <span class="subsectionToc">6.14 <a href="#sec:cv_scripting_opt" id="QQ2-1-136">Performance of scripted biases</a></span>
+<br/> <span class="sectionToc">7 <a href="#sec:cvscript_tcl" id="QQ2-1-137">Scripting interface (Tcl): list of commands</a></span>
+<br/>    <span class="subsectionToc">7.1 <a href="#sec:cvscript_tcl_cv" id="QQ2-1-138">Commands to manage the Colvars module</a></span>
+<br/>    <span class="subsectionToc">7.2 <a href="#sec:cvscript_tcl_colvar" id="QQ2-1-139">Commands to manage individual collective variables</a></span>
+<br/>    <span class="subsectionToc">7.3 <a href="#sec:cvscript_tcl_bias" id="QQ2-1-140">Commands to manage individual biases</a></span>
+<br/> <span class="sectionToc">8 <a href="#sec:colvars_config_changes" id="QQ2-1-141">Syntax changes from older versions</a></span>
+<br/> <span class="sectionToc">9 <a href="#sec:compilation_notes" id="QQ2-1-142">Compilation notes</a></span>
 </div>
 <!--l. 65--><p class="indent">
 </p>
@@ -4028,7 +4029,7 @@ That quantity can be calculated based on either the CZAR estimator or the Zheng/
 automatically in eABF simulations, regardless of the number of colvars involved. Note that ABF may also be
 applied on a combination of extended and non-extended colvars; in that case, CZAR still provides an unbiased
 estimate of the free energy gradient.
-</p><!--l. 5060--><p class="indent">   CZAR estimates the free energy gradient as: </p><table class="equation"><tr><td> <a id="x1-112001r31"></a>
+</p><!--l. 5060--><p class="indent">   CZAR estimates the free energy gradient as: </p><table class="equation"><tr><td> <a id="eq:czar"></a>
 <!--l. 5061--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
 <msup><mrow><mi>A</mi></mrow><mrow><mi>′</mi></mrow></msup><mrow><mo class="MathClass-open">(</mo><mrow><mi>z</mi></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mo class="MathClass-bin">−</mo><mfrac><mrow><mn>1</mn></mrow>
 <mrow><mi>β</mi></mrow></mfrac> <mfrac><mrow><mi>d</mi><mo class="qopname">ln</mo><!--nolimits--><mover accent="true"><mrow><mi>ρ</mi></mrow><mo class="qopname">̃</mo></mover><mrow><mo class="MathClass-open">(</mo><mrow><mi>z</mi></mrow><mo class="MathClass-close">)</mo></mrow></mrow>
@@ -5086,148 +5087,214 @@ provided inside the configuration of <span class="ot1-zi4r-0-x-x-109">histogram<
 </li>
 <li class="itemize"><a id="dx1-132003"></a><span class="colorbox" id="colorbox358"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">widths:</span></span> analogous to <span class="ot1-zi4r-0-x-x-109">lowerBoundaries</span></li></ul>
 <div class="flushright">
-<!--l. 6329--><p class="noindent">
+<!--l. 6383--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 6329--><p class="noindent"></p><div class="heading"><a id="sec:colvarbias_restraint_histogram">
-<h4 class="subsectionHead"><span class="titlemark">6.11    </span> <a id="sec:colvarbias_restraint_histogram"></a>Probability distribution-restraints</h4>
-<!--l. 6329--><p class="noindent"></p></a> </div> 
-<!--l. 6331--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">histogramRestraint </span>bias implements a continuous potential of many variables (or of a single high-dimensional
-variable) aimed at reproducing a one-dimensional statistical distribution that is provided by the user. The
-<!--l. 6332--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math> variables
-<!--l. 6332--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math> are interpreted as multiple
-observations of a random variable <!--l. 6332--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
-with unknown probability distribution. The potential is minimized when the histogram
-<!--l. 6333--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>, estimated as a sum of Gaussian
-functions centered at <!--l. 6333--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>, is equal
-to the reference histogram <!--l. 6333--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>:
-</p><table class="equation"><tr><td> <a id="eq:colvarbias_restraint_histogram"></a>
-<!--l. 6334--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-<mi>V</mi> <mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mfrac><mrow><mn>1</mn></mrow>
-<mrow><mn>2</mn></mrow></mfrac><mi>k</mi><mo class="MathClass-op">∫
- <!--nolimits--></mo><!--nolimits--><msup><mrow><mfenced close=")" open="(" separators=""><mrow><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow><mo class="MathClass-bin">−</mo><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup><mi mathvariant="normal">d</mi><mi>ξ</mi>
+<!--l. 6383--><p class="noindent"></p><div class="heading"><a id="sec:reweighted_fel_from_aMD">
+<h4 class="subsectionHead"><span class="titlemark">6.11    </span> <a id="sec:reweighted_fel_from_aMD"></a>Reweighted free-energy landscapes from accelerated MD</h4>
+<!--l. 6383--><p class="noindent"></p></a> </div> 
+<!--l. 6383--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">reweightaMD </span>can be used to build reweighted free-energy landscapes of a set of collective variables on-the-fly
+from accelerated molecular dynamics (aMD)<span class="cite">[<a href="#Xhamelberg2004">40</a>]</span> and Gaussian aMD (GaMD)<span class="cite">[<a href="#XMiao2015">41</a>]</span>. More specifically, it collects the boost
+potential, <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>Δ</mi><mi>V</mi> <mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">X</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>,
+and computes the corresponding free-energies: </p><table class="equation"><tr><td> <a id="eq:amd-reweighting"></a>
+<!--l. 6383--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<mi>A</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mo class="MathClass-bin">−</mo><mfrac><mrow><mn>1</mn></mrow>
+<mrow><mi>β</mi></mrow></mfrac><mo class="qopname">ln</mo><!--nolimits--><mrow><mo class="MathClass-open">⟨</mo><mrow><mo class="qopname">exp</mo><!--nolimits--><mrow><mo class="MathClass-open">{</mo><mrow><mi>β</mi><mi>Δ</mi><mi>V</mi> <mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">X</mi></mrow><mo class="MathClass-close">)</mo></mrow><mi>δ</mi><mrow><mo class="MathClass-open">[</mo><mrow><mi>ξ</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">X</mi></mrow><mo class="MathClass-close">)</mo></mrow><mo class="MathClass-bin">−</mo><mi>ξ</mi></mrow><mo class="MathClass-close">]</mo></mrow></mrow><mo class="MathClass-close">}</mo></mrow></mrow><mo class="MathClass-close">⟩</mo></mrow><mo class="MathClass-punc">,</mo>
 </math></td><td class="eq-no">(41)</td></tr></table>
-<table class="equation"><tr><td> <a id="eq:colvarbias_restraint_histogram_gaussian"></a>
-<!--l. 6338--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-<mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mfrac><mrow><mn>1</mn></mrow>
-<mrow><mi>M</mi><msqrt><mrow><mn>2</mn><mi>π</mi><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></msqrt></mrow></mfrac><munderover accent="false" accentunder="false"><mrow><mo mathsize="big">∑</mo></mrow><mrow><mi>i</mi><mo class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow><mi>M</mi></mrow></munderover><mo class="qopname">exp</mo><!--nolimits--> <mfenced close=")" open="(" separators=""><mrow><mo class="MathClass-bin">−</mo><mfrac><mrow><msup><mrow><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi> <mo class="MathClass-bin">−</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup></mrow>
-<mrow><mn>2</mn><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> </mrow></mfenced>
+<!--l. 6383--><p class="indent">   where <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>β</mi></math> is
+<!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo class="MathClass-bin">∕</mo><msub><mrow><mi>k</mi></mrow><mrow><mi>B</mi></mrow></msub><mi>T</mi> </math>. If the
+distribution of <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>Δ</mi><mi>V</mi> <mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">X</mi></mrow><mo class="MathClass-close">)</mo></mrow><mi>δ</mi><mrow><mo class="MathClass-open">[</mo><mrow><mi>ξ</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">X</mi></mrow><mo class="MathClass-close">)</mo></mrow><mo class="MathClass-bin">−</mo><mi>ξ</mi></mrow><mo class="MathClass-close">]</mo></mrow></math>
+is assumed to be near Gaussian, the equation above can be approximated by the cumulant expansion: </p><table class="equation"><tr><td>
+<a id="eq:cumulant-expansion"></a>
+<!--l. 6383--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<mi>A</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mo class="MathClass-bin">−</mo><msub><mrow><mi>C</mi></mrow><mrow><mn>1</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow><mo class="MathClass-bin">−</mo><mfrac><mrow><mn>1</mn></mrow>
+<mrow><mn>2</mn></mrow></mfrac><mi>β</mi><msub><mrow><mi>C</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow><mo class="MathClass-punc">,</mo>
 </math></td><td class="eq-no">(42)</td></tr></table>
-<!--l. 6342--><p class="indent">   When used in combination with a <span class="ot1-zi4r-0-x-x-109">distancePairs </span>multi-dimensional variable, this bias implements the
-refinement algorithm against ESR/DEER experiments published by Shen <span class="ptmri7t-x-x-109">et al </span><span class="cite">[<a href="#XShen2015">40</a>]</span>.
-</p><!--l. 6344--><p class="indent">   This bias behaves similarly to the <span class="ot1-zi4r-0-x-x-109">histogram </span>bias with the <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars </span>option, with the important
-difference that <span class="ptmri7t-x-x-109">all </span>variables are gathered, resulting in a one-dimensional histogram. Future versions will include
-support for multi-dimensional histograms.
+<!--l. 6383--><p class="indent">   where <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>C</mi></mrow><mrow><mn>1</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math> and
+<!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>C</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math> are the average
+and the variance of <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>Δ</mi><mi>V</mi> <mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">X</mi></mrow><mo class="MathClass-close">)</mo></mrow><mi>δ</mi><mrow><mo class="MathClass-open">[</mo><mrow><mi>ξ</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi mathvariant="bold">X</mi></mrow><mo class="MathClass-close">)</mo></mrow><mo class="MathClass-bin">−</mo><mi>ξ</mi></mrow><mo class="MathClass-close">]</mo></mrow></math>,
+respectively. It should be noted that this implementation is initially intended for the combination of aMD/GaMD
+with other CV-based methods such as eABF<span class="cite">[<a href="#XChen2021">42</a>]</span>, where the term associated with the biasing distribution
+<!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mrow><mi>ρ</mi></mrow><mo class="MathClass-op">̃</mo></mover><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>, namely
+<!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-bin">−</mo><mfrac><mrow><mn>1</mn></mrow> <mrow><mi>β</mi></mrow></mfrac><mo class="qopname">ln</mo><!--nolimits--><mover accent="true"><mrow><mi>ρ</mi></mrow><mo class="qopname">̃</mo></mover><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>,
                                                                                          
                                                                                          
-</p><!--l. 6347--><p class="indent">   The list of options is as follows: </p>
+is included, so users are expected to add the output from Eq. (<a href="#eq:amd-reweighting">41<!--tex4ht:ref: eq:amd-reweighting --></a>) or (<a href="#eq:cumulant-expansion">42<!--tex4ht:ref: eq:cumulant-expansion --></a>) with those
+from CZAR (see Eq. (<a href="#eq:czar">31<!--tex4ht:ref: eq:czar --></a>)) <span class="cite">[<a href="#XLesage2017">24</a>]</span> directly. Consequently, in Eq. (<a href="#eq:amd-reweighting">41<!--tex4ht:ref: eq:amd-reweighting --></a>) and (<a href="#eq:cumulant-expansion">42<!--tex4ht:ref: eq:cumulant-expansion --></a>) the term
+<!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-bin">−</mo><mfrac><mrow><mn>1</mn></mrow> <mrow><mi>β</mi></mrow></mfrac><mo class="qopname">ln</mo><!--nolimits--><mover accent="true"><mrow><mi>ρ</mi></mrow><mo class="qopname">̃</mo></mover><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math> is not included.
+Therefore, if users want to perform just aMD/GaMD simulations with this on-the-fly reweighting implementation,
+the term <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-bin">−</mo><mfrac><mrow><mn>1</mn></mrow> <mrow><mi>β</mi></mrow></mfrac><mo class="qopname">ln</mo><!--nolimits--><mover accent="true"><mrow><mi>ρ</mi></mrow><mo class="qopname">̃</mo></mover><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+should be manually computed by post-processing.
+</p><!--l. 6383--><p class="indent">   Currently, in all MD engines that Colvars supports, only NAMD implements aMD/GaMD, so this component is
+basically exclusive to NAMD.
+</p><!--l. 6383--><p class="indent">   The list of options is as follows: </p>
 <ul class="itemize1">
 <li class="itemize"><a id="dx1-133003"></a><span class="colorbox" id="colorbox359"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">name:</span></span> see definition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">name</span></a> (biasing and analysis methods)
      </li>
 <li class="itemize"><a id="dx1-133004"></a><span class="colorbox" id="colorbox360"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">colvars:</span></span> see definition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">colvars</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><a id="dx1-133005"></a><span class="colorbox" id="colorbox361"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">outputEnergy:</span></span> see definition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">outputEnergy</span></a> (biasing and analysis methods)
+<li class="itemize"><a id="dx1-133005"></a><span class="colorbox" id="colorbox361"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">outputFreq:</span></span> see definition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">outputFreq</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><a id="dx1-133006"></a><span class="colorbox" id="colorbox362"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">lowerBoundary</span></span> <!--l. 6362--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Lower
-     boundary of the colvar grid<!--l. 6362--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Defines the lowest end of the interval where the reference distribution <!--l. 6362--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+<li class="itemize"><a id="dx1-133006"></a><span class="colorbox" id="colorbox362"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">outputFile:</span></span> see definition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">outputFile</span></a> (biasing and analysis methods)
+     </li>
+<li class="itemize"><a id="dx1-133007"></a><span class="colorbox" id="colorbox363"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">historyFreq:</span></span> see definition of <a href="#sec:colvarbias_abf"><span class="ot1-zi4r-0-x-x-109">historyFreq</span></a> (biasing and analysis methods)
+     </li>
+<li class="itemize"><a id="dx1-133008"></a><span class="colorbox" id="colorbox364"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">CollectAfterSteps</span></span> <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Collect
+     the histogram after a specified number of simulation steps<!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">reweightaMD</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive integer <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>0 <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Start to populate the histogram after a specified number of step. This feature is useful
+     to skip the preparation steps in GaMD simulations.
+     </li>
+<li class="itemize"><a id="dx1-133009"></a><span class="colorbox" id="colorbox365"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">CumulantExpansion</span></span> <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Enable
+     the cumulant expansion estimator<!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">reweightaMD</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">yes</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If this option is set to <span class="ot1-zi4r-0-x-x-109">yes</span>, the cumulant expansion in Eq. (<span class="ptmb7t-x-x-109">??</span>) will be used. The output
+     file have a suffix of <span class="ot1-zi4r-0-x-x-109">.cumulant.*</span>.
+     </li>
+<li class="itemize"><a id="dx1-133010"></a><span class="colorbox" id="colorbox366"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">writePMFGradients</span></span> <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Calculate
+     the numerical gradients of Eq. (<span class="ptmb7t-x-x-109">??</span>) and (<span class="ptmb7t-x-x-109">??</span>)<!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">reweightaMD</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">yes</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>If this option is set to <span class="ot1-zi4r-0-x-x-109">yes</span>, the numerical gradients Eq. (<span class="ptmb7t-x-x-109">??</span>) and (<span class="ptmb7t-x-x-109">??</span>) with respect to
+     <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+                                                                                         
+                                                                                         
+     are calculated. This option is generally used when <!--l. 6383--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+     is stratified into windows, and the corresponding free-energies are required to merge afterwards.
+     </li></ul>
+<div class="flushright">
+<!--l. 6386--><p class="noindent">
+<a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
+<!--l. 6386--><p class="noindent"></p><div class="heading"><a id="sec:colvarbias_restraint_histogram">
+<h4 class="subsectionHead"><span class="titlemark">6.12    </span> <a id="sec:colvarbias_restraint_histogram"></a>Probability distribution-restraints</h4>
+<!--l. 6386--><p class="noindent"></p></a> </div> 
+<!--l. 6388--><p class="indent">   The <span class="ot1-zi4r-0-x-x-109">histogramRestraint </span>bias implements a continuous potential of many variables (or of a single high-dimensional
+variable) aimed at reproducing a one-dimensional statistical distribution that is provided by the user. The
+<!--l. 6389--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math> variables
+<!--l. 6389--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math> are interpreted as multiple
+observations of a random variable <!--l. 6389--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+with unknown probability distribution. The potential is minimized when the histogram
+<!--l. 6390--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>, estimated as a sum of Gaussian
+functions centered at <!--l. 6390--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></math>, is equal
+to the reference histogram <!--l. 6390--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>:
+</p><table class="equation"><tr><td> <a id="eq:colvarbias_restraint_histogram"></a>
+<!--l. 6391--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<mi>V</mi> <mrow><mo class="MathClass-open">(</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mo class="MathClass-op">…</mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><mn>2</mn></mrow></mfrac><mi>k</mi><mo class="MathClass-op">∫
+ <!--nolimits--></mo><!--nolimits--><msup><mrow><mfenced close=")" open="(" separators=""><mrow><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow><mo class="MathClass-bin">−</mo><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup><mi mathvariant="normal">d</mi><mi>ξ</mi>
+</math></td><td class="eq-no">(43)</td></tr></table>
+<table class="equation"><tr><td> <a id="eq:colvarbias_restraint_histogram_gaussian"></a>
+<!--l. 6395--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><mi>M</mi><msqrt><mrow><mn>2</mn><mi>π</mi><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></msqrt></mrow></mfrac><munderover accent="false" accentunder="false"><mrow><mo mathsize="big">∑</mo></mrow><mrow><mi>i</mi><mo class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow><mi>M</mi></mrow></munderover><mo class="qopname">exp</mo><!--nolimits--> <mfenced close=")" open="(" separators=""><mrow><mo class="MathClass-bin">−</mo><mfrac><mrow><msup><mrow><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi> <mo class="MathClass-bin">−</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo class="MathClass-close">)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow><mn>2</mn><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> </mrow></mfenced>
+</math></td><td class="eq-no">(44)</td></tr></table>
+<!--l. 6399--><p class="indent">   When used in combination with a <span class="ot1-zi4r-0-x-x-109">distancePairs </span>multi-dimensional variable, this bias implements the
+refinement algorithm against ESR/DEER experiments published by Shen <span class="ptmri7t-x-x-109">et al </span><span class="cite">[<a href="#XShen2015">43</a>]</span>.
+</p><!--l. 6401--><p class="indent">   This bias behaves similarly to the <span class="ot1-zi4r-0-x-x-109">histogram </span>bias with the <span class="ot1-zi4r-0-x-x-109">gatherVectorColvars </span>option, with the important
+difference that <span class="ptmri7t-x-x-109">all </span>variables are gathered, resulting in a one-dimensional histogram. Future versions will include
+support for multi-dimensional histograms.
+</p><!--l. 6404--><p class="indent">   The list of options is as follows: </p>
+<ul class="itemize1">
+<li class="itemize"><a id="dx1-134003"></a><span class="colorbox" id="colorbox367"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">name:</span></span> see definition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">name</span></a> (biasing and analysis methods)
+     </li>
+<li class="itemize"><a id="dx1-134004"></a><span class="colorbox" id="colorbox368"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">colvars:</span></span> see definition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">colvars</span></a> (biasing and analysis methods)
+     </li>
+<li class="itemize"><a id="dx1-134005"></a><span class="colorbox" id="colorbox369"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">outputEnergy:</span></span> see definition of <a href="#sec:colvarbias"><span class="ot1-zi4r-0-x-x-109">outputEnergy</span></a> (biasing and analysis methods)
+     </li>
+<li class="itemize"><a id="dx1-134006"></a><span class="colorbox" id="colorbox370"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">lowerBoundary</span></span> <!--l. 6419--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Lower
+     boundary of the colvar grid<!--l. 6419--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Defines the lowest end of the interval where the reference distribution <!--l. 6419--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
      is defined. Exactly one value must be provided, because only one-dimensional histograms are supported
      by the current version.
      </li>
-<li class="itemize"><a id="dx1-133007"></a><span class="colorbox" id="colorbox363"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">upperBoundary:</span></span> analogous to <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>
+<li class="itemize"><a id="dx1-134007"></a><span class="colorbox" id="colorbox371"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">upperBoundary:</span></span> analogous to <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>
 </li>
-<li class="itemize"><a id="dx1-133008"></a><span class="colorbox" id="colorbox364"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">width</span></span> <!--l. 6374--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Width
-     of the colvar grid<!--l. 6374--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Defines the spacing of the grid where the reference distribution <!--l. 6374--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+<li class="itemize"><a id="dx1-134008"></a><span class="colorbox" id="colorbox372"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">width</span></span> <!--l. 6431--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Width
+     of the colvar grid<!--l. 6431--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Defines the spacing of the grid where the reference distribution <!--l. 6431--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
      is defined.
      </li>
-<li class="itemize"><a id="dx1-133009"></a><span class="colorbox" id="colorbox365"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">gaussianSigma</span></span> <!--l. 6384--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Standard
-     deviation of the approximating Gaussian<!--l. 6384--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>2 <!--l. 6384--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>
-<span class="ot1-zi4r-0-x-x-109">width</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Defines the parameter <!--l. 6384--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
-     in eq. <a href="#eq:colvarbias_restraint_histogram_gaussian">42<!--tex4ht:ref: eq:colvarbias_restraint_histogram_gaussian --></a>.
+<li class="itemize"><a id="dx1-134009"></a><span class="colorbox" id="colorbox373"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">gaussianSigma</span></span> <!--l. 6441--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Standard
+     deviation of the approximating Gaussian<!--l. 6441--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span>2 <!--l. 6441--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>
+<span class="ot1-zi4r-0-x-x-109">width</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Defines the parameter <!--l. 6441--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+     in eq. <a href="#eq:colvarbias_restraint_histogram_gaussian">44<!--tex4ht:ref: eq:colvarbias_restraint_histogram_gaussian --></a>.
      </li>
-<li class="itemize"><a id="dx1-133010"></a><span class="colorbox" id="colorbox366"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">forceConstant</span></span> <!--l. 6394--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Force
-     constant (kcal/mol)<!--l. 6394--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">1.0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Defines the parameter <!--l. 6394--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
-     in eq. <a href="#eq:colvarbias_restraint_histogram">41<!--tex4ht:ref: eq:colvarbias_restraint_histogram --></a>.
-                                                                                         
-                                                                                         
+<li class="itemize"><a id="dx1-134010"></a><span class="colorbox" id="colorbox374"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">forceConstant</span></span> <!--l. 6451--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Force
+     constant (kcal/mol)<!--l. 6451--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>positive decimal <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">1.0</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Defines the parameter <!--l. 6451--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
+     in eq. <a href="#eq:colvarbias_restraint_histogram">43<!--tex4ht:ref: eq:colvarbias_restraint_histogram --></a>.
      </li>
-<li class="itemize"><a id="dx1-133011"></a><span class="colorbox" id="colorbox367"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">refHistogram</span></span> <!--l. 6405--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Reference
-     histogram <!--l. 6405--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 6405--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>space-separated list of <!--l. 6405--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math>
-     positive decimals <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Provides the values of <!--l. 6405--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+<li class="itemize"><a id="dx1-134011"></a><span class="colorbox" id="colorbox375"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">refHistogram</span></span> <!--l. 6462--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Reference
+     histogram <!--l. 6462--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 6462--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>space-separated list of <!--l. 6462--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math>
+     positive decimals <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Provides the values of <!--l. 6462--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
      consecutively. The mid-point convention is used, i.e. the first point that should be included is for
-     <!--l. 6405--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
-     = <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>+<span class="ot1-zi4r-0-x-x-109">width</span>/2. If the integral of <!--l. 6405--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
-     is not normalized to 1, <!--l. 6405--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+     <!--l. 6462--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+     = <span class="ot1-zi4r-0-x-x-109">lowerBoundary</span>+<span class="ot1-zi4r-0-x-x-109">width</span>/2. If the integral of <!--l. 6462--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+     is not normalized to 1, <!--l. 6462--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
      is rescaled automatically before use.
      </li>
-<li class="itemize"><a id="dx1-133012"></a><span class="colorbox" id="colorbox368"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">refHistogramFile</span></span> <!--l. 6416--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Reference
-     histogram <!--l. 6416--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 6416--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>UNIX file name <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Provides the values of <!--l. 6416--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+<li class="itemize"><a id="dx1-134012"></a><span class="colorbox" id="colorbox376"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">refHistogramFile</span></span> <!--l. 6473--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Reference
+     histogram <!--l. 6473--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 6473--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">histogramRestraint</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>UNIX file name <br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>Provides the values of <!--l. 6473--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
      as contents of the corresponding file (mutually exclusive with <span class="ot1-zi4r-0-x-x-109">refHistogram</span>). The format is that of a
-     text file, with each line containing the space-separated values of <!--l. 6416--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
-     and <!--l. 6416--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
+     text file, with each line containing the space-separated values of <!--l. 6473--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+     and <!--l. 6473--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
      The same numerical conventions as <span class="ot1-zi4r-0-x-x-109">refHistogram </span>are used.
      </li>
-<li class="itemize"><a id="dx1-133013"></a><span class="colorbox" id="colorbox369"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">writeHistogram</span></span> <!--l. 6425--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Periodically
-     write the instantaneous histogram <!--l. 6425--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 6425--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">metadynamics</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If <span class="ot1-zi4r-0-x-x-109">on</span>, the histogram <!--l. 6425--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
-     is written every <span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency </span>steps to a file with the name <span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.</span><!--l. 6425--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">name</span><!--l. 6425--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ot1-zi4r-0-x-x-109">.hist.dat</span>
-     This is useful to diagnose the convergence of <!--l. 6426--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
-     against <!--l. 6426--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
+<li class="itemize"><a id="dx1-134013"></a><span class="colorbox" id="colorbox377"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">writeHistogram</span></span> <!--l. 6482--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Periodically
+     write the instantaneous histogram <!--l. 6482--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math><!--l. 6482--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span><span class="ot1-zi4r-0-x-x-109">metadynamics</span><br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>If <span class="ot1-zi4r-0-x-x-109">on</span>, the histogram <!--l. 6482--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+     is written every <span class="ot1-zi4r-0-x-x-109">colvarsRestartFrequency </span>steps to a file with the name <span class="ptmri7t-x-x-109">outputName</span><span class="ot1-zi4r-0-x-x-109">.</span><!--l. 6482--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ot1-zi4r-0-x-x-109">name</span><!--l. 6482--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ot1-zi4r-0-x-x-109">.hist.dat</span>
+     This is useful to diagnose the convergence of <!--l. 6483--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>
+     against <!--l. 6483--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo class="MathClass-open">(</mo><mrow><mi>ξ</mi></mrow><mo class="MathClass-close">)</mo></mrow></math>.
      </li></ul>
 <div class="flushright">
-<!--l. 6488--><p class="noindent">
+<!--l. 6545--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 6488--><p class="noindent"></p><div class="heading"><a id="sec:scripted_biases">
-<h4 class="subsectionHead"><span class="titlemark">6.12    </span> <a id="sec:scripted_biases"></a>Defining scripted biases</h4>
-<!--l. 6488--><p class="noindent"></p></a> </div> 
-<!--l. 6488--><p class="indent">   Rather than using the biasing methods described above, it is possible to apply biases provided at run time as a
+<!--l. 6545--><p class="noindent"></p><div class="heading"><a id="sec:scripted_biases">
+<h4 class="subsectionHead"><span class="titlemark">6.13    </span> <a id="sec:scripted_biases"></a>Defining scripted biases</h4>
+<!--l. 6545--><p class="noindent"></p></a> </div> 
+<!--l. 6545--><p class="indent">   Rather than using the biasing methods described above, it is possible to apply biases provided at run time as a
 Tcl script, in the spirit of <span class="ot1-zi4r-0-x-x-109">TclForces</span>.
 </p>
 <ul class="itemize1">
-<li class="itemize"><a id="Colvars-global|scriptedColvarForces"> </a> <a id="dx1-134001"></a><span class="colorbox" id="colorbox370"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">scriptedColvarForces</span></span> <!--l. 6488--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Enable
-     custom, scripted forces on colvars <!--l. 6488--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>global <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>If this flag is enabled, a Tcl procedure named <span class="ot1-zi4r-0-x-x-109">calc</span><span class="ot1-zi4r-0-x-x-109">_colvar</span><span class="ot1-zi4r-0-x-x-109">_forces </span>accepting one
+<li class="itemize"><a id="Colvars-global|scriptedColvarForces"> </a> <a id="dx1-135001"></a><span class="colorbox" id="colorbox378"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">scriptedColvarForces</span></span> <!--l. 6545--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Enable
+     custom, scripted forces on colvars <!--l. 6545--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>global <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">off</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:   </span>If this flag is enabled, a Tcl procedure named <span class="ot1-zi4r-0-x-x-109">calc</span><span class="ot1-zi4r-0-x-x-109">_colvar</span><span class="ot1-zi4r-0-x-x-109">_forces </span>accepting one
      parameter should be defined by the user. It is executed at each timestep, with the current step number
      as parameter, between the calculation of colvars and the application of bias forces. This procedure
      may use the <span class="ot1-zi4r-0-x-x-109">cv </span>command to access the values of colvars (e.g. <span class="ot1-zi4r-0-x-x-109">cv colvar xi value</span>), apply forces
      on them (<span class="ot1-zi4r-0-x-x-109">cv colvar xi addforce </span><span class="ts1-zi4r-x-x-109">$</span><span class="ot1-zi4r-0-x-x-109">F</span>) or add energy to the simulation system (<span class="ot1-zi4r-0-x-x-109">cv addenergy </span><span class="ts1-zi4r-x-x-109">$</span><span class="ot1-zi4r-0-x-x-109">E</span>),
      effectively defining custom collective variable biases. </li></ul>
 <div class="flushright">
-<!--l. 6488--><p class="noindent">
+<!--l. 6545--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 6488--><p class="noindent"></p><div class="heading"><a id="sec:cv_scripting_opt">
-<h4 class="subsectionHead"><span class="titlemark">6.13    </span> <a id="sec:cv_scripting_opt"></a>Performance of scripted biases</h4>
-<!--l. 6488--><p class="noindent"></p></a> </div> 
-<!--l. 6488--><p class="indent">   If concurrent computation over multiple threads is available (this is indicated by the message “SMP parallelism
+<!--l. 6545--><p class="noindent"></p><div class="heading"><a id="sec:cv_scripting_opt">
+<h4 class="subsectionHead"><span class="titlemark">6.14    </span> <a id="sec:cv_scripting_opt"></a>Performance of scripted biases</h4>
+<!--l. 6545--><p class="noindent"></p></a> </div> 
+<!--l. 6545--><p class="indent">   If concurrent computation over multiple threads is available (this is indicated by the message “SMP parallelism
 is available." printed at initialization time), it is useful to take advantage of the scripting interface to combine many
 components, all computed in parallel, into a single variable.
-</p><!--l. 6488--><p class="indent">   The default SMP schedule is the following:
+</p><!--l. 6545--><p class="indent">   The default SMP schedule is the following:
      </p><ol class="enumerate1">
-<li class="enumerate" id="x1-135002x1">distribute the computation of all components across available threads;
+<li class="enumerate" id="x1-136002x1">distribute the computation of all components across available threads;
      </li>
-<li class="enumerate" id="x1-135004x2">on a single thread, collect the results of multi-component variables using polynomial combinations
+<li class="enumerate" id="x1-136004x2">on a single thread, collect the results of multi-component variables using polynomial combinations
      (see <a href="#sec:cvc_superp">4.15<!--tex4ht:ref: sec:cvc_superp --></a>), or custom functions (see <a href="#sec:colvar_custom_function">4.16<!--tex4ht:ref: sec:colvar_custom_function --></a>), or scripted functions (see <a href="#sec:colvar_scripted">4.17<!--tex4ht:ref: sec:colvar_scripted --></a>);
      </li>
-<li class="enumerate" id="x1-135006x3">distribute the computation of all biases across available threads;
+<li class="enumerate" id="x1-136006x3">distribute the computation of all biases across available threads;
      </li>
-<li class="enumerate" id="x1-135008x4">compute     on     a     single     thread     any     scripted     biases     implemented     via     the     keyword
+<li class="enumerate" id="x1-136008x4">compute     on     a     single     thread     any     scripted     biases     implemented     via     the     keyword
      <a href="#Colvars-global|scriptedColvarForces"><span class="ot1-zi4r-0-x-x-109">scriptedColvarForces</span></a>.
+                                                                                         
+                                                                                         
      </li>
-<li class="enumerate" id="x1-135010x5">communicate on a single thread forces to NAMD.</li></ol>
-<!--l. 6488--><p class="indent">   The following options allow to fine-tune this schedule: </p>
+<li class="enumerate" id="x1-136010x5">communicate on a single thread forces to NAMD.</li></ol>
+<!--l. 6545--><p class="indent">   The following options allow to fine-tune this schedule: </p>
 <ul class="itemize1">
-<li class="itemize"><a id="dx1-135011"></a><span class="colorbox" id="colorbox371"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">scriptingAfterBiases</span></span> <!--l. 6488--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Scripted
-     colvar forces need updated biases?<!--l. 6488--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>global <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">on</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This flag specifies that the <span class="ot1-zi4r-0-x-x-109">calc</span><span class="ot1-zi4r-0-x-x-109">_colvar</span><span class="ot1-zi4r-0-x-x-109">_forces </span>procedure (last step in the list above)
+<li class="itemize"><a id="dx1-136011"></a><span class="colorbox" id="colorbox379"><span class="ptmb7t-x-x-109">Keyword </span><span class="ot1-zi4r-0-x-x-120">scriptingAfterBiases</span></span> <!--l. 6545--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open">⟨</mo><mrow><mspace class="thinspace" width="0.3em"></mspace></mrow></mrow></math>Scripted
+     colvar forces need updated biases?<!--l. 6545--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.3em"></mspace><mo class="MathClass-close">⟩</mo></math><br class="newline"/><span class="ptmb7t-x-x-109">Context:  </span>global <br class="newline"/><span class="ptmb7t-x-x-109">Acceptable values:  </span>boolean <br class="newline"/><span class="ptmb7t-x-x-109">Default value:  </span><span class="ot1-zi4r-0-x-x-109">on</span><br class="newline"/><span class="ptmb7t-x-x-109">Description:  </span>This flag specifies that the <span class="ot1-zi4r-0-x-x-109">calc</span><span class="ot1-zi4r-0-x-x-109">_colvar</span><span class="ot1-zi4r-0-x-x-109">_forces </span>procedure (last step in the list above)
      is executed only after all biases have been updated (next-to-last step) For example, this allows using
      the energy of a restraint bias, or the force applied on a colvar, to calculate additional scripted forces,
      such as boundary constraints. When this flag is set to <span class="ot1-zi4r-0-x-x-109">off</span>, it is assumed that only the values of the
      variables (but not the energy of the biases or applied forces) will be used by <span class="ot1-zi4r-0-x-x-109">calc</span><span class="ot1-zi4r-0-x-x-109">_colvar</span><span class="ot1-zi4r-0-x-x-109">_forces</span>:
      this can be used to schedule the calculation of scripted forces and biases concurrently to increase
      performance. </li></ul>
-<!--l. 6498--><p class="indent">
+<!--l. 6555--><p class="indent">
 </p>
 <div class="flushright">
-<!--l. 6498--><p class="noindent">
+<!--l. 6555--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 6498--><p class="noindent"></p><div class="heading"><a id="sec:cvscript_tcl">
+<!--l. 6555--><p class="noindent"></p><div class="heading"><a id="sec:cvscript_tcl">
 <h3 class="sectionHead"><span class="titlemark">7    </span> <a id="sec:cvscript_tcl"></a>Scripting interface (Tcl): list of commands</h3>
-<!--l. 6498--><p class="noindent"></p></a> </div>  This section lists all the commands used in NAMD to control the behavior of the Colvars module from within a
+<!--l. 6555--><p class="noindent"></p></a> </div>  This section lists all the commands used in NAMD to control the behavior of the Colvars module from within a
 run script.
 
                                                                                          <div class="flushright">
@@ -5384,19 +5451,19 @@ run script.
 <li class="itemize"><span class="ot1-zi4r-0-x-x-109">cv bias name state</span><br class="newline"/><span class="ot1-zi4r-0-x-x-109">Print a string representation of the feature state of this bias</span><br class="newline"/><span class="ot1-zi4r-0-x-x-109">Returns</span><br class="newline"/><span class="ot1-zi4r-0-x-x-109">-------</span><br class="newline"/><span class="ot1-zi4r-0-x-x-109">state : string - String representation of the bias features</span>
 </li>
 <li class="itemize"><span class="ot1-zi4r-0-x-x-109">cv bias name update</span><br class="newline"/><span class="ot1-zi4r-0-x-x-109">Recompute this bias and return its up-to-date energy</span><br class="newline"/><span class="ot1-zi4r-0-x-x-109">Returns</span><br class="newline"/><span class="ot1-zi4r-0-x-x-109">-------</span><br class="newline"/><span class="ot1-zi4r-0-x-x-109">E : float - Energy value</span></li></ul>
-<!--l. 6501--><p class="indent">
+<!--l. 6558--><p class="indent">
 </p>
 <div class="flushright">
-<!--l. 6501--><p class="noindent">
+<!--l. 6558--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 6501--><p class="noindent"></p><div class="heading"><a id="sec:colvars_config_changes">
+<!--l. 6558--><p class="noindent"></p><div class="heading"><a id="sec:colvars_config_changes">
 <h3 class="sectionHead"><span class="titlemark">8    </span> <a id="sec:colvars_config_changes"></a>Syntax changes from older versions</h3>
-<!--l. 6501--><p class="noindent"></p></a> </div> 
-<!--l. 6503--><p class="indent">   The following is a list of syntax changes in Colvars since its first release. Many of the older keywords are still
+<!--l. 6558--><p class="noindent"></p></a> </div> 
+<!--l. 6560--><p class="indent">   The following is a list of syntax changes in Colvars since its first release. Many of the older keywords are still
 recognized by the current code, thanks to specific compatibility code. <span class="ptmri7t-x-x-109">This is not a list of new features: </span>its primary
 purpose is to make you aware of those improvements that affect the use of old configuration files with new versions
 of the code.
-</p><!--l. 6507--><p class="noindent"><span class="ptmb7t-x-x-109">Note: </span>if you are using any of the NAMD and VMD tutorials:<br class="newline"/><a class="url" href="https://www.ks.uiuc.edu/Training/Tutorials/"><span class="ot1-zi4r-0-x-x-109">https://www.ks.uiuc.edu/Training/Tutorials/</span></a><br class="newline"/>please be aware that <span class="ptmri7t-x-x-109">several of these tutorials are not actively maintained</span>: for those cases, this list will help you
+</p><!--l. 6564--><p class="noindent"><span class="ptmb7t-x-x-109">Note: </span>if you are using any of the NAMD and VMD tutorials:<br class="newline"/><a class="url" href="https://www.ks.uiuc.edu/Training/Tutorials/"><span class="ot1-zi4r-0-x-x-109">https://www.ks.uiuc.edu/Training/Tutorials/</span></a><br class="newline"/>please be aware that <span class="ptmri7t-x-x-109">several of these tutorials are not actively maintained</span>: for those cases, this list will help you
 reconcile any inconsistencies.
 </p>
 <ul class="itemize1">
@@ -5412,13 +5479,13 @@ reconcile any inconsistencies.
 <li class="itemize"><span class="ptmb7t-x-x-109">Colvars version 2018-11-15 or later (NAMD version 2.14b1 or later).</span><br class="newline"/>The global <span class="ot1-zi4r-0-x-x-109">analysis </span>keyword has been discontinued: specific analysis tasks are controlled directly
      by the keywords <a href="#colvar|corrFunc"><span class="ot1-zi4r-0-x-x-109">corrFunc</span></a> and <a href="#colvar|runAve"><span class="ot1-zi4r-0-x-x-109">runAve</span></a>, which continue to remain <span class="ot1-zi4r-0-x-x-109">off </span>by default.
      </li>
-<li class="itemize"><span class="ptmb7t-x-x-109">Colvars version 2020-02-25 or later (NAMD version 2.14b1 or later).</span><br class="newline"/>The parameter <a href="#metadynamics|hillWidth"><span class="ot1-zi4r-0-x-x-109">hillWidth</span></a>, expressing the Gaussian width <!--l. 6528--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>σ</mi></math>
+<li class="itemize"><span class="ptmb7t-x-x-109">Colvars version 2020-02-25 or later (NAMD version 2.14b1 or later).</span><br class="newline"/>The parameter <a href="#metadynamics|hillWidth"><span class="ot1-zi4r-0-x-x-109">hillWidth</span></a>, expressing the Gaussian width <!--l. 6585--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>σ</mi></math>
      in relative units (number of grid points), does not have a default value any more. A new alternative
-     parameter <a href="#metadynamics|gaussianSigmas"><span class="ot1-zi4r-0-x-x-109">gaussianSigmas</span></a> allows setting the <!--l. 6529--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+     parameter <a href="#metadynamics|gaussianSigmas"><span class="ot1-zi4r-0-x-x-109">gaussianSigmas</span></a> allows setting the <!--l. 6586--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
                                                                                          
                                                                                          
-     parameters explicitly for each variable if needed.<br class="newline"/>Furthermore, to facilitate the use of other analysis tools such as for example <span class="ot1-zi4r-0-x-x-109">sum</span><span class="ot1-zi4r-0-x-x-109">_hills</span>:<br class="newline"/><a class="url" href="https://www.plumed.org/doc-v2.6/user-doc/html/sum\_hills.html"><span class="ot1-zi4r-0-x-x-109">https://www.plumed.org/doc-v2.6/user-doc/html/sum</span><span class="zptmcm7y-x-x-109">\</span><mstyle class="text"><mtext><span class="ot1-zi4r-0-x-x-109">_</span></mtext></mstyle><span class="ot1-zi4r-0-x-x-109">hills.html</span></a><br class="newline"/>the format of the file written by <a href="#metadynamics|writeHillsTrajectory"><span class="ot1-zi4r-0-x-x-109">writeHillsTrajectory</span></a> has also been changed to use <!--l. 6532--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
-     instead of <!--l. 6532--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>σ</mi></math>.
+     parameters explicitly for each variable if needed.<br class="newline"/>Furthermore, to facilitate the use of other analysis tools such as for example <span class="ot1-zi4r-0-x-x-109">sum</span><span class="ot1-zi4r-0-x-x-109">_hills</span>:<br class="newline"/><a class="url" href="https://www.plumed.org/doc-v2.6/user-doc/html/sum\_hills.html"><span class="ot1-zi4r-0-x-x-109">https://www.plumed.org/doc-v2.6/user-doc/html/sum</span><span class="zptmcm7y-x-x-109">\</span><mstyle class="text"><mtext><span class="ot1-zi4r-0-x-x-109">_</span></mtext></mstyle><span class="ot1-zi4r-0-x-x-109">hills.html</span></a><br class="newline"/>the format of the file written by <a href="#metadynamics|writeHillsTrajectory"><span class="ot1-zi4r-0-x-x-109">writeHillsTrajectory</span></a> has also been changed to use <!--l. 6589--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+     instead of <!--l. 6589--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>σ</mi></math>.
      This change does not affect how the biasing potential is written in the state file, or the simulated
      trajectory.
      </li>
@@ -5432,16 +5499,16 @@ reconcile any inconsistencies.
      a future release. Atom groups now have an automated way to save computation if forces are not used,
      and enabling this option otherwise would lead to incorrect behavior.
      </li></ul>
-<!--l. 6546--><p class="noindent">Up-to-date documentation can always be accessed at:<br class="newline"/><a class="url" href="https://colvars.github.io/colvars-refman-namd/colvars-refman-namd.html"><span class="ot1-zi4r-0-x-x-109">https://colvars.github.io/colvars-refman-namd/colvars-refman-namd.html</span></a>
-</p><!--l. 6568--><p class="indent">
+<!--l. 6603--><p class="noindent">Up-to-date documentation can always be accessed at:<br class="newline"/><a class="url" href="https://colvars.github.io/colvars-refman-namd/colvars-refman-namd.html"><span class="ot1-zi4r-0-x-x-109">https://colvars.github.io/colvars-refman-namd/colvars-refman-namd.html</span></a>
+</p><!--l. 6625--><p class="indent">
 </p>
 <div class="flushright">
-<!--l. 6568--><p class="noindent">
+<!--l. 6625--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 6568--><p class="noindent"></p><div class="heading"><a id="sec:compilation_notes">
+<!--l. 6625--><p class="noindent"></p><div class="heading"><a id="sec:compilation_notes">
 <h3 class="sectionHead"><span class="titlemark">9    </span> <a id="sec:compilation_notes"></a>Compilation notes</h3>
-<!--l. 6568--><p class="noindent"></p></a> </div> 
-<!--l. 6568--><p class="indent">   The Colvars module is typically built using the recipes of each supported software package: for this reason, no
+<!--l. 6625--><p class="noindent"></p></a> </div> 
+<!--l. 6625--><p class="indent">   The Colvars module is typically built using the recipes of each supported software package: for this reason, no
 installation instructions are needed, and the vast majority of the features described in this manual are supported in
 the most common builds of each package. This section lists the few cases where the choice of compilation settings
 affects features in the Colvars module.
@@ -5461,7 +5528,7 @@ affects features in the Colvars module.
 <!--l. 271--><p class="indent">
 </p><!--l. 274--><p class="indent">
 </p>
-<h3 class="likesectionHead"><a id="x1-1420009"></a>References</h3>
+<h3 class="likesectionHead"><a id="x1-1430009"></a>References</h3>
 <!--l. 1--><p class="noindent">
 </p><div class="thebibliography">
 <p class="bibitem"><span class="biblabel">
@@ -5645,7 +5712,22 @@ affects features in the Colvars module.
      experimental data. <span class="ptmri7t-x-x-109">J. Chem. Theory Comput.</span>, ASAP, 2014.
      </p>
 <p class="bibitem"><span class="biblabel">
- [40]<span class="bibsp">   </span></span><a id="XShen2015"></a>Rong Shen, Wei Han, Giacomo Fiorin, Shahidul M Islam, Klaus Schulten, and Benoît Roux.
+ [40]<span class="bibsp">   </span></span><a id="Xhamelberg2004"></a>Donald Hamelberg, John Mongan, and J. Andrew McCammon. Accelerated molecular dynamics:
+     A promising and efficient simulation method for biomolecules. <span class="ptmri7t-x-x-109">J. Chem. Phys.</span>, 120(24):11919--11929,
+     June 2004.
+     </p>
+<p class="bibitem"><span class="biblabel">
+ [41]<span class="bibsp">   </span></span><a id="XMiao2015"></a>Yinglong Miao, Victoria A. Feher, and J. Andrew McCammon. Gaussian Accelerated Molecular
+     Dynamics: Unconstrained Enhanced Sampling and Free Energy Calculation. <span class="ptmri7t-x-x-109">J. Chem. Theory Comput</span>,
+     11(8):3584--3595, August 2015.
+     </p>
+<p class="bibitem"><span class="biblabel">
+ [42]<span class="bibsp">   </span></span><a id="XChen2021"></a>Haochuan Chen, Haohao Fu, Christophe Chipot, Xueguang Shao, and Wensheng Cai. Overcoming
+     Free-Energy   Barriers   with   a   Seamless   Combination   of   a   Biasing   Force   and   a   Collective
+     Variable-Independent Boost Potential. <span class="ptmri7t-x-x-109">J. Chem. Theory Comput</span>, June 2021.
+     </p>
+<p class="bibitem"><span class="biblabel">
+ [43]<span class="bibsp">   </span></span><a id="XShen2015"></a>Rong Shen, Wei Han, Giacomo Fiorin, Shahidul M Islam, Klaus Schulten, and Benoît Roux.
      Structural refinement of proteins by restrained molecular dynamics simulations with non-interacting
      molecular fragments. <span class="ptmri7t-x-x-109">PLoS Comput. Biol.</span>, 11(10):e1004368, 2015.
 </p>
