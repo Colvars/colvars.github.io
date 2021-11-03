@@ -489,7 +489,7 @@ will be raised.
 contain groups with the same names, however these must also represent identical atom selections, i.e. the same
 sequence of indices including order.
 </p><!--l. 922--><p class="indent">   Other than with GROMACS, an index group may also be generated from the VMD command-line interface,
-using the helper function <span class="ot1-zi4r-0-x-x-109">write</span><span class="ot1-zi4r-0-x-x-109">_index</span><span class="ot1-zi4r-0-x-x-109">_group </span>provided in the ‘colvartools‘:</p>
+using the helper function <span class="ot1-zi4r-0-x-x-109">write</span><span class="ot1-zi4r-0-x-x-109">_index</span><span class="ot1-zi4r-0-x-x-109">_group </span>provided in the <span class="ot1-zi4r-0-x-x-109">colvartools </span>folder:</p>
 <div class="mdframed" id="mdframed-5">
 <!--l. 923--><p class="noindent"></p><pre>source colvartools/write_index_group.tcl<br class="newline"/>set sel [atomselect top "resname XXX and not hydrogen"]<br class="newline"/>write_index_group indexfile.ndx <span class="ptmr8c-x-x-109">$</span>sel "Ligand" </pre>
 </div>
