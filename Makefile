@@ -31,7 +31,7 @@ ifneq ($(FORCE), 1)
   endif
 endif
 
-.PHONY: all clean veryclean doxygen readme images
+.PHONY: all clean veryclean doxygen readme images update
 
 all: images pdf html doxygen readme
 
@@ -123,4 +123,7 @@ clean:
 
 veryclean: clean
 	rm -f $(PDF) colvars-refman-namd/* colvars-refman-vmd/* colvars-refman-lammps/*  colvars-refman-gromacs/*
+
+update: all
+	git add . && git commit -m "Update doc" && git push origin master
 
