@@ -631,10 +631,11 @@ cases: for example, consider the trajectory above with the addition of a second 
 <div class="mdframed" id="mdframed-8">
 <!--l. 1156--><p class="noindent"></p><pre>#       step   A                     E_rA<br class="newline"/>           0    1.42467449615693e+01  6.30982865292123e+02<br class="newline"/>         100    1.42282559728026e+01  6.20640585041317e+02<br class="newline"/>…<br class="newline"/>#       step   A                     B                     E_rA              <br class="newline"/>       10000    1.38136915830229e+01  9.99574098859265e-01  4.11184644791030e+02<br class="newline"/>       10100    1.36437184346326e+01  9.99574091957314e-01  3.37726286543895e+02 </pre>
 </div>
-<!--l. 1166--><p class="indent">   Analyzing the above file with standard tools is possible, but laborious. A <a href="https://github.com/Colvars/colvars/blob/master/colvartools/plot_colvars_traj.py?raw=true">convenience script</a> for this and related
-purposes. It may be used either as a command-line tool or as a Python module:</p>
+<!--l. 1166--><p class="indent">   Analyzing the above file with standard tools is possible, but laborious: a <a href="https://github.com/Colvars/colvars/blob/master/colvartools/plot_colvars_traj.py?raw=true">convenience script</a> is
+provided for this and related purposes. It may be used either as a command-line tool or as a Python
+module:</p>
 <div class="mdframed" id="mdframed-9">
-<!--l. 1167--><p class="noindent"></p><pre>»&gt; from plot_colvars_traj import Colvars_traj<br class="newline"/>»&gt; traj = Colvars_traj('test.colvars.traj')<br class="newline"/>»&gt; print(traj['A'].steps, traj['A'].values)<br class="newline"/>»&gt; [    0   100  ...  10000 10100] [14.246745 14.228256 ... 13.813692 13.643718]<br class="newline"/>»&gt; print(traj['B'].steps, traj['B'].values)<br class="newline"/>»&gt; [10000 10100] [0.999574  0.9995741] </pre>
+<!--l. 1167--><p class="noindent"></p><pre>&gt;&gt;&gt; from plot_colvars_traj import Colvars_traj<br class="newline"/>&gt;&gt;&gt; traj = Colvars_traj('test.colvars.traj')<br class="newline"/>&gt;&gt;&gt; print(traj['A'].steps, traj['A'].values)<br class="newline"/>[    0   100  ...  10000 10100] [14.246745 14.228256 ... 13.813692 13.643718]<br class="newline"/>&gt;&gt;&gt; print(traj['B'].steps, traj['B'].values)<br class="newline"/>[10000 10100] [0.999574  0.9995741] </pre>
 </div>
 <!--l. 1177--><p class="indent">
 </p>
