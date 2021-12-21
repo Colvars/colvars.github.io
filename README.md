@@ -100,13 +100,15 @@ The `update-colvars-code.sh` script support patching the latest development vers
 
 The following links allow to download several versions of Gromacs already patched to include the latest available version of Colvars:
 
+ - **Gromacs version 2021.4-colvars** in [Tar.gz](https://github.com/Colvars/gromacs/archive/v2021.4-colvars.tar.gz) and [Zip](https://github.com/Colvars/gromacs/archive/v2021.4-colvars.zip) formats
+
  - **Gromacs version 2020.6-colvars** in [Tar.gz](https://github.com/Colvars/gromacs/archive/v2020.6-colvars.tar.gz) and [Zip](https://github.com/Colvars/gromacs/archive/v2020.6-colvars.zip) formats
 
  - **Gromacs version 2018.8-colvars** in [Tar.gz](https://github.com/Colvars/gromacs/archive/v2018.8-colvars.tar.gz) and [Zip](https://github.com/Colvars/gromacs/archive/v2018.8-colvars.zip) formats
 
 Gromacs-Colvars versions not listed above are not supported, but the same [patching procedure](#updating-to-the-latest-version) is generally portable across the same Gromacs release series (i.e. labeled with the same year).
 
-When using the [Gromacs forum](https://gromacs.bioexcel.eu/) to discuss usage of any Colvars-patched versions, please specify "GROMACS modification: **Yes**".
+When using the [Gromacs forum](https://gromacs.bioexcel.eu/) to discuss usage of any Colvars-patched version of GROMACS, please specify "GROMACS modification: **Yes**" and use the [`colvars` tag](https://gromacs.bioexcel.eu/tag/colvars) when posting your forum message.
 
 ## Which version of Colvars is recommended?
 
