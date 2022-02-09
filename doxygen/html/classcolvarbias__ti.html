@@ -78,7 +78,7 @@ $(function() {
 Inheritance diagram for colvarbias_ti:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarbias__ti__inherit__graph.png" border="0" usemap="#acolvarbias__ti_inherit__map" alt="Inheritance graph"/></div>
-<map name="colvarbias__ti_inherit__map" id="acolvarbias__ti_inherit__map">
+<map name="colvarbias__ti_inherit__map" id="colvarbias__ti_inherit__map">
 <area shape="rect" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="448,31,553,57"/>
 <area shape="rect" href="classcolvarbias__meta.html" title="Metadynamics bias (implementation of colvarbias)" alt="" coords="611,5,742,32"/>
 <area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="601,56,752,83"/>
@@ -100,16 +100,16 @@ Collaboration diagram for colvarbias_ti:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarbias__ti__coll__graph.png" border="0" usemap="#acolvarbias__ti_coll__map" alt="Collaboration graph"/></div>
 <map name="colvarbias__ti_coll__map" id="acolvarbias__ti_coll__map">
-<area shape="rect" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="1359,87,1464,113"/>
-<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="350,191,439,217"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="165,117,264,144"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="313,63,476,89"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="525,117,711,144"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="5,117,116,144"/>
-<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="168,191,261,217"/>
-<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="549,48,687,75"/>
-<area shape="rect" href="classcolvar__grid__gradient.html" title="Class for accumulating the gradient of a scalar function on a grid." alt="" coords="1064,87,1219,113"/>
-<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="819,35,959,61"/>
+<area shape="rect" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="379,516,485,543"/>
+<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="114,427,203,453"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="275,81,373,108"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="231,233,417,260"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="395,157,557,184"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="269,5,379,32"/>
+<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="5,323,99,349"/>
+<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="254,323,394,349"/>
+<area shape="rect" href="classcolvar__grid__gradient.html" title="Class for accumulating the gradient of a scalar function on a grid." alt="" coords="355,427,509,453"/>
+<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="441,233,578,260"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -291,14 +291,14 @@ virtual std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">fea
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#ab1d9c4cd80e52eb65f5a216755fcc00d">colvarparse</a> (const std::string &amp;conf)</td></tr>
 <tr class="memdesc:ab1d9c4cd80e52eb65f5a216755fcc00d inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that stores the object's config string. <br /></td></tr>
 <tr class="separator:ab1d9c4cd80e52eb65f5a216755fcc00d inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dc6de6017f8b01c1c9b2b60e44448b5 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a9dc6de6017f8b01c1c9b2b60e44448b5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a9dc6de6017f8b01c1c9b2b60e44448b5">init</a> ()</td></tr>
-<tr class="memdesc:a9dc6de6017f8b01c1c9b2b60e44448b5 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object ready to parse a new configuration string. <br /></td></tr>
-<tr class="separator:a9dc6de6017f8b01c1c9b2b60e44448b5 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc8d4929e871c1bedaec8f6056c8406 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a6cc8d4929e871c1bedaec8f6056c8406"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a6cc8d4929e871c1bedaec8f6056c8406">init</a> (std::string const &amp;conf)</td></tr>
-<tr class="memdesc:a6cc8d4929e871c1bedaec8f6056c8406 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new config string for this object. <br /></td></tr>
-<tr class="separator:a6cc8d4929e871c1bedaec8f6056c8406 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d75938be7b479966b3a5434ae180095 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a9d75938be7b479966b3a5434ae180095"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a9d75938be7b479966b3a5434ae180095">clear</a> ()</td></tr>
+<tr class="memdesc:a9d75938be7b479966b3a5434ae180095 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object ready to parse a new configuration string. <br /></td></tr>
+<tr class="separator:a9d75938be7b479966b3a5434ae180095 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a239a952244cf2433190d5bd221fc92 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a3a239a952244cf2433190d5bd221fc92"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a3a239a952244cf2433190d5bd221fc92">set_string</a> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a3a239a952244cf2433190d5bd221fc92 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new config string for this object. <br /></td></tr>
+<tr class="separator:a3a239a952244cf2433190d5bd221fc92 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39e7841561ef3f9c40074b2096bb688e inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a39e7841561ef3f9c40074b2096bb688e"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a39e7841561ef3f9c40074b2096bb688e">~colvarparse</a> ()</td></tr>
 <tr class="memdesc:a39e7841561ef3f9c40074b2096bb688e inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
@@ -553,6 +553,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a11e947b5d4c578a6f019ec8c14b99282">matching_state</a></td></tr>
 <tr class="memdesc:a11e947b5d4c578a6f019ec8c14b99282 inherit pro_attribs_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag used to tell if the state string being read is for this bias. <br /></td></tr>
 <tr class="separator:a11e947b5d4c578a6f019ec8c14b99282 inherit pro_attribs_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7750281ca9601e58b6628be38f1e66 inherit pro_attribs_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a id="aff7750281ca9601e58b6628be38f1e66"></a>
+<a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#aff7750281ca9601e58b6628be38f1e66">biasing_force_scaling_factors</a></td></tr>
+<tr class="memdesc:aff7750281ca9601e58b6628be38f1e66 inherit pro_attribs_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">The biasing forces will be scaled by the factor in this grid if b_bias_force_scaled is true. <br /></td></tr>
+<tr class="separator:aff7750281ca9601e58b6628be38f1e66 inherit pro_attribs_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7015760eea38062ac71113d448067aab inherit pro_attribs_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a id="a7015760eea38062ac71113d448067aab"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>biasing_force_scaling_factors_bin</b></td></tr>
+<tr class="separator:a7015760eea38062ac71113d448067aab inherit pro_attribs_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
 <tr class="memitem:a9e3abe5ee9dc4dc42bd5d4e13d385844 inherit pro_attribs_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a9e3abe5ee9dc4dc42bd5d4e13d385844"></a>
 std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a9e3abe5ee9dc4dc42bd5d4e13d385844">allowed_keywords</a></td></tr>
@@ -605,7 +612,7 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4ac18497c0e911807ddfd52b44e7cf674d">parse_override</a> = (1&lt;&lt;17), 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a907207b4cc805305732c158cd3204d5b">parse_restart</a> = (1&lt;&lt;18), 
 <br />
-&#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a> = (1&lt;&lt;2) | (1&lt;&lt;1) | (1&lt;&lt;17), 
+&#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a> = (1&lt;&lt;1) | (1&lt;&lt;2) | (1&lt;&lt;17), 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a8a3d123c8009affbabea8ab2f9ad3a5b">parse_deprecated</a> = (1&lt;&lt;1) | (1&lt;&lt;3) | (1&lt;&lt;17)
 <br />
  }</td></tr>
@@ -630,6 +637,7 @@ Additional Inherited Members</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daaed2e6329d57143fb6f8faffd65ce352f">f_cvb_write_ti_samples</a>, 
 <a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daaa252e60229e97de897fdfbcf566ea6f8">f_cvb_write_ti_pmf</a>, 
+<a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa1998ae73cc6f0c3503585c0e2e7bd1b8">f_cvb_scale_biasing_force</a>, 
 <b>f_cvb_ntot</b>
 <br />
  }</td></tr>
@@ -761,7 +769,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="separator:abaa6d1fd7117d406a24005f8da84f4bd inherit pub_attribs_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae52ca5fbd5a4b782c41884e1b81ccacb inherit pub_attribs_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a id="ae52ca5fbd5a4b782c41884e1b81ccacb"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#ae52ca5fbd5a4b782c41884e1b81ccacb">rank</a></td></tr>
-<tr class="memdesc:ae52ca5fbd5a4b782c41884e1b81ccacb inherit pub_attribs_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">If there is more than one bias of this type, record its rank. <br /></td></tr>
+<tr class="memdesc:ae52ca5fbd5a4b782c41884e1b81ccacb inherit pub_attribs_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Track how many times a bias of this type was defined. <br /></td></tr>
 <tr class="separator:ae52ca5fbd5a4b782c41884e1b81ccacb inherit pub_attribs_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a34b9372b8df39531ecb2e04c752190 inherit pub_attribs_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a id="a8a34b9372b8df39531ecb2e04c752190"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a8a34b9372b8df39531ecb2e04c752190">output_freq</a></td></tr>
@@ -969,7 +977,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 11 2021 13:35:42 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Wed Feb 9 2022 17:10:29 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

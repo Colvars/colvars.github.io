@@ -91,8 +91,9 @@ Collaboration diagram for colvarmodule:</div>
 <area shape="rect" title="Collective variables module (main class)" alt="" coords="532,485,643,512"/>
 <area shape="rect" href="classcolvarproxy.html" title="Interface between the collective variables module and the simulation or analysis program (NAMD,..." alt="" coords="783,333,881,360"/>
 <area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="979,384,1077,411"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="199,485,297,512"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="5,485,116,512"/>
+<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="169,461,327,488"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="199,512,297,539"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="5,512,116,539"/>
 <area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="510,80,665,107"/>
 <area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="165,80,331,107"/>
 <area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="514,131,661,157"/>
@@ -128,6 +129,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of real numbers with three components  <a href="classcolvarmodule_1_1rvector.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1usage.html">usage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Track usage of Colvars features.  <a href="classcolvarmodule_1_1usage.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1vector1d.html">vector1d</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arbitrary size array (one dimensions) suitable for linear algebra operations (i.e. for floating point numbers it can be used with library functions)  <a href="classcolvarmodule_1_1vector1d.html#details">More...</a><br /></td></tr>
@@ -196,11 +200,9 @@ std::vector&lt; <a class="el" href="classcolvarbias.html">colvarbias</a> * &gt; 
 <tr class="separator:a6af0b37065218097ddcb87286a7f1371"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ac2030d891a98048479862248d95e14"><td class="memItemLeft" align="right" valign="top"><a id="a2ac2030d891a98048479862248d95e14"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a2ac2030d891a98048479862248d95e14">size</a> () const</td></tr>
-<tr class="memdesc:a2ac2030d891a98048479862248d95e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many objects are configured yet? <br /></td></tr>
+<tr class="memdesc:a2ac2030d891a98048479862248d95e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many objects (variables and biases) are configured yet? <br /></td></tr>
 <tr class="separator:a2ac2030d891a98048479862248d95e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa69ee4894428b7748b880772c49cccf3"><td class="memItemLeft" align="right" valign="top"><a id="aa69ee4894428b7748b880772c49cccf3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aa69ee4894428b7748b880772c49cccf3">colvarmodule</a> (<a class="el" href="classcolvarproxy.html">colvarproxy</a> *<a class="el" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">proxy</a>)</td></tr>
-<tr class="memdesc:aa69ee4894428b7748b880772c49cccf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+<tr class="memitem:aa69ee4894428b7748b880772c49cccf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#aa69ee4894428b7748b880772c49cccf3">colvarmodule</a> (<a class="el" href="classcolvarproxy.html">colvarproxy</a> *<a class="el" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">proxy</a>)</td></tr>
 <tr class="separator:aa69ee4894428b7748b880772c49cccf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae937eb6e1d52e19be1ece54a741fad28"><td class="memItemLeft" align="right" valign="top"><a id="ae937eb6e1d52e19be1ece54a741fad28"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ae937eb6e1d52e19be1ece54a741fad28">~colvarmodule</a> ()</td></tr>
@@ -359,6 +361,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac00f7e6800925970a58ef741c53a1d5e">read_traj</a> (char const *traj_filename, long traj_read_begin, long traj_read_end)</td></tr>
 <tr class="memdesc:ac00f7e6800925970a58ef741c53a1d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a collective variable trajectory (post-processing only, not called at runtime) <br /></td></tr>
 <tr class="separator:ac00f7e6800925970a58ef741c53a1d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017c4e8b50a0e23e271328cdf0e0719f"><td class="memItemLeft" align="right" valign="top"><a id="a017c4e8b50a0e23e271328cdf0e0719f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a017c4e8b50a0e23e271328cdf0e0719f">cite_feature</a> (std::string const &amp;feature)</td></tr>
+<tr class="memdesc:a017c4e8b50a0e23e271328cdf0e0719f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Track usage of the given Colvars feature. <br /></td></tr>
+<tr class="separator:a017c4e8b50a0e23e271328cdf0e0719f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a473543a79902d265b8d416e1c4f59e32"><td class="memItemLeft" align="right" valign="top"><a id="a473543a79902d265b8d416e1c4f59e32"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a473543a79902d265b8d416e1c4f59e32">feature_report</a> (int flag=0)</td></tr>
+<tr class="memdesc:a473543a79902d265b8d416e1c4f59e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report usage of the Colvars features. <br /></td></tr>
+<tr class="separator:a473543a79902d265b8d416e1c4f59e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="memItemLeft" align="right" valign="top"><a id="a642a13dd4beb5aae1f3f9c9aa66e015b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a642a13dd4beb5aae1f3f9c9aa66e015b">read_index_file</a> (char const *filename)</td></tr>
 <tr class="memdesc:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a Gromacs .ndx file. <br /></td></tr>
@@ -783,6 +793,10 @@ std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a2c509d76ef8d6db381713beecfeb2349">xyz_reader_use_count</a></td></tr>
 <tr class="memdesc:a2c509d76ef8d6db381713beecfeb2349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Track how many times the XYZ reader has been used. <br /></td></tr>
 <tr class="separator:a2c509d76ef8d6db381713beecfeb2349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa33c57a516c12bff27ce32555169c3"><td class="memItemLeft" align="right" valign="top"><a id="a2fa33c57a516c12bff27ce32555169c3"></a>
+<a class="el" href="classcolvarmodule_1_1usage.html">usage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a2fa33c57a516c12bff27ce32555169c3">usage_</a></td></tr>
+<tr class="memdesc:a2fa33c57a516c12bff27ce32555169c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Track usage of Colvars features. <br /></td></tr>
+<tr class="separator:a2fa33c57a516c12bff27ce32555169c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -830,6 +844,10 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a c
 std::vector&lt; <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a1bcdb9ad4bd044a43cf8cf1209375e59">named_atom_groups</a></td></tr>
 <tr class="memdesc:a1bcdb9ad4bd044a43cf8cf1209375e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of named atom groups. <br /></td></tr>
 <tr class="separator:a1bcdb9ad4bd044a43cf8cf1209375e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c40e055d0f896770be2de86b078770"><td class="memItemLeft" align="right" valign="top"><a id="a65c40e055d0f896770be2de86b078770"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a65c40e055d0f896770be2de86b078770">num_biases_types_used_</a></td></tr>
+<tr class="memdesc:a65c40e055d0f896770be2de86b078770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to a map counting how many biases of each type were used. <br /></td></tr>
+<tr class="separator:a65c40e055d0f896770be2de86b078770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40366a8e0dbe3a3d3d35da388e158c85"><td class="memItemLeft" align="right" valign="top"><a id="a40366a8e0dbe3a3d3d35da388e158c85"></a>
 std::vector&lt; <a class="el" href="classcolvarbias.html">colvarbias</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a40366a8e0dbe3a3d3d35da388e158c85">biases_active_</a></td></tr>
 <tr class="memdesc:a40366a8e0dbe3a3d3d35da388e158c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of active collective variable biases. <br /></td></tr>
@@ -869,7 +887,32 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 <div class="textblock"><p>Collective variables module (main class) </p>
 <p>Class to control the collective variables calculation. An object (usually one) of this class is spawned from the MD program, containing all i/o routines and general interface.</p>
 <p>At initialization, the colvarmodule object creates a proxy object to provide a transparent interface between the MD program and the child objects </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa69ee4894428b7748b880772c49cccf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa69ee4894428b7748b880772c49cccf3">&#9670;&nbsp;</a></span>colvarmodule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">colvarmodule::colvarmodule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcolvarproxy.html">colvarproxy</a> *&#160;</td>
+          <td class="paramname"><em>proxy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pointer</td><td>to instance of the proxy class (communicate with engine) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac73c2f5e8836309d4794044adebd32a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac73c2f5e8836309d4794044adebd32a3">&#9670;&nbsp;</a></span>change_configuration()</h2>
 
@@ -1433,7 +1476,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 11 2021 13:35:42 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Wed Feb 9 2022 17:10:29 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

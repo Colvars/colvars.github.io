@@ -82,7 +82,7 @@ $(function() {
 Inheritance diagram for colvar::orientation:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvar_1_1orientation__inherit__graph.png" border="0" usemap="#acolvar_1_1orientation_inherit__map" alt="Inheritance graph"/></div>
-<map name="colvar_1_1orientation_inherit__map" id="acolvar_1_1orientation_inherit__map">
+<map name="colvar_1_1orientation_inherit__map" id="colvar_1_1orientation_inherit__map">
 <area shape="rect" title="Colvar component: orientation in space of an atom group, with respect to a set of reference coordinat..." alt="" coords="451,165,592,192"/>
 <area shape="rect" href="classcolvar_1_1euler__phi.html" title=" " alt="" coords="661,5,792,32"/>
 <area shape="rect" href="classcolvar_1_1euler__psi.html" title=" " alt="" coords="662,56,791,83"/>
@@ -101,7 +101,7 @@ Inheritance diagram for colvar::orientation:</div>
 Collaboration diagram for colvar::orientation:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvar_1_1orientation__coll__graph.png" border="0" usemap="#acolvar_1_1orientation_coll__map" alt="Collaboration graph"/></div>
-<map name="colvar_1_1orientation_coll__map" id="acolvar_1_1orientation_coll__map">
+<map name="colvar_1_1orientation_coll__map" id="colvar_1_1orientation_coll__map">
 <area shape="rect" title="Colvar component: orientation in space of an atom group, with respect to a set of reference coordinat..." alt="" coords="1159,344,1300,371"/>
 <area shape="rect" href="classcolvar_1_1cvc.html" title="Colvar component (base class for collective variables)" alt="" coords="943,168,1035,195"/>
 <area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="624,5,723,32"/>
@@ -152,6 +152,10 @@ virtual <a class="el" href="classcolvarvalue.html">colvarvalue</a>&#160;</td><td
 <tr class="memitem:a8c823fc2b42ddd60a1617685074782dd inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a8c823fc2b42ddd60a1617685074782dd">cvc</a> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:a8c823fc2b42ddd60a1617685074782dd inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classcolvar_1_1cvc.html#a8c823fc2b42ddd60a1617685074782dd">More...</a><br /></td></tr>
 <tr class="separator:a8c823fc2b42ddd60a1617685074782dd inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e2b96c978400bbb2a8b83e7355e0600 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="a0e2b96c978400bbb2a8b83e7355e0600"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a0e2b96c978400bbb2a8b83e7355e0600">set_function_type</a> (std::string const &amp;type)</td></tr>
+<tr class="memdesc:a0e2b96c978400bbb2a8b83e7355e0600 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of <a class="el" href="classcolvar_1_1cvc.html#a0964a6c8a3ef14d8489fbfc4e75a0ea7">function_type</a> and its dependencies. <br /></td></tr>
+<tr class="separator:a0e2b96c978400bbb2a8b83e7355e0600 inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63b10bf90003bfcc3a7ef8ecb71cd17c inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="a63b10bf90003bfcc3a7ef8ecb71cd17c"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a63b10bf90003bfcc3a7ef8ecb71cd17c">init_dependencies</a> ()</td></tr>
 <tr class="memdesc:a63b10bf90003bfcc3a7ef8ecb71cd17c inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize dependency tree. <br /></td></tr>
@@ -177,11 +181,11 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:a2c7968e6dce6fb671a52c557a748ada4 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a2c7968e6dce6fb671a52c557a748ada4 inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26b3922d2a4738ff80755c1202a20eb9 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="a26b3922d2a4738ff80755c1202a20eb9"></a>
-virtual const std::vector&lt; feature * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a26b3922d2a4738ff80755c1202a20eb9">features</a> () const</td></tr>
+virtual const std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a26b3922d2a4738ff80755c1202a20eb9">features</a> () const</td></tr>
 <tr class="memdesc:a26b3922d2a4738ff80755c1202a20eb9 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the feature list accessor for colvar. <br /></td></tr>
 <tr class="separator:a26b3922d2a4738ff80755c1202a20eb9 inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf27eaa8d392298d46a9dcfc3dff53fc inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="acf27eaa8d392298d46a9dcfc3dff53fc"></a>
-virtual std::vector&lt; feature * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>modify_features</b> ()</td></tr>
+virtual std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>modify_features</b> ()</td></tr>
 <tr class="separator:acf27eaa8d392298d46a9dcfc3dff53fc inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae09f0402765422998c907f4e5478218 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="aae09f0402765422998c907f4e5478218"></a>
 virtual std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aae09f0402765422998c907f4e5478218">get_atom_lists</a> ()</td></tr>
@@ -250,14 +254,14 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#ab1d9c4cd80e52eb65f5a216755fcc00d">colvarparse</a> (const std::string &amp;conf)</td></tr>
 <tr class="memdesc:ab1d9c4cd80e52eb65f5a216755fcc00d inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that stores the object's config string. <br /></td></tr>
 <tr class="separator:ab1d9c4cd80e52eb65f5a216755fcc00d inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dc6de6017f8b01c1c9b2b60e44448b5 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a9dc6de6017f8b01c1c9b2b60e44448b5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a9dc6de6017f8b01c1c9b2b60e44448b5">init</a> ()</td></tr>
-<tr class="memdesc:a9dc6de6017f8b01c1c9b2b60e44448b5 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object ready to parse a new configuration string. <br /></td></tr>
-<tr class="separator:a9dc6de6017f8b01c1c9b2b60e44448b5 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc8d4929e871c1bedaec8f6056c8406 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a6cc8d4929e871c1bedaec8f6056c8406"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a6cc8d4929e871c1bedaec8f6056c8406">init</a> (std::string const &amp;conf)</td></tr>
-<tr class="memdesc:a6cc8d4929e871c1bedaec8f6056c8406 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new config string for this object. <br /></td></tr>
-<tr class="separator:a6cc8d4929e871c1bedaec8f6056c8406 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d75938be7b479966b3a5434ae180095 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a9d75938be7b479966b3a5434ae180095"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a9d75938be7b479966b3a5434ae180095">clear</a> ()</td></tr>
+<tr class="memdesc:a9d75938be7b479966b3a5434ae180095 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object ready to parse a new configuration string. <br /></td></tr>
+<tr class="separator:a9d75938be7b479966b3a5434ae180095 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a239a952244cf2433190d5bd221fc92 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a3a239a952244cf2433190d5bd221fc92"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a3a239a952244cf2433190d5bd221fc92">set_string</a> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a3a239a952244cf2433190d5bd221fc92 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new config string for this object. <br /></td></tr>
+<tr class="separator:a3a239a952244cf2433190d5bd221fc92 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39e7841561ef3f9c40074b2096bb688e inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a39e7841561ef3f9c40074b2096bb688e"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a39e7841561ef3f9c40074b2096bb688e">~colvarparse</a> ()</td></tr>
 <tr class="memdesc:a39e7841561ef3f9c40074b2096bb688e inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
@@ -478,6 +482,10 @@ std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b51
 <tr class="memdesc:aa1d5873b1a590ce3d8ca71b51e6eb328"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is used to remove jumps in the sign of the quaternion, which may be annoying in the colvars trajectory. <br /></td></tr>
 <tr class="separator:aa1d5873b1a590ce3d8ca71b51e6eb328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvar_1_1cvc"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvar_1_1cvc')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a></td></tr>
+<tr class="memitem:a13d9531bec5aaf8f607ec986638ac8af inherit pro_attribs_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="a13d9531bec5aaf8f607ec986638ac8af"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a13d9531bec5aaf8f607ec986638ac8af">function_types</a></td></tr>
+<tr class="memdesc:a13d9531bec5aaf8f607ec986638ac8af inherit pro_attribs_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record the type of this class as well as those it is derived from. <br /></td></tr>
+<tr class="separator:a13d9531bec5aaf8f607ec986638ac8af inherit pro_attribs_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa9894ef456afa05985e26332abffeae inherit pro_attribs_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="aaa9894ef456afa05985e26332abffeae"></a>
 <a class="el" href="classcolvarvalue.html">colvarvalue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aaa9894ef456afa05985e26332abffeae">x</a></td></tr>
 <tr class="memdesc:aaa9894ef456afa05985e26332abffeae inherit pro_attribs_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached value. <br /></td></tr>
@@ -558,7 +566,7 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4ac18497c0e911807ddfd52b44e7cf674d">parse_override</a> = (1&lt;&lt;17), 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a907207b4cc805305732c158cd3204d5b">parse_restart</a> = (1&lt;&lt;18), 
 <br />
-&#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a> = (1&lt;&lt;2) | (1&lt;&lt;1) | (1&lt;&lt;17), 
+&#160;&#160;<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a> = (1&lt;&lt;1) | (1&lt;&lt;2) | (1&lt;&lt;17), 
 <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a8a3d123c8009affbabea8ab2f9ad3a5b">parse_deprecated</a> = (1&lt;&lt;1) | (1&lt;&lt;3) | (1&lt;&lt;17)
 <br />
  }</td></tr>
@@ -583,6 +591,7 @@ Additional Inherited Members</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daaed2e6329d57143fb6f8faffd65ce352f">f_cvb_write_ti_samples</a>, 
 <a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daaa252e60229e97de897fdfbcf566ea6f8">f_cvb_write_ti_pmf</a>, 
+<a class="el" href="classcolvardeps.html#abf010b3abf3aa69fc260847bce6603daa1998ae73cc6f0c3503585c0e2e7bd1b8">f_cvb_scale_biasing_force</a>, 
 <b>f_cvb_ntot</b>
 <br />
  }</td></tr>
@@ -741,7 +750,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b
 <tr class="separator:ad272099c249484986af5428e5d12880f inherit pub_attribs_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classcolvar_1_1cvc"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classcolvar_1_1cvc')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a></td></tr>
 <tr class="memitem:a5f79e6cc6e882920ec4e7ddd64261ba6 inherit pub_static_attribs_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="a5f79e6cc6e882920ec4e7ddd64261ba6"></a>
-static std::vector&lt; feature * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a5f79e6cc6e882920ec4e7ddd64261ba6">cvc_features</a></td></tr>
+static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a5f79e6cc6e882920ec4e7ddd64261ba6">cvc_features</a></td></tr>
 <tr class="memdesc:a5f79e6cc6e882920ec4e7ddd64261ba6 inherit pub_static_attribs_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the feature list for colvar. <br /></td></tr>
 <tr class="separator:a5f79e6cc6e882920ec4e7ddd64261ba6 inherit pub_static_attribs_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
@@ -771,8 +780,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:acade803736a97843de5ae84a3d7e25b0 inherit pro_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfb9d3d04bc7b380615a7fae8b42f77f inherit pro_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="abfb9d3d04bc7b380615a7fae8b42f77f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#abfb9d3d04bc7b380615a7fae8b42f77f">init_as_angle</a> ()</td></tr>
-<tr class="memdesc:abfb9d3d04bc7b380615a7fae8b42f77f inherit pro_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set data types for a bounded angle (convenience function) <br /></td></tr>
+<tr class="memdesc:abfb9d3d04bc7b380615a7fae8b42f77f inherit pro_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set data types for a bounded angle (0° to 180°) <br /></td></tr>
 <tr class="separator:abfb9d3d04bc7b380615a7fae8b42f77f inherit pro_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad6bde4823ca5e37244be711d0f53f1e inherit pro_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="aad6bde4823ca5e37244be711d0f53f1e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aad6bde4823ca5e37244be711d0f53f1e">init_as_periodic_angle</a> ()</td></tr>
+<tr class="memdesc:aad6bde4823ca5e37244be711d0f53f1e inherit pro_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set data types for a periodic angle (-180° to 180°) <br /></td></tr>
+<tr class="separator:aad6bde4823ca5e37244be711d0f53f1e inherit pro_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0a3283c37a131bf3344ae75c5a02b7e inherit pro_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="ae0a3283c37a131bf3344ae75c5a02b7e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#ae0a3283c37a131bf3344ae75c5a02b7e">init_scalar_boundaries</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> lb, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> ub)</td></tr>
 <tr class="memdesc:ae0a3283c37a131bf3344ae75c5a02b7e inherit pro_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set two scalar boundaries (convenience function) <br /></td></tr>
@@ -985,7 +998,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 11 2021 13:35:41 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Wed Feb 9 2022 17:10:29 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
