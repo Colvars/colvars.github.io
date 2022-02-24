@@ -62,7 +62,7 @@ colvars-refman-namd/colvars-refman-namd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colv
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-namd; \
 	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
-	sh ../postprocess_html.sh
+	../postprocess_html.sh
 
 colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-vmd.tex
 	cd $(DOCSRCDIR); \
@@ -71,7 +71,7 @@ colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvar
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-vmd; \
 	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
-	sh ../postprocess_html.sh
+	../postprocess_html.sh
 
 vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html: colvars-refman-vmd/colvars-refman-vmd.html
 	cp -p -f $^ $@; \
@@ -87,7 +87,7 @@ colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-lammps; \
 	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
-	sh ../postprocess_html.sh
+	../postprocess_html.sh
 
 colvars-refman-gromacs/colvars-refman-gromacs.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-gromacs.tex
 	cd $(DOCSRCDIR); \
@@ -96,7 +96,7 @@ colvars-refman-gromacs/colvars-refman-gromacs.html: $(BIBTEX) $(PDF) $(DOCSRCDIR
 	rm -f html5mjlatex.cfg; \
 	cd $(DOCDIR)/colvars-refman-gromacs; \
 	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
-	sh ../postprocess_html.sh
+	../postprocess_html.sh
 
 
 multi-map/multi-map.pdf: multi-map.src/multi-map.tex
@@ -110,7 +110,7 @@ multi-map/multi-map.html: multi-map/multi-map.pdf multi-map.src/multi-map.tex
 	$(HTLATEX) multi-map.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/multi-map/"; \
 	rm -f html5mjlatex.cfg colvars-refman-css.tex; \
 	cd $(DOCDIR)/multi-map; \
-	sh ../postprocess_html.sh
+	../postprocess_html.sh
 
 
 doxygen: doxygen/html/index.html

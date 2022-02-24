@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e
 
 # Find anchors that correspond to LaTeX section labels as indicated by tex4ht
 # comments and substitutes back the original LaTeX labels.
