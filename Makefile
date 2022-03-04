@@ -4,7 +4,9 @@
 # Safe order of operations: make clean; make pdf; make html
 
 DOCDIR=$(PWD)
+ifeq ($(COLVARSDIR),)
 COLVARSDIR=$(PWD)/../colvars
+endif
 SRCDIR=$(COLVARSDIR)/src
 DOCSRCDIR=$(COLVARSDIR)/doc
 PDFDIR=pdf
