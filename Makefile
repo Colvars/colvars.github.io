@@ -79,15 +79,15 @@ colvars-refman-vmd/colvars-refman-vmd.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvar
 	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
 	../postprocess_html.sh
 
-vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html: colvars-refman-vmd/colvars-refman-vmd.html
-	cp -p -f $^ $@; \
+vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html: colvars-refman-vmd/colvars-refman-vmd.html colvars-refman-vmd/colvars-refman-vmd.css
+	cp -p -f $^ $(dir $@); \
 	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) vmd-1.9.4/colvars-refman-vmd/
 
 vmd-1.9.4/pdf/colvars-refman-vmd.pdf: pdf/colvars-refman-vmd.pdf
 	cp -p -f $^ $@
 
-namd-2.15/colvars-refman-namd/colvars-refman-namd.html: colvars-refman-namd/colvars-refman-namd.html
-	cp -p -f $^ $@; \
+namd-2.15/colvars-refman-namd/colvars-refman-namd.html: colvars-refman-namd/colvars-refman-namd.html colvars-refman-namd/colvars-refman-namd.css
+	cp -p -f $^ $(dir $@); \
 	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) namd-2.15/colvars-refman-namd/
 
 namd-2.15/pdf/colvars-refman-namd.pdf: pdf/colvars-refman-namd.pdf
