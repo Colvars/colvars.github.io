@@ -2,9 +2,11 @@
 
 A software module for molecular simulation and analysis that provides a high-performance implementation of sampling algorithms defined on a reduced space of continuously differentiable functions (aka collective variables).
 
-First released in 2008 as part of the standard distribution of [NAMD](https://www.ks.uiuc.edu/Research/namd/) version 2.7b1, Colvars has also been integrated in [LAMMPS](https://lammps.sandia.gov/download.html) and [VMD](https://www.ks.uiuc.edu/Research/vmd/).  Pre-patched [GROMACS](http://www.gromacs.org/) releases are also available ([see below](#gromacs-colvars-releases)).
+First released in 2008 as part of the standard distribution of [NAMD](https://www.ks.uiuc.edu/Research/namd/) version 2.7b1, Colvars has also been integrated in [LAMMPS](https://lammps.sandia.gov/download.html) and [VMD](https://www.ks.uiuc.edu/Research/vmd/).  In VMD, interactive use is possible both from the command line and through the [Dashboard](vmd/cv_dashboard/README.md) graphical user interface.
 
-The module itself implements a variety of functions and algorithms, including free-energy estimators based on thermodynamic forces, non-equilibrium work and probability distributions.
+Patched [releases](https://github.com/Colvars/gromacs) of [GROMACS](http://www.gromacs.org/) that contain Colvars are also available ([see below](#gromacs-colvars-releases)).
+
+The functionality provided by the Colvars library includes a variety of functions and algorithms, including free-energy estimators based on thermodynamic forces, non-equilibrium work and probability distributions.
 
 ## Obtaining and using
 
@@ -21,9 +23,21 @@ For the molecular simulation program [GROMACS](http://www.gromacs.org/), code ma
 
 The [Colvars webpage](https://colvars.github.io/) includes user documentation for the four codes, as well as a Doxygen-based [developer documentation](https://colvars.github.io/doxygen/html/).
 
+To reflect the different availability of features in each engine, the Colvars reference manual comes in several flavors:
+- [GROMACS version](https://colvars.github.io/colvars-refman-gromacs/colvars-refman-gromacs.html);
+- [LAMMPS version](https://colvars.github.io/colvars-refman-lammps/colvars-refman-lammps.html);
+- [NAMD version](https://colvars.github.io/colvars-refman-namd/colvars-refman-namd.html);
+- [VMD version](https://colvars.github.io/colvars-refman-vmd/colvars-refman-vmd.html).
+
+## Citing
+
 The reference article is:
-G. Fiorin, M. L. Klein, and J. Hénin, Molecular Physics 111, 3345 (2013).
-https://dx.doi.org/10.1080/00268976.2013.813594  \[[BibTex file](https://github.com/Colvars/colvars/blob/master/doc/ref_Fiorin_2013.bib?raw=true)\] \[[Endnote file](https://github.com/Colvars/colvars/blob/master/doc/ref_Fiorin_2013.ciw?raw=true)\]
+G. Fiorin, M. L. Klein, and J. Hénin, Mol. Phys. **111** (22-23), 3345-3362 (2013).
+https://doi.org/10.1080/00268976.2013.813594  \[[BibTex file](https://github.com/Colvars/colvars/blob/master/doc/ref_Fiorin_2013.bib?raw=true)\] \[[Endnote file](https://github.com/Colvars/colvars/blob/master/doc/ref_Fiorin_2013.ciw?raw=true)\]
+
+*Additional references for the implementation of specific features are listed in the [documentation](#documentation).*  Beginning with Colvars 2021-08-30, these references, including acknowledgments of specific code from the MD engine, are also printed to the screen/logfile when they are used.
+
+*Note to NAMD users:* the NAMD reference papers (Phillips *et al*, [2005](https://doi.org/10.1002/jcc.20289) and [2020](https://doi.org/10.1063/5.0014475)) are used in some publications to acknowledge Colvars features.  This is incomplete.  When possible, please consider identifying and acknowledging all development efforts that supported your project.  As an important clarification, most of the Colvars code was developed *outside* of the NAMD/VMD funding grants.
 
 ## Example input
 
@@ -94,21 +108,26 @@ The `update-colvars-code.sh` script support patching the latest development vers
 - the [NAMD GitLab repository](https://gitlab.com/tcbgUIUC/namd);
 - the [CVS repositories of VMD and its plugins](https://www.ks.uiuc.edu/Research/vmd/doxygen/cvsget.html).
 
-**Note:** For [GROMACS](http://www.gromacs.org/), support for specific release series is currently maintained; pre-patched versions of specific releases are provided [below](#gromacs-colvars-releases).
+For [GROMACS](http://www.gromacs.org/), support for specific release series is currently maintained; pre-patched versions of specific releases are provided [below](#gromacs-colvars-releases).
 
-## Gromacs-Colvars releases
+All of the above MD engine versions are automatically tested as part of GitHub Actions [workflows](https://github.com/Colvars/colvars/actions?query=branch%3Amaster).
 
-The following links allow to download several versions of Gromacs already patched to include the latest available version of Colvars:
+## GROMACS-Colvars releases
 
- - **Gromacs version 2021.4-colvars** in [Tar.gz](https://github.com/Colvars/gromacs/archive/v2021.4-colvars.tar.gz) and [Zip](https://github.com/Colvars/gromacs/archive/v2021.4-colvars.zip) formats
+The following links provide specific versions of GROMACS that are already patched with the latest available version of Colvars:
 
- - **Gromacs version 2020.6-colvars** in [Tar.gz](https://github.com/Colvars/gromacs/archive/v2020.6-colvars.tar.gz) and [Zip](https://github.com/Colvars/gromacs/archive/v2020.6-colvars.zip) formats
+ - **GROMACS [2021.5-colvars](https://github.com/Colvars/gromacs/releases/tag/v2021.5-colvars)**;
 
- - **Gromacs version 2018.8-colvars** in [Tar.gz](https://github.com/Colvars/gromacs/archive/v2018.8-colvars.tar.gz) and [Zip](https://github.com/Colvars/gromacs/archive/v2018.8-colvars.zip) formats
+ - **GROMACS [2020.7-colvars](https://github.com/Colvars/gromacs/releases/tag/v2020.7-colvars)**.
 
-Gromacs-Colvars versions not listed above are not supported, but the same [patching procedure](#updating-to-the-latest-version) is generally portable across the same Gromacs release series (i.e. labeled with the same year).
+Other patched releases within the 2020.x or 2021.x series may be produced using the same [patching procedure](#updating-to-the-latest-version) described above.  Unless there is a specific reason not to, it is a good idea to use the latest revision of each release series, available as [Git branches](https://github.com/Colvars/gromacs/branches).  Gromacs versions outside of 2020.x or 2021.x are not supported at this time.
 
-When using the [Gromacs forum](https://gromacs.bioexcel.eu/) to discuss usage of any Colvars-patched version of GROMACS, please specify "GROMACS modification: **Yes**" and use the [`colvars` tag](https://gromacs.bioexcel.eu/tag/colvars) when posting your forum message.
+In Colvars-patched versions of GROMACS, the Colvars version is included in the GROMACS version string, for example:
+```
+   :-) GROMACS - gmx_d, 2021.5-Colvars-2022-02-20-dev (double precision) (-:
+```
+
+When using the [Gromacs forum](https://gromacs.bioexcel.eu/) to discuss usage of any Colvars-patched version of GROMACS, please specify "GROMACS modification: **Yes**" and use the [`colvars` tag](https://gromacs.bioexcel.eu/tag/colvars) when posting your forum message.  If possible, please include the Colvars version as well.
 
 ## Which version of Colvars is recommended?
 
@@ -128,8 +147,10 @@ If you are using a stable release of any of the codes mentioned above, feel free
 
 ## Feedback
 
-Please use the "Issues" tab of this page to submit new bug reports or to suggest new features.
+Please use the "[Issues](https://github.com/Colvars/colvars/issues)" tab of this page to submit new bug reports or to suggest new features.
 
 ## License
 
-This software is distributed under the GNU Lesser General Public License, version 3.  See COPYING.LESSER for complete licensing terms.
+This software is distributed under the GNU Lesser General Public License (LGPL), version 3.  See COPYING.LESSER for complete licensing terms.
+
+In the interest of broad distribution, copies of this code are also distributed together with LAMMPS (LGPL version 2), NAMD and VMD (UIUC license).  However, the terms of the LGPLv3 license still apply to code originating from this repository.
