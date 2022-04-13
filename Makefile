@@ -14,14 +14,18 @@ PDF=$(PDFDIR)/colvars-refman-gromacs.pdf \
 	$(PDFDIR)/colvars-refman-lammps.pdf \
 	$(PDFDIR)/colvars-refman-namd.pdf \
 	$(PDFDIR)/colvars-refman-vmd.pdf \
-	vmd-1.9.4/$(PDFDIR)/colvars-refman-vmd.pdf
+	vmd-1.9.4/$(PDFDIR)/colvars-refman-vmd.pdf \
+	namd-2.15/$(PDFDIR)/colvars-refman-namd.pdf \
+
 
 BIBTEX=$(DOCSRCDIR)/colvars-refman.bib
 HTML=colvars-refman-gromacs/colvars-refman-gromacs.html \
 	colvars-refman-lammps/colvars-refman-lammps.html \
 	colvars-refman-namd/colvars-refman-namd.html \
 	colvars-refman-vmd/colvars-refman-vmd.html \
-	vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html
+	vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html \
+	namd-2.15/colvars-refman-namd/colvars-refman-namd.html \
+
 
 IMAGES = cover-512px.jpg eulerangles-512px.png
 
@@ -80,6 +84,13 @@ vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html: colvars-refman-vmd/colvars
 	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) vmd-1.9.4/colvars-refman-vmd/
 
 vmd-1.9.4/pdf/colvars-refman-vmd.pdf: pdf/colvars-refman-vmd.pdf
+	cp -p -f $^ $@
+
+namd-2.15/colvars-refman-namd/colvars-refman-namd.html: colvars-refman-namd/colvars-refman-namd.html
+	cp -p -f $^ $@; \
+	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) namd-2.15/colvars-refman-namd/
+
+namd-2.15/pdf/colvars-refman-namd.pdf: pdf/colvars-refman-namd.pdf
 	cp -p -f $^ $@
 
 colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-lammps.tex
