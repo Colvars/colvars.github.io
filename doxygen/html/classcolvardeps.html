@@ -361,7 +361,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aff2f719a18e6880cc94eefc53693321a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab523803ef20a5349cb1bdc3b17cb81cf"><td class="memItemLeft" align="right" valign="top"><a id="ab523803ef20a5349cb1bdc3b17cb81cf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#ab523803ef20a5349cb1bdc3b17cb81cf">check_enabled</a> (int f, std::string const &amp;reason) const</td></tr>
-<tr class="memdesc:ab523803ef20a5349cb1bdc3b17cb81cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a feature is enabled, raising BUG_ERROR if not. <br /></td></tr>
+<tr class="memdesc:ab523803ef20a5349cb1bdc3b17cb81cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a feature is enabled, raising COLVARS_BUG_ERROR if not. <br /></td></tr>
 <tr class="separator:ab523803ef20a5349cb1bdc3b17cb81cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -518,7 +518,7 @@ Private Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aebed48f7608034a9e3ce66f1fe45f628a1bf6fbab9c4f46a13046a8f135cc7123"></a>f_cv_extended_Lagrangian&#160;</td><td class="fielddoc"><p>The variable has a harmonic restraint around a moving center with fictitious mass; bias forces will be applied to the center. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aebed48f7608034a9e3ce66f1fe45f628af0c020b5296ab067aeaf55d74e38d840"></a>f_cv_external&#160;</td><td class="fielddoc"><p>An extended variable that sets an external variable in the back-end (eg. an alchemical coupling parameter for lambda-dynamics) Can have only one component. </p>
+<tr><td class="fieldname"><a id="aebed48f7608034a9e3ce66f1fe45f628af0c020b5296ab067aeaf55d74e38d840"></a>f_cv_external&#160;</td><td class="fielddoc"><p>An extended variable that sets an external variable in the back-end (eg. an alchemical coupling parameter for lambda-dynamics) Can have a single component. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aebed48f7608034a9e3ce66f1fe45f628aaf884ac0fe1da02521ac9361a1e5731d"></a>f_cv_Langevin&#160;</td><td class="fielddoc"><p>The extended system coordinate undergoes Langevin dynamics. </p>
 </td></tr>
@@ -721,7 +721,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Enable a feature and recursively solve its dependencies. For accurate reference counting, do not add spurious calls to <a class="el" href="classcolvardeps.html#a0af270540fcec97efae2733a63bb7f0b">enable()</a> </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dry_run</td><td>Recursively test if a feature is available, without enabling it </td></tr>
+    <tr><td class="paramname">dry_run</td><td>Recursively test whether a feature is available, without enabling it </td></tr>
     <tr><td class="paramname">toplevel</td><td>False if this is called as part of a chain of dependency resolution. This is used to diagnose failed dependencies by displaying the full stack: only the toplevel dependency will throw a fatal error. </td></tr>
   </table>
   </dd>
@@ -871,7 +871,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 13 2022 09:37:33 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Thu Jun 2 2022 11:46:18 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

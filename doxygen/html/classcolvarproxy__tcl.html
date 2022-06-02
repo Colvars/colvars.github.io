@@ -63,7 +63,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classcolvarproxy__tcl-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -97,14 +96,20 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a46d183d4bc83aeb09752b30887bc3836">~colvarproxy_tcl</a> ()</td></tr>
 <tr class="memdesc:a46d183d4bc83aeb09752b30887bc3836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a46d183d4bc83aeb09752b30887bc3836"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26c3b6ba1ad842aaa872a0788bfdfc49"><td class="memItemLeft" align="right" valign="top"><a id="a26c3b6ba1ad842aaa872a0788bfdfc49"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a26c3b6ba1ad842aaa872a0788bfdfc49">tcl_available</a> ()</td></tr>
-<tr class="memdesc:a26c3b6ba1ad842aaa872a0788bfdfc49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is Tcl available? (trigger initialization if needed) <br /></td></tr>
-<tr class="separator:a26c3b6ba1ad842aaa872a0788bfdfc49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba64f6eee57c4982ddc379d709a11cd5"><td class="memItemLeft" align="right" valign="top"><a id="aba64f6eee57c4982ddc379d709a11cd5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#aba64f6eee57c4982ddc379d709a11cd5">tcl_available</a> ()</td></tr>
+<tr class="memdesc:aba64f6eee57c4982ddc379d709a11cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is Tcl available? (trigger initialization if needed) <br /></td></tr>
+<tr class="separator:aba64f6eee57c4982ddc379d709a11cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a684579524c36cbcbd864209c23c8b8ea"><td class="memItemLeft" align="right" valign="top"><a id="a684579524c36cbcbd864209c23c8b8ea"></a>
 char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a684579524c36cbcbd864209c23c8b8ea">tcl_get_str</a> (void *obj)</td></tr>
 <tr class="memdesc:a684579524c36cbcbd864209c23c8b8ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a string representation of the Tcl object pointed to by obj. <br /></td></tr>
 <tr class="separator:a684579524c36cbcbd864209c23c8b8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae796468d067266f8ddd6e3a22f2e1035"><td class="memItemLeft" align="right" valign="top"><a id="ae796468d067266f8ddd6e3a22f2e1035"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tcl_run_script</b> (std::string const &amp;script)</td></tr>
+<tr class="separator:ae796468d067266f8ddd6e3a22f2e1035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f47672a7ea0334bb487de26951a62b"><td class="memItemLeft" align="right" valign="top"><a id="a34f47672a7ea0334bb487de26951a62b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tcl_run_file</b> (std::string const &amp;fileName)</td></tr>
+<tr class="separator:a34f47672a7ea0334bb487de26951a62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2cdac45d887d147c037ce4c682c3139"><td class="memItemLeft" align="right" valign="top"><a id="ab2cdac45d887d147c037ce4c682c3139"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#ab2cdac45d887d147c037ce4c682c3139">tcl_run_force_callback</a> ()</td></tr>
 <tr class="memdesc:ab2cdac45d887d147c037ce4c682c3139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tcl implementation of run_force_callback() <br /></td></tr>
@@ -117,17 +122,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a0d2345d3b513ef463301ad19feac0519">tcl_run_colvar_gradient_callback</a> (std::string const &amp;name, std::vector&lt; const <a class="el" href="classcolvarvalue.html">colvarvalue</a> * &gt; const &amp;cvcs, std::vector&lt; <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt; &amp;gradient)</td></tr>
 <tr class="memdesc:a0d2345d3b513ef463301ad19feac0519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tcl implementation of run_colvar_gradient_callback() <br /></td></tr>
 <tr class="separator:a0d2345d3b513ef463301ad19feac0519"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0baa0fb599c1fb81e2bd96f91a2daab8"><td class="memItemLeft" align="right" valign="top"><a id="a0baa0fb599c1fb81e2bd96f91a2daab8"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a0baa0fb599c1fb81e2bd96f91a2daab8">get_tcl_interp</a> ()</td></tr>
-<tr class="memdesc:a0baa0fb599c1fb81e2bd96f91a2daab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the Tcl interpreter. <br /></td></tr>
-<tr class="separator:a0baa0fb599c1fb81e2bd96f91a2daab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eb81bf9fbc998c44416ec33fee0f2c4"><td class="memItemLeft" align="right" valign="top"><a id="a8eb81bf9fbc998c44416ec33fee0f2c4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a8eb81bf9fbc998c44416ec33fee0f2c4">set_tcl_interp</a> (void *interp)</td></tr>
-<tr class="memdesc:a8eb81bf9fbc998c44416ec33fee0f2c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pointer to the Tcl interpreter. <br /></td></tr>
-<tr class="separator:a8eb81bf9fbc998c44416ec33fee0f2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4384bbcfb0b9a76a63e2ae396d78982d"><td class="memItemLeft" align="right" valign="top"><a id="a4384bbcfb0b9a76a63e2ae396d78982d"></a>
+Tcl_Interp *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#a4384bbcfb0b9a76a63e2ae396d78982d">get_tcl_interp</a> ()</td></tr>
+<tr class="memdesc:a4384bbcfb0b9a76a63e2ae396d78982d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the Tcl interpreter. <br /></td></tr>
+<tr class="separator:a4384bbcfb0b9a76a63e2ae396d78982d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22bd5188d65d5da7e92a3b02e70c946"><td class="memItemLeft" align="right" valign="top"><a id="ad22bd5188d65d5da7e92a3b02e70c946"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#ad22bd5188d65d5da7e92a3b02e70c946">set_tcl_interp</a> (Tcl_Interp *interp)</td></tr>
+<tr class="memdesc:ad22bd5188d65d5da7e92a3b02e70c946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pointer to the Tcl interpreter. <br /></td></tr>
+<tr class="separator:ad22bd5188d65d5da7e92a3b02e70c946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1deaeeb91ee5ed7b28a6a49b1e7f937"><td class="memItemLeft" align="right" valign="top"><a id="ae1deaeeb91ee5ed7b28a6a49b1e7f937"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#ae1deaeeb91ee5ed7b28a6a49b1e7f937">init_tcl_pointers</a> ()</td></tr>
 <tr class="memdesc:ae1deaeeb91ee5ed7b28a6a49b1e7f937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Tcl pointers. <br /></td></tr>
@@ -135,10 +137,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:af0338cbdb54f3f6e99ee3b9cf7020dd9"><td class="memItemLeft" align="right" valign="top"><a id="af0338cbdb54f3f6e99ee3b9cf7020dd9"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#af0338cbdb54f3f6e99ee3b9cf7020dd9">tcl_interp_</a></td></tr>
-<tr class="memdesc:af0338cbdb54f3f6e99ee3b9cf7020dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to Tcl interpreter object. <br /></td></tr>
-<tr class="separator:af0338cbdb54f3f6e99ee3b9cf7020dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa450bf84ccf757a6650b2800712782ca"><td class="memItemLeft" align="right" valign="top"><a id="aa450bf84ccf757a6650b2800712782ca"></a>
+Tcl_Interp *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__tcl.html#aa450bf84ccf757a6650b2800712782ca">tcl_interp_</a></td></tr>
+<tr class="memdesc:aa450bf84ccf757a6650b2800712782ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to Tcl interpreter object. <br /></td></tr>
+<tr class="separator:aa450bf84ccf757a6650b2800712782ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Methods for using Tcl within Colvars. </p>
@@ -149,7 +151,7 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 13 2022 09:37:33 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Thu Jun 2 2022 11:46:18 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

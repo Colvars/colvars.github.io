@@ -81,70 +81,89 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef COLVARPROXY_TCL_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define COLVARPROXY_TCL_H</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classcolvarproxy__tcl.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcolvarproxy__tcl.html">colvarproxy_tcl</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classcolvarproxy__tcl.html#a10a5078762a9ebbf684b797c9e638b21">colvarproxy_tcl</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#if defined(NAMD_TCL) || defined(VMDTCL)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define COLVARS_TCL</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifdef COLVARS_TCL</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;tcl.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// Allow for placeholders Tcl_Interp* variables</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">void</span> Tcl_Interp;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classcolvarproxy__tcl.html#a46d183d4bc83aeb09752b30887bc3836">~colvarproxy_tcl</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classcolvarproxy__tcl.html#a26c3b6ba1ad842aaa872a0788bfdfc49">   28</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classcolvarproxy__tcl.html#a26c3b6ba1ad842aaa872a0788bfdfc49">tcl_available</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classcolvarproxy__tcl.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcolvarproxy__tcl.html">colvarproxy_tcl</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="classcolvarproxy__tcl.html#a684579524c36cbcbd864209c23c8b8ea">tcl_get_str</a>(<span class="keywordtype">void</span> *obj);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classcolvarproxy__tcl.html#ab2cdac45d887d147c037ce4c682c3139">tcl_run_force_callback</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classcolvarproxy__tcl.html#a41a113fb813db58eeeb6e832d101a879">tcl_run_colvar_callback</a>(</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;              std::string <span class="keyword">const</span> &amp;name,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;              std::vector&lt;const colvarvalue *&gt; <span class="keyword">const</span> &amp;cvcs,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;              <a class="code" href="classcolvarvalue.html">colvarvalue</a> &amp;value);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classcolvarproxy__tcl.html#a0d2345d3b513ef463301ad19feac0519">tcl_run_colvar_gradient_callback</a>(</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;              std::string <span class="keyword">const</span> &amp;name,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;              std::vector&lt;const colvarvalue *&gt; <span class="keyword">const</span> &amp;cvcs,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;              std::vector&lt;<a class="code" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d&lt;cvm::real&gt;</a> &gt; &amp;gradient);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classcolvarproxy__tcl.html#a0baa0fb599c1fb81e2bd96f91a2daab8">   49</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> *<a class="code" href="classcolvarproxy__tcl.html#a0baa0fb599c1fb81e2bd96f91a2daab8">get_tcl_interp</a>()</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcolvarproxy__tcl.html#af0338cbdb54f3f6e99ee3b9cf7020dd9">tcl_interp_</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classcolvarproxy__tcl.html#a10a5078762a9ebbf684b797c9e638b21">colvarproxy_tcl</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classcolvarproxy__tcl.html#a46d183d4bc83aeb09752b30887bc3836">~colvarproxy_tcl</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classcolvarproxy__tcl.html#aba64f6eee57c4982ddc379d709a11cd5">   39</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classcolvarproxy__tcl.html#aba64f6eee57c4982ddc379d709a11cd5">tcl_available</a>() {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#if defined(COLVARS_TCL)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="classcolvarproxy__tcl.html#a684579524c36cbcbd864209c23c8b8ea">tcl_get_str</a>(<span class="keywordtype">void</span> *obj);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">int</span> tcl_run_script(std::string <span class="keyword">const</span> &amp;script);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">int</span> tcl_run_file(std::string <span class="keyword">const</span> &amp;fileName);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classcolvarproxy__tcl.html#a8eb81bf9fbc998c44416ec33fee0f2c4">   55</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classcolvarproxy__tcl.html#a8eb81bf9fbc998c44416ec33fee0f2c4">set_tcl_interp</a>(<span class="keywordtype">void</span> *interp)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classcolvarproxy__tcl.html#af0338cbdb54f3f6e99ee3b9cf7020dd9">tcl_interp_</a> = interp;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classcolvarproxy__tcl.html#af0338cbdb54f3f6e99ee3b9cf7020dd9">   63</a></span>&#160;  <span class="keywordtype">void</span> *<a class="code" href="classcolvarproxy__tcl.html#af0338cbdb54f3f6e99ee3b9cf7020dd9">tcl_interp_</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcolvarproxy__tcl.html#ae1deaeeb91ee5ed7b28a6a49b1e7f937">init_tcl_pointers</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classcolvarproxy__tcl.html#ab2cdac45d887d147c037ce4c682c3139">tcl_run_force_callback</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classcolvarproxy__tcl.html#a41a113fb813db58eeeb6e832d101a879">tcl_run_colvar_callback</a>(</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;              std::string <span class="keyword">const</span> &amp;name,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;              std::vector&lt;const colvarvalue *&gt; <span class="keyword">const</span> &amp;cvcs,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;              <a class="code" href="classcolvarvalue.html">colvarvalue</a> &amp;value);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classcolvarproxy__tcl.html#a0d2345d3b513ef463301ad19feac0519">tcl_run_colvar_gradient_callback</a>(</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;              std::string <span class="keyword">const</span> &amp;name,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;              std::vector&lt;const colvarvalue *&gt; <span class="keyword">const</span> &amp;cvcs,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;              std::vector&lt;<a class="code" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d&lt;cvm::real&gt;</a> &gt; &amp;gradient);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classcolvarproxy__tcl.html#a4384bbcfb0b9a76a63e2ae396d78982d">   70</a></span>&#160;  <span class="keyword">inline</span> Tcl_Interp *<a class="code" href="classcolvarproxy__tcl.html#a4384bbcfb0b9a76a63e2ae396d78982d">get_tcl_interp</a>()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcolvarproxy__tcl.html#aa450bf84ccf757a6650b2800712782ca">tcl_interp_</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classcolvarproxy__tcl.html#ad22bd5188d65d5da7e92a3b02e70c946">   76</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classcolvarproxy__tcl.html#ad22bd5188d65d5da7e92a3b02e70c946">set_tcl_interp</a>(Tcl_Interp *interp)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="classcolvarproxy__tcl.html#aa450bf84ccf757a6650b2800712782ca">tcl_interp_</a> = interp;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcolvarproxy__tcl.html#ae1deaeeb91ee5ed7b28a6a49b1e7f937">init_tcl_pointers</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classcolvarproxy__tcl.html#aa450bf84ccf757a6650b2800712782ca">   86</a></span>&#160;  Tcl_Interp *<a class="code" href="classcolvarproxy__tcl.html#aa450bf84ccf757a6650b2800712782ca">tcl_interp_</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasscolvarproxy__tcl_html_a10a5078762a9ebbf684b797c9e638b21"><div class="ttname"><a href="classcolvarproxy__tcl.html#a10a5078762a9ebbf684b797c9e638b21">colvarproxy_tcl::colvarproxy_tcl</a></div><div class="ttdeci">colvarproxy_tcl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:26</div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html_ae1deaeeb91ee5ed7b28a6a49b1e7f937"><div class="ttname"><a href="classcolvarproxy__tcl.html#ae1deaeeb91ee5ed7b28a6a49b1e7f937">colvarproxy_tcl::init_tcl_pointers</a></div><div class="ttdeci">virtual void init_tcl_pointers()</div><div class="ttdoc">Set Tcl pointers.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:37</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_a10a5078762a9ebbf684b797c9e638b21"><div class="ttname"><a href="classcolvarproxy__tcl.html#a10a5078762a9ebbf684b797c9e638b21">colvarproxy_tcl::colvarproxy_tcl</a></div><div class="ttdeci">colvarproxy_tcl()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:23</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_ae1deaeeb91ee5ed7b28a6a49b1e7f937"><div class="ttname"><a href="classcolvarproxy__tcl.html#ae1deaeeb91ee5ed7b28a6a49b1e7f937">colvarproxy_tcl::init_tcl_pointers</a></div><div class="ttdeci">virtual void init_tcl_pointers()</div><div class="ttdoc">Set Tcl pointers.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:34</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_ad22bd5188d65d5da7e92a3b02e70c946"><div class="ttname"><a href="classcolvarproxy__tcl.html#ad22bd5188d65d5da7e92a3b02e70c946">colvarproxy_tcl::set_tcl_interp</a></div><div class="ttdeci">void set_tcl_interp(Tcl_Interp *interp)</div><div class="ttdoc">Set the pointer to the Tcl interpreter.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.h:76</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_aba64f6eee57c4982ddc379d709a11cd5"><div class="ttname"><a href="classcolvarproxy__tcl.html#aba64f6eee57c4982ddc379d709a11cd5">colvarproxy_tcl::tcl_available</a></div><div class="ttdeci">bool tcl_available()</div><div class="ttdoc">Is Tcl available? (trigger initialization if needed)</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.h:39</div></div>
 <div class="ttc" id="aclasscolvarmodule_1_1matrix2d_html"><div class="ttname"><a href="classcolvarmodule_1_1matrix2d.html">colvarmodule::matrix2d&lt; cvm::real &gt;</a></div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html_a684579524c36cbcbd864209c23c8b8ea"><div class="ttname"><a href="classcolvarproxy__tcl.html#a684579524c36cbcbd864209c23c8b8ea">colvarproxy_tcl::tcl_get_str</a></div><div class="ttdeci">char const  * tcl_get_str(void *obj)</div><div class="ttdoc">Get a string representation of the Tcl object pointed to by obj.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:44</div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html_a46d183d4bc83aeb09752b30887bc3836"><div class="ttname"><a href="classcolvarproxy__tcl.html#a46d183d4bc83aeb09752b30887bc3836">colvarproxy_tcl::~colvarproxy_tcl</a></div><div class="ttdeci">virtual ~colvarproxy_tcl()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:32</div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html"><div class="ttname"><a href="classcolvarproxy__tcl.html">colvarproxy_tcl</a></div><div class="ttdoc">Methods for using Tcl within Colvars.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.h:17</div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html_a0baa0fb599c1fb81e2bd96f91a2daab8"><div class="ttname"><a href="classcolvarproxy__tcl.html#a0baa0fb599c1fb81e2bd96f91a2daab8">colvarproxy_tcl::get_tcl_interp</a></div><div class="ttdeci">void * get_tcl_interp()</div><div class="ttdoc">Get a pointer to the Tcl interpreter.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.h:49</div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html_a26c3b6ba1ad842aaa872a0788bfdfc49"><div class="ttname"><a href="classcolvarproxy__tcl.html#a26c3b6ba1ad842aaa872a0788bfdfc49">colvarproxy_tcl::tcl_available</a></div><div class="ttdeci">int tcl_available()</div><div class="ttdoc">Is Tcl available? (trigger initialization if needed)</div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html_a0d2345d3b513ef463301ad19feac0519"><div class="ttname"><a href="classcolvarproxy__tcl.html#a0d2345d3b513ef463301ad19feac0519">colvarproxy_tcl::tcl_run_colvar_gradient_callback</a></div><div class="ttdeci">int tcl_run_colvar_gradient_callback(std::string const &amp;name, std::vector&lt; const colvarvalue * &gt; const &amp;cvcs, std::vector&lt; cvm::matrix2d&lt; cvm::real &gt; &gt; &amp;gradient)</div><div class="ttdoc">Tcl implementation of run_colvar_gradient_callback()</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:117</div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html_ab2cdac45d887d147c037ce4c682c3139"><div class="ttname"><a href="classcolvarproxy__tcl.html#ab2cdac45d887d147c037ce4c682c3139">colvarproxy_tcl::tcl_run_force_callback</a></div><div class="ttdeci">int tcl_run_force_callback()</div><div class="ttdoc">Tcl implementation of run_force_callback()</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:55</div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html_a41a113fb813db58eeeb6e832d101a879"><div class="ttname"><a href="classcolvarproxy__tcl.html#a41a113fb813db58eeeb6e832d101a879">colvarproxy_tcl::tcl_run_colvar_callback</a></div><div class="ttdeci">int tcl_run_colvar_callback(std::string const &amp;name, std::vector&lt; const colvarvalue * &gt; const &amp;cvcs, colvarvalue &amp;value)</div><div class="ttdoc">Tcl implementation of run_colvar_callback()</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:75</div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html_af0338cbdb54f3f6e99ee3b9cf7020dd9"><div class="ttname"><a href="classcolvarproxy__tcl.html#af0338cbdb54f3f6e99ee3b9cf7020dd9">colvarproxy_tcl::tcl_interp_</a></div><div class="ttdeci">void * tcl_interp_</div><div class="ttdoc">Pointer to Tcl interpreter object.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.h:63</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_a684579524c36cbcbd864209c23c8b8ea"><div class="ttname"><a href="classcolvarproxy__tcl.html#a684579524c36cbcbd864209c23c8b8ea">colvarproxy_tcl::tcl_get_str</a></div><div class="ttdeci">char const  * tcl_get_str(void *obj)</div><div class="ttdoc">Get a string representation of the Tcl object pointed to by obj.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:51</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_a46d183d4bc83aeb09752b30887bc3836"><div class="ttname"><a href="classcolvarproxy__tcl.html#a46d183d4bc83aeb09752b30887bc3836">colvarproxy_tcl::~colvarproxy_tcl</a></div><div class="ttdeci">virtual ~colvarproxy_tcl()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:29</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html"><div class="ttname"><a href="classcolvarproxy__tcl.html">colvarproxy_tcl</a></div><div class="ttdoc">Methods for using Tcl within Colvars.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.h:28</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_aa450bf84ccf757a6650b2800712782ca"><div class="ttname"><a href="classcolvarproxy__tcl.html#aa450bf84ccf757a6650b2800712782ca">colvarproxy_tcl::tcl_interp_</a></div><div class="ttdeci">Tcl_Interp * tcl_interp_</div><div class="ttdoc">Pointer to Tcl interpreter object.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.h:86</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_a0d2345d3b513ef463301ad19feac0519"><div class="ttname"><a href="classcolvarproxy__tcl.html#a0d2345d3b513ef463301ad19feac0519">colvarproxy_tcl::tcl_run_colvar_gradient_callback</a></div><div class="ttdeci">int tcl_run_colvar_gradient_callback(std::string const &amp;name, std::vector&lt; const colvarvalue * &gt; const &amp;cvcs, std::vector&lt; cvm::matrix2d&lt; cvm::real &gt; &gt; &amp;gradient)</div><div class="ttdoc">Tcl implementation of run_colvar_gradient_callback()</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:167</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_ab2cdac45d887d147c037ce4c682c3139"><div class="ttname"><a href="classcolvarproxy__tcl.html#ab2cdac45d887d147c037ce4c682c3139">colvarproxy_tcl::tcl_run_force_callback</a></div><div class="ttdeci">int tcl_run_force_callback()</div><div class="ttdoc">Tcl implementation of run_force_callback()</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:96</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_a41a113fb813db58eeeb6e832d101a879"><div class="ttname"><a href="classcolvarproxy__tcl.html#a41a113fb813db58eeeb6e832d101a879">colvarproxy_tcl::tcl_run_colvar_callback</a></div><div class="ttdeci">int tcl_run_colvar_callback(std::string const &amp;name, std::vector&lt; const colvarvalue * &gt; const &amp;cvcs, colvarvalue &amp;value)</div><div class="ttdoc">Tcl implementation of run_colvar_callback()</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.cpp:120</div></div>
 <div class="ttc" id="aclasscolvarvalue_html"><div class="ttname"><a href="classcolvarvalue.html">colvarvalue</a></div><div class="ttdoc">Value of a collective variable: this is a metatype which can be set at runtime. By default it is set ...</div><div class="ttdef"><b>Definition:</b> colvarvalue.h:41</div></div>
-<div class="ttc" id="aclasscolvarproxy__tcl_html_a8eb81bf9fbc998c44416ec33fee0f2c4"><div class="ttname"><a href="classcolvarproxy__tcl.html#a8eb81bf9fbc998c44416ec33fee0f2c4">colvarproxy_tcl::set_tcl_interp</a></div><div class="ttdeci">void set_tcl_interp(void *interp)</div><div class="ttdoc">Set the pointer to the Tcl interpreter.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.h:55</div></div>
+<div class="ttc" id="aclasscolvarproxy__tcl_html_a4384bbcfb0b9a76a63e2ae396d78982d"><div class="ttname"><a href="classcolvarproxy__tcl.html#a4384bbcfb0b9a76a63e2ae396d78982d">colvarproxy_tcl::get_tcl_interp</a></div><div class="ttdeci">Tcl_Interp * get_tcl_interp()</div><div class="ttdoc">Get a pointer to the Tcl interpreter.</div><div class="ttdef"><b>Definition:</b> colvarproxy_tcl.h:70</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 13 2022 09:37:31 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Thu Jun 2 2022 11:46:16 for Collective Variables Module - Developer Documentation by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
