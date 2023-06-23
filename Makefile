@@ -54,8 +54,7 @@ readme: $(COLVARSDIR)/README.md $(COLVARSDIR)/README-totalforce.md $(COLVARSDIR)
 
 $(PDFDIR)/%.pdf: $(DOCSRCDIR)/%.tex $(BIBTEX) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex
 	make -C $(DOCSRCDIR) pdf
-	mv -f $(DOCSRCDIR)/`basename $@` $(PDFDIR)
-	make -C $(DOCSRCDIR) clean
+	cp -p -f $(DOCSRCDIR)/`basename $@` $(PDFDIR)
 
 HTLATEX = htlatex
 HTLATEX_OPTS = "html5mjlatex.cfg, charset=utf-8" " -cunihtf -utf8"
