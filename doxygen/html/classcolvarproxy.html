@@ -79,16 +79,13 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Interface between the collective variables module and the simulation or analysis program (NAMD, VMD, LAMMPS...). This is the base class: each interfaced program is supported by a derived class.  
- <a href="classcolvarproxy.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="colvarproxy_8h_source.html">colvarproxy.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for colvarproxy:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarproxy__inherit__graph.png" border="0" usemap="#acolvarproxy_inherit__map" alt="Inheritance graph"/></div>
 <map name="acolvarproxy_inherit__map" id="acolvarproxy_inherit__map">
-<area shape="rect" title="Interface between the collective variables module and the simulation or analysis program (NAMD,..." alt="" coords="224,203,313,228"/>
+<area shape="rect" title=" " alt="" coords="224,203,313,228"/>
 <area shape="rect" href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="361,177,489,203"/>
 <area shape="rect" href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="365,227,486,252"/>
 <area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="22,5,159,31"/>
@@ -107,7 +104,7 @@ Collaboration diagram for colvarproxy:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarproxy__coll__graph.png" border="0" usemap="#acolvarproxy_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarproxy_coll__map" id="acolvarproxy_coll__map">
-<area shape="rect" title="Interface between the collective variables module and the simulation or analysis program (NAMD,..." alt="" coords="547,229,637,254"/>
+<area shape="rect" title=" " alt="" coords="547,229,637,254"/>
 <area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="951,229,1040,254"/>
 <area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="757,139,856,165"/>
 <area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="318,81,455,106"/>
@@ -250,9 +247,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_syste
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_target_temperature</b> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> T)</td></tr>
 <tr class="memdesc:a0c7f268afa1b1e2a9190a684c896b6bb inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current target temperature of the simulation (K units) <br /></td></tr>
 <tr class="separator:a0c7f268afa1b1e2a9190a684c896b6bb inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ab818a84c6a4b4dede2b2bbfe5556a7 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a9ab818a84c6a4b4dede2b2bbfe5556a7">dt</a> ()</td></tr>
-<tr class="memdesc:a9ab818a84c6a4b4dede2b2bbfe5556a7 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time step of the simulation (fs)  <a href="classcolvarproxy__system.html#a9ab818a84c6a4b4dede2b2bbfe5556a7">More...</a><br /></td></tr>
-<tr class="separator:a9ab818a84c6a4b4dede2b2bbfe5556a7 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644de6b9f91e2955e8a45e949a1404fa inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="a644de6b9f91e2955e8a45e949a1404fa" name="a644de6b9f91e2955e8a45e949a1404fa"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>dt</b> () const</td></tr>
+<tr class="memdesc:a644de6b9f91e2955e8a45e949a1404fa inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time step of the simulation (fs units) <br /></td></tr>
+<tr class="separator:a644de6b9f91e2955e8a45e949a1404fa inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915a47963c0b583a35c138d95dad80e1 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="a915a47963c0b583a35c138d95dad80e1" name="a915a47963c0b583a35c138d95dad80e1"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_integration_timestep</b> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> <a class="el" href="classcolvarproxy__system.html#a644de6b9f91e2955e8a45e949a1404fa">dt</a>)</td></tr>
+<tr class="memdesc:a915a47963c0b583a35c138d95dad80e1 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current integration timestep of the simulation (fs units) <br /></td></tr>
+<tr class="separator:a915a47963c0b583a35c138d95dad80e1 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0e1c25ca4482865a40dd37656d5a0a6 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#ad0e1c25ca4482865a40dd37656d5a0a6">rand_gaussian</a> (void)</td></tr>
 <tr class="memdesc:ad0e1c25ca4482865a40dd37656d5a0a6 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pseudo-random number with Gaussian distribution.  <a href="classcolvarproxy__system.html#ad0e1c25ca4482865a40dd37656d5a0a6">More...</a><br /></td></tr>
 <tr class="separator:ad0e1c25ca4482865a40dd37656d5a0a6 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -415,6 +417,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>compute_max_atoms_app
 int&#160;</td><td class="memItemRight" valign="bottom"><b>max_atoms_applied_force_id</b> () const</td></tr>
 <tr class="memdesc:aa0dda46bccbbc23b20d636200064e73a inherit pub_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the atom ID with the largest applied force. <br /></td></tr>
 <tr class="separator:aa0dda46bccbbc23b20d636200064e73a inherit pub_methods_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b261f19278aef0a6158c2ebd27a4a5 inherit pub_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="a83b261f19278aef0a6158c2ebd27a4a5" name="a83b261f19278aef0a6158c2ebd27a4a5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>modified_atom_list</b> () const</td></tr>
+<tr class="memdesc:a83b261f19278aef0a6158c2ebd27a4a5 inherit pub_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the atom list has been modified internally. <br /></td></tr>
+<tr class="separator:a83b261f19278aef0a6158c2ebd27a4a5 inherit pub_methods_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860f459c811bf506cabb2e9840dbd220 inherit pub_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="a860f459c811bf506cabb2e9840dbd220" name="a860f459c811bf506cabb2e9840dbd220"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reset_modified_atom_list</b> ()</td></tr>
+<tr class="memdesc:a860f459c811bf506cabb2e9840dbd220 inherit pub_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the modified atom list flag. <br /></td></tr>
+<tr class="separator:a860f459c811bf506cabb2e9840dbd220 inherit pub_methods_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc95c3b7aedbe41a74900cde4132e04 inherit pub_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="a1cc95c3b7aedbe41a74900cde4132e04" name="a1cc95c3b7aedbe41a74900cde4132e04"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>updated_masses</b> () const</td></tr>
 <tr class="memdesc:a1cc95c3b7aedbe41a74900cde4132e04 inherit pub_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record whether masses have been updated. <br /></td></tr>
@@ -753,40 +763,58 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>rename_file</b
 int&#160;</td><td class="memItemRight" valign="bottom"><b>rename_file</b> (std::string const &amp;filename, std::string const &amp;newfilename)</td></tr>
 <tr class="memdesc:a4d4664469e289026424ad0ba4db3d0c3 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename the given file. <br /></td></tr>
 <tr class="separator:a4d4664469e289026424ad0ba4db3d0c3 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3ee7725d4866ab63d288cffdce4efb6 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="ac3ee7725d4866ab63d288cffdce4efb6" name="ac3ee7725d4866ab63d288cffdce4efb6"></a>
-std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>input_prefix</b> ()</td></tr>
-<tr class="memdesc:ac3ee7725d4866ab63d288cffdce4efb6 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix of the input state file to be read next. <br /></td></tr>
-<tr class="separator:ac3ee7725d4866ab63d288cffdce4efb6 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12094d65e72984e89716f4ee08dac810 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="a12094d65e72984e89716f4ee08dac810" name="a12094d65e72984e89716f4ee08dac810"></a>
-std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_prefix</b> ()</td></tr>
-<tr class="memdesc:a12094d65e72984e89716f4ee08dac810 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default prefix to be used for all output files (final configuration) <br /></td></tr>
-<tr class="separator:a12094d65e72984e89716f4ee08dac810 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae477297ba4e31c361c3246297ddd4ab3 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="ae477297ba4e31c361c3246297ddd4ab3" name="ae477297ba4e31c361c3246297ddd4ab3"></a>
-std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>restart_output_prefix</b> ()</td></tr>
-<tr class="memdesc:ae477297ba4e31c361c3246297ddd4ab3 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix of the restart (checkpoint) file to be written next. <br /></td></tr>
-<tr class="separator:ae477297ba4e31c361c3246297ddd4ab3 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0bf650f69cc574d0025ab4c3fb0d8f5 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="ae0bf650f69cc574d0025ab4c3fb0d8f5" name="ae0bf650f69cc574d0025ab4c3fb0d8f5"></a>
+std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>input_prefix</b> () const</td></tr>
+<tr class="memdesc:ae0bf650f69cc574d0025ab4c3fb0d8f5 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix of the input state file to be read next. <br /></td></tr>
+<tr class="separator:ae0bf650f69cc574d0025ab4c3fb0d8f5 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2048786ade171ff82544f135cb2476 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="ada2048786ade171ff82544f135cb2476" name="ada2048786ade171ff82544f135cb2476"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_input_prefix</b> (std::string const &amp;prefix)</td></tr>
+<tr class="memdesc:ada2048786ade171ff82544f135cb2476 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize input_prefix (NOTE: it will be erased after state file is read) <br /></td></tr>
+<tr class="separator:ada2048786ade171ff82544f135cb2476 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad394a4fb49ced4697800447576cbc486 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="ad394a4fb49ced4697800447576cbc486" name="ad394a4fb49ced4697800447576cbc486"></a>
+std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_prefix</b> () const</td></tr>
+<tr class="memdesc:ad394a4fb49ced4697800447576cbc486 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default prefix to be used for all output files (final configuration) <br /></td></tr>
+<tr class="separator:ad394a4fb49ced4697800447576cbc486 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c1397ec659c80f25fec28e120f1391 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="ad9c1397ec659c80f25fec28e120f1391" name="ad9c1397ec659c80f25fec28e120f1391"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_output_prefix</b> (std::string const &amp;prefix)</td></tr>
+<tr class="memdesc:ad9c1397ec659c80f25fec28e120f1391 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default output prefix. <br /></td></tr>
+<tr class="separator:ad9c1397ec659c80f25fec28e120f1391 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b8d7bdb886b1dc5d8192273bb81885 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="a78b8d7bdb886b1dc5d8192273bb81885" name="a78b8d7bdb886b1dc5d8192273bb81885"></a>
+std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>restart_output_prefix</b> () const</td></tr>
+<tr class="memdesc:a78b8d7bdb886b1dc5d8192273bb81885 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix of the restart (checkpoint) file to be written next. <br /></td></tr>
+<tr class="separator:a78b8d7bdb886b1dc5d8192273bb81885 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714f2461293509fcce21face4838b868 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="a714f2461293509fcce21face4838b868" name="a714f2461293509fcce21face4838b868"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_restart_output_prefix</b> (std::string const &amp;prefix)</td></tr>
+<tr class="memdesc:a714f2461293509fcce21face4838b868 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default restart state file prefix. <br /></td></tr>
+<tr class="separator:a714f2461293509fcce21face4838b868 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78938e510424b12ff9a971c1b05503d3 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="a78938e510424b12ff9a971c1b05503d3" name="a78938e510424b12ff9a971c1b05503d3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>default_restart_frequency</b> () const</td></tr>
 <tr class="memdesc:a78938e510424b12ff9a971c1b05503d3 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default restart frequency (as set by the simulation engine) <br /></td></tr>
 <tr class="separator:a78938e510424b12ff9a971c1b05503d3 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8aa5509413e467e5eb78cee9ae8bcf6 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="ad8aa5509413e467e5eb78cee9ae8bcf6" name="ad8aa5509413e467e5eb78cee9ae8bcf6"></a>
-char const *&amp;&#160;</td><td class="memItemRight" valign="bottom"><b>input_buffer</b> ()</td></tr>
-<tr class="memdesc:ad8aa5509413e467e5eb78cee9ae8bcf6 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer from which the input state information may be read. <br /></td></tr>
-<tr class="separator:ad8aa5509413e467e5eb78cee9ae8bcf6 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34d1360411177f2d56a44b6c6a841f85 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top">virtual std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a34d1360411177f2d56a44b6c6a841f85">input_stream</a> (std::string const &amp;input_name, std::string const description=&quot;file/channel&quot;, bool error_on_fail=true)</td></tr>
+<tr class="memitem:ab54cf3d28775689648c789cfc1627c3d inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="ab54cf3d28775689648c789cfc1627c3d" name="ab54cf3d28775689648c789cfc1627c3d"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_default_restart_frequency</b> (int freq)</td></tr>
+<tr class="memdesc:ab54cf3d28775689648c789cfc1627c3d inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Communicate/set the restart frequency of the simulation engine. <br /></td></tr>
+<tr class="separator:ab54cf3d28775689648c789cfc1627c3d inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d1360411177f2d56a44b6c6a841f85 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a34d1360411177f2d56a44b6c6a841f85">input_stream</a> (std::string const &amp;input_name, std::string const description=&quot;file/channel&quot;, bool error_on_fail=true)</td></tr>
 <tr class="separator:a34d1360411177f2d56a44b6c6a841f85 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23352f574807f42089cabaab00ee564a inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a23352f574807f42089cabaab00ee564a">input_stream_from_string</a> (std::string const &amp;input_name, std::string const &amp;content, std::string const description=&quot;string&quot;)</td></tr>
+<tr class="separator:a23352f574807f42089cabaab00ee564a inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a809120d399254f6be85d5d66405f7fe9 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="a809120d399254f6be85d5d66405f7fe9" name="a809120d399254f6be85d5d66405f7fe9"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>input_stream_exists</b> (std::string const &amp;input_name)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>input_stream_exists</b> (std::string const &amp;input_name)</td></tr>
 <tr class="memdesc:a809120d399254f6be85d5d66405f7fe9 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the file/channel is open (without opening it if not) <br /></td></tr>
 <tr class="separator:a809120d399254f6be85d5d66405f7fe9 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad813197ae2df20010cde83c82257faa6 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="ad813197ae2df20010cde83c82257faa6" name="ad813197ae2df20010cde83c82257faa6"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>close_input_stream</b> (std::string const &amp;input_name)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>close_input_stream</b> (std::string const &amp;input_name)</td></tr>
 <tr class="memdesc:ad813197ae2df20010cde83c82257faa6 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the given input stream. <br /></td></tr>
 <tr class="separator:ad813197ae2df20010cde83c82257faa6 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf615453e05c17582863583b62170730 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="adf615453e05c17582863583b62170730" name="adf615453e05c17582863583b62170730"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>close_input_streams</b> ()</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>close_input_streams</b> ()</td></tr>
 <tr class="memdesc:adf615453e05c17582863583b62170730 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes all input streams. <br /></td></tr>
 <tr class="separator:adf615453e05c17582863583b62170730 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa15c1f3c47a518b595a75ca0e8971e4 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="aaa15c1f3c47a518b595a75ca0e8971e4" name="aaa15c1f3c47a518b595a75ca0e8971e4"></a>
+std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>list_input_stream_names</b> () const</td></tr>
+<tr class="memdesc:aaa15c1f3c47a518b595a75ca0e8971e4 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all input streams that were opened at some point. <br /></td></tr>
+<tr class="separator:aaa15c1f3c47a518b595a75ca0e8971e4 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27cfa5efba28a0c0c31807397ee6e6de inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a27cfa5efba28a0c0c31807397ee6e6de">output_stream</a> (std::string const &amp;output_name, std::string const description=&quot;file/channel&quot;)</td></tr>
 <tr class="separator:a27cfa5efba28a0c0c31807397ee6e6de inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f6b7ccd8b68569ddab5b061ddeebe86 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="a9f6b7ccd8b68569ddab5b061ddeebe86" name="a9f6b7ccd8b68569ddab5b061ddeebe86"></a>
@@ -875,8 +903,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>cached_alch_lambda_ch
 <tr class="separator:a261d49b1c02ca3ed5f52371efee41e6c inherit pro_attribs_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e7e9581040b1a5770485d024aa698ed inherit pro_attribs_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="a1e7e9581040b1a5770485d024aa698ed" name="a1e7e9581040b1a5770485d024aa698ed"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>target_temperature_</b></td></tr>
-<tr class="memdesc:a1e7e9581040b1a5770485d024aa698ed inherit pro_attribs_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most up to date target temperature for the system (in K) <br /></td></tr>
+<tr class="memdesc:a1e7e9581040b1a5770485d024aa698ed inherit pro_attribs_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most up to date target temperature (K units); default to 0.0 if undefined. <br /></td></tr>
 <tr class="separator:a1e7e9581040b1a5770485d024aa698ed inherit pro_attribs_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c0a0fe1c918baeed1ecee511814383 inherit pro_attribs_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="ac8c0a0fe1c918baeed1ecee511814383" name="ac8c0a0fe1c918baeed1ecee511814383"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>timestep_</b></td></tr>
+<tr class="memdesc:ac8c0a0fe1c918baeed1ecee511814383 inherit pro_attribs_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current integration timestep (engine units); default to 1.0 if undefined. <br /></td></tr>
+<tr class="separator:ac8c0a0fe1c918baeed1ecee511814383 inherit pro_attribs_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a953b47503b09fd37fbbaa5316186114f inherit pro_attribs_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a953b47503b09fd37fbbaa5316186114f">angstrom_value_</a></td></tr>
 <tr class="memdesc:a953b47503b09fd37fbbaa5316186114f inherit pro_attribs_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of 1 Angstrom in the internal (front-end) Colvars unit for atomic coordinates.  <a href="classcolvarproxy__system.html#a953b47503b09fd37fbbaa5316186114f">More...</a><br /></td></tr>
 <tr class="separator:a953b47503b09fd37fbbaa5316186114f inherit pro_attribs_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -953,6 +985,10 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 int&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_max_applied_force_id_</b></td></tr>
 <tr class="memdesc:a85dd44444cc48218ebba8cd5613f4675 inherit pro_attribs_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the atom with the maximum norm among all applied forces. <br /></td></tr>
 <tr class="separator:a85dd44444cc48218ebba8cd5613f4675 inherit pro_attribs_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d06577773376ba004e32ae590424c44 inherit pro_attribs_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="a6d06577773376ba004e32ae590424c44" name="a6d06577773376ba004e32ae590424c44"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>modified_atom_list_</b></td></tr>
+<tr class="memdesc:a6d06577773376ba004e32ae590424c44 inherit pro_attribs_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the atom list has been modified internally. <br /></td></tr>
+<tr class="separator:a6d06577773376ba004e32ae590424c44 inherit pro_attribs_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3cf1e7c3299380e02953ad5308d5b62 inherit pro_attribs_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="aa3cf1e7c3299380e02953ad5308d5b62" name="aa3cf1e7c3299380e02953ad5308d5b62"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>updated_masses_</b></td></tr>
 <tr class="memdesc:aa3cf1e7c3299380e02953ad5308d5b62 inherit pro_attribs_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the masses and charges have been updated from the host code. <br /></td></tr>
@@ -1104,7 +1140,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 <tr class="separator:a4de551c4cdac5d6228201a00c274ecc8 inherit pro_methods_classcolvarproxy__atom__groups"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Interface between the collective variables module and the simulation or analysis program (NAMD, VMD, LAMMPS...). This is the base class: each interfaced program is supported by a derived class. </p>
+<div class="textblock"><p >Interface between Colvars and MD engine (GROMACS, LAMMPS, NAMD, VMD...)</p>
+<p >This is the base class: each engine is supported by a derived class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acc65c3283d01be61a12abee4ad459948" name="acc65c3283d01be61a12abee4ad459948"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc65c3283d01be61a12abee4ad459948">&#9670;&#160;</a></span>error()</h2>
@@ -1368,7 +1405,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 2 2023 13:21:31 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

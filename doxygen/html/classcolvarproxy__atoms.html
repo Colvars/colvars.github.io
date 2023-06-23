@@ -88,7 +88,7 @@ Inheritance diagram for colvarproxy_atoms:</div>
 <div class="center"><img src="classcolvarproxy__atoms__inherit__graph.png" border="0" usemap="#acolvarproxy__atoms_inherit__map" alt="Inheritance graph"/></div>
 <map name="acolvarproxy__atoms_inherit__map" id="acolvarproxy__atoms_inherit__map">
 <area shape="rect" title="Container of atomic data for processing by Colvars." alt="" coords="78,5,210,31"/>
-<area shape="rect" href="classcolvarproxy.html" title="Interface between the collective variables module and the simulation or analysis program (NAMD,..." alt="" coords="99,79,189,104"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="99,79,189,104"/>
 <area shape="rect" href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="5,152,133,177"/>
 <area shape="rect" href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="158,152,279,177"/>
 </map>
@@ -201,6 +201,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>compute_max_atoms_app
 int&#160;</td><td class="memItemRight" valign="bottom"><b>max_atoms_applied_force_id</b> () const</td></tr>
 <tr class="memdesc:aa0dda46bccbbc23b20d636200064e73a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the atom ID with the largest applied force. <br /></td></tr>
 <tr class="separator:aa0dda46bccbbc23b20d636200064e73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b261f19278aef0a6158c2ebd27a4a5"><td class="memItemLeft" align="right" valign="top"><a id="a83b261f19278aef0a6158c2ebd27a4a5" name="a83b261f19278aef0a6158c2ebd27a4a5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>modified_atom_list</b> () const</td></tr>
+<tr class="memdesc:a83b261f19278aef0a6158c2ebd27a4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the atom list has been modified internally. <br /></td></tr>
+<tr class="separator:a83b261f19278aef0a6158c2ebd27a4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860f459c811bf506cabb2e9840dbd220"><td class="memItemLeft" align="right" valign="top"><a id="a860f459c811bf506cabb2e9840dbd220" name="a860f459c811bf506cabb2e9840dbd220"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reset_modified_atom_list</b> ()</td></tr>
+<tr class="memdesc:a860f459c811bf506cabb2e9840dbd220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the modified atom list flag. <br /></td></tr>
+<tr class="separator:a860f459c811bf506cabb2e9840dbd220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc95c3b7aedbe41a74900cde4132e04"><td class="memItemLeft" align="right" valign="top"><a id="a1cc95c3b7aedbe41a74900cde4132e04" name="a1cc95c3b7aedbe41a74900cde4132e04"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>updated_masses</b> () const</td></tr>
 <tr class="memdesc:a1cc95c3b7aedbe41a74900cde4132e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record whether masses have been updated. <br /></td></tr>
@@ -257,6 +265,10 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 int&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_max_applied_force_id_</b></td></tr>
 <tr class="memdesc:a85dd44444cc48218ebba8cd5613f4675"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the atom with the maximum norm among all applied forces. <br /></td></tr>
 <tr class="separator:a85dd44444cc48218ebba8cd5613f4675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d06577773376ba004e32ae590424c44"><td class="memItemLeft" align="right" valign="top"><a id="a6d06577773376ba004e32ae590424c44" name="a6d06577773376ba004e32ae590424c44"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>modified_atom_list_</b></td></tr>
+<tr class="memdesc:a6d06577773376ba004e32ae590424c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the atom list has been modified internally. <br /></td></tr>
+<tr class="separator:a6d06577773376ba004e32ae590424c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3cf1e7c3299380e02953ad5308d5b62"><td class="memItemLeft" align="right" valign="top"><a id="aa3cf1e7c3299380e02953ad5308d5b62" name="aa3cf1e7c3299380e02953ad5308d5b62"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>updated_masses_</b></td></tr>
 <tr class="memdesc:aa3cf1e7c3299380e02953ad5308d5b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the masses and charges have been updated from the host code. <br /></td></tr>
@@ -845,7 +857,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>updated_charges_</b><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 2 2023 13:21:31 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

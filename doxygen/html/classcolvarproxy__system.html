@@ -89,7 +89,7 @@ Inheritance diagram for colvarproxy_system:</div>
 <div class="center"><img src="classcolvarproxy__system__inherit__graph.png" border="0" usemap="#acolvarproxy__system_inherit__map" alt="Inheritance graph"/></div>
 <map name="acolvarproxy__system_inherit__map" id="acolvarproxy__system_inherit__map">
 <area shape="rect" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="75,5,213,31"/>
-<area shape="rect" href="classcolvarproxy.html" title="Interface between the collective variables module and the simulation or analysis program (NAMD,..." alt="" coords="99,79,189,104"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="99,79,189,104"/>
 <area shape="rect" href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="5,152,133,177"/>
 <area shape="rect" href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="158,152,279,177"/>
 </map>
@@ -137,9 +137,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_syste
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_target_temperature</b> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> T)</td></tr>
 <tr class="memdesc:a0c7f268afa1b1e2a9190a684c896b6bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current target temperature of the simulation (K units) <br /></td></tr>
 <tr class="separator:a0c7f268afa1b1e2a9190a684c896b6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ab818a84c6a4b4dede2b2bbfe5556a7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a9ab818a84c6a4b4dede2b2bbfe5556a7">dt</a> ()</td></tr>
-<tr class="memdesc:a9ab818a84c6a4b4dede2b2bbfe5556a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time step of the simulation (fs)  <a href="classcolvarproxy__system.html#a9ab818a84c6a4b4dede2b2bbfe5556a7">More...</a><br /></td></tr>
-<tr class="separator:a9ab818a84c6a4b4dede2b2bbfe5556a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644de6b9f91e2955e8a45e949a1404fa"><td class="memItemLeft" align="right" valign="top"><a id="a644de6b9f91e2955e8a45e949a1404fa" name="a644de6b9f91e2955e8a45e949a1404fa"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>dt</b> () const</td></tr>
+<tr class="memdesc:a644de6b9f91e2955e8a45e949a1404fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time step of the simulation (fs units) <br /></td></tr>
+<tr class="separator:a644de6b9f91e2955e8a45e949a1404fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915a47963c0b583a35c138d95dad80e1"><td class="memItemLeft" align="right" valign="top"><a id="a915a47963c0b583a35c138d95dad80e1" name="a915a47963c0b583a35c138d95dad80e1"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_integration_timestep</b> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> <a class="el" href="classcolvarproxy__system.html#a644de6b9f91e2955e8a45e949a1404fa">dt</a>)</td></tr>
+<tr class="memdesc:a915a47963c0b583a35c138d95dad80e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current integration timestep of the simulation (fs units) <br /></td></tr>
+<tr class="separator:a915a47963c0b583a35c138d95dad80e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0e1c25ca4482865a40dd37656d5a0a6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#ad0e1c25ca4482865a40dd37656d5a0a6">rand_gaussian</a> (void)</td></tr>
 <tr class="memdesc:ad0e1c25ca4482865a40dd37656d5a0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pseudo-random number with Gaussian distribution.  <a href="classcolvarproxy__system.html#ad0e1c25ca4482865a40dd37656d5a0a6">More...</a><br /></td></tr>
 <tr class="separator:ad0e1c25ca4482865a40dd37656d5a0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,8 +239,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>cached_alch_lambda_ch
 <tr class="separator:a261d49b1c02ca3ed5f52371efee41e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e7e9581040b1a5770485d024aa698ed"><td class="memItemLeft" align="right" valign="top"><a id="a1e7e9581040b1a5770485d024aa698ed" name="a1e7e9581040b1a5770485d024aa698ed"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>target_temperature_</b></td></tr>
-<tr class="memdesc:a1e7e9581040b1a5770485d024aa698ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most up to date target temperature for the system (in K) <br /></td></tr>
+<tr class="memdesc:a1e7e9581040b1a5770485d024aa698ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most up to date target temperature (K units); default to 0.0 if undefined. <br /></td></tr>
 <tr class="separator:a1e7e9581040b1a5770485d024aa698ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c0a0fe1c918baeed1ecee511814383"><td class="memItemLeft" align="right" valign="top"><a id="ac8c0a0fe1c918baeed1ecee511814383" name="ac8c0a0fe1c918baeed1ecee511814383"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>timestep_</b></td></tr>
+<tr class="memdesc:ac8c0a0fe1c918baeed1ecee511814383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current integration timestep (engine units); default to 1.0 if undefined. <br /></td></tr>
+<tr class="separator:ac8c0a0fe1c918baeed1ecee511814383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a953b47503b09fd37fbbaa5316186114f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a953b47503b09fd37fbbaa5316186114f">angstrom_value_</a></td></tr>
 <tr class="memdesc:a953b47503b09fd37fbbaa5316186114f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of 1 Angstrom in the internal (front-end) Colvars unit for atomic coordinates.  <a href="classcolvarproxy__system.html#a953b47503b09fd37fbbaa5316186114f">More...</a><br /></td></tr>
 <tr class="separator:a953b47503b09fd37fbbaa5316186114f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,35 +337,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 <p>Pass restraint energy value for current timestep to MD engine. </p>
 
 <p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#a5f75bbc3011f47c571a29e9e9c419977">colvarproxy_vmd</a>, and <a class="el" href="classcolvarproxy__namd.html#a3b7c85e6c8ff73445e24cab883c562f9">colvarproxy_namd</a>.</p>
-
-</div>
-</div>
-<a id="a9ab818a84c6a4b4dede2b2bbfe5556a7" name="a9ab818a84c6a4b4dede2b2bbfe5556a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ab818a84c6a4b4dede2b2bbfe5556a7">&#9670;&#160;</a></span>dt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> colvarproxy_system::dt </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Time step of the simulation (fs) </p>
-
-<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a58cfbc96dc289a20cb609a4e7e452999">colvarproxy_namd</a>.</p>
 
 </div>
 </div>
@@ -718,7 +698,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 2 2023 13:21:31 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

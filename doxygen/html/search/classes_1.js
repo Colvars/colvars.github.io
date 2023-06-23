@@ -46,6 +46,7 @@ var searchData=
   ['colvarvalue_43',['colvarvalue',['../classcolvarvalue.html',1,'']]],
   ['componentdisabled_44',['componentDisabled',['../classcolvar_1_1componentDisabled.html',1,'colvar']]],
   ['coordnum_45',['coordnum',['../classcolvar_1_1coordnum.html',1,'colvar']]],
-  ['cvbasedpath_46',['CVBasedPath',['../classcolvar_1_1CVBasedPath.html',1,'colvar']]],
-  ['cvc_47',['cvc',['../classcolvar_1_1cvc.html',1,'colvar']]]
+  ['customcolvar_46',['customColvar',['../classcolvar_1_1customColvar.html',1,'colvar']]],
+  ['cvbasedpath_47',['CVBasedPath',['../classcolvar_1_1CVBasedPath.html',1,'colvar']]],
+  ['cvc_48',['cvc',['../classcolvar_1_1cvc.html',1,'colvar']]]
 ];

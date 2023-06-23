@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07',1,'colvarmodule']]],
+  ['main_0',['main',['../classcolvarmodule.html#a206644393814e3df7d772f0d731d6443',1,'colvarmodule']]],
   ['main_5floop_1',['main_loop',['../classcolvar_1_1coordnum.html#adb0961965c055eb19c546049365ced84',1,'colvar::coordnum']]],
   ['map_5fgrid_2',['map_grid',['../classcolvar__grid.html#ae5730d70387aaad037d79794f4e594ac',1,'colvar_grid']]],
   ['mark_5fkey_5fset_5fdefault_3',['mark_key_set_default',['../classcolvarparse.html#af698c38d74eaa9aabcf2ceb8f8bb897a',1,'colvarparse']]],
@@ -14,8 +14,10 @@ var searchData=
   ['maximum_5fvalue_11',['maximum_value',['../classcolvar__grid__scalar.html#ad4727ee7ef2d068ddf3c3f0e03444ad7',1,'colvar_grid_scalar']]],
   ['minimum_5fpos_5fvalue_12',['minimum_pos_value',['../classcolvar__grid__scalar.html#a78297ef072855745f5150dc1cd0465e0',1,'colvar_grid_scalar']]],
   ['minimum_5fvalue_13',['minimum_value',['../classcolvar__grid__scalar.html#a03b25235df9f05c13f6bfc8888233cc4',1,'colvar_grid_scalar']]],
-  ['modify_5fstr_5fresult_14',['modify_str_result',['../classcolvarscript.html#a2de6fb63d36455808399caf287bc9f33',1,'colvarscript']]],
-  ['module_15',['module',['../classcolvarscript.html#a8e1f266f863c77449ee0f87939521747',1,'colvarscript']]],
-  ['multiplicity_16',['multiplicity',['../classcolvar__grid.html#a4538cdb8d605ab9d70a0aeb7ca5a1f3d',1,'colvar_grid']]],
-  ['multiply_5fconstant_17',['multiply_constant',['../classcolvar__grid.html#a5861f628eab12b32e08c995eac4ee3f6',1,'colvar_grid']]]
+  ['modified_5fatom_5flist_14',['modified_atom_list',['../classcolvarproxy__atoms.html#a83b261f19278aef0a6158c2ebd27a4a5',1,'colvarproxy_atoms']]],
+  ['modify_5fstr_5fresult_15',['modify_str_result',['../classcolvarscript.html#a2de6fb63d36455808399caf287bc9f33',1,'colvarscript']]],
+  ['module_16',['module',['../classcolvarscript.html#a8e1f266f863c77449ee0f87939521747',1,'colvarscript']]],
+  ['multiplicity_17',['multiplicity',['../classcolvar__grid.html#a4538cdb8d605ab9d70a0aeb7ca5a1f3d',1,'colvar_grid']]],
+  ['multiply_5fconstant_18',['multiply_constant',['../classcolvar__grid.html#a5861f628eab12b32e08c995eac4ee3f6',1,'colvar_grid']]],
+  ['multiply_5fmatrix_19',['multiply_matrix',['../classneuralnetworkCV_1_1neuralNetworkCompute.html#acb8f52ac039ba1858d0cc601160bdda9',1,'neuralnetworkCV::neuralNetworkCompute']]]
 ];

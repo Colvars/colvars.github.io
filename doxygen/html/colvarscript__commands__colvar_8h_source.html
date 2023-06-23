@@ -87,7 +87,7 @@ $(function() {
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>CVSCRIPT(colvar_addforce,</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>         <span class="stringliteral">&quot;Apply the given force onto this colvar and return the same\n&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>         <span class="stringliteral">&quot;Apply the given force onto this colvar (no effects outside run)\n&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>         <span class="stringliteral">&quot;force : float or array - Applied force; matches colvar dimensionality&quot;</span>,</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>         1, 1,</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>         <span class="stringliteral">&quot;force : float or array - Applied force; must match colvar dimensionality&quot;</span>,</div>
@@ -336,16 +336,16 @@ $(function() {
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                                            <a class="code hl_variable" href="classcolvarmodule.html#aa8e7962b7bc1429cdcfebf461cde7ae9">cvm::cv_prec</a>));</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>         <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>         )</div>
-<div class="ttc" id="aclasscolvarmodule_html_aa33462920a2351c1ef9735d15f4170a5"><div class="ttname"><a href="classcolvarmodule.html#aa33462920a2351c1ef9735d15f4170a5">colvarmodule::increase_depth</a></div><div class="ttdeci">static void increase_depth()</div><div class="ttdoc">Increase the depth (number of indentations in the output)</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:1750</div></div>
+<div class="ttc" id="aclasscolvarmodule_html_aa33462920a2351c1ef9735d15f4170a5"><div class="ttname"><a href="classcolvarmodule.html#aa33462920a2351c1ef9735d15f4170a5">colvarmodule::increase_depth</a></div><div class="ttdeci">static void increase_depth()</div><div class="ttdoc">Increase the depth (number of indentations in the output)</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:1738</div></div>
 <div class="ttc" id="aclasscolvarmodule_html_aa8e7962b7bc1429cdcfebf461cde7ae9"><div class="ttname"><a href="classcolvarmodule.html#aa8e7962b7bc1429cdcfebf461cde7ae9">colvarmodule::cv_prec</a></div><div class="ttdeci">static size_t const cv_prec</div><div class="ttdoc">Number of digits to represent a collective variables value(s)</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:622</div></div>
 <div class="ttc" id="aclasscolvarmodule_html_ac1a09d132016191cc18c746419c3444a"><div class="ttname"><a href="classcolvarmodule.html#ac1a09d132016191cc18c746419c3444a">colvarmodule::cv_width</a></div><div class="ttdeci">static size_t const cv_width</div><div class="ttdoc">Number of characters to represent a collective variables value(s)</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:624</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_ad769e38e5023ff3ae4b6f8585c02dae7"><div class="ttname"><a href="classcolvarmodule.html#ad769e38e5023ff3ae4b6f8585c02dae7">colvarmodule::decrease_depth</a></div><div class="ttdeci">static void decrease_depth()</div><div class="ttdoc">Decrease the depth (number of indentations in the output)</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:1756</div></div>
+<div class="ttc" id="aclasscolvarmodule_html_ad769e38e5023ff3ae4b6f8585c02dae7"><div class="ttname"><a href="classcolvarmodule.html#ad769e38e5023ff3ae4b6f8585c02dae7">colvarmodule::decrease_depth</a></div><div class="ttdeci">static void decrease_depth()</div><div class="ttdoc">Decrease the depth (number of indentations in the output)</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:1744</div></div>
 <div class="ttc" id="aclasscolvarmodule_html_aecbb40c45714f5e893415a48908d3e54"><div class="ttname"><a href="classcolvarmodule.html#aecbb40c45714f5e893415a48908d3e54">colvarmodule::to_str</a></div><div class="ttdeci">static std::string to_str(char const *s)</div><div class="ttdoc">Convert to string for output purposes.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:2136</div></div>
 <div class="ttc" id="aclasscolvarvalue_html"><div class="ttname"><a href="classcolvarvalue.html">colvarvalue</a></div><div class="ttdoc">Value of a collective variable: this is a metatype which can be set at runtime. By default it is set ...</div><div class="ttdef"><b>Definition:</b> colvarvalue.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 2 2023 13:21:30 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Jun 23 2023 13:53:52 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

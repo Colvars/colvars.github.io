@@ -87,7 +87,7 @@ Collaboration diagram for colvarscript:</div>
 <map name="acolvarscript_coll__map" id="acolvarscript_coll__map">
 <area shape="rect" title=" " alt="" coords="34,173,123,198"/>
 <area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="323,173,451,198"/>
-<area shape="rect" href="classcolvarproxy.html" title="Interface between the collective variables module and the simulation or analysis program (NAMD,..." alt="" coords="593,306,682,331"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="593,306,682,331"/>
 <area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="803,261,901,286"/>
 <area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="318,335,455,361"/>
 <area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="5,335,152,361"/>
@@ -203,6 +203,10 @@ char const **&#160;</td><td class="memItemRight" valign="bottom"><b>get_command_
 <tr class="separator:a87b779f5e5cb3a45e3cce58d0ceb5dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0715779903406f44213ec2149393f6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ab0715779903406f44213ec2149393f6f">get_command_n_args_max</a> (char const *cmd)</td></tr>
 <tr class="separator:ab0715779903406f44213ec2149393f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e458e4c3ad205d5b40c61f4abbbca32"><td class="memItemLeft" align="right" valign="top"><a id="a3e458e4c3ad205d5b40c61f4abbbca32" name="a3e458e4c3ad205d5b40c61f4abbbca32"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_cmdline_main_cmd</b> (std::string const &amp;cmd)</td></tr>
+<tr class="memdesc:a3e458e4c3ad205d5b40c61f4abbbca32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the main command for the CLI, when it is not "cv" (e.g. LAMMPS) <br /></td></tr>
+<tr class="separator:a3e458e4c3ad205d5b40c61f4abbbca32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85966b0823322bdcf383cdd81bab8b10"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#a85966b0823322bdcf383cdd81bab8b10">get_command_full_help</a> (char const *cmd)</td></tr>
 <tr class="separator:a85966b0823322bdcf383cdd81bab8b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4c55e508008682322d71de4276b1383"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarscript.html#ad4c55e508008682322d71de4276b1383">get_cmdline_help_summary</a> (<a class="el" href="classcolvarscript.html#aacc1532886360feefd66e515e433afd8">Object_type</a> t)</td></tr>
@@ -352,6 +356,10 @@ Private Attributes</h2></td></tr>
 std::map&lt; std::string, <a class="el" href="classcolvarscript.html#a4762b77de87959c61288f913f9b974a6">command</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cmd_str_map</b></td></tr>
 <tr class="memdesc:a615189e4579199c00cea0acf92dc19ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal identifiers of command strings. <br /></td></tr>
 <tr class="separator:a615189e4579199c00cea0acf92dc19ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9620c7cb43ae2ad94608735b9030c27"><td class="memItemLeft" align="right" valign="top"><a id="ac9620c7cb43ae2ad94608735b9030c27" name="ac9620c7cb43ae2ad94608735b9030c27"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>cmdline_main_cmd_</b></td></tr>
+<tr class="memdesc:ac9620c7cb43ae2ad94608735b9030c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main command used in command line ("cv" by default) <br /></td></tr>
+<tr class="separator:ac9620c7cb43ae2ad94608735b9030c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa264028dbe67edbb7484323914785eff"><td class="memItemLeft" align="right" valign="top"><a id="aa264028dbe67edbb7484323914785eff" name="aa264028dbe67edbb7484323914785eff"></a>
 char const  **&#160;</td><td class="memItemRight" valign="bottom"><b>cmd_names</b></td></tr>
 <tr class="memdesc:aa264028dbe67edbb7484323914785eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse of cmd_str_map (to be exported outside this class) <br /></td></tr>
@@ -652,7 +660,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>colvarproxy</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 2 2023 13:21:31 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
