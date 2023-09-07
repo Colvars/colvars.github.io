@@ -21,7 +21,7 @@ do
   # Remove <selfref></selfref> tags, where self-hyperlinks were added with
   # the sole purpose of generating tags suitable for use in URLs (htlatex
   # will only generate those for elements that are linked explicitly)
-  python ../remove_htmltags.py $i selfref
+  python3 ../remove_htmltags.py $i selfref
 
   # Remove ligatures
   # https://orbythebeach.wordpress.com/2014/09/23/removing-ligatures-in-html-files-generated-from-latex-files/
