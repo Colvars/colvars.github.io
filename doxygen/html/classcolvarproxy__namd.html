@@ -222,12 +222,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update_atom_propertie
 <tr class="memitem:ae1a90b25c34e96254cda66b2752de805"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#ae1a90b25c34e96254cda66b2752de805">position_distance</a> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2) const</td></tr>
 <tr class="memdesc:ae1a90b25c34e96254cda66b2752de805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions.  <a href="classcolvarproxy__namd.html#ae1a90b25c34e96254cda66b2752de805">More...</a><br /></td></tr>
 <tr class="separator:ae1a90b25c34e96254cda66b2752de805"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1a306dbb5f3065028820b6e2ec8df82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#af1a306dbb5f3065028820b6e2ec8df82">load_atoms</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double const pdb_field_value=0.0) override</td></tr>
-<tr class="memdesc:af1a306dbb5f3065028820b6e2ec8df82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select atom IDs from a file (usually PDB)  <a href="classcolvarproxy__namd.html#af1a306dbb5f3065028820b6e2ec8df82">More...</a><br /></td></tr>
-<tr class="separator:af1a306dbb5f3065028820b6e2ec8df82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a076ca9682011919c56eaec279c4b25d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#a076ca9682011919c56eaec279c4b25d8">load_coords</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;pos, const std::vector&lt; int &gt; &amp;indices, std::string const &amp;pdb_field, double const pdb_field_value=0.0) override</td></tr>
-<tr class="memdesc:a076ca9682011919c56eaec279c4b25d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a set of coordinates from a file (usually PDB); if "pos" is already allocated, the number of its elements must match the number of entries in "filename".  <a href="classcolvarproxy__namd.html#a076ca9682011919c56eaec279c4b25d8">More...</a><br /></td></tr>
-<tr class="separator:a076ca9682011919c56eaec279c4b25d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aebfc7799368fa6eb5691511330738b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#a2aebfc7799368fa6eb5691511330738b">load_atoms</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double const pdb_field_value) override</td></tr>
+<tr class="memdesc:a2aebfc7799368fa6eb5691511330738b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a selection of atom IDs from a coordinate file (only PDB is supported)  <a href="classcolvarproxy__namd.html#a2aebfc7799368fa6eb5691511330738b">More...</a><br /></td></tr>
+<tr class="separator:a2aebfc7799368fa6eb5691511330738b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd07815f215f77fdf889c719ad6d6693"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#abd07815f215f77fdf889c719ad6d6693">load_coords</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;pos, const std::vector&lt; int &gt; &amp;indices, std::string const &amp;pdb_field, double const pdb_field_value) override</td></tr>
+<tr class="memdesc:abd07815f215f77fdf889c719ad6d6693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a set of coordinates from a file (PDB or XYZ)  <a href="classcolvarproxy__namd.html#abd07815f215f77fdf889c719ad6d6693">More...</a><br /></td></tr>
+<tr class="separator:abd07815f215f77fdf889c719ad6d6693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9df1465c5a6f8d378fc79d3a94a2166"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#aa9df1465c5a6f8d378fc79d3a94a2166">scalable_group_coms</a> () override</td></tr>
 <tr class="memdesc:aa9df1465c5a6f8d378fc79d3a94a2166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this proxy implementation has capability for scalable groups.  <a href="classcolvarproxy__namd.html#aa9df1465c5a6f8d378fc79d3a94a2166">More...</a><br /></td></tr>
 <tr class="separator:aa9df1465c5a6f8d378fc79d3a94a2166"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,8 +266,8 @@ template&lt;class T , int flags&gt; </td></tr>
 <tr class="memitem:ae2a63119e40cde660ae1170941a8c66a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GridForceGridLoop</b> (T const *g, cvm::atom_iter atom_begin, cvm::atom_iter atom_end, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *value, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *atom_field)</td></tr>
 <tr class="memdesc:ae2a63119e40cde660ae1170941a8c66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of inner loop; allows for atom list computation and use. <br /></td></tr>
 <tr class="separator:ae2a63119e40cde660ae1170941a8c66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad62fd11f61ebc70d49a8cbc26a822a99"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#ad62fd11f61ebc70d49a8cbc26a822a99">output_stream</a> (std::string const &amp;output_name, std::string const description=&quot;file/channel&quot;) override</td></tr>
-<tr class="separator:ad62fd11f61ebc70d49a8cbc26a822a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ffd9f0a0837958f0d1a50291b61b7b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#a94ffd9f0a0837958f0d1a50291b61b7b">output_stream</a> (std::string const &amp;output_name, std::string const description) override</td></tr>
+<tr class="separator:a94ffd9f0a0837958f0d1a50291b61b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae182d422e2def13211821ac9e904e50e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#ae182d422e2def13211821ac9e904e50e">flush_output_stream</a> (std::string const &amp;output_name) override</td></tr>
 <tr class="memdesc:ae182d422e2def13211821ac9e904e50e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flushes the given output file/channel.  <a href="classcolvarproxy__namd.html#ae182d422e2def13211821ac9e904e50e">More...</a><br /></td></tr>
 <tr class="separator:ae182d422e2def13211821ac9e904e50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,20 +288,20 @@ template&lt;class T , int flags&gt; </td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>colvarproxy</b> ()</td></tr>
 <tr class="memdesc:a05bb023c0858bbd38906563d8fc44108 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a05bb023c0858bbd38906563d8fc44108 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cc5ceaeea4915799a52f69a135d6199 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="a0cc5ceaeea4915799a52f69a135d6199" name="a0cc5ceaeea4915799a52f69a135d6199"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy</b> ()</td></tr>
-<tr class="memdesc:a0cc5ceaeea4915799a52f69a135d6199 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
-<tr class="separator:a0cc5ceaeea4915799a52f69a135d6199 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b87febf996c69d55603f486df7d9fe2 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a1b87febf996c69d55603f486df7d9fe2">io_available</a> ()</td></tr>
-<tr class="memdesc:a1b87febf996c69d55603f486df7d9fe2 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure that we're on the main thread (derived class will do actual check)  <a href="classcolvarproxy.html#a1b87febf996c69d55603f486df7d9fe2">More...</a><br /></td></tr>
-<tr class="separator:a1b87febf996c69d55603f486df7d9fe2 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb5edeef6589a3e02be71f57e46e32fb inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="aeb5edeef6589a3e02be71f57e46e32fb" name="aeb5edeef6589a3e02be71f57e46e32fb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy</b> () override</td></tr>
+<tr class="memdesc:aeb5edeef6589a3e02be71f57e46e32fb inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:aeb5edeef6589a3e02be71f57e46e32fb inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ba4244bd1e089420e77c11f2134819 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#ab2ba4244bd1e089420e77c11f2134819">io_available</a> () override</td></tr>
+<tr class="memdesc:ab2ba4244bd1e089420e77c11f2134819 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure that we're on the main thread (derived class will do actual check)  <a href="classcolvarproxy.html#ab2ba4244bd1e089420e77c11f2134819">More...</a><br /></td></tr>
+<tr class="separator:ab2ba4244bd1e089420e77c11f2134819 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225abecd872a22013e1a20e2e064c032 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a225abecd872a22013e1a20e2e064c032">request_deletion</a> ()</td></tr>
 <tr class="memdesc:a225abecd872a22013e1a20e2e064c032 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request deallocation of the module (currently only implemented by VMD)  <a href="classcolvarproxy.html#a225abecd872a22013e1a20e2e064c032">More...</a><br /></td></tr>
 <tr class="separator:a225abecd872a22013e1a20e2e064c032 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f4845fb8315a8b42bdd78abd1c7d7bf inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="a8f4845fb8315a8b42bdd78abd1c7d7bf" name="a8f4845fb8315a8b42bdd78abd1c7d7bf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>delete_requested</b> ()</td></tr>
-<tr class="memdesc:a8f4845fb8315a8b42bdd78abd1c7d7bf inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether deallocation was requested. <br /></td></tr>
-<tr class="separator:a8f4845fb8315a8b42bdd78abd1c7d7bf inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b0be8f97e6eed025ed642b5637e0f5 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="a96b0be8f97e6eed025ed642b5637e0f5" name="a96b0be8f97e6eed025ed642b5637e0f5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>delete_requested</b> () const</td></tr>
+<tr class="memdesc:a96b0be8f97e6eed025ed642b5637e0f5 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether deallocation was requested. <br /></td></tr>
+<tr class="separator:a96b0be8f97e6eed025ed642b5637e0f5 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83992793d81bd5ab483ebc6cec8bb584 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a83992793d81bd5ab483ebc6cec8bb584">reset</a> ()</td></tr>
 <tr class="memdesc:a83992793d81bd5ab483ebc6cec8bb584 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset proxy state, e.g. requested atoms.  <a href="classcolvarproxy.html#a83992793d81bd5ab483ebc6cec8bb584">More...</a><br /></td></tr>
 <tr class="separator:a83992793d81bd5ab483ebc6cec8bb584 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -437,9 +437,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset_pbc_lattice</b>
 <tr class="memitem:a59a4b21ad2db9f666a3c7497b0232b11 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a59a4b21ad2db9f666a3c7497b0232b11">total_forces_enabled</a> () const</td></tr>
 <tr class="memdesc:a59a4b21ad2db9f666a3c7497b0232b11 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces being used?  <a href="classcolvarproxy__system.html#a59a4b21ad2db9f666a3c7497b0232b11">More...</a><br /></td></tr>
 <tr class="separator:a59a4b21ad2db9f666a3c7497b0232b11 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf9d65b2f64edc11a113e5f637ffdc24 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="acf9d65b2f64edc11a113e5f637ffdc24" name="acf9d65b2f64edc11a113e5f637ffdc24"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_forces_same_step</b> () const</td></tr>
-<tr class="memdesc:acf9d65b2f64edc11a113e5f637ffdc24 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces from the current step available? <br /></td></tr>
+<tr class="memitem:acf9d65b2f64edc11a113e5f637ffdc24 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#acf9d65b2f64edc11a113e5f637ffdc24">total_forces_same_step</a> () const</td></tr>
+<tr class="memdesc:acf9d65b2f64edc11a113e5f637ffdc24 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces from the current step available?  <a href="classcolvarproxy__system.html#acf9d65b2f64edc11a113e5f637ffdc24">More...</a><br /></td></tr>
 <tr class="separator:acf9d65b2f64edc11a113e5f637ffdc24 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca6826f4073ade1dd4823716cf82dfd8 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#aca6826f4073ade1dd4823716cf82dfd8">get_molid</a> (int &amp;molid)</td></tr>
 <tr class="separator:aca6826f4073ade1dd4823716cf82dfd8 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -491,12 +490,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_atoms
 <tr class="memitem:a84999b9c229071947063f378b988f873 inherit pub_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a84999b9c229071947063f378b988f873">clear_atom</a> (int index)</td></tr>
 <tr class="memdesc:a84999b9c229071947063f378b988f873 inherit pub_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by the atom class destructor: rather than deleting the array slot (costly) set the corresponding atoms_refcount to zero.  <a href="classcolvarproxy__atoms.html#a84999b9c229071947063f378b988f873">More...</a><br /></td></tr>
 <tr class="separator:a84999b9c229071947063f378b988f873 inherit pub_methods_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94d5673604728900dfa0708799f20953 inherit pub_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a94d5673604728900dfa0708799f20953">load_atoms</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
-<tr class="memdesc:a94d5673604728900dfa0708799f20953 inherit pub_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select atom IDs from a file (usually PDB)  <a href="classcolvarproxy__atoms.html#a94d5673604728900dfa0708799f20953">More...</a><br /></td></tr>
-<tr class="separator:a94d5673604728900dfa0708799f20953 inherit pub_methods_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5dfd5ce53c303ecbaf69c4ec897f415 inherit pub_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#ae5dfd5ce53c303ecbaf69c4ec897f415">load_coords</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;pos, std::vector&lt; int &gt; const &amp;sorted_ids, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
-<tr class="memdesc:ae5dfd5ce53c303ecbaf69c4ec897f415 inherit pub_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a set of coordinates from a file (usually PDB); if "pos" is already allocated, the number of its elements must match the number of entries in "filename".  <a href="classcolvarproxy__atoms.html#ae5dfd5ce53c303ecbaf69c4ec897f415">More...</a><br /></td></tr>
-<tr class="separator:ae5dfd5ce53c303ecbaf69c4ec897f415 inherit pub_methods_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51994492c0a004c387810b84575aa3c9 inherit pub_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a51994492c0a004c387810b84575aa3c9">load_atoms</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double pdb_field_value)</td></tr>
+<tr class="memdesc:a51994492c0a004c387810b84575aa3c9 inherit pub_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a selection of atom IDs from a coordinate file (only PDB is supported)  <a href="classcolvarproxy__atoms.html#a51994492c0a004c387810b84575aa3c9">More...</a><br /></td></tr>
+<tr class="separator:a51994492c0a004c387810b84575aa3c9 inherit pub_methods_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764a95f413d239db85a9e1bd1d442786 inherit pub_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a764a95f413d239db85a9e1bd1d442786">load_coords</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;pos, std::vector&lt; int &gt; const &amp;sorted_ids, std::string const &amp;pdb_field, double pdb_field_value)</td></tr>
+<tr class="memdesc:a764a95f413d239db85a9e1bd1d442786 inherit pub_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a set of coordinates from a file (PDB or XYZ)  <a href="classcolvarproxy__atoms.html#a764a95f413d239db85a9e1bd1d442786">More...</a><br /></td></tr>
+<tr class="separator:a764a95f413d239db85a9e1bd1d442786 inherit pub_methods_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1277f250913b30defe77773d25e878c2 inherit pub_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="a1277f250913b30defe77773d25e878c2" name="a1277f250913b30defe77773d25e878c2"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="memdesc:a1277f250913b30defe77773d25e878c2 inherit pub_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear atomic data. <br /></td></tr>
@@ -970,12 +969,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>close_input_stream</b>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>close_input_streams</b> ()</td></tr>
 <tr class="memdesc:adf615453e05c17582863583b62170730 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes all input streams. <br /></td></tr>
 <tr class="separator:adf615453e05c17582863583b62170730 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30bf70729e9517c383b527c5893326f inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="ad30bf70729e9517c383b527c5893326f" name="ad30bf70729e9517c383b527c5893326f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>delete_input_stream</b> (std::string const &amp;input_name)</td></tr>
+<tr class="memdesc:ad30bf70729e9517c383b527c5893326f inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="classcolvarproxy__io.html#ad813197ae2df20010cde83c82257faa6" title="Closes the given input stream.">close_input_stream()</a>, but also removes the corresponding entry from memory. <br /></td></tr>
+<tr class="separator:ad30bf70729e9517c383b527c5893326f inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa15c1f3c47a518b595a75ca0e8971e4 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="aaa15c1f3c47a518b595a75ca0e8971e4" name="aaa15c1f3c47a518b595a75ca0e8971e4"></a>
 std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>list_input_stream_names</b> () const</td></tr>
 <tr class="memdesc:aaa15c1f3c47a518b595a75ca0e8971e4 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all input streams that were opened at some point. <br /></td></tr>
 <tr class="separator:aaa15c1f3c47a518b595a75ca0e8971e4 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27cfa5efba28a0c0c31807397ee6e6de inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a27cfa5efba28a0c0c31807397ee6e6de">output_stream</a> (std::string const &amp;output_name, std::string const description=&quot;file/channel&quot;)</td></tr>
-<tr class="separator:a27cfa5efba28a0c0c31807397ee6e6de inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834c08a7b1df1886adf3e05933530034 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a> (std::string const &amp;output_name, std::string const description)</td></tr>
+<tr class="separator:a834c08a7b1df1886adf3e05933530034 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f6b7ccd8b68569ddab5b061ddeebe86 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="a9f6b7ccd8b68569ddab5b061ddeebe86" name="a9f6b7ccd8b68569ddab5b061ddeebe86"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>output_stream_exists</b> (std::string const &amp;output_name)</td></tr>
 <tr class="memdesc:a9f6b7ccd8b68569ddab5b061ddeebe86 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the file/channel is open (without opening it if not) <br /></td></tr>
@@ -1278,10 +1281,6 @@ std::map&lt; std::string, std::ostream * &gt;&#160;</td><td class="memItemRight"
 std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><b>output_stream_error_</b></td></tr>
 <tr class="memdesc:a047405d4c8f5f4a698c16f7c2415cb42 inherit pro_attribs_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object whose reference is returned when write errors occur. <br /></td></tr>
 <tr class="separator:a047405d4c8f5f4a698c16f7c2415cb42 inherit pro_attribs_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa828d8f846788500cd1ac6af15d23c91 inherit pro_attribs_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="aa828d8f846788500cd1ac6af15d23c91" name="aa828d8f846788500cd1ac6af15d23c91"></a>
-char const  *&#160;</td><td class="memItemRight" valign="bottom"><b>input_buffer_</b></td></tr>
-<tr class="memdesc:aa828d8f846788500cd1ac6af15d23c91 inherit pro_attribs_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer from which the input state information may be read. <br /></td></tr>
-<tr class="separator:aa828d8f846788500cd1ac6af15d23c91 inherit pro_attribs_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -2139,8 +2138,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td>
 
 </div>
 </div>
-<a id="af1a306dbb5f3065028820b6e2ec8df82" name="af1a306dbb5f3065028820b6e2ec8df82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1a306dbb5f3065028820b6e2ec8df82">&#9670;&#160;</a></span>load_atoms()</h2>
+<a id="a2aebfc7799368fa6eb5691511330738b" name="a2aebfc7799368fa6eb5691511330738b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aebfc7799368fa6eb5691511330738b">&#9670;&#160;</a></span>load_atoms()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2170,7 +2169,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double const&#160;</td>
-          <td class="paramname"><em>pdb_field_value</em> = <code>0.0</code>&#160;</td>
+          <td class="paramname"><em>pdb_field_value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2185,23 +2184,23 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td>
 </table>
 </div><div class="memdoc">
 
-<p>Select atom IDs from a file (usually PDB) </p>
+<p>Read a selection of atom IDs from a coordinate file (only PDB is supported) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>name of the file</td></tr>
-    <tr><td class="paramname">atoms</td><td>array to which atoms read from "filename" will be appended</td></tr>
-    <tr><td class="paramname">pdb_field</td><td>(optional) if the file is a PDB and this string is non-empty, select atoms for which this field is non-zero </td></tr>
-    <tr><td class="paramname">pdb_field_value</td><td>(optional) if non-zero, select only atoms whose pdb_field equals this </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>name of the file </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">atoms</td><td>array into which atoms will be read from "filename" </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pdb_field</td><td>if the file is a PDB and this string is non-empty, select atoms for which this field is non-zero </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pdb_field_value</td><td>if non-zero, select only atoms whose pdb_field equals this </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classcolvarproxy__atoms.html#a94d5673604728900dfa0708799f20953">colvarproxy_atoms</a>.</p>
+<p>Reimplemented from <a class="el" href="classcolvarproxy__atoms.html#a51994492c0a004c387810b84575aa3c9">colvarproxy_atoms</a>.</p>
 
 </div>
 </div>
-<a id="a076ca9682011919c56eaec279c4b25d8" name="a076ca9682011919c56eaec279c4b25d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a076ca9682011919c56eaec279c4b25d8">&#9670;&#160;</a></span>load_coords()</h2>
+<a id="abd07815f215f77fdf889c719ad6d6693" name="abd07815f215f77fdf889c719ad6d6693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd07815f215f77fdf889c719ad6d6693">&#9670;&#160;</a></span>load_coords()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2237,7 +2236,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double const&#160;</td>
-          <td class="paramname"><em>pdb_field_value</em> = <code>0.0</code>&#160;</td>
+          <td class="paramname"><em>pdb_field_value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2252,19 +2251,19 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td>
 </table>
 </div><div class="memdoc">
 
-<p>Load a set of coordinates from a file (usually PDB); if "pos" is already allocated, the number of its elements must match the number of entries in "filename". </p>
+<p>Load a set of coordinates from a file (PDB or XYZ) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>name of the file</td></tr>
-    <tr><td class="paramname">pos</td><td>array of coordinates</td></tr>
-    <tr><td class="paramname">sorted_ids</td><td>array of sorted internal IDs, used to loop through the file only once</td></tr>
-    <tr><td class="paramname">pdb_field</td><td>(optional) if the file is a PDB and this string is non-empty, select atoms for which this field is non-zero</td></tr>
-    <tr><td class="paramname">pdb_field_value</td><td>(optional) if non-zero, select only atoms whose pdb_field equals this </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>name of the file </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pos</td><td>array of coordinates; if not empty, the number of its elements must match the number of entries in "filename" </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sorted_ids</td><td>array of sorted internal IDs, used to loop through the file only once </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pdb_field</td><td>if the file is a PDB and this string is non-empty, only atoms for which this field is non-zero will be processed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pdb_field_value</td><td>if non-zero, process only atoms whose pdb_field equals this </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classcolvarproxy__atoms.html#ae5dfd5ce53c303ecbaf69c4ec897f415">colvarproxy_atoms</a>.</p>
+<p>Reimplemented from <a class="el" href="classcolvarproxy__atoms.html#a764a95f413d239db85a9e1bd1d442786">colvarproxy_atoms</a>.</p>
 
 </div>
 </div>
@@ -2327,8 +2326,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td>
 
 </div>
 </div>
-<a id="ad62fd11f61ebc70d49a8cbc26a822a99" name="ad62fd11f61ebc70d49a8cbc26a822a99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad62fd11f61ebc70d49a8cbc26a822a99">&#9670;&#160;</a></span>output_stream()</h2>
+<a id="a94ffd9f0a0837958f0d1a50291b61b7b" name="a94ffd9f0a0837958f0d1a50291b61b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ffd9f0a0837958f0d1a50291b61b7b">&#9670;&#160;</a></span>output_stream()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2346,7 +2345,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string const&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;file/channel&quot;</code>&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2368,7 +2367,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classcolvarproxy__io.html#a27cfa5efba28a0c0c31807397ee6e6de">colvarproxy_io</a>.</p>
+<p>Reimplemented from <a class="el" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">colvarproxy_io</a>.</p>
 
 </div>
 </div>
@@ -2930,7 +2929,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Oct 17 2023 17:17:49 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -79,6 +79,8 @@ $(function() {
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classcolvarmodule_1_1rotation-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">colvarmodule::rotation Class Reference</div></div>
 </div><!--header-->
@@ -93,27 +95,20 @@ Collaboration diagram for colvarmodule::rotation:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarmodule_1_1rotation__coll__graph.png" border="0" usemap="#acolvarmodule_1_1rotation_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarmodule_1_1rotation_coll__map" id="acolvarmodule_1_1rotation_coll__map">
-<area shape="rect" title="A rotation between two sets of coordinates (for the moment a wrapper for colvarmodule::quaternion)" alt="" coords="279,92,428,117"/>
-<area shape="rect" href="classcolvarmodule_1_1quaternion.html" title="1&#45;dimensional vector of real numbers with four components and a quaternion algebra" alt="" coords="5,5,172,31"/>
-<area shape="rect" href="classcolvarmodule_1_1rmatrix.html" title="2&#45;dimensional array of real numbers with three components along each dimension (works with colvarmodu..." alt="" coords="15,55,162,80"/>
-<area shape="rect" href="classcolvarmodule_1_1matrix2d.html" title=" " alt="" coords="11,122,167,162"/>
-<area shape="rect" href="classcolvarmodule_1_1vector1d.html" title=" " alt="" coords="11,186,166,226"/>
+<area shape="rect" title="A rotation between two sets of coordinates (for the moment a wrapper for colvarmodule::quaternion)" alt="" coords="95,108,244,133"/>
+<area shape="rect" href="classcolvarmodule_1_1rmatrix.html" title="2&#45;dimensional array of real numbers with three components along each dimension (works with colvarmodu..." alt="" coords="5,5,152,31"/>
+<area shape="rect" href="classcolvarmodule_1_1quaternion.html" title="1&#45;dimensional vector of real numbers with four components and a quaternion algebra" alt="" coords="177,5,343,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a509119816185d3b629086a2f31290ede"><td class="memItemLeft" align="right" valign="top"><a id="a509119816185d3b629086a2f31290ede" name="a509119816185d3b629086a2f31290ede"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>request_group1_gradients</b> (size_t n)</td></tr>
-<tr class="memdesc:a509119816185d3b629086a2f31290ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate space for the derivatives of the rotation. <br /></td></tr>
-<tr class="separator:a509119816185d3b629086a2f31290ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a1d9fe05d4ad520439139105779f4b8"><td class="memItemLeft" align="right" valign="top"><a id="a6a1d9fe05d4ad520439139105779f4b8" name="a6a1d9fe05d4ad520439139105779f4b8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>request_group2_gradients</b> (size_t n)</td></tr>
-<tr class="memdesc:a6a1d9fe05d4ad520439139105779f4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate space for the derivatives of the rotation. <br /></td></tr>
-<tr class="separator:a6a1d9fe05d4ad520439139105779f4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e882c74013f845c9afda015958881af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1rotation.html#a6e882c74013f845c9afda015958881af">calc_optimal_rotation</a> (std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> &gt; const &amp;pos1, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> &gt; const &amp;pos2)</td></tr>
 <tr class="memdesc:a6e882c74013f845c9afda015958881af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the optimal rotation and store the corresponding eigenvalue and eigenvector in the arguments l0 and q0; if the gradients have been previously requested, calculate them as well.  <a href="classcolvarmodule_1_1rotation.html#a6e882c74013f845c9afda015958881af">More...</a><br /></td></tr>
 <tr class="separator:a6e882c74013f845c9afda015958881af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace8348ef41076ee1ec6d68f470be20ce"><td class="memItemLeft" align="right" valign="top"><a id="ace8348ef41076ee1ec6d68f470be20ce" name="ace8348ef41076ee1ec6d68f470be20ce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>calc_optimal_rotation</b> (std::vector&lt; <a class="el" href="classcolvarmodule_1_1atom.html">cvm::atom</a> &gt; const &amp;pos1, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> &gt; const &amp;pos2)</td></tr>
+<tr class="separator:ace8348ef41076ee1ec6d68f470be20ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e7bda54b7db3cc8b7755e72453beba9"><td class="memItemLeft" align="right" valign="top"><a id="a3e7bda54b7db3cc8b7755e72453beba9" name="a3e7bda54b7db3cc8b7755e72453beba9"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
 <tr class="memdesc:a3e7bda54b7db3cc8b7755e72453beba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize member data. <br /></td></tr>
@@ -165,59 +160,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:afb8523782225af67136bfeeee5ab9724"><td class="memItemLeft" align="right" valign="top"><a id="afb8523782225af67136bfeeee5ab9724" name="afb8523782225af67136bfeeee5ab9724"></a>
-<a class="el" href="classcolvarmodule_1_1quaternion.html">cvm::quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>q</b></td></tr>
-<tr class="memdesc:afb8523782225af67136bfeeee5ab9724"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rotation itself (implemented as a quaternion) <br /></td></tr>
-<tr class="separator:afb8523782225af67136bfeeee5ab9724"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac15ca2315495a835dd1e00215654e909"><td class="memItemLeft" align="right" valign="top"><a id="ac15ca2315495a835dd1e00215654e909" name="ac15ca2315495a835dd1e00215654e909"></a>
-<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lambda</b></td></tr>
-<tr class="memdesc:ac15ca2315495a835dd1e00215654e909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eigenvalue corresponding to the optimal rotation. <br /></td></tr>
-<tr class="separator:ac15ca2315495a835dd1e00215654e909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a250ae92a59d20a6dd2d9c3de8820d"><td class="memItemLeft" align="right" valign="top"><a id="aa4a250ae92a59d20a6dd2d9c3de8820d" name="aa4a250ae92a59d20a6dd2d9c3de8820d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>b_debug_gradients</b></td></tr>
 <tr class="memdesc:aa4a250ae92a59d20a6dd2d9c3de8820d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform gradient tests. <br /></td></tr>
 <tr class="separator:aa4a250ae92a59d20a6dd2d9c3de8820d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d210f6469c9ae92172c056c6d41ec38"><td class="memItemLeft" align="right" valign="top"><a id="a0d210f6469c9ae92172c056c6d41ec38" name="a0d210f6469c9ae92172c056c6d41ec38"></a>
-<a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>C</b></td></tr>
-<tr class="memdesc:a0d210f6469c9ae92172c056c6d41ec38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correlation matrix C (3, 3) <br /></td></tr>
-<tr class="separator:a0d210f6469c9ae92172c056c6d41ec38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a129fd1f65701fd44f0c65a7404801f2b"><td class="memItemLeft" align="right" valign="top"><a id="a129fd1f65701fd44f0c65a7404801f2b" name="a129fd1f65701fd44f0c65a7404801f2b"></a>
-<a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>S</b></td></tr>
-<tr class="memdesc:a129fd1f65701fd44f0c65a7404801f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overlap matrix S (4, 4) <br /></td></tr>
-<tr class="separator:a129fd1f65701fd44f0c65a7404801f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcc8d11a93e87da039535e5da07e7cb4"><td class="memItemLeft" align="right" valign="top"><a id="afcc8d11a93e87da039535e5da07e7cb4" name="afcc8d11a93e87da039535e5da07e7cb4"></a>
-<a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>S_eigval</b></td></tr>
-<tr class="memdesc:afcc8d11a93e87da039535e5da07e7cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eigenvalues of S. <br /></td></tr>
-<tr class="separator:afcc8d11a93e87da039535e5da07e7cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05bd0e11c86f298070442c2a42f76a34"><td class="memItemLeft" align="right" valign="top"><a id="a05bd0e11c86f298070442c2a42f76a34" name="a05bd0e11c86f298070442c2a42f76a34"></a>
-<a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>S_eigvec</b></td></tr>
-<tr class="memdesc:a05bd0e11c86f298070442c2a42f76a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eigenvectors of S. <br /></td></tr>
-<tr class="separator:a05bd0e11c86f298070442c2a42f76a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ec4eabbf7f367fdbd61884e81d96b95"><td class="memItemLeft" align="right" valign="top"><a id="a0ec4eabbf7f367fdbd61884e81d96b95" name="a0ec4eabbf7f367fdbd61884e81d96b95"></a>
-<a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>S_backup</b></td></tr>
-<tr class="memdesc:a0ec4eabbf7f367fdbd61884e81d96b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for debugging gradients. <br /></td></tr>
-<tr class="separator:a0ec4eabbf7f367fdbd61884e81d96b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9eb55113a46e5eaca05a021c13e8621e"><td class="memItemLeft" align="right" valign="top"><a id="a9eb55113a46e5eaca05a021c13e8621e" name="a9eb55113a46e5eaca05a021c13e8621e"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dS_1</b></td></tr>
-<tr class="memdesc:a9eb55113a46e5eaca05a021c13e8621e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivatives of S. <br /></td></tr>
-<tr class="separator:a9eb55113a46e5eaca05a021c13e8621e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6744cf6df7fbf5c21f57bde11e4cd4bd"><td class="memItemLeft" align="right" valign="top"><a id="a6744cf6df7fbf5c21f57bde11e4cd4bd" name="a6744cf6df7fbf5c21f57bde11e4cd4bd"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dS_2</b></td></tr>
-<tr class="separator:a6744cf6df7fbf5c21f57bde11e4cd4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59386f4b0a12523154730effd0e63e7e"><td class="memItemLeft" align="right" valign="top"><a id="a59386f4b0a12523154730effd0e63e7e" name="a59386f4b0a12523154730effd0e63e7e"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dL0_1</b></td></tr>
-<tr class="memdesc:a59386f4b0a12523154730effd0e63e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivatives of leading eigenvalue. <br /></td></tr>
-<tr class="separator:a59386f4b0a12523154730effd0e63e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2358bf6caf09d2a0330fc62b7aaa2d93"><td class="memItemLeft" align="right" valign="top"><a id="a2358bf6caf09d2a0330fc62b7aaa2d93" name="a2358bf6caf09d2a0330fc62b7aaa2d93"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dL0_2</b></td></tr>
-<tr class="separator:a2358bf6caf09d2a0330fc62b7aaa2d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05c516ac9d4f3fbf8232495986094ae5"><td class="memItemLeft" align="right" valign="top"><a id="a05c516ac9d4f3fbf8232495986094ae5" name="a05c516ac9d4f3fbf8232495986094ae5"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dQ0_1</b></td></tr>
-<tr class="memdesc:a05c516ac9d4f3fbf8232495986094ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivatives of leading eigenvector. <br /></td></tr>
-<tr class="separator:a05c516ac9d4f3fbf8232495986094ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527eb43bf9d2a8a3008aa460cc9281fd"><td class="memItemLeft" align="right" valign="top"><a id="a527eb43bf9d2a8a3008aa460cc9281fd" name="a527eb43bf9d2a8a3008aa460cc9281fd"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dQ0_2</b></td></tr>
-<tr class="separator:a527eb43bf9d2a8a3008aa460cc9281fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb8523782225af67136bfeeee5ab9724"><td class="memItemLeft" align="right" valign="top"><a id="afb8523782225af67136bfeeee5ab9724" name="afb8523782225af67136bfeeee5ab9724"></a>
+<a class="el" href="classcolvarmodule_1_1quaternion.html">cvm::quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>q</b></td></tr>
+<tr class="memdesc:afb8523782225af67136bfeeee5ab9724"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rotation itself (implemented as a quaternion) <br /></td></tr>
+<tr class="separator:afb8523782225af67136bfeeee5ab9724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -236,6 +186,13 @@ Protected Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>build_correlation_matrix</b> (std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; const &amp;pos1, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; const &amp;pos2)</td></tr>
 <tr class="memdesc:aa513ec1a96ef0cccd8dd46c315d9ad10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the correlation matrix C (used by <a class="el" href="classcolvarmodule_1_1rotation.html#a6e882c74013f845c9afda015958881af" title="Calculate the optimal rotation and store the corresponding eigenvalue and eigenvector in the argument...">calc_optimal_rotation()</a>) <br /></td></tr>
 <tr class="separator:aa513ec1a96ef0cccd8dd46c315d9ad10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a349f2ec9c84b6339efe356dee5769381"><td class="memItemLeft" align="right" valign="top"><a id="a349f2ec9c84b6339efe356dee5769381" name="a349f2ec9c84b6339efe356dee5769381"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>build_correlation_matrix</b> (std::vector&lt; <a class="el" href="classcolvarmodule_1_1atom.html">cvm::atom</a> &gt; const &amp;pos1, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; const &amp;pos2)</td></tr>
+<tr class="separator:a349f2ec9c84b6339efe356dee5769381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b52434880df5d1d4a6bcde869400bb"><td class="memItemLeft" align="right" valign="top"><a id="ac9b52434880df5d1d4a6bcde869400bb" name="ac9b52434880df5d1d4a6bcde869400bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>calc_optimal_rotation_impl</b> ()</td></tr>
+<tr class="memdesc:ac9b52434880df5d1d4a6bcde869400bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual implementation of <code>calc_optimal_rotation</code> (and called by it) <br /></td></tr>
+<tr class="separator:ac9b52434880df5d1d4a6bcde869400bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe137a79d267adb3e5444835d0d40f10"><td class="memItemLeft" align="right" valign="top"><a id="abe137a79d267adb3e5444835d0d40f10" name="abe137a79d267adb3e5444835d0d40f10"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>compute_overlap_matrix</b> ()</td></tr>
 <tr class="memdesc:abe137a79d267adb3e5444835d0d40f10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the overlap matrix S (used by <a class="el" href="classcolvarmodule_1_1rotation.html#a6e882c74013f845c9afda015958881af" title="Calculate the optimal rotation and store the corresponding eigenvalue and eigenvector in the argument...">calc_optimal_rotation()</a>) <br /></td></tr>
@@ -251,6 +208,40 @@ Protected Attributes</h2></td></tr>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>jacobi</b></td></tr>
 <tr class="memdesc:ab721e245eca92332216e9f4b44ddc212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to instance of Jacobi solver. <br /></td></tr>
 <tr class="separator:ab721e245eca92332216e9f4b44ddc212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0d210f6469c9ae92172c056c6d41ec38"><td class="memItemLeft" align="right" valign="top"><a id="a0d210f6469c9ae92172c056c6d41ec38" name="a0d210f6469c9ae92172c056c6d41ec38"></a>
+<a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>C</b></td></tr>
+<tr class="memdesc:a0d210f6469c9ae92172c056c6d41ec38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correlation matrix C (3, 3) <br /></td></tr>
+<tr class="separator:a0d210f6469c9ae92172c056c6d41ec38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed2e5851aa5338de3c5485c7e66afe4"><td class="memItemLeft" align="right" valign="top"><a id="a4ed2e5851aa5338de3c5485c7e66afe4" name="a4ed2e5851aa5338de3c5485c7e66afe4"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>S</b> [4][4]</td></tr>
+<tr class="memdesc:a4ed2e5851aa5338de3c5485c7e66afe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overlap matrix S (4, 4) <br /></td></tr>
+<tr class="separator:a4ed2e5851aa5338de3c5485c7e66afe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2921db241e3807a8735ae9e7383c7c66"><td class="memItemLeft" align="right" valign="top"><a id="a2921db241e3807a8735ae9e7383c7c66" name="a2921db241e3807a8735ae9e7383c7c66"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>S_eigval</b> [4]</td></tr>
+<tr class="memdesc:a2921db241e3807a8735ae9e7383c7c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eigenvalues of S. <br /></td></tr>
+<tr class="separator:a2921db241e3807a8735ae9e7383c7c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c0ae5b6f0b836bb1095cf55a92f1ff"><td class="memItemLeft" align="right" valign="top"><a id="a69c0ae5b6f0b836bb1095cf55a92f1ff" name="a69c0ae5b6f0b836bb1095cf55a92f1ff"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>S_eigvec</b> [4][4]</td></tr>
+<tr class="memdesc:a69c0ae5b6f0b836bb1095cf55a92f1ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eigenvectors of S. <br /></td></tr>
+<tr class="separator:a69c0ae5b6f0b836bb1095cf55a92f1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4a7f2a364c9c6bdaa79eb4c9c69a94"><td class="memItemLeft" align="right" valign="top"><a id="a2a4a7f2a364c9c6bdaa79eb4c9c69a94" name="a2a4a7f2a364c9c6bdaa79eb4c9c69a94"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>S_backup</b> [4][4]</td></tr>
+<tr class="memdesc:a2a4a7f2a364c9c6bdaa79eb4c9c69a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for debugging gradients. <br /></td></tr>
+<tr class="separator:a2a4a7f2a364c9c6bdaa79eb4c9c69a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a37cea46ffa932e4e66128afa30eb9bb7"><td class="memTemplParams" colspan="2"><a id="a37cea46ffa932e4e66128afa30eb9bb7" name="a37cea46ffa932e4e66128afa30eb9bb7"></a>
+template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a37cea46ffa932e4e66128afa30eb9bb7"><td class="memTemplItemLeft" align="right" valign="top">struct&#160;</td><td class="memTemplItemRight" valign="bottom"><b>rotation_derivative</b></td></tr>
+<tr class="separator:a37cea46ffa932e4e66128afa30eb9bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5398ba6170d983f23ba973ee074d46ca"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a5398ba6170d983f23ba973ee074d46ca"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1rotation.html#a5398ba6170d983f23ba973ee074d46ca">debug_gradients</a> (<a class="el" href="classcolvarmodule_1_1rotation.html">cvm::rotation</a> &amp;rot, const std::vector&lt; T1 &gt; &amp;pos1, const std::vector&lt; T2 &gt; &amp;pos2)</td></tr>
+<tr class="memdesc:a5398ba6170d983f23ba973ee074d46ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for debugging gradients (allow using either std::vector&lt;cvm::atom_pos&gt; or std::vector&lt;cvm::atom&gt; for pos1 and pos2)  <a href="classcolvarmodule_1_1rotation.html#a5398ba6170d983f23ba973ee074d46ca">More...</a><br /></td></tr>
+<tr class="separator:a5398ba6170d983f23ba973ee074d46ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A rotation between two sets of coordinates (for the moment a wrapper for <a class="el" href="classcolvarmodule_1_1quaternion.html" title="1-dimensional vector of real numbers with four components and a quaternion algebra">colvarmodule::quaternion</a>) </p>
@@ -286,6 +277,60 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><b>jacobi</b></td></tr
 
 </div>
 </div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a5398ba6170d983f23ba973ee074d46ca" name="a5398ba6170d983f23ba973ee074d46ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5398ba6170d983f23ba973ee074d46ca">&#9670;&#160;</a></span>debug_gradients</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void debug_gradients </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rotation.html">cvm::rotation</a> &amp;&#160;</td>
+          <td class="paramname"><em>rot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; T1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pos1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; T2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pos2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function for debugging gradients (allow using either std::vector&lt;cvm::atom_pos&gt; or std::vector&lt;cvm::atom&gt; for pos1 and pos2) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos1</td><td>Atom positions of group 1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos2</td><td>Atom positions of group 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvartypes_8h_source.html">colvartypes.h</a></li>
 <li>colvartypes.cpp</li>
@@ -293,7 +338,7 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><b>jacobi</b></td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Oct 17 2023 17:17:49 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

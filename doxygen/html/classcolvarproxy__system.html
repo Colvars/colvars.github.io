@@ -88,10 +88,11 @@ Inheritance diagram for colvarproxy_system:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarproxy__system__inherit__graph.png" border="0" usemap="#acolvarproxy__system_inherit__map" alt="Inheritance graph"/></div>
 <map name="acolvarproxy__system_inherit__map" id="acolvarproxy__system_inherit__map">
-<area shape="rect" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="75,5,213,31"/>
-<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="99,79,189,104"/>
-<area shape="rect" href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="5,152,133,177"/>
-<area shape="rect" href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="158,152,279,177"/>
+<area shape="rect" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="168,5,305,31"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="192,79,281,104"/>
+<area shape="rect" href="classcolvarproxy__lammps.html" title="Communication between colvars and LAMMPS (implementation of colvarproxy)" alt="" coords="5,152,148,177"/>
+<area shape="rect" href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="173,152,301,177"/>
+<area shape="rect" href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="325,152,447,177"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -168,9 +169,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset_pbc_lattice</b>
 <tr class="memitem:a59a4b21ad2db9f666a3c7497b0232b11"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a59a4b21ad2db9f666a3c7497b0232b11">total_forces_enabled</a> () const</td></tr>
 <tr class="memdesc:a59a4b21ad2db9f666a3c7497b0232b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces being used?  <a href="classcolvarproxy__system.html#a59a4b21ad2db9f666a3c7497b0232b11">More...</a><br /></td></tr>
 <tr class="separator:a59a4b21ad2db9f666a3c7497b0232b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf9d65b2f64edc11a113e5f637ffdc24"><td class="memItemLeft" align="right" valign="top"><a id="acf9d65b2f64edc11a113e5f637ffdc24" name="acf9d65b2f64edc11a113e5f637ffdc24"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_forces_same_step</b> () const</td></tr>
-<tr class="memdesc:acf9d65b2f64edc11a113e5f637ffdc24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces from the current step available? <br /></td></tr>
+<tr class="memitem:acf9d65b2f64edc11a113e5f637ffdc24"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#acf9d65b2f64edc11a113e5f637ffdc24">total_forces_same_step</a> () const</td></tr>
+<tr class="memdesc:acf9d65b2f64edc11a113e5f637ffdc24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces from the current step available?  <a href="classcolvarproxy__system.html#acf9d65b2f64edc11a113e5f637ffdc24">More...</a><br /></td></tr>
 <tr class="separator:acf9d65b2f64edc11a113e5f637ffdc24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca6826f4073ade1dd4823716cf82dfd8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#aca6826f4073ade1dd4823716cf82dfd8">get_molid</a> (int &amp;molid)</td></tr>
 <tr class="separator:aca6826f4073ade1dd4823716cf82dfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -336,7 +336,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 
 <p>Pass restraint energy value for current timestep to MD engine. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#a5f75bbc3011f47c571a29e9e9c419977">colvarproxy_vmd</a>, and <a class="el" href="classcolvarproxy__namd.html#a3b7c85e6c8ff73445e24cab883c562f9">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#a5f75bbc3011f47c571a29e9e9c419977">colvarproxy_vmd</a>, <a class="el" href="classcolvarproxy__lammps.html#ab064d393c45bc49f565c5c8f9126658a">colvarproxy_lammps</a>, and <a class="el" href="classcolvarproxy__namd.html#a3b7c85e6c8ff73445e24cab883c562f9">colvarproxy_namd</a>.</p>
 
 </div>
 </div>
@@ -499,7 +499,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 
 <p>Get the PBC-aware distance vector between two positions. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#ae1a90b25c34e96254cda66b2752de805">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#ae1a90b25c34e96254cda66b2752de805">colvarproxy_namd</a>, and <a class="el" href="classcolvarproxy__lammps.html#a613952285da6ae5048ac1165131b8e3e">colvarproxy_lammps</a>.</p>
 
 </div>
 </div>
@@ -529,7 +529,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 
 <p>Pseudo-random number with Gaussian distribution. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#ab25de40db265c3a5ccc072d234dc3ead">colvarproxy_vmd</a>, and <a class="el" href="classcolvarproxy__namd.html#aa8de1461ae2842ecd5db6ae91efa5c3a">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#ab25de40db265c3a5ccc072d234dc3ead">colvarproxy_vmd</a>, <a class="el" href="classcolvarproxy__namd.html#aa8de1461ae2842ecd5db6ae91efa5c3a">colvarproxy_namd</a>, and <a class="el" href="classcolvarproxy__lammps.html#a14ec35387fc15de8ea337c7ad8b46cc3">colvarproxy_lammps</a>.</p>
 
 </div>
 </div>
@@ -559,7 +559,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 
 <p>Tell the proxy whether total forces are needed (they may not always be available) </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#a4248ded5c9f32fc5e09136dd3f5b71e8">colvarproxy_vmd</a>, and <a class="el" href="classcolvarproxy__namd.html#ade828d14f3f24eb0a055fafc859c4bc8">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#a4248ded5c9f32fc5e09136dd3f5b71e8">colvarproxy_vmd</a>, <a class="el" href="classcolvarproxy__lammps.html#a0df74daae5fcd3a87a368e0131f9d945">colvarproxy_lammps</a>, and <a class="el" href="classcolvarproxy__namd.html#ade828d14f3f24eb0a055fafc859c4bc8">colvarproxy_namd</a>.</p>
 
 </div>
 </div>
@@ -629,7 +629,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 
 <p>Request to set the units used internally by Colvars. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#ab251e820de6367803b4a21d8b33800af">colvarproxy_vmd</a>, and <a class="el" href="classcolvarproxy__namd.html#a6ca49a8ad194defc5361fe9ac29fde6a">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#ab251e820de6367803b4a21d8b33800af">colvarproxy_vmd</a>, <a class="el" href="classcolvarproxy__lammps.html#a921d390d12dcc1f1889e49af3d331c27">colvarproxy_lammps</a>, and <a class="el" href="classcolvarproxy__namd.html#a6ca49a8ad194defc5361fe9ac29fde6a">colvarproxy_namd</a>.</p>
 
 </div>
 </div>
@@ -658,7 +658,36 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 
 <p>Are total forces being used? </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a1d806f5d3ca006a467ab9c87cba11107">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__lammps.html#a8b5c601e2f40c532c17c4129e17f4a35">colvarproxy_lammps</a>, and <a class="el" href="classcolvarproxy__namd.html#a1d806f5d3ca006a467ab9c87cba11107">colvarproxy_namd</a>.</p>
+
+</div>
+</div>
+<a id="acf9d65b2f64edc11a113e5f637ffdc24" name="acf9d65b2f64edc11a113e5f637ffdc24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf9d65b2f64edc11a113e5f637ffdc24">&#9670;&#160;</a></span>total_forces_same_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool colvarproxy_system::total_forces_same_step </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Are total forces from the current step available? </p>
+
+<p>Reimplemented in <a class="el" href="classcolvarproxy__lammps.html#aec1fb44c964a3bf5a15e782423934842">colvarproxy_lammps</a>.</p>
 
 </div>
 </div>
@@ -698,7 +727,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Oct 17 2023 17:17:49 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

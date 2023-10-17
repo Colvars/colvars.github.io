@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Collective Variables Module - Developer Documentation: ArithmeticPathCV::ArithmeticPathBase&lt; element_type, scalar_type, path_type &gt; Class Template Reference</title>
+<title>Collective Variables Module - Developer Documentation: ArithmeticPathCV::ArithmeticPathBase&lt; scalar_type &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,91 +76,66 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classArithmeticPathCV_1_1ArithmeticPathBase-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">ArithmeticPathCV::ArithmeticPathBase&lt; element_type, scalar_type, path_type &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">ArithmeticPathCV::ArithmeticPathBase&lt; scalar_type &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-Collaboration diagram for ArithmeticPathCV::ArithmeticPathBase&lt; element_type, scalar_type, path_type &gt;:</div>
+Collaboration diagram for ArithmeticPathCV::ArithmeticPathBase&lt; scalar_type &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classArithmeticPathCV_1_1ArithmeticPathBase__coll__graph.png" border="0" usemap="#aArithmeticPathCV_1_1ArithmeticPathBase_3_01element__type_00_01scalar__type_00_01path__type_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="aArithmeticPathCV_1_1ArithmeticPathBase_3_01element__type_00_01scalar__type_00_01path__type_01_4_coll__map" id="aArithmeticPathCV_1_1ArithmeticPathBase_3_01element__type_00_01scalar__type_00_01path__type_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="163,137,355,192"/>
-<area shape="rect" title=" " alt="" coords="5,13,153,38"/>
-<area shape="rect" title=" " alt="" coords="178,5,341,45"/>
-<area shape="rect" title=" " alt="" coords="365,13,524,38"/>
+<div class="center"><img src="classArithmeticPathCV_1_1ArithmeticPathBase__coll__graph.png" border="0" usemap="#aArithmeticPathCV_1_1ArithmeticPathBase_3_01scalar__type_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aArithmeticPathCV_1_1ArithmeticPathBase_3_01scalar__type_01_4_coll__map" id="aArithmeticPathCV_1_1ArithmeticPathBase_3_01scalar__type_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,108,197,148"/>
+<area shape="rect" title=" " alt="" coords="27,5,175,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a802a998c72ba1c4991ae3ee1dd971e12"><td class="memItemLeft" align="right" valign="top"><a id="a802a998c72ba1c4991ae3ee1dd971e12" name="a802a998c72ba1c4991ae3ee1dd971e12"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (size_t p_num_elements, size_t p_total_frames, double p_lambda, const vector&lt; element_type &gt; &amp;p_element, const vector&lt; double &gt; &amp;p_weights)</td></tr>
-<tr class="separator:a802a998c72ba1c4991ae3ee1dd971e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeaccbcf91a1d69fdfb3ce94196543d6"><td class="memItemLeft" align="right" valign="top"><a id="adeaccbcf91a1d69fdfb3ce94196543d6" name="adeaccbcf91a1d69fdfb3ce94196543d6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateDistanceToReferenceFrames</b> ()=0</td></tr>
-<tr class="separator:adeaccbcf91a1d69fdfb3ce94196543d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2712cec871e2f38650b019e152018454"><td class="memItemLeft" align="right" valign="top"><a id="a2712cec871e2f38650b019e152018454" name="a2712cec871e2f38650b019e152018454"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>computeValue</b> ()</td></tr>
-<tr class="separator:a2712cec871e2f38650b019e152018454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46e9a1f32156faf2927adc714ce40808"><td class="memItemLeft" align="right" valign="top"><a id="a46e9a1f32156faf2927adc714ce40808" name="a46e9a1f32156faf2927adc714ce40808"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>computeDerivatives</b> ()</td></tr>
-<tr class="separator:a46e9a1f32156faf2927adc714ce40808"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a285a867e8851f59d99a9c5fd489599b9"><td class="memItemLeft" align="right" valign="top"><a id="a285a867e8851f59d99a9c5fd489599b9" name="a285a867e8851f59d99a9c5fd489599b9"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>compute</b> ()</td></tr>
-<tr class="separator:a285a867e8851f59d99a9c5fd489599b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afad88ee2aa5127147fffcb3bc31f7bf4"><td class="memItemLeft" align="right" valign="top"><a id="afad88ee2aa5127147fffcb3bc31f7bf4" name="afad88ee2aa5127147fffcb3bc31f7bf4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>reComputeLambda</b> (const vector&lt; scalar_type &gt; &amp;rmsd_between_refs)</td></tr>
-<tr class="separator:afad88ee2aa5127147fffcb3bc31f7bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c10540969b3455d40e92fbceebbe416"><td class="memItemLeft" align="right" valign="top"><a id="a8c10540969b3455d40e92fbceebbe416" name="a8c10540969b3455d40e92fbceebbe416"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (size_t p_num_elements, size_t p_total_frames, scalar_type p_lambda, const vector&lt; scalar_type &gt; &amp;p_weights)</td></tr>
+<tr class="separator:a8c10540969b3455d40e92fbceebbe416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafd25a6ff259f3b4aa26e561b078fa11"><td class="memItemLeft" align="right" valign="top"><a id="aafd25a6ff259f3b4aa26e561b078fa11" name="aafd25a6ff259f3b4aa26e561b078fa11"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reComputeLambda</b> (const vector&lt; scalar_type &gt; &amp;rmsd_between_refs)</td></tr>
+<tr class="separator:aafd25a6ff259f3b4aa26e561b078fa11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab425edb63dfa33b91e39fef60b6a29d3"><td class="memTemplParams" colspan="2"><a id="ab425edb63dfa33b91e39fef60b6a29d3" name="ab425edb63dfa33b91e39fef60b6a29d3"></a>
+template&lt;typename element_type &gt; </td></tr>
+<tr class="memitem:ab425edb63dfa33b91e39fef60b6a29d3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>computeValue</b> (const vector&lt; vector&lt; element_type &gt; &gt; &amp;frame_element_distances, scalar_type *s=nullptr, scalar_type *z=nullptr)</td></tr>
+<tr class="separator:ab425edb63dfa33b91e39fef60b6a29d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce03f8e5284b1e0cbb9ab7481efbbb7"><td class="memTemplParams" colspan="2"><a id="a3ce03f8e5284b1e0cbb9ab7481efbbb7" name="a3ce03f8e5284b1e0cbb9ab7481efbbb7"></a>
+template&lt;typename element_type &gt; </td></tr>
+<tr class="memitem:a3ce03f8e5284b1e0cbb9ab7481efbbb7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>computeDerivatives</b> (const vector&lt; vector&lt; element_type &gt; &gt; &amp;frame_element_distances, vector&lt; vector&lt; element_type &gt; &gt; *dsdx=nullptr, vector&lt; vector&lt; element_type &gt; &gt; *dzdx=nullptr)</td></tr>
+<tr class="separator:a3ce03f8e5284b1e0cbb9ab7481efbbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a1d9a0c7b6f5cf91edf7055b3885e486c"><td class="memItemLeft" align="right" valign="top"><a id="a1d9a0c7b6f5cf91edf7055b3885e486c" name="a1d9a0c7b6f5cf91edf7055b3885e486c"></a>
+<tr class="memitem:ad3d37bc081f8313962cf62bd3d5248dd"><td class="memItemLeft" align="right" valign="top"><a id="ad3d37bc081f8313962cf62bd3d5248dd" name="ad3d37bc081f8313962cf62bd3d5248dd"></a>
 scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>lambda</b></td></tr>
-<tr class="separator:a1d9a0c7b6f5cf91edf7055b3885e486c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea5c722c2c021b90b04db35bb8d31c6f"><td class="memItemLeft" align="right" valign="top"><a id="aea5c722c2c021b90b04db35bb8d31c6f" name="aea5c722c2c021b90b04db35bb8d31c6f"></a>
-vector&lt; scalar_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>weights</b></td></tr>
-<tr class="separator:aea5c722c2c021b90b04db35bb8d31c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c78c27eff7157d6026360bcf920b55b"><td class="memItemLeft" align="right" valign="top"><a id="a4c78c27eff7157d6026360bcf920b55b" name="a4c78c27eff7157d6026360bcf920b55b"></a>
+<tr class="separator:ad3d37bc081f8313962cf62bd3d5248dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8712bb0d7bf82b09b0cf88b60559c99"><td class="memItemLeft" align="right" valign="top"><a id="aa8712bb0d7bf82b09b0cf88b60559c99" name="aa8712bb0d7bf82b09b0cf88b60559c99"></a>
+vector&lt; scalar_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>squared_weights</b></td></tr>
+<tr class="separator:aa8712bb0d7bf82b09b0cf88b60559c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac41998d568e47dff88d9e3c27d0ab371"><td class="memItemLeft" align="right" valign="top"><a id="ac41998d568e47dff88d9e3c27d0ab371" name="ac41998d568e47dff88d9e3c27d0ab371"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_elements</b></td></tr>
-<tr class="separator:a4c78c27eff7157d6026360bcf920b55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42b9fb4254afd3da92a493432e06beb5"><td class="memItemLeft" align="right" valign="top"><a id="a42b9fb4254afd3da92a493432e06beb5" name="a42b9fb4254afd3da92a493432e06beb5"></a>
+<tr class="separator:ac41998d568e47dff88d9e3c27d0ab371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3458634587c74234601dc0729ec5df"><td class="memItemLeft" align="right" valign="top"><a id="a4d3458634587c74234601dc0729ec5df" name="a4d3458634587c74234601dc0729ec5df"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>total_frames</b></td></tr>
-<tr class="separator:a42b9fb4254afd3da92a493432e06beb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf544e2c9fa09b55ab9590822fe79bee"><td class="memItemLeft" align="right" valign="top"><a id="acf544e2c9fa09b55ab9590822fe79bee" name="acf544e2c9fa09b55ab9590822fe79bee"></a>
-vector&lt; vector&lt; element_type &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>frame_element_distances</b></td></tr>
-<tr class="separator:acf544e2c9fa09b55ab9590822fe79bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e2bdf21773f68da50c218e6e5252c73"><td class="memItemLeft" align="right" valign="top"><a id="a3e2bdf21773f68da50c218e6e5252c73" name="a3e2bdf21773f68da50c218e6e5252c73"></a>
-scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>s</b></td></tr>
-<tr class="separator:a3e2bdf21773f68da50c218e6e5252c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e47469b8b22ca7064337c8198feec99"><td class="memItemLeft" align="right" valign="top"><a id="a0e47469b8b22ca7064337c8198feec99" name="a0e47469b8b22ca7064337c8198feec99"></a>
-scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>z</b></td></tr>
-<tr class="separator:a0e47469b8b22ca7064337c8198feec99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2329823ddebe752f0e562c1e20ef5630"><td class="memItemLeft" align="right" valign="top"><a id="a2329823ddebe752f0e562c1e20ef5630" name="a2329823ddebe752f0e562c1e20ef5630"></a>
-vector&lt; element_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dsdx</b></td></tr>
-<tr class="separator:a2329823ddebe752f0e562c1e20ef5630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51bfd3e2bda4c929d5ab18471232ea48"><td class="memItemLeft" align="right" valign="top"><a id="a51bfd3e2bda4c929d5ab18471232ea48" name="a51bfd3e2bda4c929d5ab18471232ea48"></a>
-vector&lt; element_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dzdx</b></td></tr>
-<tr class="separator:a51bfd3e2bda4c929d5ab18471232ea48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:ad4f32b0f7c23e54fc84a38edc2653ea6"><td class="memItemLeft" align="right" valign="top"><a id="ad4f32b0f7c23e54fc84a38edc2653ea6" name="ad4f32b0f7c23e54fc84a38edc2653ea6"></a>
-vector&lt; scalar_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>s_numerator_frame</b></td></tr>
-<tr class="separator:ad4f32b0f7c23e54fc84a38edc2653ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58a87878a08c9b54b3eba1e1df341af0"><td class="memItemLeft" align="right" valign="top"><a id="a58a87878a08c9b54b3eba1e1df341af0" name="a58a87878a08c9b54b3eba1e1df341af0"></a>
-vector&lt; scalar_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>s_denominator_frame</b></td></tr>
-<tr class="separator:a58a87878a08c9b54b3eba1e1df341af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09f7ac679df946e75f5183ab960b7dce"><td class="memItemLeft" align="right" valign="top"><a id="a09f7ac679df946e75f5183ab960b7dce" name="a09f7ac679df946e75f5183ab960b7dce"></a>
-scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>numerator_s</b></td></tr>
-<tr class="separator:a09f7ac679df946e75f5183ab960b7dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa84bf5b47ae5644de82a7fd20e289175"><td class="memItemLeft" align="right" valign="top"><a id="aa84bf5b47ae5644de82a7fd20e289175" name="aa84bf5b47ae5644de82a7fd20e289175"></a>
-scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>denominator_s</b></td></tr>
-<tr class="separator:aa84bf5b47ae5644de82a7fd20e289175"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac5a96ad3fbc7bdf8ea9c9c997c69f3b"><td class="memItemLeft" align="right" valign="top"><a id="aac5a96ad3fbc7bdf8ea9c9c997c69f3b" name="aac5a96ad3fbc7bdf8ea9c9c997c69f3b"></a>
+<tr class="separator:a4d3458634587c74234601dc0729ec5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cb590b4cf078419cca263e9db0ff32e"><td class="memItemLeft" align="right" valign="top"><a id="a8cb590b4cf078419cca263e9db0ff32e" name="a8cb590b4cf078419cca263e9db0ff32e"></a>
+vector&lt; scalar_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>exponents</b></td></tr>
+<tr class="separator:a8cb590b4cf078419cca263e9db0ff32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0052074e74ca15be5ae01962afd9c1"><td class="memItemLeft" align="right" valign="top"><a id="a6c0052074e74ca15be5ae01962afd9c1" name="a6c0052074e74ca15be5ae01962afd9c1"></a>
+scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>max_exponent</b></td></tr>
+<tr class="separator:a6c0052074e74ca15be5ae01962afd9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac795bf728e0ca5b23465b38fda85f0e"><td class="memItemLeft" align="right" valign="top"><a id="aac795bf728e0ca5b23465b38fda85f0e" name="aac795bf728e0ca5b23465b38fda85f0e"></a>
+scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>saved_exponent_sum</b></td></tr>
+<tr class="separator:aac795bf728e0ca5b23465b38fda85f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73b624e2b577aa695b19ba529c622a9"><td class="memItemLeft" align="right" valign="top"><a id="ae73b624e2b577aa695b19ba529c622a9" name="ae73b624e2b577aa695b19ba529c622a9"></a>
 scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>normalization_factor</b></td></tr>
-<tr class="separator:aac5a96ad3fbc7bdf8ea9c9c997c69f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ae73b624e2b577aa695b19ba529c622a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af734f9e38a975d206d9dfce21fdcd4ad"><td class="memItemLeft" align="right" valign="top"><a id="af734f9e38a975d206d9dfce21fdcd4ad" name="af734f9e38a975d206d9dfce21fdcd4ad"></a>
+scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>saved_s</b></td></tr>
+<tr class="separator:af734f9e38a975d206d9dfce21fdcd4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="colvar__arithmeticpath_8h_source.html">colvar_arithmeticpath.h</a></li>
@@ -168,7 +143,7 @@ scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>normalization_
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Oct 17 2023 17:17:49 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

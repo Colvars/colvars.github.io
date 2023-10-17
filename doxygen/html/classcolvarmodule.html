@@ -215,6 +215,10 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</
 &#160;</td><td class="memItemRight" valign="bottom"><b>~colvarmodule</b> ()</td></tr>
 <tr class="memdesc:ae937eb6e1d52e19be1ece54a741fad28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:ae937eb6e1d52e19be1ece54a741fad28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b3a35f7fb9ee4e862698e9d94a5897"><td class="memItemLeft" align="right" valign="top"><a id="a39b3a35f7fb9ee4e862698e9d94a5897" name="a39b3a35f7fb9ee4e862698e9d94a5897"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_initial_step</b> (<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">step_number</a> <a class="el" href="classcolvarmodule.html#a1295c39b7d73afaded97f8b0a98cbf5c">it</a>)</td></tr>
+<tr class="memdesc:a39b3a35f7fb9ee4e862698e9d94a5897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the initial step number (it is 0 otherwise); may be overridden when reading a state. <br /></td></tr>
+<tr class="separator:a39b3a35f7fb9ee4e862698e9d94a5897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab782d0125b2ec2916b3ae1d5448fce14"><td class="memItemLeft" align="right" valign="top"><a id="ab782d0125b2ec2916b3ae1d5448fce14" name="ab782d0125b2ec2916b3ae1d5448fce14"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="memdesc:ab782d0125b2ec2916b3ae1d5448fce14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual function called by the destructor. <br /></td></tr>
@@ -282,28 +286,52 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_biases_type</b>
 <tr class="separator:ad77fe7e53e9c347609a7d9425116a569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49979648aa93f1379a3954995d49177"><td class="memItemLeft" align="right" valign="top"><a id="af49979648aa93f1379a3954995d49177" name="af49979648aa93f1379a3954995d49177"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>setup_input</b> ()</td></tr>
-<tr class="memdesc:af49979648aa93f1379a3954995d49177"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)initialize and (re)read the input state file calling <a class="el" href="classcolvarmodule.html#a1bd1a4c8bda768a5125515e74e4154cf" title="Read a restart file.">read_restart()</a> <br /></td></tr>
+<tr class="memdesc:af49979648aa93f1379a3954995d49177"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)initialize and (re)read the input state file calling read_restart() <br /></td></tr>
 <tr class="separator:af49979648aa93f1379a3954995d49177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a448add9df80f0f3a9b4a96ebb2be1d91"><td class="memItemLeft" align="right" valign="top"><a id="a448add9df80f0f3a9b4a96ebb2be1d91" name="a448add9df80f0f3a9b4a96ebb2be1d91"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>setup_output</b> ()</td></tr>
 <tr class="memdesc:a448add9df80f0f3a9b4a96ebb2be1d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)initialize the output trajectory and state file (does not write it yet) <br /></td></tr>
 <tr class="separator:a448add9df80f0f3a9b4a96ebb2be1d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bd1a4c8bda768a5125515e74e4154cf"><td class="memItemLeft" align="right" valign="top"><a id="a1bd1a4c8bda768a5125515e74e4154cf" name="a1bd1a4c8bda768a5125515e74e4154cf"></a>
-std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>read_restart</b> (std::istream &amp;is)</td></tr>
-<tr class="memdesc:a1bd1a4c8bda768a5125515e74e4154cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a restart file. <br /></td></tr>
-<tr class="separator:a1bd1a4c8bda768a5125515e74e4154cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fd347f8c5d40e26ad74b47ca12c7f2"><td class="memItemLeft" align="right" valign="top"><a id="a84fd347f8c5d40e26ad74b47ca12c7f2" name="a84fd347f8c5d40e26ad74b47ca12c7f2"></a>
+std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>read_state</b> (std::istream &amp;is)</td></tr>
+<tr class="memdesc:a84fd347f8c5d40e26ad74b47ca12c7f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all objects' state fron a formatted (text) stream. <br /></td></tr>
+<tr class="separator:a84fd347f8c5d40e26ad74b47ca12c7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b152d897495178f31a431c61b210f28"><td class="memItemLeft" align="right" valign="top"><a id="a3b152d897495178f31a431c61b210f28" name="a3b152d897495178f31a431c61b210f28"></a>
+memory_stream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>read_state</b> (memory_stream &amp;is)</td></tr>
+<tr class="memdesc:a3b152d897495178f31a431c61b210f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all objects' state fron an unformatted (binary) stream. <br /></td></tr>
+<tr class="separator:a3b152d897495178f31a431c61b210f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3415f9ceee9745bbdefc89d9ea4e5828"><td class="memItemLeft" align="right" valign="top"><a id="a3415f9ceee9745bbdefc89d9ea4e5828" name="a3415f9ceee9745bbdefc89d9ea4e5828"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>set_input_state_buffer</b> (size_t n, unsigned char *buf)</td></tr>
+<tr class="memdesc:a3415f9ceee9745bbdefc89d9ea4e5828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an internal state buffer, to be read later as an unformatted stream when ready. <br /></td></tr>
+<tr class="separator:a3415f9ceee9745bbdefc89d9ea4e5828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9e86529cb9aa24a256fda614f03b0f"><td class="memItemLeft" align="right" valign="top"><a id="abd9e86529cb9aa24a256fda614f03b0f" name="abd9e86529cb9aa24a256fda614f03b0f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>set_input_state_buffer</b> (std::vector&lt; unsigned char &gt; &amp;buf)</td></tr>
+<tr class="memdesc:abd9e86529cb9aa24a256fda614f03b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="classcolvarmodule.html#a3415f9ceee9745bbdefc89d9ea4e5828" title="Set an internal state buffer, to be read later as an unformatted stream when ready.">set_input_state_buffer()</a> for C array, but uses std::move. <br /></td></tr>
+<tr class="separator:abd9e86529cb9aa24a256fda614f03b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7821478729c3281c0ebe30ed9a2a5e74"><td class="memItemLeft" align="right" valign="top"><a id="a7821478729c3281c0ebe30ed9a2a5e74" name="a7821478729c3281c0ebe30ed9a2a5e74"></a>
 std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>read_objects_state</b> (std::istream &amp;is)</td></tr>
 <tr class="memdesc:a7821478729c3281c0ebe30ed9a2a5e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the states of individual objects; allows for changes. <br /></td></tr>
 <tr class="separator:a7821478729c3281c0ebe30ed9a2a5e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2dd609bee1b621e8ffc1b4defb657d1"><td class="memItemLeft" align="right" valign="top"><a id="ae2dd609bee1b621e8ffc1b4defb657d1" name="ae2dd609bee1b621e8ffc1b4defb657d1"></a>
+memory_stream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>read_objects_state</b> (memory_stream &amp;is)</td></tr>
+<tr class="memdesc:ae2dd609bee1b621e8ffc1b4defb657d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the states of individual objects; allows for changes. <br /></td></tr>
+<tr class="separator:ae2dd609bee1b621e8ffc1b4defb657d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae276b217eeb817627890efd7b9774666"><td class="memItemLeft" align="right" valign="top"><a id="ae276b217eeb817627890efd7b9774666" name="ae276b217eeb817627890efd7b9774666"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>print_total_forces_errning</b> (bool warn_total_forces)</td></tr>
 <tr class="memdesc:ae276b217eeb817627890efd7b9774666"><td class="mdescLeft">&#160;</td><td class="mdescRight">If needed (old restart file), print the warning that cannot be ignored. <br /></td></tr>
 <tr class="separator:ae276b217eeb817627890efd7b9774666"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6aaeceb4cdf51dde27aff40af4c3e53"><td class="memItemLeft" align="right" valign="top"><a id="ac6aaeceb4cdf51dde27aff40af4c3e53" name="ac6aaeceb4cdf51dde27aff40af4c3e53"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>write_restart</b> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:ac6aaeceb4cdf51dde27aff40af4c3e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the output restart file. <br /></td></tr>
-<tr class="separator:ac6aaeceb4cdf51dde27aff40af4c3e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a6a332bf80d74e8e003a32b3d3ba263"><td class="memItemLeft" align="right" valign="top"><a id="a0a6a332bf80d74e8e003a32b3d3ba263" name="a0a6a332bf80d74e8e003a32b3d3ba263"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>write_state</b> (std::ostream &amp;os)</td></tr>
+<tr class="memdesc:a0a6a332bf80d74e8e003a32b3d3ba263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the state of the module to a formatted (text) file. <br /></td></tr>
+<tr class="separator:a0a6a332bf80d74e8e003a32b3d3ba263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada33a93cd0a4a69634fa9f345c06da51"><td class="memItemLeft" align="right" valign="top"><a id="ada33a93cd0a4a69634fa9f345c06da51" name="ada33a93cd0a4a69634fa9f345c06da51"></a>
+memory_stream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>write_state</b> (memory_stream &amp;os)</td></tr>
+<tr class="memdesc:ada33a93cd0a4a69634fa9f345c06da51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the state of the module to an unformatted (binary) file. <br /></td></tr>
+<tr class="separator:ada33a93cd0a4a69634fa9f345c06da51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5bec7a362d94e7312de58d8020e0e49"><td class="memItemLeft" align="right" valign="top"><a id="af5bec7a362d94e7312de58d8020e0e49" name="af5bec7a362d94e7312de58d8020e0e49"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>write_state_buffer</b> (std::vector&lt; unsigned char &gt; &amp;buffer)</td></tr>
+<tr class="memdesc:af5bec7a362d94e7312de58d8020e0e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the state of the module to an array of bytes (wrapped as a memory_stream object) <br /></td></tr>
+<tr class="separator:af5bec7a362d94e7312de58d8020e0e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3ba4e8b5f9e28e143d8e19551de35b6"><td class="memItemLeft" align="right" valign="top"><a id="af3ba4e8b5f9e28e143d8e19551de35b6" name="af3ba4e8b5f9e28e143d8e19551de35b6"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>open_traj_file</b> (std::string const &amp;file_name)</td></tr>
 <tr class="memdesc:af3ba4e8b5f9e28e143d8e19551de35b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a trajectory file if requested (and leave it open) <br /></td></tr>
@@ -380,18 +408,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>cite_feature</b> (std:
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>feature_report</b> (int flag=0)</td></tr>
 <tr class="memdesc:a473543a79902d265b8d416e1c4f59e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report usage of the Colvars features. <br /></td></tr>
 <tr class="separator:a473543a79902d265b8d416e1c4f59e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="memItemLeft" align="right" valign="top"><a id="a642a13dd4beb5aae1f3f9c9aa66e015b" name="a642a13dd4beb5aae1f3f9c9aa66e015b"></a>
+<tr class="memitem:ae45792c56731f74c6f95a4d09c91abf7"><td class="memItemLeft" align="right" valign="top"><a id="ae45792c56731f74c6f95a4d09c91abf7" name="ae45792c56731f74c6f95a4d09c91abf7"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>read_index_file</b> (char const *filename)</td></tr>
-<tr class="memdesc:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a Gromacs .ndx file. <br /></td></tr>
-<tr class="separator:a642a13dd4beb5aae1f3f9c9aa66e015b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ae45792c56731f74c6f95a4d09c91abf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a Gromacs .ndx file. <br /></td></tr>
+<tr class="separator:ae45792c56731f74c6f95a4d09c91abf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adda084af1983057e84ffd3f098db7771"><td class="memItemLeft" align="right" valign="top"><a id="adda084af1983057e84ffd3f098db7771" name="adda084af1983057e84ffd3f098db7771"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>reset_index_groups</b> ()</td></tr>
 <tr class="memdesc:adda084af1983057e84ffd3f098db7771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the index groups loaded so far. <br /></td></tr>
 <tr class="separator:adda084af1983057e84ffd3f098db7771"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a1a11a90f616b789abad257e2f378ed"><td class="memItemLeft" align="right" valign="top"><a id="a4a1a11a90f616b789abad257e2f378ed" name="a4a1a11a90f616b789abad257e2f378ed"></a>
+<tr class="memitem:a0a23d7418c48112fa995ebdc23aad774"><td class="memItemLeft" align="right" valign="top"><a id="a0a23d7418c48112fa995ebdc23aad774" name="a0a23d7418c48112fa995ebdc23aad774"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>load_coords_xyz</b> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a> &gt; *pos, <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *atoms, bool keep_open=false)</td></tr>
-<tr class="memdesc:a4a1a11a90f616b789abad257e2f378ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load coordinates into an atom group from an XYZ file (assumes Angstroms) <br /></td></tr>
-<tr class="separator:a4a1a11a90f616b789abad257e2f378ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a0a23d7418c48112fa995ebdc23aad774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load coordinates into an atom group from an XYZ file (assumes Angstroms) <br /></td></tr>
+<tr class="separator:a0a23d7418c48112fa995ebdc23aad774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32ae50f3bf515bfe1f4ba497496d619f"><td class="memItemLeft" align="right" valign="top"><a id="a32ae50f3bf515bfe1f4ba497496d619f" name="a32ae50f3bf515bfe1f4ba497496d619f"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>restart_version</b> () const</td></tr>
 <tr class="memdesc:a32ae50f3bf515bfe1f4ba497496d619f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version of the most recent state file read. <br /></td></tr>
@@ -585,24 +613,24 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str<
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str</b> (std::vector&lt; std::string &gt; const &amp;x, size_t width=0, size_t prec=0)</td></tr>
 <tr class="memdesc:aba7a7c939ce9f26f55b8298af16e466d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string for output purposes. <br /></td></tr>
 <tr class="separator:aba7a7c939ce9f26f55b8298af16e466d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81c05309f8ca2a67327839852b61290d"><td class="memItemLeft" align="right" valign="top"><a id="a81c05309f8ca2a67327839852b61290d" name="a81c05309f8ca2a67327839852b61290d"></a>
+<tr class="memitem:a2aa7da803b714624ea4f33f0e7625c36"><td class="memItemLeft" align="right" valign="top"><a id="a2aa7da803b714624ea4f33f0e7625c36" name="a2aa7da803b714624ea4f33f0e7625c36"></a>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>wrap_string</b> (std::string const &amp;s, size_t nchars)</td></tr>
-<tr class="memdesc:a81c05309f8ca2a67327839852b61290d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce the number of characters in a string. <br /></td></tr>
-<tr class="separator:a81c05309f8ca2a67327839852b61290d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a386c7f3696adb0890396ab4c5114a9fc"><td class="memItemLeft" align="right" valign="top"><a id="a386c7f3696adb0890396ab4c5114a9fc" name="a386c7f3696adb0890396ab4c5114a9fc"></a>
+<tr class="memdesc:a2aa7da803b714624ea4f33f0e7625c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce the number of characters in a string. <br /></td></tr>
+<tr class="separator:a2aa7da803b714624ea4f33f0e7625c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f5fae861695d65e8439e1fba22ad23"><td class="memItemLeft" align="right" valign="top"><a id="a58f5fae861695d65e8439e1fba22ad23" name="a58f5fae861695d65e8439e1fba22ad23"></a>
 static <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dt</b> ()</td></tr>
-<tr class="memdesc:a386c7f3696adb0890396ab4c5114a9fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time step of MD integrator (fs) <br /></td></tr>
-<tr class="separator:a386c7f3696adb0890396ab4c5114a9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7f01abb124eba3a0571cd094f4c5681"><td class="memItemLeft" align="right" valign="top"><a id="af7f01abb124eba3a0571cd094f4c5681" name="af7f01abb124eba3a0571cd094f4c5681"></a>
+<tr class="memdesc:a58f5fae861695d65e8439e1fba22ad23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time step of MD integrator (fs) <br /></td></tr>
+<tr class="separator:a58f5fae861695d65e8439e1fba22ad23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390c9bd46df1de7e4b69bfb858903080"><td class="memItemLeft" align="right" valign="top"><a id="a390c9bd46df1de7e4b69bfb858903080" name="a390c9bd46df1de7e4b69bfb858903080"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>request_total_force</b> ()</td></tr>
-<tr class="memdesc:af7f01abb124eba3a0571cd094f4c5681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request calculation of total force from MD engine. <br /></td></tr>
-<tr class="separator:af7f01abb124eba3a0571cd094f4c5681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a390c9bd46df1de7e4b69bfb858903080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request calculation of total force from MD engine. <br /></td></tr>
+<tr class="separator:a390c9bd46df1de7e4b69bfb858903080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8577e7cbc07b18b4fa46c5cb66ac95dd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a8577e7cbc07b18b4fa46c5cb66ac95dd">log</a> (std::string const &amp;message, int min_log_level=10)</td></tr>
 <tr class="separator:a8577e7cbc07b18b4fa46c5cb66ac95dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a852c1136dcc84494b1c8d9b6323793"><td class="memItemLeft" align="right" valign="top"><a id="a9a852c1136dcc84494b1c8d9b6323793" name="a9a852c1136dcc84494b1c8d9b6323793"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (std::string const &amp;message, int code=COLVARS_ERROR)</td></tr>
-<tr class="memdesc:a9a852c1136dcc84494b1c8d9b6323793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a message to the main log and set global error code. <br /></td></tr>
-<tr class="separator:a9a852c1136dcc84494b1c8d9b6323793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98fd4dc3638d7b855af23b68d779bf7f"><td class="memItemLeft" align="right" valign="top"><a id="a98fd4dc3638d7b855af23b68d779bf7f" name="a98fd4dc3638d7b855af23b68d779bf7f"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (std::string const &amp;message, int code=-1)</td></tr>
+<tr class="memdesc:a98fd4dc3638d7b855af23b68d779bf7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a message to the main log and set global error code. <br /></td></tr>
+<tr class="separator:a98fd4dc3638d7b855af23b68d779bf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacfbc76fc6ffa1da95d077957e406ec9"><td class="memItemLeft" align="right" valign="top"><a id="aacfbc76fc6ffa1da95d077957e406ec9" name="aacfbc76fc6ffa1da95d077957e406ec9"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>log_level</b> ()</td></tr>
 <tr class="memdesc:aacfbc76fc6ffa1da95d077957e406ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Level of logging requested by the user. <br /></td></tr>
@@ -627,20 +655,20 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>log_output_file
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>log_input_files</b> ()</td></tr>
 <tr class="memdesc:ad1fff9d0d55ec94594e917fc629514b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Level at which input-file operations (configuration, state) are logged. <br /></td></tr>
 <tr class="separator:ad1fff9d0d55ec94594e917fc629514b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa94a2e8f3377b6f2c37b61e5a4fd4317"><td class="memItemLeft" align="right" valign="top"><a id="aa94a2e8f3377b6f2c37b61e5a4fd4317" name="aa94a2e8f3377b6f2c37b61e5a4fd4317"></a>
+<tr class="memitem:a7a641df64b10a49f9b6d7167972513ea"><td class="memItemLeft" align="right" valign="top"><a id="a7a641df64b10a49f9b6d7167972513ea" name="a7a641df64b10a49f9b6d7167972513ea"></a>
 static <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_distance</b> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> const &amp;pos2)</td></tr>
-<tr class="memdesc:aa94a2e8f3377b6f2c37b61e5a4fd4317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distance between two atomic positions with pbcs handled correctly. <br /></td></tr>
-<tr class="separator:aa94a2e8f3377b6f2c37b61e5a4fd4317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a029550b34b2f43f64f8963312909587a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a029550b34b2f43f64f8963312909587a">load_atoms</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
-<tr class="memdesc:a029550b34b2f43f64f8963312909587a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select atom IDs from a file (usually PDB)  <a href="classcolvarmodule.html#a029550b34b2f43f64f8963312909587a">More...</a><br /></td></tr>
-<tr class="separator:a029550b34b2f43f64f8963312909587a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a7a641df64b10a49f9b6d7167972513ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distance between two atomic positions with pbcs handled correctly. <br /></td></tr>
+<tr class="separator:a7a641df64b10a49f9b6d7167972513ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01b1d229547df7583c71ea33a3f1e76"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af01b1d229547df7583c71ea33a3f1e76">load_atoms</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
+<tr class="memdesc:af01b1d229547df7583c71ea33a3f1e76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select atom IDs from a file (usually PDB)  <a href="classcolvarmodule.html#af01b1d229547df7583c71ea33a3f1e76">More...</a><br /></td></tr>
+<tr class="separator:af01b1d229547df7583c71ea33a3f1e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492c7cf3807ffd60b72f9d8842559720"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a492c7cf3807ffd60b72f9d8842559720">load_coords</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a> &gt; *pos, <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *atoms, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
 <tr class="memdesc:a492c7cf3807ffd60b72f9d8842559720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load coordinates for a group of atoms from a file (PDB or XYZ); if "pos" is already allocated, the number of its elements must match the number of entries in "filename".  <a href="classcolvarmodule.html#a492c7cf3807ffd60b72f9d8842559720">More...</a><br /></td></tr>
 <tr class="separator:a492c7cf3807ffd60b72f9d8842559720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe75f1954f1a16adcfd958243b584497"><td class="memItemLeft" align="right" valign="top"><a id="abe75f1954f1a16adcfd958243b584497" name="abe75f1954f1a16adcfd958243b584497"></a>
-static <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rand_gaussian</b> (void)</td></tr>
-<tr class="memdesc:abe75f1954f1a16adcfd958243b584497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pseudo-random number with Gaussian distribution. <br /></td></tr>
-<tr class="separator:abe75f1954f1a16adcfd958243b584497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34a255c4171f307e7306a51411b0199"><td class="memItemLeft" align="right" valign="top"><a id="aa34a255c4171f307e7306a51411b0199" name="aa34a255c4171f307e7306a51411b0199"></a>
+static <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rand_gaussian</b> ()</td></tr>
+<tr class="memdesc:aa34a255c4171f307e7306a51411b0199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pseudo-random number with Gaussian distribution. <br /></td></tr>
+<tr class="separator:aa34a255c4171f307e7306a51411b0199"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90d1207e60399389e4a724c51f444fc1"><td class="memItemLeft" align="right" valign="top"><a id="a90d1207e60399389e4a724c51f444fc1" name="a90d1207e60399389e4a724c51f444fc1"></a>
 static size_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b> ()</td></tr>
 <tr class="memdesc:a90d1207e60399389e4a724c51f444fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current object depth in the hierarchy. <br /></td></tr>
@@ -656,13 +684,16 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>decrease_depth
 <tr class="memitem:acd786a59c8820f2b48060f28b6067ac1"><td class="memItemLeft" align="right" valign="top"><a id="acd786a59c8820f2b48060f28b6067ac1" name="acd786a59c8820f2b48060f28b6067ac1"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>scripted_forces</b> ()</td></tr>
 <tr class="separator:acd786a59c8820f2b48060f28b6067ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a206644393814e3df7d772f0d731d6443"><td class="memItemLeft" align="right" valign="top"><a id="a206644393814e3df7d772f0d731d6443" name="a206644393814e3df7d772f0d731d6443"></a>
+<tr class="memitem:aaade094070e7dbdddc1f4c4d99041d07"><td class="memItemLeft" align="right" valign="top"><a id="aaade094070e7dbdddc1f4c4d99041d07" name="aaade094070e7dbdddc1f4c4d99041d07"></a>
 static <a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
-<tr class="memdesc:a206644393814e3df7d772f0d731d6443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the one instance of the Colvars module. <br /></td></tr>
-<tr class="separator:a206644393814e3df7d772f0d731d6443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:aaade094070e7dbdddc1f4c4d99041d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the one instance of the Colvars module. <br /></td></tr>
+<tr class="separator:aaade094070e7dbdddc1f4c4d99041d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a93d8fa9aba29ad56cee06b88ded927c5"><td class="memItemLeft" align="right" valign="top"><a id="a93d8fa9aba29ad56cee06b88ded927c5" name="a93d8fa9aba29ad56cee06b88ded927c5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>binary_restart</b></td></tr>
+<tr class="separator:a93d8fa9aba29ad56cee06b88ded927c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac843326ecf8cf46c7852ccdc746d31a9"><td class="memItemLeft" align="right" valign="top"><a id="ac843326ecf8cf46c7852ccdc746d31a9" name="ac843326ecf8cf46c7852ccdc746d31a9"></a>
 std::vector&lt; <a class="el" href="classcolvarbias.html">colvarbias</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>biases</b></td></tr>
 <tr class="memdesc:ac843326ecf8cf46c7852ccdc746d31a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of collective variable biases. <br /></td></tr>
@@ -802,6 +833,14 @@ template&lt;class bias_type &gt; </td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>catch_input_errors</b> (int result)</td></tr>
 <tr class="memdesc:a65cca53b21ff8475f312307d0b5981cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Useful wrapper to interrupt parsing if any error occurs. <br /></td></tr>
 <tr class="separator:a65cca53b21ff8475f312307d0b5981cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2a0b01a8ff4c703576f4f095e91d179"><td class="memTemplParams" colspan="2"><a id="ad2a0b01a8ff4c703576f4f095e91d179" name="ad2a0b01a8ff4c703576f4f095e91d179"></a>
+template&lt;typename IST &gt; </td></tr>
+<tr class="memitem:ad2a0b01a8ff4c703576f4f095e91d179"><td class="memTemplItemLeft" align="right" valign="top">IST &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>read_state_template_</b> (IST &amp;is)</td></tr>
+<tr class="separator:ad2a0b01a8ff4c703576f4f095e91d179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef1f883e9507044b377ac77ac1d3f81e"><td class="memTemplParams" colspan="2"><a id="aef1f883e9507044b377ac77ac1d3f81e" name="aef1f883e9507044b377ac77ac1d3f81e"></a>
+template&lt;typename OST &gt; </td></tr>
+<tr class="memitem:aef1f883e9507044b377ac77ac1d3f81e"><td class="memTemplItemLeft" align="right" valign="top">OST &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>write_state_template_</b> (OST &amp;os)</td></tr>
+<tr class="separator:aef1f883e9507044b377ac77ac1d3f81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -849,6 +888,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>config_string<
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>source_Tcl_script</b></td></tr>
 <tr class="memdesc:acbf2a0d772eee0dd0154e09c86505ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization Tcl script, user-provided. <br /></td></tr>
 <tr class="separator:acbf2a0d772eee0dd0154e09c86505ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8681c1170d103b67e8e2a71c2d745a2a"><td class="memItemLeft" align="right" valign="top"><a id="a8681c1170d103b67e8e2a71c2d745a2a" name="a8681c1170d103b67e8e2a71c2d745a2a"></a>
+std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>input_state_buffer_</b></td></tr>
+<tr class="memdesc:a8681c1170d103b67e8e2a71c2d745a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal state buffer, to be read as an unformatted stream. <br /></td></tr>
+<tr class="separator:a8681c1170d103b67e8e2a71c2d745a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -1036,8 +1079,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 
 </div>
 </div>
-<a id="a029550b34b2f43f64f8963312909587a" name="a029550b34b2f43f64f8963312909587a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a029550b34b2f43f64f8963312909587a">&#9670;&#160;</a></span>load_atoms()</h2>
+<a id="af01b1d229547df7583c71ea33a3f1e76" name="af01b1d229547df7583c71ea33a3f1e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01b1d229547df7583c71ea33a3f1e76">&#9670;&#160;</a></span>load_atoms()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1046,7 +1089,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int cvm::load_atoms </td>
+          <td class="memname">static int colvarmodule::load_atoms </td>
           <td>(</td>
           <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>filename</em>, </td>
@@ -1054,7 +1097,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> &amp;&#160;</td>
           <td class="paramname"><em>atoms</em>, </td>
         </tr>
         <tr>
@@ -1463,12 +1506,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvarmodule_8h_source.html">colvarmodule.h</a></li>
 <li>colvarmodule.cpp</li>
-<li><a class="el" href="colvarscript__commands_8h_source.html">colvarscript_commands.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Oct 17 2023 17:17:49 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

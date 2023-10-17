@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_fc320e2eb5064ec370984cbb5cb0ec7b.html">colvars</a></li><li class="navelem"><a class="el" href="dir_560ffe9309b0e745046f7d227878bbbb.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -343,7 +343,7 @@ $(function() {
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno"><a class="line" href="classcolvardeps.html#ab523803ef20a5349cb1bdc3b17cb81cf">  430</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcolvardeps.html#ab523803ef20a5349cb1bdc3b17cb81cf">check_enabled</a>(<span class="keywordtype">int</span> f, std::string <span class="keyword">const</span> &amp;reason)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span><span class="keyword">  </span>{</div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    <span class="keywordflow">if</span> (! is_enabled(f)) {</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>      <a class="code hl_function" href="classcolvarmodule.html#a9a852c1136dcc84494b1c8d9b6323793">cvm::error</a>(<span class="stringliteral">&quot;Error: &quot;</span>+reason+<span class="stringliteral">&quot; requires that the feature \&quot;&quot;</span>+</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>      <a class="code hl_function" href="classcolvarmodule.html#a98fd4dc3638d7b855af23b68d779bf7f">cvm::error</a>(<span class="stringliteral">&quot;Error: &quot;</span>+reason+<span class="stringliteral">&quot; requires that the feature \&quot;&quot;</span>+</div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>                 features()[f]-&gt;description+<span class="stringliteral">&quot;\&quot; is active.\n&quot;</span>, COLVARS_BUG_ERROR);</div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>    }</div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>  }</div>
@@ -454,7 +454,7 @@ $(function() {
 <div class="ttc" id="aclasscolvardeps_html_af9fca6cfc343e41910514d00fcbc772a"><div class="ttname"><a href="classcolvardeps.html#af9fca6cfc343e41910514d00fcbc772a">colvardeps::time_step_factor</a></div><div class="ttdeci">int time_step_factor</div><div class="ttdef"><b>Definition:</b> colvardeps.h:77</div></div>
 <div class="ttc" id="aclasscolvardeps_html_afe08e2746bab22b025133761e99e50d1"><div class="ttname"><a href="classcolvardeps.html#afe08e2746bab22b025133761e99e50d1">colvardeps::remove_all_children</a></div><div class="ttdeci">void remove_all_children()</div><div class="ttdef"><b>Definition:</b> colvardeps.cpp:502</div></div>
 <div class="ttc" id="aclasscolvardeps_html_aff2f719a18e6880cc94eefc53693321a"><div class="ttname"><a href="classcolvardeps.html#aff2f719a18e6880cc94eefc53693321a">colvardeps::print_state</a></div><div class="ttdeci">void print_state()</div><div class="ttdoc">print all enabled features and those of children, for debugging</div><div class="ttdef"><b>Definition:</b> colvardeps.cpp:431</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_a9a852c1136dcc84494b1c8d9b6323793"><div class="ttname"><a href="classcolvarmodule.html#a9a852c1136dcc84494b1c8d9b6323793">colvarmodule::error</a></div><div class="ttdeci">static int error(std::string const &amp;message, int code=COLVARS_ERROR)</div><div class="ttdoc">Print a message to the main log and set global error code.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:1799</div></div>
+<div class="ttc" id="aclasscolvarmodule_html_a98fd4dc3638d7b855af23b68d779bf7f"><div class="ttname"><a href="classcolvarmodule.html#a98fd4dc3638d7b855af23b68d779bf7f">colvarmodule::error</a></div><div class="ttdeci">static int error(std::string const &amp;message, int code=-1)</div><div class="ttdoc">Print a message to the main log and set global error code.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:1978</div></div>
 <div class="ttc" id="aclasscolvarparse_html"><div class="ttname"><a href="classcolvarparse.html">colvarparse</a></div><div class="ttdoc">Base class containing parsing functions; all objects which need to parse input inherit from this.</div><div class="ttdef"><b>Definition:</b> colvarparse.h:26</div></div>
 <div class="ttc" id="aclasscolvarparse_html_aa59ba1cad3b7c486df29d56f5feb6bf4"><div class="ttname"><a href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">colvarparse::Parse_Mode</a></div><div class="ttdeci">Parse_Mode</div><div class="ttdoc">How a keyword is parsed in a string.</div><div class="ttdef"><b>Definition:</b> colvarparse.h:52</div></div>
 <div class="ttc" id="aclasscolvarparse_html_aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f"><div class="ttname"><a href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">colvarparse::parse_normal</a></div><div class="ttdeci">@ parse_normal</div><div class="ttdoc">Alias for old default behavior (should be phased out)</div><div class="ttdef"><b>Definition:</b> colvarparse.h:71</div></div>
@@ -468,7 +468,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 23 2023 13:53:52 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Oct 17 2023 17:17:48 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

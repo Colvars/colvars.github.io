@@ -74,6 +74,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classcolvarvalue-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">colvarvalue Class Reference</div></div>
@@ -125,9 +126,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</
 &#160;</td><td class="memItemRight" valign="bottom"><b>colvarvalue</b> ()</td></tr>
 <tr class="memdesc:a35c7db11bc47610d69863e2df529c051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor: this class defaults to a scalar number and always behaves like it unless you change its type. <br /></td></tr>
 <tr class="separator:a35c7db11bc47610d69863e2df529c051"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae16fc00ba5908b881f234d282b71acf2"><td class="memItemLeft" align="right" valign="top"><a id="ae16fc00ba5908b881f234d282b71acf2" name="ae16fc00ba5908b881f234d282b71acf2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>colvarvalue</b> (<a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50">Type</a> const &amp;vti)</td></tr>
-<tr class="memdesc:ae16fc00ba5908b881f234d282b71acf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a type specification. <br /></td></tr>
+<tr class="memitem:ae16fc00ba5908b881f234d282b71acf2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarvalue.html#ae16fc00ba5908b881f234d282b71acf2">colvarvalue</a> (<a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50">Type</a> const &amp;vti)</td></tr>
 <tr class="separator:ae16fc00ba5908b881f234d282b71acf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d5461b21b6e1331e5899a50e43a1724"><td class="memItemLeft" align="right" valign="top"><a id="a0d5461b21b6e1331e5899a50e43a1724" name="a0d5461b21b6e1331e5899a50e43a1724"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>colvarvalue</b> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;x)</td></tr>
@@ -358,6 +357,19 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>e
 <tr class="memdesc:a33badd8b9e0d043c98fa59861eb2b74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classcolvarvalue.html#ad01f76030670a7789f3c6bf2141fc2a0">vector1d_value</a> is a concatenation of colvarvalues, these mark how many components for each colvarvalue. <br /></td></tr>
 <tr class="separator:a33badd8b9e0d043c98fa59861eb2b74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ac801f51d10604a8ed7db48a566e1d854"><td class="memTemplParams" colspan="2"><a id="ac801f51d10604a8ed7db48a566e1d854" name="ac801f51d10604a8ed7db48a566e1d854"></a>
+template&lt;typename OST &gt; </td></tr>
+<tr class="memitem:ac801f51d10604a8ed7db48a566e1d854"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>write_to_stream_template_</b> (OST &amp;os) const</td></tr>
+<tr class="memdesc:ac801f51d10604a8ed7db48a566e1d854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic stream writing function (formatted and not) <br /></td></tr>
+<tr class="separator:ac801f51d10604a8ed7db48a566e1d854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c35f178abf159b3986da91a7fb4ca8"><td class="memTemplParams" colspan="2"><a id="a44c35f178abf159b3986da91a7fb4ca8" name="a44c35f178abf159b3986da91a7fb4ca8"></a>
+template&lt;typename IST &gt; </td></tr>
+<tr class="memitem:a44c35f178abf159b3986da91a7fb4ca8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>read_from_stream_template_</b> (IST &amp;is)</td></tr>
+<tr class="memdesc:a44c35f178abf159b3986da91a7fb4ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic stream reading function (formatted and not) <br /></td></tr>
+<tr class="separator:a44c35f178abf159b3986da91a7fb4ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:ac749d98ec77b58ace52117a676f940e7"><td class="memItemLeft" align="right" valign="top"><a id="ac749d98ec77b58ace52117a676f940e7" name="ac749d98ec77b58ace52117a676f940e7"></a>
@@ -379,14 +391,22 @@ Friends</h2></td></tr>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (<a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x1, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x2)</td></tr>
 <tr class="memdesc:ae3df8c0b68a1fb4595f92cb90b6ce33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inner product. <br /></td></tr>
 <tr class="separator:ae3df8c0b68a1fb4595f92cb90b6ce33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5170cc98a52433d7b0aa8472dd5b6544"><td class="memItemLeft" align="right" valign="top"><a id="a5170cc98a52433d7b0aa8472dd5b6544" name="a5170cc98a52433d7b0aa8472dd5b6544"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;q)</td></tr>
-<tr class="memdesc:a5170cc98a52433d7b0aa8472dd5b6544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formatted output operator. <br /></td></tr>
-<tr class="separator:a5170cc98a52433d7b0aa8472dd5b6544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86e25cb848f44fdcd71ce8e703f925ae"><td class="memItemLeft" align="right" valign="top"><a id="a86e25cb848f44fdcd71ce8e703f925ae" name="a86e25cb848f44fdcd71ce8e703f925ae"></a>
-std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;&gt;</b> (std::istream &amp;is, <a class="el" href="classcolvarvalue.html">colvarvalue</a> &amp;q)</td></tr>
-<tr class="memdesc:a86e25cb848f44fdcd71ce8e703f925ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formatted input operator. <br /></td></tr>
-<tr class="separator:a86e25cb848f44fdcd71ce8e703f925ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8bceb2e719771ccda7851a02cfbbbd0"><td class="memItemLeft" align="right" valign="top"><a id="ad8bceb2e719771ccda7851a02cfbbbd0" name="ad8bceb2e719771ccda7851a02cfbbbd0"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x)</td></tr>
+<tr class="memdesc:ad8bceb2e719771ccda7851a02cfbbbd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formatted output operator. <br /></td></tr>
+<tr class="separator:ad8bceb2e719771ccda7851a02cfbbbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957713b114c7f2613dfabb133799997e"><td class="memItemLeft" align="right" valign="top"><a id="a957713b114c7f2613dfabb133799997e" name="a957713b114c7f2613dfabb133799997e"></a>
+<a class="el" href="classcvm_1_1memory__stream.html">cvm::memory_stream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="classcvm_1_1memory__stream.html">cvm::memory_stream</a> &amp;os, <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;x)</td></tr>
+<tr class="memdesc:a957713b114c7f2613dfabb133799997e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unformatted output operator. <br /></td></tr>
+<tr class="separator:a957713b114c7f2613dfabb133799997e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d339d1ac3a033d5e3ed4405a1b7313"><td class="memItemLeft" align="right" valign="top"><a id="ab1d339d1ac3a033d5e3ed4405a1b7313" name="ab1d339d1ac3a033d5e3ed4405a1b7313"></a>
+std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;&gt;</b> (std::istream &amp;is, <a class="el" href="classcolvarvalue.html">colvarvalue</a> &amp;x)</td></tr>
+<tr class="memdesc:ab1d339d1ac3a033d5e3ed4405a1b7313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formatted input operator. <br /></td></tr>
+<tr class="separator:ab1d339d1ac3a033d5e3ed4405a1b7313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf1b20e6e131e0eaf6ddd261cbbcc5cf"><td class="memItemLeft" align="right" valign="top"><a id="aaf1b20e6e131e0eaf6ddd261cbbcc5cf" name="aaf1b20e6e131e0eaf6ddd261cbbcc5cf"></a>
+<a class="el" href="classcvm_1_1memory__stream.html">cvm::memory_stream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;&gt;</b> (<a class="el" href="classcvm_1_1memory__stream.html">cvm::memory_stream</a> &amp;is, <a class="el" href="classcolvarvalue.html">colvarvalue</a> &amp;x)</td></tr>
+<tr class="memdesc:aaf1b20e6e131e0eaf6ddd261cbbcc5cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unformatted input operator. <br /></td></tr>
+<tr class="separator:aaf1b20e6e131e0eaf6ddd261cbbcc5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Value of a collective variable: this is a metatype which can be set at runtime. By default it is set to be a scalar number, and can be treated as such in all operations (this is done by most <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a> implementations). </p>
@@ -428,6 +448,31 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <tr><td class="fieldname"><a id="a0433b10db3c5ecfd895a40dcc3a2cc50ac2ed536d36d31f28d8b43a9a0a6a113b" name="a0433b10db3c5ecfd895a40dcc3a2cc50ac2ed536d36d31f28d8b43a9a0a6a113b"></a>type_all&#160;</td><td class="fielddoc"><p >Needed to iterate through enum. </p>
 </td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae16fc00ba5908b881f234d282b71acf2" name="ae16fc00ba5908b881f234d282b71acf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae16fc00ba5908b881f234d282b71acf2">&#9670;&#160;</a></span>colvarvalue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">colvarvalue::colvarvalue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50">Type</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vti</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Constructor from a type flag (note: type_vector also needs the vector length to be set) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vti</td><td>Value of the <a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50">Type</a> enum </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -567,7 +612,7 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Oct 17 2023 17:17:49 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

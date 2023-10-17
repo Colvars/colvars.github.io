@@ -86,10 +86,11 @@ Inheritance diagram for colvarproxy_io:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarproxy__io__inherit__graph.png" border="0" usemap="#acolvarproxy__io_inherit__map" alt="Inheritance graph"/></div>
 <map name="acolvarproxy__io_inherit__map" id="acolvarproxy__io_inherit__map">
-<area shape="rect" title="Methods for data input/output." alt="" coords="91,5,197,31"/>
-<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="99,79,189,104"/>
-<area shape="rect" href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="5,152,133,177"/>
-<area shape="rect" href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="158,152,279,177"/>
+<area shape="rect" title="Methods for data input/output." alt="" coords="183,5,290,31"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="192,79,281,104"/>
+<area shape="rect" href="classcolvarproxy__lammps.html" title="Communication between colvars and LAMMPS (implementation of colvarproxy)" alt="" coords="5,152,148,177"/>
+<area shape="rect" href="classcolvarproxy__namd.html" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="173,152,301,177"/>
+<area shape="rect" href="classcolvarproxy__vmd.html" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="325,152,447,177"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -183,12 +184,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>close_input_stream</b>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>close_input_streams</b> ()</td></tr>
 <tr class="memdesc:adf615453e05c17582863583b62170730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes all input streams. <br /></td></tr>
 <tr class="separator:adf615453e05c17582863583b62170730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30bf70729e9517c383b527c5893326f"><td class="memItemLeft" align="right" valign="top"><a id="ad30bf70729e9517c383b527c5893326f" name="ad30bf70729e9517c383b527c5893326f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>delete_input_stream</b> (std::string const &amp;input_name)</td></tr>
+<tr class="memdesc:ad30bf70729e9517c383b527c5893326f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="classcolvarproxy__io.html#ad813197ae2df20010cde83c82257faa6" title="Closes the given input stream.">close_input_stream()</a>, but also removes the corresponding entry from memory. <br /></td></tr>
+<tr class="separator:ad30bf70729e9517c383b527c5893326f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa15c1f3c47a518b595a75ca0e8971e4"><td class="memItemLeft" align="right" valign="top"><a id="aaa15c1f3c47a518b595a75ca0e8971e4" name="aaa15c1f3c47a518b595a75ca0e8971e4"></a>
 std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>list_input_stream_names</b> () const</td></tr>
 <tr class="memdesc:aaa15c1f3c47a518b595a75ca0e8971e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all input streams that were opened at some point. <br /></td></tr>
 <tr class="separator:aaa15c1f3c47a518b595a75ca0e8971e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27cfa5efba28a0c0c31807397ee6e6de"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a27cfa5efba28a0c0c31807397ee6e6de">output_stream</a> (std::string const &amp;output_name, std::string const description=&quot;file/channel&quot;)</td></tr>
-<tr class="separator:a27cfa5efba28a0c0c31807397ee6e6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834c08a7b1df1886adf3e05933530034"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a> (std::string const &amp;output_name, std::string const description)</td></tr>
+<tr class="separator:a834c08a7b1df1886adf3e05933530034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f6b7ccd8b68569ddab5b061ddeebe86"><td class="memItemLeft" align="right" valign="top"><a id="a9f6b7ccd8b68569ddab5b061ddeebe86" name="a9f6b7ccd8b68569ddab5b061ddeebe86"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>output_stream_exists</b> (std::string const &amp;output_name)</td></tr>
 <tr class="memdesc:a9f6b7ccd8b68569ddab5b061ddeebe86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the file/channel is open (without opening it if not) <br /></td></tr>
@@ -240,10 +245,6 @@ std::map&lt; std::string, std::ostream * &gt;&#160;</td><td class="memItemRight"
 std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><b>output_stream_error_</b></td></tr>
 <tr class="memdesc:a047405d4c8f5f4a698c16f7c2415cb42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object whose reference is returned when write errors occur. <br /></td></tr>
 <tr class="separator:a047405d4c8f5f4a698c16f7c2415cb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa828d8f846788500cd1ac6af15d23c91"><td class="memItemLeft" align="right" valign="top"><a id="aa828d8f846788500cd1ac6af15d23c91" name="aa828d8f846788500cd1ac6af15d23c91"></a>
-char const  *&#160;</td><td class="memItemRight" valign="bottom"><b>input_buffer_</b></td></tr>
-<tr class="memdesc:aa828d8f846788500cd1ac6af15d23c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer from which the input state information may be read. <br /></td></tr>
-<tr class="separator:aa828d8f846788500cd1ac6af15d23c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Methods for data input/output. </p>
@@ -535,12 +536,12 @@ char const  *&#160;</td><td class="memItemRight" valign="bottom"><b>input_buffer
 
 <p>Ensure that we're on the main thread (derived class will do actual check) </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy.html#a1b87febf996c69d55603f486df7d9fe2">colvarproxy</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy.html#ab2ba4244bd1e089420e77c11f2134819">colvarproxy</a>.</p>
 
 </div>
 </div>
-<a id="a27cfa5efba28a0c0c31807397ee6e6de" name="a27cfa5efba28a0c0c31807397ee6e6de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27cfa5efba28a0c0c31807397ee6e6de">&#9670;&#160;</a></span>output_stream()</h2>
+<a id="a834c08a7b1df1886adf3e05933530034" name="a834c08a7b1df1886adf3e05933530034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834c08a7b1df1886adf3e05933530034">&#9670;&#160;</a></span>output_stream()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -558,7 +559,7 @@ char const  *&#160;</td><td class="memItemRight" valign="bottom"><b>input_buffer
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string const&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;file/channel&quot;</code>&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -580,7 +581,7 @@ char const  *&#160;</td><td class="memItemRight" valign="bottom"><b>input_buffer
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#ad62fd11f61ebc70d49a8cbc26a822a99">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a94ffd9f0a0837958f0d1a50291b61b7b">colvarproxy_namd</a>.</p>
 
 </div>
 </div>
@@ -621,7 +622,7 @@ char const  *&#160;</td><td class="memItemRight" valign="bottom"><b>input_buffer
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Oct 17 2023 17:17:49 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

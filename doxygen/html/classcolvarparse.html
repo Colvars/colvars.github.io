@@ -156,7 +156,6 @@ Collaboration diagram for colvarparse:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse_1_1read__block.html">read_block</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to read a block of the type "key { ... }" from a stream and store it in a string.  <a href="classcolvarparse_1_1read__block.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -197,10 +196,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_string</b> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:a3a239a952244cf2433190d5bd221fc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new config string for this object. <br /></td></tr>
 <tr class="separator:a3a239a952244cf2433190d5bd221fc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39e7841561ef3f9c40074b2096bb688e"><td class="memItemLeft" align="right" valign="top"><a id="a39e7841561ef3f9c40074b2096bb688e" name="a39e7841561ef3f9c40074b2096bb688e"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarparse</b> ()</td></tr>
-<tr class="memdesc:a39e7841561ef3f9c40074b2096bb688e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
-<tr class="separator:a39e7841561ef3f9c40074b2096bb688e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d46cb590a5d59dcfb2a6eecbcfb99c"><td class="memItemLeft" align="right" valign="top"><a id="a33d46cb590a5d59dcfb2a6eecbcfb99c" name="a33d46cb590a5d59dcfb2a6eecbcfb99c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarparse</b> () override</td></tr>
+<tr class="memdesc:a33d46cb590a5d59dcfb2a6eecbcfb99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
+<tr class="separator:a33d46cb590a5d59dcfb2a6eecbcfb99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa1246cf78816d5403bd0fa1445768df"><td class="memItemLeft" align="right" valign="top"><a id="afa1246cf78816d5403bd0fa1445768df" name="afa1246cf78816d5403bd0fa1445768df"></a>
 std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_config</b> () const</td></tr>
 <tr class="memdesc:afa1246cf78816d5403bd0fa1445768df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the configuration string (includes comments) <br /></td></tr>
@@ -267,9 +266,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval</b> (std::
 <tr class="memitem:a603f5f3e46fa0075a866a6746001f8da"><td class="memItemLeft" align="right" valign="top"><a id="a603f5f3e46fa0075a866a6746001f8da" name="a603f5f3e46fa0075a866a6746001f8da"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval</b> (std::string const &amp;conf, char const *key, std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt; &amp;values, std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt; const &amp;def_values=std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt;(0, <a class="el" href="classcolvarvalue.html">colvarvalue</a>(<a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50a1b0c36a0a1297ee2e35c2cfcb0e5583d">colvarvalue::type_notset</a>)), <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">Parse_Mode</a> const parse_mode=<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">parse_normal</a>)</td></tr>
 <tr class="separator:a603f5f3e46fa0075a866a6746001f8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61d55de061702c8842ade64f0f8f469b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a61d55de061702c8842ade64f0f8f469b">key_lookup</a> (std::string const &amp;conf, char const *key, std::string *data=NULL, size_t *save_pos=NULL)</td></tr>
-<tr class="memdesc:a61d55de061702c8842ade64f0f8f469b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-level function for parsing configuration strings; automatically adds the requested keyword to the list of valid ones.  <a href="classcolvarparse.html#a61d55de061702c8842ade64f0f8f469b">More...</a><br /></td></tr>
-<tr class="separator:a61d55de061702c8842ade64f0f8f469b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1360f692811beef726ef42cd0f9d8a7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a1360f692811beef726ef42cd0f9d8a7c">key_lookup</a> (std::string const &amp;conf, char const *key, std::string *data=nullptr, size_t *save_pos=nullptr)</td></tr>
+<tr class="memdesc:a1360f692811beef726ef42cd0f9d8a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-level function for parsing configuration strings; automatically adds the requested keyword to the list of valid ones.  <a href="classcolvarparse.html#a1360f692811beef726ef42cd0f9d8a7c">More...</a><br /></td></tr>
+<tr class="separator:a1360f692811beef726ef42cd0f9d8a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81fce3c907913611a2b1d6fa53103979"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a81fce3c907913611a2b1d6fa53103979">read_config_line</a> (std::istream &amp;is, std::string &amp;line)</td></tr>
 <tr class="memdesc:a81fce3c907913611a2b1d6fa53103979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a configuration line, adds it to config_string, and returns the stream.  <a href="classcolvarparse.html#a81fce3c907913611a2b1d6fa53103979">More...</a><br /></td></tr>
 <tr class="separator:a81fce3c907913611a2b1d6fa53103979"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -334,7 +333,7 @@ static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a8d4d1aeef4fd6ace84d59a05fe46d257"><td class="memItemLeft" align="right" valign="top"><a id="a8d4d1aeef4fd6ace84d59a05fe46d257" name="a8d4d1aeef4fd6ace84d59a05fe46d257"></a>
 static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>white_space</b> = &quot; \t&quot;</td></tr>
-<tr class="memdesc:a8d4d1aeef4fd6ace84d59a05fe46d257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepted white space delimiters, used in <a class="el" href="classcolvarparse.html#a61d55de061702c8842ade64f0f8f469b" title="Low-level function for parsing configuration strings; automatically adds the requested keyword to the...">key_lookup()</a> <br /></td></tr>
+<tr class="memdesc:a8d4d1aeef4fd6ace84d59a05fe46d257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepted white space delimiters, used in <a class="el" href="classcolvarparse.html#a1360f692811beef726ef42cd0f9d8a7c" title="Low-level function for parsing configuration strings; automatically adds the requested keyword to the...">key_lookup()</a> <br /></td></tr>
 <tr class="separator:a8d4d1aeef4fd6ace84d59a05fe46d257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
@@ -432,7 +431,7 @@ std::string const&#160;</td><td class="memItemRight" valign="bottom"><b>keyword_
 <tr class="separator:a35016f96946098712c9c8bbccfa1f387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e3abe5ee9dc4dc42bd5d4e13d385844"><td class="memItemLeft" align="right" valign="top"><a id="a9e3abe5ee9dc4dc42bd5d4e13d385844" name="a9e3abe5ee9dc4dc42bd5d4e13d385844"></a>
 std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>allowed_keywords</b></td></tr>
-<tr class="memdesc:a9e3abe5ee9dc4dc42bd5d4e13d385844"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of legal keywords for this object: this is updated by each call to colvarparse::get_keyval() or <a class="el" href="classcolvarparse.html#a61d55de061702c8842ade64f0f8f469b" title="Low-level function for parsing configuration strings; automatically adds the requested keyword to the...">colvarparse::key_lookup()</a> <br /></td></tr>
+<tr class="memdesc:a9e3abe5ee9dc4dc42bd5d4e13d385844"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of legal keywords for this object: this is updated by each call to colvarparse::get_keyval() or <a class="el" href="classcolvarparse.html#a1360f692811beef726ef42cd0f9d8a7c" title="Low-level function for parsing configuration strings; automatically adds the requested keyword to the...">colvarparse::key_lookup()</a> <br /></td></tr>
 <tr class="separator:a9e3abe5ee9dc4dc42bd5d4e13d385844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb5b1fd3b0a87b1e85435144ffa3d63a"><td class="memItemLeft" align="right" valign="top"><a id="aeb5b1fd3b0a87b1e85435144ffa3d63a" name="aeb5b1fd3b0a87b1e85435144ffa3d63a"></a>
 std::map&lt; std::string, <a class="el" href="classcolvarparse.html#a43cd0db6d3985cf207042e74e7e95c52">key_set_mode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>key_set_modes</b></td></tr>
@@ -581,8 +580,8 @@ std::map&lt; std::string, <a class="el" href="classcolvarvalue.html">colvarvalue
 
 </div>
 </div>
-<a id="a61d55de061702c8842ade64f0f8f469b" name="a61d55de061702c8842ade64f0f8f469b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61d55de061702c8842ade64f0f8f469b">&#9670;&#160;</a></span>key_lookup()</h2>
+<a id="a1360f692811beef726ef42cd0f9d8a7c" name="a1360f692811beef726ef42cd0f9d8a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1360f692811beef726ef42cd0f9d8a7c">&#9670;&#160;</a></span>key_lookup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -603,13 +602,13 @@ std::map&lt; std::string, <a class="el" href="classcolvarvalue.html">colvarvalue
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string *&#160;</td>
-          <td class="paramname"><em>data</em> = <code>NULL</code>, </td>
+          <td class="paramname"><em>data</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t *&#160;</td>
-          <td class="paramname"><em>save_pos</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>save_pos</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -728,7 +727,7 @@ std::map&lt; std::string, <a class="el" href="classcolvarvalue.html">colvarvalue
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 23 2023 13:53:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Oct 17 2023 17:17:49 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
