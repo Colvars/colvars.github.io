@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['b_5f1site_5fforce_0',['b_1site_force',['../classcolvar_1_1dipole__angle.html#a351b436c4d6718cd8b5b7eec1f78e457',1,'colvar::dipole_angle::b_1site_force()'],['../classcolvar_1_1angle.html#a0428e37e93de5982102686ba284c35ac',1,'colvar::angle::b_1site_force()'],['../classcolvar_1_1dihedral.html#aa5747f706808995a29337e79f93d4be8',1,'colvar::dihedral::b_1site_force()']]],
-  ['b_5fanisotropic_1',['b_anisotropic',['../classcolvar_1_1coordnum.html#abef15fca699acc101e3896265dba773e',1,'colvar::coordnum::b_anisotropic()'],['../classcolvar_1_1groupcoordnum.html#a120e920110c5018d51642c9e337fe326',1,'colvar::groupcoordnum::b_anisotropic()']]],
+  ['b_5f1site_5fforce_0',['b_1site_force',['../classcolvar_1_1dipole__angle.html#a351b436c4d6718cd8b5b7eec1f78e457',1,'colvar::dipole_angle::b_1site_force'],['../classcolvar_1_1angle.html#a0428e37e93de5982102686ba284c35ac',1,'colvar::angle::b_1site_force'],['../classcolvar_1_1dihedral.html#aa5747f706808995a29337e79f93d4be8',1,'colvar::dihedral::b_1site_force']]],
+  ['b_5fanisotropic_1',['b_anisotropic',['../classcolvar_1_1coordnum.html#abef15fca699acc101e3896265dba773e',1,'colvar::coordnum::b_anisotropic'],['../classcolvar_1_1groupcoordnum.html#a120e920110c5018d51642c9e337fe326',1,'colvar::groupcoordnum::b_anisotropic']]],
   ['b_5fchg_5fcenters_2',['b_chg_centers',['../classcolvarbias__restraint__moving.html#a32cb1e8e6b463ee18b9cdc8bf5637d95',1,'colvarbias_restraint_moving']]],
   ['b_5fchg_5fforce_5fk_3',['b_chg_force_k',['../classcolvarbias__restraint__moving.html#ab1cff9041928155ca12d18febfbcedcb',1,'colvarbias_restraint_moving']]],
   ['b_5fczar_5festimator_4',['b_CZAR_estimator',['../classcolvarbias__abf.html#a1a116474783af4c32ba6743592be455c',1,'colvarbias_abf']]],
@@ -14,7 +14,7 @@ var searchData=
   ['b_5fhills_5ftraj_11',['b_hills_traj',['../classcolvarbias__meta.html#a9e4580ba8205f845de2a5880bc03495a',1,'colvarbias_meta']]],
   ['b_5fhistory_5ffiles_12',['b_history_files',['../classcolvarbias__abf.html#a5c1d5cbb05be403bfd6c744c4578fdce',1,'colvarbias_abf']]],
   ['b_5fintegrate_13',['b_integrate',['../classcolvarbias__abf.html#a60e056813d9a8b855fe58ec58553a205',1,'colvarbias_abf']]],
-  ['b_5foutput_5fcenters_14',['b_output_centers',['../classcolvarbias__alb.html#aa99d2a49b960d04456b3924df92425ce',1,'colvarbias_alb::b_output_centers()'],['../classcolvarbias__restraint__centers__moving.html#add6eb54c21cb7a07f72c95ba1538e0c5',1,'colvarbias_restraint_centers_moving::b_output_centers()']]],
+  ['b_5foutput_5fcenters_14',['b_output_centers',['../classcolvarbias__alb.html#aa99d2a49b960d04456b3924df92425ce',1,'colvarbias_alb::b_output_centers'],['../classcolvarbias__restraint__centers__moving.html#add6eb54c21cb7a07f72c95ba1538e0c5',1,'colvarbias_restraint_centers_moving::b_output_centers']]],
   ['b_5foutput_5fcoupling_15',['b_output_coupling',['../classcolvarbias__alb.html#ad8f5a99b760ce31a91ffbd2b05ceba32',1,'colvarbias_alb']]],
   ['b_5foutput_5fenergy_16',['b_output_energy',['../classcolvarbias.html#ad108a73cf444f59c16e68966ffc2495c',1,'colvarbias']]],
   ['b_5foutput_5fgrad_17',['b_output_grad',['../classcolvarbias__alb.html#a44fe18efec92ae1b008b0b8c9f86b008',1,'colvarbias_alb']]],
@@ -34,7 +34,7 @@ var searchData=
   ['bias_5fenergy_31',['bias_energy',['../classcolvarbias.html#a33f857771c16fc663e0efc8ad549e829',1,'colvarbias']]],
   ['bias_5ftemperature_32',['bias_temperature',['../classcolvarbias__meta.html#a54607f583f3e1d3c36a52ec3a6852c42',1,'colvarbias_meta']]],
   ['bias_5ftype_33',['bias_type',['../classcolvarbias.html#acb2e5c8601ca9f25869c8197d62c5450',1,'colvarbias']]],
-  ['biases_34',['biases',['../classcolvar.html#a1eebc46ed5c021fc18a1b8f374db4a21',1,'colvar::biases()'],['../classcolvarmodule.html#ac843326ecf8cf46c7852ccdc746d31a9',1,'colvarmodule::biases()']]],
+  ['biases_34',['biases',['../classcolvar.html#a1eebc46ed5c021fc18a1b8f374db4a21',1,'colvar::biases'],['../classcolvarmodule.html#ac843326ecf8cf46c7852ccdc746d31a9',1,'colvarmodule::biases']]],
   ['biases_5factive_35',['biases_active',['../classcolvarmodule.html#a6af0b37065218097ddcb87286a7f1371',1,'colvarmodule']]],
   ['biases_5factive_5f_36',['biases_active_',['../classcolvarmodule.html#a40366a8e0dbe3a3d3d35da388e158c85',1,'colvarmodule']]],
   ['biasing_5fforce_5fscaling_5ffactors_37',['biasing_force_scaling_factors',['../classcolvarbias.html#aff7750281ca9601e58b6628be38f1e66',1,'colvarbias']]],

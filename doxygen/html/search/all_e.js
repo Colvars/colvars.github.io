@@ -7,7 +7,7 @@ var searchData=
   ['n_5fvector_3c_20double_20_3e_4',['n_vector&lt; double &gt;',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
   ['n_5fvector_3c_20int_20_3e_5',['n_vector&lt; int &gt;',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
   ['n_5fvector_3c_20std_3a_3avector_3c_20double_20_3e_20_3e_6',['n_vector&lt; std::vector&lt; double &gt; &gt;',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
-  ['name_7',['name',['../classcolvar_1_1cvc.html#a6eb2279897e7041605087e0d288e8ad2',1,'colvar::cvc::name()'],['../classcolvar.html#a3923a4894e1d95a8f15f3f2cd54de469',1,'colvar::name()'],['../classcolvarmodule_1_1atom__group.html#a337392bb4c1e1145897fc828497074ea',1,'colvarmodule::atom_group::name()'],['../classcolvarbias.html#a9d6e2e6cbb6866eeb5cf6cef8f8e31c2',1,'colvarbias::name()']]],
+  ['name_7',['name',['../classcolvar_1_1cvc.html#a6eb2279897e7041605087e0d288e8ad2',1,'colvar::cvc::name'],['../classcolvar.html#a3923a4894e1d95a8f15f3f2cd54de469',1,'colvar::name'],['../classcolvarmodule_1_1atom__group.html#a337392bb4c1e1145897fc828497074ea',1,'colvarmodule::atom_group::name'],['../classcolvarbias.html#a9d6e2e6cbb6866eeb5cf6cef8f8e31c2',1,'colvarbias::name']]],
   ['named_5fatom_5fgroups_8',['named_atom_groups',['../classcolvarmodule.html#a1bcdb9ad4bd044a43cf8cf1209375e59',1,'colvarmodule']]],
   ['nd_9',['nd',['../classcolvar__grid.html#ad2917ddec512db6205e70b0f2f7e39fe',1,'colvar_grid']]],
   ['neuralnetwork_10',['neuralNetwork',['../classcolvar_1_1neuralNetwork.html',1,'colvar']]],

@@ -14,7 +14,7 @@ var searchData=
   ['param_5fmap_11',['param_map',['../classcolvarparams.html#a226a5f768da504f9922d58cabe47e9b4',1,'colvarparams']]],
   ['parents_12',['parents',['../classcolvardeps.html#ae0b2b33dae9fdb9de73aad8d0f4d292a',1,'colvardeps']]],
   ['parse_13',['parse',['../classcolvarmodule.html#a8be73a0b3c3d72211fbd8349e7d1d41e',1,'colvarmodule']]],
-  ['period_14',['period',['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period()'],['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period()']]],
+  ['period_14',['period',['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period'],['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period']]],
   ['periodic_15',['periodic',['../classcolvar__grid.html#ae7ae2b01e5c6afa691889907419aa4ec',1,'colvar_grid']]],
   ['pmf_16',['pmf',['../classcolvarbias__abf.html#a1469913367a714dc4d95a04dad91b8e2',1,'colvarbias_abf']]],
   ['pmf_5fgrid_5fexp_5favg_17',['pmf_grid_exp_avg',['../classcolvarbias__reweightaMD.html#aec93403d1838be5d01165e04d095f0bb',1,'colvarbias_reweightaMD']]],

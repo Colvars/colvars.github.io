@@ -2,7 +2,7 @@ var searchData=
 [
   ['hard_5flower_5fboundaries_0',['hard_lower_boundaries',['../classcolvar__grid.html#aae4b6fde4775d004cb9e8872833d01be',1,'colvar_grid']]],
   ['hard_5fupper_5fboundaries_1',['hard_upper_boundaries',['../classcolvar__grid.html#a3537a8b9704b79a68da7eb5e75313e6d',1,'colvar_grid']]],
-  ['has_5fdata_2',['has_data',['../classcolvarbias.html#aa33d58dccf5a5c2a1cab78a4412b8ed1',1,'colvarbias::has_data()'],['../classcolvar__grid.html#a5fbd378c88cf06662a64d6ccd27a8d63',1,'colvar_grid::has_data()']]],
+  ['has_5fdata_2',['has_data',['../classcolvarbias.html#aa33d58dccf5a5c2a1cab78a4412b8ed1',1,'colvarbias::has_data'],['../classcolvar__grid.html#a5fbd378c88cf06662a64d6ccd27a8d63',1,'colvar_grid::has_data']]],
   ['has_5fparent_5fdata_3',['has_parent_data',['../classcolvar__grid.html#a95468da24b815194702cb7dbb1257af8',1,'colvar_grid']]],
   ['has_5fuser_5fdefined_5ffitting_4',['has_user_defined_fitting',['../classcolvar_1_1CartesianBasedPath.html#aa4aa0cff5f4af7bde6767adf1d417716',1,'colvar::CartesianBasedPath']]],
   ['have_5fscripts_5',['have_scripts',['../classcolvarproxy__script.html#a0ed6215a91e384bad57bfe828e3396a0',1,'colvarproxy_script']]],
@@ -17,5 +17,5 @@ var searchData=
   ['hills_5fenergy_5fgradients_14',['hills_energy_gradients',['../classcolvarbias__meta.html#a0b58348a2342fefab617cc54595a4b82',1,'colvarbias_meta']]],
   ['hills_5foff_5fgrid_15',['hills_off_grid',['../classcolvarbias__meta.html#a0ee2898acc21548126d39092a1388789',1,'colvarbias_meta']]],
   ['hills_5ftraj_5fos_5fbuf_16',['hills_traj_os_buf',['../classcolvarbias__meta.html#a62ac038709ae6de3a1e23e10bb5eca3e',1,'colvarbias_meta']]],
-  ['history_5ffreq_17',['history_freq',['../classcolvarbias__abf.html#ac6c3f90b9d2e231ff13b1fcc3d500449',1,'colvarbias_abf::history_freq()'],['../classcolvarbias__reweightaMD.html#ade943ada9d16e25c4a0ca97ecc813e1c',1,'colvarbias_reweightaMD::history_freq()']]]
+  ['history_5ffreq_17',['history_freq',['../classcolvarbias__abf.html#ac6c3f90b9d2e231ff13b1fcc3d500449',1,'colvarbias_abf::history_freq'],['../classcolvarbias__reweightaMD.html#ade943ada9d16e25c4a0ca97ecc813e1c',1,'colvarbias_reweightaMD::history_freq']]]
 ];

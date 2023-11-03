@@ -9,7 +9,7 @@ var searchData=
   ['m_5fweights_6',['m_weights',['../classneuralnetworkCV_1_1denseLayer.html#ae24f31022c70068de4bb6fe501c775a6',1,'neuralnetworkCV::denseLayer']]],
   ['main_7',['main',['../classcolvar_1_1distance__z.html#a28518aa5c21b928dbde766a9da6812dd',1,'colvar::distance_z']]],
   ['mass_8',['mass',['../classcolvarmodule_1_1atom.html#ac62f1528c0cc97068d0e6218687c0bcd',1,'colvarmodule::atom']]],
-  ['matching_5fstate_9',['matching_state',['../classcolvarbias.html#a11e947b5d4c578a6f019ec8c14b99282',1,'colvarbias::matching_state()'],['../classcolvar.html#a40e39f0863088915eabdd1ecae2b7464',1,'colvar::matching_state()']]],
+  ['matching_5fstate_9',['matching_state',['../classcolvarbias.html#a11e947b5d4c578a6f019ec8c14b99282',1,'colvarbias::matching_state'],['../classcolvar.html#a40e39f0863088915eabdd1ecae2b7464',1,'colvar::matching_state']]],
   ['max_5fcoupling_5frange_10',['max_coupling_range',['../classcolvarbias__alb.html#ac6965e52376cd8271c7caafe80b9616e',1,'colvarbias_alb']]],
   ['max_5fforce_11',['max_force',['../classcolvarbias__abf.html#a22609cc69894961a4eeecd66a08c9efd',1,'colvarbias_abf']]],
   ['max_5flength_5f_12',['max_length_',['../classcvm_1_1memory__stream.html#aa8c304ae25bbfa2a246c312f6b689fb4',1,'cvm::memory_stream']]],

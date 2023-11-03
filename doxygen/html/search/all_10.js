@@ -16,7 +16,7 @@ var searchData=
   ['param_5fgrad_5fmap_13',['param_grad_map',['../classcolvarparams.html#a66393bba85cc0c0bab029ac5bc48b5af',1,'colvarparams']]],
   ['param_5fmap_14',['param_map',['../classcolvarparams.html#a226a5f768da504f9922d58cabe47e9b4',1,'colvarparams']]],
   ['parents_15',['parents',['../classcolvardeps.html#ae0b2b33dae9fdb9de73aad8d0f4d292a',1,'colvardeps']]],
-  ['parse_16',['parse',['../classcolvarmodule.html#a8be73a0b3c3d72211fbd8349e7d1d41e',1,'colvarmodule::parse()'],['../classcolvarmodule_1_1atom__group.html#aeeaec3b0308cc2446cf72abb162ef560',1,'colvarmodule::atom_group::parse()']]],
+  ['parse_16',['parse',['../classcolvarmodule.html#a8be73a0b3c3d72211fbd8349e7d1d41e',1,'colvarmodule::parse'],['../classcolvarmodule_1_1atom__group.html#aeeaec3b0308cc2446cf72abb162ef560',1,'colvarmodule::atom_group::parse()']]],
   ['parse_5fanalysis_17',['parse_analysis',['../classcolvar.html#a2fb6d950b3dec7303a0d5fe3d5170774',1,'colvar']]],
   ['parse_5fbiases_18',['parse_biases',['../classcolvarmodule.html#af51dcd2d41b68e0c0842a15bdac82355',1,'colvarmodule']]],
   ['parse_5fbiases_5ftype_19',['parse_biases_type',['../classcolvarmodule.html#aab75e5eb6f84b11af04e625d57454e0d',1,'colvarmodule']]],
@@ -38,7 +38,7 @@ var searchData=
   ['parse_5frequired_35',['parse_required',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4aea8b5ea1146e79da1990cec345839063',1,'colvarparse']]],
   ['parse_5frestart_36',['parse_restart',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a907207b4cc805305732c158cd3204d5b',1,'colvarparse']]],
   ['parse_5fsilent_37',['parse_silent',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4acd1135f68e4757747be4c0e586dcf82e',1,'colvarparse']]],
-  ['period_38',['period',['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period()'],['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period()']]],
+  ['period_38',['period',['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period'],['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period']]],
   ['periodic_39',['periodic',['../classcolvar__grid.html#ae7ae2b01e5c6afa691889907419aa4ec',1,'colvar_grid']]],
   ['periodic_5fboundaries_40',['periodic_boundaries',['../classcolvar.html#a019d8e3ebdc7f4779830840fc89d19bd',1,'colvar::periodic_boundaries() const'],['../classcolvar.html#a739451904d8933c8354f48ea3d3ce184',1,'colvar::periodic_boundaries(colvarvalue const &amp;lb, colvarvalue const &amp;ub) const']]],
   ['pmf_41',['pmf',['../classcolvarbias__abf.html#a1469913367a714dc4d95a04dad91b8e2',1,'colvarbias_abf']]],
@@ -67,5 +67,5 @@ var searchData=
   ['proc_5ffeatures_64',['proc_features',['../classcolvarscript.html#a1972d88606c488092d944c43da2a92c1',1,'colvarscript']]],
   ['project_5fhills_65',['project_hills',['../classcolvarbias__meta.html#a45ff2641ceb0a9c13d8fa4f9c53fccd5',1,'colvarbias_meta']]],
   ['provide_66',['provide',['../classcolvardeps.html#ae75c130f4f2c4ef5f50d1c0dcbc97276',1,'colvardeps']]],
-  ['proxy_67',['proxy',['../classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c',1,'colvarmodule::proxy()'],['../classcolvarscript.html#ab22d8092180d1141b08fc088ed480648',1,'colvarscript::proxy()']]]
+  ['proxy_67',['proxy',['../classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c',1,'colvarmodule::proxy'],['../classcolvarscript.html#ab22d8092180d1141b08fc088ed480648',1,'colvarscript::proxy()']]]
 ];

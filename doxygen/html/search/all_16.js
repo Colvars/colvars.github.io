@@ -24,7 +24,7 @@ var searchData=
   ['velocities_21',['velocities',['../classcolvarmodule_1_1atom__group.html#ae5f071cb658046c0461300fc746986f6',1,'colvarmodule::atom_group']]],
   ['velocity_22',['velocity',['../classcolvar.html#a143b113defbb00d4bc55fc7be0e9f1dd',1,'colvar']]],
   ['version_23',['version',['../classcolvarmodule.html#aac7deda838913390b44837fd18160638',1,'colvarmodule']]],
-  ['version_5fint_24',['version_int',['../classcolvarmodule.html#aaef1f5d12fc5f6cee66460a57a71861f',1,'colvarmodule::version_int()'],['../classcolvarproxy.html#a35b3fe489dcc03a99d89df8d8815effb',1,'colvarproxy::version_int()']]],
+  ['version_5fint_24',['version_int',['../classcolvarmodule.html#aaef1f5d12fc5f6cee66460a57a71861f',1,'colvarmodule::version_int'],['../classcolvarproxy.html#a35b3fe489dcc03a99d89df8d8815effb',1,'colvarproxy::version_int']]],
   ['version_5fnumber_25',['version_number',['../classcolvarmodule.html#abffa8e9f749d0aa415c0925f64c9a81a',1,'colvarmodule::version_number()'],['../classcolvarproxy.html#ab1003f752c8c9c5b154ad7512be430f8',1,'colvarproxy::version_number()']]],
   ['vmd_26',['vmd',['../classcolvarproxy__vmd.html#a78dff91177b772a99db73a2821649043',1,'colvarproxy_vmd']]],
   ['vmdmol_27',['vmdmol',['../classcolvarproxy__vmd.html#a93653170953144fa86a880181e589023',1,'colvarproxy_vmd']]],
