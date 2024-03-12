@@ -172,12 +172,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>init_from_boundaries</
 <tr class="separator:a58caf37200a618e03d58b871a231c342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec64cb854fa9a615bfebdff6d0e51897"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#aec64cb854fa9a615bfebdff6d0e51897">wrap</a> (std::vector&lt; int &gt; &amp;ix) const</td></tr>
 <tr class="separator:aec64cb854fa9a615bfebdff6d0e51897"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a030da1ee0d90efc40730a3956e2c1283"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a030da1ee0d90efc40730a3956e2c1283">wrap_edge</a> (std::vector&lt; int &gt; &amp;ix) const</td></tr>
-<tr class="separator:a030da1ee0d90efc40730a3956e2c1283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfcf6217fbe3bc6042412ad71e54fccd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#adfcf6217fbe3bc6042412ad71e54fccd">wrap_detect_edge</a> (std::vector&lt; int &gt; &amp;ix) const</td></tr>
+<tr class="separator:adfcf6217fbe3bc6042412ad71e54fccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6b1da02dc6d6b98264cecad2e6b586"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a9a6b1da02dc6d6b98264cecad2e6b586">wrap_to_edge</a> (std::vector&lt; int &gt; &amp;ix, std::vector&lt; int &gt; &amp;edge_bin) const</td></tr>
+<tr class="separator:a9a6b1da02dc6d6b98264cecad2e6b586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd72e9c1c4120ed359c7f8478470f60"><td class="memItemLeft" align="right" valign="top"><a id="aacd72e9c1c4120ed359c7f8478470f60" name="aacd72e9c1c4120ed359c7f8478470f60"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>current_bin_scalar</b> (int const i) const</td></tr>
 <tr class="memdesc:aacd72e9c1c4120ed359c7f8478470f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report the bin corresponding to the current value of variable i. <br /></td></tr>
 <tr class="separator:aacd72e9c1c4120ed359c7f8478470f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43996f554dd1f351b0b50c489575a4c6"><td class="memItemLeft" align="right" valign="top"><a id="a43996f554dd1f351b0b50c489575a4c6" name="a43996f554dd1f351b0b50c489575a4c6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>current_bin_flat_bound</b> () const</td></tr>
+<tr class="memdesc:a43996f554dd1f351b0b50c489575a4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report the flattened bin address corresponding to the current value of all variables and assign first or last bin if out of boundaries. <br /></td></tr>
+<tr class="separator:a43996f554dd1f351b0b50c489575a4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a158b510204f876314edaad05e2ade281"><td class="memItemLeft" align="right" valign="top"><a id="a158b510204f876314edaad05e2ade281" name="a158b510204f876314edaad05e2ade281"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>current_bin_scalar_bound</b> (int const i) const</td></tr>
 <tr class="memdesc:a158b510204f876314edaad05e2ade281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report the bin corresponding to the current value of variable i and assign first or last bin if out of boundaries. <br /></td></tr>
@@ -222,6 +228,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_value</b> (std::v
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_value</b> (size_t i, T const &amp;t)</td></tr>
 <tr class="memdesc:a07d94e41834a8b04074120bd618086eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value at the point with linear address i (for speed) <br /></td></tr>
 <tr class="separator:a07d94e41834a8b04074120bd618086eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ae7b235818784668aa2a44cfc0c9e1b"><td class="memItemLeft" align="right" valign="top"><a id="a7ae7b235818784668aa2a44cfc0c9e1b" name="a7ae7b235818784668aa2a44cfc0c9e1b"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>get_value</b> (size_t i) const</td></tr>
+<tr class="memdesc:a7ae7b235818784668aa2a44cfc0c9e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value at the point with linear address i (for speed) <br /></td></tr>
+<tr class="separator:a7ae7b235818784668aa2a44cfc0c9e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3286f4e210ee3089da2aadd50f2cb91"><td class="memItemLeft" align="right" valign="top"><a id="aa3286f4e210ee3089da2aadd50f2cb91" name="aa3286f4e210ee3089da2aadd50f2cb91"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>delta_grid</b> (<a class="el" href="classcolvar__grid.html">colvar_grid</a>&lt; T &gt; const &amp;other_grid)</td></tr>
 <tr class="memdesc:aa3286f4e210ee3089da2aadd50f2cb91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the change from this to other_grid and store the result in this. this_grid := other_grid - this_grid Grids must have the same dimensions. <br /></td></tr>
@@ -973,7 +983,7 @@ template&lt;class T &gt; </div>
 
 <p>Get the value from a formatted output and transform it into the internal representation (the two may be different, e.g. when using <a class="el" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n-dim colvar space.">colvar_grid_count</a>) </p>
 
-<p>Reimplemented in <a class="el" href="classcolvar__grid__scalar.html#a48642b4b9fe371939f3b0b3e0e7e45f2">colvar_grid_scalar</a>, <a class="el" href="classcolvar__grid__gradient.html#a11f5756119d196049433fe6c063716fc">colvar_grid_gradient</a>, and <a class="el" href="classcolvar__grid__count.html#aa5ab1f81d396f757b5b6bfe63ffddeec">colvar_grid_count</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvar__grid__scalar.html#abb178fef5691ea82586e1e3c1b71b028">colvar_grid_scalar</a>, <a class="el" href="classcolvar__grid__gradient.html#aa7abbca8536f02ae872d54752b3d6601">colvar_grid_gradient</a>, and <a class="el" href="classcolvar__grid__count.html#aa5ab1f81d396f757b5b6bfe63ffddeec">colvar_grid_count</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1025,7 @@ template&lt;class T &gt; </div>
 
 <p>Return the value suitable for output purposes (so that it may be rescaled or manipulated without changing it permanently) </p>
 
-<p>Reimplemented in <a class="el" href="classcolvar__grid__scalar.html#aa2b03908a5beb4484d05e4b155ac889c">colvar_grid_scalar</a>, and <a class="el" href="classcolvar__grid__gradient.html#af795fdbf375b5a65d0b39b085e337363">colvar_grid_gradient</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvar__grid__scalar.html#a839acc2c431941c21f14337f245fcaf4">colvar_grid_scalar</a>, and <a class="el" href="classcolvar__grid__gradient.html#a8d9200b457e16c11a0dfa826fc0f826c">colvar_grid_gradient</a>.</p>
 
 </div>
 </div>
@@ -1048,8 +1058,8 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="a030da1ee0d90efc40730a3956e2c1283" name="a030da1ee0d90efc40730a3956e2c1283"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a030da1ee0d90efc40730a3956e2c1283">&#9670;&#160;</a></span>wrap_edge()</h2>
+<a id="adfcf6217fbe3bc6042412ad71e54fccd" name="adfcf6217fbe3bc6042412ad71e54fccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfcf6217fbe3bc6042412ad71e54fccd">&#9670;&#160;</a></span>wrap_detect_edge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1060,7 +1070,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classcolvar__grid.html">colvar_grid</a>&lt; T &gt;::wrap_edge </td>
+          <td class="memname">bool <a class="el" href="classcolvar__grid.html">colvar_grid</a>&lt; T &gt;::wrap_detect_edge </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
           <td class="paramname"><em>ix</em></td><td>)</td>
@@ -1074,6 +1084,45 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p >Wrap an index vector around periodic boundary conditions or detects edges if non-periodic </p>
+
+</div>
+</div>
+<a id="a9a6b1da02dc6d6b98264cecad2e6b586" name="a9a6b1da02dc6d6b98264cecad2e6b586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6b1da02dc6d6b98264cecad2e6b586">&#9670;&#160;</a></span>wrap_to_edge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classcolvar__grid.html">colvar_grid</a>&lt; T &gt;::wrap_to_edge </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>edge_bin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Wrap an index vector around periodic boundary conditions or brings back to nearest edge if non-periodic </p>
 
 </div>
 </div>
@@ -1158,7 +1207,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 8 2023 17:45:35 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 12 2024 18:07:52 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

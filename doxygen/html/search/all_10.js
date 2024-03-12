@@ -41,7 +41,7 @@ var searchData=
   ['period_38',['period',['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period()'],['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period()']]],
   ['periodic_39',['periodic',['../classcolvar__grid.html#ae7ae2b01e5c6afa691889907419aa4ec',1,'colvar_grid']]],
   ['periodic_5fboundaries_40',['periodic_boundaries',['../classcolvar.html#a019d8e3ebdc7f4779830840fc89d19bd',1,'colvar::periodic_boundaries() const'],['../classcolvar.html#a739451904d8933c8354f48ea3d3ce184',1,'colvar::periodic_boundaries(colvarvalue const &amp;lb, colvarvalue const &amp;ub) const']]],
-  ['pmf_41',['pmf',['../classcolvarbias__abf.html#a1469913367a714dc4d95a04dad91b8e2',1,'colvarbias_abf']]],
+  ['pmf_41',['pmf',['../classcolvarbias__abf.html#a64ccd9c938b77a1b2e3462e95a32b554',1,'colvarbias_abf']]],
   ['pmf_5fgrid_5fexp_5favg_42',['pmf_grid_exp_avg',['../classcolvarbias__reweightaMD.html#aec93403d1838be5d01165e04d095f0bb',1,'colvarbias_reweightaMD']]],
   ['polar_5fphi_43',['polar_phi',['../classcolvar_1_1polar__phi.html',1,'colvar']]],
   ['polar_5ftheta_44',['polar_theta',['../classcolvar_1_1polar__theta.html',1,'colvar']]],

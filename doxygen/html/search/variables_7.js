@@ -17,5 +17,6 @@ var searchData=
   ['hills_5fenergy_5fgradients_14',['hills_energy_gradients',['../classcolvarbias__meta.html#a0b58348a2342fefab617cc54595a4b82',1,'colvarbias_meta']]],
   ['hills_5foff_5fgrid_15',['hills_off_grid',['../classcolvarbias__meta.html#a0ee2898acc21548126d39092a1388789',1,'colvarbias_meta']]],
   ['hills_5ftraj_5fos_5fbuf_16',['hills_traj_os_buf',['../classcolvarbias__meta.html#a62ac038709ae6de3a1e23e10bb5eca3e',1,'colvarbias_meta']]],
-  ['history_5ffreq_17',['history_freq',['../classcolvarbias__abf.html#ac6c3f90b9d2e231ff13b1fcc3d500449',1,'colvarbias_abf::history_freq()'],['../classcolvarbias__reweightaMD.html#ade943ada9d16e25c4a0ca97ecc813e1c',1,'colvarbias_reweightaMD::history_freq()']]]
+  ['history_5ffreq_17',['history_freq',['../classcolvarbias__abf.html#ac6c3f90b9d2e231ff13b1fcc3d500449',1,'colvarbias_abf::history_freq()'],['../classcolvarbias__reweightaMD.html#ade943ada9d16e25c4a0ca97ecc813e1c',1,'colvarbias_reweightaMD::history_freq()']]],
+  ['history_5flast_5fstep_18',['history_last_step',['../classcolvarbias__abf.html#a8889a9568b07d43a83bec607a0993f0d',1,'colvarbias_abf']]]
 ];

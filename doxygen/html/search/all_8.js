@@ -22,5 +22,6 @@ var searchData=
   ['hills_5ftraj_5ffile_5fname_19',['hills_traj_file_name',['../classcolvarbias__meta.html#ade7d0a41d81031cc7b2a24e98815fdf8',1,'colvarbias_meta']]],
   ['hills_5ftraj_5fos_5fbuf_20',['hills_traj_os_buf',['../classcolvarbias__meta.html#a62ac038709ae6de3a1e23e10bb5eca3e',1,'colvarbias_meta']]],
   ['hist_5fto_5fpmf_21',['hist_to_pmf',['../classcolvarbias__reweightaMD.html#ad6aff88317062d835992d1fb21e97fec',1,'colvarbias_reweightaMD']]],
-  ['history_5ffreq_22',['history_freq',['../classcolvarbias__abf.html#ac6c3f90b9d2e231ff13b1fcc3d500449',1,'colvarbias_abf::history_freq()'],['../classcolvarbias__reweightaMD.html#ade943ada9d16e25c4a0ca97ecc813e1c',1,'colvarbias_reweightaMD::history_freq()']]]
+  ['history_5ffreq_22',['history_freq',['../classcolvarbias__abf.html#ac6c3f90b9d2e231ff13b1fcc3d500449',1,'colvarbias_abf::history_freq()'],['../classcolvarbias__reweightaMD.html#ade943ada9d16e25c4a0ca97ecc813e1c',1,'colvarbias_reweightaMD::history_freq()']]],
+  ['history_5flast_5fstep_23',['history_last_step',['../classcolvarbias__abf.html#a8889a9568b07d43a83bec607a0993f0d',1,'colvarbias_abf']]]
 ];

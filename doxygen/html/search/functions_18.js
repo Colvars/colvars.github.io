@@ -8,7 +8,7 @@ var searchData=
   ['_7ecolvar_5fgrid_5fgradient_5',['~colvar_grid_gradient',['../classcolvar__grid__gradient.html#aa636ed0f18b2804d004fa74b51a774f5',1,'colvar_grid_gradient']]],
   ['_7ecolvar_5fgrid_5fscalar_6',['~colvar_grid_scalar',['../classcolvar__grid__scalar.html#a6d9739f0762014396db334243b8c7c99',1,'colvar_grid_scalar']]],
   ['_7ecolvarbias_7',['~colvarbias',['../classcolvarbias.html#aed44dcc9384af83bbb552c9950ccb3dd',1,'colvarbias']]],
-  ['_7ecolvarbias_5fabf_8',['~colvarbias_abf',['../classcolvarbias__abf.html#a74aeaf77ee9c8407498bf2b022abb359',1,'colvarbias_abf']]],
+  ['_7ecolvarbias_5fabf_8',['~colvarbias_abf',['../classcolvarbias__abf.html#af882ee66affa0a2f685dc4ccf21f83db',1,'colvarbias_abf']]],
   ['_7ecolvarmodule_9',['~colvarmodule',['../classcolvarmodule.html#ae937eb6e1d52e19be1ece54a741fad28',1,'colvarmodule']]],
   ['_7ecolvarparams_10',['~colvarparams',['../classcolvarparams.html#a4d86c07697b4d5ad190110b8c3e8c85f',1,'colvarparams']]],
   ['_7ecolvarparse_11',['~colvarparse',['../classcolvarparse.html#a33d46cb590a5d59dcfb2a6eecbcfb99c',1,'colvarparse']]],

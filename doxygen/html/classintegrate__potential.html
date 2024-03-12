@@ -71,6 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classintegrate__potential-members.html">List of all members</a>  </div>
@@ -99,35 +100,38 @@ Collaboration diagram for integrate_potential:</div>
 <div class="dyncontent">
 <div class="center"><img src="classintegrate__potential__coll__graph.png" border="0" usemap="#aintegrate__potential_coll__map" alt="Collaboration graph"/></div>
 <map name="aintegrate__potential_coll__map" id="aintegrate__potential_coll__map">
-<area shape="rect" title="Integrate (1D, 2D or 3D) gradients." alt="" coords="25,493,153,519"/>
-<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="5,317,132,343"/>
-<area shape="rect" href="classcolvar__grid__gradient.html" title="Class for accumulating the gradient of a scalar function on a grid." alt="" coords="108,405,245,431"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="181,229,343,255"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="150,80,241,105"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="67,155,209,180"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="145,5,245,31"/>
-<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="34,229,157,255"/>
+<area shape="rect" title="Integrate (1D, 2D or 3D) gradients." alt="" coords="45,416,173,441"/>
+<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="46,341,173,367"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="5,204,168,229"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="53,80,144,105"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="121,155,263,180"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="49,5,149,31"/>
+<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="125,253,248,279"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6273462e3fa8db10a5261df8eefd1fcb"><td class="memItemLeft" align="right" valign="top"><a id="a6273462e3fa8db10a5261df8eefd1fcb" name="a6273462e3fa8db10a5261df8eefd1fcb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>integrate_potential</b> (std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvar__grid__gradient.html">colvar_grid_gradient</a> *gradients)</td></tr>
-<tr class="memdesc:a6273462e3fa8db10a5261df8eefd1fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a vector of colvars + gradient grid. <br /></td></tr>
-<tr class="separator:a6273462e3fa8db10a5261df8eefd1fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2717dbf678a2df1388cc0b9ccbada2"><td class="memItemLeft" align="right" valign="top"><a id="aec2717dbf678a2df1388cc0b9ccbada2" name="aec2717dbf678a2df1388cc0b9ccbada2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>integrate_potential</b> (std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, std::shared_ptr&lt; <a class="el" href="classcolvar__grid__gradient.html">colvar_grid_gradient</a> &gt; gradients)</td></tr>
+<tr class="memdesc:aec2717dbf678a2df1388cc0b9ccbada2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a vector of colvars + gradient grid. <br /></td></tr>
+<tr class="separator:aec2717dbf678a2df1388cc0b9ccbada2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7cb2545aaefe072c9aa4c8d61415c88"><td class="memItemLeft" align="right" valign="top"><a id="aa7cb2545aaefe072c9aa4c8d61415c88" name="aa7cb2545aaefe072c9aa4c8d61415c88"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>integrate_potential</b> (<a class="el" href="classcolvar__grid__gradient.html">colvar_grid_gradient</a> *gradients)</td></tr>
 <tr class="memdesc:aa7cb2545aaefe072c9aa4c8d61415c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a gradient grid (for processing grid files without a Colvars config) <br /></td></tr>
 <tr class="separator:aa7cb2545aaefe072c9aa4c8d61415c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6444281b7f5f213cbc0a333b481aeed1"><td class="memItemLeft" align="right" valign="top"><a id="a6444281b7f5f213cbc0a333b481aeed1" name="a6444281b7f5f213cbc0a333b481aeed1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>integrate</b> (const int itmax, const <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &amp;tol, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &amp;err)</td></tr>
-<tr class="memdesc:a6444281b7f5f213cbc0a333b481aeed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate potential from divergence (in 2D); return number of steps. <br /></td></tr>
-<tr class="separator:a6444281b7f5f213cbc0a333b481aeed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add34f49f69169f081cc3ae32c7b63f3c"><td class="memItemLeft" align="right" valign="top"><a id="add34f49f69169f081cc3ae32c7b63f3c" name="add34f49f69169f081cc3ae32c7b63f3c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>integrate</b> (const int itmax, const <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &amp;tol, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &amp;err, bool verbose=true)</td></tr>
+<tr class="memdesc:add34f49f69169f081cc3ae32c7b63f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate potential from divergence (in 2D); return number of steps. <br /></td></tr>
+<tr class="separator:add34f49f69169f081cc3ae32c7b63f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7483ce77d0fd7f041b1d5ec79479b1cb"><td class="memItemLeft" align="right" valign="top"><a id="a7483ce77d0fd7f041b1d5ec79479b1cb" name="a7483ce77d0fd7f041b1d5ec79479b1cb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update_div_neighbors</b> (const std::vector&lt; int &gt; &amp;ix)</td></tr>
 <tr class="memdesc:a7483ce77d0fd7f041b1d5ec79479b1cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update matrix containing divergence and boundary conditions based on new gradient point value, in neighboring bins. <br /></td></tr>
 <tr class="separator:a7483ce77d0fd7f041b1d5ec79479b1cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d96f52f2503f183eb8b9ac2c65a8123"><td class="memItemLeft" align="right" valign="top"><a id="a2d96f52f2503f183eb8b9ac2c65a8123" name="a2d96f52f2503f183eb8b9ac2c65a8123"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update_div_local</b> (const std::vector&lt; int &gt; &amp;ix)</td></tr>
+<tr class="memdesc:a2d96f52f2503f183eb8b9ac2c65a8123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update matrix containing divergence and boundary conditions called by update_div_neighbors and by colvarbias_abf::adiabatic_reweighting_update_gradient_pmf. <br /></td></tr>
+<tr class="separator:a2d96f52f2503f183eb8b9ac2c65a8123"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a77b07afa1628d797c7287061787050"><td class="memItemLeft" align="right" valign="top"><a id="a3a77b07afa1628d797c7287061787050" name="a3a77b07afa1628d797c7287061787050"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_div</b> ()</td></tr>
 <tr class="memdesc:a3a77b07afa1628d797c7287061787050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set matrix containing divergence and boundary conditions based on complete gradient grid. <br /></td></tr>
@@ -203,7 +207,7 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>read_mu
 <tr class="separator:aa39c4fd766d12c03b3944d8577fad80a inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5223d591065d4de8fb62e73791d6c2e inherit pub_methods_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top"><a id="aa5223d591065d4de8fb62e73791d6c2e" name="aa5223d591065d4de8fb62e73791d6c2e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>read_multicol</b> (std::string const &amp;filename, std::string description=&quot;grid file&quot;, bool add=false)</td></tr>
-<tr class="memdesc:aa5223d591065d4de8fb62e73791d6c2e inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a grid written by <a class="el" href="classcolvar__grid__scalar.html#a9eed1afdf0c1b21d1df88b88c87ed905" title="Write grid in a format which is both human-readable and gnuplot-friendly.">write_multicol()</a>, incrementin if data is true. <br /></td></tr>
+<tr class="memdesc:aa5223d591065d4de8fb62e73791d6c2e inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a grid written by <a class="el" href="classcolvar__grid__scalar.html#a9eed1afdf0c1b21d1df88b88c87ed905" title="Write grid in a format which is both human-readable and gnuplot-friendly.">write_multicol()</a>, incrementing if add is true. <br /></td></tr>
 <tr class="separator:aa5223d591065d4de8fb62e73791d6c2e inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eed1afdf0c1b21d1df88b88c87ed905 inherit pub_methods_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top"><a id="a9eed1afdf0c1b21d1df88b88c87ed905" name="a9eed1afdf0c1b21d1df88b88c87ed905"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>write_multicol</b> (std::ostream &amp;os) const</td></tr>
@@ -225,16 +229,20 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>write_opendx</b> (std:
 void&#160;</td><td class="memItemRight" valign="bottom"><b>vector_gradient_finite_diff</b> (const std::vector&lt; int &gt; &amp;ix0, std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &amp;grad)</td></tr>
 <tr class="memdesc:af6730cd3a934dac6ce91f0521352021a inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the gradient of the scalar field from finite differences Input coordinates are those of gradient grid, shifted wrt scalar grid Should not be called on edges of scalar grid, provided the latter has margins wrt gradient grid. <br /></td></tr>
 <tr class="separator:af6730cd3a934dac6ce91f0521352021a inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1eecbb17a397e20da5695bfc4d4277 inherit pub_methods_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top"><a id="ada1eecbb17a397e20da5695bfc4d4277" name="ada1eecbb17a397e20da5695bfc4d4277"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>log_gradient_finite_diff</b> (const std::vector&lt; int &gt; &amp;ix0, int n=0, int offset=0)</td></tr>
+<tr class="memdesc:ada1eecbb17a397e20da5695bfc4d4277 inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the log-gradient from finite differences on the <em>same</em> grid for dimension n (<a class="el" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid.">colvar_grid_scalar</a>) <br /></td></tr>
+<tr class="separator:ada1eecbb17a397e20da5695bfc4d4277 inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ebf505532ae66d3925f04e26e9e24cc inherit pub_methods_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top"><a id="a2ebf505532ae66d3925f04e26e9e24cc" name="a2ebf505532ae66d3925f04e26e9e24cc"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>gradient_finite_diff</b> (const std::vector&lt; int &gt; &amp;ix0, int n=0)</td></tr>
-<tr class="memdesc:a2ebf505532ae66d3925f04e26e9e24cc inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the gradient of discrete count from finite differences on the <em>same</em> grid for dimension n. <br /></td></tr>
+<tr class="memdesc:a2ebf505532ae66d3925f04e26e9e24cc inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the gradient of discrete count from finite differences on the <em>same</em> grid for dimension n (<a class="el" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid.">colvar_grid_scalar</a>) <br /></td></tr>
 <tr class="separator:a2ebf505532ae66d3925f04e26e9e24cc inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2b03908a5beb4484d05e4b155ac889c inherit pub_methods_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid__scalar.html#aa2b03908a5beb4484d05e4b155ac889c">value_output</a> (std::vector&lt; int &gt; const &amp;ix, size_t const &amp;imult=0) const</td></tr>
-<tr class="memdesc:aa2b03908a5beb4484d05e4b155ac889c inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value of the function at ix divided by its number of samples (if the count grid is defined)  <a href="classcolvar__grid__scalar.html#aa2b03908a5beb4484d05e4b155ac889c">More...</a><br /></td></tr>
-<tr class="separator:aa2b03908a5beb4484d05e4b155ac889c inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48642b4b9fe371939f3b0b3e0e7e45f2 inherit pub_methods_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid__scalar.html#a48642b4b9fe371939f3b0b3e0e7e45f2">value_input</a> (std::vector&lt; int &gt; const &amp;ix, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;new_value, size_t const &amp;imult=0, bool add=false)</td></tr>
-<tr class="memdesc:a48642b4b9fe371939f3b0b3e0e7e45f2 inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter or add value but also deal with count grid.  <a href="classcolvar__grid__scalar.html#a48642b4b9fe371939f3b0b3e0e7e45f2">More...</a><br /></td></tr>
-<tr class="separator:a48642b4b9fe371939f3b0b3e0e7e45f2 inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839acc2c431941c21f14337f245fcaf4 inherit pub_methods_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid__scalar.html#a839acc2c431941c21f14337f245fcaf4">value_output</a> (std::vector&lt; int &gt; const &amp;ix, size_t const &amp;imult=0) const override</td></tr>
+<tr class="memdesc:a839acc2c431941c21f14337f245fcaf4 inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value of the function at ix divided by its number of samples (if the count grid is defined)  <a href="classcolvar__grid__scalar.html#a839acc2c431941c21f14337f245fcaf4">More...</a><br /></td></tr>
+<tr class="separator:a839acc2c431941c21f14337f245fcaf4 inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb178fef5691ea82586e1e3c1b71b028 inherit pub_methods_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid__scalar.html#abb178fef5691ea82586e1e3c1b71b028">value_input</a> (std::vector&lt; int &gt; const &amp;ix, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;new_value, size_t const &amp;imult=0, bool add=false) override</td></tr>
+<tr class="memdesc:abb178fef5691ea82586e1e3c1b71b028 inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter or add value but also deal with count grid.  <a href="classcolvar__grid__scalar.html#abb178fef5691ea82586e1e3c1b71b028">More...</a><br /></td></tr>
+<tr class="separator:abb178fef5691ea82586e1e3c1b71b028 inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4727ee7ef2d068ddf3c3f0e03444ad7 inherit pub_methods_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top"><a id="ad4727ee7ef2d068ddf3c3f0e03444ad7" name="ad4727ee7ef2d068ddf3c3f0e03444ad7"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>maximum_value</b> () const</td></tr>
 <tr class="memdesc:ad4727ee7ef2d068ddf3c3f0e03444ad7 inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the highest value. <br /></td></tr>
@@ -255,6 +263,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>vector_gradient_finit
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>entropy</b> () const</td></tr>
 <tr class="memdesc:abd4d8eff1118da7501b02ef7134d8ca4 inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assuming that the map is a normalized probability density, calculates the entropy (uses widths if they are defined) <br /></td></tr>
 <tr class="separator:abd4d8eff1118da7501b02ef7134d8ca4 inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85f177580ccc5e2c76738b483c9aadae inherit pub_methods_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top"><a id="a85f177580ccc5e2c76738b483c9aadae" name="a85f177580ccc5e2c76738b483c9aadae"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>grid_rmsd</b> (<a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> const &amp;other_grid) const</td></tr>
+<tr class="memdesc:a85f177580ccc5e2c76738b483c9aadae inherit pub_methods_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the RMSD between this grid's data and another one Grids must have the same dimensions. <br /></td></tr>
+<tr class="separator:a85f177580ccc5e2c76738b483c9aadae inherit pub_methods_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcolvar__grid"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvar__grid')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvar__grid.html">colvar_grid&lt; cvm::real &gt;</a></td></tr>
 <tr class="memitem:abd03cdad1218f36276d32a680d23d52e inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="abd03cdad1218f36276d32a680d23d52e" name="abd03cdad1218f36276d32a680d23d52e"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>address</b> (std::vector&lt; int &gt; const &amp;ix) const</td></tr>
@@ -324,8 +336,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>init_from_boundaries</
 <tr class="separator:a58caf37200a618e03d58b871a231c342 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec64cb854fa9a615bfebdff6d0e51897 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#aec64cb854fa9a615bfebdff6d0e51897">wrap</a> (std::vector&lt; int &gt; &amp;ix) const</td></tr>
 <tr class="separator:aec64cb854fa9a615bfebdff6d0e51897 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a030da1ee0d90efc40730a3956e2c1283 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a030da1ee0d90efc40730a3956e2c1283">wrap_edge</a> (std::vector&lt; int &gt; &amp;ix) const</td></tr>
-<tr class="separator:a030da1ee0d90efc40730a3956e2c1283 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfcf6217fbe3bc6042412ad71e54fccd inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#adfcf6217fbe3bc6042412ad71e54fccd">wrap_detect_edge</a> (std::vector&lt; int &gt; &amp;ix) const</td></tr>
+<tr class="separator:adfcf6217fbe3bc6042412ad71e54fccd inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6b1da02dc6d6b98264cecad2e6b586 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar__grid.html#a9a6b1da02dc6d6b98264cecad2e6b586">wrap_to_edge</a> (std::vector&lt; int &gt; &amp;ix, std::vector&lt; int &gt; &amp;edge_bin) const</td></tr>
+<tr class="separator:a9a6b1da02dc6d6b98264cecad2e6b586 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd72e9c1c4120ed359c7f8478470f60 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="aacd72e9c1c4120ed359c7f8478470f60" name="aacd72e9c1c4120ed359c7f8478470f60"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>current_bin_scalar</b> (int const i) const</td></tr>
 <tr class="memdesc:aacd72e9c1c4120ed359c7f8478470f60 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report the bin corresponding to the current value of variable i. <br /></td></tr>
@@ -334,6 +348,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>current_bin_scalar</b>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>current_bin_scalar</b> (int const i, int const iv) const</td></tr>
 <tr class="memdesc:aa2875b1ebe3f490ec4233fac527fbbf4 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report the bin corresponding to the current value of item iv in variable i. <br /></td></tr>
 <tr class="separator:aa2875b1ebe3f490ec4233fac527fbbf4 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43996f554dd1f351b0b50c489575a4c6 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a43996f554dd1f351b0b50c489575a4c6" name="a43996f554dd1f351b0b50c489575a4c6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>current_bin_flat_bound</b> () const</td></tr>
+<tr class="memdesc:a43996f554dd1f351b0b50c489575a4c6 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report the flattened bin address corresponding to the current value of all variables and assign first or last bin if out of boundaries. <br /></td></tr>
+<tr class="separator:a43996f554dd1f351b0b50c489575a4c6 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a158b510204f876314edaad05e2ade281 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a158b510204f876314edaad05e2ade281" name="a158b510204f876314edaad05e2ade281"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>current_bin_scalar_bound</b> (int const i) const</td></tr>
 <tr class="memdesc:a158b510204f876314edaad05e2ade281 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report the bin corresponding to the current value of variable i and assign first or last bin if out of boundaries. <br /></td></tr>
@@ -374,6 +392,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_value</b> (std::v
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_value</b> (size_t i, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;t)</td></tr>
 <tr class="memdesc:a07d94e41834a8b04074120bd618086eb inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value at the point with linear address i (for speed) <br /></td></tr>
 <tr class="separator:a07d94e41834a8b04074120bd618086eb inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ae7b235818784668aa2a44cfc0c9e1b inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a7ae7b235818784668aa2a44cfc0c9e1b" name="a7ae7b235818784668aa2a44cfc0c9e1b"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_value</b> (size_t i) const</td></tr>
+<tr class="memdesc:a7ae7b235818784668aa2a44cfc0c9e1b inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value at the point with linear address i (for speed) <br /></td></tr>
+<tr class="separator:a7ae7b235818784668aa2a44cfc0c9e1b inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3286f4e210ee3089da2aadd50f2cb91 inherit pub_methods_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="aa3286f4e210ee3089da2aadd50f2cb91" name="aa3286f4e210ee3089da2aadd50f2cb91"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>delta_grid</b> (<a class="el" href="classcolvar__grid.html">colvar_grid</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; const &amp;other_grid)</td></tr>
 <tr class="memdesc:aa3286f4e210ee3089da2aadd50f2cb91 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the change from this to other_grid and store the result in this. this_grid := other_grid - this_grid Grids must have the same dimensions. <br /></td></tr>
@@ -659,12 +681,89 @@ virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba
 <tr class="memdesc:ac74ab1239104981757c1ff0d2966281d inherit pub_methods_classcolvarparams"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the named parameter to the given value.  <a href="classcolvarparams.html#ac74ab1239104981757c1ff0d2966281d">More...</a><br /></td></tr>
 <tr class="separator:ac74ab1239104981757c1ff0d2966281d inherit pub_methods_classcolvarparams"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aa282b6a9148cd72104e0ba7cb627c992"><td class="memItemLeft" align="right" valign="top"><a id="aa282b6a9148cd72104e0ba7cb627c992" name="aa282b6a9148cd72104e0ba7cb627c992"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>b_smoothed</b></td></tr>
+<tr class="memdesc:aa282b6a9148cd72104e0ba7cb627c992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag requesting the use of a smoothed version of the gradient (default: false) <br /></td></tr>
+<tr class="separator:aa282b6a9148cd72104e0ba7cb627c992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classcolvar__grid__scalar"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classcolvar__grid__scalar')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a></td></tr>
+<tr class="memitem:af08c7f5878310d286dd1eba628b7d88e inherit pub_attribs_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top"><a id="af08c7f5878310d286dd1eba628b7d88e" name="af08c7f5878310d286dd1eba628b7d88e"></a>
+<a class="el" href="classcolvar__grid__count.html">colvar_grid_count</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>samples</b></td></tr>
+<tr class="memdesc:af08c7f5878310d286dd1eba628b7d88e inherit pub_attribs_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide the associated sample count by which each binned value should be divided. <br /></td></tr>
+<tr class="separator:af08c7f5878310d286dd1eba628b7d88e inherit pub_attribs_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classcolvar__grid"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classcolvar__grid')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classcolvar__grid.html">colvar_grid&lt; cvm::real &gt;</a></td></tr>
+<tr class="memitem:ad2917ddec512db6205e70b0f2f7e39fe inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="ad2917ddec512db6205e70b0f2f7e39fe" name="ad2917ddec512db6205e70b0f2f7e39fe"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nd</b></td></tr>
+<tr class="memdesc:ad2917ddec512db6205e70b0f2f7e39fe inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of dimensions. <br /></td></tr>
+<tr class="separator:ad2917ddec512db6205e70b0f2f7e39fe inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac02db43c4299d1d8cc1fa395de1b48b0 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="ac02db43c4299d1d8cc1fa395de1b48b0" name="ac02db43c4299d1d8cc1fa395de1b48b0"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nx</b></td></tr>
+<tr class="memdesc:ac02db43c4299d1d8cc1fa395de1b48b0 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of points along each dimension. <br /></td></tr>
+<tr class="separator:ac02db43c4299d1d8cc1fa395de1b48b0 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae45c549d3df32f8dd85ec6870de7b1 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="aaae45c549d3df32f8dd85ec6870de7b1" name="aaae45c549d3df32f8dd85ec6870de7b1"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nxc</b></td></tr>
+<tr class="memdesc:aaae45c549d3df32f8dd85ec6870de7b1 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cumulative number of points along each dimension. <br /></td></tr>
+<tr class="separator:aaae45c549d3df32f8dd85ec6870de7b1 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44046656fa8400d6bf6583416ddb4c85 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a44046656fa8400d6bf6583416ddb4c85" name="a44046656fa8400d6bf6583416ddb4c85"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>mult</b></td></tr>
+<tr class="memdesc:a44046656fa8400d6bf6583416ddb4c85 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplicity of each datum (allow the binning of non-scalar types such as atomic gradients) <br /></td></tr>
+<tr class="separator:a44046656fa8400d6bf6583416ddb4c85 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77ec57aa6dfc304bcd743bdae48830c5 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a77ec57aa6dfc304bcd743bdae48830c5" name="a77ec57aa6dfc304bcd743bdae48830c5"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nt</b></td></tr>
+<tr class="memdesc:a77ec57aa6dfc304bcd743bdae48830c5 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of grid points. <br /></td></tr>
+<tr class="separator:a77ec57aa6dfc304bcd743bdae48830c5 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55315b2161c9487ade559bf1174b31dd inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a55315b2161c9487ade559bf1174b31dd" name="a55315b2161c9487ade559bf1174b31dd"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+<tr class="memdesc:a55315b2161c9487ade559bf1174b31dd inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-level array of values. <br /></td></tr>
+<tr class="separator:a55315b2161c9487ade559bf1174b31dd inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d09cac84efdd3a92c983e7bac02aa6 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a20d09cac84efdd3a92c983e7bac02aa6" name="a20d09cac84efdd3a92c983e7bac02aa6"></a>
+std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>new_data</b></td></tr>
+<tr class="memdesc:a20d09cac84efdd3a92c983e7bac02aa6 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Newly read data (used for count grids, when adding several grids read from disk) <br /></td></tr>
+<tr class="separator:a20d09cac84efdd3a92c983e7bac02aa6 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af677742f27496b127887c4443c1fb5fd inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="af677742f27496b127887c4443c1fb5fd" name="af677742f27496b127887c4443c1fb5fd"></a>
+std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cv</b></td></tr>
+<tr class="memdesc:af677742f27496b127887c4443c1fb5fd inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colvars collected in this grid. <br /></td></tr>
+<tr class="separator:af677742f27496b127887c4443c1fb5fd inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bab821472067686e64ac3395063634 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="ab2bab821472067686e64ac3395063634" name="ab2bab821472067686e64ac3395063634"></a>
+std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>use_actual_value</b></td></tr>
+<tr class="memdesc:ab2bab821472067686e64ac3395063634 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we request actual value (for extended-system colvars)? <br /></td></tr>
+<tr class="separator:ab2bab821472067686e64ac3395063634 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1b4ae308139440e47d59aefd7e7f4c inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="aeb1b4ae308139440e47d59aefd7e7f4c" name="aeb1b4ae308139440e47d59aefd7e7f4c"></a>
+std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>lower_boundaries</b></td></tr>
+<tr class="memdesc:aeb1b4ae308139440e47d59aefd7e7f4c inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower boundaries of the colvars in this grid. <br /></td></tr>
+<tr class="separator:aeb1b4ae308139440e47d59aefd7e7f4c inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a032ecf8dfc1d8f6d25edfb71eaaaf014 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a032ecf8dfc1d8f6d25edfb71eaaaf014" name="a032ecf8dfc1d8f6d25edfb71eaaaf014"></a>
+std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>upper_boundaries</b></td></tr>
+<tr class="memdesc:a032ecf8dfc1d8f6d25edfb71eaaaf014 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper boundaries of the colvars in this grid. <br /></td></tr>
+<tr class="separator:a032ecf8dfc1d8f6d25edfb71eaaaf014 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7ae2b01e5c6afa691889907419aa4ec inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="ae7ae2b01e5c6afa691889907419aa4ec" name="ae7ae2b01e5c6afa691889907419aa4ec"></a>
+std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>periodic</b></td></tr>
+<tr class="memdesc:ae7ae2b01e5c6afa691889907419aa4ec inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether some colvars are periodic. <br /></td></tr>
+<tr class="separator:ae7ae2b01e5c6afa691889907419aa4ec inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4b6fde4775d004cb9e8872833d01be inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="aae4b6fde4775d004cb9e8872833d01be" name="aae4b6fde4775d004cb9e8872833d01be"></a>
+std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hard_lower_boundaries</b></td></tr>
+<tr class="memdesc:aae4b6fde4775d004cb9e8872833d01be inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether some colvars have hard lower boundaries. <br /></td></tr>
+<tr class="separator:aae4b6fde4775d004cb9e8872833d01be inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3537a8b9704b79a68da7eb5e75313e6d inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a3537a8b9704b79a68da7eb5e75313e6d" name="a3537a8b9704b79a68da7eb5e75313e6d"></a>
+std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hard_upper_boundaries</b></td></tr>
+<tr class="memdesc:a3537a8b9704b79a68da7eb5e75313e6d inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether some colvars have hard upper boundaries. <br /></td></tr>
+<tr class="separator:a3537a8b9704b79a68da7eb5e75313e6d inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90426bc407bd27da5f4d443aa45c35b5 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a90426bc407bd27da5f4d443aa45c35b5" name="a90426bc407bd27da5f4d443aa45c35b5"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>widths</b></td></tr>
+<tr class="memdesc:a90426bc407bd27da5f4d443aa45c35b5 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widths of the colvars in this grid. <br /></td></tr>
+<tr class="separator:a90426bc407bd27da5f4d443aa45c35b5 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95468da24b815194702cb7dbb1257af8 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a95468da24b815194702cb7dbb1257af8" name="a95468da24b815194702cb7dbb1257af8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_parent_data</b></td></tr>
+<tr class="memdesc:a95468da24b815194702cb7dbb1257af8 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this is a count grid related to another grid of data. <br /></td></tr>
+<tr class="separator:a95468da24b815194702cb7dbb1257af8 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fbd378c88cf06662a64d6ccd27a8d63 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a5fbd378c88cf06662a64d6ccd27a8d63" name="a5fbd378c88cf06662a64d6ccd27a8d63"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_data</b></td></tr>
+<tr class="memdesc:a5fbd378c88cf06662a64d6ccd27a8d63 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this grid has been filled with data or is still empty. <br /></td></tr>
+<tr class="separator:a5fbd378c88cf06662a64d6ccd27a8d63 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a2d96f52f2503f183eb8b9ac2c65a8123"><td class="memItemLeft" align="right" valign="top"><a id="a2d96f52f2503f183eb8b9ac2c65a8123" name="a2d96f52f2503f183eb8b9ac2c65a8123"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update_div_local</b> (const std::vector&lt; int &gt; &amp;ix)</td></tr>
-<tr class="memdesc:a2d96f52f2503f183eb8b9ac2c65a8123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update matrix containing divergence and boundary conditions called by update_div_neighbors. <br /></td></tr>
-<tr class="separator:a2d96f52f2503f183eb8b9ac2c65a8123"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae373d0d339e746146bb574b13eeaa184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintegrate__potential.html#ae373d0d339e746146bb574b13eeaa184">get_grad</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *g, std::vector&lt; int &gt; &amp;ix)</td></tr>
 <tr class="separator:ae373d0d339e746146bb574b13eeaa184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7e067676ca2362e0415d4e8710ac563"><td class="memItemLeft" align="right" valign="top"><a id="ae7e067676ca2362e0415d4e8710ac563" name="ae7e067676ca2362e0415d4e8710ac563"></a>
@@ -753,9 +852,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>register_param_grad</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a0926b30ecae4179b31aaf84ea445fd78"><td class="memItemLeft" align="right" valign="top"><a id="a0926b30ecae4179b31aaf84ea445fd78" name="a0926b30ecae4179b31aaf84ea445fd78"></a>
-<a class="el" href="classcolvar__grid__gradient.html">colvar_grid_gradient</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>gradients</b></td></tr>
-<tr class="separator:a0926b30ecae4179b31aaf84ea445fd78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9958667041b911fd5e48f70b0873dc5"><td class="memItemLeft" align="right" valign="top"><a id="ad9958667041b911fd5e48f70b0873dc5" name="ad9958667041b911fd5e48f70b0873dc5"></a>
+std::shared_ptr&lt; <a class="el" href="classcolvar__grid__gradient.html">colvar_grid_gradient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gradients</b></td></tr>
+<tr class="separator:ad9958667041b911fd5e48f70b0873dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a3de9b5c8519d8253a5ab8827150e1d"><td class="memItemLeft" align="right" valign="top"><a id="a3a3de9b5c8519d8253a5ab8827150e1d" name="a3a3de9b5c8519d8253a5ab8827150e1d"></a>
 std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>divergence</b></td></tr>
 <tr class="memdesc:a3a3de9b5c8519d8253a5ab8827150e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array holding divergence + boundary terms (modified Neumann) if not periodic. <br /></td></tr>
@@ -837,80 +936,6 @@ static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>
 <tr class="memitem:a237d6ad8d95aeecea8bd55a800457b87 inherit pub_static_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a237d6ad8d95aeecea8bd55a800457b87">split_string</a> (const std::string &amp;data, const std::string &amp;delim, std::vector&lt; std::string &gt; &amp;dest)</td></tr>
 <tr class="memdesc:a237d6ad8d95aeecea8bd55a800457b87 inherit pub_static_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a string with a specified delimiter into a vector.  <a href="classcolvarparse.html#a237d6ad8d95aeecea8bd55a800457b87">More...</a><br /></td></tr>
 <tr class="separator:a237d6ad8d95aeecea8bd55a800457b87 inherit pub_static_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classcolvar__grid__scalar"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classcolvar__grid__scalar')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a></td></tr>
-<tr class="memitem:af08c7f5878310d286dd1eba628b7d88e inherit pub_attribs_classcolvar__grid__scalar"><td class="memItemLeft" align="right" valign="top"><a id="af08c7f5878310d286dd1eba628b7d88e" name="af08c7f5878310d286dd1eba628b7d88e"></a>
-<a class="el" href="classcolvar__grid__count.html">colvar_grid_count</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>samples</b></td></tr>
-<tr class="memdesc:af08c7f5878310d286dd1eba628b7d88e inherit pub_attribs_classcolvar__grid__scalar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide the associated sample count by which each binned value should be divided. <br /></td></tr>
-<tr class="separator:af08c7f5878310d286dd1eba628b7d88e inherit pub_attribs_classcolvar__grid__scalar"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classcolvar__grid"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classcolvar__grid')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classcolvar__grid.html">colvar_grid&lt; cvm::real &gt;</a></td></tr>
-<tr class="memitem:ad2917ddec512db6205e70b0f2f7e39fe inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="ad2917ddec512db6205e70b0f2f7e39fe" name="ad2917ddec512db6205e70b0f2f7e39fe"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nd</b></td></tr>
-<tr class="memdesc:ad2917ddec512db6205e70b0f2f7e39fe inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of dimensions. <br /></td></tr>
-<tr class="separator:ad2917ddec512db6205e70b0f2f7e39fe inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac02db43c4299d1d8cc1fa395de1b48b0 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="ac02db43c4299d1d8cc1fa395de1b48b0" name="ac02db43c4299d1d8cc1fa395de1b48b0"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nx</b></td></tr>
-<tr class="memdesc:ac02db43c4299d1d8cc1fa395de1b48b0 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of points along each dimension. <br /></td></tr>
-<tr class="separator:ac02db43c4299d1d8cc1fa395de1b48b0 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaae45c549d3df32f8dd85ec6870de7b1 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="aaae45c549d3df32f8dd85ec6870de7b1" name="aaae45c549d3df32f8dd85ec6870de7b1"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nxc</b></td></tr>
-<tr class="memdesc:aaae45c549d3df32f8dd85ec6870de7b1 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cumulative number of points along each dimension. <br /></td></tr>
-<tr class="separator:aaae45c549d3df32f8dd85ec6870de7b1 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44046656fa8400d6bf6583416ddb4c85 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a44046656fa8400d6bf6583416ddb4c85" name="a44046656fa8400d6bf6583416ddb4c85"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>mult</b></td></tr>
-<tr class="memdesc:a44046656fa8400d6bf6583416ddb4c85 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplicity of each datum (allow the binning of non-scalar types such as atomic gradients) <br /></td></tr>
-<tr class="separator:a44046656fa8400d6bf6583416ddb4c85 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77ec57aa6dfc304bcd743bdae48830c5 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a77ec57aa6dfc304bcd743bdae48830c5" name="a77ec57aa6dfc304bcd743bdae48830c5"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nt</b></td></tr>
-<tr class="memdesc:a77ec57aa6dfc304bcd743bdae48830c5 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of grid points. <br /></td></tr>
-<tr class="separator:a77ec57aa6dfc304bcd743bdae48830c5 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55315b2161c9487ade559bf1174b31dd inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a55315b2161c9487ade559bf1174b31dd" name="a55315b2161c9487ade559bf1174b31dd"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
-<tr class="memdesc:a55315b2161c9487ade559bf1174b31dd inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-level array of values. <br /></td></tr>
-<tr class="separator:a55315b2161c9487ade559bf1174b31dd inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20d09cac84efdd3a92c983e7bac02aa6 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a20d09cac84efdd3a92c983e7bac02aa6" name="a20d09cac84efdd3a92c983e7bac02aa6"></a>
-std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>new_data</b></td></tr>
-<tr class="memdesc:a20d09cac84efdd3a92c983e7bac02aa6 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Newly read data (used for count grids, when adding several grids read from disk) <br /></td></tr>
-<tr class="separator:a20d09cac84efdd3a92c983e7bac02aa6 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af677742f27496b127887c4443c1fb5fd inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="af677742f27496b127887c4443c1fb5fd" name="af677742f27496b127887c4443c1fb5fd"></a>
-std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cv</b></td></tr>
-<tr class="memdesc:af677742f27496b127887c4443c1fb5fd inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colvars collected in this grid. <br /></td></tr>
-<tr class="separator:af677742f27496b127887c4443c1fb5fd inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2bab821472067686e64ac3395063634 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="ab2bab821472067686e64ac3395063634" name="ab2bab821472067686e64ac3395063634"></a>
-std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>use_actual_value</b></td></tr>
-<tr class="memdesc:ab2bab821472067686e64ac3395063634 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we request actual value (for extended-system colvars)? <br /></td></tr>
-<tr class="separator:ab2bab821472067686e64ac3395063634 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb1b4ae308139440e47d59aefd7e7f4c inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="aeb1b4ae308139440e47d59aefd7e7f4c" name="aeb1b4ae308139440e47d59aefd7e7f4c"></a>
-std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>lower_boundaries</b></td></tr>
-<tr class="memdesc:aeb1b4ae308139440e47d59aefd7e7f4c inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower boundaries of the colvars in this grid. <br /></td></tr>
-<tr class="separator:aeb1b4ae308139440e47d59aefd7e7f4c inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a032ecf8dfc1d8f6d25edfb71eaaaf014 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a032ecf8dfc1d8f6d25edfb71eaaaf014" name="a032ecf8dfc1d8f6d25edfb71eaaaf014"></a>
-std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>upper_boundaries</b></td></tr>
-<tr class="memdesc:a032ecf8dfc1d8f6d25edfb71eaaaf014 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper boundaries of the colvars in this grid. <br /></td></tr>
-<tr class="separator:a032ecf8dfc1d8f6d25edfb71eaaaf014 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7ae2b01e5c6afa691889907419aa4ec inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="ae7ae2b01e5c6afa691889907419aa4ec" name="ae7ae2b01e5c6afa691889907419aa4ec"></a>
-std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>periodic</b></td></tr>
-<tr class="memdesc:ae7ae2b01e5c6afa691889907419aa4ec inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether some colvars are periodic. <br /></td></tr>
-<tr class="separator:ae7ae2b01e5c6afa691889907419aa4ec inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae4b6fde4775d004cb9e8872833d01be inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="aae4b6fde4775d004cb9e8872833d01be" name="aae4b6fde4775d004cb9e8872833d01be"></a>
-std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hard_lower_boundaries</b></td></tr>
-<tr class="memdesc:aae4b6fde4775d004cb9e8872833d01be inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether some colvars have hard lower boundaries. <br /></td></tr>
-<tr class="separator:aae4b6fde4775d004cb9e8872833d01be inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3537a8b9704b79a68da7eb5e75313e6d inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a3537a8b9704b79a68da7eb5e75313e6d" name="a3537a8b9704b79a68da7eb5e75313e6d"></a>
-std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hard_upper_boundaries</b></td></tr>
-<tr class="memdesc:a3537a8b9704b79a68da7eb5e75313e6d inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether some colvars have hard upper boundaries. <br /></td></tr>
-<tr class="separator:a3537a8b9704b79a68da7eb5e75313e6d inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90426bc407bd27da5f4d443aa45c35b5 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a90426bc407bd27da5f4d443aa45c35b5" name="a90426bc407bd27da5f4d443aa45c35b5"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>widths</b></td></tr>
-<tr class="memdesc:a90426bc407bd27da5f4d443aa45c35b5 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widths of the colvars in this grid. <br /></td></tr>
-<tr class="separator:a90426bc407bd27da5f4d443aa45c35b5 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95468da24b815194702cb7dbb1257af8 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a95468da24b815194702cb7dbb1257af8" name="a95468da24b815194702cb7dbb1257af8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_parent_data</b></td></tr>
-<tr class="memdesc:a95468da24b815194702cb7dbb1257af8 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this is a count grid related to another grid of data. <br /></td></tr>
-<tr class="separator:a95468da24b815194702cb7dbb1257af8 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fbd378c88cf06662a64d6ccd27a8d63 inherit pub_attribs_classcolvar__grid"><td class="memItemLeft" align="right" valign="top"><a id="a5fbd378c88cf06662a64d6ccd27a8d63" name="a5fbd378c88cf06662a64d6ccd27a8d63"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_data</b></td></tr>
-<tr class="memdesc:a5fbd378c88cf06662a64d6ccd27a8d63 inherit pub_attribs_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this grid has been filled with data or is still empty. <br /></td></tr>
-<tr class="separator:a5fbd378c88cf06662a64d6ccd27a8d63 inherit pub_attribs_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
 <tr class="memitem:a8d4d1aeef4fd6ace84d59a05fe46d257 inherit pub_static_attribs_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a8d4d1aeef4fd6ace84d59a05fe46d257" name="a8d4d1aeef4fd6ace84d59a05fe46d257"></a>
 static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>white_space</b> = &quot; \t&quot;</td></tr>
@@ -1010,7 +1035,7 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 8 2023 17:45:35 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 12 2024 18:07:52 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

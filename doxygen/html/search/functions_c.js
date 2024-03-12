@@ -6,13 +6,14 @@ var searchData=
   ['load_5fatoms_3',['load_atoms',['../classcolvarmodule.html#af01b1d229547df7583c71ea33a3f1e76',1,'colvarmodule::load_atoms()'],['../classcolvarproxy__atoms.html#a51994492c0a004c387810b84575aa3c9',1,'colvarproxy_atoms::load_atoms()'],['../classcolvarproxy__namd.html#a2aebfc7799368fa6eb5691511330738b',1,'colvarproxy_namd::load_atoms()'],['../classcolvarproxy__vmd.html#a4c45454bde83464e538bb0180a652dfc',1,'colvarproxy_vmd::load_atoms()']]],
   ['load_5fcoords_4',['load_coords',['../classcolvarmodule.html#a492c7cf3807ffd60b72f9d8842559720',1,'colvarmodule::load_coords()'],['../classcolvarproxy__atoms.html#a764a95f413d239db85a9e1bd1d442786',1,'colvarproxy_atoms::load_coords()'],['../classcolvarproxy__namd.html#abd07815f215f77fdf889c719ad6d6693',1,'colvarproxy_namd::load_coords()'],['../classcolvarproxy__vmd.html#ab6bbcaec5fb7ea94e9681731093aceba',1,'colvarproxy_vmd::load_coords()']]],
   ['load_5fcoords_5fxyz_5',['load_coords_xyz',['../classcolvarmodule.html#a0a23d7418c48112fa995ebdc23aad774',1,'colvarmodule']]],
-  ['log_6',['log',['../classcolvarmodule.html#a8577e7cbc07b18b4fa46c5cb66ac95dd',1,'colvarmodule::log()'],['../classcolvarproxy__lammps.html#af6d43a078aee05df0bd227f032f92bcb',1,'colvarproxy_lammps::log()'],['../classcolvarproxy__vmd.html#a0f4ca4e86fa0aad980b14f28152bce26',1,'colvarproxy_vmd::log()'],['../classcolvarproxy__namd.html#ab371ad622225bc954505459bb7a4d99d',1,'colvarproxy_namd::log()'],['../classcolvarproxy.html#a4691bd02d7e775e44216cc7c16977c1e',1,'colvarproxy::log()']]],
-  ['log_5fdefault_5fparams_7',['log_default_params',['../classcolvarmodule.html#ad88acd5ac375093c18440294930e067c',1,'colvarmodule']]],
-  ['log_5fgradient_5ffinite_5fdiff_8',['log_gradient_finite_diff',['../classcolvar__grid__count.html#a75c7c7c861ec6b5689b2aeae60984b8b',1,'colvar_grid_count']]],
-  ['log_5finit_5fmessages_9',['log_init_messages',['../classcolvarmodule.html#af27655e3d8d2ae8e22306e91c4e19023',1,'colvarmodule']]],
-  ['log_5finput_5ffiles_10',['log_input_files',['../classcolvarmodule.html#ad1fff9d0d55ec94594e917fc629514b4',1,'colvarmodule']]],
-  ['log_5flevel_11',['log_level',['../classcolvarmodule.html#aacfbc76fc6ffa1da95d077957e406ec9',1,'colvarmodule']]],
-  ['log_5foutput_5ffiles_12',['log_output_files',['../classcolvarmodule.html#a412dea02b0562e81ca6395301a763226',1,'colvarmodule']]],
-  ['log_5fuser_5fparams_13',['log_user_params',['../classcolvarmodule.html#ae156f95514fd75197c7c99a475c7b081',1,'colvarmodule']]],
-  ['logn_14',['logn',['../classcolvarmodule.html#a1aac485146fe9375e2dea24cc0d6222e',1,'colvarmodule']]]
+  ['local_5fsample_5fcount_6',['local_sample_count',['../classcolvar__grid__count.html#a1fbbf73cc37fa464049e93c4d222f634',1,'colvar_grid_count::local_sample_count()'],['../classcolvarbias__abf.html#a0568267d79d63f33c5fce52f7de20a67',1,'colvarbias_abf::local_sample_count()'],['../classcolvarbias.html#a2bde7cc6b4137dfe84bcae0ff44dcc9b',1,'colvarbias::local_sample_count()']]],
+  ['log_7',['log',['../classcolvarmodule.html#a8577e7cbc07b18b4fa46c5cb66ac95dd',1,'colvarmodule::log()'],['../classcolvarproxy.html#a4691bd02d7e775e44216cc7c16977c1e',1,'colvarproxy::log()'],['../classcolvarproxy__namd.html#ab371ad622225bc954505459bb7a4d99d',1,'colvarproxy_namd::log()'],['../classcolvarproxy__vmd.html#a0f4ca4e86fa0aad980b14f28152bce26',1,'colvarproxy_vmd::log()'],['../classcolvarproxy__lammps.html#af6d43a078aee05df0bd227f032f92bcb',1,'colvarproxy_lammps::log()']]],
+  ['log_5fdefault_5fparams_8',['log_default_params',['../classcolvarmodule.html#ad88acd5ac375093c18440294930e067c',1,'colvarmodule']]],
+  ['log_5fgradient_5ffinite_5fdiff_9',['log_gradient_finite_diff',['../classcolvar__grid__count.html#ad1fd4ab4f3cd5cbef37aae502e0e4787',1,'colvar_grid_count::log_gradient_finite_diff()'],['../classcolvar__grid__scalar.html#ada1eecbb17a397e20da5695bfc4d4277',1,'colvar_grid_scalar::log_gradient_finite_diff()']]],
+  ['log_5finit_5fmessages_10',['log_init_messages',['../classcolvarmodule.html#af27655e3d8d2ae8e22306e91c4e19023',1,'colvarmodule']]],
+  ['log_5finput_5ffiles_11',['log_input_files',['../classcolvarmodule.html#ad1fff9d0d55ec94594e917fc629514b4',1,'colvarmodule']]],
+  ['log_5flevel_12',['log_level',['../classcolvarmodule.html#aacfbc76fc6ffa1da95d077957e406ec9',1,'colvarmodule']]],
+  ['log_5foutput_5ffiles_13',['log_output_files',['../classcolvarmodule.html#a412dea02b0562e81ca6395301a763226',1,'colvarmodule']]],
+  ['log_5fuser_5fparams_14',['log_user_params',['../classcolvarmodule.html#ae156f95514fd75197c7c99a475c7b081',1,'colvarmodule']]],
+  ['logn_15',['logn',['../classcolvarmodule.html#a1aac485146fe9375e2dea24cc0d6222e',1,'colvarmodule']]]
 ];
