@@ -9,5 +9,6 @@ var searchData=
   ['flush_5foutput_5fstreams_6',['flush_output_streams',['../classcolvarproxy__io.html#aa1b43d6c9fd004b3d2ac1430b2daf7d7',1,'colvarproxy_io::flush_output_streams()'],['../classcolvarproxy__namd.html#a9c92df077755d9fcb324bd5afc718cd4',1,'colvarproxy_namd::flush_output_streams()']]],
   ['force_5fconstant_7',['force_constant',['../classcolvar.html#accd5168542184ec90be70b6c28058353',1,'colvar']]],
   ['free_5fchildren_5fdeps_8',['free_children_deps',['../classcolvardeps.html#af8aeaa2d9245fa541ebb9aea945f3667',1,'colvardeps']]],
-  ['from_5fsimple_5fstring_9',['from_simple_string',['../classcolvarvalue.html#a02ce5aabc663bc96ade13b4f62ad8c9e',1,'colvarvalue']]]
+  ['from_5fsimple_5fstring_9',['from_simple_string',['../classcolvarvalue.html#a02ce5aabc663bc96ade13b4f62ad8c9e',1,'colvarvalue']]],
+  ['function_5ftype_10',['function_type',['../classcolvar_1_1cvc.html#a1e660a59b5e2fc0b241788647e159ffc',1,'colvar::cvc']]]
 ];

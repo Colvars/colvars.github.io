@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['r0_0',['r0',['../classcolvar_1_1selfcoordnum.html#adad6196c38860e9590080870c7b46112',1,'colvar::selfcoordnum::r0()'],['../classcolvar_1_1coordnum.html#a892f0166432807e51bc8d2e2d71fd194',1,'colvar::coordnum::r0()'],['../classcolvar_1_1h__bond.html#a7dd11f17797f33d3fe3bd271cdd229bd',1,'colvar::h_bond::r0()'],['../classcolvar_1_1groupcoordnum.html#aedb71de81d5eb86714df29ba057a4791',1,'colvar::groupcoordnum::r0()']]],
+  ['r0_0',['r0',['../classcolvar_1_1selfcoordnum.html#adad6196c38860e9590080870c7b46112',1,'colvar::selfcoordnum::r0()'],['../classcolvar_1_1coordnum.html#a892f0166432807e51bc8d2e2d71fd194',1,'colvar::coordnum::r0()'],['../classcolvar_1_1alpha__angles.html#aad92a8ecfa66484194c52ec940d36aed',1,'colvar::alpha_angles::r0()'],['../classcolvar_1_1groupcoordnum.html#aedb71de81d5eb86714df29ba057a4791',1,'colvar::groupcoordnum::r0()'],['../classcolvar_1_1h__bond.html#a7dd11f17797f33d3fe3bd271cdd229bd',1,'colvar::h_bond::r0()']]],
   ['r0_5fvec_1',['r0_vec',['../classcolvar_1_1coordnum.html#afb42bd7e45175a419ca5bfc037f6ec92',1,'colvar::coordnum::r0_vec()'],['../classcolvar_1_1groupcoordnum.html#a0dc9030d37d7ea6bde84654eeaa48638',1,'colvar::groupcoordnum::r0_vec()']]],
   ['r12_2',['r12',['../classcolvar_1_1dihedral.html#a4fa33a834478d2ac8e5f88cf009c47cd',1,'colvar::dihedral']]],
   ['r21_3',['r21',['../classcolvar_1_1angle.html#a1b32c1888ac24e1884b494f979daba65',1,'colvar::angle::r21()'],['../classcolvar_1_1dipole__angle.html#a40b894b4c874859a92238e55a6756bb4',1,'colvar::dipole_angle::r21()']]],
