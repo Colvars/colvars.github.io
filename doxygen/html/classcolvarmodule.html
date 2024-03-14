@@ -659,9 +659,6 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>log_input_files
 static <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_distance</b> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> const &amp;pos2)</td></tr>
 <tr class="memdesc:a7a641df64b10a49f9b6d7167972513ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distance between two atomic positions with pbcs handled correctly. <br /></td></tr>
 <tr class="separator:a7a641df64b10a49f9b6d7167972513ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af01b1d229547df7583c71ea33a3f1e76"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#af01b1d229547df7583c71ea33a3f1e76">load_atoms</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
-<tr class="memdesc:af01b1d229547df7583c71ea33a3f1e76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select atom IDs from a file (usually PDB)  <a href="classcolvarmodule.html#af01b1d229547df7583c71ea33a3f1e76">More...</a><br /></td></tr>
-<tr class="separator:af01b1d229547df7583c71ea33a3f1e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492c7cf3807ffd60b72f9d8842559720"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a492c7cf3807ffd60b72f9d8842559720">load_coords</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a> &gt; *pos, <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *atoms, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
 <tr class="memdesc:a492c7cf3807ffd60b72f9d8842559720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load coordinates for a group of atoms from a file (PDB or XYZ); if "pos" is already allocated, the number of its elements must match the number of entries in "filename".  <a href="classcolvarmodule.html#a492c7cf3807ffd60b72f9d8842559720">More...</a><br /></td></tr>
 <tr class="separator:a492c7cf3807ffd60b72f9d8842559720"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1080,65 +1077,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 
 </div>
 </div>
-<a id="af01b1d229547df7583c71ea33a3f1e76" name="af01b1d229547df7583c71ea33a3f1e76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af01b1d229547df7583c71ea33a3f1e76">&#9670;&#160;</a></span>load_atoms()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int colvarmodule::load_atoms </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> &amp;&#160;</td>
-          <td class="paramname"><em>atoms</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string const &amp;&#160;</td>
-          <td class="paramname"><em>pdb_field</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>pdb_field_value</em> = <code>0.0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Select atom IDs from a file (usually PDB) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filename</td><td>name of the file</td></tr>
-    <tr><td class="paramname">atoms</td><td>array into which atoms read from "filename" will be appended</td></tr>
-    <tr><td class="paramname">pdb_field</td><td>(optional) if the file is a PDB and this string is non-empty, select atoms for which this field is non-zero </td></tr>
-    <tr><td class="paramname">pdb_field_value</td><td>(optional) if non-zero, select only atoms whose pdb_field equals this </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a492c7cf3807ffd60b72f9d8842559720" name="a492c7cf3807ffd60b72f9d8842559720"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a492c7cf3807ffd60b72f9d8842559720">&#9670;&#160;</a></span>load_coords()</h2>
 
@@ -1511,7 +1449,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group</b></td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 12 2024 21:01:45 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Mar 14 2024 13:46:33 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
