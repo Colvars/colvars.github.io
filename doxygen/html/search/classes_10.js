@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tilt_0',['tilt',['../classcolvar_1_1tilt.html',1,'colvar']]]
+  ['tilt',['tilt',['../classcolvar_1_1tilt.html',1,'colvar']]]
 ];
