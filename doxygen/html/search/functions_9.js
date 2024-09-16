@@ -42,7 +42,7 @@ var searchData=
   ['integer_5fpower_39',['integer_power',['../classcolvarmodule.html#a5c3c6107b0f716e6673008a62ff5b766',1,'colvarmodule']]],
   ['integral_40',['integral',['../classcolvar__grid__scalar.html#aa54f97f71c73fc77b113a2ffbadc64bf',1,'colvar_grid_scalar']]],
   ['integrate_41',['integrate',['../classintegrate__potential.html#add34f49f69169f081cc3ae32c7b63f3c',1,'integrate_potential']]],
-  ['integrate_5fpotential_42',['integrate_potential',['../classintegrate__potential.html#aec2717dbf678a2df1388cc0b9ccbada2',1,'integrate_potential::integrate_potential(std::vector&lt; colvar * &gt; &amp;colvars, std::shared_ptr&lt; colvar_grid_gradient &gt; gradients)'],['../classintegrate__potential.html#aa7cb2545aaefe072c9aa4c8d61415c88',1,'integrate_potential::integrate_potential(colvar_grid_gradient *gradients)']]],
+  ['integrate_5fpotential_42',['integrate_potential',['../classintegrate__potential.html#aec2717dbf678a2df1388cc0b9ccbada2',1,'integrate_potential::integrate_potential(std::vector&lt; colvar * &gt; &amp;colvars, std::shared_ptr&lt; colvar_grid_gradient &gt; gradients)'],['../classintegrate__potential.html#a80201801375d1f8f95334ed403a8ffba',1,'integrate_potential::integrate_potential(std::shared_ptr&lt; colvar_grid_gradient &gt; gradients)']]],
   ['internal_5fto_5fangstrom_43',['internal_to_angstrom',['../classcolvarproxy__system.html#acdbb96ce15cc52e7b77ce05cb044c5d9',1,'colvarproxy_system']]],
   ['interpolate_44',['interpolate',['../classcolvarvalue.html#a6c742a2b93624561fec47e67ad1c7986',1,'colvarvalue']]],
   ['inverse_45',['inverse',['../classcolvarmodule_1_1rotation.html#af8c63ded415d5004e54f3d09d277db05',1,'colvarmodule::rotation']]],
