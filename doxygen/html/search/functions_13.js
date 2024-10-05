@@ -29,7 +29,7 @@ var searchData=
   ['set_5fparam_26',['set_param',['../classcolvar_1_1cvc.html#a52914ddf5161fbf44f2259d144b873ba',1,'colvar::cvc::set_param()'],['../classcolvarparams.html#ac74ab1239104981757c1ff0d2966281d',1,'colvarparams::set_param()']]],
   ['set_5frandom_27',['set_random',['../classcolvarvalue.html#aae9b1bbc475543d44dc303310ec230c7',1,'colvarvalue']]],
   ['set_5frandom_5fseed_28',['set_random_seed',['../classcolvarproxy__lammps.html#a794711e0a2f474e7b67d46f517826a62',1,'colvarproxy_lammps']]],
-  ['set_5freplicas_5fcommunicator_29',['set_replicas_communicator',['../classcolvarproxy__lammps.html#a65da3867e1460e208331c0401995d2db',1,'colvarproxy_lammps']]],
+  ['set_5freplicas_5fmpi_5fcommunicator_29',['set_replicas_mpi_communicator',['../classcolvarproxy__replicas.html#a40670a0555a2cfadc63669543bb81ed6',1,'colvarproxy_replicas']]],
   ['set_5frestart_5foutput_5fprefix_30',['set_restart_output_prefix',['../classcolvarproxy__io.html#a714f2461293509fcce21face4838b868',1,'colvarproxy_io']]],
   ['set_5fresult_5fcolvarvalue_31',['set_result_colvarvalue',['../classcolvarscript.html#a554c8ad47b2629dc65b884e9b6ffc57e',1,'colvarscript']]],
   ['set_5fresult_5fcolvarvalue_5fvec_32',['set_result_colvarvalue_vec',['../classcolvarscript.html#aa68d7ce6c69228c9d0e95b44ede3e0c7',1,'colvarscript']]],
