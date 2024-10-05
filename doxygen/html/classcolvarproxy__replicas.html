@@ -71,6 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classcolvarproxy__replicas-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">colvarproxy_replicas Class Reference</div></div>
 </div><!--header-->
@@ -79,7 +80,7 @@ $(function() {
 <p>Methods for multiple-replica communication.  
  <a href="classcolvarproxy__replicas.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="colvarproxy_8h_source.html">colvarproxy.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="colvarproxy__replicas_8h_source.html">colvarproxy_replicas.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for colvarproxy_replicas:</div>
 <div class="dyncontent">
@@ -103,9 +104,13 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_replicas</b> ()</td></tr>
 <tr class="memdesc:a63e375de1a8d6373f8b2a016d8acfadc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a63e375de1a8d6373f8b2a016d8acfadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb15772f32308f99355f3893c832f85f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__replicas.html#acb15772f32308f99355f3893c832f85f">replica_enabled</a> ()</td></tr>
-<tr class="memdesc:acb15772f32308f99355f3893c832f85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate if multi-replica support is available and active.  <a href="classcolvarproxy__replicas.html#acb15772f32308f99355f3893c832f85f">More...</a><br /></td></tr>
-<tr class="separator:acb15772f32308f99355f3893c832f85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40670a0555a2cfadc63669543bb81ed6"><td class="memItemLeft" align="right" valign="top"><a id="a40670a0555a2cfadc63669543bb81ed6" name="a40670a0555a2cfadc63669543bb81ed6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>set_replicas_mpi_communicator</b> (replicas_mpi_comm_t comm)</td></tr>
+<tr class="memdesc:a40670a0555a2cfadc63669543bb81ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the multiple replicas communicator. <br /></td></tr>
+<tr class="separator:a40670a0555a2cfadc63669543bb81ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3456f8dceda28fa33e7d1ff3bb0a606"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__replicas.html#ac3456f8dceda28fa33e7d1ff3bb0a606">check_replicas_enabled</a> ()</td></tr>
+<tr class="memdesc:ac3456f8dceda28fa33e7d1ff3bb0a606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate if multi-replica support is available and active.  <a href="classcolvarproxy__replicas.html#ac3456f8dceda28fa33e7d1ff3bb0a606">More...</a><br /></td></tr>
+<tr class="separator:ac3456f8dceda28fa33e7d1ff3bb0a606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec78ab5f23c1c277c6707891466c6035"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__replicas.html#aec78ab5f23c1c277c6707891466c6035">replica_index</a> ()</td></tr>
 <tr class="memdesc:aec78ab5f23c1c277c6707891466c6035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of this replica.  <a href="classcolvarproxy__replicas.html#aec78ab5f23c1c277c6707891466c6035">More...</a><br /></td></tr>
 <tr class="separator:aec78ab5f23c1c277c6707891466c6035"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,10 +126,54 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_repli
 <tr class="memitem:a8cae79242be7203714d429734d063041"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__replicas.html#a8cae79242be7203714d429734d063041">replica_comm_send</a> (char *msg_data, int msg_len, int dest_rep)</td></tr>
 <tr class="memdesc:a8cae79242be7203714d429734d063041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to other replica.  <a href="classcolvarproxy__replicas.html#a8cae79242be7203714d429734d063041">More...</a><br /></td></tr>
 <tr class="separator:a8cae79242be7203714d429734d063041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a77f5e0a8cf1fef5f9ec2776645b1a230"><td class="memItemLeft" align="right" valign="top"><a id="a77f5e0a8cf1fef5f9ec2776645b1a230" name="a77f5e0a8cf1fef5f9ec2776645b1a230"></a>
+replicas_mpi_comm_t&#160;</td><td class="memItemRight" valign="bottom"><b>replicas_mpi_comm</b></td></tr>
+<tr class="memdesc:a77f5e0a8cf1fef5f9ec2776645b1a230"><td class="mdescLeft">&#160;</td><td class="mdescRight">MPI communicator containint 1 root proc from each world. <br /></td></tr>
+<tr class="separator:a77f5e0a8cf1fef5f9ec2776645b1a230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54772e506892cfedf16033f6b4064d75"><td class="memItemLeft" align="right" valign="top"><a id="a54772e506892cfedf16033f6b4064d75" name="a54772e506892cfedf16033f6b4064d75"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>replicas_mpi_rank</b> = 0</td></tr>
+<tr class="memdesc:a54772e506892cfedf16033f6b4064d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index (rank) of this replica in the MPI implementation. <br /></td></tr>
+<tr class="separator:a54772e506892cfedf16033f6b4064d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af304bdcc560aa2520f4660b5f108fb40"><td class="memItemLeft" align="right" valign="top"><a id="af304bdcc560aa2520f4660b5f108fb40" name="af304bdcc560aa2520f4660b5f108fb40"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>replicas_mpi_num</b> = 1</td></tr>
+<tr class="memdesc:af304bdcc560aa2520f4660b5f108fb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of replicas in the MPI implementation. <br /></td></tr>
+<tr class="separator:af304bdcc560aa2520f4660b5f108fb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Methods for multiple-replica communication. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac3456f8dceda28fa33e7d1ff3bb0a606" name="ac3456f8dceda28fa33e7d1ff3bb0a606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3456f8dceda28fa33e7d1ff3bb0a606">&#9670;&#160;</a></span>check_replicas_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvarproxy_replicas::check_replicas_enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicate if multi-replica support is available and active. </p>
+
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a8c8b8fde65dd03467cb707df297ca547">colvarproxy_namd</a>.</p>
+
+</div>
+</div>
 <a id="ac26bb75e2914bde2223d64a3ad7373c2" name="ac26bb75e2914bde2223d64a3ad7373c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac26bb75e2914bde2223d64a3ad7373c2">&#9670;&#160;</a></span>num_replicas()</h2>
 
@@ -150,7 +199,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_repli
 
 <p>Total number of replicas. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__lammps.html#aa33d12af5968f99a118162d83ef910b6">colvarproxy_lammps</a>, and <a class="el" href="classcolvarproxy__namd.html#a6cfdbe822ddb84f357b5f96ef7c070d6">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a6cfdbe822ddb84f357b5f96ef7c070d6">colvarproxy_namd</a>.</p>
 
 </div>
 </div>
@@ -179,7 +228,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_repli
 
 <p>Synchronize replica with others. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__lammps.html#a266d58ef5c62729c35a2ce5df4042894">colvarproxy_lammps</a>, and <a class="el" href="classcolvarproxy__namd.html#abbf904b5d4d3435442e9eeef7a809352">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#abbf904b5d4d3435442e9eeef7a809352">colvarproxy_namd</a>.</p>
 
 </div>
 </div>
@@ -225,7 +274,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_repli
 
 <p>Receive data from other replica. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__lammps.html#ab43e2b2d679461707213e9e9cd914e93">colvarproxy_lammps</a>, and <a class="el" href="classcolvarproxy__namd.html#af34d9b344cad775dfb44e5a63b5175d9">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#af34d9b344cad775dfb44e5a63b5175d9">colvarproxy_namd</a>.</p>
 
 </div>
 </div>
@@ -271,36 +320,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_repli
 
 <p>Send data to other replica. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__lammps.html#a9b219bca831c1bb08eb157de9bcf9168">colvarproxy_lammps</a>, and <a class="el" href="classcolvarproxy__namd.html#a30d8ea7b89df9a28fe341f614689d2e5">colvarproxy_namd</a>.</p>
-
-</div>
-</div>
-<a id="acb15772f32308f99355f3893c832f85f" name="acb15772f32308f99355f3893c832f85f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb15772f32308f99355f3893c832f85f">&#9670;&#160;</a></span>replica_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int colvarproxy_replicas::replica_enabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicate if multi-replica support is available and active. </p>
-
-<p>Reimplemented in <a class="el" href="classcolvarproxy__lammps.html#aec01979ae7178811989a3ec4fdf73d5e">colvarproxy_lammps</a>, and <a class="el" href="classcolvarproxy__namd.html#a483f575a5f3fe7e4211f8417791e4a3b">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a30d8ea7b89df9a28fe341f614689d2e5">colvarproxy_namd</a>.</p>
 
 </div>
 </div>
@@ -329,18 +349,18 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_repli
 
 <p>Index of this replica. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__lammps.html#a4fb8061506bed70df344671c92ce487b">colvarproxy_lammps</a>, and <a class="el" href="classcolvarproxy__namd.html#a18ec3f10b35dafbe5bea81f049640fa6">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a18ec3f10b35dafbe5bea81f049640fa6">colvarproxy_namd</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="colvarproxy_8h_source.html">colvarproxy.h</a></li>
+<li><a class="el" href="colvarproxy__replicas_8h_source.html">colvarproxy_replicas.h</a></li>
 <li>colvarproxy_replicas.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 17 2024 19:46:03 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Oct 5 2024 14:38:00 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
