@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['polar_5fphi_0',['polar_phi',['../classcolvar_1_1polar__phi.html',1,'colvar']]],
-  ['polar_5ftheta_1',['polar_theta',['../classcolvar_1_1polar__theta.html',1,'colvar']]]
+  ['orientation_0',['orientation',['../classcolvar_1_1orientation.html',1,'colvar']]],
+  ['orientation_5fangle_1',['orientation_angle',['../classcolvar_1_1orientation__angle.html',1,'colvar']]],
+  ['orientation_5fproj_2',['orientation_proj',['../classcolvar_1_1orientation__proj.html',1,'colvar']]]
 ];

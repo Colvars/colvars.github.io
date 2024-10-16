@@ -31,7 +31,7 @@ var searchData=
   ['colvars_5fsmp_28',['colvars_smp',['../classcolvarmodule.html#ab7f44d8557f48704ee29c1a620b88dbe',1,'colvarmodule']]],
   ['colvars_5fsmp_5fitems_29',['colvars_smp_items',['../classcolvarmodule.html#a4824af5f8f54ef36f0330cfc8087c8bb',1,'colvarmodule']]],
   ['com_30',['com',['../classcolvarmodule_1_1atom__group.html#a2808330112d27a1c26c16c54b390b208',1,'colvarmodule::atom_group']]],
-  ['comm_31',['comm',['../classcolvarbias__meta.html#a9a0ec395c17ab9d9be88222a30244bb8',1,'colvarbias_meta']]],
+  ['comm_31',['comm',['../classcolvarbias__meta.html#a9a0ec395c17ab9d9be88222a30244bb8',1,'colvarbias_meta::comm()'],['../classcolvarbias__opes.html#a2ad29a398f0f5fff7061994ee3b7658e',1,'colvarbias_opes::comm()']]],
   ['comp_5fatoms_32',['comp_atoms',['../classcolvar_1_1CartesianBasedPath.html#aceb353db258631d983dd1e49868e7f94',1,'colvar::CartesianBasedPath']]],
   ['config_5fkey_33',['config_key',['../classcolvar_1_1cvc.html#ae961414532e6af255b32cddb35c8e1cf',1,'colvar::cvc']]],
   ['config_5fqueue_5f_34',['config_queue_',['../classcolvarproxy.html#a8a791683c266c2e4417dfc2d6e989b0b',1,'colvarproxy']]],

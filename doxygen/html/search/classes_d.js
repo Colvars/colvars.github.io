@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quaternion_0',['quaternion',['../classcolvarmodule_1_1quaternion.html',1,'colvarmodule']]]
+  ['polar_5fphi_0',['polar_phi',['../classcolvar_1_1polar__phi.html',1,'colvar']]],
+  ['polar_5ftheta_1',['polar_theta',['../classcolvar_1_1polar__theta.html',1,'colvar']]]
 ];

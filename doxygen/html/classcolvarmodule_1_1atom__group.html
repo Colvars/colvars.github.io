@@ -74,6 +74,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -117,6 +118,11 @@ Collaboration diagram for colvarmodule::atom_group:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group_1_1group__force__object.html">group_force_object</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e66458c99a3b6ebf898c42f993f5670"><td class="memItemLeft" align="right" valign="top"><a id="a3e66458c99a3b6ebf898c42f993f5670" name="a3e66458c99a3b6ebf898c42f993f5670"></a>
@@ -197,6 +203,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_properties</b> 
 <tr class="separator:af34f3a9fa6e271f28510c36d382b3bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8b3a2991eb04e01be771eda8fff6345"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feature</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#ac8b3a2991eb04e01be771eda8fff6345">modify_features</a> () override</td></tr>
 <tr class="separator:ac8b3a2991eb04e01be771eda8fff6345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955ea21209dc6a5a44f04a0428185ddf"><td class="memItemLeft" align="right" valign="top"><a id="a955ea21209dc6a5a44f04a0428185ddf" name="a955ea21209dc6a5a44f04a0428185ddf"></a>
+<a class="el" href="classcolvarmodule_1_1atom__group_1_1group__force__object.html">group_force_object</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_group_force_object</b> ()</td></tr>
+<tr class="separator:a955ea21209dc6a5a44f04a0428185ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acef497de2a804a0380be8f753be22176"><td class="memItemLeft" align="right" valign="top"><a id="acef497de2a804a0380be8f753be22176" name="acef497de2a804a0380be8f753be22176"></a>
 <a class="el" href="classcolvarmodule_1_1atom.html">cvm::atom</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t const i)</td></tr>
 <tr class="separator:acef497de2a804a0380be8f753be22176"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,10 +342,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_weighted_gradient
 void&#160;</td><td class="memItemRight" valign="bottom"><b>calc_fit_gradients</b> ()</td></tr>
 <tr class="memdesc:a1b0c96294ebb4a87681643cf87952f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the derivatives of the fitting transformation. <br /></td></tr>
 <tr class="separator:a1b0c96294ebb4a87681643cf87952f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af52ffde684ae0db4711ee847a11cbb7e"><td class="memTemplParams" colspan="2">template&lt;bool B_ag_center, bool B_ag_rotate&gt; </td></tr>
-<tr class="memitem:af52ffde684ae0db4711ee847a11cbb7e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#af52ffde684ae0db4711ee847a11cbb7e">calc_fit_gradients_impl</a> ()</td></tr>
-<tr class="memdesc:af52ffde684ae0db4711ee847a11cbb7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual implementation of <code>calc_fit_gradients</code>. The template is used to avoid branching inside the loops in case that the CPU branch prediction is broken (or further migration to GPU code).  <a href="classcolvarmodule_1_1atom__group.html#af52ffde684ae0db4711ee847a11cbb7e">More...</a><br /></td></tr>
-<tr class="separator:af52ffde684ae0db4711ee847a11cbb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ac4aff2e2eb04120624975d44303a1"><td class="memTemplParams" colspan="2">template&lt;bool B_ag_center, bool B_ag_rotate, typename main_force_accessor_T , typename fitting_force_accessor_T &gt; </td></tr>
+<tr class="memitem:a32ac4aff2e2eb04120624975d44303a1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#a32ac4aff2e2eb04120624975d44303a1">calc_fit_forces_impl</a> (main_force_accessor_T accessor_main, fitting_force_accessor_T accessor_fitting) const</td></tr>
+<tr class="memdesc:a32ac4aff2e2eb04120624975d44303a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual implementation of <code>calc_fit_gradients</code> and <code>calc_fit_forces</code>. The template is used to avoid branching inside the loops in case that the CPU branch prediction is broken (or further migration to GPU code).  <a href="classcolvarmodule_1_1atom__group.html#a32ac4aff2e2eb04120624975d44303a1">More...</a><br /></td></tr>
+<tr class="separator:a32ac4aff2e2eb04120624975d44303a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b9a3ef4428938051ac90e083ddb41e2"><td class="memTemplParams" colspan="2">template&lt;typename main_force_accessor_T , typename fitting_force_accessor_T &gt; </td></tr>
+<tr class="memitem:a3b9a3ef4428938051ac90e083ddb41e2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#a3b9a3ef4428938051ac90e083ddb41e2">calc_fit_forces</a> (main_force_accessor_T accessor_main, fitting_force_accessor_T accessor_fitting) const</td></tr>
+<tr class="memdesc:a3b9a3ef4428938051ac90e083ddb41e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate or apply the fitting group forces from the main group forces.  <a href="classcolvarmodule_1_1atom__group.html#a3b9a3ef4428938051ac90e083ddb41e2">More...</a><br /></td></tr>
+<tr class="separator:a3b9a3ef4428938051ac90e083ddb41e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4ff6b030809c7875ea4d135cab32895"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html#ac4ff6b030809c7875ea4d135cab32895">apply_colvar_force</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;force)</td></tr>
 <tr class="memdesc:ac4ff6b030809c7875ea4d135cab32895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by a (scalar) colvar to apply its force on its <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> members.  <a href="classcolvarmodule_1_1atom__group.html#ac4ff6b030809c7875ea4d135cab32895">More...</a><br /></td></tr>
 <tr class="separator:ac4ff6b030809c7875ea4d135cab32895"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -691,6 +704,10 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>s
 int&#160;</td><td class="memItemRight" valign="bottom"><b>index</b></td></tr>
 <tr class="memdesc:a291b9af048b8eae87cdffb431cbbdd76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index in the colvarproxy arrays (if the group is scalable) <br /></td></tr>
 <tr class="separator:a291b9af048b8eae87cdffb431cbbdd76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f1303b916316c9e131ea19d6df1a66"><td class="memItemLeft" align="right" valign="top"><a id="a18f1303b916316c9e131ea19d6df1a66" name="a18f1303b916316c9e131ea19d6df1a66"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>group_forces</b></td></tr>
+<tr class="memdesc:a18f1303b916316c9e131ea19d6df1a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">The temporary forces acting on the main group atoms. Currently this is only used for calculating the fitting group forces for non-scalar components. <br /></td></tr>
+<tr class="separator:a18f1303b916316c9e131ea19d6df1a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
 <tr class="memitem:a3ac164fe1f145b794a514c9145ca4ced inherit pro_attribs_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a3ac164fe1f145b794a514c9145ca4ced" name="a3ac164fe1f145b794a514c9145ca4ced"></a>
 std::string const&#160;</td><td class="memItemRight" valign="bottom"><b>keyword_delimiters_left</b></td></tr>
@@ -1039,28 +1056,94 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 </div>
 </div>
-<a id="af52ffde684ae0db4711ee847a11cbb7e" name="af52ffde684ae0db4711ee847a11cbb7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af52ffde684ae0db4711ee847a11cbb7e">&#9670;&#160;</a></span>calc_fit_gradients_impl()</h2>
+<a id="a3b9a3ef4428938051ac90e083ddb41e2" name="a3b9a3ef4428938051ac90e083ddb41e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b9a3ef4428938051ac90e083ddb41e2">&#9670;&#160;</a></span>calc_fit_forces()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;bool B_ag_center, bool B_ag_rotate&gt; </div>
+template&lt;typename main_force_accessor_T , typename fitting_force_accessor_T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void cvm::atom_group::calc_fit_gradients_impl </td>
+          <td class="memname">void cvm::atom_group::calc_fit_forces </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">main_force_accessor_T&#160;</td>
+          <td class="paramname"><em>accessor_main</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">fitting_force_accessor_T&#160;</td>
+          <td class="paramname"><em>accessor_fitting</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Actual implementation of <code>calc_fit_gradients</code>. The template is used to avoid branching inside the loops in case that the CPU branch prediction is broken (or further migration to GPU code). </p>
+<p>Calculate or apply the fitting group forces from the main group forces. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">main_force_accessor_T</td><td>The type of accessor of the main group forces or gradients. </td></tr>
+    <tr><td class="paramname">fitting_force_accessor_T</td><td>The type of accessor of the fitting group forces or gradients. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">accessor_main</td><td>The accessor of the main group forces or gradients. accessor_main(i) should return the i-th force or gradient of the main group. </td></tr>
+    <tr><td class="paramname">accessor_fitting</td><td>The accessor of the fitting group forces or gradients. accessor_fitting(j, v) should store/apply the j-th atom gradient or force in the fitting group. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32ac4aff2e2eb04120624975d44303a1" name="a32ac4aff2e2eb04120624975d44303a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32ac4aff2e2eb04120624975d44303a1">&#9670;&#160;</a></span>calc_fit_forces_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool B_ag_center, bool B_ag_rotate, typename main_force_accessor_T , typename fitting_force_accessor_T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cvm::atom_group::calc_fit_forces_impl </td>
+          <td>(</td>
+          <td class="paramtype">main_force_accessor_T&#160;</td>
+          <td class="paramname"><em>accessor_main</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">fitting_force_accessor_T&#160;</td>
+          <td class="paramname"><em>accessor_fitting</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actual implementation of <code>calc_fit_gradients</code> and <code>calc_fit_forces</code>. The template is used to avoid branching inside the loops in case that the CPU branch prediction is broken (or further migration to GPU code). </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">B_ag_center</td><td>Centered the reference to origin? This should follow the value of <code>is_enabled(f_ag_center)</code>. </td></tr>
     <tr><td class="paramname">B_ag_rotate</td><td>Calculate the optimal rotation? This should follow the value of <code>is_enabled(f_ag_rotate)</code>. </td></tr>
+    <tr><td class="paramname">main_force_accessor_T</td><td>The type of accessor of the main group forces or gradients. </td></tr>
+    <tr><td class="paramname">fitting_force_accessor_T</td><td>The type of accessor of the fitting group forces or gradients. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">accessor_main</td><td>The accessor of the main group forces or gradients. accessor_main(i) should return the i-th force or gradient of the main group. </td></tr>
+    <tr><td class="paramname">accessor_fitting</td><td>The accessor of the fitting group forces or gradients. accessor_fitting(j, v) should store/apply the j-th atom gradient or force in the fitting group. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1295,7 +1378,7 @@ template&lt;bool B_ag_center, bool B_ag_rotate&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 11 2024 21:58:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Oct 16 2024 14:20:35 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

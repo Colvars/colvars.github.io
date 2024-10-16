@@ -38,7 +38,7 @@ var searchData=
   ['monitor_5fcrossings_35',['monitor_crossings',['../classcolvarmodule_1_1rotation.html#a9967b62b87d70fd7cf35b1a5b4fd8513',1,'colvarmodule::rotation']]],
   ['msgcolvars_36',['msgColvars',['../classcolvarproxy__vmd.html#a11d498ad34c25eee1264d11a5c56923b',1,'colvarproxy_vmd']]],
   ['mult_37',['mult',['../classcolvar__grid.html#a44046656fa8400d6bf6583416ddb4c85',1,'colvar_grid']]],
-  ['multiple_5freplicas_38',['multiple_replicas',['../classcolvarbias__meta.html#a795c12aae8c0ae64166839531e1b7841a5569c538d97cd61b96beecc63990877a',1,'colvarbias_meta']]],
+  ['multiple_5freplicas_38',['multiple_replicas',['../classcolvarbias__meta.html#a795c12aae8c0ae64166839531e1b7841a5569c538d97cd61b96beecc63990877a',1,'colvarbias_meta::multiple_replicas()'],['../classcolvarbias__opes.html#aa0746502440f618545740b18182851f4af7f86bbd315fcb429c9658393318e08f',1,'colvarbias_opes::multiple_replicas()']]],
   ['multiplicity_39',['multiplicity',['../classcolvar__grid.html#a4538cdb8d605ab9d70a0aeb7ca5a1f3d',1,'colvar_grid']]],
   ['multiply_5fconstant_40',['multiply_constant',['../classcolvar__grid.html#a5861f628eab12b32e08c995eac4ee3f6',1,'colvar_grid']]],
   ['multiply_5fmatrix_41',['multiply_matrix',['../classneuralnetworkCV_1_1neuralNetworkCompute.html#acb8f52ac039ba1858d0cc601160bdda9',1,'neuralnetworkCV::neuralNetworkCompute']]]
