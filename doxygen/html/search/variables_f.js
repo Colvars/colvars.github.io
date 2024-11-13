@@ -20,11 +20,12 @@ var searchData=
   ['pmf_17',['pmf',['../classcolvarbias__abf.html#a64ccd9c938b77a1b2e3462e95a32b554',1,'colvarbias_abf']]],
   ['pmf_5fgrid_5fexp_5favg_18',['pmf_grid_exp_avg',['../classcolvarbias__reweightaMD.html#aec93403d1838be5d01165e04d095f0bb',1,'colvarbias_reweightaMD']]],
   ['pos_19',['pos',['../classcolvarmodule_1_1atom.html#ad69c11b6395fdda6f0c84783ade07a88',1,'colvarmodule::atom']]],
-  ['potential_5fenergy_20',['potential_energy',['../classcolvar.html#ae1a1f66c6a860b808945d5c3cc25c684',1,'colvar']]],
-  ['prev_5ftimestep_21',['prev_timestep',['../classcolvar.html#a755c10ec29af23615294659f066cbc81',1,'colvar']]],
-  ['prev_5fv_5fext_22',['prev_v_ext',['../classcolvar.html#aa7f43820f71f58307d8d8c7a8de0c7ae',1,'colvar']]],
-  ['prev_5fx_5fext_23',['prev_x_ext',['../classcolvar.html#a75d391e937bd036d1c732e37dc3e0322',1,'colvar']]],
-  ['previous_5fbin_24',['previous_bin',['../classcolvarbias__reweightaMD.html#a210fd6ebf21cfaedef355bc25dc86855',1,'colvarbias_reweightaMD']]],
-  ['previous_5fcolvar_5fforces_25',['previous_colvar_forces',['../classcolvarbias.html#a881b022eeedaeabdbd7c5dd1b5a1510c',1,'colvarbias']]],
-  ['proxy_26',['proxy',['../classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c',1,'colvarmodule']]]
+  ['pos_5funrotated_20',['pos_unrotated',['../classcolvarmodule_1_1atom__group.html#a5da0ce6c6f0af1d2b518839650c12c8e',1,'colvarmodule::atom_group']]],
+  ['potential_5fenergy_21',['potential_energy',['../classcolvar.html#ae1a1f66c6a860b808945d5c3cc25c684',1,'colvar']]],
+  ['prev_5ftimestep_22',['prev_timestep',['../classcolvar.html#a755c10ec29af23615294659f066cbc81',1,'colvar']]],
+  ['prev_5fv_5fext_23',['prev_v_ext',['../classcolvar.html#aa7f43820f71f58307d8d8c7a8de0c7ae',1,'colvar']]],
+  ['prev_5fx_5fext_24',['prev_x_ext',['../classcolvar.html#a75d391e937bd036d1c732e37dc3e0322',1,'colvar']]],
+  ['previous_5fbin_25',['previous_bin',['../classcolvarbias__reweightaMD.html#a210fd6ebf21cfaedef355bc25dc86855',1,'colvarbias_reweightaMD']]],
+  ['previous_5fcolvar_5fforces_26',['previous_colvar_forces',['../classcolvarbias.html#a881b022eeedaeabdbd7c5dd1b5a1510c',1,'colvarbias']]],
+  ['proxy_27',['proxy',['../classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c',1,'colvarmodule']]]
 ];

@@ -76,5 +76,6 @@ var searchData=
   ['getweight_73',['getWeight',['../classneuralnetworkCV_1_1denseLayer.html#a07cd086d2ce88da823bfd9144be05494',1,'neuralnetworkCV::denseLayer']]],
   ['gradient_5ffinite_5fdiff_74',['gradient_finite_diff',['../classcolvar__grid__count.html#a49377403b3afa0a0a864b476f0eb7ba5',1,'colvar_grid_count::gradient_finite_diff()'],['../classcolvar__grid__scalar.html#a2ebf505532ae66d3925f04e26e9e24cc',1,'colvar_grid_scalar::gradient_finite_diff(const std::vector&lt; int &gt; &amp;ix0, int n=0)']]],
   ['grid_5frmsd_75',['grid_rmsd',['../classcolvar__grid__scalar.html#a85f177580ccc5e2c76738b483c9aadae',1,'colvar_grid_scalar::grid_rmsd()'],['../classcolvar__grid__gradient.html#ae955dacd756e4426caeb314135a02a95',1,'colvar_grid_gradient::grid_rmsd()']]],
-  ['gridforcegridloop_76',['GridForceGridLoop',['../classcolvarproxy__namd.html#ae2a63119e40cde660ae1170941a8c66a',1,'colvarproxy_namd']]]
+  ['gridforcegridloop_76',['GridForceGridLoop',['../classcolvarproxy__namd.html#ae2a63119e40cde660ae1170941a8c66a',1,'colvarproxy_namd']]],
+  ['group_5fforce_5fobject_77',['group_force_object',['../classcolvarmodule_1_1atom__group_1_1group__force__object.html#ab4611924f912db7d02d0c081335635bc',1,'colvarmodule::atom_group::group_force_object']]]
 ];

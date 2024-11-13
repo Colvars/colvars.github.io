@@ -23,7 +23,8 @@ var searchData=
   ['_7ecolvarproxy_5ftcl_20',['~colvarproxy_tcl',['../classcolvarproxy__tcl.html#a46d183d4bc83aeb09752b30887bc3836',1,'colvarproxy_tcl']]],
   ['_7ecolvarproxy_5fvolmaps_21',['~colvarproxy_volmaps',['../classcolvarproxy__volmaps.html#aae88edf15708067d9482278ba60f896e',1,'colvarproxy_volmaps']]],
   ['_7ecvc_22',['~cvc',['../classcolvar_1_1cvc.html#a2c7968e6dce6fb671a52c557a748ada4',1,'colvar::cvc']]],
-  ['_7ehill_23',['~hill',['../classcolvarbias__meta_1_1hill.html#a579a38b44f318b0dd279f49b00ec45ca',1,'colvarbias_meta::hill']]],
-  ['_7ematrix2d_24',['~matrix2d',['../classcolvarmodule_1_1matrix2d.html#a5c14ecf2b1131685fc173fe9f2c19083',1,'colvarmodule::matrix2d']]],
-  ['_7erotation_25',['~rotation',['../classcolvarmodule_1_1rotation.html#a06255dfdb6442f8a109dc067f86bf5dd',1,'colvarmodule::rotation']]]
+  ['_7egroup_5fforce_5fobject_23',['~group_force_object',['../classcolvarmodule_1_1atom__group_1_1group__force__object.html#a274a41cbb75c7f36be1a6beb0bc5482d',1,'colvarmodule::atom_group::group_force_object']]],
+  ['_7ehill_24',['~hill',['../classcolvarbias__meta_1_1hill.html#a579a38b44f318b0dd279f49b00ec45ca',1,'colvarbias_meta::hill']]],
+  ['_7ematrix2d_25',['~matrix2d',['../classcolvarmodule_1_1matrix2d.html#a5c14ecf2b1131685fc173fe9f2c19083',1,'colvarmodule::matrix2d']]],
+  ['_7erotation_26',['~rotation',['../classcolvarmodule_1_1rotation.html#a06255dfdb6442f8a109dc067f86bf5dd',1,'colvarmodule::rotation']]]
 ];

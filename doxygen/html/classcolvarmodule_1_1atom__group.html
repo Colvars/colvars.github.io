@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -121,6 +128,7 @@ Collaboration diagram for colvarmodule::atom_group:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group_1_1group__force__object.html">group_force_object</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper class for applying forces on an atom group in a way that is aware of the fitting group. NOTE: you are encouraged to use get_group_force_object() to get an instance of <a class="el" href="classcolvarmodule_1_1atom__group_1_1group__force__object.html" title="A helper class for applying forces on an atom group in a way that is aware of the fitting group....">group_force_object</a> instead of constructing directly.  <a href="classcolvarmodule_1_1atom__group_1_1group__force__object.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -764,6 +772,10 @@ Private Attributes</h2></td></tr>
 <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cog_orig</b></td></tr>
 <tr class="memdesc:a19b8bfacbc4b5c141389305606541443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center of geometry before any fitting. <br /></td></tr>
 <tr class="separator:a19b8bfacbc4b5c141389305606541443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da0ce6c6f0af1d2b518839650c12c8e"><td class="memItemLeft" align="right" valign="top"><a id="a5da0ce6c6f0af1d2b518839650c12c8e" name="a5da0ce6c6f0af1d2b518839650c12c8e"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pos_unrotated</b></td></tr>
+<tr class="memdesc:a5da0ce6c6f0af1d2b518839650c12c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unrotated atom positions for fit gradients. <br /></td></tr>
+<tr class="separator:a5da0ce6c6f0af1d2b518839650c12c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2808330112d27a1c26c16c54b390b208"><td class="memItemLeft" align="right" valign="top"><a id="a2808330112d27a1c26c16c54b390b208" name="a2808330112d27a1c26c16c54b390b208"></a>
 <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a>&#160;</td><td class="memItemRight" valign="bottom"><b>com</b></td></tr>
 <tr class="memdesc:a2808330112d27a1c26c16c54b390b208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center of mass. <br /></td></tr>
@@ -1095,10 +1107,11 @@ template&lt;typename main_force_accessor_T , typename fitting_force_accessor_T &
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">accessor_main</td><td>The accessor of the main group forces or gradients. accessor_main(i) should return the i-th force or gradient of the main group. </td></tr>
-    <tr><td class="paramname">accessor_fitting</td><td>The accessor of the fitting group forces or gradients. accessor_fitting(j, v) should store/apply the j-th atom gradient or force in the fitting group. </td></tr>
+    <tr><td class="paramname">accessor_fitting</td><td>The accessor of the fitting group forces or gradients. accessor_fitting(j, v) should store/apply the j-th atom gradient or force in the fitting group.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This function just dispatches the parameters to calc_fit_forces_impl that really performs the calculations. </p>
 
 </div>
 </div>
@@ -1135,18 +1148,19 @@ template&lt;bool B_ag_center, bool B_ag_rotate, typename main_force_accessor_T ,
   <table class="tparams">
     <tr><td class="paramname">B_ag_center</td><td>Centered the reference to origin? This should follow the value of <code>is_enabled(f_ag_center)</code>. </td></tr>
     <tr><td class="paramname">B_ag_rotate</td><td>Calculate the optimal rotation? This should follow the value of <code>is_enabled(f_ag_rotate)</code>. </td></tr>
-    <tr><td class="paramname">main_force_accessor_T</td><td>The type of accessor of the main group forces or gradients. </td></tr>
+    <tr><td class="paramname">main_force_accessor_T</td><td>The type of accessor of the main group forces or gradients acting on the rotated frame. </td></tr>
     <tr><td class="paramname">fitting_force_accessor_T</td><td>The type of accessor of the fitting group forces or gradients. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">accessor_main</td><td>The accessor of the main group forces or gradients. accessor_main(i) should return the i-th force or gradient of the main group. </td></tr>
-    <tr><td class="paramname">accessor_fitting</td><td>The accessor of the fitting group forces or gradients. accessor_fitting(j, v) should store/apply the j-th atom gradient or force in the fitting group. </td></tr>
+    <tr><td class="paramname">accessor_main</td><td>The accessor of the main group forces or gradients. accessor_main(i) should return the i-th force or gradient of the rotated main group. </td></tr>
+    <tr><td class="paramname">accessor_fitting</td><td>The accessor of the fitting group forces or gradients. accessor_fitting(j, v) should store/apply the j-th atom gradient or force in the fitting group.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This function is used to (i) project the gradients of CV with respect to rotated main group atoms to fitting group atoms, or (ii) project the forces on rotated main group atoms to fitting group atoms, by the following two steps (using the goal (ii) for example): (1) Loop over the positions of main group atoms and call cvm::quaternion::position_derivative_inner to project the forces on rotated main group atoms to the forces on quaternion. (2) Loop over the positions of fitting group atoms, compute the gradients of \(\mathbf{q}\) with respect to the position of each atom, and then multiply that with the force on \(\mathbf{q}\) (chain rule). </p>
 
 </div>
 </div>
@@ -1378,7 +1392,7 @@ template&lt;bool B_ag_center, bool B_ag_rotate, typename main_force_accessor_T ,
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 8 2024 17:34:34 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Nov 13 2024 16:05:55 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

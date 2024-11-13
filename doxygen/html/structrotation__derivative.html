@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -101,15 +108,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e73e6c5f9a5fb470aca3e0d66bd2a46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#a3e73e6c5f9a5fb470aca3e0d66bd2a46">prepare_derivative</a> (rotation_derivative_dldq require_dl_dq)</td></tr>
 <tr class="memdesc:a3e73e6c5f9a5fb470aca3e0d66bd2a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function must be called before <code>calc_derivative_wrt_group1</code> and <code>calc_derivative_wrt_group2</code> in order to prepare the tmp_Q0Q0 and tmp_Q0Q0_L.  <a href="structrotation__derivative.html#a3e73e6c5f9a5fb470aca3e0d66bd2a46">More...</a><br /></td></tr>
 <tr class="separator:a3e73e6c5f9a5fb470aca3e0d66bd2a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24a8aeb7992438b74063488fba568a9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#a24a8aeb7992438b74063488fba568a9d">calc_derivative_impl</a> (const <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>(&amp;ds)[4][4], <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *const dl0_out, <a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const dq0_out, <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const ds_out) const</td></tr>
-<tr class="memdesc:a24a8aeb7992438b74063488fba568a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual implementation of the derivative calculation.  <a href="structrotation__derivative.html#a24a8aeb7992438b74063488fba568a9d">More...</a><br /></td></tr>
-<tr class="separator:a24a8aeb7992438b74063488fba568a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad77b69322047d7111785fe411e709ce1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#ad77b69322047d7111785fe411e709ce1">calc_derivative_wrt_group1</a> (size_t ia, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *const dl0_1_out=nullptr, <a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const dq0_1_out=nullptr, <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const ds_1_out=nullptr) const</td></tr>
-<tr class="memdesc:ad77b69322047d7111785fe411e709ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the derivatives of S, the leading eigenvalue L and the leading eigenvector Q with respect to <code>m_pos1</code>  <a href="structrotation__derivative.html#ad77b69322047d7111785fe411e709ce1">More...</a><br /></td></tr>
-<tr class="separator:ad77b69322047d7111785fe411e709ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6169ed60f2fe12ae0507046e93aba131"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#a6169ed60f2fe12ae0507046e93aba131">calc_derivative_wrt_group2</a> (size_t ia, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *const dl0_2_out=nullptr, <a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const dq0_2_out=nullptr, <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const ds_2_out=nullptr) const</td></tr>
-<tr class="memdesc:a6169ed60f2fe12ae0507046e93aba131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the derivatives of S, the leading eigenvalue L and the leading eigenvector Q with respect to <code>m_pos2</code>  <a href="structrotation__derivative.html#a6169ed60f2fe12ae0507046e93aba131">More...</a><br /></td></tr>
-<tr class="separator:a6169ed60f2fe12ae0507046e93aba131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe1f2b25b4c643d0b738ab0cea3b028"><td class="memTemplParams" colspan="2">template&lt;bool use_dl, bool use_dq, bool use_ds&gt; </td></tr>
+<tr class="memitem:affe1f2b25b4c643d0b738ab0cea3b028"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#affe1f2b25b4c643d0b738ab0cea3b028">calc_derivative_impl</a> (const <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>(&amp;ds)[4][4], <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *_noalias const dl0_out, <a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const dq0_out, <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const ds_out) const</td></tr>
+<tr class="memdesc:affe1f2b25b4c643d0b738ab0cea3b028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual implementation of the derivative calculation.  <a href="structrotation__derivative.html#affe1f2b25b4c643d0b738ab0cea3b028">More...</a><br /></td></tr>
+<tr class="separator:affe1f2b25b4c643d0b738ab0cea3b028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc4b1bb1ba0f8c8ddd9ba6d57bc8b25"><td class="memTemplParams" colspan="2">template&lt;bool use_dl, bool use_dq, bool use_ds&gt; </td></tr>
+<tr class="memitem:a2cc4b1bb1ba0f8c8ddd9ba6d57bc8b25"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#a2cc4b1bb1ba0f8c8ddd9ba6d57bc8b25">calc_derivative_wrt_group1</a> (size_t ia, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *_noalias const dl0_1_out=nullptr, <a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const dq0_1_out=nullptr, <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const ds_1_out=nullptr) const</td></tr>
+<tr class="memdesc:a2cc4b1bb1ba0f8c8ddd9ba6d57bc8b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the derivatives of S, the leading eigenvalue L and the leading eigenvector Q with respect to <code>m_pos1</code>  <a href="structrotation__derivative.html#a2cc4b1bb1ba0f8c8ddd9ba6d57bc8b25">More...</a><br /></td></tr>
+<tr class="separator:a2cc4b1bb1ba0f8c8ddd9ba6d57bc8b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6341ebec70e97ff3e1aa8f379c97192"><td class="memTemplParams" colspan="2">template&lt;bool use_dl, bool use_dq, bool use_ds&gt; </td></tr>
+<tr class="memitem:ac6341ebec70e97ff3e1aa8f379c97192"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#ac6341ebec70e97ff3e1aa8f379c97192">calc_derivative_wrt_group2</a> (size_t ia, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *_noalias const dl0_2_out=nullptr, <a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const dq0_2_out=nullptr, <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const ds_2_out=nullptr) const</td></tr>
+<tr class="memdesc:ac6341ebec70e97ff3e1aa8f379c97192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the derivatives of S, the leading eigenvalue L and the leading eigenvector Q with respect to <code>m_pos2</code>  <a href="structrotation__derivative.html#ac6341ebec70e97ff3e1aa8f379c97192">More...</a><br /></td></tr>
+<tr class="separator:ac6341ebec70e97ff3e1aa8f379c97192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -192,13 +202,15 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a24a8aeb7992438b74063488fba568a9d" name="a24a8aeb7992438b74063488fba568a9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24a8aeb7992438b74063488fba568a9d">&#9670;&#160;</a></span>calc_derivative_impl()</h2>
+<a id="affe1f2b25b4c643d0b738ab0cea3b028" name="affe1f2b25b4c643d0b738ab0cea3b028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe1f2b25b4c643d0b738ab0cea3b028">&#9670;&#160;</a></span>calc_derivative_impl()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T1 , typename T2 &gt; </div>
+<div class="memtemplate">
+template&lt;bool use_dl, bool use_dq, bool use_ds&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -212,19 +224,19 @@ template&lt;typename T1 , typename T2 &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *_noalias const&#160;</td>
           <td class="paramname"><em>dl0_out</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const&#160;</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const&#160;</td>
           <td class="paramname"><em>dq0_out</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const&#160;</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const&#160;</td>
           <td class="paramname"><em>ds_out</em>&#160;</td>
         </tr>
         <tr>
@@ -253,13 +265,15 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="ad77b69322047d7111785fe411e709ce1" name="ad77b69322047d7111785fe411e709ce1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad77b69322047d7111785fe411e709ce1">&#9670;&#160;</a></span>calc_derivative_wrt_group1()</h2>
+<a id="a2cc4b1bb1ba0f8c8ddd9ba6d57bc8b25" name="a2cc4b1bb1ba0f8c8ddd9ba6d57bc8b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc4b1bb1ba0f8c8ddd9ba6d57bc8b25">&#9670;&#160;</a></span>calc_derivative_wrt_group1()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T1 , typename T2 &gt; </div>
+<div class="memtemplate">
+template&lt;bool use_dl, bool use_dq, bool use_ds&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -273,19 +287,19 @@ template&lt;typename T1 , typename T2 &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *_noalias const&#160;</td>
           <td class="paramname"><em>dl0_1_out</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const&#160;</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const&#160;</td>
           <td class="paramname"><em>dq0_1_out</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const&#160;</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const&#160;</td>
           <td class="paramname"><em>ds_1_out</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -314,13 +328,15 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="a6169ed60f2fe12ae0507046e93aba131" name="a6169ed60f2fe12ae0507046e93aba131"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6169ed60f2fe12ae0507046e93aba131">&#9670;&#160;</a></span>calc_derivative_wrt_group2()</h2>
+<a id="ac6341ebec70e97ff3e1aa8f379c97192" name="ac6341ebec70e97ff3e1aa8f379c97192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6341ebec70e97ff3e1aa8f379c97192">&#9670;&#160;</a></span>calc_derivative_wrt_group2()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T1 , typename T2 &gt; </div>
+<div class="memtemplate">
+template&lt;bool use_dl, bool use_dq, bool use_ds&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -334,19 +350,19 @@ template&lt;typename T1 , typename T2 &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *_noalias const&#160;</td>
           <td class="paramname"><em>dl0_2_out</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const&#160;</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1vector1d.html">cvm::vector1d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const&#160;</td>
           <td class="paramname"><em>dq0_2_out</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *const&#160;</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; *_noalias const&#160;</td>
           <td class="paramname"><em>ds_2_out</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -417,7 +433,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 8 2024 17:34:34 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Nov 13 2024 16:05:55 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -183,10 +190,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator-=</b> (<a cl
 <a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rotation_matrix</b> () const</td></tr>
 <tr class="memdesc:aa5fe2927bc34938cef6beff5ab9556bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the 3x3 matrix associated to this quaternion. <br /></td></tr>
 <tr class="separator:aa5fe2927bc34938cef6beff5ab9556bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2230e410b1d60b51944e1a3073b068df"><td class="memItemLeft" align="right" valign="top"><a id="a2230e410b1d60b51944e1a3073b068df" name="a2230e410b1d60b51944e1a3073b068df"></a>
-<a class="el" href="classcolvarmodule_1_1quaternion.html">cvm::quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_derivative_inner</b> (<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;pos, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;vec) const</td></tr>
-<tr class="memdesc:a2230e410b1d60b51944e1a3073b068df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply the given vector by the derivative of the given (rotated) position with respect to the quaternion. <br /></td></tr>
-<tr class="separator:a2230e410b1d60b51944e1a3073b068df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894e3a2396a97b7ad57c637a3d494af7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule_1_1quaternion.html">cvm::quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1quaternion.html#a894e3a2396a97b7ad57c637a3d494af7">position_derivative_inner</a> (<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;pos, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;vec) const</td></tr>
+<tr class="memdesc:a894e3a2396a97b7ad57c637a3d494af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply the given vector by the derivative of the given (rotated) position with respect to the quaternion.  <a href="classcolvarmodule_1_1quaternion.html#a894e3a2396a97b7ad57c637a3d494af7">More...</a><br /></td></tr>
+<tr class="separator:a894e3a2396a97b7ad57c637a3d494af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41aa634cad32966c74d035d1894c41f7"><td class="memItemLeft" align="right" valign="top"><a id="a41aa634cad32966c74d035d1894c41f7" name="a41aa634cad32966c74d035d1894c41f7"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cosine</b> (<a class="el" href="classcolvarmodule_1_1quaternion.html">cvm::quaternion</a> const &amp;q) const</td></tr>
 <tr class="memdesc:a41aa634cad32966c74d035d1894c41f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cosine between the orientation frame associated to this quaternion and another. <br /></td></tr>
@@ -288,6 +294,74 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 
 </div>
 </div>
+<a id="a894e3a2396a97b7ad57c637a3d494af7" name="a894e3a2396a97b7ad57c637a3d494af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894e3a2396a97b7ad57c637a3d494af7">&#9670;&#160;</a></span>position_derivative_inner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcolvarmodule_1_1quaternion.html">cvm::quaternion</a> colvarmodule::quaternion::position_derivative_inner </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Multiply the given vector by the derivative of the given (rotated) position with respect to the quaternion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position \(\mathbf{x}\). </td></tr>
+    <tr><td class="paramname">vec</td><td>The vector \(\mathbf{v}\). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A quaternion (see the detailed documentation below).</dd></dl>
+<p>This function is mainly used for projecting the gradients or forces on the rotated atoms to the forces on quaternion. Assume this rotation can be represented as \(R(\mathbf{q})\), where \(\mathbf{q} := (q_0, q_1, q_2, q_3)\) is the current quaternion, the function returns the following new quaternion:  </p><p class="formulaDsp">
+\[
+\left(\mathbf{v}^\mathrm{T}\frac{\partial R(\mathbf{q})}{\partial q_0}\mathbf{x},
+      \mathbf{v}^\mathrm{T}\frac{\partial R(\mathbf{q})}{\partial q_1}\mathbf{x},
+      \mathbf{v}^\mathrm{T}\frac{\partial R(\mathbf{q})}{\partial q_2}\mathbf{x},
+      \mathbf{v}^\mathrm{T}\frac{\partial R(\mathbf{q})}{\partial q_3}\mathbf{x}\right)
+\]
+</p>
+<p> where \(\mathbf{v}\) is usually the gradient of \(\xi\) with respect to the rotated frame \(\tilde{\mathbf{X}}\), \(\partial \xi / \partial \tilde{\mathbf{X}}\), or the force acting on it ( \(\mathbf{F}_{\tilde{\mathbf{X}}}\)). By using the following loop in pseudo C++ code, either \(\partial \xi / \partial \tilde{\mathbf{X}}\) or \(\mathbf{F}_{\tilde{\mathbf{X}}}\), can be projected to \(\partial \xi / \partial \mathbf{q}\) or \(\mathbf{F}_q\) into <code>sum_dxdq</code>: </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> sum_dxdq[4] = {0, 0, 0, 0};</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; main_group_size(); ++i) {</div>
+<div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> v = grad_or_force_on_rotated_main_group(i);</div>
+<div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> x = unrotated_main_group_positions(i);</div>
+<div class="line">  <a class="code hl_class" href="classcolvarmodule_1_1quaternion.html">cvm::quaternion</a> <span class="keyword">const</span> dxdq = <a class="code hl_function" href="classcolvarmodule_1_1quaternion.html#a894e3a2396a97b7ad57c637a3d494af7">position_derivative_inner</a>(x, v);</div>
+<div class="line">  sum_dxdq[0] += dxdq[0];</div>
+<div class="line">  sum_dxdq[1] += dxdq[1];</div>
+<div class="line">  sum_dxdq[2] += dxdq[2];</div>
+<div class="line">  sum_dxdq[3] += dxdq[3];</div>
+<div class="line">}</div>
+<div class="ttc" id="aclasscolvarmodule_1_1quaternion_html"><div class="ttname"><a href="classcolvarmodule_1_1quaternion.html">colvarmodule::quaternion</a></div><div class="ttdoc">1-dimensional vector of real numbers with four components and a quaternion algebra</div><div class="ttdef"><b>Definition:</b> colvartypes.h:958</div></div>
+<div class="ttc" id="aclasscolvarmodule_1_1quaternion_html_a894e3a2396a97b7ad57c637a3d494af7"><div class="ttname"><a href="classcolvarmodule_1_1quaternion.html#a894e3a2396a97b7ad57c637a3d494af7">colvarmodule::quaternion::position_derivative_inner</a></div><div class="ttdeci">cvm::quaternion position_derivative_inner(cvm::rvector const &amp;pos, cvm::rvector const &amp;vec) const</div><div class="ttdoc">Multiply the given vector by the derivative of the given (rotated) position with respect to the quate...</div><div class="ttdef"><b>Definition:</b> colvartypes.h:1260</div></div>
+<div class="ttc" id="aclasscolvarmodule_1_1rvector_html"><div class="ttname"><a href="classcolvarmodule_1_1rvector.html">colvarmodule::rvector</a></div><div class="ttdoc">vector of real numbers with three components</div><div class="ttdef"><b>Definition:</b> colvartypes.h:727</div></div>
+<div class="ttc" id="aclasscolvarmodule_html_a1ef542d23cf36504a8154c281eba2d5b"><div class="ttname"><a href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">colvarmodule::real</a></div><div class="ttdeci">double real</div><div class="ttdoc">Defining an abstract real number allows to switch precision.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:95</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="a30acb17df895afacad68ce7c487793c0" name="a30acb17df895afacad68ce7c487793c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30acb17df895afacad68ce7c487793c0">&#9670;&#160;</a></span>set_from_euler_angles()</h2>
 
@@ -339,7 +413,7 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 8 2024 17:34:34 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Nov 13 2024 16:05:55 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

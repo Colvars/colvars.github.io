@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -316,6 +323,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>init_custom_function</
 int&#160;</td><td class="memItemRight" valign="bottom"><b>init_grid_parameters</b> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:a693393e109151beb1743f7b2a0d32f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init defaults for grid options. <br /></td></tr>
 <tr class="separator:a693393e109151beb1743f7b2a0d32f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2325c866b71269ec6f0ab0a494c6e985"><td class="memItemLeft" align="right" valign="top"><a id="a2325c866b71269ec6f0ab0a494c6e985" name="a2325c866b71269ec6f0ab0a494c6e985"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>check_grid_parameters</b> ()</td></tr>
+<tr class="memdesc:a2325c866b71269ec6f0ab0a494c6e985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consistency check for the grid paramaters. <br /></td></tr>
+<tr class="separator:a2325c866b71269ec6f0ab0a494c6e985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a6b14fd7f84ac287801419510aa80a"><td class="memItemLeft" align="right" valign="top"><a id="ae5a6b14fd7f84ac287801419510aa80a" name="ae5a6b14fd7f84ac287801419510aa80a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>parse_legacy_wall_params</b> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:ae5a6b14fd7f84ac287801419510aa80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read legacy wall keyword (these are biases now) <br /></td></tr>
+<tr class="separator:ae5a6b14fd7f84ac287801419510aa80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa874ee394298ef1c0fff9adfa27123bf"><td class="memItemLeft" align="right" valign="top"><a id="aa874ee394298ef1c0fff9adfa27123bf" name="aa874ee394298ef1c0fff9adfa27123bf"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>init_extended_Lagrangian</b> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:aa874ee394298ef1c0fff9adfa27123bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init extended Lagrangian parameters. <br /></td></tr>
@@ -1911,7 +1926,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 8 2024 17:34:33 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Nov 13 2024 16:05:54 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

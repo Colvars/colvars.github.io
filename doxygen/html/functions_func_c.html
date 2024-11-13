@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -88,9 +95,9 @@ $(function() {
 <li>calc_cvc_total_force()&#160;:&#160;<a class="el" href="classcolvar.html#a1bcfa6eecd0debde6cef6460b726782c">colvar</a></li>
 <li>calc_cvc_values()&#160;:&#160;<a class="el" href="classcolvar.html#ae8d45e401c3432abb7363e2007ea7110">colvar</a></li>
 <li>calc_cvcs()&#160;:&#160;<a class="el" href="classcolvar.html#adb5aa1af38fd3d4937913d178d35156c">colvar</a></li>
-<li>calc_derivative_impl()&#160;:&#160;<a class="el" href="structrotation__derivative.html#a24a8aeb7992438b74063488fba568a9d">rotation_derivative&lt; T1, T2 &gt;</a></li>
-<li>calc_derivative_wrt_group1()&#160;:&#160;<a class="el" href="structrotation__derivative.html#ad77b69322047d7111785fe411e709ce1">rotation_derivative&lt; T1, T2 &gt;</a></li>
-<li>calc_derivative_wrt_group2()&#160;:&#160;<a class="el" href="structrotation__derivative.html#a6169ed60f2fe12ae0507046e93aba131">rotation_derivative&lt; T1, T2 &gt;</a></li>
+<li>calc_derivative_impl()&#160;:&#160;<a class="el" href="structrotation__derivative.html#affe1f2b25b4c643d0b738ab0cea3b028">rotation_derivative&lt; T1, T2 &gt;</a></li>
+<li>calc_derivative_wrt_group1()&#160;:&#160;<a class="el" href="structrotation__derivative.html#a2cc4b1bb1ba0f8c8ddd9ba6d57bc8b25">rotation_derivative&lt; T1, T2 &gt;</a></li>
+<li>calc_derivative_wrt_group2()&#160;:&#160;<a class="el" href="structrotation__derivative.html#ac6341ebec70e97ff3e1aa8f379c97192">rotation_derivative&lt; T1, T2 &gt;</a></li>
 <li>calc_dipole()&#160;:&#160;<a class="el" href="classcolvarmodule_1_1atom__group.html#a7ba0666b1a49d1e5bc1c8d8f449d5381">colvarmodule::atom_group</a></li>
 <li>calc_energy()&#160;:&#160;<a class="el" href="classcolvarbias.html#a12d9b7bfcdd0fe2448782b3aed655269">colvarbias</a>, <a class="el" href="classcolvarbias__abf.html#aff9b397defaeba83fa11a41a8f1a1212">colvarbias_abf</a>, <a class="el" href="classcolvarbias__meta.html#ab529ece7ef6aa728d7baf860e67af9d4">colvarbias_meta</a></li>
 <li>calc_fit_forces()&#160;:&#160;<a class="el" href="classcolvarmodule_1_1atom__group.html#a3b9a3ef4428938051ac90e083ddb41e2">colvarmodule::atom_group</a></li>
@@ -119,7 +126,7 @@ $(function() {
 <li>center_ref_pos()&#160;:&#160;<a class="el" href="classcolvarmodule_1_1atom__group.html#aa1af6052fdafdcf164c78ba85ccaa665">colvarmodule::atom_group</a></li>
 <li>change_configuration()&#160;:&#160;<a class="el" href="classcolvarbias.html#a06a5f4d7a317d2cd2f6e30acbb27c274">colvarbias</a>, <a class="el" href="classcolvarbias__restraint.html#aeb365e545dac32e5383b12299598a04f">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers.html#a75e2dd09584b93af1b87cca7bc74280c">colvarbias_restraint_centers</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#a49e8ddd444f3ef8a28992f45dc0d5c90">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a42660096d66cb893e5bb50e035ce7f8c">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__k.html#ac982e2fc278353bc9bd1889e23c0e65f">colvarbias_restraint_k</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#ad29de6e4a2d1ac100959c52130a208c2">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__linear.html#ab3fa934f7083454981bc5ecdb9424f82">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarmodule.html#ac73c2f5e8836309d4794044adebd32a3">colvarmodule</a></li>
 <li>check_ascii()&#160;:&#160;<a class="el" href="classcolvarparse.html#a324475b683561f9334742718f97f9c52">colvarparse</a></li>
-<li>check_atom_id()&#160;:&#160;<a class="el" href="classcolvarproxy__atoms.html#aefca67a3d6121997b37e197c67756360">colvarproxy_atoms</a>, <a class="el" href="classcolvarproxy__lammps.html#ae9b2b7c582646a0f18ab93064c2fe7f9">colvarproxy_lammps</a>, <a class="el" href="classcolvarproxy__namd.html#a7abc41a21330bd847e21132a3a080c75">colvarproxy_namd</a>, <a class="el" href="classcolvarproxy__vmd.html#a104e1fc841e70b0c74f15417f41abc81">colvarproxy_vmd</a></li>
+<li>check_atom_id()&#160;:&#160;<a class="el" href="classcolvarproxy__atoms.html#aefca67a3d6121997b37e197c67756360">colvarproxy_atoms</a>, <a class="el" href="classcolvarproxy__lammps.html#ae9b2b7c582646a0f18ab93064c2fe7f9">colvarproxy_lammps</a>, <a class="el" href="classcolvarproxy__namd.html#a7abc41a21330bd847e21132a3a080c75">colvarproxy_namd</a>, <a class="el" href="classcolvarproxy__vmd.html#ae2d50d62928e0c2259b4e86928744ed2">colvarproxy_vmd</a></li>
 <li>check_atom_name_selections_available()&#160;:&#160;<a class="el" href="classcolvarproxy__atoms.html#a5bfdf3354bcc237d67b6e50eb645a78d">colvarproxy_atoms</a>, <a class="el" href="classcolvarproxy__namd.html#af21d88d936e8ea54786ab10eca5397a4">colvarproxy_namd</a>, <a class="el" href="classcolvarproxy__vmd.html#add4c6f681b5dcca62bad1abed6f1e50f">colvarproxy_vmd</a></li>
 <li>check_bias_cmd_nargs()&#160;:&#160;<a class="el" href="classcolvarscript.html#a94995bcdc77211beaa35cc018a015e27">colvarscript</a></li>
 <li>check_braces()&#160;:&#160;<a class="el" href="classcolvarparse.html#a6440783bfcdbc5b9f215fd608418b9e8">colvarparse</a></li>
@@ -128,6 +135,7 @@ $(function() {
 <li>check_consistency()&#160;:&#160;<a class="el" href="classcolvar__grid.html#a0b33e00c005fe739a647dbfc00bb627b">colvar_grid&lt; T &gt;</a></li>
 <li>check_cvc_range()&#160;:&#160;<a class="el" href="classcolvar.html#a5788c862e96dae262dd46d753dd12bc3">colvar</a></li>
 <li>check_enabled()&#160;:&#160;<a class="el" href="classcolvardeps.html#ab523803ef20a5349cb1bdc3b17cb81cf">colvardeps</a></li>
+<li>check_grid_parameters()&#160;:&#160;<a class="el" href="classcolvar.html#a2325c866b71269ec6f0ab0a494c6e985">colvar</a></li>
 <li>check_keywords()&#160;:&#160;<a class="el" href="classcolvarparse.html#a7a0635459ec368e56863b2cfea59c880">colvarparse</a></li>
 <li>check_matching_state()&#160;:&#160;<a class="el" href="classcolvar.html#a75d867fefad3927b932a546a35f5c2d9">colvar</a>, <a class="el" href="classcolvarbias.html#a5220630e867f5345731a44f5037e2dc3">colvarbias</a></li>
 <li>check_module_cmd_nargs()&#160;:&#160;<a class="el" href="classcolvarscript.html#a7239552ea18ba1e17a3683607a255bbb">colvarscript</a></li>
@@ -163,8 +171,8 @@ $(function() {
 <li>collect_gradients()&#160;:&#160;<a class="el" href="classcolvar_1_1alpha__angles.html#a34805c6403ef0fd78399f257297f317e">colvar::alpha_angles</a>, <a class="el" href="classcolvar_1_1cvc.html#a022fecac2a7904aeabb0e52e7d664131">colvar::cvc</a>, <a class="el" href="classcolvar_1_1dihedPC.html#a41608f258f065b2822e4f7bdae089c3b">colvar::dihedPC</a></li>
 <li>colvar()&#160;:&#160;<a class="el" href="classcolvar.html#a851c2e610dd5b9fb135c5664e3cd54c9">colvar</a></li>
 <li>colvar_by_name()&#160;:&#160;<a class="el" href="classcolvarmodule.html#af06cc62b3134a4501f64855f9bded965">colvarmodule</a></li>
-<li>colvar_grid()&#160;:&#160;<a class="el" href="classcolvar__grid.html#af46405dbf13580c9297dfdf17670b39b">colvar_grid&lt; T &gt;</a></li>
-<li>colvar_grid_count()&#160;:&#160;<a class="el" href="classcolvar__grid__count.html#aabd88da79b5683e064fc561d85a516f7">colvar_grid_count</a></li>
+<li>colvar_grid()&#160;:&#160;<a class="el" href="classcolvar__grid.html#a9009088a60affe5bd076b00aa2fcf2aa">colvar_grid&lt; T &gt;</a></li>
+<li>colvar_grid_count()&#160;:&#160;<a class="el" href="classcolvar__grid__count.html#a0bb6782588e420df428962640a0ddb2c">colvar_grid_count</a></li>
 <li>colvar_grid_gradient()&#160;:&#160;<a class="el" href="classcolvar__grid__gradient.html#a4bd7fc8f021a57a694fb20da7388f83f">colvar_grid_gradient</a></li>
 <li>colvar_grid_scalar()&#160;:&#160;<a class="el" href="classcolvar__grid__scalar.html#a42bd1c31ccb66716b1c2d274b8618e79">colvar_grid_scalar</a></li>
 <li>colvarbias()&#160;:&#160;<a class="el" href="classcolvarbias.html#a79b586b99bf401ec7a129190ab857f6d">colvarbias</a></li>
@@ -221,7 +229,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 8 2024 17:34:34 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Nov 13 2024 16:05:55 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
