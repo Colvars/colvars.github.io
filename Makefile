@@ -13,6 +13,7 @@ PDFDIR=pdf
 PDF=$(PDFDIR)/colvars-refman-gromacs.pdf \
 	$(PDFDIR)/colvars-refman-lammps.pdf \
 	$(PDFDIR)/colvars-refman-namd.pdf \
+	$(PDFDIR)/colvars-refman-tinkerhp.pdf \
 	$(PDFDIR)/colvars-refman-vmd.pdf \
 	vmd-1.9.4/$(PDFDIR)/colvars-refman-vmd.pdf \
 	namd-2.15/$(PDFDIR)/colvars-refman-namd.pdf \
@@ -22,6 +23,7 @@ BIBTEX=$(DOCSRCDIR)/colvars-refman.bib
 HTML=colvars-refman-gromacs/colvars-refman-gromacs.html \
 	colvars-refman-lammps/colvars-refman-lammps.html \
 	colvars-refman-namd/colvars-refman-namd.html \
+	colvars-refman-tinkerhp/colvars-refman-tinkerhp.html \
 	colvars-refman-vmd/colvars-refman-vmd.html \
 	vmd-1.9.4/colvars-refman-vmd/colvars-refman-vmd.html \
 	namd-2.15/colvars-refman-namd/colvars-refman-namd.html \
@@ -101,6 +103,15 @@ colvars-refman-lammps/colvars-refman-lammps.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/
 	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
 	../postprocess_html.sh
 
+colvars-refman-tinkerhp/colvars-refman-tinkerhp.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-tinkerhp.tex
+	cd $(DOCSRCDIR); \
+	cp -p -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
+	$(HTLATEX) colvars-refman-tinkerhp.tex $(HTLATEX_OPTS) "-d$(DOCDIR)/colvars-refman-tinkerhp/"; \
+	rm -f html5mjlatex.cfg; \
+	cd $(DOCDIR)/colvars-refman-tinkerhp; \
+	cp -p -f $(addprefix $(DOCDIR)/images/, $(IMAGES)) ./ ; \
+	../postprocess_html.sh
+
 colvars-refman-gromacs/colvars-refman-gromacs.html: $(BIBTEX) $(PDF) $(DOCSRCDIR)/colvars-refman-main.tex $(DOCSRCDIR)/colvars-refman.tex $(DOCSRCDIR)/colvars-refman-gromacs.tex
 	cd $(DOCSRCDIR); \
 	cp -p -f $(DOCDIR)/html5mjlatex.cfg ./ ; \
@@ -134,7 +145,7 @@ clean:
 	make -C $(DOCSRCDIR) clean
 
 veryclean: clean
-	rm -f $(PDF) colvars-refman-namd/* colvars-refman-vmd/* colvars-refman-lammps/*  colvars-refman-gromacs/*
+	rm -f $(PDF) colvars-refman-namd/* colvars-refman-vmd/* colvars-refman-lammps/*  colvars-refman-gromacs/* colvars-refman-tinkerhp/*
 
 update: all
 	git add . && git commit -m "Update doc" && git push origin master
