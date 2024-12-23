@@ -177,7 +177,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset_pbc_lattice</b>
 <tr class="memdesc:a59a4b21ad2db9f666a3c7497b0232b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces being used?  <a href="classcolvarproxy__system.html#a59a4b21ad2db9f666a3c7497b0232b11">More...</a><br /></td></tr>
 <tr class="separator:a59a4b21ad2db9f666a3c7497b0232b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf9d65b2f64edc11a113e5f637ffdc24"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#acf9d65b2f64edc11a113e5f637ffdc24">total_forces_same_step</a> () const</td></tr>
-<tr class="memdesc:acf9d65b2f64edc11a113e5f637ffdc24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces from the current step available?  <a href="classcolvarproxy__system.html#acf9d65b2f64edc11a113e5f637ffdc24">More...</a><br /></td></tr>
 <tr class="separator:acf9d65b2f64edc11a113e5f637ffdc24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca6826f4073ade1dd4823716cf82dfd8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#aca6826f4073ade1dd4823716cf82dfd8">get_molid</a> (int &amp;molid)</td></tr>
 <tr class="separator:aca6826f4073ade1dd4823716cf82dfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +190,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_alch_lambda</b> (
 <tr class="memitem:a8b92aaaafe6bc323d815ceadec1ff48b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a8b92aaaafe6bc323d815ceadec1ff48b">send_alch_lambda</a> ()</td></tr>
 <tr class="memdesc:a8b92aaaafe6bc323d815ceadec1ff48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send cached value of alchemical lambda parameter to back-end (if available)  <a href="classcolvarproxy__system.html#a8b92aaaafe6bc323d815ceadec1ff48b">More...</a><br /></td></tr>
 <tr class="separator:a8b92aaaafe6bc323d815ceadec1ff48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacfe19fafd4c65dfeded84c6fba70d77"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#aacfe19fafd4c65dfeded84c6fba70d77">request_alch_energy_freq</a> (int const freq)</td></tr>
+<tr class="memdesc:aacfe19fafd4c65dfeded84c6fba70d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request energy computation every freq steps (necessary for NAMD3, not all back-ends)  <a href="classcolvarproxy__system.html#aacfe19fafd4c65dfeded84c6fba70d77">More...</a><br /></td></tr>
+<tr class="separator:aacfe19fafd4c65dfeded84c6fba70d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adda39514986e13aeb99dd7a85cf5462c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#adda39514986e13aeb99dd7a85cf5462c">get_dE_dlambda</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *dE_dlambda)</td></tr>
 <tr class="memdesc:adda39514986e13aeb99dd7a85cf5462c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get energy derivative with respect to lambda (if available)  <a href="classcolvarproxy__system.html#adda39514986e13aeb99dd7a85cf5462c">More...</a><br /></td></tr>
 <tr class="separator:adda39514986e13aeb99dd7a85cf5462c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -402,7 +404,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 
 <p>Get value of alchemical lambda parameter from back-end (if available) </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#aa1e98232beda92a308abfda8bbbcb958">colvarproxy_vmd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#ae5d0dbfd13df8aa3f2c3591edea4d834">colvarproxy_namd</a>, and <a class="el" href="classcolvarproxy__vmd.html#aa1e98232beda92a308abfda8bbbcb958">colvarproxy_vmd</a>.</p>
 
 </div>
 </div>
@@ -432,7 +434,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 
 <p>Get energy derivative with respect to lambda (if available) </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#a1be48b0b9d367bc9298d27b37621454e">colvarproxy_vmd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a9b4f68068396ec2726979c8f41cf51a7">colvarproxy_namd</a>, and <a class="el" href="classcolvarproxy__vmd.html#a1be48b0b9d367bc9298d27b37621454e">colvarproxy_vmd</a>.</p>
 
 </div>
 </div>
@@ -540,6 +542,36 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 
 </div>
 </div>
+<a id="aacfe19fafd4c65dfeded84c6fba70d77" name="aacfe19fafd4c65dfeded84c6fba70d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacfe19fafd4c65dfeded84c6fba70d77">&#9670;&#160;</a></span>request_alch_energy_freq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int colvarproxy_system::request_alch_energy_freq </td>
+          <td>(</td>
+          <td class="paramtype">int const&#160;</td>
+          <td class="paramname"><em>freq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Request energy computation every freq steps (necessary for NAMD3, not all back-ends) </p>
+
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a089909b4a44da45bc79981cfef81f0a5">colvarproxy_namd</a>.</p>
+
+</div>
+</div>
 <a id="aecfcfbb18eac82861822ed156743b019" name="aecfcfbb18eac82861822ed156743b019"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aecfcfbb18eac82861822ed156743b019">&#9670;&#160;</a></span>request_total_force()</h2>
 
@@ -596,7 +628,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 
 <p>Send cached value of alchemical lambda parameter to back-end (if available) </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#af1edd7855cb2dcde3537da79b96c31f1">colvarproxy_vmd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a39ce273031cff58ca3c61d12a06d44cd">colvarproxy_namd</a>, and <a class="el" href="classcolvarproxy__vmd.html#af1edd7855cb2dcde3537da79b96c31f1">colvarproxy_vmd</a>.</p>
 
 </div>
 </div>
@@ -691,8 +723,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Are total forces from the current step available? </p>
+<p >Are total forces from the current step available? in which case they are really system forces </p>
 
 <p>Reimplemented in <a class="el" href="classcolvarproxy__lammps.html#aec1fb44c964a3bf5a15e782423934842">colvarproxy_lammps</a>.</p>
 
@@ -734,7 +765,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 6 2024 23:09:09 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Dec 23 2024 17:18:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

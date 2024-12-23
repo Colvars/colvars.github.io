@@ -422,8 +422,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_available</b> (int
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_enabled</b> (int feature_id, bool truefalse=true)</td></tr>
 <tr class="memdesc:abb18523c8db67f3e1494c9d894af253e inherit pub_methods_classcolvardeps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable, depending on flag value. <br /></td></tr>
 <tr class="separator:abb18523c8db67f3e1494c9d894af253e inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0af270540fcec97efae2733a63bb7f0b inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a0af270540fcec97efae2733a63bb7f0b">enable</a> (int f, bool dry_run=false, bool toplevel=true)</td></tr>
-<tr class="separator:a0af270540fcec97efae2733a63bb7f0b inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e7f7075f064247e8694eea4d632000 inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a96e7f7075f064247e8694eea4d632000">enable</a> (int f, bool dry_run=false, bool toplevel=true, bool error=false)</td></tr>
+<tr class="separator:a96e7f7075f064247e8694eea4d632000 inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40b0b63785d451d21eafc82ecd67c5cd inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#a40b0b63785d451d21eafc82ecd67c5cd">disable</a> (int f)</td></tr>
 <tr class="separator:a40b0b63785d451d21eafc82ecd67c5cd inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8aeaa2d9245fa541ebb9aea945f3667 inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#af8aeaa2d9245fa541ebb9aea945f3667">free_children_deps</a> ()</td></tr>
@@ -521,50 +521,52 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:aebed48f7608034a9e3ce66f1fe45f628 inherit pub_types_classcolvardeps"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628">features_colvar</a> { <br />
 &#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ad478a534f6bd3427975c03f1a4d0eb85">f_cv_active</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a9e82a2df3f706d8d39d65394962cbe11">f_cv_awake</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628abd7418bb2a7b1fc58fd7ed9aed02707f">f_cv_apply_force</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a54e136138fdb7a59a7feb0b6affc6209">f_cv_gradient</a>
-, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a494285836f63920df037f280ca1a7a67">f_cv_collect_gradient</a>
 , <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ab3ec0acb1b5079f4524139998e0cc36b">f_cv_collect_atom_ids</a>
+&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a494285836f63920df037f280ca1a7a67">f_cv_collect_gradient</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ab3ec0acb1b5079f4524139998e0cc36b">f_cv_collect_atom_ids</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628adb536c65b4750baa3e60608f4a2bd29f">f_cv_fdiff_velocity</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a181c7383c0fadfd5f2d2e0d32bdea2c6">f_cv_total_force</a>
-, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a8781846e40029124afb7ec8779b49f13">f_cv_total_force_calc</a>
 , <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a3eeb07fe469c2fcefbe704933b972128">f_cv_subtract_applied_force</a>
+&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a8781846e40029124afb7ec8779b49f13">f_cv_total_force_calc</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a7aa710adb6abe91be0f4a8940866837c">f_cv_total_force_current_step</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a3eeb07fe469c2fcefbe704933b972128">f_cv_subtract_applied_force</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a056bd1419f7b8091635277c3172eb861">f_cv_Jacobian</a>
-, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628afb825e52f8460e3e51cf8798ccfd5bc5">f_cv_hide_Jacobian</a>
+, <br />
+&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628afb825e52f8460e3e51cf8798ccfd5bc5">f_cv_hide_Jacobian</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a1bf6fbab9c4f46a13046a8f135cc7123">f_cv_extended_Lagrangian</a>
-, <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628af0c020b5296ab067aeaf55d74e38d840">f_cv_external</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628af0c020b5296ab067aeaf55d74e38d840">f_cv_external</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628aaf884ac0fe1da02521ac9361a1e5731d">f_cv_Langevin</a>
-, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628aff1fd69e5e75345f8306952500cd6a41">f_cv_output_energy</a>
+, <br />
+&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628aff1fd69e5e75345f8306952500cd6a41">f_cv_output_energy</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ada89aa3a37d2b43def77cea8e9bd6e3b">f_cv_output_value</a>
-, <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ac83d31bd85a063675ba398a11f932485">f_cv_output_velocity</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ac83d31bd85a063675ba398a11f932485">f_cv_output_velocity</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628af87a51a70fb8b923cb991222275d7266">f_cv_output_applied_force</a>
-, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a4b7bf6d3900eb2f81f2eb76851c740ae">f_cv_output_total_force</a>
+, <br />
+&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a4b7bf6d3900eb2f81f2eb76851c740ae">f_cv_output_total_force</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628afb2ec47e8358e9a4748ad619e6f65433">f_cv_lower_boundary</a>
-, <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a3bb3309350c4a7c99d6d76881fa015ad">f_cv_upper_boundary</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a3bb3309350c4a7c99d6d76881fa015ad">f_cv_upper_boundary</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a4add5b002767f17ca3666e55f4cfc8cc">f_cv_hard_lower_boundary</a>
-, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a51fb98df85ec0ddc843f808294e7a3f6">f_cv_hard_upper_boundary</a>
+, <br />
+&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a51fb98df85ec0ddc843f808294e7a3f6">f_cv_hard_upper_boundary</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a8e4790308fe92caa3f69d8d0016e7976">f_cv_reflecting_lower_boundary</a>
-, <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a86b47705aad1d6df8b3dc97d3eb398b0">f_cv_reflecting_upper_boundary</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a86b47705aad1d6df8b3dc97d3eb398b0">f_cv_reflecting_upper_boundary</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628abb51b3cdfaf94641a1d1a8f0c8619f82">f_cv_grid</a>
-, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a4aef777d2b61168d4c3387f9e7e2b95b">f_cv_runave</a>
+, <br />
+&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a4aef777d2b61168d4c3387f9e7e2b95b">f_cv_runave</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a6d53d5a22564ac7cee99274edac68124">f_cv_corrfunc</a>
-, <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ab37863ce2b7cacc20539ccdb69c7c330">f_cv_scripted</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ab37863ce2b7cacc20539ccdb69c7c330">f_cv_scripted</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ac51053cb64380f4f258ce9c60f8a22ed">f_cv_custom_function</a>
-, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a56c0fbe7f5f121a88f3432d9db82cb77">f_cv_periodic</a>
+, <br />
+&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a56c0fbe7f5f121a88f3432d9db82cb77">f_cv_periodic</a>
 , <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a9b23c3cf556536bfa5cdb1bc0e2fded2">f_cv_single_cvc</a>
-, <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ad359479f93d245d0dee2e1bb50eb6b7b">f_cv_scalar</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ad359479f93d245d0dee2e1bb50eb6b7b">f_cv_scalar</a>
 , <b>f_cv_linear</b>
-, <b>f_cv_homogeneous</b>
-, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ab1065e3a9e19e2c9eff8829a6540f3f2">f_cv_multiple_ts</a>
 , <br />
-&#160;&#160;<a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a18005f6d74824993b13fe3f005f2c0b9">f_cv_ntot</a>
+&#160;&#160;<b>f_cv_homogeneous</b>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628ab1065e3a9e19e2c9eff8829a6540f3f2">f_cv_multiple_ts</a>
+, <a class="el" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628a18005f6d74824993b13fe3f005f2c0b9">f_cv_ntot</a>
 <br />
  }</td></tr>
 <tr class="separator:aebed48f7608034a9e3ce66f1fe45f628 inherit pub_types_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -963,7 +965,7 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 6 2024 23:09:08 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Dec 23 2024 17:18:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

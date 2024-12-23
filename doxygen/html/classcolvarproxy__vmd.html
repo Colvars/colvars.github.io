@@ -390,7 +390,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset_pbc_lattice</b>
 <tr class="memdesc:a59a4b21ad2db9f666a3c7497b0232b11 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces being used?  <a href="classcolvarproxy__system.html#a59a4b21ad2db9f666a3c7497b0232b11">More...</a><br /></td></tr>
 <tr class="separator:a59a4b21ad2db9f666a3c7497b0232b11 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf9d65b2f64edc11a113e5f637ffdc24 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#acf9d65b2f64edc11a113e5f637ffdc24">total_forces_same_step</a> () const</td></tr>
-<tr class="memdesc:acf9d65b2f64edc11a113e5f637ffdc24 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces from the current step available?  <a href="classcolvarproxy__system.html#acf9d65b2f64edc11a113e5f637ffdc24">More...</a><br /></td></tr>
 <tr class="separator:acf9d65b2f64edc11a113e5f637ffdc24 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca6826f4073ade1dd4823716cf82dfd8 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#aca6826f4073ade1dd4823716cf82dfd8">get_molid</a> (int &amp;molid)</td></tr>
 <tr class="separator:aca6826f4073ade1dd4823716cf82dfd8 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -404,6 +403,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_alch_lambda</b> (
 <tr class="memitem:a8b92aaaafe6bc323d815ceadec1ff48b inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a8b92aaaafe6bc323d815ceadec1ff48b">send_alch_lambda</a> ()</td></tr>
 <tr class="memdesc:a8b92aaaafe6bc323d815ceadec1ff48b inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send cached value of alchemical lambda parameter to back-end (if available)  <a href="classcolvarproxy__system.html#a8b92aaaafe6bc323d815ceadec1ff48b">More...</a><br /></td></tr>
 <tr class="separator:a8b92aaaafe6bc323d815ceadec1ff48b inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacfe19fafd4c65dfeded84c6fba70d77 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#aacfe19fafd4c65dfeded84c6fba70d77">request_alch_energy_freq</a> (int const freq)</td></tr>
+<tr class="memdesc:aacfe19fafd4c65dfeded84c6fba70d77 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request energy computation every freq steps (necessary for NAMD3, not all back-ends)  <a href="classcolvarproxy__system.html#aacfe19fafd4c65dfeded84c6fba70d77">More...</a><br /></td></tr>
+<tr class="separator:aacfe19fafd4c65dfeded84c6fba70d77 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adda39514986e13aeb99dd7a85cf5462c inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#adda39514986e13aeb99dd7a85cf5462c">get_dE_dlambda</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *dE_dlambda)</td></tr>
 <tr class="memdesc:adda39514986e13aeb99dd7a85cf5462c inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get energy derivative with respect to lambda (if available)  <a href="classcolvarproxy__system.html#adda39514986e13aeb99dd7a85cf5462c">More...</a><br /></td></tr>
 <tr class="separator:adda39514986e13aeb99dd7a85cf5462c inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2458,7 +2460,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 6 2024 23:09:09 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Dec 23 2024 17:18:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

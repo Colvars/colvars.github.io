@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['enable_0',['enable',['../classcolvardeps.html#a0af270540fcec97efae2733a63bb7f0b',1,'colvardeps']]],
+  ['enable_0',['enable',['../classcolvardeps.html#a96e7f7075f064247e8694eea4d632000',1,'colvardeps']]],
   ['end_5fof_5fstep_1',['end_of_step',['../classcolvar.html#a08856c74809cbe1428821ebe83426dab',1,'colvar::end_of_step()'],['../classcolvarbias.html#a24ffb63371d687073528879e34f805e0',1,'colvarbias::end_of_step()'],['../classcolvarmodule.html#a42553e8aaa410a65641bf8d89014aa51',1,'colvarmodule::end_of_step()'],['../classcolvarproxy.html#a40e3de86fd08295dec0584de6d5afa91',1,'colvarproxy::end_of_step()']]],
   ['energy_2',['energy',['../classcolvarbias__meta_1_1hill.html#aecd1630814824e1bea5353b372d380a4',1,'colvarbias_meta::hill::energy()'],['../classcolvarbias__meta_1_1hill.html#a179f1c11c15de73884554d5a7e928870',1,'colvarbias_meta::hill::energy(cvm::real const &amp;new_weight)']]],
   ['energy_5fdifference_3',['energy_difference',['../classcolvarmodule.html#ad7a80dcc060a2ef314005497693e8491',1,'colvarmodule::energy_difference()'],['../classcolvarbias__restraint__linear.html#af5a58388d900909d847c994717e89f1a',1,'colvarbias_restraint_linear::energy_difference()'],['../classcolvarbias__restraint__harmonic.html#a1f54ad2a903668a54425bf21a13b4ae2',1,'colvarbias_restraint_harmonic::energy_difference()'],['../classcolvarbias__restraint.html#a68044e39a5b77496de66f186e7b24175',1,'colvarbias_restraint::energy_difference()'],['../classcolvarbias.html#a80078487afaf38971e21fb771e3a59a5',1,'colvarbias::energy_difference()']]],
