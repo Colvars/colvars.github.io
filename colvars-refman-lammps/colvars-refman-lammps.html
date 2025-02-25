@@ -15,7 +15,7 @@
 </p><!--l. 140--><p class="noindent"><span class="colorbox" id="colorbox1"> </span></p><div class="minipage"><!--l. 179--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.17em"></mspace></math><br class="newline"/>
 <!--l. 179--><p class="noindent"><span class="phvb8t-x-x-248">COLLECTIVE VARIABLES MODULE</span><br class="newline"/>
 </p><!--l. 179--><p class="noindent"><span class="phvb8t-x-x-248">Reference manual for LAMMPS</span><br class="newline"/>
-</p><!--l. 179--><p class="noindent"><br class="newline"/>Code version: 2024-12-23<br class="newline"/>
+</p><!--l. 179--><p class="noindent"><br class="newline"/>Code version: 2025-02-25<br class="newline"/>
 </p><!--l. 179--><p class="noindent">Updated versions of this manual: [<a href="https://colvars.github.io/master/colvars-refman-gromacs.html">GROMACS</a>] [<a href="https://colvars.github.io/master/colvars-refman-lammps.html">LAMMPS</a>] [<a href="https://colvars.github.io/master/colvars-refman-namd.html">NAMD</a>] [<a href="https://colvars.github.io/master/colvars-refman-tinkerhp.html">Tinker-HP</a>] [<a href="https://colvars.github.io/master/colvars-refman-vmd.html">VMD</a>]</p></div>
 <!--l. 183--><p class="indent"> <img alt="Colvars logo" class="cover_picture" src="cover-512px.jpg"/> <br class="newline"/><span class="phvr8t-x-x-120">Alejandro Bernardin, Haochuan Chen, Jeffrey R. Comer, Giacomo Fiorin, Haohao Fu, J</span><span class="phvr8t-x-x-120">é</span><span class="phvr8t-x-x-120">r</span><span class="phvr8t-x-x-120">ô</span><span class="phvr8t-x-x-120">me</span>
 <span class="phvr8t-x-x-120">H</span><span class="phvr8t-x-x-120">é</span><span class="phvr8t-x-x-120">nin, Axel Kohlmeyer, Fabrizio Marinelli, Hubert Santuz, Joshua V. Vermaas, Andrew D.</span>
@@ -5292,7 +5292,8 @@ used, with the addition of the following: </p>
 <!--l. 7179--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_force_k_ti"></a>
 <h5 class="subsubsectionHead"><span class="titlemark">6.7.3    </span> <a id="sec:colvarbias_force_k_ti"></a>Changing force constant</h5>
 <!--l. 7179--><p class="noindent"></p></div>
-<!--l. 7181--><p class="indent">   The force constant of the harmonic restraint may also be changed to equilibrate <span class="cite">[<a href="#XDeng2009">40</a>]</span>.
+<!--l. 7181--><p class="indent">   The force constant of the harmonic restraint may also be changed over time, either to introduce or
+remove a restraint smoothly, or to estimate a restraint free energy<span class="cite">[<a href="#XDeng2009">40</a>]</span>.
 </p>
 <ul class="itemize1">
 <li class="itemize"><a id="harmonic|targetForceConstant"></a> <span class="colorbox" id="colorbox350"><a id="dx1-135001"></a><span class="ectt-1095">targetForceConstant</span></span> — <span class="phvro8t-x-x-109">Change the force constant towards this value</span><br class="newline"/><!--l. 7212--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
@@ -5302,14 +5303,14 @@ used, with the addition of the following: </p>
      steps. This is useful to introduce or remove restraints in a progressive manner. If <span class="ectt-1095">targetNumStages</span>
      is set to a nonzero value, the change is performed in discrete stages, lasting <span class="ectt-1095">targetNumSteps</span>
      steps <span class="phvro8t-x-x-109">each</span>. This second mode may be used to compute the conformational free energy
+                                                                                         
+                                                                                         
      change associated with the restraint, within the FEP or TI formalisms. For convenience, the
-                                                                                         
-                                                                                         
      code provides an estimate of the free energy derivative for use in TI, with the format:<br class="newline"/><span class="ectt-1095">colvars: Lambda= ***.** dA/dLambda= ***.**</span><br class="newline"/>A more complete free energy calculation (particularly with regard to convergence analysis),
      while not handled by the Colvars module, can be performed by post-processing the colvars
      trajectory,  if  <span class="ectt-1095">colvarsTrajFrequency </span>is  set  to  a  suitably  small  value.  It  should  be  noted,
      however, that restraint free energy calculations may be handled more efficiently by an indirect
-     route, through the determination of a PMF for the restrained coordinate.<span class="cite">[<a href="#XDeng2009">40</a>]</span>
+     route, through the determination of a free energy profile for the restrained coordinate.<span class="cite">[<a href="#XDeng2009">40</a>]</span>
 </li>
 <li class="itemize"><span class="colorbox" id="colorbox351"><a id="dx1-135002"></a><span class="ectt-1095">lambdaExponent</span></span> — <span class="phvro8t-x-x-109">Exponent in the time-dependence of the force constant</span><br class="newline"/>Default: <span class="ectt-1095">1.0</span> <!--l. 7237--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> decimal
      equal to or greater than 1.0, context: <span class="ectt-1095">harmonic</span> <!--l. 7237--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Sets the exponent, <!--l. 7237--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>,
@@ -5340,8 +5341,6 @@ used, with the addition of the following: </p>
      </li>
 <li class="itemize"><span class="colorbox" id="colorbox353"><a id="dx1-135004"></a><span class="ectt-1095">targetEquilSteps</span></span> — <span class="phvro8t-x-x-109">Number of steps discarded from TI estimate</span><br class="newline"/>Default: 0 <!--l. 7264--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
      integer, context: <span class="ectt-1095">harmonic</span> <!--l. 7264--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the number of steps within each stage that are considered equilibration and discarded
-                                                                                         
-                                                                                         
      from the restraint free energy derivative estimate reported reported in the output.
      </li>
 <li class="itemize"><span class="colorbox" id="colorbox354"><a id="dx1-135005"></a><span class="ectt-1095">lambdaSchedule</span></span> — <span class="phvro8t-x-x-109">Schedule of lambda-points for changing force constant</span><br class="newline"/><!--l. 7274--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> list
