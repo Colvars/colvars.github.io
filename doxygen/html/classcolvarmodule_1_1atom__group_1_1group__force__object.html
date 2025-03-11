@@ -213,7 +213,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_has_fitting_force</
 <div class="line">  ag_force.add_atom_force(ia, f);</div>
 <div class="line">}</div>
 <div class="ttc" id="aclasscolvarmodule_1_1atom__group_html_aaa82de4b7b1cc47e581c0a908e365bed"><div class="ttname"><a href="classcolvarmodule_1_1atom__group.html#aaa82de4b7b1cc47e581c0a908e365bed">colvarmodule::atom_group::atoms</a></div><div class="ttdeci">std::vector&lt; cvm::atom &gt; atoms</div><div class="ttdoc">Array of atom objects.</div><div class="ttdef"><b>Definition:</b> colvaratoms.h:242</div></div>
-<div class="ttc" id="aclasscolvarmodule_1_1rvector_html"><div class="ttname"><a href="classcolvarmodule_1_1rvector.html">colvarmodule::rvector</a></div><div class="ttdoc">vector of real numbers with three components</div><div class="ttdef"><b>Definition:</b> colvartypes.h:727</div></div>
+<div class="ttc" id="aclasscolvarmodule_1_1rvector_html"><div class="ttname"><a href="classcolvarmodule_1_1rvector.html">colvarmodule::rvector</a></div><div class="ttdoc">vector of real numbers with three components</div><div class="ttdef"><b>Definition:</b> colvartypes.h:723</div></div>
 </div><!-- fragment --><p> There are actually two scenarios under the hood: (i) If the atom group does not have a fitting group, then the force is added to atom i directly; (ii) If the atom group has a fitting group, the force on atom i will just be temporary stashed into ag-&gt;group_forces. At the end of the loop of <a class="el" href="classcolvarmodule_1_1atom__group.html#a558a31472b292505e174b448cfb9d5cf" title="Apply a force &quot;to the center of mass&quot;, i.e. the force is distributed on each atom according to its ma...">apply_force()</a>, the destructor <a class="el" href="classcolvarmodule_1_1atom__group_1_1group__force__object.html#a274a41cbb75c7f36be1a6beb0bc5482d" title="Destructor of group_force_object.">~group_force_object()</a> will be called, which then call apply_force_with_fitting_group(). The forces on the main group will be rotated back by multiplying ag-&gt;group_forces with the inverse rotation. The forces on the fitting group (if enableFitGradients is on) will be calculated by calling calc_fit_forces. </p>
 
 </div>
@@ -225,7 +225,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_has_fitting_force</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 25 2025 20:48:58 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 11 2025 21:06:57 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
