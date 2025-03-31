@@ -123,7 +123,7 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// Forward declarations</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">namespace </span>IntHash_NS {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">class </span>inthash_t;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">struct </span>inthash_t;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">class </span><a class="code hl_class" href="classcolvarproxy__lammps.html">colvarproxy_lammps</a>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
@@ -161,52 +161,51 @@ $(function() {
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordtype">double</span> t_target = 0.0;        <span class="comment">// thermostat target temperature</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordtype">double</span> energy;                <span class="comment">// biasing energy of the fix</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordtype">int</span> me;             <span class="comment">// my MPI rank in this &quot;world&quot;.</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordtype">int</span> num_coords;     <span class="comment">// total number of atoms controlled by this fix</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  tagint *taglist;    <span class="comment">// list of all atom IDs referenced by colvars.</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordtype">int</span> nmax;                     <span class="comment">// size of atom communication buffer.</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordtype">int</span> size_one;                 <span class="comment">// bytes per atom in communication buffer.</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structLAMMPS__NS_1_1commdata.html">commdata</a> *comm_buf;    <span class="comment">// communication buffer</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">double</span> *force_buf;            <span class="comment">// communication buffer</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classLAMMPS__NS_1_1FixColvars.html#a60e5c81c86d5595be57bb54805ac32ac">   89</a></span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="classLAMMPS__NS_1_1FixColvars.html#a60e5c81c86d5595be57bb54805ac32ac">script_args</a>[100];</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_struct" href="structIntHash__NS_1_1inthash__t.html">IntHash_NS::inthash_t</a> *idmap; <span class="comment">// hash for mapping atom indices to consistent order.</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordtype">int</span> nlevels_respa;       <span class="comment">// flag to determine respa levels.</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordtype">int</span> store_forces;        <span class="comment">// flag to determine whether to store total forces</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordtype">int</span> unwrap_flag;         <span class="comment">// 1 if atom coords are unwrapped, 0 if not</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keywordtype">int</span> init_flag;           <span class="comment">// 1 if initialized, 0 if not</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keyword">static</span> <span class="keywordtype">int</span> instances;    <span class="comment">// count fix instances, since colvars currently</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                           <span class="comment">// only supports one instance at a time</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  MPI_Comm root2root;      <span class="comment">// inter-root communicator for multi-replica support</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keywordtype">void</span> init_taglist();     <span class="comment">// initialize list of atom tags and hash table</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLAMMPS__NS_1_1FixColvars.html#acc043e94e7c7e128b7d68f14bb4172db">set_thermostat_temperature</a>();</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLAMMPS__NS_1_1FixColvars.html#a2ac161f4f38c7f922e56645583682b75">setup_io</a>();</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classLAMMPS__NS_1_1FixColvars.html#a3dedf5a008c1d180c84d686247ac04e3">parse_fix_arguments</a>(<span class="keywordtype">int</span> narg, <span class="keywordtype">char</span> **arg, <span class="keywordtype">bool</span> fix_constructor = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}    <span class="comment">// namespace LAMMPS_NS</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordtype">int</span> num_coords;     <span class="comment">// total number of atoms controlled by this fix</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  tagint *taglist;    <span class="comment">// list of all atom IDs referenced by colvars.</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordtype">int</span> nmax;                     <span class="comment">// size of atom communication buffer.</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordtype">int</span> size_one;                 <span class="comment">// bytes per atom in communication buffer.</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structLAMMPS__NS_1_1commdata.html">commdata</a> *comm_buf;    <span class="comment">// communication buffer</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">double</span> *force_buf;            <span class="comment">// communication buffer</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classLAMMPS__NS_1_1FixColvars.html#a60e5c81c86d5595be57bb54805ac32ac">   88</a></span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="classLAMMPS__NS_1_1FixColvars.html#a60e5c81c86d5595be57bb54805ac32ac">script_args</a>[100];</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <a class="code hl_struct" href="structIntHash__NS_1_1inthash__t.html">IntHash_NS::inthash_t</a> *idmap;    <span class="comment">// hash for mapping atom indices to consistent order.</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keywordtype">int</span> nlevels_respa;       <span class="comment">// flag to determine respa levels.</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordtype">int</span> store_forces;        <span class="comment">// flag to determine whether to store total forces</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordtype">int</span> unwrap_flag;         <span class="comment">// 1 if atom coords are unwrapped, 0 if not</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordtype">int</span> init_flag;           <span class="comment">// 1 if initialized, 0 if not</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">static</span> <span class="keywordtype">int</span> instances;    <span class="comment">// count fix instances, since colvars currently</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                           <span class="comment">// only supports one instance at a time</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  MPI_Comm root2root;      <span class="comment">// inter-root communicator for multi-replica support</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordtype">void</span> init_taglist();    <span class="comment">// initialize list of atom tags and hash table</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLAMMPS__NS_1_1FixColvars.html#acc043e94e7c7e128b7d68f14bb4172db">set_thermostat_temperature</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLAMMPS__NS_1_1FixColvars.html#a2ac161f4f38c7f922e56645583682b75">setup_io</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classLAMMPS__NS_1_1FixColvars.html#a3dedf5a008c1d180c84d686247ac04e3">parse_fix_arguments</a>(<span class="keywordtype">int</span> narg, <span class="keywordtype">char</span> **arg, <span class="keywordtype">bool</span> fix_constructor = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>};</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}    <span class="comment">// namespace LAMMPS_NS</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassLAMMPS__NS_1_1FixColvars_html"><div class="ttname"><a href="classLAMMPS__NS_1_1FixColvars.html">LAMMPS_NS::FixColvars</a></div><div class="ttdef"><b>Definition:</b> fix_colvars.h:47</div></div>
-<div class="ttc" id="aclassLAMMPS__NS_1_1FixColvars_html_a2ac161f4f38c7f922e56645583682b75"><div class="ttname"><a href="classLAMMPS__NS_1_1FixColvars.html#a2ac161f4f38c7f922e56645583682b75">LAMMPS_NS::FixColvars::setup_io</a></div><div class="ttdeci">void setup_io()</div><div class="ttdoc">Tell Colvars where to get its state from and where to save it.</div><div class="ttdef"><b>Definition:</b> fix_colvars.cpp:438</div></div>
-<div class="ttc" id="aclassLAMMPS__NS_1_1FixColvars_html_a3dedf5a008c1d180c84d686247ac04e3"><div class="ttname"><a href="classLAMMPS__NS_1_1FixColvars.html#a3dedf5a008c1d180c84d686247ac04e3">LAMMPS_NS::FixColvars::parse_fix_arguments</a></div><div class="ttdeci">int parse_fix_arguments(int narg, char **arg, bool fix_constructor=true)</div><div class="ttdef"><b>Definition:</b> fix_colvars.cpp:160</div></div>
-<div class="ttc" id="aclassLAMMPS__NS_1_1FixColvars_html_a60e5c81c86d5595be57bb54805ac32ac"><div class="ttname"><a href="classLAMMPS__NS_1_1FixColvars.html#a60e5c81c86d5595be57bb54805ac32ac">LAMMPS_NS::FixColvars::script_args</a></div><div class="ttdeci">unsigned char * script_args[100]</div><div class="ttdoc">Arguments passed from fix_modify to the Colvars script interface.</div><div class="ttdef"><b>Definition:</b> fix_colvars.h:89</div></div>
-<div class="ttc" id="aclassLAMMPS__NS_1_1FixColvars_html_acc043e94e7c7e128b7d68f14bb4172db"><div class="ttname"><a href="classLAMMPS__NS_1_1FixColvars.html#acc043e94e7c7e128b7d68f14bb4172db">LAMMPS_NS::FixColvars::set_thermostat_temperature</a></div><div class="ttdeci">void set_thermostat_temperature()</div><div class="ttdoc">Share with Colvars the thermostat fix named by tfix_name.</div><div class="ttdef"><b>Definition:</b> fix_colvars.cpp:295</div></div>
-<div class="ttc" id="aclasscolvarproxy__lammps_html"><div class="ttname"><a href="classcolvarproxy__lammps.html">colvarproxy_lammps</a></div><div class="ttdoc">Communication between colvars and LAMMPS (implementation of colvarproxy)</div><div class="ttdef"><b>Definition:</b> colvarproxy_lammps.h:27</div></div>
-<div class="ttc" id="astructIntHash__NS_1_1inthash__t_html"><div class="ttname"><a href="structIntHash__NS_1_1inthash__t.html">IntHash_NS::inthash_t</a></div><div class="ttdef"><b>Definition:</b> inthash.h:9</div></div>
-<div class="ttc" id="astructLAMMPS__NS_1_1commdata_html"><div class="ttname"><a href="structLAMMPS__NS_1_1commdata.html">LAMMPS_NS::commdata</a></div><div class="ttdef"><b>Definition:</b> fix_colvars.cpp:56</div></div>
+<div class="ttc" id="aclassLAMMPS__NS_1_1FixColvars_html_a2ac161f4f38c7f922e56645583682b75"><div class="ttname"><a href="classLAMMPS__NS_1_1FixColvars.html#a2ac161f4f38c7f922e56645583682b75">LAMMPS_NS::FixColvars::setup_io</a></div><div class="ttdeci">void setup_io()</div><div class="ttdoc">Tell Colvars where to get its state from and where to save it.</div><div class="ttdef"><b>Definition:</b> fix_colvars.cpp:425</div></div>
+<div class="ttc" id="aclassLAMMPS__NS_1_1FixColvars_html_a3dedf5a008c1d180c84d686247ac04e3"><div class="ttname"><a href="classLAMMPS__NS_1_1FixColvars.html#a3dedf5a008c1d180c84d686247ac04e3">LAMMPS_NS::FixColvars::parse_fix_arguments</a></div><div class="ttdeci">int parse_fix_arguments(int narg, char **arg, bool fix_constructor=true)</div><div class="ttdef"><b>Definition:</b> fix_colvars.cpp:148</div></div>
+<div class="ttc" id="aclassLAMMPS__NS_1_1FixColvars_html_a60e5c81c86d5595be57bb54805ac32ac"><div class="ttname"><a href="classLAMMPS__NS_1_1FixColvars.html#a60e5c81c86d5595be57bb54805ac32ac">LAMMPS_NS::FixColvars::script_args</a></div><div class="ttdeci">unsigned char * script_args[100]</div><div class="ttdoc">Arguments passed from fix_modify to the Colvars script interface.</div><div class="ttdef"><b>Definition:</b> fix_colvars.h:88</div></div>
+<div class="ttc" id="aclassLAMMPS__NS_1_1FixColvars_html_acc043e94e7c7e128b7d68f14bb4172db"><div class="ttname"><a href="classLAMMPS__NS_1_1FixColvars.html#acc043e94e7c7e128b7d68f14bb4172db">LAMMPS_NS::FixColvars::set_thermostat_temperature</a></div><div class="ttdeci">void set_thermostat_temperature()</div><div class="ttdoc">Share with Colvars the thermostat fix named by tfix_name.</div><div class="ttdef"><b>Definition:</b> fix_colvars.cpp:286</div></div>
+<div class="ttc" id="aclasscolvarproxy__lammps_html"><div class="ttname"><a href="classcolvarproxy__lammps.html">colvarproxy_lammps</a></div><div class="ttdoc">Communication between colvars and LAMMPS (implementation of colvarproxy)</div><div class="ttdef"><b>Definition:</b> colvarproxy_lammps.h:31</div></div>
+<div class="ttc" id="astructIntHash__NS_1_1inthash__t_html"><div class="ttname"><a href="structIntHash__NS_1_1inthash__t.html">IntHash_NS::inthash_t</a></div><div class="ttdef"><b>Definition:</b> inthash.h:16</div></div>
+<div class="ttc" id="astructLAMMPS__NS_1_1commdata_html"><div class="ttname"><a href="structLAMMPS__NS_1_1commdata.html">LAMMPS_NS::commdata</a></div><div class="ttdef"><b>Definition:</b> fix_colvars.cpp:52</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 11 2025 21:06:57 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Mar 31 2025 19:43:40 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
