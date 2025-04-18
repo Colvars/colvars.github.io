@@ -111,17 +111,17 @@ Collaboration diagram for colvarbias_meta:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarbias__meta__coll__graph.png" border="0" usemap="#acolvarbias__meta_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarbias__meta_coll__map" id="acolvarbias__meta_coll__map">
-<area shape="rect" title="Metadynamics bias (implementation of colvarbias)" alt="" coords="169,597,287,623"/>
-<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="65,420,146,445"/>
-<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="67,523,162,548"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="93,80,184,105"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="224,229,387,255"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="67,155,210,180"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="89,5,189,31"/>
+<area shape="rect" title="Metadynamics bias (implementation of colvarbias)" alt="" coords="27,569,144,595"/>
+<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="45,420,126,445"/>
+<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="107,495,202,520"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="79,80,169,105"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="43,155,205,180"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="230,155,373,180"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="74,5,174,31"/>
 <area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="43,317,127,343"/>
-<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="159,317,286,343"/>
-<area shape="rect" href="classcolvar__grid__gradient.html" title="Class for accumulating the gradient of a scalar function on a grid." alt="" coords="283,369,421,394"/>
-<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="77,229,200,255"/>
+<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="151,317,278,343"/>
+<area shape="rect" href="classcolvar__grid__params.html" title="Unified base class for grid of values of a function of several collective variables." alt="" coords="214,80,349,105"/>
+<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="220,229,343,255"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -830,10 +830,10 @@ Protected Member Functions</h2></td></tr>
 std::string const&#160;</td><td class="memItemRight" valign="bottom"><b>hills_traj_file_name</b> () const</td></tr>
 <tr class="memdesc:ade7d0a41d81031cc7b2a24e98815fdf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the hill logfile. <br /></td></tr>
 <tr class="separator:ade7d0a41d81031cc7b2a24e98815fdf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c96654ba4b7f6ffb6c2b53105624c5a"><td class="memItemLeft" align="right" valign="top"><a id="a4c96654ba4b7f6ffb6c2b53105624c5a" name="a4c96654ba4b7f6ffb6c2b53105624c5a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>recount_hills_off_grid</b> (hill_iter h_first, hill_iter h_last, <a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> *ge)</td></tr>
-<tr class="memdesc:a4c96654ba4b7f6ffb6c2b53105624c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regenerate the hills_off_grid list. <br /></td></tr>
-<tr class="separator:a4c96654ba4b7f6ffb6c2b53105624c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c8cc87ff628bf9bc81a3cba5a8760b"><td class="memItemLeft" align="right" valign="top"><a id="ab4c8cc87ff628bf9bc81a3cba5a8760b" name="ab4c8cc87ff628bf9bc81a3cba5a8760b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>recount_hills_off_grid</b> (hill_iter h_first, hill_iter h_last)</td></tr>
+<tr class="memdesc:ab4c8cc87ff628bf9bc81a3cba5a8760b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regenerate the hills_off_grid list. <br /></td></tr>
+<tr class="separator:ab4c8cc87ff628bf9bc81a3cba5a8760b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae057877ea6af89e307407f4ba85080f5"><td class="memTemplParams" colspan="2"><a id="ae057877ea6af89e307407f4ba85080f5" name="ae057877ea6af89e307407f4ba85080f5"></a>
 template&lt;typename OST &gt; </td></tr>
 <tr class="memitem:ae057877ea6af89e307407f4ba85080f5"><td class="memTemplItemLeft" align="right" valign="top">OST &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>write_hill_template_</b> (OST &amp;os, <a class="el" href="classcolvarbias__meta_1_1hill.html">colvarbias_meta::hill</a> const &amp;h)</td></tr>
@@ -1056,10 +1056,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>well_tempered</b></td
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>ebmeta</b></td></tr>
 <tr class="memdesc:a30d66214dac18c72f617e246cc567aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble-biased metadynamics (EBmeta) flag. <br /></td></tr>
 <tr class="separator:a30d66214dac18c72f617e246cc567aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20c7796dcc6a6841540349d2be2ecd2d"><td class="memItemLeft" align="right" valign="top"><a id="a20c7796dcc6a6841540349d2be2ecd2d" name="a20c7796dcc6a6841540349d2be2ecd2d"></a>
-<a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>target_dist</b></td></tr>
-<tr class="memdesc:a20c7796dcc6a6841540349d2be2ecd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target distribution for EBmeta. <br /></td></tr>
-<tr class="separator:a20c7796dcc6a6841540349d2be2ecd2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298c80a7c00d8f7e9e5fc7f53ac21e6e"><td class="memItemLeft" align="right" valign="top"><a id="a298c80a7c00d8f7e9e5fc7f53ac21e6e" name="a298c80a7c00d8f7e9e5fc7f53ac21e6e"></a>
+std::unique_ptr&lt; <a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>target_dist</b></td></tr>
+<tr class="memdesc:a298c80a7c00d8f7e9e5fc7f53ac21e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target distribution for EBmeta. <br /></td></tr>
+<tr class="separator:a298c80a7c00d8f7e9e5fc7f53ac21e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43257446427ef51e51edb3c505c44c65"><td class="memItemLeft" align="right" valign="top"><a id="a43257446427ef51e51edb3c505c44c65" name="a43257446427ef51e51edb3c505c44c65"></a>
 <a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ebmeta_equil_steps</b></td></tr>
 <tr class="memdesc:a43257446427ef51e51edb3c505c44c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of equilibration steps for EBmeta. <br /></td></tr>
@@ -1068,14 +1068,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ebmeta</b></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>safely_read_restart</b></td></tr>
 <tr class="memdesc:a090805ad96e2f8b8a6c440a5131c2feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to read the restart information by allocating new grids before replacing the current ones (used e.g. in multiple_replicas) <br /></td></tr>
 <tr class="separator:a090805ad96e2f8b8a6c440a5131c2feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a904bd068ebebf693e6f0edbe18d0b131"><td class="memItemLeft" align="right" valign="top"><a id="a904bd068ebebf693e6f0edbe18d0b131" name="a904bd068ebebf693e6f0edbe18d0b131"></a>
-<a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>hills_energy</b></td></tr>
-<tr class="memdesc:a904bd068ebebf693e6f0edbe18d0b131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hill energy, cached on a grid. <br /></td></tr>
-<tr class="separator:a904bd068ebebf693e6f0edbe18d0b131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b58348a2342fefab617cc54595a4b82"><td class="memItemLeft" align="right" valign="top"><a id="a0b58348a2342fefab617cc54595a4b82" name="a0b58348a2342fefab617cc54595a4b82"></a>
-<a class="el" href="classcolvar__grid__gradient.html">colvar_grid_gradient</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>hills_energy_gradients</b></td></tr>
-<tr class="memdesc:a0b58348a2342fefab617cc54595a4b82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hill forces, cached on a grid. <br /></td></tr>
-<tr class="separator:a0b58348a2342fefab617cc54595a4b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38203141aaf38013865178111561ca23"><td class="memItemLeft" align="right" valign="top"><a id="a38203141aaf38013865178111561ca23" name="a38203141aaf38013865178111561ca23"></a>
+std::shared_ptr&lt; <a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hills_energy</b></td></tr>
+<tr class="memdesc:a38203141aaf38013865178111561ca23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hill energy, cached on a grid. <br /></td></tr>
+<tr class="separator:a38203141aaf38013865178111561ca23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74130cb121487551a573cb768ace5fa"><td class="memItemLeft" align="right" valign="top"><a id="aa74130cb121487551a573cb768ace5fa" name="aa74130cb121487551a573cb768ace5fa"></a>
+std::shared_ptr&lt; <a class="el" href="classcolvar__grid__gradient.html">colvar_grid_gradient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hills_energy_gradients</b></td></tr>
+<tr class="memdesc:aa74130cb121487551a573cb768ace5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hill forces, cached on a grid. <br /></td></tr>
+<tr class="separator:aa74130cb121487551a573cb768ace5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a1d3153d281d4c5397c2802865e7253"><td class="memItemLeft" align="right" valign="top"><a id="a0a1d3153d281d4c5397c2802865e7253" name="a0a1d3153d281d4c5397c2802865e7253"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>replica_id</b></td></tr>
 <tr class="memdesc:a0a1d3153d281d4c5397c2802865e7253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier for this replica. <br /></td></tr>
@@ -1213,6 +1213,10 @@ std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">fea
 std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ti_system_forces</b></td></tr>
 <tr class="memdesc:a4380810d8d03cd1126e8ad59e0d4c3c1 inherit pro_attribs_classcolvarbias__ti"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces exerted from the system to the associated variables. <br /></td></tr>
 <tr class="separator:a4380810d8d03cd1126e8ad59e0d4c3c1 inherit pro_attribs_classcolvarbias__ti"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabe17778719dc96e6f711eadb38c9912 inherit pro_attribs_classcolvarbias__ti"><td class="memItemLeft" align="right" valign="top"><a id="aabe17778719dc96e6f711eadb38c9912" name="aabe17778719dc96e6f711eadb38c9912"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>grid_conf</b></td></tr>
+<tr class="memdesc:aabe17778719dc96e6f711eadb38c9912 inherit pro_attribs_classcolvarbias__ti"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grid configuration parameters (also used by grids in derived classes) <br /></td></tr>
+<tr class="separator:aabe17778719dc96e6f711eadb38c9912 inherit pro_attribs_classcolvarbias__ti"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add764932a98b9eb1ca522ea510d29766 inherit pro_attribs_classcolvarbias__ti"><td class="memItemLeft" align="right" valign="top"><a id="add764932a98b9eb1ca522ea510d29766" name="add764932a98b9eb1ca522ea510d29766"></a>
 std::shared_ptr&lt; <a class="el" href="classcolvar__grid__gradient.html">colvar_grid_gradient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ti_avg_forces</b></td></tr>
 <tr class="memdesc:add764932a98b9eb1ca522ea510d29766 inherit pro_attribs_classcolvarbias__ti"><td class="mdescLeft">&#160;</td><td class="mdescRight">Averaged system forces. <br /></td></tr>
@@ -1932,7 +1936,7 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2025 18:11:47 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Apr 18 2025 16:10:05 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

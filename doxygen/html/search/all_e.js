@@ -9,7 +9,7 @@ var searchData=
   ['n_5fvector_3c_20std_3a_3avector_3c_20double_20_3e_20_3e_6',['n_vector&lt; std::vector&lt; double &gt; &gt;',['../classUIestimator_1_1n__vector.html',1,'UIestimator']]],
   ['name_7',['name',['../classcolvar.html#a3923a4894e1d95a8f15f3f2cd54de469',1,'colvar::name()'],['../classcolvarmodule_1_1atom__group.html#a337392bb4c1e1145897fc828497074ea',1,'colvarmodule::atom_group::name()'],['../classcolvarbias.html#a9d6e2e6cbb6866eeb5cf6cef8f8e31c2',1,'colvarbias::name()'],['../classcolvar_1_1cvc.html#a6eb2279897e7041605087e0d288e8ad2',1,'colvar::cvc::name()']]],
   ['named_5fatom_5fgroups_8',['named_atom_groups',['../classcolvarmodule.html#a1bcdb9ad4bd044a43cf8cf1209375e59',1,'colvarmodule']]],
-  ['nd_9',['nd',['../classcolvar__grid.html#ad2917ddec512db6205e70b0f2f7e39fe',1,'colvar_grid']]],
+  ['nd_9',['nd',['../classcolvar__grid__params.html#a034dd911421467ee113487c5915306ae',1,'colvar_grid_params']]],
   ['neuralnetwork_10',['neuralNetwork',['../classcolvar_1_1neuralNetwork.html',1,'colvar']]],
   ['neuralnetworkcompute_11',['neuralNetworkCompute',['../classneuralnetworkCV_1_1neuralNetworkCompute.html',1,'neuralnetworkCV']]],
   ['new_5fdata_12',['new_data',['../classcolvar__grid.html#a20d09cac84efdd3a92c983e7bac02aa6',1,'colvar_grid']]],
@@ -36,6 +36,6 @@ var searchData=
   ['num_5fvariables_5ffeature_33',['num_variables_feature',['../classcolvarmodule.html#ae7b5451d681ad21766087b0a929b255e',1,'colvarmodule']]],
   ['number_5fof_5fpoints_34',['number_of_points',['../classcolvar__grid.html#a300a5781e3b323d2fe48c4df463c265e',1,'colvar_grid']]],
   ['number_5fof_5fpoints_5fvec_35',['number_of_points_vec',['../classcolvar__grid.html#a5d6236da3b90545ba5307eb0a615dcdb',1,'colvar_grid']]],
-  ['nx_36',['nx',['../classcolvar__grid.html#ac02db43c4299d1d8cc1fa395de1b48b0',1,'colvar_grid']]],
-  ['nxc_37',['nxc',['../classcolvar__grid.html#aaae45c549d3df32f8dd85ec6870de7b1',1,'colvar_grid']]]
+  ['nx_36',['nx',['../classcolvar__grid__params.html#af6d4c6c62ea66a83e53521dcff9454bb',1,'colvar_grid_params']]],
+  ['nxc_37',['nxc',['../classcolvar__grid__params.html#a13d836c5bd7df8e35d462a763d14b8ec',1,'colvar_grid_params']]]
 ];

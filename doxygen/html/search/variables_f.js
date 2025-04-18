@@ -18,7 +18,7 @@ var searchData=
   ['period_15',['period',['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period()'],['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period()']]],
   ['periodic_16',['periodic',['../classcolvar__grid.html#ae7ae2b01e5c6afa691889907419aa4ec',1,'colvar_grid']]],
   ['pmf_17',['pmf',['../classcolvarbias__abf.html#a64ccd9c938b77a1b2e3462e95a32b554',1,'colvarbias_abf']]],
-  ['pmf_5fgrid_5fexp_5favg_18',['pmf_grid_exp_avg',['../classcolvarbias__reweightaMD.html#aec93403d1838be5d01165e04d095f0bb',1,'colvarbias_reweightaMD']]],
+  ['pmf_5fgrid_5fexp_5favg_18',['pmf_grid_exp_avg',['../classcolvarbias__reweightaMD.html#a12b798a51e0b8b7742ca759bbb29521a',1,'colvarbias_reweightaMD']]],
   ['pos_19',['pos',['../classcolvarmodule_1_1atom.html#ad69c11b6395fdda6f0c84783ade07a88',1,'colvarmodule::atom']]],
   ['pos_5funrotated_20',['pos_unrotated',['../classcolvarmodule_1_1atom__group.html#a5da0ce6c6f0af1d2b518839650c12c8e',1,'colvarmodule::atom_group']]],
   ['potential_5fenergy_21',['potential_energy',['../classcolvar.html#ae1a1f66c6a860b808945d5c3cc25c684',1,'colvar']]],

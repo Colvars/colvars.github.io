@@ -110,17 +110,18 @@ Collaboration diagram for colvarbias_restraint_centers:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarbias__restraint__centers__coll__graph.png" border="0" usemap="#acolvarbias__restraint__centers_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarbias__restraint__centers_coll__map" id="acolvarbias__restraint__centers_coll__map">
-<area shape="rect" title="Definition and parsing of the restraint centers." alt="" coords="29,668,163,708"/>
-<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="29,593,163,619"/>
-<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="55,444,137,469"/>
-<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="118,519,213,544"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="53,80,144,105"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="25,204,188,229"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="137,155,279,180"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="49,5,149,31"/>
-<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="203,341,287,367"/>
-<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="43,341,170,367"/>
-<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="145,253,268,279"/>
+<area shape="rect" title="Definition and parsing of the restraint centers." alt="" coords="18,644,153,684"/>
+<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="18,569,153,595"/>
+<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="45,420,126,445"/>
+<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="107,495,202,520"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="79,80,169,105"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="43,155,205,180"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="230,155,373,180"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="74,5,174,31"/>
+<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="43,317,127,343"/>
+<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="151,317,278,343"/>
+<area shape="rect" href="classcolvar__grid__params.html" title="Unified base class for grid of values of a function of several collective variables." alt="" coords="214,80,349,105"/>
+<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="220,229,343,255"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -694,6 +695,10 @@ std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">fea
 std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ti_system_forces</b></td></tr>
 <tr class="memdesc:a4380810d8d03cd1126e8ad59e0d4c3c1 inherit pro_attribs_classcolvarbias__ti"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces exerted from the system to the associated variables. <br /></td></tr>
 <tr class="separator:a4380810d8d03cd1126e8ad59e0d4c3c1 inherit pro_attribs_classcolvarbias__ti"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabe17778719dc96e6f711eadb38c9912 inherit pro_attribs_classcolvarbias__ti"><td class="memItemLeft" align="right" valign="top"><a id="aabe17778719dc96e6f711eadb38c9912" name="aabe17778719dc96e6f711eadb38c9912"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>grid_conf</b></td></tr>
+<tr class="memdesc:aabe17778719dc96e6f711eadb38c9912 inherit pro_attribs_classcolvarbias__ti"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grid configuration parameters (also used by grids in derived classes) <br /></td></tr>
+<tr class="separator:aabe17778719dc96e6f711eadb38c9912 inherit pro_attribs_classcolvarbias__ti"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add764932a98b9eb1ca522ea510d29766 inherit pro_attribs_classcolvarbias__ti"><td class="memItemLeft" align="right" valign="top"><a id="add764932a98b9eb1ca522ea510d29766" name="add764932a98b9eb1ca522ea510d29766"></a>
 std::shared_ptr&lt; <a class="el" href="classcolvar__grid__gradient.html">colvar_grid_gradient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ti_avg_forces</b></td></tr>
 <tr class="memdesc:add764932a98b9eb1ca522ea510d29766 inherit pro_attribs_classcolvarbias__ti"><td class="mdescLeft">&#160;</td><td class="mdescRight">Averaged system forces. <br /></td></tr>
@@ -1087,7 +1092,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2025 18:11:47 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Apr 18 2025 16:10:05 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

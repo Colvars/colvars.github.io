@@ -1,7 +1,7 @@
 var searchData=
 [
   ['target_5fcenters_0',['target_centers',['../classcolvarbias__restraint__centers__moving.html#a0332728290c37d74867a836e9bc32219',1,'colvarbias_restraint_centers_moving']]],
-  ['target_5fdist_1',['target_dist',['../classcolvarbias__meta.html#a20c7796dcc6a6841540349d2be2ecd2d',1,'colvarbias_meta']]],
+  ['target_5fdist_1',['target_dist',['../classcolvarbias__meta.html#a298c80a7c00d8f7e9e5fc7f53ac21e6e',1,'colvarbias_meta']]],
   ['target_5fequil_5fsteps_2',['target_equil_steps',['../classcolvarbias__restraint__k__moving.html#a2ecdb6836f3ed8864112b90e52e5392b',1,'colvarbias_restraint_k_moving']]],
   ['target_5fforce_5fk_3',['target_force_k',['../classcolvarbias__restraint__k__moving.html#ab79f6091ee6544017c9e944634a2d403',1,'colvarbias_restraint_k_moving']]],
   ['target_5fnstages_4',['target_nstages',['../classcolvarbias__restraint__moving.html#aea1ed7b9d7e3618eb958613db28ae7c0',1,'colvarbias_restraint_moving']]],

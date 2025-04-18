@@ -39,7 +39,7 @@ var searchData=
   ['read_5fvelocity_36',['read_velocity',['../classcolvarmodule_1_1atom.html#a40fdab31ac3cc060822affb2cd61c045',1,'colvarmodule::atom']]],
   ['readfromfile_37',['readFromFile',['../classneuralnetworkCV_1_1denseLayer.html#a0f3dd69cae6df20341c61a8b86c31dad',1,'neuralnetworkCV::denseLayer']]],
   ['rebin_5fgrids_5fafter_5frestart_38',['rebin_grids_after_restart',['../classcolvarbias__meta.html#aae88ba9a57b0eeed191b51d9946b2f35',1,'colvarbias_meta']]],
-  ['recount_5fhills_5foff_5fgrid_39',['recount_hills_off_grid',['../classcolvarbias__meta.html#a4c96654ba4b7f6ffb6c2b53105624c5a',1,'colvarbias_meta']]],
+  ['recount_5fhills_5foff_5fgrid_39',['recount_hills_off_grid',['../classcolvarbias__meta.html#ab4c8cc87ff628bf9bc81a3cba5a8760b',1,'colvarbias_meta']]],
   ['register_5fatom_5fgroup_40',['register_atom_group',['../classcolvar_1_1cvc.html#aafb2a4829b2f971e9044fa4d9e703688',1,'colvar::cvc']]],
   ['register_5fnamed_5fatom_5fgroup_41',['register_named_atom_group',['../classcolvarmodule.html#a1ece56309fcfb1de303e9cd0813299a7',1,'colvarmodule']]],
   ['register_5fparam_42',['register_param',['../classcolvarparams.html#a059395dd0c0b2f75d2454ff9df633ff8',1,'colvarparams']]],

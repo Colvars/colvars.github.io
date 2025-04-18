@@ -112,22 +112,23 @@ Collaboration diagram for colvarbias_restraint_linear:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarbias__restraint__linear__coll__graph.png" border="0" usemap="#acolvarbias__restraint__linear_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarbias__restraint__linear_coll__map" id="acolvarbias__restraint__linear_coll__map">
-<area shape="rect" title="Linear bias restraint (implementation of colvarbias_restraint)" alt="" coords="255,885,389,925"/>
-<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="176,796,311,836"/>
-<area shape="rect" href="classcolvarbias__restraint__centers.html" title="Definition and parsing of the restraint centers." alt="" coords="5,707,140,747"/>
-<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="107,632,241,657"/>
-<area shape="rect" href="classcolvarbias__restraint__k.html" title="Definition and parsing of the force constant." alt="" coords="165,714,314,739"/>
-<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="133,444,215,469"/>
-<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="169,557,264,583"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="179,80,270,105"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="115,204,278,229"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="227,155,369,180"/>
-<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="313,493,448,533"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="175,5,275,31"/>
-<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="285,341,369,367"/>
-<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="133,341,260,367"/>
-<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="235,253,358,279"/>
-<area shape="rect" href="classcolvarbias__restraint__k__moving.html" title="Options to change the restraint force constant over time." alt="" coords="335,796,469,836"/>
+<area shape="rect" title="Linear bias restraint (implementation of colvarbias_restraint)" alt="" coords="217,861,352,901"/>
+<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="139,772,273,812"/>
+<area shape="rect" href="classcolvarbias__restraint__centers.html" title="Definition and parsing of the restraint centers." alt="" coords="31,683,165,723"/>
+<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="87,608,221,633"/>
+<area shape="rect" href="classcolvarbias__restraint__k.html" title="Definition and parsing of the force constant." alt="" coords="190,690,339,715"/>
+<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="145,420,227,445"/>
+<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="181,533,276,559"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="198,80,289,105"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="79,155,242,180"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="267,155,409,180"/>
+<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="331,469,465,509"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="193,5,293,31"/>
+<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="324,317,408,343"/>
+<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="123,317,249,343"/>
+<area shape="rect" href="classcolvar__grid__params.html" title="Unified base class for grid of values of a function of several collective variables." alt="" coords="5,80,140,105"/>
+<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="243,229,366,255"/>
+<area shape="rect" href="classcolvarbias__restraint__k__moving.html" title="Options to change the restraint force constant over time." alt="" coords="297,772,432,812"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -1145,6 +1146,10 @@ std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">fea
 std::vector&lt; <a class="el" href="classcolvarvalue.html">colvarvalue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ti_system_forces</b></td></tr>
 <tr class="memdesc:a4380810d8d03cd1126e8ad59e0d4c3c1 inherit pro_attribs_classcolvarbias__ti"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces exerted from the system to the associated variables. <br /></td></tr>
 <tr class="separator:a4380810d8d03cd1126e8ad59e0d4c3c1 inherit pro_attribs_classcolvarbias__ti"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabe17778719dc96e6f711eadb38c9912 inherit pro_attribs_classcolvarbias__ti"><td class="memItemLeft" align="right" valign="top"><a id="aabe17778719dc96e6f711eadb38c9912" name="aabe17778719dc96e6f711eadb38c9912"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>grid_conf</b></td></tr>
+<tr class="memdesc:aabe17778719dc96e6f711eadb38c9912 inherit pro_attribs_classcolvarbias__ti"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grid configuration parameters (also used by grids in derived classes) <br /></td></tr>
+<tr class="separator:aabe17778719dc96e6f711eadb38c9912 inherit pro_attribs_classcolvarbias__ti"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add764932a98b9eb1ca522ea510d29766 inherit pro_attribs_classcolvarbias__ti"><td class="memItemLeft" align="right" valign="top"><a id="add764932a98b9eb1ca522ea510d29766" name="add764932a98b9eb1ca522ea510d29766"></a>
 std::shared_ptr&lt; <a class="el" href="classcolvar__grid__gradient.html">colvar_grid_gradient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ti_avg_forces</b></td></tr>
 <tr class="memdesc:add764932a98b9eb1ca522ea510d29766 inherit pro_attribs_classcolvarbias__ti"><td class="mdescLeft">&#160;</td><td class="mdescRight">Averaged system forces. <br /></td></tr>
@@ -1559,7 +1564,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_positive_k</b><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2025 18:11:47 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Apr 18 2025 16:10:05 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

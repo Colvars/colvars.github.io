@@ -103,16 +103,17 @@ Collaboration diagram for colvarbias_opes:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarbias__opes__coll__graph.png" border="0" usemap="#acolvarbias__opes_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarbias__opes_coll__map" id="acolvarbias__opes_coll__map">
-<area shape="rect" title=" " alt="" coords="113,532,229,557"/>
-<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="55,444,137,469"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="53,80,144,105"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="25,204,188,229"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="137,155,279,180"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="49,5,149,31"/>
-<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="203,341,287,367"/>
-<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="43,341,170,367"/>
-<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="145,253,268,279"/>
-<area shape="rect" href="structcolvarbias__opes_1_1traj__line.html" title=" " alt="" coords="161,444,330,469"/>
+<area shape="rect" title=" " alt="" coords="102,508,218,533"/>
+<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="45,420,126,445"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="79,80,169,105"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="43,155,205,180"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="230,155,373,180"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="74,5,174,31"/>
+<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="43,317,127,343"/>
+<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="151,317,278,343"/>
+<area shape="rect" href="classcolvar__grid__params.html" title="Unified base class for grid of values of a function of several collective variables." alt="" coords="214,80,349,105"/>
+<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="220,229,343,255"/>
+<area shape="rect" href="structcolvarbias__opes_1_1traj__line.html" title=" " alt="" coords="150,420,319,445"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -948,9 +949,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_pmf_grid_on</b></td
 <tr class="memitem:a7b8ae98da29e0a5e84749301b0c3f5a4"><td class="memItemLeft" align="right" valign="top"><a id="a7b8ae98da29e0a5e84749301b0c3f5a4" name="a7b8ae98da29e0a5e84749301b0c3f5a4"></a>
 std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_pmf_cvs</b></td></tr>
 <tr class="separator:a7b8ae98da29e0a5e84749301b0c3f5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6c0acef255616a86d1959ff8c2ba88e"><td class="memItemLeft" align="right" valign="top"><a id="af6c0acef255616a86d1959ff8c2ba88e" name="af6c0acef255616a86d1959ff8c2ba88e"></a>
-std::unique_ptr&lt; <a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_reweight_grid</b></td></tr>
-<tr class="separator:af6c0acef255616a86d1959ff8c2ba88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769d41f025ee8fd89b726b22fac671de"><td class="memItemLeft" align="right" valign="top"><a id="a769d41f025ee8fd89b726b22fac671de" name="a769d41f025ee8fd89b726b22fac671de"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>grid_conf</b></td></tr>
+<tr class="separator:a769d41f025ee8fd89b726b22fac671de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae390be314e0e31f70818fcbceb4bddb3"><td class="memItemLeft" align="right" valign="top"><a id="ae390be314e0e31f70818fcbceb4bddb3" name="ae390be314e0e31f70818fcbceb4bddb3"></a>
+std::shared_ptr&lt; <a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_reweight_grid</b></td></tr>
+<tr class="separator:ae390be314e0e31f70818fcbceb4bddb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a400d38de43bdd98bc5a93997f2b3d43e"><td class="memItemLeft" align="right" valign="top"><a id="a400d38de43bdd98bc5a93997f2b3d43e" name="a400d38de43bdd98bc5a93997f2b3d43e"></a>
 std::unique_ptr&lt; <a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_pmf_grid</b></td></tr>
 <tr class="separator:a400d38de43bdd98bc5a93997f2b3d43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1457,7 +1461,7 @@ std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">fea
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2025 18:11:47 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Apr 18 2025 16:10:05 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

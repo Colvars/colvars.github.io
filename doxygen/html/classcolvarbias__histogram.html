@@ -106,15 +106,16 @@ Collaboration diagram for colvarbias_histogram:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarbias__histogram__coll__graph.png" border="0" usemap="#acolvarbias__histogram_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarbias__histogram_coll__map" id="acolvarbias__histogram_coll__map">
-<area shape="rect" title="Histogram &quot;bias&quot; (does as the name says)" alt="" coords="121,519,266,544"/>
-<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="67,444,149,469"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="69,80,160,105"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="140,204,303,229"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="43,155,186,180"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="65,5,165,31"/>
-<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="43,341,127,367"/>
-<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="155,341,282,367"/>
-<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="57,253,180,279"/>
+<area shape="rect" title="Histogram &quot;bias&quot; (does as the name says)" alt="" coords="121,495,266,520"/>
+<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="67,420,149,445"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="79,80,169,105"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="43,155,205,180"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="230,155,373,180"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="74,5,174,31"/>
+<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="43,317,127,343"/>
+<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="174,317,301,343"/>
+<area shape="rect" href="classcolvar__grid__params.html" title="Unified base class for grid of values of a function of several collective variables." alt="" coords="214,80,349,105"/>
+<area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="220,229,343,255"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -544,6 +545,9 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="classcolvar__grid__scalar.html">colvar_grid_scalar</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>grid</b></td></tr>
 <tr class="memdesc:aec5424ae0dbc963108317ec5bf3fd9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">n-dim histogram <br /></td></tr>
 <tr class="separator:aec5424ae0dbc963108317ec5bf3fd9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa31b7c9818312f8d214a50509fc28335"><td class="memItemLeft" align="right" valign="top"><a id="aa31b7c9818312f8d214a50509fc28335" name="aa31b7c9818312f8d214a50509fc28335"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>grid_conf</b></td></tr>
+<tr class="separator:aa31b7c9818312f8d214a50509fc28335"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68d03b066b439f67796a8bdea8b7f651"><td class="memItemLeft" align="right" valign="top"><a id="a68d03b066b439f67796a8bdea8b7f651" name="a68d03b066b439f67796a8bdea8b7f651"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>bin</b></td></tr>
 <tr class="separator:a68d03b066b439f67796a8bdea8b7f651"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1181,7 +1185,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2025 18:11:47 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Apr 18 2025 16:10:05 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
