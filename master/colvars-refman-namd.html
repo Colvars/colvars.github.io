@@ -15,7 +15,7 @@
 </p><!--l. 140--><p class="noindent"><span class="colorbox" id="colorbox1"> </span></p><div class="minipage"><!--l. 179--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.17em"></mspace></math><br class="newline"/>
 <!--l. 179--><p class="noindent"><span class="phvb8t-x-x-248">COLLECTIVE VARIABLES MODULE</span><br class="newline"/>
 </p><!--l. 179--><p class="noindent"><span class="phvb8t-x-x-248">Reference manual for NAMD</span><br class="newline"/>
-</p><!--l. 179--><p class="noindent"><br class="newline"/>Code version: 2025-04-18<br class="newline"/>
+</p><!--l. 179--><p class="noindent"><br class="newline"/>Code version: 2025-04-30<br class="newline"/>
 </p><!--l. 179--><p class="noindent">Updated versions of this manual: [<a href="https://colvars.github.io/master/colvars-refman-gromacs.html">GROMACS</a>] [<a href="https://colvars.github.io/master/colvars-refman-lammps.html">LAMMPS</a>] [<a href="https://colvars.github.io/master/colvars-refman-namd.html">NAMD</a>] [<a href="https://colvars.github.io/master/colvars-refman-tinkerhp.html">Tinker-HP</a>] [<a href="https://colvars.github.io/master/colvars-refman-vmd.html">VMD</a>]</p></div>
 <!--l. 183--><p class="indent"> <img alt="Colvars logo" class="cover_picture" src="cover-512px.jpg"/> <br class="newline"/><span class="phvr8t-x-x-120">Alejandro Bernardin, Haochuan Chen, Jeffrey R. Comer, Giacomo Fiorin, Haohao Fu, J</span><span class="phvr8t-x-x-120">é</span><span class="phvr8t-x-x-120">r</span><span class="phvr8t-x-x-120">ô</span><span class="phvr8t-x-x-120">me</span>
 <span class="phvr8t-x-x-120">H</span><span class="phvr8t-x-x-120">é</span><span class="phvr8t-x-x-120">nin, Axel Kohlmeyer, Fabrizio Marinelli, Hubert Santuz, Joshua V. Vermaas, Andrew D.</span>
@@ -3201,11 +3201,11 @@ details.
 </p><!--l. 3808--><p class="noindent"><span class="phvb8t-x-x-109">List of keywords </span>(see also <a href="#sec:cvc_pbcs">4.2<!--tex4ht:ref: sec:cvc_pbcs --></a>, <a href="#sec:cvc_common">4.16<!--tex4ht:ref: sec:cvc_common --></a>, <a href="#sec:cvc_periodic">4.17<!--tex4ht:ref: sec:cvc_periodic --></a> and <a href="#sec:cvc_superp">4.19<!--tex4ht:ref: sec:cvc_superp --></a> for additional options): </p>
 <ul class="itemize1">
 <li class="itemize"><a id="colvar|torchANN|modelFile"></a> <span class="colorbox" id="colorbox216"><a id="dx1-94001"></a><span class="ectt-1095">modelFile</span></span> — <span class="phvro8t-x-x-109">Name of the file containing the model (PyTorch format)</span><br class="newline"/><!--l. 3818--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> filename,
-     context: <span class="ectt-1095">torchANN</span> <!--l. 3818--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This file contains the PyTorch model, as saved for example by the <span class="ectt-1095">torch.save() </span>function.
+     context: <span class="ectt-1095">torchANN</span> <!--l. 3818--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This file contains the PyTorch model, as saved for example by the <span class="ectt-1095">torch.jit.save() </span>function.
      </li>
-<li class="itemize"><a id="colvar|torchANN|m_output_index"></a> <span class="colorbox" id="colorbox217"><a id="dx1-94002"></a><span class="ectt-1095">m_output_index</span></span> — <span class="phvro8t-x-x-109">Index of the component to use</span><br class="newline"/>Default: 0 <!--l. 3829--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> 0-based
-     integer, context: <span class="ectt-1095">torchANN</span> <!--l. 3829--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When the output of the ANN has multiple components, this option selects the component to
-     be used as the collective variable.
+<li class="itemize"><a id="colvar|torchANN|output_component"></a> <span class="colorbox" id="colorbox217"><a id="dx1-94002"></a><span class="ectt-1095">output_component</span></span> — <span class="phvro8t-x-x-109">Index of the output node to use</span><br class="newline"/>Default: 0 <!--l. 3829--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> 0-based
+     integer, context: <span class="ectt-1095">torchANN</span> <!--l. 3829--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This option specifies the index of the output node to be used as the value collective variable
+     (see also the equivalent keyword <a href="#colvar|NeuralNetwork|output_component"><span class="ectt-1095">output_component</span></a> in the built-in neural network implementation).
      </li>
 <li class="itemize"><a id="colvar|torchANN|doubleInputTensor"></a> <span class="colorbox" id="colorbox218"><a id="dx1-94003"></a><span class="ectt-1095">doubleInputTensor</span></span> — <span class="phvro8t-x-x-109">Specify that the input model is in double precision</span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 3840--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
      context: <span class="ectt-1095">torchANN</span> <!--l. 3840--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This flags controls the precision of the PyTorch model contained in <span class="ectt-1095">modelFile</span>.
@@ -3278,13 +3278,12 @@ reasonable starting point may be obtained, for example, with VMD: using an exist
 cavity is occupied by solvent and a spatial selection that identifies all the molecules within the cavity,
 <span class="ectt-1095">volmap occupancy -allframes -combine max </span>computes the occupancy map as a step function
 (values 1 or 0), and <span class="ectt-1095">volutil -smooth </span><span class="ectt-1095">… </span>makes it a continuous map, suitable for use as a MD
+                                                                                         
+                                                                                         
 simulation bias. A PDB file defining the selection (for example, where all water oxygens and ions
 have an occupancy of 1 and other atoms 0) is also prepared using VMD. Both the map file
 and the atom selection file are then loaded via the <span class="ectt-1095">mGridForcePotFile </span>and related NAMD
-commands:
-                                                                                         
-                                                                                         
-</p>
+commands:</p>
 <div class="mdframed" id="mdframed-50">
 <!--l. 3953--><p class="noindent"></p><pre>mGridForce yes<br class="newline"/>mGridForcePotFile Cavity cavity.dx   # OpenDX map file<br class="newline"/>mGridForceFile Cavity water-sel.pdb  # PDB file used for atom selection<br class="newline"/>mGridForceCol Cavity O               # Use the occupancy column of the PDB file<br class="newline"/>mGridForceChargeCol Cavity B         # Use beta as “charge" (default: electric charge)<br class="newline"/>mGridForceScale Cavity 0.0 0.0 0.0   # Do not use GridForces for this map<br class="newline"/></pre><!--l. 3953--><p class="noindent"></p>
 </div>
@@ -3312,11 +3311,11 @@ same step.
 deformations of lipid membranes) it is useful to define collective variables based on more than one
 volumetric map at a time, measuring the relative similarity with each map while still achieving correct
 thermodynamic sampling of each state.
+                                                                                         
+                                                                                         
 </p><!--l. 3960--><p class="indent">   This is achieved by combining multiple <span class="ectt-1095">mapTotal </span>components, each
 based on a differently-shaped volumetric map, into a single collective variable
 <!--l. 3960--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>.
-                                                                                         
-                                                                                         
 To track transitions between states, the contribution of each map to
 <!--l. 3961--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math> should
 be discriminated from the others, for example by assigning to it a different weight. The “Multi-Map"
@@ -3504,8 +3503,6 @@ confirm.
      context: <span class="ectt-1095">colvar</span> <!--l. 4296--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Mathematical expression to define the colvar as a closed-form function of its colvar components.
      See below for the detailed syntax of Lepton expressions. Multiple mentions of this keyword
      can be used to define a vector variable (as in the example below).
-                                                                                         
-                                                                                         
      </li>
 <li class="itemize"><span class="colorbox" id="colorbox232"><a id="dx1-103002"></a><span class="ectt-1095">customFunctionType</span></span> — <span class="phvro8t-x-x-109">Type of value returned by the custom function</span><br class="newline"/>Default: <span class="ectt-1095">scalar</span> <!--l. 4296--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> string,
      context: <span class="ectt-1095">colvar</span> <!--l. 4296--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>With this flag, the user may specify whether the colvar is a scalar or one of the following
@@ -3529,8 +3526,6 @@ may be followed by definitions for intermediate values that appear in the expres
 semicolons. For example, the expression:<br class="newline"/><span class="ectt-1095">a</span><span class="ectt-1095">^2 + a*b + b</span><span class="ectt-1095">^2; a = a1 + a2; b = b1 + b2</span><br class="newline"/>is exactly equivalent to:<br class="newline"/><span class="ectt-1095">(a1 + a2)</span><span class="ectt-1095">^2 + (a1 + a2) * (b1 + b2) + (b1 + b2)</span><span class="ectt-1095">^2</span>.<br class="newline"/>The definition of an intermediate value may itself involve other intermediate values. All uses of a value
 must appear <span class="phvro8t-x-x-109">before </span>that value's definition.
 </p><!--l. 4296--><p class="indent">   Lepton supports the usual arithmetic operators +, -, *, /, and ^ (power), as well as the following
-                                                                                         
-                                                                                         
 functions:
 </p>
 <div class="center">
@@ -3574,6 +3569,8 @@ Cartesian coordinates rather than functions of existing components, the <span cl
 particularly useful. A scalar-valued scripted variable may be manually defined as periodic by providing the
 keyword <span class="ectt-1095">period</span>, and the optional keyword <span class="ectt-1095">wrapAround</span>, with the same meaning as in periodic
 components (see <a href="#sec:cvc_periodic">4.17<!--tex4ht:ref: sec:cvc_periodic --></a> for details).
+                                                                                         
+                                                                                         
 <!--l. 4311--><p class="indent">   An example of elaborate scripted colvar is given in example 10, in the form of path-based collective
 variables as defined by Branduardi et al<span class="cite">[<a href="#XBranduardi2007">12</a>]</span> (Section <a href="#sec:apath_scripted">4.12.3<!--tex4ht:ref: sec:apath_scripted --></a>).
 </p>
@@ -3640,11 +3637,11 @@ configuration by inserting a <a href="#sec:colvarbias_grid"><span class="ectt-10
      variable. As a typical rule of thumb, <span class="ectt-1095">width </span>should be no larger than the standard deviation
      of the colvar in an unbiased simulation (to characterize a local free-energy minimum with at
      least two points).
+                                                                                         
+                                                                                         
      <!--l. 4418--><p class="noindent">Further, many restraints such as harmonic potentials (<a href="#sec:colvarbias_harmonic">6.8<!--tex4ht:ref: sec:colvarbias_harmonic --></a>), harmonic walls (<a href="#sec:colvarbias_harmonic_walls">6.10<!--tex4ht:ref: sec:colvarbias_harmonic_walls --></a>) and linear
      restraints (<a href="#sec:colvarbias_linear">6.11<!--tex4ht:ref: sec:colvarbias_linear --></a>) also use this parameter to define the <span class="phvro8t-x-x-109">expected fluctuations </span>of the colvar,
      allowing to express the force constant in terms of this unit. This is most useful with multi-dimensional
-                                                                                         
-                                                                                         
      restraints acting on variables that have very different units (for examples, working with Å and
      degrees <!--l. 4418--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow></mrow><mrow><mo class="MathClass-bin">∘</mo></mrow></msup></math>
      simultaneously): a single force constant can be used for all, which is converted to the respective
@@ -3701,6 +3698,8 @@ configuration by inserting a <a href="#sec:colvarbias_grid"><span class="ectt-10
      </li>
 <li class="itemize"><a id="colvar|outputAppliedForce"></a> <span class="colorbox" id="colorbox246"><a id="dx1-106005"></a><span class="ectt-1095">outputAppliedForce</span></span> — <span class="phvro8t-x-x-109">Output an applied force trajectory for this colvar</span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 4536--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
      context: <span class="ectt-1095">colvar</span> <!--l. 4536--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If <span class="ectt-1095">colvarsTrajFrequency </span>is defined, the total force applied on this colvar by Colvars biases
+                                                                                         
+                                                                                         
      are written to the trajectory under the label “<span class="ectt-1095">fa_</span><!--l. 4536--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ectt-1095">name</span><!--l. 4536--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math>".
      For extended Lagrangian colvars, this force is actually applied to the extended degree of
      freedom rather than the geometric colvar itself. The physical unit for this force is kcal/mol/<span class="phvro8t-x-x-109">(colvar</span>
@@ -3740,8 +3739,6 @@ extended Lagrangian coordinates and act directly on the actual colvars.
      spring force constant is calculated internally as <!--l. 4590--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>B</mi></mrow></msub><mi>T</mi> <mo class="MathClass-bin">∕</mo><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></math>,
      where <!--l. 4590--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
      is the value of <span class="ectt-1095">extendedFluctuation</span>.
-                                                                                         
-                                                                                         
      </li>
 <li class="itemize"><span class="colorbox" id="colorbox249"><a id="dx1-107003"></a><span class="ectt-1095">extendedTimeConstant</span></span> — <span class="phvro8t-x-x-109">Oscillation period of the fictitious particle (fs)</span><br class="newline"/>Default: <span class="ectt-1095">200</span> <!--l. 4605--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
      decimal, context: <span class="ectt-1095">colvar</span> <!--l. 4605--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines  the  inertial  mass  of  the  fictitious  particle,  by  setting  the  oscillation  period  of  the
@@ -3769,6 +3766,8 @@ extended Lagrangian coordinates and act directly on the actual colvars.
      regime of ABF. Use moderate damping values, to limit viscous friction (potentially slowing
      down diffusive sampling) and stochastic noise (increasing the variance of statistical measurements).
      In doubt, use the default value.
+                                                                                         
+                                                                                         
      </li>
 <li class="itemize"><a id="colvar|reflectingLowerBoundary"></a> <span class="colorbox" id="colorbox253"><a id="dx1-107007"></a><span class="ectt-1095">reflectingLowerBoundary</span></span> — <span class="phvro8t-x-x-109">Whether the lower boundary reflects the extended Lagrangian</span>
 <span class="phvro8t-x-x-109">particle</span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 4661--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
@@ -3828,8 +3827,6 @@ histogram bias (<a href="#sec:colvarbias_histogram">6.13<!--tex4ht:ref: sec:colv
      is calculated. When this option is specified, the correlation function is calculated instead with
      another colvar, <!--l. 4746--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi>j</mi></mrow></msub></math>,
      which must be of the same type (scalar, vector, or quaternion) as <!--l. 4746--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi>i</mi></mrow></msub></math>.
-                                                                                         
-                                                                                         
      </li>
 <li class="itemize"><span class="colorbox" id="colorbox259"><a id="dx1-110003"></a><span class="ectt-1095">corrFuncType</span></span> — <span class="phvro8t-x-x-109">Type of the correlation function</span><br class="newline"/>Default: <span class="ectt-1095">velocity</span> <!--l. 4764--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> <span class="ectt-1095">velocity</span>,
      <span class="ectt-1095">coordinate </span>or <span class="ectt-1095">coordinate_p2</span>, context: <span class="ectt-1095">colvar</span> <!--l. 4764--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>With <span class="ectt-1095">coordinate </span>or <span class="ectt-1095">velocity</span>, the correlation function <!--l. 4764--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>C</mi></mrow><mrow><mi>i</mi><mo class="MathClass-punc">,</mo><mi>j</mi></mrow></msub><mo class="MathClass-open">(</mo><mi>t</mi><mo class="MathClass-close">)</mo></math> =
@@ -3854,6 +3851,8 @@ histogram bias (<a href="#sec:colvarbias_histogram">6.13<!--tex4ht:ref: sec:colv
      </li>
 <li class="itemize"><span class="colorbox" id="colorbox263"><a id="dx1-110007"></a><span class="ectt-1095">corrFuncOffset</span></span> — <span class="phvro8t-x-x-109">Offset of the time correlation function</span><br class="newline"/>Default: <span class="ectt-1095">0</span> <!--l. 4804--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
      integer, context: <span class="ectt-1095">colvar</span> <!--l. 4804--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>The starting time (in number of steps) of the time correlation function (default: <!--l. 4804--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math> =
+                                                                                         
+                                                                                         
      0). <span class="phvb8t-x-x-109">Note: </span><span class="phvro8t-x-x-109">the value at </span><!--l. 4804--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math><span class="phvro8t-x-x-109"> =</span>
 <span class="phvro8t-x-x-109">0 is always used for the normalization</span>.
      </li>
