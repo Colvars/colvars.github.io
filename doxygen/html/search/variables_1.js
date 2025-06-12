@@ -19,7 +19,7 @@ var searchData=
   ['b_5foutput_5fgrad_16',['b_output_grad',['../classcolvarbias__alb.html#a44fe18efec92ae1b008b0b8c9f86b008',1,'colvarbias_alb']]],
   ['b_5fsimulation_5fcontinuing_17',['b_simulation_continuing',['../classcolvarproxy.html#a929e0a4779e8977de21738cef1d6ff79',1,'colvarproxy']]],
   ['b_5fsimulation_5frunning_18',['b_simulation_running',['../classcolvarproxy.html#ae1bf730e928539e61f869530e7969e82',1,'colvarproxy']]],
-  ['b_5fsmoothed_19',['b_smoothed',['../classintegrate__potential.html#aa282b6a9148cd72104e0ba7cb627c992',1,'integrate_potential']]],
+  ['b_5fsmoothed_19',['b_smoothed',['../classcolvargrid__integrate.html#a415576bc3df6fb511efd40be58a87a28',1,'colvargrid_integrate']]],
   ['b_5ftry_5fscalable_20',['b_try_scalable',['../classcolvar_1_1cvc.html#a899476155ced1bd8ea8dcdddd361ef42',1,'colvar::cvc']]],
   ['b_5fui_5festimator_21',['b_UI_estimator',['../classcolvarbias__abf.html#abee66a669b67f0a2e17f8d4233611a76',1,'colvarbias_abf']]],
   ['b_5fuse_5fcumulant_5fexpansion_22',['b_use_cumulant_expansion',['../classcolvarbias__reweightaMD.html#a3663307bb449e54cce1856eda0b2d167',1,'colvarbias_reweightaMD']]],

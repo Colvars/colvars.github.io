@@ -54,5 +54,5 @@ var searchData=
   ['cvcs_51',['cvcs',['../classcolvar.html#aba4db88dd110a89da45eec3e445c7621',1,'colvar']]],
   ['cvm_5foutput_5fprefix_52',['cvm_output_prefix',['../classcolvarmodule.html#af3c31eccaea134be14ab4946cd99ae76',1,'colvarmodule']]],
   ['czar_5fgradients_53',['czar_gradients',['../classcolvarbias__abf.html#af06429076e670077da8227dd69d16393',1,'colvarbias_abf']]],
-  ['czar_5fpmf_54',['czar_pmf',['../classcolvarbias__abf.html#ac9a38ad05c63d60922e924bed2c9c79f',1,'colvarbias_abf']]]
+  ['czar_5fpmf_54',['czar_pmf',['../classcolvarbias__abf.html#a6cd3c6b47c28ba5051a2acd35c8dfeca',1,'colvarbias_abf']]]
 ];

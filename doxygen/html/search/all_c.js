@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['l2norm_0',['l2norm',['../classintegrate__potential.html#a957719415b103b4b4e79c4be0d0b364e',1,'integrate_potential']]],
+  ['l2norm_0',['l2norm',['../classcolvargrid__integrate.html#a457f407a4c5183d856f2f66c2b9dc5f5',1,'colvargrid_integrate']]],
   ['lambda_5fexp_1',['lambda_exp',['../classcolvarbias__restraint__k__moving.html#a0d5be51bb03d129a0797599bf5a0e487',1,'colvarbias_restraint_k_moving']]],
   ['lambda_5fschedule_2',['lambda_schedule',['../classcolvarbias__restraint__moving.html#a39feb62cf4f46219e6e755cc5006d583',1,'colvarbias_restraint_moving']]],
   ['length_3',['length',['../classcvm_1_1memory__stream.html#a54c2388a11aa9ec39732a21e340bb98f',1,'cvm::memory_stream']]],

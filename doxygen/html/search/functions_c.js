@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['l2norm_0',['l2norm',['../classintegrate__potential.html#a957719415b103b4b4e79c4be0d0b364e',1,'integrate_potential']]],
+  ['l2norm_0',['l2norm',['../classcolvargrid__integrate.html#a457f407a4c5183d856f2f66c2b9dc5f5',1,'colvargrid_integrate']]],
   ['length_1',['length',['../classcvm_1_1memory__stream.html#a54c2388a11aa9ec39732a21e340bb98f',1,'cvm::memory_stream']]],
   ['list_5finput_5fstream_5fnames_2',['list_input_stream_names',['../classcolvarproxy__io.html#aaa15c1f3c47a518b595a75ca0e8971e4',1,'colvarproxy_io']]],
   ['load_5fatoms_5fpdb_3',['load_atoms_pdb',['../classcolvarproxy.html#ac8d5ca72facd40b47dc3daea2c0b6891',1,'colvarproxy::load_atoms_pdb()'],['../classcolvarproxy__namd.html#a6a3369d471a70a274c28a83d6c2d20ef',1,'colvarproxy_namd::load_atoms_pdb()'],['../classcolvarproxy__vmd.html#a7eca6404d26117572cfcc2be1fac433f',1,'colvarproxy_vmd::load_atoms_pdb()']]],

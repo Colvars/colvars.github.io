@@ -12,7 +12,7 @@ var searchData=
   ['dip_9',['dip',['../classcolvarmodule_1_1atom__group.html#ac3639eb8ee46c9f50f2d3f9a46dd2ba5',1,'colvarmodule::atom_group']]],
   ['dist_5fv_10',['dist_v',['../classcolvar_1_1distance.html#a5ba17d6d1753880b9454d2605f57cf11',1,'colvar::distance::dist_v()'],['../classcolvar_1_1distance__z.html#a20bf5a25f3b2bf4abd78b667cc4f5fe9',1,'colvar::distance_z::dist_v()']]],
   ['dist_5fv_5fortho_11',['dist_v_ortho',['../classcolvar_1_1distance__xy.html#a0125d34eb0809093f5164c3b36ccc53c',1,'colvar::distance_xy']]],
-  ['divergence_12',['divergence',['../classintegrate__potential.html#a3a3de9b5c8519d8253a5ab8827150e1d',1,'integrate_potential']]],
+  ['divergence_12',['divergence',['../classcolvargrid__integrate.html#aac86081a0803007d4b7531e8fba3b162',1,'colvargrid_integrate']]],
   ['dummy_5fatom_5fpos_13',['dummy_atom_pos',['../classcolvarmodule_1_1atom__group.html#acbb5e81e339ca8ec4cbe2d77e800a318',1,'colvarmodule::atom_group']]],
   ['dump_5ffes_14',['dump_fes',['../classcolvarbias__meta.html#aef7b9224c8f7648d4b2b04a98ba6e10e',1,'colvarbias_meta']]],
   ['dump_5ffes_5fsave_15',['dump_fes_save',['../classcolvarbias__meta.html#a6677ef5fc246955636a8131477ead3b6',1,'colvarbias_meta']]],

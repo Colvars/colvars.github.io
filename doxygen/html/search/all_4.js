@@ -45,7 +45,7 @@ var searchData=
   ['distance_5fvec_42',['distance_vec',['../classcolvar_1_1distance__vec.html',1,'colvar']]],
   ['distance_5fxy_43',['distance_xy',['../classcolvar_1_1distance__xy.html',1,'colvar']]],
   ['distance_5fz_44',['distance_z',['../classcolvar_1_1distance__z.html',1,'colvar']]],
-  ['divergence_45',['divergence',['../classintegrate__potential.html#a3a3de9b5c8519d8253a5ab8827150e1d',1,'integrate_potential']]],
+  ['divergence_45',['divergence',['../classcolvargrid__integrate.html#aac86081a0803007d4b7531e8fba3b162',1,'colvargrid_integrate']]],
   ['do_5ffeature_5fside_5feffects_46',['do_feature_side_effects',['../classcolvar.html#a7020f73456c8e875356d3435dc4b480c',1,'colvar::do_feature_side_effects()'],['../classcolvarmodule_1_1atom__group.html#afaed00c1c9ba1f8cd6bc3a93b3f7923c',1,'colvarmodule::atom_group::do_feature_side_effects()'],['../classcolvardeps.html#a0febf2520e52a0939a07523fc290b742',1,'colvardeps::do_feature_side_effects()']]],
   ['docompareframedistance_47',['doCompareFrameDistance',['../structGeometricPathCV_1_1GeometricPathBase_1_1doCompareFrameDistance.html',1,'GeometricPathCV::GeometricPathBase']]],
   ['done_5freading_48',['done_reading',['../classcvm_1_1memory__stream.html#a2e54fcdd71d65192f322badd232331d5',1,'cvm::memory_stream']]],
