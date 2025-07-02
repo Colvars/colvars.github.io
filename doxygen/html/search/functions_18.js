@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['_7eatom_0',['~atom',['../classcolvarmodule_1_1atom.html#a9dc94d0a6a038e9c8b21373494013599',1,'colvarmodule::atom']]],
-  ['_7eatom_5fgroup_1',['~atom_group',['../classcolvarmodule_1_1atom__group.html#a92478dcc269c8e0d46917bc95ffd2b34',1,'colvarmodule::atom_group']]],
+  ['_7eatom_5fgroup_0',['~atom_group',['../classcvm_1_1atom__group.html#a92478dcc269c8e0d46917bc95ffd2b34',1,'cvm::atom_group']]],
+  ['_7eatom_5fmodifier_1',['~atom_modifier',['../classcvm_1_1atom__group_1_1atom__modifier.html#a76e886f73f6a4921f2b5a169f8f8ec8e',1,'cvm::atom_group::atom_modifier']]],
   ['_7ecolvar_2',['~colvar',['../classcolvar.html#acec61090f64564430e5c4ef0714b2372',1,'colvar']]],
   ['_7ecolvar_5fgrid_3',['~colvar_grid',['../classcolvar__grid.html#ac52aa10c1c678ce195c75726c26aae2e',1,'colvar_grid']]],
   ['_7ecolvar_5fgrid_5fcount_4',['~colvar_grid_count',['../classcolvar__grid__count.html#af6ce3b1ecaa1b5fa5d4062ae5b5787cb',1,'colvar_grid_count']]],
@@ -23,7 +23,7 @@ var searchData=
   ['_7ecolvarproxy_5ftcl_20',['~colvarproxy_tcl',['../classcolvarproxy__tcl.html#a46d183d4bc83aeb09752b30887bc3836',1,'colvarproxy_tcl']]],
   ['_7ecolvarproxy_5fvolmaps_21',['~colvarproxy_volmaps',['../classcolvarproxy__volmaps.html#aae88edf15708067d9482278ba60f896e',1,'colvarproxy_volmaps']]],
   ['_7ecvc_22',['~cvc',['../classcolvar_1_1cvc.html#a2c7968e6dce6fb671a52c557a748ada4',1,'colvar::cvc']]],
-  ['_7egroup_5fforce_5fobject_23',['~group_force_object',['../classcolvarmodule_1_1atom__group_1_1group__force__object.html#a274a41cbb75c7f36be1a6beb0bc5482d',1,'colvarmodule::atom_group::group_force_object']]],
+  ['_7egroup_5fforce_5fobject_23',['~group_force_object',['../classcvm_1_1atom__group_1_1group__force__object.html#a274a41cbb75c7f36be1a6beb0bc5482d',1,'cvm::atom_group::group_force_object']]],
   ['_7ehill_24',['~hill',['../classcolvarbias__meta_1_1hill.html#a579a38b44f318b0dd279f49b00ec45ca',1,'colvarbias_meta::hill']]],
   ['_7ematrix2d_25',['~matrix2d',['../classcolvarmodule_1_1matrix2d.html#a5c14ecf2b1131685fc173fe9f2c19083',1,'colvarmodule::matrix2d']]],
   ['_7erotation_26',['~rotation',['../classcolvarmodule_1_1rotation.html#a06255dfdb6442f8a109dc067f86bf5dd',1,'colvarmodule::rotation']]]

@@ -9,8 +9,8 @@ var searchData=
   ['arithmeticpathimpl_6',['ArithmeticPathImpl',['../structArithmeticPathImpl.html',1,'']]],
   ['aspath_7',['aspath',['../classcolvar_1_1aspath.html',1,'colvar']]],
   ['aspathcv_8',['aspathCV',['../classcolvar_1_1aspathCV.html',1,'colvar']]],
-  ['atom_9',['atom',['../classcolvarmodule_1_1atom.html',1,'colvarmodule']]],
-  ['atom_5fgroup_10',['atom_group',['../classcolvarmodule_1_1atom__group.html',1,'colvarmodule']]],
+  ['atom_5fgroup_9',['atom_group',['../classcvm_1_1atom__group.html',1,'cvm']]],
+  ['atom_5fmodifier_10',['atom_modifier',['../classcvm_1_1atom__group_1_1atom__modifier.html',1,'cvm::atom_group']]],
   ['azpath_11',['azpath',['../classcolvar_1_1azpath.html',1,'colvar']]],
   ['azpathcv_12',['azpathCV',['../classcolvar_1_1azpathCV.html',1,'colvar']]]
 ];

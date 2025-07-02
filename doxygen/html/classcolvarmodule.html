@@ -122,12 +122,6 @@ Collaboration diagram for colvarmodule:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom.html">atom</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores numeric id, mass and all mutable data for an atom, mostly used by a <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a>.  <a href="classcolvarmodule_1_1atom.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Group of <a class="el" href="classcolvarmodule_1_1atom.html">atom</a> objects, mostly used by a <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a> object to gather all atomic data.  <a href="classcolvarmodule_1_1atom__group.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule_1_1matrix2d.html">matrix2d</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arbitrary size array (two dimensions) suitable for linear algebra operations (i.e. for floating point numbers it can be used with library functions)  <a href="classcolvarmodule_1_1matrix2d.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,10 +163,10 @@ typedef <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a>&#160;
 <tr class="memdesc:a09096eb029040be41b5189049ac53263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atom position (different type name from rvector, to make possible future PBC-transparent implementations) <br /></td></tr>
 <tr class="separator:a09096eb029040be41b5189049ac53263"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb5c593d90631a0f325974f17c5819c1"><td class="memItemLeft" align="right" valign="top"><a id="afb5c593d90631a0f325974f17c5819c1" name="afb5c593d90631a0f325974f17c5819c1"></a>
-typedef std::vector&lt; <a class="el" href="classcolvarmodule_1_1atom.html">atom</a> &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>atom_iter</b></td></tr>
+typedef std::vector&lt; atom &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>atom_iter</b></td></tr>
 <tr class="separator:afb5c593d90631a0f325974f17c5819c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6947a029dc9f6cb47b0b3878c880a690"><td class="memItemLeft" align="right" valign="top"><a id="a6947a029dc9f6cb47b0b3878c880a690" name="a6947a029dc9f6cb47b0b3878c880a690"></a>
-typedef std::vector&lt; <a class="el" href="classcolvarmodule_1_1atom.html">atom</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>atom_const_iter</b></td></tr>
+typedef std::vector&lt; atom &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>atom_const_iter</b></td></tr>
 <tr class="separator:a6947a029dc9f6cb47b0b3878c880a690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -189,14 +183,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>version_number</b> () 
 int&#160;</td><td class="memItemRight" valign="bottom"><b>patch_version_number</b> () const</td></tr>
 <tr class="memdesc:a529361d06e70ce7081fae20eedc310a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the patch version number (non-zero in patch releases of other packages) <br /></td></tr>
 <tr class="separator:a529361d06e70ce7081fae20eedc310a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ece56309fcfb1de303e9cd0813299a7"><td class="memItemLeft" align="right" valign="top"><a id="a1ece56309fcfb1de303e9cd0813299a7" name="a1ece56309fcfb1de303e9cd0813299a7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>register_named_atom_group</b> (<a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *ag)</td></tr>
-<tr class="memdesc:a1ece56309fcfb1de303e9cd0813299a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a named atom group into named_atom_groups. <br /></td></tr>
-<tr class="separator:a1ece56309fcfb1de303e9cd0813299a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af09e174650ea1e7a824385ac9bc5f8fe"><td class="memItemLeft" align="right" valign="top"><a id="af09e174650ea1e7a824385ac9bc5f8fe" name="af09e174650ea1e7a824385ac9bc5f8fe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unregister_named_atom_group</b> (<a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *ag)</td></tr>
-<tr class="memdesc:af09e174650ea1e7a824385ac9bc5f8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a named atom group from named_atom_groups. <br /></td></tr>
-<tr class="separator:af09e174650ea1e7a824385ac9bc5f8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9696a719b54adb663278226b5c147472"><td class="memItemLeft" align="right" valign="top"><a id="a9696a719b54adb663278226b5c147472" name="a9696a719b54adb663278226b5c147472"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>register_named_atom_group_soa</b> (atom_group *ag)</td></tr>
+<tr class="separator:a9696a719b54adb663278226b5c147472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b3c1cf7d7cd2d5e440178db7bec2c00"><td class="memItemLeft" align="right" valign="top"><a id="a9b3c1cf7d7cd2d5e440178db7bec2c00" name="a9b3c1cf7d7cd2d5e440178db7bec2c00"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>unregister_named_atom_group_soa</b> (atom_group *ag)</td></tr>
+<tr class="separator:a9b3c1cf7d7cd2d5e440178db7bec2c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6dbf186f9cfd9edf6ee9b24dc88f48e"><td class="memItemLeft" align="right" valign="top"><a id="ad6dbf186f9cfd9edf6ee9b24dc88f48e" name="ad6dbf186f9cfd9edf6ee9b24dc88f48e"></a>
 std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>variables</b> ()</td></tr>
 <tr class="memdesc:ad6dbf186f9cfd9edf6ee9b24dc88f48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of collective variables. <br /></td></tr>
@@ -431,7 +423,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>reset_index_groups</b>
 <tr class="memdesc:adda084af1983057e84ffd3f098db7771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the index groups loaded so far. <br /></td></tr>
 <tr class="separator:adda084af1983057e84ffd3f098db7771"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a23d7418c48112fa995ebdc23aad774"><td class="memItemLeft" align="right" valign="top"><a id="a0a23d7418c48112fa995ebdc23aad774" name="a0a23d7418c48112fa995ebdc23aad774"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>load_coords_xyz</b> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a> &gt; *pos, <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *atoms, bool keep_open=false)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>load_coords_xyz</b> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a> &gt; *pos, atom_group *atoms, bool keep_open=false)</td></tr>
 <tr class="memdesc:a0a23d7418c48112fa995ebdc23aad774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load coordinates into an atom group from an XYZ file (assumes Angstroms) <br /></td></tr>
 <tr class="separator:a0a23d7418c48112fa995ebdc23aad774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32ae50f3bf515bfe1f4ba497496d619f"><td class="memItemLeft" align="right" valign="top"><a id="a32ae50f3bf515bfe1f4ba497496d619f" name="a32ae50f3bf515bfe1f4ba497496d619f"></a>
@@ -539,10 +531,10 @@ static <a class="el" href="classcolvarbias.html">colvarbias</a> *&#160;</td><td 
 static <a class="el" href="classcolvar.html">colvar</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>colvar_by_name</b> (std::string const &amp;name)</td></tr>
 <tr class="memdesc:af06cc62b3134a4501f64855f9bded965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a colvar by name; returns NULL if not found. <br /></td></tr>
 <tr class="separator:af06cc62b3134a4501f64855f9bded965"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e5fa6869606607b25d8f1dd1240dbfd"><td class="memItemLeft" align="right" valign="top"><a id="a6e5fa6869606607b25d8f1dd1240dbfd" name="a6e5fa6869606607b25d8f1dd1240dbfd"></a>
-static <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group_by_name</b> (std::string const &amp;name)</td></tr>
-<tr class="memdesc:a6e5fa6869606607b25d8f1dd1240dbfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a named atom group by name; returns NULL if not found. <br /></td></tr>
-<tr class="separator:a6e5fa6869606607b25d8f1dd1240dbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f2f9e65633667ec13734f9833885b5"><td class="memItemLeft" align="right" valign="top"><a id="a63f2f9e65633667ec13734f9833885b5" name="a63f2f9e65633667ec13734f9833885b5"></a>
+static atom_group *&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group_soa_by_name</b> (std::string const &amp;name)</td></tr>
+<tr class="memdesc:a63f2f9e65633667ec13734f9833885b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a named atom group by name; returns NULL if not found. <br /></td></tr>
+<tr class="separator:a63f2f9e65633667ec13734f9833885b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecbb40c45714f5e893415a48908d3e54"><td class="memItemLeft" align="right" valign="top"><a id="aecbb40c45714f5e893415a48908d3e54" name="aecbb40c45714f5e893415a48908d3e54"></a>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str</b> (char const *s)</td></tr>
 <tr class="memdesc:aecbb40c45714f5e893415a48908d3e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string for output purposes. <br /></td></tr>
@@ -673,7 +665,7 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>log_input_files
 static <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_distance</b> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">atom_pos</a> const &amp;pos2)</td></tr>
 <tr class="memdesc:a7a641df64b10a49f9b6d7167972513ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distance between two atomic positions with pbcs handled correctly. <br /></td></tr>
 <tr class="separator:a7a641df64b10a49f9b6d7167972513ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a492c7cf3807ffd60b72f9d8842559720"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a492c7cf3807ffd60b72f9d8842559720">load_coords</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a> &gt; *pos, <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *atoms, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
+<tr class="memitem:a492c7cf3807ffd60b72f9d8842559720"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#a492c7cf3807ffd60b72f9d8842559720">load_coords</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a> &gt; *pos, atom_group *atoms, std::string const &amp;pdb_field, double pdb_field_value=0.0)</td></tr>
 <tr class="memdesc:a492c7cf3807ffd60b72f9d8842559720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load coordinates for a group of atoms from a file (PDB or XYZ); if "pos" is already allocated, the number of its elements must match the number of entries in "filename".  <a href="classcolvarmodule.html#a492c7cf3807ffd60b72f9d8842559720">More...</a><br /></td></tr>
 <tr class="separator:a492c7cf3807ffd60b72f9d8842559720"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa34a255c4171f307e7306a51411b0199"><td class="memItemLeft" align="right" valign="top"><a id="aa34a255c4171f307e7306a51411b0199" name="aa34a255c4171f307e7306a51411b0199"></a>
@@ -881,10 +873,10 @@ std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt;&#160;</t
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>colvars_smp_items</b></td></tr>
 <tr class="memdesc:a4824af5f8f54ef36f0330cfc8087c8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indexes of the items to calculate for each colvar. <br /></td></tr>
 <tr class="separator:a4824af5f8f54ef36f0330cfc8087c8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bcdb9ad4bd044a43cf8cf1209375e59"><td class="memItemLeft" align="right" valign="top"><a id="a1bcdb9ad4bd044a43cf8cf1209375e59" name="a1bcdb9ad4bd044a43cf8cf1209375e59"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>named_atom_groups</b></td></tr>
-<tr class="memdesc:a1bcdb9ad4bd044a43cf8cf1209375e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of named atom groups. <br /></td></tr>
-<tr class="separator:a1bcdb9ad4bd044a43cf8cf1209375e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3209115e987bcfc79ef1fba47b3ae2c"><td class="memItemLeft" align="right" valign="top"><a id="aa3209115e987bcfc79ef1fba47b3ae2c" name="aa3209115e987bcfc79ef1fba47b3ae2c"></a>
+std::vector&lt; atom_group * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>named_atom_groups_soa</b></td></tr>
+<tr class="memdesc:aa3209115e987bcfc79ef1fba47b3ae2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of named atom groups. <br /></td></tr>
+<tr class="separator:aa3209115e987bcfc79ef1fba47b3ae2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65c40e055d0f896770be2de86b078770"><td class="memItemLeft" align="right" valign="top"><a id="a65c40e055d0f896770be2de86b078770" name="a65c40e055d0f896770be2de86b078770"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>num_biases_types_used_</b></td></tr>
 <tr class="memdesc:a65c40e055d0f896770be2de86b078770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to a map counting how many biases of each type were used. <br /></td></tr>
@@ -1107,7 +1099,7 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>log_level_</b> 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1atom__group.html">atom_group</a> *&#160;</td>
+          <td class="paramtype">atom_group *&#160;</td>
           <td class="paramname"><em>atoms</em>, </td>
         </tr>
         <tr>
@@ -1457,7 +1449,7 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>log_level_</b> 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 12 2025 16:41:17 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Jul 2 2025 21:46:21 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -166,8 +166,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>get_volmap_id</b> (int
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply_volmap_force</b> (int index, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;new_force)</td></tr>
 <tr class="memdesc:a4410425157eff0079a0797e6389fea4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request that this force is applied to the given volumetric map. <br /></td></tr>
 <tr class="separator:a4410425157eff0079a0797e6389fea4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3f5cd920c11c5ed7d30f181fb322b67"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#ac3f5cd920c11c5ed7d30f181fb322b67">compute_volmap</a> (int flags, int volmap_id, cvm::atom_iter atom_begin, cvm::atom_iter atom_end, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *value, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *atom_field)</td></tr>
-<tr class="separator:ac3f5cd920c11c5ed7d30f181fb322b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1172d3b7d359dd088bbc049649f8839b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a1172d3b7d359dd088bbc049649f8839b">compute_volmap</a> (int flags, int volmap_id, <a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *ag, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *value, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *atom_field)</td></tr>
+<tr class="memdesc:a1172d3b7d359dd088bbc049649f8839b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-weigh an atomic field (e.g. a colvar) by the value of a volumetric map.  <a href="classcolvarproxy__volmaps.html#a1172d3b7d359dd088bbc049649f8839b">More...</a><br /></td></tr>
+<tr class="separator:a1172d3b7d359dd088bbc049649f8839b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e52d28eea946aebacedc8e2109f77c3"><td class="memItemLeft" align="right" valign="top"><a id="a7e52d28eea946aebacedc8e2109f77c3" name="a7e52d28eea946aebacedc8e2109f77c3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>compute_rms_volmaps_applied_force</b> ()</td></tr>
 <tr class="memdesc:a7e52d28eea946aebacedc8e2109f77c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the root-mean-square of the applied forces. <br /></td></tr>
@@ -336,8 +337,8 @@ std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a815
 
 </div>
 </div>
-<a id="ac3f5cd920c11c5ed7d30f181fb322b67" name="ac3f5cd920c11c5ed7d30f181fb322b67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3f5cd920c11c5ed7d30f181fb322b67">&#9670;&#160;</a></span>compute_volmap()</h2>
+<a id="a1172d3b7d359dd088bbc049649f8839b" name="a1172d3b7d359dd088bbc049649f8839b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1172d3b7d359dd088bbc049649f8839b">&#9670;&#160;</a></span>compute_volmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -360,14 +361,8 @@ std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a815
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">cvm::atom_iter&#160;</td>
-          <td class="paramname"><em>atom_begin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cvm::atom_iter&#160;</td>
-          <td class="paramname"><em>atom_end</em>, </td>
+          <td class="paramtype"><a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *&#160;</td>
+          <td class="paramname"><em>ag</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -393,19 +388,20 @@ std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a815
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Re-weigh an atomic field (e.g. a colvar) by the value of a volumetric map </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Re-weigh an atomic field (e.g. a colvar) by the value of a volumetric map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">flags</td><td>Combination of flags </td></tr>
     <tr><td class="paramname">volmap_id</td><td>Numeric index of the map (no need to request it) </td></tr>
-    <tr><td class="paramname">atom_begin</td><td>Iterator pointing to first atom </td></tr>
-    <tr><td class="paramname">atom_end</td><td>Iterator pointing past the last atom </td></tr>
+    <tr><td class="paramname">ag</td><td>Pointer to the SOA atom group </td></tr>
     <tr><td class="paramname">value</td><td>Pointer to location of total to increment </td></tr>
     <tr><td class="paramname">atom_field</td><td>Array of atomic field values (if NULL, ones are used) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#a33d6d5bb6fea6cbf495fea53df78428b">colvarproxy_vmd</a>, and <a class="el" href="classcolvarproxy__namd.html#a77a35fdd060f6384f038422ddefc3318">colvarproxy_namd</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a7e95692a9f7c471c3afa4ebf0eca339a">colvarproxy_namd</a>, and <a class="el" href="classcolvarproxy__vmd.html#a95402a8eaf0c6c35fe0a0e4f2e01b6af">colvarproxy_vmd</a>.</p>
 
 </div>
 </div>
@@ -516,7 +512,7 @@ std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a815
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 12 2025 16:41:17 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Jul 2 2025 21:46:21 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

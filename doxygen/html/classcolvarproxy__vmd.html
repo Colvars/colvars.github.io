@@ -183,7 +183,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>update_atomic_properti
 <tr class="separator:ab4dbbe45b5c1abbb7bfb503330df3e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab862704b13991b12cad5bfe6442bee02"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#ab862704b13991b12cad5bfe6442bee02">run_colvar_gradient_callback</a> (std::string const &amp;name, std::vector&lt; const <a class="el" href="classcolvarvalue.html">colvarvalue</a> * &gt; const &amp;cvc_values, std::vector&lt; <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt; &amp;gradient)</td></tr>
 <tr class="separator:ab862704b13991b12cad5bfe6442bee02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eca6404d26117572cfcc2be1fac433f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a7eca6404d26117572cfcc2be1fac433f">load_atoms_pdb</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double const pdb_field_value=0.0)</td></tr>
+<tr class="memitem:a7eca6404d26117572cfcc2be1fac433f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a7eca6404d26117572cfcc2be1fac433f">load_atoms_pdb</a> (char const *filename, <a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double const pdb_field_value=0.0)</td></tr>
 <tr class="memdesc:a7eca6404d26117572cfcc2be1fac433f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a selection of atom IDs from a PDB coordinate file.  <a href="classcolvarproxy__vmd.html#a7eca6404d26117572cfcc2be1fac433f">More...</a><br /></td></tr>
 <tr class="separator:a7eca6404d26117572cfcc2be1fac433f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01127bc5dc3e5e8a663ef42d1aa8404c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a01127bc5dc3e5e8a663ef42d1aa8404c">load_coords_pdb</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;pos, const std::vector&lt; int &gt; &amp;indices, std::string const &amp;pdb_field, double const pdb_field_value=0.0)</td></tr>
@@ -211,12 +211,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>update_atomic_properti
 <tr class="memitem:ae1d45b8df0169413738aad7c4d7bf971"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#ae1d45b8df0169413738aad7c4d7bf971">clear_volmap</a> (int index)</td></tr>
 <tr class="memdesc:ae1d45b8df0169413738aad7c4d7bf971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by the CVC destructors.  <a href="classcolvarproxy__vmd.html#ae1d45b8df0169413738aad7c4d7bf971">More...</a><br /></td></tr>
 <tr class="separator:ae1d45b8df0169413738aad7c4d7bf971"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33d6d5bb6fea6cbf495fea53df78428b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a33d6d5bb6fea6cbf495fea53df78428b">compute_volmap</a> (int flags, int volmap_id, cvm::atom_iter atom_begin, cvm::atom_iter atom_end, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *value, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *atom_field)</td></tr>
-<tr class="separator:a33d6d5bb6fea6cbf495fea53df78428b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ebb997bb1e6d851f470f4086303b0dd"><td class="memTemplParams" colspan="2"><a id="a3ebb997bb1e6d851f470f4086303b0dd" name="a3ebb997bb1e6d851f470f4086303b0dd"></a>
+<tr class="memitem:a95402a8eaf0c6c35fe0a0e4f2e01b6af"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a95402a8eaf0c6c35fe0a0e4f2e01b6af">compute_volmap</a> (int flags, int volmap_id, <a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *atoms, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *value, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *atom_field)</td></tr>
+<tr class="memdesc:a95402a8eaf0c6c35fe0a0e4f2e01b6af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-weigh an atomic field (e.g. a colvar) by the value of a volumetric map.  <a href="classcolvarproxy__vmd.html#a95402a8eaf0c6c35fe0a0e4f2e01b6af">More...</a><br /></td></tr>
+<tr class="separator:a95402a8eaf0c6c35fe0a0e4f2e01b6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a094fa9fb7367f49792913d322247c208"><td class="memTemplParams" colspan="2"><a id="a094fa9fb7367f49792913d322247c208" name="a094fa9fb7367f49792913d322247c208"></a>
 template&lt;int flags&gt; </td></tr>
-<tr class="memitem:a3ebb997bb1e6d851f470f4086303b0dd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>compute_voldata</b> (VolumetricData const *voldata, cvm::atom_iter atom_begin, cvm::atom_iter atom_end, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *value, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *atom_field)</td></tr>
-<tr class="separator:a3ebb997bb1e6d851f470f4086303b0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a094fa9fb7367f49792913d322247c208"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>compute_voldata</b> (VolumetricData const *voldata, <a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *atoms, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *value, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *atom_field)</td></tr>
+<tr class="separator:a094fa9fb7367f49792913d322247c208"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1e98232beda92a308abfda8bbbcb958"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#aa1e98232beda92a308abfda8bbbcb958">get_alch_lambda</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *lambda)</td></tr>
 <tr class="memdesc:aa1e98232beda92a308abfda8bbbcb958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value of alchemical lambda parameter from back-end (stub)  <a href="classcolvarproxy__vmd.html#aa1e98232beda92a308abfda8bbbcb958">More...</a><br /></td></tr>
 <tr class="separator:aa1e98232beda92a308abfda8bbbcb958"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,7 +256,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>delete_requested</b> 
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>parse_module_config</b> ()</td></tr>
 <tr class="memdesc:a6297f06417da939bd6f4778b3b3aeeaf inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)initialize the module <br /></td></tr>
 <tr class="separator:a6297f06417da939bd6f4778b3b3aeeaf inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8d5ca72facd40b47dc3daea2c0b6891 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#ac8d5ca72facd40b47dc3daea2c0b6891">load_atoms_pdb</a> (char const *filename, <a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double pdb_field_value)</td></tr>
+<tr class="memitem:ac8d5ca72facd40b47dc3daea2c0b6891 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#ac8d5ca72facd40b47dc3daea2c0b6891">load_atoms_pdb</a> (char const *filename, <a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double pdb_field_value)</td></tr>
 <tr class="memdesc:ac8d5ca72facd40b47dc3daea2c0b6891 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a selection of atom IDs from a PDB coordinate file.  <a href="classcolvarproxy.html#ac8d5ca72facd40b47dc3daea2c0b6891">More...</a><br /></td></tr>
 <tr class="separator:ac8d5ca72facd40b47dc3daea2c0b6891 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71e6ce7cad75429c938edeec331956f8 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy.html#a71e6ce7cad75429c938edeec331956f8">load_coords_pdb</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;pos, std::vector&lt; int &gt; const &amp;sorted_ids, std::string const &amp;pdb_field, double pdb_field_value)</td></tr>
@@ -684,8 +685,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>get_volmap_id</b> (int
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply_volmap_force</b> (int index, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> const &amp;new_force)</td></tr>
 <tr class="memdesc:a4410425157eff0079a0797e6389fea4b inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request that this force is applied to the given volumetric map. <br /></td></tr>
 <tr class="separator:a4410425157eff0079a0797e6389fea4b inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3f5cd920c11c5ed7d30f181fb322b67 inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#ac3f5cd920c11c5ed7d30f181fb322b67">compute_volmap</a> (int flags, int volmap_id, cvm::atom_iter atom_begin, cvm::atom_iter atom_end, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *value, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *atom_field)</td></tr>
-<tr class="separator:ac3f5cd920c11c5ed7d30f181fb322b67 inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1172d3b7d359dd088bbc049649f8839b inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a1172d3b7d359dd088bbc049649f8839b">compute_volmap</a> (int flags, int volmap_id, <a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *ag, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *value, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *atom_field)</td></tr>
+<tr class="memdesc:a1172d3b7d359dd088bbc049649f8839b inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-weigh an atomic field (e.g. a colvar) by the value of a volumetric map.  <a href="classcolvarproxy__volmaps.html#a1172d3b7d359dd088bbc049649f8839b">More...</a><br /></td></tr>
+<tr class="separator:a1172d3b7d359dd088bbc049649f8839b inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e52d28eea946aebacedc8e2109f77c3 inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a7e52d28eea946aebacedc8e2109f77c3" name="a7e52d28eea946aebacedc8e2109f77c3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>compute_rms_volmaps_applied_force</b> ()</td></tr>
 <tr class="memdesc:a7e52d28eea946aebacedc8e2109f77c3 inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the root-mean-square of the applied forces. <br /></td></tr>
@@ -1586,8 +1588,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 
 </div>
 </div>
-<a id="a33d6d5bb6fea6cbf495fea53df78428b" name="a33d6d5bb6fea6cbf495fea53df78428b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33d6d5bb6fea6cbf495fea53df78428b">&#9670;&#160;</a></span>compute_volmap()</h2>
+<a id="a95402a8eaf0c6c35fe0a0e4f2e01b6af" name="a95402a8eaf0c6c35fe0a0e4f2e01b6af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95402a8eaf0c6c35fe0a0e4f2e01b6af">&#9670;&#160;</a></span>compute_volmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1610,14 +1612,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">cvm::atom_iter&#160;</td>
-          <td class="paramname"><em>atom_begin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cvm::atom_iter&#160;</td>
-          <td class="paramname"><em>atom_end</em>, </td>
+          <td class="paramtype"><a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *&#160;</td>
+          <td class="paramname"><em>ag</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1643,19 +1639,20 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Re-weigh an atomic field (e.g. a colvar) by the value of a volumetric map </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Re-weigh an atomic field (e.g. a colvar) by the value of a volumetric map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">flags</td><td>Combination of flags </td></tr>
     <tr><td class="paramname">volmap_id</td><td>Numeric index of the map (no need to request it) </td></tr>
-    <tr><td class="paramname">atom_begin</td><td>Iterator pointing to first atom </td></tr>
-    <tr><td class="paramname">atom_end</td><td>Iterator pointing past the last atom </td></tr>
+    <tr><td class="paramname">ag</td><td>Pointer to the SOA atom group </td></tr>
     <tr><td class="paramname">value</td><td>Pointer to location of total to increment </td></tr>
     <tr><td class="paramname">atom_field</td><td>Array of atomic field values (if NULL, ones are used) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classcolvarproxy__volmaps.html#ac3f5cd920c11c5ed7d30f181fb322b67">colvarproxy_volmaps</a>.</p>
+<p>Reimplemented from <a class="el" href="classcolvarproxy__volmaps.html#a1172d3b7d359dd088bbc049649f8839b">colvarproxy_volmaps</a>.</p>
 
 </div>
 </div>
@@ -1969,7 +1966,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> &amp;&#160;</td>
           <td class="paramname"><em>atoms</em>, </td>
         </tr>
         <tr>
@@ -2480,7 +2477,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 12 2025 16:41:17 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Jul 2 2025 21:46:21 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -4,7 +4,7 @@ var searchData=
   ['kcal_5fmol_5fvalue_5f_1',['kcal_mol_value_',['../classcolvarproxy__system.html#a8f9e4ec6fa2fa061cee42a27a030ccb6',1,'colvarproxy_system']]],
   ['keep_5fhills_2',['keep_hills',['../classcolvarbias__meta.html#a4d8cf0fb72781af77ed7bc94ad65b096',1,'colvarbias_meta']]],
   ['kernel_3',['kernel',['../structcolvarbias__opes_1_1kernel.html',1,'colvarbias_opes']]],
-  ['key_4',['key',['../classcolvarmodule_1_1atom__group.html#a329a4a86cd59e5617727349662bd965d',1,'colvarmodule::atom_group::key()'],['../classcolvarparse_1_1read__block.html#a2051f52dd884dd01a4dfff4033b0019e',1,'colvarparse::read_block::key()']]],
+  ['key_4',['key',['../classcvm_1_1atom__group.html#a16faada855583f6e71cf53109adec550',1,'cvm::atom_group::key()'],['../classcolvarparse_1_1read__block.html#a2051f52dd884dd01a4dfff4033b0019e',1,'colvarparse::read_block::key()']]],
   ['key_5falready_5fset_5',['key_already_set',['../classcolvarparse.html#a104aa8ec90de73c706b958159eac8dc8',1,'colvarparse']]],
   ['key_5flookup_6',['key_lookup',['../classcolvarparse.html#a1360f692811beef726ef42cd0f9d8a7c',1,'colvarparse']]],
   ['key_5fset_5fmode_7',['key_set_mode',['../classcolvarparse.html#a43cd0db6d3985cf207042e74e7e95c52',1,'colvarparse']]],

@@ -254,7 +254,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>debug_gradien
 <tr class="memdesc:a0771f660497d6f40559cf991204dfbe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap value (for periodic/symmetric cvcs)  <a href="classcolvar_1_1cvc.html#a0771f660497d6f40559cf991204dfbe6">More...</a><br /></td></tr>
 <tr class="separator:a0771f660497d6f40559cf991204dfbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb2a4829b2f971e9044fa4d9e703688"><td class="memItemLeft" align="right" valign="top"><a id="aafb2a4829b2f971e9044fa4d9e703688" name="aafb2a4829b2f971e9044fa4d9e703688"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>register_atom_group</b> (<a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> *ag)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>register_atom_group</b> (<a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *ag)</td></tr>
 <tr class="memdesc:aafb2a4829b2f971e9044fa4d9e703688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a pointer to new atom group, and list as child for dependencies. <br /></td></tr>
 <tr class="separator:aafb2a4829b2f971e9044fa4d9e703688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45e02ee52f68f85dd9af82d29243959a"><td class="memItemLeft" align="right" valign="top"><a id="a45e02ee52f68f85dd9af82d29243959a" name="a45e02ee52f68f85dd9af82d29243959a"></a>
@@ -542,7 +542,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>sup_np</b> = 1</td></t
 <tr class="memdesc:a8e80a452daebc3d69f0db6f72635b431"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the component is periodic, wrap around this value (default: 0.0) <br /></td></tr>
 <tr class="separator:a8e80a452daebc3d69f0db6f72635b431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae91dd987bde95bcfdd3cb5e0d06339f4"><td class="memItemLeft" align="right" valign="top"><a id="ae91dd987bde95bcfdd3cb5e0d06339f4" name="ae91dd987bde95bcfdd3cb5e0d06339f4"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atom_groups</b></td></tr>
+std::vector&lt; <a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atom_groups</b></td></tr>
 <tr class="memdesc:ae91dd987bde95bcfdd3cb5e0d06339f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointers to all atom groups, to let colvars collect info e.g. atomic gradients. <br /></td></tr>
 <tr class="separator:ae91dd987bde95bcfdd3cb5e0d06339f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a899476155ced1bd8ea8dcdddd361ef42"><td class="memItemLeft" align="right" valign="top"><a id="a899476155ced1bd8ea8dcdddd361ef42" name="a899476155ced1bd8ea8dcdddd361ef42"></a>
@@ -565,7 +565,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>update_description</b>
 <tr class="memdesc:a6e80780c42307a915d0854618af5c9e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the description string based on name and type. <br /></td></tr>
 <tr class="separator:a6e80780c42307a915d0854618af5c9e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af06d108e67f65aa1506471e971271ae7"><td class="memItemLeft" align="right" valign="top"><a id="af06d108e67f65aa1506471e971271ae7" name="af06d108e67f65aa1506471e971271ae7"></a>
-<a class="el" href="classcolvarmodule_1_1atom__group.html">cvm::atom_group</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parse_group</b> (std::string const &amp;conf, char const *group_key, bool optional=false)</td></tr>
+<a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parse_group</b> (std::string const &amp;conf, char const *group_key, bool optional=false)</td></tr>
 <tr class="memdesc:af06d108e67f65aa1506471e971271ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a group definition. <br /></td></tr>
 <tr class="separator:af06d108e67f65aa1506471e971271ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a054dc35403ddc6839562eda358d62950"><td class="memItemLeft" align="right" valign="top"><a id="a054dc35403ddc6839562eda358d62950" name="a054dc35403ddc6839562eda358d62950"></a>
@@ -924,7 +924,7 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 <p >No restriction is set to what kind of calculation a <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a> object performs (usually an analytical function of atomic coordinates). The only constraints are that: </p><dl class="section user"><dt></dt><dd></dd></dl>
 <ul>
 <li>The value is calculated by the <a class="el" href="classcolvar_1_1cvc.html#a94c7ad776b079668644d057d67dfbd74">calc_value()</a> method, and is an object of <a class="el" href="classcolvarvalue.html">colvarvalue</a> class. This provides a transparent way to treat scalar and non-scalar variables alike, and allows an automatic selection of the applicable algorithms.</li>
-<li>The object provides an implementation <a class="el" href="classcolvar_1_1cvc.html#af285602bab26ce5d535301cbffc8fe71">apply_force()</a> to apply forces to atoms. Typically, one or more <a class="el" href="classcolvarmodule_1_1atom__group.html">colvarmodule::atom_group</a> objects are used, but this is not a requirement for as long as the <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a> object communicates with the simulation program.</li>
+<li>The object provides an implementation <a class="el" href="classcolvar_1_1cvc.html#af285602bab26ce5d535301cbffc8fe71">apply_force()</a> to apply forces to atoms. Typically, one or more <a class="el" href="">or  colvarmodule::atom_group </a> objects are used, but this is not a requirement for as long as the <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a> object communicates with the simulation program.</li>
 </ul>
 <p ><b> If you wish to implement a new collective variable component, you should write your own class by inheriting directly from <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a>, or one of its derived classes (for instance, <a class="el" href="classcolvar_1_1distance.html">colvar::distance</a> is frequently used, because it provides useful data and function members for any colvar based on two atom groups).</b></p>
 <p >The steps are: </p><dl class="section user"><dt></dt><dd><ol type="1">
@@ -1481,7 +1481,7 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 12 2025 16:41:17 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Jul 2 2025 21:46:21 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
