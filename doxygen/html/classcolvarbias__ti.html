@@ -231,6 +231,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>analyze</b> (
 <tr class="memitem:abf62dca4abfd96c84d6f132776f71201 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#abf62dca4abfd96c84d6f132776f71201">init</a> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:abf62dca4abfd96c84d6f132776f71201 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse config string and (re)initialize.  <a href="classcolvarbias.html#abf62dca4abfd96c84d6f132776f71201">More...</a><br /></td></tr>
 <tr class="separator:abf62dca4abfd96c84d6f132776f71201 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36613da45eb2bb8a280c216121a35dec inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a id="a36613da45eb2bb8a280c216121a35dec" name="a36613da45eb2bb8a280c216121a35dec"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>init_mts</b> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a36613da45eb2bb8a280c216121a35dec inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize multiple-time-stepping options. <br /></td></tr>
+<tr class="separator:a36613da45eb2bb8a280c216121a35dec inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02f0c93f2d4c32616aae3a1a9e7157bd inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a02f0c93f2d4c32616aae3a1a9e7157bd">init_dependencies</a> ()</td></tr>
 <tr class="memdesc:a02f0c93f2d4c32616aae3a1a9e7157bd inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize dependency tree.  <a href="classcolvarbias.html#a02f0c93f2d4c32616aae3a1a9e7157bd">More...</a><br /></td></tr>
 <tr class="separator:a02f0c93f2d4c32616aae3a1a9e7157bd inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -662,7 +666,7 @@ std::map&lt; std::string, <a class="el" href="classcolvarvalue.html">colvarvalue
 <tr class="memdesc:a66393bba85cc0c0bab029ac5bc48b5af inherit pro_attribs_classcolvarparams"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivatives of the object with respect to internal parameters. <br /></td></tr>
 <tr class="separator:a66393bba85cc0c0bab029ac5bc48b5af inherit pro_attribs_classcolvarparams"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvardeps"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvardeps')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvardeps.html">colvardeps</a></td></tr>
-<tr class="memitem:af9fca6cfc343e41910514d00fcbc772a inherit pro_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#af9fca6cfc343e41910514d00fcbc772a">time_step_factor</a></td></tr>
+<tr class="memitem:af9fca6cfc343e41910514d00fcbc772a inherit pro_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#af9fca6cfc343e41910514d00fcbc772a">time_step_factor</a> = 1</td></tr>
 <tr class="separator:af9fca6cfc343e41910514d00fcbc772a inherit pro_attribs_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc849741d178135bfbb193077a83b722 inherit pro_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a id="adc849741d178135bfbb193077a83b722" name="adc849741d178135bfbb193077a83b722"></a>
 std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">feature_state</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>feature_states</b></td></tr>
@@ -997,7 +1001,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#a773a0adb49e85c629940ce8049058f3f">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#a99e3735ab7ed7fc5d3f1397066b0eeca">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__meta.html#a506fd8d47227a253016b64cffdfaa759">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__restraint.html#a892e3a2d0bc92e0e5a3349bf9abc8837">colvarbias_restraint</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#a99e3735ab7ed7fc5d3f1397066b0eeca">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a892e3a2d0bc92e0e5a3349bf9abc8837">colvarbias_restraint</a>, and <a class="el" href="classcolvarbias__meta.html#a01e3e6d374c25299aca21d9f70dfcf36">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1029,7 +1033,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#abf62dca4abfd96c84d6f132776f71201">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#aeb7a012cab504ec8ec4e5216ee91703f">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__meta.html#a4d0f1a67ba7ea635993fd7448faedada">colvarbias_meta</a>, <a class="el" href="classcolvarbias__restraint.html#a8fa0c731265dfd908e42aa315d558bc2">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers.html#a2607d669764ffa878154595aba8f1d33">colvarbias_restraint_centers</a>, <a class="el" href="classcolvarbias__restraint__k.html#a1eb479f6092769df184487723512bb12">colvarbias_restraint_k</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#a7a94a65111eec72ba834bfacc5a0975f">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a7e4712743785be469bdffcca0ef58128">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a6d4c45b66c1958e98665f652c3d05122">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#abce3884a61c6e303328815ba01cd270d">colvarbias_restraint_harmonic_walls</a>, and <a class="el" href="classcolvarbias__restraint__linear.html#ac8bdf18cc52cafbfe1329e4d1a812ddf">colvarbias_restraint_linear</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#aeb7a012cab504ec8ec4e5216ee91703f">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a8fa0c731265dfd908e42aa315d558bc2">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers.html#a2607d669764ffa878154595aba8f1d33">colvarbias_restraint_centers</a>, <a class="el" href="classcolvarbias__restraint__k.html#a1eb479f6092769df184487723512bb12">colvarbias_restraint_k</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#a7a94a65111eec72ba834bfacc5a0975f">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a7e4712743785be469bdffcca0ef58128">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a6d4c45b66c1958e98665f652c3d05122">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#abce3884a61c6e303328815ba01cd270d">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__linear.html#ac8bdf18cc52cafbfe1329e4d1a812ddf">colvarbias_restraint_linear</a>, and <a class="el" href="classcolvarbias__meta.html#abe229384167e12b115e1985ca855596e">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1065,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#a57c1ea056b83c525d798de7791bc0a6c">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#ac3a32885598f3e86ecee2f4452250e40">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a538371fe9746e39d76213c3e3b3c4a68">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1093,7 +1097,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#a31e7ccd7bb076989782f20a31ce5579e">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a5275a102fce2df893d8f5d8767a268ab">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#ac84386eebe4d8706178ce4ce7035b6bc">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1125,7 +1129,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#a03ae30bb5ef52cd3f719f300ac57a581">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#ad77f3c22b55e592ed8c589bb037a2df3">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a15c927ddf9b7bb6201e818f470c25d55">colvarbias_restraint</a>, and <a class="el" href="classcolvarbias__meta.html#acb897cbfd880129e626d3d7f73f0fafa">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#ad77f3c22b55e592ed8c589bb037a2df3">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a15c927ddf9b7bb6201e818f470c25d55">colvarbias_restraint</a>, and <a class="el" href="classcolvarbias__meta.html#a1011a7271071dc3f8297ee134819e7a3">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1155,7 +1159,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#af09b6980caa98d0a2c3e3c14f7f1a763">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#a2159a5036772492d201bd075c096f3a6">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__meta.html#a123bb2eca444be312ce66757b3a21e1b">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__restraint.html#a770d8d2aa235a6bba2f0ef12db47eb49">colvarbias_restraint</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#a2159a5036772492d201bd075c096f3a6">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a770d8d2aa235a6bba2f0ef12db47eb49">colvarbias_restraint</a>, and <a class="el" href="classcolvarbias__meta.html#a5f28948d2c16fac54ff8fab003bbb6ea">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1213,7 +1217,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#a7ce9c4ec280ce97760174e3f5554244d">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a316fb301b48bd6ae483c62d15ef7903c">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a0ad69b09fb5e3fc2668e15c4182b5fdd">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1245,7 +1249,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#a7a2fe24312185f856b6e9dcccac14d56">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a3b92560cfa00ea93616b0a437847f33e">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#adaab48360b0da73d9562c43e5dae2b77">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1281,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#a27378f6aa84918d2c5396cf164fee665">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a3a926ac1976c284bbf0f8cf58adf5904">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a76ca6df52dd52b1a44324ab20e63ea02">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1312,7 +1316,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 2 2025 21:46:21 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Jul 30 2025 10:32:01 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

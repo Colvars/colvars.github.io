@@ -205,6 +205,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>analyze</b> (
 <tr class="memitem:abf62dca4abfd96c84d6f132776f71201"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#abf62dca4abfd96c84d6f132776f71201">init</a> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:abf62dca4abfd96c84d6f132776f71201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse config string and (re)initialize.  <a href="classcolvarbias.html#abf62dca4abfd96c84d6f132776f71201">More...</a><br /></td></tr>
 <tr class="separator:abf62dca4abfd96c84d6f132776f71201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36613da45eb2bb8a280c216121a35dec"><td class="memItemLeft" align="right" valign="top"><a id="a36613da45eb2bb8a280c216121a35dec" name="a36613da45eb2bb8a280c216121a35dec"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>init_mts</b> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a36613da45eb2bb8a280c216121a35dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize multiple-time-stepping options. <br /></td></tr>
+<tr class="separator:a36613da45eb2bb8a280c216121a35dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02f0c93f2d4c32616aae3a1a9e7157bd"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a02f0c93f2d4c32616aae3a1a9e7157bd">init_dependencies</a> ()</td></tr>
 <tr class="memdesc:a02f0c93f2d4c32616aae3a1a9e7157bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize dependency tree.  <a href="classcolvarbias.html#a02f0c93f2d4c32616aae3a1a9e7157bd">More...</a><br /></td></tr>
 <tr class="separator:a02f0c93f2d4c32616aae3a1a9e7157bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -684,7 +688,7 @@ std::map&lt; std::string, <a class="el" href="classcolvarvalue.html">colvarvalue
 <tr class="memdesc:a66393bba85cc0c0bab029ac5bc48b5af inherit pro_attribs_classcolvarparams"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivatives of the object with respect to internal parameters. <br /></td></tr>
 <tr class="separator:a66393bba85cc0c0bab029ac5bc48b5af inherit pro_attribs_classcolvarparams"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvardeps"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvardeps')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvardeps.html">colvardeps</a></td></tr>
-<tr class="memitem:af9fca6cfc343e41910514d00fcbc772a inherit pro_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#af9fca6cfc343e41910514d00fcbc772a">time_step_factor</a></td></tr>
+<tr class="memitem:af9fca6cfc343e41910514d00fcbc772a inherit pro_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#af9fca6cfc343e41910514d00fcbc772a">time_step_factor</a> = 1</td></tr>
 <tr class="separator:af9fca6cfc343e41910514d00fcbc772a inherit pro_attribs_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc849741d178135bfbb193077a83b722 inherit pro_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a id="adc849741d178135bfbb193077a83b722" name="adc849741d178135bfbb193077a83b722"></a>
 std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">feature_state</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>feature_states</b></td></tr>
@@ -1032,7 +1036,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 </div><div class="memdoc">
 <p >Compute the energy of the bias Uses the vector of colvar values provided if not NULL, and the values currently cached in the bias instance otherwise </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#ab529ece7ef6aa728d7baf860e67af9d4">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__abf.html#aff9b397defaeba83fa11a41a8f1a1212">colvarbias_abf</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abf.html#aff9b397defaeba83fa11a41a8f1a1212">colvarbias_abf</a>, and <a class="el" href="classcolvarbias__meta.html#a281c3d2ace941e5d8ac1b7cb03b7ea5f">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1065,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 </div><div class="memdoc">
 <p >Compute the forces due to the bias Uses the vector of colvar values provided if not NULL, and the values currently cached in the bias instance otherwise </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a237d8caf25da2293be97ff989e56601b">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a53254bfb833da74cd13d427929d8ea60">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1146,7 +1150,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Delete only the allocatable data (save memory) </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a515082422d28efcd4967870284e72c77">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a0fe0b8a332de2845444748241759362e">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1263,7 +1267,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Write the values of specific mutable properties to a string. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a3d6dbd3e7e63507a7120e849058f43a2">colvarbias_ti</a>, <a class="el" href="classcolvarbias__abmd.html#a99e3735ab7ed7fc5d3f1397066b0eeca">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#aec1ad2f38e833f18b084104e6c9e6dd0">colvarbias_alb</a>, <a class="el" href="classcolvarbias__meta.html#a506fd8d47227a253016b64cffdfaa759">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__restraint.html#a892e3a2d0bc92e0e5a3349bf9abc8837">colvarbias_restraint</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a3d6dbd3e7e63507a7120e849058f43a2">colvarbias_ti</a>, <a class="el" href="classcolvarbias__abmd.html#a99e3735ab7ed7fc5d3f1397066b0eeca">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#aec1ad2f38e833f18b084104e6c9e6dd0">colvarbias_alb</a>, <a class="el" href="classcolvarbias__restraint.html#a892e3a2d0bc92e0e5a3349bf9abc8837">colvarbias_restraint</a>, and <a class="el" href="classcolvarbias__meta.html#a01e3e6d374c25299aca21d9f70dfcf36">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1293,7 +1297,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Parse config string and (re)initialize. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a9d215940c73715095ff216a04823411c">colvarbias_ti</a>, <a class="el" href="classcolvarbias__abmd.html#aeb7a012cab504ec8ec4e5216ee91703f">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#a27ecef3454c67ec800d8631372e2e888">colvarbias_alb</a>, <a class="el" href="classcolvarbias__histogram.html#a70df1b65dcee3f4a11e1ec295c85e2ea">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__meta.html#a4d0f1a67ba7ea635993fd7448faedada">colvarbias_meta</a>, <a class="el" href="classcolvarbias__restraint.html#a8fa0c731265dfd908e42aa315d558bc2">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers.html#a2607d669764ffa878154595aba8f1d33">colvarbias_restraint_centers</a>, <a class="el" href="classcolvarbias__restraint__k.html#a1eb479f6092769df184487723512bb12">colvarbias_restraint_k</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#a7a94a65111eec72ba834bfacc5a0975f">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a7e4712743785be469bdffcca0ef58128">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a6d4c45b66c1958e98665f652c3d05122">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#abce3884a61c6e303328815ba01cd270d">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__linear.html#ac8bdf18cc52cafbfe1329e4d1a812ddf">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarbias__restraint__histogram.html#a0d7b452fcba326e7ebe105622cdf9806">colvarbias_restraint_histogram</a>, <a class="el" href="classcolvarbias__abf.html#a0ecfc0993a32dbd855dd977d8052e131">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#aa731d12f3027dd6393a4143d92a25147">colvarbias_reweightaMD</a>, and <a class="el" href="classcolvarbias__opes.html#a16de6646980c6ab8bfda67563279fab9">colvarbias_opes</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a9d215940c73715095ff216a04823411c">colvarbias_ti</a>, <a class="el" href="classcolvarbias__abmd.html#aeb7a012cab504ec8ec4e5216ee91703f">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#a27ecef3454c67ec800d8631372e2e888">colvarbias_alb</a>, <a class="el" href="classcolvarbias__histogram.html#a70df1b65dcee3f4a11e1ec295c85e2ea">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__restraint.html#a8fa0c731265dfd908e42aa315d558bc2">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers.html#a2607d669764ffa878154595aba8f1d33">colvarbias_restraint_centers</a>, <a class="el" href="classcolvarbias__restraint__k.html#a1eb479f6092769df184487723512bb12">colvarbias_restraint_k</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#a7a94a65111eec72ba834bfacc5a0975f">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a7e4712743785be469bdffcca0ef58128">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a6d4c45b66c1958e98665f652c3d05122">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#abce3884a61c6e303328815ba01cd270d">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__linear.html#ac8bdf18cc52cafbfe1329e4d1a812ddf">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarbias__restraint__histogram.html#a0d7b452fcba326e7ebe105622cdf9806">colvarbias_restraint_histogram</a>, <a class="el" href="classcolvarbias__abf.html#a0ecfc0993a32dbd855dd977d8052e131">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#aa731d12f3027dd6393a4143d92a25147">colvarbias_reweightaMD</a>, <a class="el" href="classcolvarbias__meta.html#abe229384167e12b115e1985ca855596e">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__opes.html#a16de6646980c6ab8bfda67563279fab9">colvarbias_opes</a>.</p>
 
 </div>
 </div>
@@ -1409,7 +1413,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Read all mutable data not already set by <a class="el" href="classcolvarbias.html#a03ae30bb5ef52cd3f719f300ac57a581" title="Read the values of specific mutable properties from a string.">set_state_params()</a> from an unformatted stream. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#ab9d29fdcd1659930d22a08fa95ebf2f7">colvarbias_ti</a>, <a class="el" href="classcolvarbias__histogram.html#a266e9ea2a68114ccc0c8a7dd174f32a2">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__meta.html#ac3a32885598f3e86ecee2f4452250e40">colvarbias_meta</a>, <a class="el" href="classcolvarbias__abf.html#a3ea5c80dff5de6ae4647a75ca832d786">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#ae8219b561d5497bc7398fcd35654405a">colvarbias_reweightaMD</a>, and <a class="el" href="classcolvarbias__opes.html#ad86d58f43f1834b60f725d0b8f076c3e">colvarbias_opes</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#ab9d29fdcd1659930d22a08fa95ebf2f7">colvarbias_ti</a>, <a class="el" href="classcolvarbias__histogram.html#a266e9ea2a68114ccc0c8a7dd174f32a2">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__abf.html#a3ea5c80dff5de6ae4647a75ca832d786">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#ae8219b561d5497bc7398fcd35654405a">colvarbias_reweightaMD</a>, <a class="el" href="classcolvarbias__meta.html#a538371fe9746e39d76213c3e3b3c4a68">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__opes.html#ad86d58f43f1834b60f725d0b8f076c3e">colvarbias_opes</a>.</p>
 
 </div>
 </div>
@@ -1439,7 +1443,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Read all mutable data not already set by <a class="el" href="classcolvarbias.html#a03ae30bb5ef52cd3f719f300ac57a581" title="Read the values of specific mutable properties from a string.">set_state_params()</a> from a formatted stream. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a50e23655d59aba79c374893ebc600b22">colvarbias_ti</a>, <a class="el" href="classcolvarbias__histogram.html#a4a1fe1beaaacf9b2dc972a1cee26a95b">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__meta.html#a5275a102fce2df893d8f5d8767a268ab">colvarbias_meta</a>, <a class="el" href="classcolvarbias__abf.html#ac9366deef1f3492ac2eebd48b083e93f">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#af7d5fa7d90435cea974eb3fa3fea5194">colvarbias_reweightaMD</a>, and <a class="el" href="classcolvarbias__opes.html#a1b4b0a84de5b8a490f70c9e93e61f704">colvarbias_opes</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a50e23655d59aba79c374893ebc600b22">colvarbias_ti</a>, <a class="el" href="classcolvarbias__histogram.html#a4a1fe1beaaacf9b2dc972a1cee26a95b">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__abf.html#ac9366deef1f3492ac2eebd48b083e93f">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#af7d5fa7d90435cea974eb3fa3fea5194">colvarbias_reweightaMD</a>, <a class="el" href="classcolvarbias__meta.html#ac84386eebe4d8706178ce4ce7035b6bc">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__opes.html#a1b4b0a84de5b8a490f70c9e93e61f704">colvarbias_opes</a>.</p>
 
 </div>
 </div>
@@ -1583,7 +1587,7 @@ template&lt;typename IST &gt; </div>
 
 <p>Report the frequency at which this bias needs to communicate with replicas. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#aa10955c8620d9548bc4db2df1e274e98">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__abf.html#a344fdf78b10cf14004e02cd02fefcf77">colvarbias_abf</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abf.html#a344fdf78b10cf14004e02cd02fefcf77">colvarbias_abf</a>, and <a class="el" href="classcolvarbias__meta.html#a6fbd7f9b4e2feeef197c4ccae6b9d765">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1613,7 +1617,7 @@ template&lt;typename IST &gt; </div>
 
 <p>Read the values of specific mutable properties from a string. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#ad77f3c22b55e592ed8c589bb037a2df3">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#a4986dbcbaf5bd96d036a7fd41faf04e2">colvarbias_alb</a>, <a class="el" href="classcolvarbias__restraint.html#a15c927ddf9b7bb6201e818f470c25d55">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__ti.html#ad1598673956ec1b04ac46fc2d142d7c2">colvarbias_ti</a>, and <a class="el" href="classcolvarbias__meta.html#acb897cbfd880129e626d3d7f73f0fafa">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#ad77f3c22b55e592ed8c589bb037a2df3">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#a4986dbcbaf5bd96d036a7fd41faf04e2">colvarbias_alb</a>, <a class="el" href="classcolvarbias__restraint.html#a15c927ddf9b7bb6201e818f470c25d55">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__ti.html#ad1598673956ec1b04ac46fc2d142d7c2">colvarbias_ti</a>, and <a class="el" href="classcolvarbias__meta.html#a1011a7271071dc3f8297ee134819e7a3">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1642,7 +1646,7 @@ template&lt;typename IST &gt; </div>
 
 <p>(Re)initialize the output files (does not write them yet) </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a6bfa77ca40b177ede3ce5e662a6ca11a">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a6ea7683d6f282cf2c7417d6f07364467">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1670,7 +1674,7 @@ template&lt;typename IST &gt; </div>
 </div><div class="memdoc">
 <p >Retrieve colvar values and calculate their biasing forces Some implementations may use <a class="el" href="classcolvarbias.html#a12d9b7bfcdd0fe2448782b3aed655269">calc_energy()</a> and <a class="el" href="classcolvarbias.html#a3ba47c847088a8ce4adf287b0c2c627e">calc_forces()</a> </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a5ca99eeb18a287442f349951ac95403c">colvarbias_ti</a>, <a class="el" href="classcolvarbias__abmd.html#a2159a5036772492d201bd075c096f3a6">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#a557ae8b7f2b90c20784ffb915f9f8652">colvarbias_alb</a>, <a class="el" href="classcolvarbias__histogram.html#a23d83572981df634ef1d8f2660713c34">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__meta.html#a123bb2eca444be312ce66757b3a21e1b">colvarbias_meta</a>, <a class="el" href="classcolvarbias__restraint.html#a770d8d2aa235a6bba2f0ef12db47eb49">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__histogram.html#a845cdacadf31c571da8d68641846f31a">colvarbias_restraint_histogram</a>, <a class="el" href="classcolvarbias__abf.html#aa40f90ae5a6624c2f10da9c71e4688ac">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#ae3e97ad39f84fb5039188ced0d3cf311">colvarbias_reweightaMD</a>, and <a class="el" href="classcolvarbias__opes.html#ab03a7d8aeab6e9fb3faf6c45147fdb42">colvarbias_opes</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a5ca99eeb18a287442f349951ac95403c">colvarbias_ti</a>, <a class="el" href="classcolvarbias__abmd.html#a2159a5036772492d201bd075c096f3a6">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#a557ae8b7f2b90c20784ffb915f9f8652">colvarbias_alb</a>, <a class="el" href="classcolvarbias__histogram.html#a23d83572981df634ef1d8f2660713c34">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__restraint.html#a770d8d2aa235a6bba2f0ef12db47eb49">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__histogram.html#a845cdacadf31c571da8d68641846f31a">colvarbias_restraint_histogram</a>, <a class="el" href="classcolvarbias__abf.html#aa40f90ae5a6624c2f10da9c71e4688ac">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#ae3e97ad39f84fb5039188ced0d3cf311">colvarbias_reweightaMD</a>, <a class="el" href="classcolvarbias__meta.html#a5f28948d2c16fac54ff8fab003bbb6ea">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__opes.html#ab03a7d8aeab6e9fb3faf6c45147fdb42">colvarbias_opes</a>.</p>
 
 </div>
 </div>
@@ -1699,7 +1703,7 @@ template&lt;typename IST &gt; </div>
 
 <p>Write any output files that this bias may have (e.g. PMF files) </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a661d8adf76ac5172304b3c54ec6e36ac">colvarbias_ti</a>, <a class="el" href="classcolvarbias__histogram.html#a72a130b78dbc9ffc5c3c2a59d72f04f2">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__meta.html#a316fb301b48bd6ae483c62d15ef7903c">colvarbias_meta</a>, <a class="el" href="classcolvarbias__restraint__histogram.html#ad9bc3c80538dd3d84fd59f870ced8f4a">colvarbias_restraint_histogram</a>, <a class="el" href="classcolvarbias__abf.html#accd749b34f4015d4e8f4cd86933a657a">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#a8d22fd2a187aafe92f5a1b1c6d9e785c">colvarbias_reweightaMD</a>, and <a class="el" href="classcolvarbias__opes.html#a6c158e2522c430855558ac9b00de6d86">colvarbias_opes</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a661d8adf76ac5172304b3c54ec6e36ac">colvarbias_ti</a>, <a class="el" href="classcolvarbias__histogram.html#a72a130b78dbc9ffc5c3c2a59d72f04f2">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__restraint__histogram.html#ad9bc3c80538dd3d84fd59f870ced8f4a">colvarbias_restraint_histogram</a>, <a class="el" href="classcolvarbias__abf.html#accd749b34f4015d4e8f4cd86933a657a">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#a8d22fd2a187aafe92f5a1b1c6d9e785c">colvarbias_reweightaMD</a>, <a class="el" href="classcolvarbias__meta.html#a0ad69b09fb5e3fc2668e15c4182b5fdd">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__opes.html#a6c158e2522c430855558ac9b00de6d86">colvarbias_opes</a>.</p>
 
 </div>
 </div>
@@ -1729,7 +1733,7 @@ template&lt;typename IST &gt; </div>
 
 <p>Write all mutable data not already written by <a class="el" href="classcolvarbias.html#a773a0adb49e85c629940ce8049058f3f" title="Write the values of specific mutable properties to a string.">get_state_params()</a> to an unformatted stream. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a1180ce4ffa4894ff4d160180214a87c2">colvarbias_ti</a>, <a class="el" href="classcolvarbias__histogram.html#a264ca10dee72d821896a0f84b90dba84">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__meta.html#a3b92560cfa00ea93616b0a437847f33e">colvarbias_meta</a>, <a class="el" href="classcolvarbias__abf.html#a8dcd612d4e939556e55baf588a01c270">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#a233cb4a14d805611f03048fdf1ec5e05">colvarbias_reweightaMD</a>, and <a class="el" href="classcolvarbias__opes.html#a5a47f28a70734389e2aa48177dca914d">colvarbias_opes</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a1180ce4ffa4894ff4d160180214a87c2">colvarbias_ti</a>, <a class="el" href="classcolvarbias__histogram.html#a264ca10dee72d821896a0f84b90dba84">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__abf.html#a8dcd612d4e939556e55baf588a01c270">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#a233cb4a14d805611f03048fdf1ec5e05">colvarbias_reweightaMD</a>, <a class="el" href="classcolvarbias__meta.html#adaab48360b0da73d9562c43e5dae2b77">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__opes.html#a5a47f28a70734389e2aa48177dca914d">colvarbias_opes</a>.</p>
 
 </div>
 </div>
@@ -1759,7 +1763,7 @@ template&lt;typename IST &gt; </div>
 
 <p>Write all mutable data not already written by <a class="el" href="classcolvarbias.html#a773a0adb49e85c629940ce8049058f3f" title="Write the values of specific mutable properties to a string.">get_state_params()</a> to a formatted stream. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a24ea60d4f405cd6648981fde4fc387f6">colvarbias_ti</a>, <a class="el" href="classcolvarbias__histogram.html#a93be36c1c32be7aa33c47a1b7ae35f46">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__meta.html#a3a926ac1976c284bbf0f8cf58adf5904">colvarbias_meta</a>, <a class="el" href="classcolvarbias__abf.html#a85adf817d40ba608fed6a3885282e0ff">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#ab6494e58cc78cc72a781bd689bc84a4a">colvarbias_reweightaMD</a>, and <a class="el" href="classcolvarbias__opes.html#ac25f9ffced52dec89622b8c2d7a8f164">colvarbias_opes</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__ti.html#a24ea60d4f405cd6648981fde4fc387f6">colvarbias_ti</a>, <a class="el" href="classcolvarbias__histogram.html#a93be36c1c32be7aa33c47a1b7ae35f46">colvarbias_histogram</a>, <a class="el" href="classcolvarbias__abf.html#a85adf817d40ba608fed6a3885282e0ff">colvarbias_abf</a>, <a class="el" href="classcolvarbias__reweightaMD.html#ab6494e58cc78cc72a781bd689bc84a4a">colvarbias_reweightaMD</a>, <a class="el" href="classcolvarbias__meta.html#a76ca6df52dd52b1a44324ab20e63ea02">colvarbias_meta</a>, and <a class="el" href="classcolvarbias__opes.html#ac25f9ffced52dec89622b8c2d7a8f164">colvarbias_opes</a>.</p>
 
 </div>
 </div>
@@ -1872,7 +1876,7 @@ template&lt;typename IST &gt; </div>
 
 <p>If this bias is communicating with other replicas through files, send it to them. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#ab30e5cf712e536f461efa786bd23ddb1">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__meta.html#a5a23733c5dafeef3cefca99f7f751b48">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1943,7 +1947,7 @@ template&lt;typename IST &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 2 2025 21:46:21 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Jul 30 2025 10:32:01 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

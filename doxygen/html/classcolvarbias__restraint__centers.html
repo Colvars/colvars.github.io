@@ -232,6 +232,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>analyze</b> (
 <tr class="memitem:abf62dca4abfd96c84d6f132776f71201 inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#abf62dca4abfd96c84d6f132776f71201">init</a> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:abf62dca4abfd96c84d6f132776f71201 inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse config string and (re)initialize.  <a href="classcolvarbias.html#abf62dca4abfd96c84d6f132776f71201">More...</a><br /></td></tr>
 <tr class="separator:abf62dca4abfd96c84d6f132776f71201 inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36613da45eb2bb8a280c216121a35dec inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top"><a id="a36613da45eb2bb8a280c216121a35dec" name="a36613da45eb2bb8a280c216121a35dec"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>init_mts</b> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a36613da45eb2bb8a280c216121a35dec inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize multiple-time-stepping options. <br /></td></tr>
+<tr class="separator:a36613da45eb2bb8a280c216121a35dec inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02f0c93f2d4c32616aae3a1a9e7157bd inherit pub_methods_classcolvarbias"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias.html#a02f0c93f2d4c32616aae3a1a9e7157bd">init_dependencies</a> ()</td></tr>
 <tr class="memdesc:a02f0c93f2d4c32616aae3a1a9e7157bd inherit pub_methods_classcolvarbias"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize dependency tree.  <a href="classcolvarbias.html#a02f0c93f2d4c32616aae3a1a9e7157bd">More...</a><br /></td></tr>
 <tr class="separator:a02f0c93f2d4c32616aae3a1a9e7157bd inherit pub_methods_classcolvarbias"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -684,7 +688,7 @@ std::map&lt; std::string, <a class="el" href="classcolvarvalue.html">colvarvalue
 <tr class="memdesc:a66393bba85cc0c0bab029ac5bc48b5af inherit pro_attribs_classcolvarparams"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivatives of the object with respect to internal parameters. <br /></td></tr>
 <tr class="separator:a66393bba85cc0c0bab029ac5bc48b5af inherit pro_attribs_classcolvarparams"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvardeps"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvardeps')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvardeps.html">colvardeps</a></td></tr>
-<tr class="memitem:af9fca6cfc343e41910514d00fcbc772a inherit pro_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#af9fca6cfc343e41910514d00fcbc772a">time_step_factor</a></td></tr>
+<tr class="memitem:af9fca6cfc343e41910514d00fcbc772a inherit pro_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvardeps.html#af9fca6cfc343e41910514d00fcbc772a">time_step_factor</a> = 1</td></tr>
 <tr class="separator:af9fca6cfc343e41910514d00fcbc772a inherit pro_attribs_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc849741d178135bfbb193077a83b722 inherit pro_attribs_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a id="adc849741d178135bfbb193077a83b722" name="adc849741d178135bfbb193077a83b722"></a>
 std::vector&lt; <a class="el" href="structcolvardeps_1_1feature__state.html">feature_state</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>feature_states</b></td></tr>
@@ -1092,7 +1096,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 2 2025 21:46:21 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Jul 30 2025 10:32:01 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
