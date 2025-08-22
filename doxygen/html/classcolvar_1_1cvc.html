@@ -214,9 +214,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>read_data</b>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>calc_fit_gradients</b> ()</td></tr>
 <tr class="memdesc:aac1b40d1f1708b066378516d166e6143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the atomic fit gradients. <br /></td></tr>
 <tr class="separator:aac1b40d1f1708b066378516d166e6143"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22544af1994d52e16080d22b7c904865"><td class="memItemLeft" align="right" valign="top"><a id="a22544af1994d52e16080d22b7c904865" name="a22544af1994d52e16080d22b7c904865"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>debug_gradients</b> ()</td></tr>
-<tr class="memdesc:a22544af1994d52e16080d22b7c904865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate finite-difference gradients alongside the analytical ones, for each Cartesian component. <br /></td></tr>
+<tr class="memitem:a22544af1994d52e16080d22b7c904865"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a22544af1994d52e16080d22b7c904865">debug_gradients</a> ()</td></tr>
+<tr class="memdesc:a22544af1994d52e16080d22b7c904865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate finite-difference gradients alongside the analytical ones, for each Cartesian component.  <a href="classcolvar_1_1cvc.html#a22544af1994d52e16080d22b7c904865">More...</a><br /></td></tr>
 <tr class="separator:a22544af1994d52e16080d22b7c904865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a022fecac2a7904aeabb0e52e7d664131"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a022fecac2a7904aeabb0e52e7d664131">collect_gradients</a> (std::vector&lt; int &gt; const &amp;<a class="el" href="classcolvar.html#afd2b3585b5c211102c67cb9c11ac38cc">atom_ids</a>, std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &amp;<a class="el" href="classcolvar.html#aae7ce01c5662a7bb251cf420f1b8fe66">atomic_gradients</a>)</td></tr>
 <tr class="memdesc:a022fecac2a7904aeabb0e52e7d664131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate atomic gradients and add them to the corresponding item in gradient vector May be overridden by CVCs that do not store their gradients in the classic way, see <a class="el" href="classcolvar_1_1dihedPC.html" title="Colvar component: dihedPC Projection of the config onto a dihedral principal component See e....">dihedPC</a>.  <a href="classcolvar_1_1cvc.html#a022fecac2a7904aeabb0e52e7d664131">More...</a><br /></td></tr>
@@ -1127,6 +1126,34 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 
 </div>
 </div>
+<a id="a22544af1994d52e16080d22b7c904865" name="a22544af1994d52e16080d22b7c904865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22544af1994d52e16080d22b7c904865">&#9670;&#160;</a></span>debug_gradients()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void colvar::cvc::debug_gradients </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate finite-difference gradients alongside the analytical ones, for each Cartesian component. </p>
+<dl class="section note"><dt>Note</dt><dd>Some CVCs change the gradients when running <a class="el" href="classcolvar_1_1cvc.html#a94c7ad776b079668644d057d67dfbd74" title="Calculate the variable.">calc_value()</a>, so it is better to copy the original gradients out at first.</dd></dl>
+
+</div>
+</div>
 <a id="a9ce0b06785089e18d6c813fb19e3ad93" name="a9ce0b06785089e18d6c813fb19e3ad93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ce0b06785089e18d6c813fb19e3ad93">&#9670;&#160;</a></span>dist2()</h2>
 
@@ -1481,7 +1508,7 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 30 2025 10:32:00 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Aug 22 2025 20:55:03 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

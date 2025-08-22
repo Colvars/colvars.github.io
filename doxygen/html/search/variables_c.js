@@ -19,12 +19,13 @@ var searchData=
   ['matching_5fstate_16',['matching_state',['../classcolvar.html#a40e39f0863088915eabdd1ecae2b7464',1,'colvar::matching_state()'],['../classcolvarbias.html#a11e947b5d4c578a6f019ec8c14b99282',1,'colvarbias::matching_state()']]],
   ['max_5fcoupling_5frange_17',['max_coupling_range',['../classcolvarbias__alb.html#ac6965e52376cd8271c7caafe80b9616e',1,'colvarbias_alb']]],
   ['max_5fforce_18',['max_force',['../classcolvarbias__abf.html#a22609cc69894961a4eeecd66a08c9efd',1,'colvarbias_abf']]],
-  ['max_5flength_5f_19',['max_length_',['../classcvm_1_1memory__stream.html#aa8c304ae25bbfa2a246c312f6b689fb4',1,'cvm::memory_stream']]],
-  ['means_20',['means',['../classcolvarbias__alb.html#a0dd7f01418c21d32eca3fdfa905e9791',1,'colvarbias_alb']]],
-  ['min_5fsamples_21',['min_samples',['../classcolvarbias__abf.html#af7ec8d96d96281c6a4731ad833c76273',1,'colvarbias_abf']]],
-  ['modified_5fatom_5flist_5f_22',['modified_atom_list_',['../classcolvarproxy__atoms.html#a6d06577773376ba004e32ae590424c44',1,'colvarproxy_atoms']]],
-  ['modify_5flock_23',['modify_lock',['../classcvm_1_1atom__group.html#a10a4c63adb5002f7ddf7d21489e1ccfd',1,'cvm::atom_group']]],
-  ['monitor_5fcrossings_24',['monitor_crossings',['../classcolvarmodule_1_1rotation.html#a9967b62b87d70fd7cf35b1a5b4fd8513',1,'colvarmodule::rotation']]],
-  ['msgcolvars_25',['msgColvars',['../classcolvarproxy__vmd.html#a11d498ad34c25eee1264d11a5c56923b',1,'colvarproxy_vmd']]],
-  ['mult_26',['mult',['../classcolvar__grid.html#a44046656fa8400d6bf6583416ddb4c85',1,'colvar_grid']]]
+  ['max_5fgradient_5ferror_19',['max_gradient_error',['../classcolvarmodule.html#a90fb28168de94fbbe5b18b7e66b27387',1,'colvarmodule']]],
+  ['max_5flength_5f_20',['max_length_',['../classcvm_1_1memory__stream.html#aa8c304ae25bbfa2a246c312f6b689fb4',1,'cvm::memory_stream']]],
+  ['means_21',['means',['../classcolvarbias__alb.html#a0dd7f01418c21d32eca3fdfa905e9791',1,'colvarbias_alb']]],
+  ['min_5fsamples_22',['min_samples',['../classcolvarbias__abf.html#af7ec8d96d96281c6a4731ad833c76273',1,'colvarbias_abf']]],
+  ['modified_5fatom_5flist_5f_23',['modified_atom_list_',['../classcolvarproxy__atoms.html#a6d06577773376ba004e32ae590424c44',1,'colvarproxy_atoms']]],
+  ['modify_5flock_24',['modify_lock',['../classcvm_1_1atom__group.html#a10a4c63adb5002f7ddf7d21489e1ccfd',1,'cvm::atom_group']]],
+  ['monitor_5fcrossings_25',['monitor_crossings',['../classcolvarmodule_1_1rotation.html#a9967b62b87d70fd7cf35b1a5b4fd8513',1,'colvarmodule::rotation']]],
+  ['msgcolvars_26',['msgColvars',['../classcolvarproxy__vmd.html#a11d498ad34c25eee1264d11a5c56923b',1,'colvarproxy_vmd']]],
+  ['mult_27',['mult',['../classcolvar__grid.html#a44046656fa8400d6bf6583416ddb4c85',1,'colvar_grid']]]
 ];
