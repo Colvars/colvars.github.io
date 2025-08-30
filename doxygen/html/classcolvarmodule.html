@@ -181,7 +181,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>version_number</b> () 
 <tr class="separator:abffa8e9f749d0aa415c0925f64c9a81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a529361d06e70ce7081fae20eedc310a2"><td class="memItemLeft" align="right" valign="top"><a id="a529361d06e70ce7081fae20eedc310a2" name="a529361d06e70ce7081fae20eedc310a2"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>patch_version_number</b> () const</td></tr>
-<tr class="memdesc:a529361d06e70ce7081fae20eedc310a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the patch version number (non-zero in patch releases of other packages) <br /></td></tr>
+<tr class="memdesc:a529361d06e70ce7081fae20eedc310a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the patch version number (non-zero only in the patch releases of other packages) <br /></td></tr>
 <tr class="separator:a529361d06e70ce7081fae20eedc310a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9696a719b54adb663278226b5c147472"><td class="memItemLeft" align="right" valign="top"><a id="a9696a719b54adb663278226b5c147472" name="a9696a719b54adb663278226b5c147472"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>register_named_atom_group_soa</b> (atom_group *ag)</td></tr>
@@ -856,11 +856,11 @@ template&lt;typename OST &gt; </td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aaef1f5d12fc5f6cee66460a57a71861f"><td class="memItemLeft" align="right" valign="top"><a id="aaef1f5d12fc5f6cee66460a57a71861f" name="aaef1f5d12fc5f6cee66460a57a71861f"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>version_int</b> = 0</td></tr>
-<tr class="memdesc:aaef1f5d12fc5f6cee66460a57a71861f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer representing the version string (allows comparisons) <br /></td></tr>
+<tr class="memdesc:aaef1f5d12fc5f6cee66460a57a71861f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer representing the version string; value will be set in colvarmodule.cpp. <br /></td></tr>
 <tr class="separator:aaef1f5d12fc5f6cee66460a57a71861f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6db2ce26fc77e27d7aa28124e4587516"><td class="memItemLeft" align="right" valign="top"><a id="a6db2ce26fc77e27d7aa28124e4587516" name="a6db2ce26fc77e27d7aa28124e4587516"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>patch_version_int</b> = 0</td></tr>
-<tr class="memdesc:a6db2ce26fc77e27d7aa28124e4587516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patch version number (non-zero in patch releases of other packages) <br /></td></tr>
+<tr class="memdesc:a6db2ce26fc77e27d7aa28124e4587516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patch version number; value will be set in colvarmodule.cpp. <br /></td></tr>
 <tr class="separator:a6db2ce26fc77e27d7aa28124e4587516"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3c31eccaea134be14ab4946cd99ae76"><td class="memItemLeft" align="right" valign="top"><a id="af3c31eccaea134be14ab4946cd99ae76" name="af3c31eccaea134be14ab4946cd99ae76"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>cvm_output_prefix</b></td></tr>
@@ -1506,7 +1506,7 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>log_level_</b> 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 27 2025 15:27:47 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Aug 30 2025 20:04:33 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

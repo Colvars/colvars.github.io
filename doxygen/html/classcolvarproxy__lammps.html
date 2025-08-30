@@ -79,7 +79,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classcolvarproxy__lammps-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">colvarproxy_lammps Class Reference</div></div>
 </div><!--header-->
@@ -137,12 +136,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c8d7cf72e1d6b787d21e368e4563bcc"><td class="memItemLeft" align="right" valign="top"><a id="a0c8d7cf72e1d6b787d21e368e4563bcc" name="a0c8d7cf72e1d6b787d21e368e4563bcc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>colvarproxy_lammps</b> (LAMMPS_NS::LAMMPS *lmp)</td></tr>
 <tr class="separator:a0c8d7cf72e1d6b787d21e368e4563bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9227af867ee724825c50de6dfc67870e"><td class="memItemLeft" align="right" valign="top"><a id="a9227af867ee724825c50de6dfc67870e" name="a9227af867ee724825c50de6dfc67870e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>colvarproxy_lammps</b> (const <a class="el" href="classcolvarproxy__lammps.html">colvarproxy_lammps</a> &amp;)=delete</td></tr>
+<tr class="separator:a9227af867ee724825c50de6dfc67870e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5be8cb240c19ad2dd11bc159ff6040ec"><td class="memItemLeft" align="right" valign="top"><a id="a5be8cb240c19ad2dd11bc159ff6040ec" name="a5be8cb240c19ad2dd11bc159ff6040ec"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
 <tr class="separator:a5be8cb240c19ad2dd11bc159ff6040ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a794711e0a2f474e7b67d46f517826a62"><td class="memItemLeft" align="right" valign="top"><a id="a794711e0a2f474e7b67d46f517826a62" name="a794711e0a2f474e7b67d46f517826a62"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_random_seed</b> (int seed)</td></tr>
-<tr class="memdesc:a794711e0a2f474e7b67d46f517826a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the internal seed used by <a class="el" href="classcolvarproxy__lammps.html#a14ec35387fc15de8ea337c7ad8b46cc3">rand_gaussian()</a>. <br /></td></tr>
+<tr class="memdesc:a794711e0a2f474e7b67d46f517826a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the internal seed used by <a class="el" href="classcolvarproxy__lammps.html#ab4fa25a4b53dfd969da82365637c4626">rand_gaussian()</a>. <br /></td></tr>
 <tr class="separator:a794711e0a2f474e7b67d46f517826a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a7f0db7b6817fd204fe4c8d8b54b9e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__lammps.html#a5a7f0db7b6817fd204fe4c8d8b54b9e2">setup</a> () override</td></tr>
 <tr class="memdesc:a5a7f0db7b6817fd204fe4c8d8b54b9e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)initialize required member data (called after the module)  <a href="classcolvarproxy__lammps.html#a5a7f0db7b6817fd204fe4c8d8b54b9e2">More...</a><br /></td></tr>
@@ -184,9 +186,9 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <tr class="memitem:a613952285da6ae5048ac1165131b8e3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__lammps.html#a613952285da6ae5048ac1165131b8e3e">position_distance</a> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2) const override</td></tr>
 <tr class="memdesc:a613952285da6ae5048ac1165131b8e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions.  <a href="classcolvarproxy__lammps.html#a613952285da6ae5048ac1165131b8e3e">More...</a><br /></td></tr>
 <tr class="separator:a613952285da6ae5048ac1165131b8e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14ec35387fc15de8ea337c7ad8b46cc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__lammps.html#a14ec35387fc15de8ea337c7ad8b46cc3">rand_gaussian</a> (void) override</td></tr>
-<tr class="memdesc:a14ec35387fc15de8ea337c7ad8b46cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pseudo-random number with Gaussian distribution.  <a href="classcolvarproxy__lammps.html#a14ec35387fc15de8ea337c7ad8b46cc3">More...</a><br /></td></tr>
-<tr class="separator:a14ec35387fc15de8ea337c7ad8b46cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4fa25a4b53dfd969da82365637c4626"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__lammps.html#ab4fa25a4b53dfd969da82365637c4626">rand_gaussian</a> () override</td></tr>
+<tr class="memdesc:ab4fa25a4b53dfd969da82365637c4626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pseudo-random number with Gaussian distribution.  <a href="classcolvarproxy__lammps.html#ab4fa25a4b53dfd969da82365637c4626">More...</a><br /></td></tr>
+<tr class="separator:ab4fa25a4b53dfd969da82365637c4626"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20ae86850b8d528e76269d8910f46393"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__lammps.html#a20ae86850b8d528e76269d8910f46393">init_atom</a> (int atom_number) override</td></tr>
 <tr class="separator:a20ae86850b8d528e76269d8910f46393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9b2b7c582646a0f18ab93064c2fe7f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__lammps.html#ae9b2b7c582646a0f18ab93064c2fe7f9">check_atom_id</a> (int atom_number) override</td></tr>
@@ -1230,12 +1232,6 @@ std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><b>output_stre
 <tr class="memdesc:a047405d4c8f5f4a698c16f7c2415cb42 inherit pro_attribs_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object whose reference is returned when write errors occur. <br /></td></tr>
 <tr class="separator:a047405d4c8f5f4a698c16f7c2415cb42 inherit pro_attribs_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a79d8d58cb1b6112ae5881a3552fb87c9"><td class="memItemLeft" align="right" valign="top"><a id="a79d8d58cb1b6112ae5881a3552fb87c9" name="a79d8d58cb1b6112ae5881a3552fb87c9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>colvarproxy_lammps</b> (const <a class="el" href="classcolvarproxy__lammps.html">colvarproxy_lammps</a> &amp;)</td></tr>
-<tr class="separator:a79d8d58cb1b6112ae5881a3552fb87c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classcolvarproxy__atoms"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__atoms')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__atoms.html">colvarproxy_atoms</a></td></tr>
@@ -1491,8 +1487,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 
 </div>
 </div>
-<a id="a14ec35387fc15de8ea337c7ad8b46cc3" name="a14ec35387fc15de8ea337c7ad8b46cc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14ec35387fc15de8ea337c7ad8b46cc3">&#9670;&#160;</a></span>rand_gaussian()</h2>
+<a id="ab4fa25a4b53dfd969da82365637c4626" name="ab4fa25a4b53dfd969da82365637c4626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4fa25a4b53dfd969da82365637c4626">&#9670;&#160;</a></span>rand_gaussian()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1510,7 +1506,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1684,7 +1680,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 27 2025 15:27:47 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Aug 30 2025 20:04:33 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

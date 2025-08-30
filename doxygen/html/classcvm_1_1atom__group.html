@@ -1425,7 +1425,7 @@ template&lt;bool B_ag_center, bool B_ag_rotate, typename main_force_accessor_T ,
   </table>
   </dd>
 </dl>
-<p>This function is used to (i) project the gradients of CV with respect to rotated main group atoms to fitting group atoms, or (ii) project the forces on rotated main group atoms to fitting group atoms, by the following two steps (using the goal (ii) for example): (1) Loop over the positions of main group atoms and call cvm::quaternion::position_derivative_inner to project the forces on rotated main group atoms to the forces on quaternion. (2) Loop over the positions of fitting group atoms, compute the gradients of \(\mathbf{q}\) with respect to the position of each atom, and then multiply that with the force on \(\mathbf{q}\) (chain rule). </p>
+<p>This function is used to (i) project the gradients of CV with respect to rotated main group atoms to fitting group atoms, or (ii) project the forces on rotated main group atoms to fitting group atoms, by the following three steps (using the goal (ii) for example): (1) Loop over the positions of main group atoms and project the forces on rotated main group atoms to the forces on the nine rotation matrix elements; (2) Project the forces on the rotation matrix elements to the forces on the four components of the corresponding quaternion \(\mathbf{q}\); (3) Loop over the positions of fitting group atoms, compute the gradients of \(\mathbf{q}\) with respect to the position of each atom, and then multiply that with the force on \(\mathbf{q}\) (chain rule). </p>
 
 </div>
 </div>
@@ -1932,7 +1932,7 @@ template&lt;bool B_ag_center, bool B_ag_rotate, typename main_force_accessor_T ,
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 27 2025 15:27:47 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Aug 30 2025 20:04:33 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
