@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -1053,7 +1056,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias__restraint.html#aeb365e545dac32e5383b12299598a04f">colvarbias_restraint</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__restraint__centers__moving.html#a49e8ddd444f3ef8a28992f45dc0d5c90">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a42660096d66cb893e5bb50e035ce7f8c">colvarbias_restraint_harmonic</a>, and <a class="el" href="classcolvarbias__restraint__linear.html#ab3fa934f7083454981bc5ecdb9424f82">colvarbias_restraint_linear</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__restraint__centers__moving.html#a673302bf2b207f2c0dec978df4a7f686">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a42660096d66cb893e5bb50e035ce7f8c">colvarbias_restraint_harmonic</a>, and <a class="el" href="classcolvarbias__restraint__linear.html#ab3fa934f7083454981bc5ecdb9424f82">colvarbias_restraint_linear</a>.</p>
 
 </div>
 </div>
@@ -1085,7 +1088,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias__restraint.html#a8fa0c731265dfd908e42aa315d558bc2">colvarbias_restraint</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__restraint__centers__moving.html#a7a94a65111eec72ba834bfacc5a0975f">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a6d4c45b66c1958e98665f652c3d05122">colvarbias_restraint_harmonic</a>, and <a class="el" href="classcolvarbias__restraint__linear.html#ac8bdf18cc52cafbfe1329e4d1a812ddf">colvarbias_restraint_linear</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__restraint__harmonic.html#a6d4c45b66c1958e98665f652c3d05122">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__linear.html#ac8bdf18cc52cafbfe1329e4d1a812ddf">colvarbias_restraint_linear</a>, and <a class="el" href="classcolvarbias__restraint__centers__moving.html#add137d1e9ac6bcb20d5ab2c40c4fe619">colvarbias_restraint_centers_moving</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +1099,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

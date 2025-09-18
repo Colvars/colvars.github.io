@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -110,6 +113,10 @@ $(function() {
 <li>print_state()&#160;:&#160;<a class="el" href="classcolvardeps.html#aff2f719a18e6880cc94eefc53693321a">colvardeps</a></li>
 <li>print_total_forces_errning()&#160;:&#160;<a class="el" href="classcolvarmodule.html#ae276b217eeb817627890efd7b9774666">colvarmodule</a></li>
 <li>proc_features()&#160;:&#160;<a class="el" href="classcolvarscript.html#a1972d88606c488092d944c43da2a92c1">colvarscript</a></li>
+<li>project_force_to_C_from_dxdq()&#160;:&#160;<a class="el" href="structrotation__derivative.html#aac40fdc1fbd62342b73818675311723c">rotation_derivative</a></li>
+<li>project_force_to_C_from_dxdqi()&#160;:&#160;<a class="el" href="structrotation__derivative.html#a2cede9c27bf0f04b33eeeac0a4c20bea">rotation_derivative</a></li>
+<li>project_force_to_group1()&#160;:&#160;<a class="el" href="structrotation__derivative.html#ad38cb5ae35fd9fb3e5d2f84dc037aa8a">rotation_derivative</a></li>
+<li>project_force_to_group2()&#160;:&#160;<a class="el" href="structrotation__derivative.html#aa4b0c62a2711e885d336857b4501146d">rotation_derivative</a></li>
 <li>project_hills()&#160;:&#160;<a class="el" href="classcolvarbias__meta.html#a45ff2641ceb0a9c13d8fa4f9c53fccd5">colvarbias_meta</a></li>
 <li>provide()&#160;:&#160;<a class="el" href="classcolvardeps.html#ae75c130f4f2c4ef5f50d1c0dcbc97276">colvardeps</a></li>
 <li>proxy()&#160;:&#160;<a class="el" href="classcolvarscript.html#ab22d8092180d1141b08fc088ed480648">colvarscript</a></li>
@@ -117,7 +124,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

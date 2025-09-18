@@ -46,13 +46,12 @@ var searchData=
   ['restart_5foutput_5fprefix_5fstr_43',['restart_output_prefix_str',['../classcolvarproxy__io.html#aa6f034ad2e0cb11646e4428d212ad1e2',1,'colvarproxy_io']]],
   ['restart_5fversion_5fint_44',['restart_version_int',['../classcolvarmodule.html#aca16597a8f12fde10a49517f833e42cd',1,'colvarmodule']]],
   ['restart_5fversion_5fstr_45',['restart_version_str',['../classcolvarmodule.html#ac8eae654d642ad81917b71444a454104',1,'colvarmodule']]],
-  ['restraint_5ffe_46',['restraint_FE',['../classcolvarbias__restraint__k__moving.html#adb49c0b3bb970f1d639c049d10abc049',1,'colvarbias_restraint_k_moving']]],
-  ['rot_47',['rot',['../classcvm_1_1atom__group.html#a3be1fcdc3384ddbef657342a2e7bb511',1,'cvm::atom_group::rot()'],['../classcolvar_1_1orientation.html#a1d950c2959120cc3d43801f07bd935cc',1,'colvar::orientation::rot()']]],
-  ['rot_5fderiv_48',['rot_deriv',['../classcvm_1_1atom__group.html#adf9c5c2d81be3abb4b71ccc8013e3460',1,'cvm::atom_group']]],
-  ['runave_49',['runave',['../classcolvar.html#ab1c86cdd64a024b01e90c97b2787efc7',1,'colvar']]],
-  ['runave_5flength_50',['runave_length',['../classcolvar.html#a63ce03c9aae97d2c02a2134a4d46b061',1,'colvar']]],
-  ['runave_5foutfile_51',['runave_outfile',['../classcolvar.html#af1f928e297905fa7ca71c48d6c1037b5',1,'colvar']]],
-  ['runave_5fstride_52',['runave_stride',['../classcolvar.html#adb59f71bb6133beb9b5ca5aa0b660e7b',1,'colvar']]],
-  ['runave_5fvariance_53',['runave_variance',['../classcolvar.html#a1a965eaf45fb6efb29a4e0514a75d659',1,'colvar']]],
-  ['rvector_5fvalue_54',['rvector_value',['../classcolvarvalue.html#af950c662a9d6d84ec65b9356ea7e157a',1,'colvarvalue']]]
+  ['rot_46',['rot',['../classcvm_1_1atom__group.html#a3be1fcdc3384ddbef657342a2e7bb511',1,'cvm::atom_group::rot()'],['../classcolvar_1_1orientation.html#a1d950c2959120cc3d43801f07bd935cc',1,'colvar::orientation::rot()']]],
+  ['rot_5fderiv_47',['rot_deriv',['../classcvm_1_1atom__group.html#adf9c5c2d81be3abb4b71ccc8013e3460',1,'cvm::atom_group']]],
+  ['runave_48',['runave',['../classcolvar.html#ab1c86cdd64a024b01e90c97b2787efc7',1,'colvar']]],
+  ['runave_5flength_49',['runave_length',['../classcolvar.html#a63ce03c9aae97d2c02a2134a4d46b061',1,'colvar']]],
+  ['runave_5foutfile_50',['runave_outfile',['../classcolvar.html#af1f928e297905fa7ca71c48d6c1037b5',1,'colvar']]],
+  ['runave_5fstride_51',['runave_stride',['../classcolvar.html#adb59f71bb6133beb9b5ca5aa0b660e7b',1,'colvar']]],
+  ['runave_5fvariance_52',['runave_variance',['../classcolvar.html#a1a965eaf45fb6efb29a4e0514a75d659',1,'colvar']]],
+  ['rvector_5fvalue_53',['rvector_value',['../classcolvarvalue.html#af950c662a9d6d84ec65b9356ea7e157a',1,'colvarvalue']]]
 ];

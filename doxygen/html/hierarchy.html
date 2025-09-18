@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -165,14 +168,15 @@ This inheritance list is sorted roughly, but not completely, alphabetically:</di
 <tr id="row_4_2_5_1_0_0_" class="even" style="display:none;"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__harmonic.html" target="_self">colvarbias_restraint_harmonic</a></td><td class="desc">Harmonic bias restraint (implementation of <a class="el" href="classcolvarbias__restraint.html">colvarbias_restraint</a>) </td></tr>
 <tr id="row_4_2_5_1_0_1_" class="even" style="display:none;"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__harmonic__walls.html" target="_self">colvarbias_restraint_harmonic_walls</a></td><td class="desc">Wall restraint (implementation of <a class="el" href="classcolvarbias__restraint.html">colvarbias_restraint</a>) </td></tr>
 <tr id="row_4_2_5_1_0_2_" class="even" style="display:none;"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__linear.html" target="_self">colvarbias_restraint_linear</a></td><td class="desc">Linear bias restraint (implementation of <a class="el" href="classcolvarbias__restraint.html">colvarbias_restraint</a>) </td></tr>
+<tr id="row_4_2_5_2_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span id="arr_4_2_5_2_" class="arrow" onclick="toggleFolder('4_2_5_2_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__moving.html" target="_self">colvarbias_restraint_moving</a></td><td class="desc">Options to change the restraint configuration over time (shared between centers and k moving) </td></tr>
+<tr id="row_4_2_5_2_0_" class="even" style="display:none;"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__centers__moving.html" target="_self">colvarbias_restraint_centers_moving</a></td><td class="desc">Options to change the restraint centers over time </td></tr>
+<tr id="row_4_2_5_2_1_" class="even" style="display:none;"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__k__moving.html" target="_self">colvarbias_restraint_k_moving</a></td><td class="desc">Options to change the restraint force constant over time </td></tr>
 <tr id="row_4_2_6_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__histogram.html" target="_self">colvarbias_restraint_histogram</a></td><td class="desc">Restrain the 1D histogram of a set of variables (or of a multidimensional one) </td></tr>
 <tr id="row_4_2_7_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_4_2_7_" class="arrow" onclick="toggleFolder('4_2_7_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__ti.html" target="_self">colvarbias_ti</a></td><td class="desc">Base class for unconstrained thermodynamic-integration FE estimator </td></tr>
 <tr id="row_4_2_7_0_" class="even" style="display:none;"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__abmd.html" target="_self">colvarbias_abmd</a></td><td class="desc">Adiabatic Bias MD </td></tr>
 <tr id="row_4_2_7_1_" class="even" style="display:none;"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__meta.html" target="_self">colvarbias_meta</a></td><td class="desc">Metadynamics bias (implementation of <a class="el" href="classcolvarbias.html">colvarbias</a>) </td></tr>
 <tr id="row_4_2_7_2_" class="even" style="display:none;"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint.html" target="_self">colvarbias_restraint</a></td><td class="desc">Most general definition of a colvar restraint: see derived classes for specific types (implementation of <a class="el" href="classcolvarbias.html">colvarbias</a>) </td></tr>
-<tr id="row_4_3_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_4_3_" class="arrow" onclick="toggleFolder('4_3_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__moving.html" target="_self">colvarbias_restraint_moving</a></td><td class="desc">Options to change the restraint configuration over time (shared between centers and k moving) </td></tr>
-<tr id="row_4_3_0_" class="odd" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__centers__moving.html" target="_self">colvarbias_restraint_centers_moving</a></td><td class="desc">Options to change the restraint centers over time </td></tr>
-<tr id="row_4_3_1_" class="odd" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__k__moving.html" target="_self">colvarbias_restraint_k_moving</a></td><td class="desc">Options to change the restraint force constant over time </td></tr>
+<tr id="row_4_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarbias__restraint__moving.html" target="_self">colvarbias_restraint_moving</a></td><td class="desc">Options to change the restraint configuration over time (shared between centers and k moving) </td></tr>
 <tr id="row_4_4_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcvm_1_1atom__group.html" target="_self">cvm::atom_group</a></td><td class="desc">Store the information of a group of atoms in a structure-of-arrays (SoA) style </td></tr>
 <tr id="row_5_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarmodule.html" target="_self">colvarmodule</a></td><td class="desc">Collective variables module (main class) </td></tr>
 <tr id="row_6_" class="odd"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_6_" class="arrow" onclick="toggleFolder('6_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcolvarparams.html" target="_self">colvarparams</a></td><td class="desc"></td></tr>
@@ -258,7 +262,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:</di
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -15,7 +15,7 @@
 </p><!--l. 141--><p class="noindent"><span class="colorbox" id="colorbox1"> </span></p><div class="minipage"><!--l. 180--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.17em"></mspace></math><br class="newline"/>
 <!--l. 180--><p class="noindent"><span class="phvb8t-x-x-248">COLLECTIVE VARIABLES MODULE</span><br class="newline"/>
 </p><!--l. 180--><p class="noindent"><span class="phvb8t-x-x-248">Reference manual for VMD</span><br class="newline"/>
-</p><!--l. 180--><p class="noindent"><br class="newline"/>Code version: 2025-09-09<br class="newline"/>
+</p><!--l. 180--><p class="noindent"><br class="newline"/>Code version: 2025-09-18<br class="newline"/>
 </p><!--l. 180--><p class="noindent">Updated versions of this manual: [<a href="https://colvars.github.io/master/colvars-refman-gromacs.html">GROMACS</a>] [<a href="https://colvars.github.io/master/colvars-refman-lammps.html">LAMMPS</a>] [<a href="https://colvars.github.io/master/colvars-refman-namd.html">NAMD</a>] [<a href="https://colvars.github.io/master/colvars-refman-tinkerhp.html">Tinker-HP</a>] [<a href="https://colvars.github.io/master/colvars-refman-vmd.html">VMD</a>]</p></div>
 <!--l. 184--><p class="indent"> <img alt="Colvars logo" class="cover_picture" src="cover-512px.jpg"/> <br class="newline"/><span class="phvr8t-x-x-120">Alejandro Bernardin, Haochuan Chen, Jeffrey R. Comer, Giacomo Fiorin, Haohao Fu, J</span><span class="phvr8t-x-x-120">é</span><span class="phvr8t-x-x-120">r</span><span class="phvr8t-x-x-120">ô</span><span class="phvr8t-x-x-120">me</span>
 <span class="phvr8t-x-x-120">H</span><span class="phvr8t-x-x-120">é</span><span class="phvr8t-x-x-120">nin, Axel Kohlmeyer, Fabrizio Marinelli, Hubert Santuz, Joshua V. Vermaas, Andrew D.</span>
@@ -5970,25 +5970,25 @@ the <span class="ectt-1095">histogram </span>bias (see <a href="#sec:colvarbias_
 </p><!--l. 7334--><p class="indent">   To activate an umbrella sampling simulation, the same keywords as in the previous section can be
 used, with the addition of the following: </p>
 <ul class="itemize1">
-<li class="itemize"><span class="colorbox" id="colorbox392"><a id="dx1-155001"></a><span class="ectt-1095">targetNumStages</span></span> — <span class="phvro8t-x-x-109">Number of stages for steering</span><br class="newline"/>Default: <span class="ectt-1095">0</span> <!--l. 7348--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> non-negative
-     integer, context: <span class="ectt-1095">harmonic</span> <!--l. 7348--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If  non-zero,  sets  the  number  of  stages  in  which  the  restraint  centers  or  force  constant
+<li class="itemize"><a id="harmonic|targetNumStages"></a> <span class="colorbox" id="colorbox392"><a id="dx1-155001"></a><span class="ectt-1095">targetNumStages</span></span> — <span class="phvro8t-x-x-109">Number of stages for steering</span><br class="newline"/>Default: <span class="ectt-1095">0</span> <!--l. 7349--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> non-negative
+     integer, context: <span class="ectt-1095">harmonic</span> <!--l. 7349--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If  non-zero,  sets  the  number  of  stages  in  which  the  restraint  centers  or  force  constant
      are  changed  to  their  target  values.  If  zero,  the  change  is  continuous.  Each  stage  lasts
      <span class="ectt-1095">targetNumSteps </span>MD steps. To sample both ends of the transformation, the simulation should
-     be run for <span class="ectt-1095">targetNumSteps</span><!--l. 7348--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>
+     be run for <span class="ectt-1095">targetNumSteps</span><!--l. 7349--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>
      (<span class="ectt-1095">targetNumStages </span>+ 1).
      </li></ul>
 <div class="flushright">
-<!--l. 7353--><p class="noindent">
+<!--l. 7354--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 7353--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_force_k_ti"></a>
+<!--l. 7354--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_force_k_ti"></a>
 <h5 class="subsubsectionHead"><span class="titlemark">7.8.3    </span> <a id="sec:colvarbias_force_k_ti"></a>Changing force constant</h5>
-<!--l. 7353--><p class="noindent"></p></div>
-<!--l. 7355--><p class="indent">   The force constant of the harmonic restraint may also be changed over time, either to introduce or
+<!--l. 7354--><p class="noindent"></p></div>
+<!--l. 7356--><p class="indent">   The force constant of the harmonic restraint may also be changed over time, either to introduce or
 remove a restraint smoothly, or to estimate a restraint free energy<span class="cite">[<a href="#XDeng2009">42</a>]</span>.
 </p>
 <ul class="itemize1">
-<li class="itemize"><a id="harmonic|targetForceConstant"></a> <span class="colorbox" id="colorbox393"><a id="dx1-156001"></a><span class="ectt-1095">targetForceConstant</span></span> — <span class="phvro8t-x-x-109">Change the force constant towards this value</span><br class="newline"/><!--l. 7386--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
-     decimal, context: <span class="ectt-1095">harmonic</span> <!--l. 7386--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When defined, the current <span class="ectt-1095">forceConstant </span>will be moved towards this value during the simulation.
+<li class="itemize"><a id="harmonic|targetForceConstant"></a> <span class="colorbox" id="colorbox393"><a id="dx1-156001"></a><span class="ectt-1095">targetForceConstant</span></span> — <span class="phvro8t-x-x-109">Change the force constant towards this value</span><br class="newline"/><!--l. 7387--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
+     decimal, context: <span class="ectt-1095">harmonic</span> <!--l. 7387--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When defined, the current <span class="ectt-1095">forceConstant </span>will be moved towards this value during the simulation.
      Time  evolution  of  the  force  constant  is  dictated  by  the  <span class="ectt-1095">lambdaExponent </span>parameter  (see
      below). By default, the force constant is changed smoothly over a total of <span class="ectt-1095">targetNumSteps</span>
      steps. This is useful to introduce or remove restraints in a progressive manner. If <span class="ectt-1095">targetNumStages</span>
@@ -6003,16 +6003,16 @@ remove a restraint smoothly, or to estimate a restraint free energy<span class="
      however, that restraint free energy calculations may be handled more efficiently by an indirect
      route, through the determination of a free energy profile for the restrained coordinate.<span class="cite">[<a href="#XDeng2009">42</a>]</span>
 </li>
-<li class="itemize"><span class="colorbox" id="colorbox394"><a id="dx1-156002"></a><span class="ectt-1095">lambdaExponent</span></span> — <span class="phvro8t-x-x-109">Exponent in the time-dependence of the force constant</span><br class="newline"/>Default: <span class="ectt-1095">1.0</span> <!--l. 7411--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> decimal
-     equal to or greater than 1.0, context: <span class="ectt-1095">harmonic</span> <!--l. 7411--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Sets the exponent, <!--l. 7411--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>,
+<li class="itemize"><span class="colorbox" id="colorbox394"><a id="dx1-156002"></a><span class="ectt-1095">lambdaExponent</span></span> — <span class="phvro8t-x-x-109">Exponent in the time-dependence of the force constant</span><br class="newline"/>Default: <span class="ectt-1095">1.0</span> <!--l. 7412--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> decimal
+     equal to or greater than 1.0, context: <span class="ectt-1095">harmonic</span> <!--l. 7412--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Sets the exponent, <!--l. 7412--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>,
      in the function used to vary the force constant as a function of time. The force is varied
-     according to a coupling parameter <!--l. 7411--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>,
-     raised to the power <!--l. 7411--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>:
-     <!--l. 7411--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub> <mo class="MathClass-rel">=</mo> <msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-bin">+</mo><msup><mrow><mi>λ</mi></mrow><mrow><mi>α</mi></mrow></msup><mo class="MathClass-open">(</mo><msub><mrow><mi>k</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin">−</mo><msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close">)</mo></math>,
-     where <!--l. 7411--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub></math>,
-     <!--l. 7411--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub></math>,
-     and <!--l. 7411--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
-     are the initial, current, and final values of the force constant. The parameter <!--l. 7411--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
+     according to a coupling parameter <!--l. 7412--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>,
+     raised to the power <!--l. 7412--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>:
+     <!--l. 7412--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub> <mo class="MathClass-rel">=</mo> <msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-bin">+</mo><msup><mrow><mi>λ</mi></mrow><mrow><mi>α</mi></mrow></msup><mo class="MathClass-open">(</mo><msub><mrow><mi>k</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin">−</mo><msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close">)</mo></math>,
+     where <!--l. 7412--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub></math>,
+     <!--l. 7412--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub></math>,
+     and <!--l. 7412--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
+     are the initial, current, and final values of the force constant. The parameter <!--l. 7412--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
      evolves linearly from 0 to 1, either smoothly, or in <span class="ectt-1095">targetNumStages </span>equally spaced discrete
      stages,  or  according  to  an  arbitrary  schedule  set  with  <span class="ectt-1095">lambdaSchedule</span>.  When  the  initial
      value of the force constant is zero, an exponent greater than 1.0 distributes the effects of
@@ -6021,50 +6021,50 @@ remove a restraint smoothly, or to estimate a restraint free energy<span class="
      A value of 4 has been found to give good results in some tests. To remove the restraint over
      time rather than introduce it, use the <span class="ectt-1095">decoupling </span>option.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox395"><a id="dx1-156003"></a><span class="ectt-1095">decoupling</span></span> — <span class="phvro8t-x-x-109">Perform a restraint decoupling transformation</span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 7427--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
-     context: <span class="ectt-1095">harmonic</span> <!--l. 7427--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When this option is enabled, the restraint is decoupled by changing the force constant from
+<li class="itemize"><span class="colorbox" id="colorbox395"><a id="dx1-156003"></a><span class="ectt-1095">decoupling</span></span> — <span class="phvro8t-x-x-109">Perform a restraint decoupling transformation</span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 7428--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
+     context: <span class="ectt-1095">harmonic</span> <!--l. 7428--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When this option is enabled, the restraint is decoupled by changing the force constant from
      <span class="ectt-1095">forceConstant </span>to 0.0 over the course of the simulation, as specified by <span class="ectt-1095">targetNumSteps </span>and,
-     optionally, <span class="ectt-1095">targetNumStages</span>. The force constant is then varied as: <!--l. 7427--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub> <mo class="MathClass-rel">=</mo> <msup><mrow><mo class="MathClass-open">(</mo><mn>1</mn><mo class="MathClass-bin">−</mo><mi>λ</mi><mo class="MathClass-close">)</mo></mrow><mrow><mi>α</mi></mrow></msup><mi>k</mi></math>,
-     where <!--l. 7427--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>
+     optionally, <span class="ectt-1095">targetNumStages</span>. The force constant is then varied as: <!--l. 7428--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub> <mo class="MathClass-rel">=</mo> <msup><mrow><mo class="MathClass-open">(</mo><mn>1</mn><mo class="MathClass-bin">−</mo><mi>λ</mi><mo class="MathClass-close">)</mo></mrow><mrow><mi>α</mi></mrow></msup><mi>k</mi></math>,
+     where <!--l. 7428--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math>
      is the value of <span class="ectt-1095">lambdaExponent</span>. Setting <span class="ectt-1095">lambdaExponent </span>to a value greater than 1 (e.g. 4)
-     ensures a smoother dependence of the energy on <!--l. 7427--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
-     around <!--l. 7427--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub> <mo class="MathClass-rel">=</mo> <mn>0</mn></math>.
+     ensures a smoother dependence of the energy on <!--l. 7428--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
+     around <!--l. 7428--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>λ</mi></mrow></msub> <mo class="MathClass-rel">=</mo> <mn>0</mn></math>.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox396"><a id="dx1-156004"></a><span class="ectt-1095">targetEquilSteps</span></span> — <span class="phvro8t-x-x-109">Number of steps discarded from TI estimate</span><br class="newline"/>Default: 0 <!--l. 7438--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
-     integer, context: <span class="ectt-1095">harmonic</span> <!--l. 7438--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the number of steps within each stage that are considered equilibration and discarded
+<li class="itemize"><span class="colorbox" id="colorbox396"><a id="dx1-156004"></a><span class="ectt-1095">targetEquilSteps</span></span> — <span class="phvro8t-x-x-109">Number of steps discarded from TI estimate</span><br class="newline"/>Default: 0 <!--l. 7439--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
+     integer, context: <span class="ectt-1095">harmonic</span> <!--l. 7439--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the number of steps within each stage that are considered equilibration and discarded
      from the restraint free energy derivative estimate reported reported in the output.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox397"><a id="dx1-156005"></a><span class="ectt-1095">lambdaSchedule</span></span> — <span class="phvro8t-x-x-109">Schedule of lambda-points for changing force constant</span><br class="newline"/><!--l. 7448--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> list
-     of real numbers between 0 and 1, context: <span class="ectt-1095">harmonic</span> <!--l. 7448--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If specified together with targetForceConstant, sets the sequence of discrete <!--l. 7448--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
+<li class="itemize"><span class="colorbox" id="colorbox397"><a id="dx1-156005"></a><span class="ectt-1095">lambdaSchedule</span></span> — <span class="phvro8t-x-x-109">Schedule of lambda-points for changing force constant</span><br class="newline"/><!--l. 7449--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> list
+     of real numbers between 0 and 1, context: <span class="ectt-1095">harmonic</span> <!--l. 7449--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If specified together with targetForceConstant, sets the sequence of discrete <!--l. 7449--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
      values that will be used for different stages.
      </li></ul>
 <div class="flushright">
-<!--l. 7453--><p class="noindent">
+<!--l. 7454--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 7453--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_acc_work"></a>
+<!--l. 7454--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_acc_work"></a>
 <h4 class="subsectionHead"><span class="titlemark">7.9    </span> <a id="sec:colvarbias_acc_work"></a>Computing the work of a changing restraint</h4>
-<!--l. 7453--><p class="noindent"></p></div>
-<!--l. 7455--><p class="indent">   If the restraint centers or force constant are changed continuosly (<span class="ectt-1095">targetNumStages </span>undefined) it is
+<!--l. 7454--><p class="noindent"></p></div>
+<!--l. 7456--><p class="indent">   If the restraint centers or force constant are changed continuosly (<span class="ectt-1095">targetNumStages </span>undefined) it is
 possible to record the net work performed by the changing restraint: </p>
 <ul class="itemize1">
 <li class="itemize"><span class="colorbox" id="colorbox398"><a id="dx1-157001"></a><span class="ectt-1095">outputAccumulatedWork</span></span> —  <span class="phvro8t-x-x-109">Write  the  accumulated  work  of  the  changing  restraint  to  the</span>
-<span class="phvro8t-x-x-109">Colvars trajectory file</span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 7467--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
-     context: <span class="ectt-1095">harmonic</span> <!--l. 7467--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If <span class="ectt-1095">targetCenters </span>or <span class="ectt-1095">targetForceConstant </span>are defined and this option is enabled, the accumulated
+<span class="phvro8t-x-x-109">Colvars trajectory file</span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 7468--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
+     context: <span class="ectt-1095">harmonic</span> <!--l. 7468--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If <span class="ectt-1095">targetCenters </span>or <span class="ectt-1095">targetForceConstant </span>are defined and this option is enabled, the accumulated
      work from the beginning of the simulation will be written to the trajectory file (<span class="ectt-1095">colvarsTrajFrequency</span>
      must be non-zero). When the simulation is continued from a state file, the previously accumulated
      work is included in the integral. This option allows to conveniently extract the estimated PMF
      of a steered MD calculation (when <span class="ectt-1095">targetCenters </span>is used), or of other simulation protocols.
      </li></ul>
 <div class="flushright">
-<!--l. 7471--><p class="noindent">
+<!--l. 7472--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 7471--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_harmonic_walls"></a>
+<!--l. 7472--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_harmonic_walls"></a>
 <h4 class="subsectionHead"><span class="titlemark">7.10    </span> <a id="sec:colvarbias_harmonic_walls"></a>Harmonic wall restraints</h4>
-<!--l. 7471--><p class="noindent"></p></div>
-<!--l. 7473--><p class="indent">   The <span class="ectt-1095">harmonicWalls</span><span class="ectt-1095"> {...} </span>bias is closely related to the harmonic bias (see <a href="#sec:colvarbias_harmonic">7.8<!--tex4ht:ref: sec:colvarbias_harmonic --></a>), with the following two
+<!--l. 7472--><p class="noindent"></p></div>
+<!--l. 7474--><p class="indent">   The <span class="ectt-1095">harmonicWalls</span><span class="ectt-1095"> {...} </span>bias is closely related to the harmonic bias (see <a href="#sec:colvarbias_harmonic">7.8<!--tex4ht:ref: sec:colvarbias_harmonic --></a>), with the following two
 differences: <span class="phvro8t-x-x-109">(i) </span>instead of a center a <span class="phvro8t-x-x-109">lower wall </span>and/or an <span class="phvro8t-x-x-109">upper wall </span>are defined, outside of which the bias
 implements a half-harmonic potential; </p><table class="equation"><tr><td> <a id="x1-158001r48"></a>
-<!--l. 7474--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<!--l. 7475--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
 <mi>V</mi> <mrow><mo fence="true" form="prefix"> (</mo><mrow><mi>ξ</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mrow><mo fence="true" form="prefix"> {</mo><mrow> <mtable align="axis" class="array" columnlines="none" equalcolumns="false" equalrows="false" style=""> <mtr><mtd class="array" columnalign="left"> <mfrac><mrow><mn>1</mn></mrow> <mrow><mn>2</mn></mrow></mfrac><mi>k</mi><msup><mrow> <mrow><mo fence="true" form="prefix"> (</mo><mrow><mfrac><mrow><mi>ξ</mi><mo class="MathClass-bin">−</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>u</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub></mrow>
 <mrow><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi> </mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup> </mtd><mtd class="array" columnalign="left"> <mstyle mathvariant="normal"><mi>i</mi><mi>f</mi></mstyle><mspace class="nbsp" width="0.33em"></mspace><mi>ξ</mi> <mo class="MathClass-rel">&gt;</mo> <msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>u</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub> </mtd>
 </mtr> <mtr><mtd class="array" columnalign="left"> <mn>0</mn> </mtd><mtd class="array" columnalign="left"> <mstyle mathvariant="normal"><mi>i</mi><mi>f</mi></mstyle><mspace class="nbsp" width="0.33em"></mspace><msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>l</mi><mi>o</mi><mi>w</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub> <mo class="MathClass-rel">≤</mo> <mi>ξ</mi> <mo class="MathClass-rel">≤</mo> <msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>u</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub> </mtd>
@@ -6072,14 +6072,14 @@ implements a half-harmonic potential; </p><table class="equation"><tr><td> <a id
 <mrow><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi> </mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup> </mtd><mtd class="array" columnalign="left"> <mstyle mathvariant="normal"><mi>i</mi><mi>f</mi></mstyle><mspace class="nbsp" width="0.33em"></mspace><mi>ξ</mi> <mo class="MathClass-rel">&lt;</mo> <msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>l</mi><mi>o</mi><mi>w</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub> </mtd>
 </mtr> <!--l l--></mtable> </mrow><mo fence="true" form="postfix"></mo></mrow>
 </math></td><td class="eq-no">(48)</td></tr></table>
-<!--l. 7484--><p class="indent">   where <!--l. 7484--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>l</mi><mi>o</mi><mi>w</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub></math>
-and <!--l. 7484--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>u</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub></math> are
+<!--l. 7485--><p class="indent">   where <!--l. 7485--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>l</mi><mi>o</mi><mi>w</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub></math>
+and <!--l. 7485--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>u</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub></math> are
 the lower and upper wall thresholds, respectively; <span class="phvro8t-x-x-109">(ii) </span>because an interval between two walls is defined,
 only scalar variables can be used (but any number of variables can be defined, and the wall bias is
 intrinsically multi-dimensional).<br class="newline"/>
-</p><!--l. 7486--><p class="indent"> <span class="phvb8t-x-x-109">Note: </span>this bias replaces the keywords <span class="ectt-1095">lowerWall</span>, <span class="ectt-1095">lowerWallConstant</span>, <span class="ectt-1095">upperWall </span>and
+</p><!--l. 7487--><p class="indent"> <span class="phvb8t-x-x-109">Note: </span>this bias replaces the keywords <span class="ectt-1095">lowerWall</span>, <span class="ectt-1095">lowerWallConstant</span>, <span class="ectt-1095">upperWall </span>and
 <span class="ectt-1095">upperWallConstant </span>defined in the <span class="ectt-1095">colvar </span>context. Those keywords are deprecated.
-</p><!--l. 7489--><p class="indent">   The <span class="ectt-1095">harmonicWalls </span>bias implements the following options: </p>
+</p><!--l. 7490--><p class="indent">   The <span class="ectt-1095">harmonicWalls </span>bias implements the following options: </p>
 <ul class="itemize1">
 <li class="itemize"><span class="colorbox" id="colorbox399"><a id="dx1-158002"></a><span class="ectt-1095">name</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">name</span></a> (biasing and analysis methods)
      </li>
@@ -6093,21 +6093,21 @@ intrinsically multi-dimensional).<br class="newline"/>
      </li>
 <li class="itemize"><span class="colorbox" id="colorbox404"><a id="dx1-158007"></a><span class="ectt-1095">stepZeroData</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">stepZeroData</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox405"><a id="dx1-158008"></a><span class="ectt-1095">lowerWalls</span></span> — <span class="phvro8t-x-x-109">Position of the lower wall(s)</span><br class="newline"/><!--l. 7504--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> Space-separated
-     list of decimals, context: <span class="ectt-1095">colvar</span> <!--l. 7504--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the values <!--l. 7504--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>l</mi><mi>o</mi><mi>w</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub></math>
-     below which a confining restraint on the colvar is applied to each colvar <!--l. 7504--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>.
+<li class="itemize"><span class="colorbox" id="colorbox405"><a id="dx1-158008"></a><span class="ectt-1095">lowerWalls</span></span> — <span class="phvro8t-x-x-109">Position of the lower wall(s)</span><br class="newline"/><!--l. 7505--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> Space-separated
+     list of decimals, context: <span class="ectt-1095">colvar</span> <!--l. 7505--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the values <!--l. 7505--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>l</mi><mi>o</mi><mi>w</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub></math>
+     below which a confining restraint on the colvar is applied to each colvar <!--l. 7505--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox406"><a id="dx1-158009"></a><span class="ectt-1095">upperWalls</span></span> — <span class="phvro8t-x-x-109">Position of the upper wall(s)</span><br class="newline"/><!--l. 7512--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> Space-separated
-     list of decimals, context: <span class="ectt-1095">colvar</span> <!--l. 7512--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the values <!--l. 7512--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>u</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub></math>
-     above which a confining restraint on the colvar is applied to each colvar <!--l. 7512--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>.
+<li class="itemize"><span class="colorbox" id="colorbox406"><a id="dx1-158009"></a><span class="ectt-1095">upperWalls</span></span> — <span class="phvro8t-x-x-109">Position of the upper wall(s)</span><br class="newline"/><!--l. 7513--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> Space-separated
+     list of decimals, context: <span class="ectt-1095">colvar</span> <!--l. 7513--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the values <!--l. 7513--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mstyle mathvariant="normal"><mi>u</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>r</mi></mstyle></mrow></msub></math>
+     above which a confining restraint on the colvar is applied to each colvar <!--l. 7513--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>.
      </li>
 <li class="itemize"><span class="colorbox" id="colorbox407"><a id="dx1-158010"></a><span class="ectt-1095">forceConstant</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">forceConstant</span></a> (Harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox408"><a id="dx1-158011"></a><span class="ectt-1095">lowerWallConstant</span></span> — <span class="phvro8t-x-x-109">Force constant for the lower wall</span><br class="newline"/>Default: <span class="ectt-1095">forceConstant</span> <!--l. 7526--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
-     decimal, context: <span class="ectt-1095">harmonicWalls</span> <!--l. 7526--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When both sets of walls are defined (lower and upper), this keyword allows setting different
+<li class="itemize"><span class="colorbox" id="colorbox408"><a id="dx1-158011"></a><span class="ectt-1095">lowerWallConstant</span></span> — <span class="phvro8t-x-x-109">Force constant for the lower wall</span><br class="newline"/>Default: <span class="ectt-1095">forceConstant</span> <!--l. 7527--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
+     decimal, context: <span class="ectt-1095">harmonicWalls</span> <!--l. 7527--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When both sets of walls are defined (lower and upper), this keyword allows setting different
      force constants for them. As with <span class="ectt-1095">forceConstant</span>, the specified constant is divided internally
      by the square of the specific <span class="ectt-1095">width </span>of each variable (see also the equivalent keyword for the
-     harmonic restraint, <a href="#harmonic|forceConstant"><span class="ectt-1095">forceConstant</span></a>). The force constant reported in the output as “<!--l. 7526--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>",
+     harmonic restraint, <a href="#harmonic|forceConstant"><span class="ectt-1095">forceConstant</span></a>). The force constant reported in the output as “<!--l. 7527--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>",
      and used in the change of force constant scheme, is the geometric mean of <span class="ectt-1095">upperWallConstant</span>
      and <span class="ectt-1095">upperWallConstant</span>.
      </li>
@@ -6115,8 +6115,8 @@ intrinsically multi-dimensional).<br class="newline"/>
 </li>
 <li class="itemize"><span class="colorbox" id="colorbox410"><a id="dx1-158013"></a><span class="ectt-1095">targetForceConstant</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetForceConstant</span></a> (harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox411"><a id="dx1-158014"></a><span class="ectt-1095">targetForceConstant</span></span> — <span class="phvro8t-x-x-109">Change the force constant(s) towards this value</span><br class="newline"/><!--l. 7543--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
-     decimal, context: <span class="ectt-1095">harmonicWalls</span> <!--l. 7543--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This keyword allows changing either one or both of the wall force constants over time. In the
+<li class="itemize"><span class="colorbox" id="colorbox411"><a id="dx1-158014"></a><span class="ectt-1095">targetForceConstant</span></span> — <span class="phvro8t-x-x-109">Change the force constant(s) towards this value</span><br class="newline"/><!--l. 7544--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
+     decimal, context: <span class="ectt-1095">harmonicWalls</span> <!--l. 7544--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This keyword allows changing either one or both of the wall force constants over time. In the
      case that <span class="ectt-1095">lowerWallConstant </span>and <span class="ectt-1095">upperWallConstant </span>have the same value, the behavior of
      this keyword is identical to the corresponding keyword in the <span class="ectt-1095">harmonic </span>restraint; otherwise,
      the  change  schedule  is  applied  to  the  geometric  mean  of  the  two  constant.  When  only
@@ -6125,23 +6125,30 @@ intrinsically multi-dimensional).<br class="newline"/>
      possible to use two instances of <span class="ectt-1095">harmonicWalls</span>, and apply the changing schedule only to
      one of them.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox412"><a id="dx1-158015"></a><span class="ectt-1095">targetNumSteps</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetNumSteps</span></a> (harmonic restraints)
-                                                                                         
-                                                                                         
+<li class="itemize"><span class="colorbox" id="colorbox412"><a id="dx1-158015"></a><span class="ectt-1095">targetLowerWalls</span></span> — <span class="phvro8t-x-x-109">Change the lower wall value(s) towards these values</span><br class="newline"/><!--l. 7555--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
+     decimal, context: <span class="ectt-1095">harmonicWalls</span> <!--l. 7555--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This keyword allows changing the lower wall position over time. By default, this change is
+     continuous over <span class="ectt-1095">targetEquilSteps</span>. In that case, the non-equilibrium work performed can be
+     obtained by enabling <span class="ectt-1095">outputAccumulatedWork</span>. If <span class="ectt-1095">targetNumStages </span>is provided, the change
+     happens in the given number of increments. See <a href="#harmonic|targetNumStages"><span class="ectt-1095">targetNumStages</span></a> for details.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox413"><a id="dx1-158016"></a><span class="ectt-1095">lambdaExponent</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">lambdaExponent</span></a> (harmonic restraints)
+<li class="itemize"><span class="colorbox" id="colorbox413"><a id="dx1-158016"></a><span class="ectt-1095">targetUpperWalls</span></span> — <span class="phvro8t-x-x-109">Change the upper wall value(s) towards these values</span><br class="newline"/><!--l. 7564--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
+     decimal, context: <span class="ectt-1095">harmonicWalls</span> <!--l. 7564--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Analogous to <span class="ectt-1095">targetLowerWalls</span>.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox414"><a id="dx1-158017"></a><span class="ectt-1095">targetEquilSteps</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetEquilSteps</span></a> (harmonic restraints)
+<li class="itemize"><span class="colorbox" id="colorbox414"><a id="dx1-158017"></a><span class="ectt-1095">targetNumSteps</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetNumSteps</span></a> (harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox415"><a id="dx1-158018"></a><span class="ectt-1095">targetNumStages</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetNumStages</span></a> (harmonic restraints)
+<li class="itemize"><span class="colorbox" id="colorbox415"><a id="dx1-158018"></a><span class="ectt-1095">lambdaExponent</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">lambdaExponent</span></a> (harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox416"><a id="dx1-158019"></a><span class="ectt-1095">lambdaSchedule</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">lambdaSchedule</span></a> (harmonic restraints)
+<li class="itemize"><span class="colorbox" id="colorbox416"><a id="dx1-158019"></a><span class="ectt-1095">targetEquilSteps</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetEquilSteps</span></a> (harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox417"><a id="dx1-158020"></a><span class="ectt-1095">outputAccumulatedWork</span></span>  —   same   definition   as   <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">outputAccumulatedWork</span></a>  (harmonic
+<li class="itemize"><span class="colorbox" id="colorbox417"><a id="dx1-158020"></a><span class="ectt-1095">targetNumStages</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetNumStages</span></a> (harmonic restraints)
+     </li>
+<li class="itemize"><span class="colorbox" id="colorbox418"><a id="dx1-158021"></a><span class="ectt-1095">lambdaSchedule</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">lambdaSchedule</span></a> (harmonic restraints)
+     </li>
+<li class="itemize"><span class="colorbox" id="colorbox419"><a id="dx1-158022"></a><span class="ectt-1095">outputAccumulatedWork</span></span>  —   same   definition   as   <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">outputAccumulatedWork</span></a>  (harmonic
      restraints)
      </li>
-<li class="itemize"><a id="harmonicWalls|bypassExtendedLagrangian"></a> <span class="colorbox" id="colorbox418"><a id="dx1-158021"></a><span class="ectt-1095">bypassExtendedLagrangian</span></span> — <span class="phvro8t-x-x-109">Apply bias to actual colvars, bypassing extended coordinates</span><br class="newline"/>Default: <span class="ectt-1095">on</span> <!--l. 7563--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
-     context: <span class="ectt-1095">harmonicWalls</span> <!--l. 7563--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This option behaves as <a href="#colvarbias|bypassExtendedLagrangian"><span class="ectt-1095">bypassExtendedLagrangian</span></a> for other biases, but <span class="phvb8t-x-x-109">it defaults to </span><span class="ectt-1095">on</span><span class="phvb8t-x-x-109">,</span>
+<li class="itemize"><a id="harmonicWalls|bypassExtendedLagrangian"></a> <span class="colorbox" id="colorbox420"><a id="dx1-158023"></a><span class="ectt-1095">bypassExtendedLagrangian</span></span> — <span class="phvro8t-x-x-109">Apply bias to actual colvars, bypassing extended coordinates</span><br class="newline"/>Default: <span class="ectt-1095">on</span> <!--l. 7584--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
+     context: <span class="ectt-1095">harmonicWalls</span> <!--l. 7584--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This option behaves as <a href="#colvarbias|bypassExtendedLagrangian"><span class="ectt-1095">bypassExtendedLagrangian</span></a> for other biases, but <span class="phvb8t-x-x-109">it defaults to </span><span class="ectt-1095">on</span><span class="phvb8t-x-x-109">,</span>
 <span class="phvb8t-x-x-109">unlike in the general case</span>. Thus, by default, the <span class="ectt-1095">harmonicWalls </span>bias applies to the actual
      colvars, so that the distribution of the colvar between the walls is unaffected by the bias,
      which then applies a flat-bottom potential <span class="phvro8t-x-x-109">as a function of the colvar value</span>. This bias will
@@ -6150,96 +6157,94 @@ intrinsically multi-dimensional).<br class="newline"/>
 <span class="phvro8t-x-x-109">coordinate</span>. Conversely, this bias will then modify the distribution of the actual colvar value
      near the walls.
      </li></ul>
-<!--l. 7567--><p class="noindent"><span class="phvb8t-x-x-109">Example 1: </span>harmonic walls for one variable with two different force constants.</p>
-<div class="mdframed" id="mdframed-63">
-<!--l. 7568--><p class="noindent"></p><pre>harmonicWalls {<br class="newline"/>  name  mywalls<br class="newline"/>  colvars    dist<br class="newline"/>  lowerWalls  22.0 <br class="newline"/>  upperWalls  38.0 <br class="newline"/>  lowerWallConstant  2.0 <br class="newline"/>  upperWallConstant 10.0 <br class="newline"/>} </pre><!--l. 7577--><p class="noindent"></p>
-</div>
-<!--l. 7579--><p class="noindent"><span class="phvb8t-x-x-109">Example 2: </span>harmonic walls for two variables with a single force constant.</p>
-<div class="mdframed" id="mdframed-64">
-<!--l. 7580--><p class="noindent"></p><pre>harmonicWalls {<br class="newline"/>  name  mywalls<br class="newline"/>  colvars       phi    psi<br class="newline"/>  lowerWalls -180.0    0.0<br class="newline"/>  upperWalls    0.0  180.0<br class="newline"/>  forceConstant 5.0 <br class="newline"/>} </pre><!--l. 7588--><p class="noindent"></p>
-</div>
-<div class="flushright">
-<!--l. 7591--><p class="noindent">
-<a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 7591--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_linear"></a>
-<h4 class="subsectionHead"><span class="titlemark">7.11    </span> <a id="sec:colvarbias_linear"></a>Linear restraints</h4>
-<!--l. 7591--><p class="noindent"></p></div>
-<!--l. 7593--><p class="indent">   The <span class="ectt-1095">linear </span>keyword defines a linear potential: </p><table class="equation"><tr><td> <a id="x1-159001r49"></a>
-<!--l. 7594--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-<mi>V</mi> <mrow><mo fence="true" form="prefix"> (</mo><mrow><mi>ξ</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mi>k</mi> <mrow><mo fence="true" form="prefix"> (</mo><mrow><mfrac><mrow><mi>ξ</mi> <mo class="MathClass-bin">−</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
-<mrow><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow>
-</math></td><td class="eq-no">(49)</td></tr></table>
-<!--l. 7598--><p class="noindent">whose force is simply given by the constant <!--l. 7598--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo class="MathClass-bin">∕</mo><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></math>
-itself: </p><table class="equation"><tr><td> <a id="x1-159002r50"></a>
-<!--l. 7599--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-<mi>f</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo> <mo class="MathClass-rel">=</mo> <mi>k</mi><mo class="MathClass-bin">∕</mo><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub>
-</math></td><td class="eq-no">(50)</td></tr></table>
-<!--l. 7603--><p class="noindent">This type of bias is therefore most useful in situations where a <span class="phvro8t-x-x-109">constant force </span>is desired. As all other
-restraints, it can be defined on one or more CVs, with each contribution added to the total potential and the
-parameters <!--l. 7603--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></math>
-determining the relative magnitude for each.
-</p><!--l. 7605--><p class="noindent"><span class="phvb8t-x-x-109">Example: </span>A possible use case of the <span class="ectt-1095">linear </span>bias is mimicking a constant electric field acting on a
-specific particle, or the center of mass of many particles. In the following example, a linear restraint is
-applied on a <span class="ectt-1095">distanceZ </span>variable (<a href="#sec:cvc_distanceZ">5.3.2<!--tex4ht:ref: sec:cvc_distanceZ --></a>), generating a constant force parallel to the Z axis of magnitude
-5 <span class="phvro8t-x-x-109">energy unit</span>/<span class="phvro8t-x-x-109">length unit</span>:
+<!--l. 7588--><p class="noindent"><span class="phvb8t-x-x-109">Example 1: </span>harmonic walls for one variable with two different force constants.
                                                                                          
                                                                                          
 </p>
-<div class="mdframed" id="mdframed-65">
-<!--l. 7606--><p class="noindent"></p><pre>colvar {<br class="newline"/>  name z<br class="newline"/>  distanceZ {<br class="newline"/>    ...<br class="newline"/>  }<br class="newline"/>}<br class="newline"/><br class="newline"/>linear {<br class="newline"/>  colvars z<br class="newline"/>  forceConstant 5.0<br class="newline"/>  centers 0.0<br class="newline"/>} </pre><!--l. 7619--><p class="noindent"></p>
+<div class="mdframed" id="mdframed-63">
+<!--l. 7589--><p class="noindent"></p><pre>harmonicWalls {<br class="newline"/>  name  mywalls<br class="newline"/>  colvars    dist<br class="newline"/>  lowerWalls  22.0 <br class="newline"/>  upperWalls  38.0 <br class="newline"/>  lowerWallConstant  2.0 <br class="newline"/>  upperWallConstant 10.0 <br class="newline"/>} </pre><!--l. 7598--><p class="noindent"></p>
 </div>
-<!--l. 7639--><p class="indent">   Another useful application of a linear restraint is to enforce experimental constraints in a simulation,
+<!--l. 7600--><p class="noindent"><span class="phvb8t-x-x-109">Example 2: </span>harmonic walls for two variables with a single force constant.</p>
+<div class="mdframed" id="mdframed-64">
+<!--l. 7601--><p class="noindent"></p><pre>harmonicWalls {<br class="newline"/>  name  mywalls<br class="newline"/>  colvars       phi    psi<br class="newline"/>  lowerWalls -180.0    0.0<br class="newline"/>  upperWalls    0.0  180.0<br class="newline"/>  forceConstant 5.0 <br class="newline"/>} </pre><!--l. 7609--><p class="noindent"></p>
+</div>
+<div class="flushright">
+<!--l. 7612--><p class="noindent">
+<a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
+<!--l. 7612--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_linear"></a>
+<h4 class="subsectionHead"><span class="titlemark">7.11    </span> <a id="sec:colvarbias_linear"></a>Linear restraints</h4>
+<!--l. 7612--><p class="noindent"></p></div>
+<!--l. 7614--><p class="indent">   The <span class="ectt-1095">linear </span>keyword defines a linear potential: </p><table class="equation"><tr><td> <a id="x1-159001r49"></a>
+<!--l. 7615--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<mi>V</mi> <mrow><mo fence="true" form="prefix"> (</mo><mrow><mi>ξ</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mi>k</mi> <mrow><mo fence="true" form="prefix"> (</mo><mrow><mfrac><mrow><mi>ξ</mi> <mo class="MathClass-bin">−</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow>
+</math></td><td class="eq-no">(49)</td></tr></table>
+<!--l. 7619--><p class="noindent">whose force is simply given by the constant <!--l. 7619--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo class="MathClass-bin">∕</mo><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></math>
+itself: </p><table class="equation"><tr><td> <a id="x1-159002r50"></a>
+<!--l. 7620--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<mi>f</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo> <mo class="MathClass-rel">=</mo> <mi>k</mi><mo class="MathClass-bin">∕</mo><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub>
+</math></td><td class="eq-no">(50)</td></tr></table>
+<!--l. 7624--><p class="noindent">This type of bias is therefore most useful in situations where a <span class="phvro8t-x-x-109">constant force </span>is desired. As all other
+restraints, it can be defined on one or more CVs, with each contribution added to the total potential and the
+parameters <!--l. 7624--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></math>
+determining the relative magnitude for each.
+</p><!--l. 7626--><p class="noindent"><span class="phvb8t-x-x-109">Example: </span>A possible use case of the <span class="ectt-1095">linear </span>bias is mimicking a constant electric field acting on a
+specific particle, or the center of mass of many particles. In the following example, a linear restraint is
+applied on a <span class="ectt-1095">distanceZ </span>variable (<a href="#sec:cvc_distanceZ">5.3.2<!--tex4ht:ref: sec:cvc_distanceZ --></a>), generating a constant force parallel to the Z axis of magnitude
+5 <span class="phvro8t-x-x-109">energy unit</span>/<span class="phvro8t-x-x-109">length unit</span>:</p>
+<div class="mdframed" id="mdframed-65">
+<!--l. 7627--><p class="noindent"></p><pre>colvar {<br class="newline"/>  name z<br class="newline"/>  distanceZ {<br class="newline"/>    ...<br class="newline"/>  }<br class="newline"/>}<br class="newline"/><br class="newline"/>linear {<br class="newline"/>  colvars z<br class="newline"/>  forceConstant 5.0<br class="newline"/>  centers 0.0<br class="newline"/>} </pre><!--l. 7640--><p class="noindent"></p>
+</div>
+<!--l. 7660--><p class="indent">   Another useful application of a linear restraint is to enforce experimental constraints in a simulation,
 with a lower non-equilibrium work than e.g. harmonic restraints <span class="cite">[<a href="#XPitera2012">43</a>]</span>. There is generally a unique strength
 of bias for each CV center, which means you must know the bias force constant specifically for the center
 of the CV. This force constant may be found by using experiment directed simulation described in section
 <a href="#sec:colvarbias_alb">7.12<!--tex4ht:ref: sec:colvarbias_alb --></a>.
 </p>
 <ul class="itemize1">
-<li class="itemize"><span class="colorbox" id="colorbox419"><a id="dx1-159003"></a><span class="ectt-1095">name</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">name</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox421"><a id="dx1-159003"></a><span class="ectt-1095">name</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">name</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox420"><a id="dx1-159004"></a><span class="ectt-1095">colvars</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">colvars</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox422"><a id="dx1-159004"></a><span class="ectt-1095">colvars</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">colvars</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox421"><a id="dx1-159005"></a><span class="ectt-1095">outputEnergy</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">outputEnergy</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox423"><a id="dx1-159005"></a><span class="ectt-1095">outputEnergy</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">outputEnergy</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox422"><a id="dx1-159006"></a><span class="ectt-1095">forceConstant</span></span> — <span class="phvro8t-x-x-109">Scaled force constant (energy unit)</span><br class="newline"/>Default: <span class="ectt-1095">1.0</span> <!--l. 7659--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> Decimal,
-     context: <span class="ectt-1095">linear</span> <!--l. 7659--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This option defines a <span class="phvro8t-x-x-109">scaled </span>force constant <!--l. 7659--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
+<li class="itemize"><span class="colorbox" id="colorbox424"><a id="dx1-159006"></a><span class="ectt-1095">forceConstant</span></span> — <span class="phvro8t-x-x-109">Scaled force constant (energy unit)</span><br class="newline"/>Default: <span class="ectt-1095">1.0</span> <!--l. 7680--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> Decimal,
+     context: <span class="ectt-1095">linear</span> <!--l. 7680--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This option defines a <span class="phvro8t-x-x-109">scaled </span>force constant <!--l. 7680--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
      for the linear bias. To ensure consistency for multidimensional restraints, it is divided internally
      by  the  specific  <span class="ectt-1095">width </span>of  each  variable  (which  is  1  by  default),  so  that  all  variables  are
-     effectively dimensionless and of commensurate size. <span class="phvro8t-x-x-109">The values of </span><!--l. 7659--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo class="MathClass-bin">∕</mo><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></math>
+     effectively dimensionless and of commensurate size. <span class="phvro8t-x-x-109">The values of </span><!--l. 7680--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo class="MathClass-bin">∕</mo><msub><mrow><mi>w</mi></mrow><mrow><mi>ξ</mi></mrow></msub></math>
 <span class="phvro8t-x-x-109">are always printed when the restraint is defined.</span>
 </li>
-<li class="itemize"><span class="colorbox" id="colorbox423"><a id="dx1-159007"></a><span class="ectt-1095">centers</span></span> — <span class="phvro8t-x-x-109">Initial linear restraint centers</span><br class="newline"/><!--l. 7668--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> space-separated
-     list of colvar values, context: <span class="ectt-1095">linear</span> <!--l. 7668--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>These are analogous to the <a href="#harmonic|centers"><span class="ectt-1095">centers</span></a> keyword of the harmonic restraint. Although they do not
+<li class="itemize"><span class="colorbox" id="colorbox425"><a id="dx1-159007"></a><span class="ectt-1095">centers</span></span> — <span class="phvro8t-x-x-109">Initial linear restraint centers</span><br class="newline"/><!--l. 7689--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> space-separated
+     list of colvar values, context: <span class="ectt-1095">linear</span> <!--l. 7689--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>These are analogous to the <a href="#harmonic|centers"><span class="ectt-1095">centers</span></a> keyword of the harmonic restraint. Although they do not
      affect dynamics, they are here necessary to ensure a well-defined energy for the linear bias.
-                                                                                         
-                                                                                         
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox424"><a id="dx1-159008"></a><span class="ectt-1095">writeTIPMF</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">writeTIPMF</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox426"><a id="dx1-159008"></a><span class="ectt-1095">writeTIPMF</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">writeTIPMF</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox425"><a id="dx1-159009"></a><span class="ectt-1095">writeTISamples</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">writeTISamples</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox427"><a id="dx1-159009"></a><span class="ectt-1095">writeTISamples</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">writeTISamples</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox426"><a id="dx1-159010"></a><span class="ectt-1095">targetForceConstant</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetForceConstant</span></a> (Harmonic restraints)
+<li class="itemize"><span class="colorbox" id="colorbox428"><a id="dx1-159010"></a><span class="ectt-1095">targetForceConstant</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetForceConstant</span></a> (Harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox427"><a id="dx1-159011"></a><span class="ectt-1095">targetNumSteps</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetNumSteps</span></a> (Harmonic restraints)
+<li class="itemize"><span class="colorbox" id="colorbox429"><a id="dx1-159011"></a><span class="ectt-1095">targetNumSteps</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetNumSteps</span></a> (Harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox428"><a id="dx1-159012"></a><span class="ectt-1095">lambdaExponent</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">lambdaExponent</span></a> (Harmonic restraints)
+<li class="itemize"><span class="colorbox" id="colorbox430"><a id="dx1-159012"></a><span class="ectt-1095">lambdaExponent</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">lambdaExponent</span></a> (Harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox429"><a id="dx1-159013"></a><span class="ectt-1095">targetEquilSteps</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetEquilSteps</span></a> (Harmonic restraints)
+<li class="itemize"><span class="colorbox" id="colorbox431"><a id="dx1-159013"></a><span class="ectt-1095">targetEquilSteps</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetEquilSteps</span></a> (Harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox430"><a id="dx1-159014"></a><span class="ectt-1095">targetNumStages</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetNumStages</span></a> (Harmonic restraints)
+<li class="itemize"><span class="colorbox" id="colorbox432"><a id="dx1-159014"></a><span class="ectt-1095">targetNumStages</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">targetNumStages</span></a> (Harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox431"><a id="dx1-159015"></a><span class="ectt-1095">lambdaSchedule</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">lambdaSchedule</span></a> (Harmonic restraints)
+<li class="itemize"><span class="colorbox" id="colorbox433"><a id="dx1-159015"></a><span class="ectt-1095">lambdaSchedule</span></span> — same definition as <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">lambdaSchedule</span></a> (Harmonic restraints)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox432"><a id="dx1-159016"></a><span class="ectt-1095">outputAccumulatedWork</span></span>  —   same   definition   as   <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">outputAccumulatedWork</span></a>  (Harmonic
+<li class="itemize"><span class="colorbox" id="colorbox434"><a id="dx1-159016"></a><span class="ectt-1095">outputAccumulatedWork</span></span>  —   same   definition   as   <a href="#sec:colvarbias_harmonic"><span class="ectt-1095">outputAccumulatedWork</span></a>  (Harmonic
      restraints)
      </li></ul>
 <div class="flushright">
-<!--l. 7683--><p class="noindent">
+<!--l. 7704--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 7683--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_alb"></a>
+<!--l. 7704--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_alb"></a>
 <h4 class="subsectionHead"><span class="titlemark">7.12    </span> <a id="sec:colvarbias_alb"></a>Adaptive Linear Bias/Experiment Directed Simulation</h4>
-<!--l. 7683--><p class="noindent"></p></div>
-<!--l. 7685--><p class="indent">   Experiment directed simulation applies a linear bias with a changing force constant. Please cite White
+<!--l. 7704--><p class="noindent"></p></div>
+<!--l. 7706--><p class="indent">   Experiment directed simulation applies a linear bias with a changing force constant. Please cite White
 and Voth <span class="cite">[<a href="#XWhite2014">44</a>]</span> when using this feature. As opposed to that reference, the force constant here is scaled by
 the <span class="ectt-1095">width </span>corresponding to the biased colvar. In White and Voth, each force constant is scaled by the
 colvars set center. The bias converges to a linear bias, after which it will be the minimal possible bias. You
@@ -6250,154 +6255,152 @@ described in sections <a href="#sec:colvarbias_linear">7.11<!--tex4ht:ref: sec:c
 <span class="phvb8t-x-x-109">converged</span>.
 </p>
 <ul class="itemize1">
-<li class="itemize"><span class="colorbox" id="colorbox433"><a id="dx1-160001"></a><span class="ectt-1095">name</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">name</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox435"><a id="dx1-160001"></a><span class="ectt-1095">name</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">name</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox434"><a id="dx1-160002"></a><span class="ectt-1095">colvars</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">colvars</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox436"><a id="dx1-160002"></a><span class="ectt-1095">colvars</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">colvars</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox435"><a id="dx1-160003"></a><span class="ectt-1095">centers</span></span> — <span class="phvro8t-x-x-109">Collective variable centers</span><br class="newline"/><!--l. 7717--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> space-separated
-     list of colvar values, context: <span class="ectt-1095">alb</span> <!--l. 7717--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>The  desired  center  (equilibrium  values)  which  will  be  sought  during  the  adaptive  linear
+<li class="itemize"><span class="colorbox" id="colorbox437"><a id="dx1-160003"></a><span class="ectt-1095">centers</span></span> — <span class="phvro8t-x-x-109">Collective variable centers</span><br class="newline"/><!--l. 7738--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> space-separated
+     list of colvar values, context: <span class="ectt-1095">alb</span> <!--l. 7738--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>The  desired  center  (equilibrium  values)  which  will  be  sought  during  the  adaptive  linear
      biasing.  The  number  of  values  must  be  the  number  of  requested  colvars.  Each  value  is
      a  decimal  number  if  the  corresponding  colvar  returns  a  scalar,  a  “<span class="ectt-1095">(x, y, z)</span>"  triplet  if  it
      returns a unit vector or a vector, and a “<span class="ectt-1095">q0, q1, q2, q3)</span>" quadruplet if it returns a rotational
      quaternion. If a colvar has periodicities or symmetries, its closest image to the restraint center
      is considered when calculating the linear potential.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox436"><a id="dx1-160004"></a><span class="ectt-1095">updateFrequency</span></span> — <span class="phvro8t-x-x-109">The duration of updates</span><br class="newline"/><!--l. 7735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> An
-     integer, context: <span class="ectt-1095">alb</span> <!--l. 7735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This is, <!--l. 7735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>,
+<li class="itemize"><span class="colorbox" id="colorbox438"><a id="dx1-160004"></a><span class="ectt-1095">updateFrequency</span></span> — <span class="phvro8t-x-x-109">The duration of updates</span><br class="newline"/><!--l. 7756--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> An
+     integer, context: <span class="ectt-1095">alb</span> <!--l. 7756--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This is, <!--l. 7756--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>,
      the number of simulation steps to use for each update to the bias. This determines how long
-     the system requires to equilibrate after a change in force constant (<!--l. 7735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>),
-     how long statistics are collected for an iteration (<!--l. 7735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>),
-     and how quickly energy is added to the system (at most, <!--l. 7735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo class="MathClass-bin">∕</mo><mn>2</mn><mi>N</mi></math>,
-     where <!--l. 7735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>
+     the system requires to equilibrate after a change in force constant (<!--l. 7756--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>),
+     how long statistics are collected for an iteration (<!--l. 7756--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>),
+     and how quickly energy is added to the system (at most, <!--l. 7756--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo class="MathClass-bin">∕</mo><mn>2</mn><mi>N</mi></math>,
+     where <!--l. 7756--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>
      is  the  <span class="ectt-1095">forceRange</span>).  Until  the  force  constant  has  converged,  the  method  as  described  is
      an optimization procedure and not an integration of a particular statistical ensemble. It is
      important that each step should be uncorrelated from the last so that iterations are independent.
-     Therefore, <!--l. 7735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>
+     Therefore, <!--l. 7756--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>
      should be at least twice the autocorrelation time of the collective variable. The system should
-     also be able to dissipate energy as fast as <!--l. 7735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>,
-     which can be done by adjusting thermostat parameters. Practically, <!--l. 7735--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>
+                                                                                         
+                                                                                         
+     also be able to dissipate energy as fast as <!--l. 7756--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo class="MathClass-bin">∕</mo><mn>2</mn></math>,
+     which can be done by adjusting thermostat parameters. Practically, <!--l. 7756--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>
      has  been  tested  successfully  at  significantly  shorter  than  the  autocorrelation  time  of  the
      collective variables being biased and still converge correctly.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox437"><a id="dx1-160005"></a><span class="ectt-1095">forceRange</span></span> — <span class="phvro8t-x-x-109">The expected range of the force constant in units of energy</span><br class="newline"/>Default: 3 <!--l. 7750--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>b</mi></mrow></msub><mi>T</mi> </math> <!--l. 7750--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> A
-     space-separated list of decimal numbers, context: <span class="ectt-1095">alb</span> <!--l. 7750--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This is largest magnitude of the force constant which one expects. If this parameter is too low,
+<li class="itemize"><span class="colorbox" id="colorbox439"><a id="dx1-160005"></a><span class="ectt-1095">forceRange</span></span> — <span class="phvro8t-x-x-109">The expected range of the force constant in units of energy</span><br class="newline"/>Default: 3 <!--l. 7771--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>b</mi></mrow></msub><mi>T</mi> </math> <!--l. 7771--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> A
+     space-separated list of decimal numbers, context: <span class="ectt-1095">alb</span> <!--l. 7771--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This is largest magnitude of the force constant which one expects. If this parameter is too low,
      the simulation will not converge. If it is too high the simulation will waste time exploring values
-     that are too large. A value of 3 <!--l. 7750--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>b</mi></mrow></msub><mi>T</mi> </math>
+     that are too large. A value of 3 <!--l. 7771--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mi>b</mi></mrow></msub><mi>T</mi> </math>
      has worked well in the systems presented as a first choice. This parameter is dynamically
      adjusted over the course of a simulation. The benefit is that a bad guess for the forceRange
      can be corrected. However, this can lead to large amounts of energy being added over time
-                                                                                         
-                                                                                         
      to the system. To prevent this dynamic update, add <span class="ectt-1095">hardForceRange yes </span>as a parameter
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox438"><a id="dx1-160006"></a><span class="ectt-1095">rateMax</span></span> — <span class="phvro8t-x-x-109">The maximum rate of change of force constant</span><br class="newline"/><!--l. 7760--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> A
-     list of space-separated real numbers, context: <span class="ectt-1095">alb</span> <!--l. 7760--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This optional parameter controls how much energy is added to the system from this bias.
+<li class="itemize"><span class="colorbox" id="colorbox440"><a id="dx1-160006"></a><span class="ectt-1095">rateMax</span></span> — <span class="phvro8t-x-x-109">The maximum rate of change of force constant</span><br class="newline"/><!--l. 7781--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> A
+     list of space-separated real numbers, context: <span class="ectt-1095">alb</span> <!--l. 7781--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This optional parameter controls how much energy is added to the system from this bias.
      Tuning this separately from the <span class="ectt-1095">updateFrequency </span>and <span class="ectt-1095">forceRange </span>can allow for large bias
      changes but with a low <span class="ectt-1095">rateMax </span>prevents large energy changes that can lead to instability in
      the simulation.
      </li></ul>
 <div class="flushright">
-<!--l. 7765--><p class="noindent">
+<!--l. 7786--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 7765--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_histogram"></a>
+<!--l. 7786--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_histogram"></a>
 <h4 class="subsectionHead"><span class="titlemark">7.13    </span> <a id="sec:colvarbias_histogram"></a>Multidimensional histograms</h4>
-<!--l. 7765--><p class="noindent"></p></div>
-<!--l. 7767--><p class="indent">   The <span class="ectt-1095">histogram </span>feature is used to record the distribution of a set of collective variables in the form of a
+<!--l. 7786--><p class="noindent"></p></div>
+<!--l. 7788--><p class="indent">   The <span class="ectt-1095">histogram </span>feature is used to record the distribution of a set of collective variables in the form of a
 N-dimensional histogram. Defining such a histogram is generally useful for analysis purposes, but it has
 no effect on the simulation.
-</p><!--l. 7769--><p class="noindent"><span class="phvb8t-x-x-109">Example: </span>the two-dimensional histogram of a distance and an angle can be generated
+</p><!--l. 7790--><p class="noindent"><span class="phvb8t-x-x-109">Example: </span>the two-dimensional histogram of a distance and an angle can be generated
 using the configuration below. The histogram code requires that each variable is a scalar
 number that is confined within a pre-defined interval. The interval's boundaries may be
 specified by hand (e.g. through <a href="#colvar|lowerBoundary"><span class="ectt-1095">lowerBoundary</span></a> and <a href="#colvar|upperBoundary"><span class="ectt-1095">upperBoundary</span></a> in the variable definition),
 or auto-detected based on the type of function. In this example, the lower boundary for the
+                                                                                         
+                                                                                         
 distance variable “<span class="ectt-1095">r</span>" is automatically set to zero, and interval for the three-body angle “<span class="ectt-1095">theta</span>" is
-<!--l. 7769--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin">∘</mo></mrow></msup></math> and
-<!--l. 7769--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mn>8</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin">∘</mo></mrow></msup></math>: however, that
+<!--l. 7790--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin">∘</mo></mrow></msup></math> and
+<!--l. 7790--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mn>8</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin">∘</mo></mrow></msup></math>: however, that
 an upper boundary for the distance “<span class="ectt-1095">r</span>" still needs to be specified manually. The grid spacings for the two variables
-are <!--l. 7769--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo class="MathClass-punc">.</mo><mn>2</mn></math> <span class="phvro8t-x-x-109">length</span>
-<span class="phvro8t-x-x-109">unit</span>and <!--l. 7769--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo class="MathClass-punc">.</mo><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin">∘</mo></mrow></msup></math>,
+are <!--l. 7790--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo class="MathClass-punc">.</mo><mn>2</mn></math> <span class="phvro8t-x-x-109">length</span>
+<span class="phvro8t-x-x-109">unit</span>and <!--l. 7790--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo class="MathClass-punc">.</mo><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin">∘</mo></mrow></msup></math>,
 respectively.</p>
 <div class="mdframed" id="mdframed-66">
-<!--l. 7772--><p class="noindent"></p><pre>colvar {<br class="newline"/>  name r<br class="newline"/>  width 0.2<br class="newline"/>  upperBoundary 20.0<br class="newline"/>  distance { ... }<br class="newline"/>}<br class="newline"/><br class="newline"/>colvar {<br class="newline"/>  name theta<br class="newline"/>  width 3.0<br class="newline"/>  dihedral { ... }<br class="newline"/>}<br class="newline"/><br class="newline"/>histogram {<br class="newline"/>  name hist2d<br class="newline"/>  colvars r theta<br class="newline"/>}<br class="newline"/></pre><!--l. 7790--><p class="noindent"></p>
+<!--l. 7793--><p class="noindent"></p><pre>colvar {<br class="newline"/>  name r<br class="newline"/>  width 0.2<br class="newline"/>  upperBoundary 20.0<br class="newline"/>  distance { ... }<br class="newline"/>}<br class="newline"/><br class="newline"/>colvar {<br class="newline"/>  name theta<br class="newline"/>  width 3.0<br class="newline"/>  dihedral { ... }<br class="newline"/>}<br class="newline"/><br class="newline"/>histogram {<br class="newline"/>  name hist2d<br class="newline"/>  colvars r theta<br class="newline"/>}<br class="newline"/></pre><!--l. 7811--><p class="noindent"></p>
 </div>
-<!--l. 7793--><p class="indent">   The standard keywords below are used to control the histogram's computation and to select the
+<!--l. 7814--><p class="indent">   The standard keywords below are used to control the histogram's computation and to select the
 variables that are sampled. See also <a href="#sec:colvarbias_grid">7.1<!--tex4ht:ref: sec:colvarbias_grid --></a> for keywords used to define the grid, <a href="#sec:colvarbias_histogram_output">7.13.1<!--tex4ht:ref: sec:colvarbias_histogram_output --></a> for output
 parameters and <a href="#sec:colvarbias_histogram_vectors">7.13.2<!--tex4ht:ref: sec:colvarbias_histogram_vectors --></a> for more advanced keywords.
 </p>
 <ul class="itemize1">
-<li class="itemize"><span class="colorbox" id="colorbox439"><a id="dx1-161001"></a><span class="ectt-1095">name</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">name</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox441"><a id="dx1-161001"></a><span class="ectt-1095">name</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">name</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox440"><a id="dx1-161002"></a><span class="ectt-1095">colvars</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">colvars</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox442"><a id="dx1-161002"></a><span class="ectt-1095">colvars</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">colvars</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox441"><a id="dx1-161003"></a><span class="ectt-1095">stepZeroData</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">stepZeroData</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox443"><a id="dx1-161003"></a><span class="ectt-1095">stepZeroData</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">stepZeroData</span></a> (biasing and analysis methods)
      </li></ul>
-<!--l. 7804--><p class="indent">   Grid parameters for the histogram may be provided at the level of the individual variables, or via a
+<!--l. 7825--><p class="indent">   Grid parameters for the histogram may be provided at the level of the individual variables, or via a
 dedicated configuration block <span class="ectt-1095">grid { </span><span class="ectt-1095">…} </span>inside the configuration of this <span class="ectt-1095">histogram</span>. The options
 supported <span class="phvro8t-x-x-109">inside this block </span>are described in <a href="#sec:colvarbias_grid">7.1<!--tex4ht:ref: sec:colvarbias_grid --></a>.
-</p><!--l. 7807--><p class="indent">   Note that when <span class="ectt-1095">gatherVectorColvars </span>is <span class="ectt-1095">on</span>, each vector variable is automatically treated as a scalar,
+</p><!--l. 7828--><p class="indent">   Note that when <span class="ectt-1095">gatherVectorColvars </span>is <span class="ectt-1095">on</span>, each vector variable is automatically treated as a scalar,
 and a single value of each grid parameter should be provided for it.
 </p>
 <div class="flushright">
-<!--l. 7810--><p class="noindent">
+<!--l. 7831--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 7810--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_histogram_output"></a>
+<!--l. 7831--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_histogram_output"></a>
 <h5 class="subsubsectionHead"><span class="titlemark">7.13.1    </span> <a id="sec:colvarbias_histogram_output"></a>Output options for multi-dimensional histograms</h5>
-<!--l. 7810--><p class="noindent"></p></div>
-<!--l. 7812--><p class="indent">   The accumulated histogram is written in the Colvars state file, allowing for its accumulation
+<!--l. 7831--><p class="noindent"></p></div>
+<!--l. 7833--><p class="indent">   The accumulated histogram is written in the Colvars state file, allowing for its accumulation
 across continued runs. Additionally, the following files are written depending on the histogram's
 dimensionality:
 </p>
 <ul class="itemize1">
-<li class="itemize"><span class="colorbox" id="colorbox442"><a id="dx1-162001"></a><span class="ectt-1095">outputFreq</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">outputFreq</span></a> (biasing and analysis methods)
-                                                                                         
-                                                                                         
+<li class="itemize"><span class="colorbox" id="colorbox444"><a id="dx1-162001"></a><span class="ectt-1095">outputFreq</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">outputFreq</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox443"><a id="dx1-162002"></a><span class="ectt-1095">outputFile</span></span> — <span class="phvro8t-x-x-109">Write the histogram to a file</span><br class="newline"/>Default: <span class="phvro8t-x-x-109">outputName</span><span class="ectt-1095">.</span><!--l. 7827--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ectt-1095">name</span><!--l. 7827--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ectt-1095">.dat</span> <!--l. 7827--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> UNIX
-     filename, context: <span class="ectt-1095">histogram</span> <!--l. 7827--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Name of the file containing histogram data (multicolumn format, see <a href="#sec:colvar_multicolumn_grid">4.7.5<!--tex4ht:ref: sec:colvar_multicolumn_grid --></a>), which is written
+<li class="itemize"><span class="colorbox" id="colorbox445"><a id="dx1-162002"></a><span class="ectt-1095">outputFile</span></span> — <span class="phvro8t-x-x-109">Write the histogram to a file</span><br class="newline"/>Default: <span class="phvro8t-x-x-109">outputName</span><span class="ectt-1095">.</span><!--l. 7848--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ectt-1095">name</span><!--l. 7848--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ectt-1095">.dat</span> <!--l. 7848--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> UNIX
+     filename, context: <span class="ectt-1095">histogram</span> <!--l. 7848--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Name of the file containing histogram data (multicolumn format, see <a href="#sec:colvar_multicolumn_grid">4.7.5<!--tex4ht:ref: sec:colvar_multicolumn_grid --></a>), which is written
      every <a href="#colvarbias|outputFreq"><span class="ectt-1095">outputFreq</span></a> steps. If <span class="ectt-1095">outputFile </span>is set to <span class="ectt-1095">none</span>, the file is not written.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox444"><a id="dx1-162003"></a><span class="ectt-1095">outputFileDX</span></span> — <span class="phvro8t-x-x-109">Write the histogram to a file</span><br class="newline"/>Default: <span class="phvro8t-x-x-109">outputName</span><span class="ectt-1095">.</span><!--l. 7840--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ectt-1095">name</span><!--l. 7840--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ectt-1095">.dx</span> <!--l. 7840--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> UNIX
-     filename, context: <span class="ectt-1095">histogram</span> <!--l. 7840--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Name of the file containing histogram data (OpenDX format), which is written every <a href="#colvarbias|outputFreq"><span class="ectt-1095">outputFreq</span></a>
+<li class="itemize"><span class="colorbox" id="colorbox446"><a id="dx1-162003"></a><span class="ectt-1095">outputFileDX</span></span> — <span class="phvro8t-x-x-109">Write the histogram to a file</span><br class="newline"/>Default: <span class="phvro8t-x-x-109">outputName</span><span class="ectt-1095">.</span><!--l. 7861--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ectt-1095">name</span><!--l. 7861--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ectt-1095">.dx</span> <!--l. 7861--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> UNIX
+     filename, context: <span class="ectt-1095">histogram</span> <!--l. 7861--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Name of the file containing histogram data (OpenDX format), which is written every <a href="#colvarbias|outputFreq"><span class="ectt-1095">outputFreq</span></a>
      steps.  For  the  special  case  of  3  variables,  VMD  may  be  used  to  visualize  this  file.  This
      file  is  written  by  default  if  the  dimension  is  3  or  more  (you  cannot  visualize  it  easily  for
      dimensions  4  and  above,  but  the  DX  format  is  still  more  compact  than  the  multicolumn
      format). If <span class="ectt-1095">outputFileDX </span>is set to <span class="ectt-1095">none</span>, the file is not written.
                                                                                          <div class="flushright">
-<!--l. 7842--><p class="noindent">
+<!--l. 7863--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 7842--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_histogram_vectors"></a>
+<!--l. 7863--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_histogram_vectors"></a>
 <h5 class="subsubsectionHead"><span class="titlemark">7.13.2    </span> <a id="sec:colvarbias_histogram_vectors"></a>Histogramming vector variables</h5>
-<!--l. 7842--><p class="noindent"></p></div>
+<!--l. 7863--><p class="noindent"></p></div>
 </li>
-<li class="itemize"><span class="colorbox" id="colorbox445"><a id="dx1-163001"></a><span class="ectt-1095">gatherVectorColvars</span></span> — <span class="phvro8t-x-x-109">Treat vector variables as multiple observations of a scalar</span>
-<span class="phvro8t-x-x-109">variable?</span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 7855--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> UNIX filename,
-     context: <span class="ectt-1095">histogram</span> <!--l. 7855--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When this is set to <span class="ectt-1095">on</span>, the components of a multi-dimensional colvar (e.g. one based on
+<li class="itemize"><span class="colorbox" id="colorbox447"><a id="dx1-163001"></a><span class="ectt-1095">gatherVectorColvars</span></span> — <span class="phvro8t-x-x-109">Treat vector variables as multiple observations of a scalar</span>
+<span class="phvro8t-x-x-109">variable?</span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 7876--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> UNIX filename,
+     context: <span class="ectt-1095">histogram</span> <!--l. 7876--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When this is set to <span class="ectt-1095">on</span>, the components of a multi-dimensional colvar (e.g. one based on
      <span class="ectt-1095">cartesian</span>, <span class="ectt-1095">distancePairs</span>, or a vector of scalar numbers given by <span class="ectt-1095">scriptedFunction</span>)
      are treated as multiple observations of a scalar variable. This results in the histogram
      being accumulated multiple times for each simulation step or iteration of <span class="ectt-1095">cv update</span>).
      When multiple vector variables are included in <span class="ectt-1095">histogram</span>, these must have the
      same length because their components are accumulated together. For example, if
-     <!--l. 7855--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>,
-     <!--l. 7855--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math> and
-     <!--l. 7855--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>τ</mi></math>
+     <!--l. 7876--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>,
+     <!--l. 7876--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math> and
+     <!--l. 7876--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>τ</mi></math>
      are three variables of dimensions 5, 5 and 1, respectively, for each iteration 5 triplets
-                                                                                         
-                                                                                         
-     <!--l. 7855--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">(</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-punc">,</mo><msub><mrow><mi>λ</mi></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-punc">,</mo><mi>τ</mi><mo class="MathClass-close">)</mo></math>
-     (<!--l. 7855--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi> <mo class="MathClass-rel">=</mo> <mn>1</mn><mo class="MathClass-punc">,</mo><mi class="MathClass-op">…</mi><mo> &amp;ApplyFunction;<!--FUNCTION APPLICATION--></mo><mn>5</mn></math>)
+     <!--l. 7876--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">(</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-punc">,</mo><msub><mrow><mi>λ</mi></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-punc">,</mo><mi>τ</mi><mo class="MathClass-close">)</mo></math>
+     (<!--l. 7876--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi> <mo class="MathClass-rel">=</mo> <mn>1</mn><mo class="MathClass-punc">,</mo><mi class="MathClass-op">…</mi><mo> &amp;ApplyFunction;<!--FUNCTION APPLICATION--></mo><mn>5</mn></math>)
      are accumulated into a 3-dimensional histogram.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox446"><a id="dx1-163002"></a><span class="ectt-1095">weights</span></span> — <span class="phvro8t-x-x-109">Relative contributions of each vector component to the histogram</span><br class="newline"/>Default: all weights equal to 1 <!--l. 7866--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> list
+<li class="itemize"><span class="colorbox" id="colorbox448"><a id="dx1-163002"></a><span class="ectt-1095">weights</span></span> — <span class="phvro8t-x-x-109">Relative contributions of each vector component to the histogram</span><br class="newline"/>Default: all weights equal to 1 <!--l. 7887--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> list
      of  space-separated  decimals,  context:
-     <span class="ectt-1095">histogram</span> <!--l. 7866--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When <span class="ectt-1095">gatherVectorColvars </span>is <span class="ectt-1095">on</span>, the components of each multi-dimensional
+     <span class="ectt-1095">histogram</span> <!--l. 7887--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>When <span class="ectt-1095">gatherVectorColvars </span>is <span class="ectt-1095">on</span>, the components of each multi-dimensional
      colvar are accumulated with a different weight. For example, if
-     <!--l. 7866--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> and
-     <!--l. 7866--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math>
+     <!--l. 7887--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> and
+     <!--l. 7887--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math>
      are two distinct <span class="ectt-1095">cartesian </span>variables defined on the same group of atoms, the corresponding 2D
      histogram can be weighted on a per-atom basis: to compute an electron density map, it
      is possible to use <span class="ectt-1095">weights [$sel get atomicnumber] </span>in the definition of <span class="ectt-1095">histogram</span>.
      </li></ul>
-<!--l. 7870--><p class="indent">   As with any other biasing and analysis method, when a histogram is applied to an extended-system
+<!--l. 7891--><p class="indent">   As with any other biasing and analysis method, when a histogram is applied to an extended-system
 colvar (<a href="#sec:colvar_extended">5.23<!--tex4ht:ref: sec:colvar_extended --></a>), it accesses the value of the extended coordinate rather than that of the actual
 colvar. This can be overridden by enabling the <a href="#colvarbias|bypassExtendedLagrangian"><span class="ectt-1095">bypassExtendedLagrangian</span></a> option. A <span class="phvro8t-x-x-109">joint</span>
 <span class="phvro8t-x-x-109">histogram </span>of the actual colvar and the extended coordinate may be collected by specifying the
@@ -6406,123 +6409,125 @@ the first instance will be understood as the actual colvar, and the second, as t
 coordinate.
 </p>
 <ul class="itemize1">
-<li class="itemize"><span class="colorbox" id="colorbox447"><a id="dx1-163003"></a><span class="ectt-1095">bypassExtendedLagrangian</span></span> — same definition as <a href="#colvarbias|bypassExtendedLagrangian"><span class="ectt-1095">bypassExtendedLagrangian</span></a> (biasing and
+<li class="itemize"><span class="colorbox" id="colorbox449"><a id="dx1-163003"></a><span class="ectt-1095">bypassExtendedLagrangian</span></span> — same definition as <a href="#colvarbias|bypassExtendedLagrangian"><span class="ectt-1095">bypassExtendedLagrangian</span></a> (biasing and
      analysis methods)</li></ul>
 <div class="flushright">
-<!--l. 7946--><p class="noindent">
+<!--l. 7967--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 7946--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_restraint_histogram"></a>
+<!--l. 7967--><p class="noindent"> </p><div class="heading"> <a id="sec:colvarbias_restraint_histogram"></a>
 <h4 class="subsectionHead"><span class="titlemark">7.14    </span> <a id="sec:colvarbias_restraint_histogram"></a>Probability distribution-restraints</h4>
-<!--l. 7946--><p class="noindent"></p></div>
-<!--l. 7948--><p class="indent">   The <span class="ectt-1095">histogramRestraint </span>bias implements a continuous potential of many variables (or of a single
+<!--l. 7967--><p class="noindent"></p></div>
+<!--l. 7969--><p class="indent">   The <span class="ectt-1095">histogramRestraint </span>bias implements a continuous potential of many variables (or of a single
 high-dimensional variable) aimed at reproducing a one-dimensional statistical distribution that is provided by the
-user. The <!--l. 7949--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math>
-variables <!--l. 7949--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">(</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mi class="MathClass-op">…</mi><mo> &amp;ApplyFunction;<!--FUNCTION APPLICATION--></mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub><mo class="MathClass-close">)</mo></math>
+user. The <!--l. 7970--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math>
+variables <!--l. 7970--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">(</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mi class="MathClass-op">…</mi><mo> &amp;ApplyFunction;<!--FUNCTION APPLICATION--></mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub><mo class="MathClass-close">)</mo></math>
 are interpreted as multiple observations of a random variable
-                                                                                         
-                                                                                         
-<!--l. 7949--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+<!--l. 7970--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
 with unknown probability distribution. The potential is minimized when the histogram
-<!--l. 7950--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>, estimated as a sum of Gaussian
-functions centered at <!--l. 7950--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">(</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mi class="MathClass-op">…</mi><mo> &amp;ApplyFunction;<!--FUNCTION APPLICATION--></mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub><mo class="MathClass-close">)</mo></math>, is equal
-to the reference histogram <!--l. 7950--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>:
+<!--l. 7971--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>, estimated as a sum of Gaussian
+functions centered at <!--l. 7971--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">(</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mi class="MathClass-op">…</mi><mo> &amp;ApplyFunction;<!--FUNCTION APPLICATION--></mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub><mo class="MathClass-close">)</mo></math>, is equal
+to the reference histogram <!--l. 7971--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>:
 </p><table class="equation"><tr><td> <a id="eq:colvarbias_restraint_histogram"></a>
-<!--l. 7951--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<!--l. 7972--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
 <mi>V</mi> <mrow><mo fence="true" form="prefix"> (</mo><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc">,</mo><mi class="MathClass-op">…</mi><mo> &amp;ApplyFunction;<!--FUNCTION APPLICATION--></mo><mo class="MathClass-punc">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>M</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mfrac><mrow><mn>1</mn></mrow>
 <mrow><mn>2</mn></mrow></mfrac><mi>k</mi><mo>∫
  <!--nolimits--></mo><!--nolimits--><msup><mrow><mrow><mo fence="true" form="prefix"> (</mo><mrow><mi>h</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo><mo class="MathClass-bin">−</mo><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mstyle mathvariant="normal"><mi>d</mi></mstyle><mi>ξ</mi>
 </math></td><td class="eq-no">(51)</td></tr></table>
 <table class="equation"><tr><td> <a id="eq:colvarbias_restraint_histogram_gaussian"></a>
-<!--l. 7955--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<!--l. 7976--><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
 <mi>h</mi> <mrow><mo fence="true" form="prefix"> (</mo><mrow><mi>ξ</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-rel">=</mo> <mfrac><mrow><mn>1</mn></mrow>
 <mrow><mi>M</mi><msqrt><mrow><mn>2</mn><mi>π</mi><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></msqrt></mrow></mfrac><munderover accent="false" accentunder="false"><mrow><mo>∑</mo></mrow><mrow><mi>i</mi><mo class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow><mi>M</mi></mrow></munderover><mi class="qopname">exp</mi><mo> &amp;ApplyFunction;<!--FUNCTION APPLICATION--> </mo><!--nolimits--> <mrow><mo fence="true" form="prefix"> (</mo><mrow><mo class="MathClass-bin">−</mo><mfrac><mrow><msup><mrow><mo class="MathClass-open">(</mo><mi>ξ</mi> <mo class="MathClass-bin">−</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-close">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow>
 <mrow><mn>2</mn><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow>
 </math></td><td class="eq-no">(52)</td></tr></table>
-<!--l. 7959--><p class="indent">   When used in combination with a <span class="ectt-1095">distancePairs </span>multi-dimensional variable, this bias
+<!--l. 7980--><p class="indent">   When used in combination with a <span class="ectt-1095">distancePairs </span>multi-dimensional variable, this bias
 implements the refinement algorithm against ESR/DEER experiments published by Shen <span class="phvro8t-x-x-109">et al</span>
 <span class="cite">[<a href="#XShen2015">45</a>]</span>.
-</p><!--l. 7961--><p class="indent">   This bias behaves similarly to the <span class="ectt-1095">histogram </span>bias with the <span class="ectt-1095">gatherVectorColvars </span>option, with the
+                                                                                         
+                                                                                         
+</p><!--l. 7982--><p class="indent">   This bias behaves similarly to the <span class="ectt-1095">histogram </span>bias with the <span class="ectt-1095">gatherVectorColvars </span>option, with the
 important difference that <span class="phvro8t-x-x-109">all </span>variables are gathered, resulting in a one-dimensional histogram. Future
 versions will include support for multi-dimensional histograms.
-</p><!--l. 7964--><p class="indent">   The list of options is as follows: </p>
+</p><!--l. 7985--><p class="indent">   The list of options is as follows: </p>
 <ul class="itemize1">
-<li class="itemize"><span class="colorbox" id="colorbox448"><a id="dx1-164003"></a><span class="ectt-1095">name</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">name</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox450"><a id="dx1-164003"></a><span class="ectt-1095">name</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">name</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox449"><a id="dx1-164004"></a><span class="ectt-1095">colvars</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">colvars</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox451"><a id="dx1-164004"></a><span class="ectt-1095">colvars</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">colvars</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox450"><a id="dx1-164005"></a><span class="ectt-1095">outputEnergy</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">outputEnergy</span></a> (biasing and analysis methods)
+<li class="itemize"><span class="colorbox" id="colorbox452"><a id="dx1-164005"></a><span class="ectt-1095">outputEnergy</span></span> — same definition as <a href="#sec:colvarbias"><span class="ectt-1095">outputEnergy</span></a> (biasing and analysis methods)
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox451"><a id="dx1-164006"></a><span class="ectt-1095">lowerBoundary</span></span> — <span class="phvro8t-x-x-109">Lower boundary of the colvar grid</span><br class="newline"/><!--l. 7979--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> decimal,
-     context: <span class="ectt-1095">histogramRestraint</span> <!--l. 7979--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the lowest end of the interval where the reference distribution <!--l. 7979--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
+<li class="itemize"><span class="colorbox" id="colorbox453"><a id="dx1-164006"></a><span class="ectt-1095">lowerBoundary</span></span> — <span class="phvro8t-x-x-109">Lower boundary of the colvar grid</span><br class="newline"/><!--l. 8000--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> decimal,
+     context: <span class="ectt-1095">histogramRestraint</span> <!--l. 8000--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the lowest end of the interval where the reference distribution <!--l. 8000--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
      is defined. Exactly one value must be provided, because only one-dimensional histograms
      are supported by the current version.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox452"><a id="dx1-164007"></a><span class="ectt-1095">upperBoundary</span></span> — analogous to <span class="ectt-1095">lowerBoundary</span>
+<li class="itemize"><span class="colorbox" id="colorbox454"><a id="dx1-164007"></a><span class="ectt-1095">upperBoundary</span></span> — analogous to <span class="ectt-1095">lowerBoundary</span>
 </li>
-<li class="itemize"><span class="colorbox" id="colorbox453"><a id="dx1-164008"></a><span class="ectt-1095">width</span></span> — <span class="phvro8t-x-x-109">Width of the colvar grid</span><br class="newline"/><!--l. 7991--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
-     decimal, context: <span class="ectt-1095">histogramRestraint</span> <!--l. 7991--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the spacing of the grid where the reference distribution <!--l. 7991--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
+<li class="itemize"><span class="colorbox" id="colorbox455"><a id="dx1-164008"></a><span class="ectt-1095">width</span></span> — <span class="phvro8t-x-x-109">Width of the colvar grid</span><br class="newline"/><!--l. 8012--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
+     decimal, context: <span class="ectt-1095">histogramRestraint</span> <!--l. 8012--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the spacing of the grid where the reference distribution <!--l. 8012--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
      is defined.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox454"><a id="dx1-164009"></a><span class="ectt-1095">gaussianSigma</span></span> — <span class="phvro8t-x-x-109">Standard deviation of the approximating Gaussian</span><br class="newline"/>Default: 2 <!--l. 8001--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>
-<span class="ectt-1095">width</span> <!--l. 8001--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
-     decimal, context: <span class="ectt-1095">histogramRestraint</span> <!--l. 8001--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the parameter <!--l. 8001--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+<li class="itemize"><span class="colorbox" id="colorbox456"><a id="dx1-164009"></a><span class="ectt-1095">gaussianSigma</span></span> — <span class="phvro8t-x-x-109">Standard deviation of the approximating Gaussian</span><br class="newline"/>Default: 2 <!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin">×</mo></math>
+<span class="ectt-1095">width</span> <!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
+     decimal, context: <span class="ectt-1095">histogramRestraint</span> <!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the parameter <!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
      in eq. <a href="#eq:colvarbias_restraint_histogram_gaussian">52<!--tex4ht:ref: eq:colvarbias_restraint_histogram_gaussian --></a>.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox455"><a id="dx1-164010"></a><span class="ectt-1095">forceConstant</span></span> — <span class="phvro8t-x-x-109">Force constant (energy unit)</span><br class="newline"/>Default: <span class="ectt-1095">1.0</span> <!--l. 8011--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
-     decimal, context: <span class="ectt-1095">histogramRestraint</span> <!--l. 8011--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the parameter <!--l. 8011--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
+<li class="itemize"><span class="colorbox" id="colorbox457"><a id="dx1-164010"></a><span class="ectt-1095">forceConstant</span></span> — <span class="phvro8t-x-x-109">Force constant (energy unit)</span><br class="newline"/>Default: <span class="ectt-1095">1.0</span> <!--l. 8032--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> positive
+     decimal, context: <span class="ectt-1095">histogramRestraint</span> <!--l. 8032--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the parameter <!--l. 8032--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
      in eq. <a href="#eq:colvarbias_restraint_histogram">51<!--tex4ht:ref: eq:colvarbias_restraint_histogram --></a>.
+                                                                                         
+                                                                                         
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox456"><a id="dx1-164011"></a><span class="ectt-1095">refHistogram</span></span> — <span class="phvro8t-x-x-109">Reference histogram </span><!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math><br class="newline"/><!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> space-separated
-     list of <!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math>
-     positive decimals, context: <span class="ectt-1095">histogramRestraint</span> <!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Provides the values of <!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
+<li class="itemize"><span class="colorbox" id="colorbox458"><a id="dx1-164011"></a><span class="ectt-1095">refHistogram</span></span> — <span class="phvro8t-x-x-109">Reference histogram </span><!--l. 8043--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math><br class="newline"/><!--l. 8043--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> space-separated
+     list of <!--l. 8043--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math>
+     positive decimals, context: <span class="ectt-1095">histogramRestraint</span> <!--l. 8043--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Provides the values of <!--l. 8043--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
      consecutively. The mid-point convention is used, i.e. the first point that should be included is
-     for <!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
-     = <span class="ectt-1095">lowerBoundary</span>+<span class="ectt-1095">width</span>/2. If the integral of <!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
-     is not normalized to 1, <!--l. 8022--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
+     for <!--l. 8043--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+     = <span class="ectt-1095">lowerBoundary</span>+<span class="ectt-1095">width</span>/2. If the integral of <!--l. 8043--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
+     is not normalized to 1, <!--l. 8043--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
      is rescaled automatically before use.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox457"><a id="dx1-164012"></a><span class="ectt-1095">refHistogramFile</span></span> — <span class="phvro8t-x-x-109">Reference histogram </span><!--l. 8033--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math><br class="newline"/><!--l. 8033--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> UNIX
-     file name, context: <span class="ectt-1095">histogramRestraint</span> <!--l. 8033--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Provides the values of <!--l. 8033--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
+<li class="itemize"><span class="colorbox" id="colorbox459"><a id="dx1-164012"></a><span class="ectt-1095">refHistogramFile</span></span> — <span class="phvro8t-x-x-109">Reference histogram </span><!--l. 8054--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math><br class="newline"/><!--l. 8054--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> UNIX
+     file name, context: <span class="ectt-1095">histogramRestraint</span> <!--l. 8054--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Provides the values of <!--l. 8054--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
      as contents of the corresponding file (mutually exclusive with <span class="ectt-1095">refHistogram</span>). The format is
-     that of a text file, with each line containing the space-separated values of <!--l. 8033--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
-     and <!--l. 8033--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>.
+     that of a text file, with each line containing the space-separated values of <!--l. 8054--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ξ</mi></math>
+     and <!--l. 8054--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>.
      The same numerical conventions as <span class="ectt-1095">refHistogram </span>are used.
      </li>
-<li class="itemize"><span class="colorbox" id="colorbox458"><a id="dx1-164013"></a><span class="ectt-1095">writeHistogram</span></span> — <span class="phvro8t-x-x-109">Periodically write the instantaneous histogram </span><!--l. 8042--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 8042--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
-     context: <span class="ectt-1095">metadynamics</span> <!--l. 8042--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If <span class="ectt-1095">on</span>, the histogram <!--l. 8042--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
-     is written every <span class="ectt-1095">colvarsRestartFrequency </span>steps to a file with the name <span class="phvro8t-x-x-109">outputName</span><span class="ectt-1095">.</span><!--l. 8042--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ectt-1095">name</span><!--l. 8042--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ectt-1095">.hist.dat</span>This
-     is useful to diagnose the convergence of <!--l. 8043--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
-     against <!--l. 8043--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>.
+<li class="itemize"><span class="colorbox" id="colorbox460"><a id="dx1-164013"></a><span class="ectt-1095">writeHistogram</span></span> — <span class="phvro8t-x-x-109">Periodically write the instantaneous histogram </span><!--l. 8063--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 8063--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
+     context: <span class="ectt-1095">metadynamics</span> <!--l. 8063--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If <span class="ectt-1095">on</span>, the histogram <!--l. 8063--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
+     is written every <span class="ectt-1095">colvarsRestartFrequency </span>steps to a file with the name <span class="phvro8t-x-x-109">outputName</span><span class="ectt-1095">.</span><!--l. 8063--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&lt;</mo></math><span class="ectt-1095">name</span><!--l. 8063--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mo class="MathClass-rel">&gt;</mo></math><span class="ectt-1095">.hist.dat</span>This
+     is useful to diagnose the convergence of <!--l. 8064--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>
+     against <!--l. 8064--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>h</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open">(</mo><mi>ξ</mi><mo class="MathClass-close">)</mo></math>.
      </li></ul>
 <div class="flushright">
-<!--l. 8050--><p class="noindent">
+<!--l. 8071--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 8050--><p class="noindent"> </p><div class="heading"> <a id="sec:scripted_biases"></a>
+<!--l. 8071--><p class="noindent"> </p><div class="heading"> <a id="sec:scripted_biases"></a>
 <h4 class="subsectionHead"><span class="titlemark">7.15    </span> <a id="sec:scripted_biases"></a>Defining scripted biases</h4>
-<!--l. 8050--><p class="noindent"></p></div>
-<!--l. 8052--><p class="indent">   Rather than using the biasing methods described above, it is possible to apply biases provided at run
+<!--l. 8071--><p class="noindent"></p></div>
+<!--l. 8073--><p class="indent">   Rather than using the biasing methods described above, it is possible to apply biases provided at run
 time as a Tcl script. This option, also available in NAMD, can be useful to test a new algorithm to be used
 in a MD simulation.
 </p>
 <ul class="itemize1">
-<li class="itemize"><a id="Colvars-global|scriptedColvarForces"></a> <span class="colorbox" id="colorbox459"><a id="dx1-165001"></a><span class="ectt-1095">scriptedColvarForces</span></span> — <span class="phvro8t-x-x-109">Enable custom, scripted forces on colvars </span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 8070--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
-     context: global <!--l. 8070--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If this flag is enabled, a Tcl procedure named <span class="ectt-1095">calc_colvar_forces </span>accepting one parameter
+<li class="itemize"><a id="Colvars-global|scriptedColvarForces"></a> <span class="colorbox" id="colorbox461"><a id="dx1-165001"></a><span class="ectt-1095">scriptedColvarForces</span></span> — <span class="phvro8t-x-x-109">Enable custom, scripted forces on colvars </span><br class="newline"/>Default: <span class="ectt-1095">off</span> <!--l. 8091--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
+     context: global <!--l. 8091--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>If this flag is enabled, a Tcl procedure named <span class="ectt-1095">calc_colvar_forces </span>accepting one parameter
      should be defined by the user. It is executed at each timestep, with the current step number
      as parameter, between the calculation of colvars and the application of bias forces. This
      procedure may use the <span class="ectt-1095">cv </span>command to access the values of colvars (e.g. <span class="ectt-1095">cv colvar xi</span>
 <span class="ectt-1095">value</span>), apply forces on them (<span class="ectt-1095">cv colvar xi addforce $F</span>) or add energy to the simulation
      system (<span class="ectt-1095">cv addenergy $E</span>), effectively defining custom collective variable biases.</li></ul>
 <div class="flushright">
-<!--l. 8074--><p class="noindent">
+<!--l. 8095--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 8074--><p class="noindent"> </p><div class="heading"> <a id="sec:cv_scripting_opt"></a>
+<!--l. 8095--><p class="noindent"> </p><div class="heading"> <a id="sec:cv_scripting_opt"></a>
 <h4 class="subsectionHead"><span class="titlemark">7.16    </span> <a id="sec:cv_scripting_opt"></a>Performance of scripted biases</h4>
-<!--l. 8074--><p class="noindent"></p></div>
-<!--l. 8076--><p class="indent">   If concurrent computation over multiple threads is available (this is indicated by the message
+<!--l. 8095--><p class="noindent"></p></div>
+<!--l. 8097--><p class="indent">   If concurrent computation over multiple threads is available (this is indicated by the message
 “SMP parallelism is available." printed at initialization time), it is useful to take advantage of
 the scripting interface to combine many components, all computed in parallel, into a single
 variable.
-</p><!--l. 8078--><p class="indent">   The default SMP schedule is the following:
+</p><!--l. 8099--><p class="indent">   The default SMP schedule is the following:
      </p><ol class="enumerate1">
 <li class="enumerate" id="x1-166002x1">distribute the computation of all components across available threads;
      </li>
@@ -6533,26 +6538,28 @@ variable.
      </li>
 <li class="enumerate" id="x1-166008x4">compute   on   a   single   thread   any   scripted   biases   implemented   via   the   keyword
      <a href="#Colvars-global|scriptedColvarForces"><span class="ectt-1095">scriptedColvarForces</span></a>.
+                                                                                         
+                                                                                         
      </li>
 <li class="enumerate" id="x1-166010x5">communicate on a single thread forces to VMD.</li></ol>
-<!--l. 8087--><p class="indent">   The following options allow to fine-tune this schedule: </p>
+<!--l. 8108--><p class="indent">   The following options allow to fine-tune this schedule: </p>
 <ul class="itemize1">
-<li class="itemize"><span class="colorbox" id="colorbox460"><a id="dx1-166011"></a><span class="ectt-1095">scriptingAfterBiases</span></span> — <span class="phvro8t-x-x-109">Scripted colvar forces need updated biases?</span><br class="newline"/>Default: <span class="ectt-1095">on</span> <!--l. 8102--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
-     context: global <!--l. 8102--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This flag specifies that the <span class="ectt-1095">calc_colvar_forces </span>procedure (last step in the list above) is
+<li class="itemize"><span class="colorbox" id="colorbox462"><a id="dx1-166011"></a><span class="ectt-1095">scriptingAfterBiases</span></span> — <span class="phvro8t-x-x-109">Scripted colvar forces need updated biases?</span><br class="newline"/>Default: <span class="ectt-1095">on</span> <!--l. 8123--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo></math> boolean,
+     context: global <!--l. 8123--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>This flag specifies that the <span class="ectt-1095">calc_colvar_forces </span>procedure (last step in the list above) is
      executed only after all biases have been updated (next-to-last step) For example, this allows
      using the energy of a restraint bias, or the force applied on a colvar, to calculate additional
      scripted forces, such as boundary constraints. When this flag is set to <span class="ectt-1095">off</span>, it is assumed that
      only the values of the variables (but not the energy of the biases or applied forces) will be
      used by <span class="ectt-1095">calc_colvar_forces</span>: this can be used to schedule the calculation of scripted forces
      and biases concurrently to increase performance.</li></ul>
-<!--l. 8109--><p class="indent">
+<!--l. 8130--><p class="indent">
 </p>
 <div class="flushright">
-<!--l. 8109--><p class="noindent">
+<!--l. 8130--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 8109--><p class="noindent"> </p><div class="heading"> <a id="sec:cvscript_cmdline"></a>
+<!--l. 8130--><p class="noindent"> </p><div class="heading"> <a id="sec:cvscript_cmdline"></a>
 <h3 class="sectionHead"><span class="titlemark">8    </span> <a id="sec:cvscript_cmdline"></a>Tcl command-line interface: list of commands</h3>
-<!--l. 8109--><p class="noindent"></p></div> This section lists all the commands used in VMD to control the behavior of the Colvars module from
+<!--l. 8130--><p class="noindent"></p></div> This section lists all the commands used in VMD to control the behavior of the Colvars module from
 within a run script.
 
                                                                                          <div class="flushright">
@@ -6762,19 +6769,19 @@ within a run script.
 </div><div class="mdframed" id="mdframed-150">
 <!--l. 763--><p class="noindent"></p><pre><span class="ectt-1095">cv bias name update </span><br class="newline"/>    <span class="ectt-1095">Recompute this bias and return its up-to-date energy </span><br class="newline"/>    <span class="ectt-1095">Returns </span><br class="newline"/>    <span class="ectt-1095">E : float - Energy value </span></pre><!--l. 771--><p class="noindent"></p>
 </div>
-<!--l. 8124--><p class="indent">
+<!--l. 8145--><p class="indent">
 </p>
 <div class="flushright">
-<!--l. 8124--><p class="noindent">
+<!--l. 8145--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 8124--><p class="noindent"> </p><div class="heading"> <a id="sec:colvars_config_changes"></a>
+<!--l. 8145--><p class="noindent"> </p><div class="heading"> <a id="sec:colvars_config_changes"></a>
 <h3 class="sectionHead"><span class="titlemark">9    </span> <a id="sec:colvars_config_changes"></a>Syntax changes from older versions</h3>
-<!--l. 8124--><p class="noindent"></p></div>
-<!--l. 8126--><p class="indent">   The following is a list of syntax changes in Colvars since its first release. Many of the older keywords
+<!--l. 8145--><p class="noindent"></p></div>
+<!--l. 8147--><p class="indent">   The following is a list of syntax changes in Colvars since its first release. Many of the older keywords
 are still recognized by the current code, thanks to specific compatibility code. <span class="phvro8t-x-x-109">This is not a list of new</span>
 <span class="phvro8t-x-x-109">features: </span>its primary purpose is to make you aware of those improvements that affect the use of old
 configuration files with new versions of the code.
-</p><!--l. 8130--><p class="noindent"><span class="phvb8t-x-x-109">Note: </span>if you are using any of the NAMD and VMD tutorials:<br class="newline"/><a class="url" href="https://www.ks.uiuc.edu/Training/Tutorials/"><span class="ectt-1095">https://www.ks.uiuc.edu/Training/Tutorials/</span></a><br class="newline"/>please be aware that <span class="phvro8t-x-x-109">several of these tutorials are not actively maintained</span>: for those cases, this list will
+</p><!--l. 8151--><p class="noindent"><span class="phvb8t-x-x-109">Note: </span>if you are using any of the NAMD and VMD tutorials:<br class="newline"/><a class="url" href="https://www.ks.uiuc.edu/Training/Tutorials/"><span class="ectt-1095">https://www.ks.uiuc.edu/Training/Tutorials/</span></a><br class="newline"/>please be aware that <span class="phvro8t-x-x-109">several of these tutorials are not actively maintained</span>: for those cases, this list will
 help you reconcile any inconsistencies.
 </p>
 <ul class="itemize1">
@@ -6790,13 +6797,13 @@ help you reconcile any inconsistencies.
 <li class="itemize"><span class="phvb8t-x-x-109">Colvars version 2018-11-15 or later (VMD version 1.9.4 or later).</span><br class="newline"/>The global <span class="ectt-1095">analysis </span>keyword has been discontinued: specific analysis tasks are controlled
      directly by the keywords <a href="#colvar|corrFunc"><span class="ectt-1095">corrFunc</span></a> and <a href="#colvar|runAve"><span class="ectt-1095">runAve</span></a>, which continue to remain <span class="ectt-1095">off </span>by default.
      </li>
-<li class="itemize"><span class="phvb8t-x-x-109">Colvars version 2020-02-25 or later (VMD version 1.9.4 or later).</span><br class="newline"/>The parameter <a href="#metadynamics|hillWidth"><span class="ectt-1095">hillWidth</span></a>, expressing the Gaussian width <!--l. 8151--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>σ</mi></math>
+<li class="itemize"><span class="phvb8t-x-x-109">Colvars version 2020-02-25 or later (VMD version 1.9.4 or later).</span><br class="newline"/>The parameter <a href="#metadynamics|hillWidth"><span class="ectt-1095">hillWidth</span></a>, expressing the Gaussian width <!--l. 8172--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>σ</mi></math>
      in relative units (number of grid points), does not have a default value any more. A new
-     alternative parameter <a href="#metadynamics|gaussianSigmas"><span class="ectt-1095">gaussianSigmas</span></a> allows setting the <!--l. 8152--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+     alternative parameter <a href="#metadynamics|gaussianSigmas"><span class="ectt-1095">gaussianSigmas</span></a> allows setting the <!--l. 8173--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
                                                                                          
                                                                                          
-     parameters explicitly for each variable if needed.<br class="newline"/>Furthermore, to facilitate the use of other analysis tools such as for example <span class="ectt-1095">sum_hills</span>:<br class="newline"/><a class="url" href="https://www.plumed.org/doc-v2.6/user-doc/html/sum_hills.html"><span class="ectt-1095">https://www.plumed.org/doc-v2.6/user-doc/html/sum_hills.html</span></a><br class="newline"/>the format of the file written by <a href="#metadynamics|writeHillsTrajectory"><span class="ectt-1095">writeHillsTrajectory</span></a> has also been changed to use <!--l. 8155--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
-     instead of <!--l. 8155--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>σ</mi></math>.
+     parameters explicitly for each variable if needed.<br class="newline"/>Furthermore, to facilitate the use of other analysis tools such as for example <span class="ectt-1095">sum_hills</span>:<br class="newline"/><a class="url" href="https://www.plumed.org/doc-v2.6/user-doc/html/sum_hills.html"><span class="ectt-1095">https://www.plumed.org/doc-v2.6/user-doc/html/sum_hills.html</span></a><br class="newline"/>the format of the file written by <a href="#metadynamics|writeHillsTrajectory"><span class="ectt-1095">writeHillsTrajectory</span></a> has also been changed to use <!--l. 8176--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+     instead of <!--l. 8176--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>σ</mi></math>.
      This  change  does  not  affect  how  the  biasing  potential  is  written  in  the  state  file,  or  the
      simulated trajectory.
      </li>
@@ -6812,18 +6819,18 @@ help you reconcile any inconsistencies.
      computation if forces are not used, and enabling this option otherwise would lead to incorrect
      behavior.
      </li></ul>
-<!--l. 8170--><p class="indent">
+<!--l. 8191--><p class="indent">
 </p>
 <div class="flushright">
-<!--l. 8170--><p class="noindent">
+<!--l. 8191--><p class="noindent">
 <a href="#sec:toc" style="text-decoration: none; background-color: white; color: gray;">(Go to Contents)</a><br/></p></div>
-<!--l. 8170--><p class="noindent"> </p><div class="heading"> <a id="sec:compilation_notes"></a>
+<!--l. 8191--><p class="noindent"> </p><div class="heading"> <a id="sec:compilation_notes"></a>
 <h3 class="sectionHead"><span class="titlemark">10    </span> <a id="sec:compilation_notes"></a>Compilation notes</h3>
-<!--l. 8170--><p class="noindent"></p></div>
-<!--l. 8172--><p class="indent">   The Colvars module is typically built using the recipes of each supported software package: for this
+<!--l. 8191--><p class="noindent"></p></div>
+<!--l. 8193--><p class="indent">   The Colvars module is typically built using the recipes of each supported software package: for this
 reason, no installation instructions are needed, and the vast majority of the features described in this
 manual are supported in the most common builds of each package.
-</p><!--l. 8174--><p class="indent">   This section lists the few cases where the choice of compilation settings affects the availability
+</p><!--l. 8195--><p class="indent">   This section lists the few cases where the choice of compilation settings affects the availability
 features in the Colvars module.
 </p>
 <ul class="itemize1">

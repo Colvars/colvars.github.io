@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -93,18 +96,18 @@ Inheritance diagram for colvarbias_restraint_linear:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarbias__restraint__linear__inherit__graph.png" border="0" usemap="#acolvarbias__restraint__linear_inherit__map" alt="Inheritance graph"/></div>
 <map name="acolvarbias__restraint__linear_inherit__map" id="acolvarbias__restraint__linear_inherit__map">
-<area shape="rect" title="Linear bias restraint (implementation of colvarbias_restraint)" alt="" coords="177,563,311,603"/>
-<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="257,475,391,515"/>
-<area shape="rect" href="classcolvarbias__restraint__centers.html" title="Definition and parsing of the restraint centers." alt="" coords="179,387,314,427"/>
-<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="119,313,254,339"/>
-<area shape="rect" href="classcolvarbias__restraint__k.html" title="Definition and parsing of the force constant." alt="" coords="5,394,155,419"/>
-<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="202,152,283,177"/>
-<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="191,233,286,258"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="324,79,415,104"/>
-<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="310,225,445,265"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="319,5,419,31"/>
-<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="209,79,293,104"/>
-<area shape="rect" href="classcolvarbias__restraint__k__moving.html" title="Options to change the restraint force constant over time." alt="" coords="98,475,233,515"/>
+<area shape="rect" title="Linear bias restraint (implementation of colvarbias_restraint)" alt="" coords="163,548,297,588"/>
+<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="84,460,219,500"/>
+<area shape="rect" href="classcolvarbias__restraint__centers.html" title="Definition and parsing of the restraint centers." alt="" coords="5,372,140,412"/>
+<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="164,299,299,324"/>
+<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="164,372,299,412"/>
+<area shape="rect" href="classcolvarbias__restraint__k.html" title="Definition and parsing of the force constant." alt="" coords="323,379,473,405"/>
+<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="204,152,285,177"/>
+<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="209,225,304,251"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="106,79,197,104"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="101,5,201,31"/>
+<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="251,79,335,104"/>
+<area shape="rect" href="classcolvarbias__restraint__k__moving.html" title="Options to change the restraint force constant over time." alt="" coords="243,460,377,500"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -112,23 +115,23 @@ Collaboration diagram for colvarbias_restraint_linear:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarbias__restraint__linear__coll__graph.png" border="0" usemap="#acolvarbias__restraint__linear_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarbias__restraint__linear_coll__map" id="acolvarbias__restraint__linear_coll__map">
-<area shape="rect" title="Linear bias restraint (implementation of colvarbias_restraint)" alt="" coords="217,861,352,901"/>
-<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="139,772,273,812"/>
-<area shape="rect" href="classcolvarbias__restraint__centers.html" title="Definition and parsing of the restraint centers." alt="" coords="31,683,165,723"/>
-<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="87,608,221,633"/>
-<area shape="rect" href="classcolvarbias__restraint__k.html" title="Definition and parsing of the force constant." alt="" coords="190,690,339,715"/>
-<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="145,420,227,445"/>
-<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="181,533,276,559"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="198,80,289,105"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="79,155,242,180"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="267,155,409,180"/>
-<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="331,469,465,509"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="193,5,293,31"/>
-<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="324,317,408,343"/>
-<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="123,317,249,343"/>
-<area shape="rect" href="classcolvar__grid__params.html" title="Unified base class for grid of values of a function of several collective variables." alt="" coords="5,80,140,105"/>
+<area shape="rect" title="Linear bias restraint (implementation of colvarbias_restraint)" alt="" coords="133,823,268,863"/>
+<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="55,733,189,773"/>
+<area shape="rect" href="classcolvarbias__restraint__centers.html" title="Definition and parsing of the restraint centers." alt="" coords="164,644,299,684"/>
+<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="164,569,299,595"/>
+<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="5,644,140,684"/>
+<area shape="rect" href="classcolvarbias__restraint__k.html" title="Definition and parsing of the force constant." alt="" coords="323,651,473,677"/>
+<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="155,420,236,445"/>
+<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="132,495,227,520"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="169,80,259,105"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="401,155,563,180"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="233,155,376,180"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="164,5,264,31"/>
+<area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="73,317,157,343"/>
+<area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="241,317,368,343"/>
+<area shape="rect" href="classcolvar__grid__params.html" title="Unified base class for grid of values of a function of several collective variables." alt="" coords="335,80,469,105"/>
 <area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="243,229,366,255"/>
-<area shape="rect" href="classcolvarbias__restraint__k__moving.html" title="Options to change the restraint force constant over time." alt="" coords="297,772,432,812"/>
+<area shape="rect" href="classcolvarbias__restraint__k__moving.html" title="Options to change the restraint force constant over time." alt="" coords="213,733,348,773"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -141,6 +144,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac8bdf18cc52cafbfe1329e4d1a812ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse config string and (re)initialize.  <a href="classcolvarbias__restraint__linear.html#ac8bdf18cc52cafbfe1329e4d1a812ddf">More...</a><br /></td></tr>
 <tr class="separator:ac8bdf18cc52cafbfe1329e4d1a812ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a010d9ea97e55aa31a20f33fa3479dbfa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__linear.html#a010d9ea97e55aa31a20f33fa3479dbfa">update</a> ()</td></tr>
+<tr class="memdesc:a010d9ea97e55aa31a20f33fa3479dbfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve colvar values and calculate their biasing forces.  <a href="classcolvarbias__restraint__linear.html#a010d9ea97e55aa31a20f33fa3479dbfa">More...</a><br /></td></tr>
 <tr class="separator:a010d9ea97e55aa31a20f33fa3479dbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3fa934f7083454981bc5ecdb9424f82"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__linear.html#ab3fa934f7083454981bc5ecdb9424f82">change_configuration</a> (std::string const &amp;conf)</td></tr>
 <tr class="memdesc:ab3fa934f7083454981bc5ecdb9424f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load new configuration - force constant and/or centers only.  <a href="classcolvarbias__restraint__linear.html#ab3fa934f7083454981bc5ecdb9424f82">More...</a><br /></td></tr>
@@ -149,8 +153,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af5a58388d900909d847c994717e89f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate change in energy from using alternate configuration.  <a href="classcolvarbias__restraint__linear.html#af5a58388d900909d847c994717e89f1a">More...</a><br /></td></tr>
 <tr class="separator:af5a58388d900909d847c994717e89f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4934b76eef76f38b7f7d828b0d4ea1cb"><td class="memItemLeft" align="right" valign="top">virtual std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__linear.html#a4934b76eef76f38b7f7d828b0d4ea1cb">get_state_params</a> () const</td></tr>
+<tr class="memdesc:a4934b76eef76f38b7f7d828b0d4ea1cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the values of specific mutable properties to a string.  <a href="classcolvarbias__restraint__linear.html#a4934b76eef76f38b7f7d828b0d4ea1cb">More...</a><br /></td></tr>
 <tr class="separator:a4934b76eef76f38b7f7d828b0d4ea1cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4caf129f211940daed7218b5cb077d67"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__linear.html#a4caf129f211940daed7218b5cb077d67">set_state_params</a> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a4caf129f211940daed7218b5cb077d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the values of specific mutable properties from a string.  <a href="classcolvarbias__restraint__linear.html#a4caf129f211940daed7218b5cb077d67">More...</a><br /></td></tr>
 <tr class="separator:a4caf129f211940daed7218b5cb077d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626ac8bbece2698da7ed1aae64113a9a"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__linear.html#a626ac8bbece2698da7ed1aae64113a9a">write_traj_label</a> (std::ostream &amp;os)</td></tr>
 <tr class="memdesc:a626ac8bbece2698da7ed1aae64113a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a label to the trajectory file (comment line)  <a href="classcolvarbias__restraint__linear.html#a626ac8bbece2698da7ed1aae64113a9a">More...</a><br /></td></tr>
@@ -162,24 +168,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a71ac7ea1461c7e02567b3e2aa36e1162 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top"><a id="a71ac7ea1461c7e02567b3e2aa36e1162" name="a71ac7ea1461c7e02567b3e2aa36e1162"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>colvarbias_restraint_centers_moving</b> (char const *key)</td></tr>
 <tr class="separator:a71ac7ea1461c7e02567b3e2aa36e1162 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a94a65111eec72ba834bfacc5a0975f inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#a7a94a65111eec72ba834bfacc5a0975f">init</a> (std::string const &amp;conf)</td></tr>
-<tr class="memdesc:a7a94a65111eec72ba834bfacc5a0975f inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse config string and (re)initialize.  <a href="classcolvarbias__restraint__centers__moving.html#a7a94a65111eec72ba834bfacc5a0975f">More...</a><br /></td></tr>
-<tr class="separator:a7a94a65111eec72ba834bfacc5a0975f inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a684355818e42956541b4020e4c155d90 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#a684355818e42956541b4020e4c155d90">update</a> ()</td></tr>
-<tr class="separator:a684355818e42956541b4020e4c155d90 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49e8ddd444f3ef8a28992f45dc0d5c90 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#a49e8ddd444f3ef8a28992f45dc0d5c90">change_configuration</a> (std::string const &amp;)</td></tr>
-<tr class="memdesc:a49e8ddd444f3ef8a28992f45dc0d5c90 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load new configuration - force constant and/or centers only.  <a href="classcolvarbias__restraint__centers__moving.html#a49e8ddd444f3ef8a28992f45dc0d5c90">More...</a><br /></td></tr>
-<tr class="separator:a49e8ddd444f3ef8a28992f45dc0d5c90 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77dc8349771f87673362328dcee9499d inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#a77dc8349771f87673362328dcee9499d">get_state_params</a> () const</td></tr>
-<tr class="separator:a77dc8349771f87673362328dcee9499d inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c8d03447c0fcd1165536d55b98c0bfa inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#a7c8d03447c0fcd1165536d55b98c0bfa">set_state_params</a> (std::string const &amp;conf)</td></tr>
-<tr class="separator:a7c8d03447c0fcd1165536d55b98c0bfa inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeb388111af54835c6ee75788256a441 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#adeb388111af54835c6ee75788256a441">write_traj_label</a> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:adeb388111af54835c6ee75788256a441 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a label to the trajectory file (comment line)  <a href="classcolvarbias__restraint__centers__moving.html#adeb388111af54835c6ee75788256a441">More...</a><br /></td></tr>
-<tr class="separator:adeb388111af54835c6ee75788256a441 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f6550201639b4e077e58a688b389e49 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#a4f6550201639b4e077e58a688b389e49">write_traj</a> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:a4f6550201639b4e077e58a688b389e49 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output quantities such as the bias energy to the trajectory file.  <a href="classcolvarbias__restraint__centers__moving.html#a4f6550201639b4e077e58a688b389e49">More...</a><br /></td></tr>
-<tr class="separator:a4f6550201639b4e077e58a688b389e49 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add137d1e9ac6bcb20d5ab2c40c4fe619 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#add137d1e9ac6bcb20d5ab2c40c4fe619">init</a> (std::string const &amp;conf) override</td></tr>
+<tr class="memdesc:add137d1e9ac6bcb20d5ab2c40c4fe619 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse config string and (re)initialize.  <a href="classcolvarbias__restraint__centers__moving.html#add137d1e9ac6bcb20d5ab2c40c4fe619">More...</a><br /></td></tr>
+<tr class="separator:add137d1e9ac6bcb20d5ab2c40c4fe619 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a673302bf2b207f2c0dec978df4a7f686 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#a673302bf2b207f2c0dec978df4a7f686">change_configuration</a> (std::string const &amp;) override</td></tr>
+<tr class="memdesc:a673302bf2b207f2c0dec978df4a7f686 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load new configuration - force constant and/or centers only.  <a href="classcolvarbias__restraint__centers__moving.html#a673302bf2b207f2c0dec978df4a7f686">More...</a><br /></td></tr>
+<tr class="separator:a673302bf2b207f2c0dec978df4a7f686 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4433050abef633964e9019ab9a97e2fc inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#a4433050abef633964e9019ab9a97e2fc">get_state_params</a> () const override</td></tr>
+<tr class="memdesc:a4433050abef633964e9019ab9a97e2fc inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the values of specific mutable properties to a string.  <a href="classcolvarbias__restraint__centers__moving.html#a4433050abef633964e9019ab9a97e2fc">More...</a><br /></td></tr>
+<tr class="separator:a4433050abef633964e9019ab9a97e2fc inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af915c44e265d80d705d92ad7a76d95dc inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#af915c44e265d80d705d92ad7a76d95dc">set_state_params</a> (std::string const &amp;conf) override</td></tr>
+<tr class="memdesc:af915c44e265d80d705d92ad7a76d95dc inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the values of specific mutable properties from a string.  <a href="classcolvarbias__restraint__centers__moving.html#af915c44e265d80d705d92ad7a76d95dc">More...</a><br /></td></tr>
+<tr class="separator:af915c44e265d80d705d92ad7a76d95dc inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9458fc61098f7656051a2fee1702d47 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#ae9458fc61098f7656051a2fee1702d47">write_traj_label</a> (std::ostream &amp;os) override</td></tr>
+<tr class="memdesc:ae9458fc61098f7656051a2fee1702d47 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a label to the trajectory file (comment line)  <a href="classcolvarbias__restraint__centers__moving.html#ae9458fc61098f7656051a2fee1702d47">More...</a><br /></td></tr>
+<tr class="separator:ae9458fc61098f7656051a2fee1702d47 inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89effdcb7b845bd3a6ee7a8c3d475d1e inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#a89effdcb7b845bd3a6ee7a8c3d475d1e">write_traj</a> (std::ostream &amp;os) override</td></tr>
+<tr class="memdesc:a89effdcb7b845bd3a6ee7a8c3d475d1e inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output quantities such as the bias energy to the trajectory file.  <a href="classcolvarbias__restraint__centers__moving.html#a89effdcb7b845bd3a6ee7a8c3d475d1e">More...</a><br /></td></tr>
+<tr class="separator:a89effdcb7b845bd3a6ee7a8c3d475d1e inherit pub_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcolvarbias__restraint__centers"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvarbias__restraint__centers')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvarbias__restraint__centers.html">colvarbias_restraint_centers</a></td></tr>
 <tr class="memitem:ae5772360c6eb91e4ab72871ffd510f6a inherit pub_methods_classcolvarbias__restraint__centers"><td class="memItemLeft" align="right" valign="top"><a id="ae5772360c6eb91e4ab72871ffd510f6a" name="ae5772360c6eb91e4ab72871ffd510f6a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>colvarbias_restraint_centers</b> (char const *key)</td></tr>
@@ -656,41 +662,43 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>init_grids</b>
 <tr class="memitem:a8aef43db5f0a828aa061444c8763f58b inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a8aef43db5f0a828aa061444c8763f58b" name="a8aef43db5f0a828aa061444c8763f58b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>colvarbias_restraint_moving</b> (char const *key)</td></tr>
 <tr class="separator:a8aef43db5f0a828aa061444c8763f58b inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abede3106accb6a07ec32650e8b57674d inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#abede3106accb6a07ec32650e8b57674d">init</a> (std::string const &amp;conf)</td></tr>
-<tr class="separator:abede3106accb6a07ec32650e8b57674d inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65fc4e7efdf1a986cb56d9d6278d493c inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a65fc4e7efdf1a986cb56d9d6278d493c" name="a65fc4e7efdf1a986cb56d9d6278d493c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
-<tr class="separator:a65fc4e7efdf1a986cb56d9d6278d493c inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13905f5acb49fdcb2b73fe21a500745f inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#a13905f5acb49fdcb2b73fe21a500745f">change_configuration</a> (std::string const &amp;)</td></tr>
-<tr class="separator:a13905f5acb49fdcb2b73fe21a500745f inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac779570d43168dbc964bf77e6dcd5020 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="ac779570d43168dbc964bf77e6dcd5020" name="ac779570d43168dbc964bf77e6dcd5020"></a>
-virtual std::string const&#160;</td><td class="memItemRight" valign="bottom"><b>get_state_params</b> () const</td></tr>
-<tr class="separator:ac779570d43168dbc964bf77e6dcd5020 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2464204630d3c69dc0bf4ed5f24c77c1 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a2464204630d3c69dc0bf4ed5f24c77c1" name="a2464204630d3c69dc0bf4ed5f24c77c1"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_state_params</b> (std::string const &amp;conf)</td></tr>
-<tr class="separator:a2464204630d3c69dc0bf4ed5f24c77c1 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08489fdd8ce5c4730235e99fe3c5ca53 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#a08489fdd8ce5c4730235e99fe3c5ca53">init</a> (std::string const &amp;conf) override</td></tr>
+<tr class="memdesc:a08489fdd8ce5c4730235e99fe3c5ca53 inherit pub_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse config string and (re)initialize.  <a href="classcolvarbias__restraint__moving.html#a08489fdd8ce5c4730235e99fe3c5ca53">More...</a><br /></td></tr>
+<tr class="separator:a08489fdd8ce5c4730235e99fe3c5ca53 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417b0e5218f4b0b7c6df1f9dc55309f6 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#a417b0e5218f4b0b7c6df1f9dc55309f6">update</a> () override</td></tr>
+<tr class="memdesc:a417b0e5218f4b0b7c6df1f9dc55309f6 inherit pub_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve colvar values and calculate their biasing forces.  <a href="classcolvarbias__restraint__moving.html#a417b0e5218f4b0b7c6df1f9dc55309f6">More...</a><br /></td></tr>
+<tr class="separator:a417b0e5218f4b0b7c6df1f9dc55309f6 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1072cf552a05d4aee80cd79e928f29 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#a3a1072cf552a05d4aee80cd79e928f29">change_configuration</a> (std::string const &amp;) override</td></tr>
+<tr class="memdesc:a3a1072cf552a05d4aee80cd79e928f29 inherit pub_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load new configuration - force constant and/or centers only.  <a href="classcolvarbias__restraint__moving.html#a3a1072cf552a05d4aee80cd79e928f29">More...</a><br /></td></tr>
+<tr class="separator:a3a1072cf552a05d4aee80cd79e928f29 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eeb2c1fe615bfa14e68eab16f605435 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#a7eeb2c1fe615bfa14e68eab16f605435">get_state_params</a> () const override</td></tr>
+<tr class="memdesc:a7eeb2c1fe615bfa14e68eab16f605435 inherit pub_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the values of specific mutable properties to a string.  <a href="classcolvarbias__restraint__moving.html#a7eeb2c1fe615bfa14e68eab16f605435">More...</a><br /></td></tr>
+<tr class="separator:a7eeb2c1fe615bfa14e68eab16f605435 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127d7f834c2a97f00c64374a181ffe25 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#a127d7f834c2a97f00c64374a181ffe25">set_state_params</a> (std::string const &amp;conf) override</td></tr>
+<tr class="memdesc:a127d7f834c2a97f00c64374a181ffe25 inherit pub_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the values of specific mutable properties from a string.  <a href="classcolvarbias__restraint__moving.html#a127d7f834c2a97f00c64374a181ffe25">More...</a><br /></td></tr>
+<tr class="separator:a127d7f834c2a97f00c64374a181ffe25 inherit pub_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcolvarbias__restraint__k__moving"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvarbias__restraint__k__moving')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvarbias__restraint__k__moving.html">colvarbias_restraint_k_moving</a></td></tr>
 <tr class="memitem:a1277cbb818a8a026b8e4959d09c65a1f inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top"><a id="a1277cbb818a8a026b8e4959d09c65a1f" name="a1277cbb818a8a026b8e4959d09c65a1f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>colvarbias_restraint_k_moving</b> (char const *key)</td></tr>
 <tr class="separator:a1277cbb818a8a026b8e4959d09c65a1f inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e4712743785be469bdffcca0ef58128 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#a7e4712743785be469bdffcca0ef58128">init</a> (std::string const &amp;conf)</td></tr>
-<tr class="memdesc:a7e4712743785be469bdffcca0ef58128 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse config string and (re)initialize.  <a href="classcolvarbias__restraint__k__moving.html#a7e4712743785be469bdffcca0ef58128">More...</a><br /></td></tr>
-<tr class="separator:a7e4712743785be469bdffcca0ef58128 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7681815ccc4cb76b54ce57a42be320b inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#ab7681815ccc4cb76b54ce57a42be320b">update</a> ()</td></tr>
-<tr class="separator:ab7681815ccc4cb76b54ce57a42be320b inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad29de6e4a2d1ac100959c52130a208c2 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#ad29de6e4a2d1ac100959c52130a208c2">change_configuration</a> (std::string const &amp;)</td></tr>
-<tr class="memdesc:ad29de6e4a2d1ac100959c52130a208c2 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load new configuration - force constant and/or centers only.  <a href="classcolvarbias__restraint__k__moving.html#ad29de6e4a2d1ac100959c52130a208c2">More...</a><br /></td></tr>
-<tr class="separator:ad29de6e4a2d1ac100959c52130a208c2 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd164a0ea370cb1907b50400111cbcde inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#afd164a0ea370cb1907b50400111cbcde">get_state_params</a> () const</td></tr>
-<tr class="separator:afd164a0ea370cb1907b50400111cbcde inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a5642831463f20012e12fff11043a95 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#a2a5642831463f20012e12fff11043a95">set_state_params</a> (std::string const &amp;conf)</td></tr>
-<tr class="separator:a2a5642831463f20012e12fff11043a95 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa67cb59f2a8c36be70e526d8fe23d02f inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#aa67cb59f2a8c36be70e526d8fe23d02f">write_traj_label</a> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:aa67cb59f2a8c36be70e526d8fe23d02f inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a label to the trajectory file (comment line)  <a href="classcolvarbias__restraint__k__moving.html#aa67cb59f2a8c36be70e526d8fe23d02f">More...</a><br /></td></tr>
-<tr class="separator:aa67cb59f2a8c36be70e526d8fe23d02f inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10fa5f897059ab3f06f9e7e32c8b955e inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#a10fa5f897059ab3f06f9e7e32c8b955e">write_traj</a> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:a10fa5f897059ab3f06f9e7e32c8b955e inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output quantities such as the bias energy to the trajectory file.  <a href="classcolvarbias__restraint__k__moving.html#a10fa5f897059ab3f06f9e7e32c8b955e">More...</a><br /></td></tr>
-<tr class="separator:a10fa5f897059ab3f06f9e7e32c8b955e inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498327a01afcc6da5360ab9b8d27243c inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#a498327a01afcc6da5360ab9b8d27243c">init</a> (std::string const &amp;conf) override</td></tr>
+<tr class="memdesc:a498327a01afcc6da5360ab9b8d27243c inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse config string and (re)initialize.  <a href="classcolvarbias__restraint__k__moving.html#a498327a01afcc6da5360ab9b8d27243c">More...</a><br /></td></tr>
+<tr class="separator:a498327a01afcc6da5360ab9b8d27243c inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49972b24e05f806faddaa85c6c790b6c inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#a49972b24e05f806faddaa85c6c790b6c">change_configuration</a> (std::string const &amp;) override</td></tr>
+<tr class="memdesc:a49972b24e05f806faddaa85c6c790b6c inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load new configuration - force constant and/or centers only.  <a href="classcolvarbias__restraint__k__moving.html#a49972b24e05f806faddaa85c6c790b6c">More...</a><br /></td></tr>
+<tr class="separator:a49972b24e05f806faddaa85c6c790b6c inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb3c402954e4f9f85c0169159a127264 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual std::string const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#afb3c402954e4f9f85c0169159a127264">get_state_params</a> () const override</td></tr>
+<tr class="memdesc:afb3c402954e4f9f85c0169159a127264 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the values of specific mutable properties to a string.  <a href="classcolvarbias__restraint__k__moving.html#afb3c402954e4f9f85c0169159a127264">More...</a><br /></td></tr>
+<tr class="separator:afb3c402954e4f9f85c0169159a127264 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a615337b381f446f9091a1f167f9ba1 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#a8a615337b381f446f9091a1f167f9ba1">set_state_params</a> (std::string const &amp;conf) override</td></tr>
+<tr class="memdesc:a8a615337b381f446f9091a1f167f9ba1 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the values of specific mutable properties from a string.  <a href="classcolvarbias__restraint__k__moving.html#a8a615337b381f446f9091a1f167f9ba1">More...</a><br /></td></tr>
+<tr class="separator:a8a615337b381f446f9091a1f167f9ba1 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd8b6e93429ed8c06e4d7f80b71296e inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#a5bd8b6e93429ed8c06e4d7f80b71296e">write_traj_label</a> (std::ostream &amp;os) override</td></tr>
+<tr class="memdesc:a5bd8b6e93429ed8c06e4d7f80b71296e inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a label to the trajectory file (comment line)  <a href="classcolvarbias__restraint__k__moving.html#a5bd8b6e93429ed8c06e4d7f80b71296e">More...</a><br /></td></tr>
+<tr class="separator:a5bd8b6e93429ed8c06e4d7f80b71296e inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91510982ddc3e678fea519b5529c7d74 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#a91510982ddc3e678fea519b5529c7d74">write_traj</a> (std::ostream &amp;os) override</td></tr>
+<tr class="memdesc:a91510982ddc3e678fea519b5529c7d74 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output quantities such as the bias energy to the trajectory file.  <a href="classcolvarbias__restraint__k__moving.html#a91510982ddc3e678fea519b5529c7d74">More...</a><br /></td></tr>
+<tr class="separator:a91510982ddc3e678fea519b5529c7d74 inherit pub_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcolvarbias__restraint__k"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvarbias__restraint__k')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvarbias__restraint__k.html">colvarbias_restraint_k</a></td></tr>
 <tr class="memitem:a33f6ea7976961f7269b5781fd63738d6 inherit pub_methods_classcolvarbias__restraint__k"><td class="memItemLeft" align="right" valign="top"><a id="a33f6ea7976961f7269b5781fd63738d6" name="a33f6ea7976961f7269b5781fd63738d6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>colvarbias_restraint_k</b> (char const *key)</td></tr>
@@ -714,10 +722,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:ae1e930604b536ab3defcc82b62ec958a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivative of the potential function with respect to the force constant.  <a href="classcolvarbias__restraint__linear.html#ae1e930604b536ab3defcc82b62ec958a">More...</a><br /></td></tr>
 <tr class="separator:ae1e930604b536ab3defcc82b62ec958a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcolvarbias__restraint__centers__moving"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcolvarbias__restraint__centers__moving')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcolvarbias__restraint__centers__moving.html">colvarbias_restraint_centers_moving</a></td></tr>
-<tr class="memitem:a448b2bf5aa89043a1ab8888974ddd7a7 inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top"><a id="a448b2bf5aa89043a1ab8888974ddd7a7" name="a448b2bf5aa89043a1ab8888974ddd7a7"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>update_centers</b> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> lambda)</td></tr>
-<tr class="memdesc:a448b2bf5aa89043a1ab8888974ddd7a7 inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the centers by interpolating between initial and target. <br /></td></tr>
-<tr class="separator:a448b2bf5aa89043a1ab8888974ddd7a7 inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74a39a929936c77404a9ba5f9d3dc76 inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#af74a39a929936c77404a9ba5f9d3dc76">update_centers</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> lambda) override</td></tr>
+<tr class="memdesc:af74a39a929936c77404a9ba5f9d3dc76 inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the centers by interpolating between initial and target.  <a href="classcolvarbias__restraint__centers__moving.html#af74a39a929936c77404a9ba5f9d3dc76">More...</a><br /></td></tr>
+<tr class="separator:af74a39a929936c77404a9ba5f9d3dc76 inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa535ec6db939756235db0ab7020fc5ff inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__centers__moving.html#aa535ec6db939756235db0ab7020fc5ff">dU_dlambda_centers</a> () const override</td></tr>
+<tr class="memdesc:aa535ec6db939756235db0ab7020fc5ff inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the derivative of the free energy wrt lambda due to changing centers.  <a href="classcolvarbias__restraint__centers__moving.html#aa535ec6db939756235db0ab7020fc5ff">More...</a><br /></td></tr>
+<tr class="separator:aa535ec6db939756235db0ab7020fc5ff inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88a09e538e10fd6375bfd9449fb32bbf inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="memItemLeft" align="right" valign="top"><a id="a88a09e538e10fd6375bfd9449fb32bbf" name="a88a09e538e10fd6375bfd9449fb32bbf"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>update_acc_work</b> ()</td></tr>
 <tr class="memdesc:a88a09e538e10fd6375bfd9449fb32bbf inherit pro_methods_classcolvarbias__restraint__centers__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the accumulated work. <br /></td></tr>
@@ -808,7 +818,40 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>register_param_grad</
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b> (<a class="el" href="classcolvarparse.html">colvarparse</a> *cvp, std::string const &amp;conf, char const *key, int feature_id, bool const &amp;def_value, <a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4">colvarparse::Parse_Mode</a> const parse_mode=<a class="el" href="classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a896fd267c63709fb7ade3e4c89d1ff4f">colvarparse::parse_normal</a>)</td></tr>
 <tr class="memdesc:ab9abd034505e8223e4a80fc02b205505 inherit pro_methods_classcolvardeps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a keyword and enable a feature accordingly. <br /></td></tr>
 <tr class="separator:ab9abd034505e8223e4a80fc02b205505 inherit pro_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classcolvarbias__restraint__moving"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcolvarbias__restraint__moving')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcolvarbias__restraint__moving.html">colvarbias_restraint_moving</a></td></tr>
+<tr class="memitem:a208da012ac3f7cb2d7f752ab7014843e inherit pro_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#a208da012ac3f7cb2d7f752ab7014843e">update_k</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>)</td></tr>
+<tr class="memdesc:a208da012ac3f7cb2d7f752ab7014843e inherit pro_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the force constant by interpolating between initial and target.  <a href="classcolvarbias__restraint__moving.html#a208da012ac3f7cb2d7f752ab7014843e">More...</a><br /></td></tr>
+<tr class="separator:a208da012ac3f7cb2d7f752ab7014843e inherit pro_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeca10b17ba3eed3bec55e8a0d84ac0f inherit pro_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#adeca10b17ba3eed3bec55e8a0d84ac0f">update_centers</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>)</td></tr>
+<tr class="memdesc:adeca10b17ba3eed3bec55e8a0d84ac0f inherit pro_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the centers by interpolating between initial and target.  <a href="classcolvarbias__restraint__moving.html#adeca10b17ba3eed3bec55e8a0d84ac0f">More...</a><br /></td></tr>
+<tr class="separator:adeca10b17ba3eed3bec55e8a0d84ac0f inherit pro_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310b848abdcd2471a74a9d489c3ed6ff inherit pro_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#a310b848abdcd2471a74a9d489c3ed6ff">update_walls</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>)</td></tr>
+<tr class="memdesc:a310b848abdcd2471a74a9d489c3ed6ff inherit pro_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the walls by interpolating between initial and target.  <a href="classcolvarbias__restraint__moving.html#a310b848abdcd2471a74a9d489c3ed6ff">More...</a><br /></td></tr>
+<tr class="separator:a310b848abdcd2471a74a9d489c3ed6ff inherit pro_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae960846211bf2406f9d362a4876d82af inherit pro_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#ae960846211bf2406f9d362a4876d82af">dU_dlambda_k</a> () const</td></tr>
+<tr class="memdesc:ae960846211bf2406f9d362a4876d82af inherit pro_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the derivative of the free energy wrt lambda due to changing k.  <a href="classcolvarbias__restraint__moving.html#ae960846211bf2406f9d362a4876d82af">More...</a><br /></td></tr>
+<tr class="separator:ae960846211bf2406f9d362a4876d82af inherit pro_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd293404e03411c5ae702a6bb956713 inherit pro_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#a4cd293404e03411c5ae702a6bb956713">dU_dlambda_centers</a> () const</td></tr>
+<tr class="memdesc:a4cd293404e03411c5ae702a6bb956713 inherit pro_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the derivative of the free energy wrt lambda due to changing centers.  <a href="classcolvarbias__restraint__moving.html#a4cd293404e03411c5ae702a6bb956713">More...</a><br /></td></tr>
+<tr class="separator:a4cd293404e03411c5ae702a6bb956713 inherit pro_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932c3a2172bdd9fa020834412095b8b9 inherit pro_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__moving.html#a932c3a2172bdd9fa020834412095b8b9">dU_dlambda_walls</a> () const</td></tr>
+<tr class="memdesc:a932c3a2172bdd9fa020834412095b8b9 inherit pro_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the derivative of the free energy wrt lambda due to changing walls.  <a href="classcolvarbias__restraint__moving.html#a932c3a2172bdd9fa020834412095b8b9">More...</a><br /></td></tr>
+<tr class="separator:a932c3a2172bdd9fa020834412095b8b9 inherit pro_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1991676f6188b2926f036b96ca05222 inherit pro_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="ac1991676f6188b2926f036b96ca05222" name="ac1991676f6188b2926f036b96ca05222"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update_stage</b> ()</td></tr>
+<tr class="memdesc:ac1991676f6188b2926f036b96ca05222 inherit pro_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the stage number based on the current step Note: this is idempotent so multiple calls are safe. <br /></td></tr>
+<tr class="separator:ac1991676f6188b2926f036b96ca05222 inherit pro_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9177929efd53c617f527a7f31c7bc5a inherit pro_methods_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="ae9177929efd53c617f527a7f31c7bc5a" name="ae9177929efd53c617f527a7f31c7bc5a"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>current_lambda</b> () const</td></tr>
+<tr class="memdesc:ae9177929efd53c617f527a7f31c7bc5a inherit pro_methods_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get lambda value for the current stage. <br /></td></tr>
+<tr class="separator:ae9177929efd53c617f527a7f31c7bc5a inherit pro_methods_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcolvarbias__restraint__k__moving"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcolvarbias__restraint__k__moving')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcolvarbias__restraint__k__moving.html">colvarbias_restraint_k_moving</a></td></tr>
+<tr class="memitem:aef1590a048db2571672ef87388fc5922 inherit pro_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#aef1590a048db2571672ef87388fc5922">update_k</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> lambda) override</td></tr>
+<tr class="memdesc:aef1590a048db2571672ef87388fc5922 inherit pro_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the force constant by interpolating between initial and target.  <a href="classcolvarbias__restraint__k__moving.html#aef1590a048db2571672ef87388fc5922">More...</a><br /></td></tr>
+<tr class="separator:aef1590a048db2571672ef87388fc5922 inherit pro_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370c789be6e7ff23ab1f006828bfe01c inherit pro_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarbias__restraint__k__moving.html#a370c789be6e7ff23ab1f006828bfe01c">dU_dlambda_k</a> () const override</td></tr>
+<tr class="memdesc:a370c789be6e7ff23ab1f006828bfe01c inherit pro_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the derivative of the free energy wrt lambda due to changing k.  <a href="classcolvarbias__restraint__k__moving.html#a370c789be6e7ff23ab1f006828bfe01c">More...</a><br /></td></tr>
+<tr class="separator:a370c789be6e7ff23ab1f006828bfe01c inherit pro_methods_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a945db7f4cc11a9c54e26595f31c79225 inherit pro_methods_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top"><a id="a945db7f4cc11a9c54e26595f31c79225" name="a945db7f4cc11a9c54e26595f31c79225"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>update_acc_work</b> ()</td></tr>
 <tr class="memdesc:a945db7f4cc11a9c54e26595f31c79225 inherit pro_methods_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the accumulated work. <br /></td></tr>
@@ -1166,62 +1209,66 @@ std::shared_ptr&lt; <a class="el" href="classcolvar__grid__count.html">colvar_gr
 <tr class="separator:aaa11493120dccc706684569b14b73d46 inherit pro_attribs_classcolvarbias__ti"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvarbias__restraint__moving"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvarbias__restraint__moving')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvarbias__restraint__moving.html">colvarbias_restraint_moving</a></td></tr>
 <tr class="memitem:a32cb1e8e6b463ee18b9cdc8bf5637d95 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a32cb1e8e6b463ee18b9cdc8bf5637d95" name="a32cb1e8e6b463ee18b9cdc8bf5637d95"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>b_chg_centers</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>b_chg_centers</b> = false</td></tr>
 <tr class="memdesc:a32cb1e8e6b463ee18b9cdc8bf5637d95 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moving target? <br /></td></tr>
 <tr class="separator:a32cb1e8e6b463ee18b9cdc8bf5637d95 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1cff9041928155ca12d18febfbcedcb inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="ab1cff9041928155ca12d18febfbcedcb" name="ab1cff9041928155ca12d18febfbcedcb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>b_chg_force_k</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>b_chg_force_k</b> = false</td></tr>
 <tr class="memdesc:ab1cff9041928155ca12d18febfbcedcb inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changing force constant? <br /></td></tr>
 <tr class="separator:ab1cff9041928155ca12d18febfbcedcb inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29cd63b5c615ec8e5bbf9de6f914ef0 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="ad29cd63b5c615ec8e5bbf9de6f914ef0" name="ad29cd63b5c615ec8e5bbf9de6f914ef0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>b_chg_walls</b> = false</td></tr>
+<tr class="memdesc:ad29cd63b5c615ec8e5bbf9de6f914ef0 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changing wall locations? <br /></td></tr>
+<tr class="separator:ad29cd63b5c615ec8e5bbf9de6f914ef0 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a420dc39871cc68d2693fae65e1baa875 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a420dc39871cc68d2693fae65e1baa875" name="a420dc39871cc68d2693fae65e1baa875"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>b_decoupling</b></td></tr>
-<tr class="memdesc:a420dc39871cc68d2693fae65e1baa875 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform decoupling of the restraint? <br /></td></tr>
+<tr class="memdesc:a420dc39871cc68d2693fae65e1baa875 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform decoupling of the restraint? If yes, lambda goes from 1 to 0. <br /></td></tr>
 <tr class="separator:a420dc39871cc68d2693fae65e1baa875 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea1ed7b9d7e3618eb958613db28ae7c0 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="aea1ed7b9d7e3618eb958613db28ae7c0" name="aea1ed7b9d7e3618eb958613db28ae7c0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>target_nstages</b></td></tr>
-<tr class="memdesc:aea1ed7b9d7e3618eb958613db28ae7c0 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of stages over which to perform the change If zero, perform a continuous change. <br /></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>target_nstages</b> = 0</td></tr>
+<tr class="memdesc:aea1ed7b9d7e3618eb958613db28ae7c0 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of stages over which to perform the change If zero, perform a continuous change First step is ignored, then steps within each run of target_nsteps count for one stage. <br /></td></tr>
 <tr class="separator:aea1ed7b9d7e3618eb958613db28ae7c0 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a036eaa30fcdda13a14e31513f7cf336d inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a036eaa30fcdda13a14e31513f7cf336d" name="a036eaa30fcdda13a14e31513f7cf336d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>stage</b></td></tr>
-<tr class="memdesc:a036eaa30fcdda13a14e31513f7cf336d inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of current stage of the perturbation. <br /></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>stage</b> = 0</td></tr>
+<tr class="memdesc:a036eaa30fcdda13a14e31513f7cf336d inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of current stage of the perturbation Starts at 0, goes up to target_nstages during the perturbation. <br /></td></tr>
 <tr class="separator:a036eaa30fcdda13a14e31513f7cf336d inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9990e354392b8dc53abc216236332dff inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a9990e354392b8dc53abc216236332dff" name="a9990e354392b8dc53abc216236332dff"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dA_dlambda</b> = 0.0</td></tr>
+<tr class="memdesc:a9990e354392b8dc53abc216236332dff inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accumulating restraint FE derivative wrt lambda. <br /></td></tr>
+<tr class="separator:a9990e354392b8dc53abc216236332dff inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39feb62cf4f46219e6e755cc5006d583 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a39feb62cf4f46219e6e755cc5006d583" name="a39feb62cf4f46219e6e755cc5006d583"></a>
 std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>lambda_schedule</b></td></tr>
 <tr class="memdesc:a39feb62cf4f46219e6e755cc5006d583 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lambda-schedule for custom varying force constant. <br /></td></tr>
 <tr class="separator:a39feb62cf4f46219e6e755cc5006d583 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a560cf68b8f876ef2ad4ee895769dc792 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a560cf68b8f876ef2ad4ee895769dc792" name="a560cf68b8f876ef2ad4ee895769dc792"></a>
-<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><b>target_nsteps</b></td></tr>
+<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><b>target_nsteps</b> = 0L</td></tr>
 <tr class="memdesc:a560cf68b8f876ef2ad4ee895769dc792 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of steps required to reach the target force constant or restraint centers. <br /></td></tr>
 <tr class="separator:a560cf68b8f876ef2ad4ee895769dc792 inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb85178fe15d665144f889b7c04a710b inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="adb85178fe15d665144f889b7c04a710b" name="adb85178fe15d665144f889b7c04a710b"></a>
+<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><b>target_equil_steps</b> = 0L</td></tr>
+<tr class="memdesc:adb85178fe15d665144f889b7c04a710b inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equilibration steps for restraint FE calculation through TI. <br /></td></tr>
+<tr class="separator:adb85178fe15d665144f889b7c04a710b inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a920768c53600e54d4d1f6a7c93cbd15b inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a920768c53600e54d4d1f6a7c93cbd15b" name="a920768c53600e54d4d1f6a7c93cbd15b"></a>
-<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><b>first_step</b></td></tr>
+<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><b>first_step</b> = 0L</td></tr>
 <tr class="memdesc:a920768c53600e54d4d1f6a7c93cbd15b inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestep at which the restraint starts moving. <br /></td></tr>
 <tr class="separator:a920768c53600e54d4d1f6a7c93cbd15b inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a485699ccd3de06c965967ea7b1dcb8ef inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memItemLeft" align="right" valign="top"><a id="a485699ccd3de06c965967ea7b1dcb8ef" name="a485699ccd3de06c965967ea7b1dcb8ef"></a>
-<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>acc_work</b></td></tr>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>acc_work</b> = 0.0</td></tr>
 <tr class="memdesc:a485699ccd3de06c965967ea7b1dcb8ef inherit pro_attribs_classcolvarbias__restraint__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accumulated work (computed when outputAccumulatedWork == true) <br /></td></tr>
 <tr class="separator:a485699ccd3de06c965967ea7b1dcb8ef inherit pro_attribs_classcolvarbias__restraint__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvarbias__restraint__k__moving"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvarbias__restraint__k__moving')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvarbias__restraint__k__moving.html">colvarbias_restraint_k_moving</a></td></tr>
 <tr class="memitem:ab79f6091ee6544017c9e944634a2d403 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top"><a id="ab79f6091ee6544017c9e944634a2d403" name="ab79f6091ee6544017c9e944634a2d403"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>target_force_k</b></td></tr>
-<tr class="memdesc:ab79f6091ee6544017c9e944634a2d403 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restraint force constant (target value) <br /></td></tr>
+<tr class="memdesc:ab79f6091ee6544017c9e944634a2d403 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restraint force constant (target value at lambda = 1) <br /></td></tr>
 <tr class="separator:ab79f6091ee6544017c9e944634a2d403 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e10d74c1a5be37d01ecf2a2c85d1d40 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top"><a id="a9e10d74c1a5be37d01ecf2a2c85d1d40" name="a9e10d74c1a5be37d01ecf2a2c85d1d40"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>starting_force_k</b></td></tr>
-<tr class="memdesc:a9e10d74c1a5be37d01ecf2a2c85d1d40 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restraint force constant (starting value) <br /></td></tr>
+<tr class="memdesc:a9e10d74c1a5be37d01ecf2a2c85d1d40 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restraint force constant at lambda = 0 (generally starting value, but is final value in the decoupling case) <br /></td></tr>
 <tr class="separator:a9e10d74c1a5be37d01ecf2a2c85d1d40 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d5be51bb03d129a0797599bf5a0e487 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top"><a id="a0d5be51bb03d129a0797599bf5a0e487" name="a0d5be51bb03d129a0797599bf5a0e487"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lambda_exp</b></td></tr>
 <tr class="memdesc:a0d5be51bb03d129a0797599bf5a0e487 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exponent for varying the force constant. <br /></td></tr>
 <tr class="separator:a0d5be51bb03d129a0797599bf5a0e487 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb49c0b3bb970f1d639c049d10abc049 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top"><a id="adb49c0b3bb970f1d639c049d10abc049" name="adb49c0b3bb970f1d639c049d10abc049"></a>
-<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>restraint_FE</b></td></tr>
-<tr class="memdesc:adb49c0b3bb970f1d639c049d10abc049 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intermediate quantity to compute the restraint free energy (in TI, would be the accumulating FE derivative) <br /></td></tr>
-<tr class="separator:adb49c0b3bb970f1d639c049d10abc049 inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ecdb6836f3ed8864112b90e52e5392b inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top"><a id="a2ecdb6836f3ed8864112b90e52e5392b" name="a2ecdb6836f3ed8864112b90e52e5392b"></a>
-<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>target_equil_steps</b></td></tr>
-<tr class="memdesc:a2ecdb6836f3ed8864112b90e52e5392b inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equilibration steps for restraint FE calculation through TI. <br /></td></tr>
-<tr class="separator:a2ecdb6836f3ed8864112b90e52e5392b inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5568f8986d427c8aba19ccdbdfd56c8e inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="memItemLeft" align="right" valign="top"><a id="a5568f8986d427c8aba19ccdbdfd56c8e" name="a5568f8986d427c8aba19ccdbdfd56c8e"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>force_k_incr</b></td></tr>
 <tr class="memdesc:a5568f8986d427c8aba19ccdbdfd56c8e inherit pro_attribs_classcolvarbias__restraint__k__moving"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment of the force constant at each step. <br /></td></tr>
@@ -1265,7 +1312,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_positive_k</b><
 
 <p>Load new configuration - force constant and/or centers only. </p>
 
-<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html#a49e8ddd444f3ef8a28992f45dc0d5c90">colvarbias_restraint_centers_moving</a>.</p>
+<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html#a673302bf2b207f2c0dec978df4a7f686">colvarbias_restraint_centers_moving</a>.</p>
 
 </div>
 </div>
@@ -1352,7 +1399,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_positive_k</b><
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html">colvarbias_restraint_centers_moving</a>.</p>
+<p>Write the values of specific mutable properties to a string. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html#a4433050abef633964e9019ab9a97e2fc">colvarbias_restraint_centers_moving</a>.</p>
 
 </div>
 </div>
@@ -1382,7 +1431,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_positive_k</b><
 
 <p>Parse config string and (re)initialize. </p>
 
-<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html#a7a94a65111eec72ba834bfacc5a0975f">colvarbias_restraint_centers_moving</a>.</p>
+<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html#add137d1e9ac6bcb20d5ab2c40c4fe619">colvarbias_restraint_centers_moving</a>.</p>
 
 </div>
 </div>
@@ -1459,7 +1508,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_positive_k</b><
           <td class="memname">int colvarbias_restraint_linear::set_state_params </td>
           <td>(</td>
           <td class="paramtype">std::string const &amp;&#160;</td>
-          <td class="paramname"><em>conf</em></td><td>)</td>
+          <td class="paramname"><em>state_conf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1470,7 +1519,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_positive_k</b><
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html">colvarbias_restraint_centers_moving</a>.</p>
+<p>Read the values of specific mutable properties from a string. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html#af915c44e265d80d705d92ad7a76d95dc">colvarbias_restraint_centers_moving</a>.</p>
 
 </div>
 </div>
@@ -1497,7 +1548,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_positive_k</b><
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html">colvarbias_restraint_centers_moving</a>.</p>
+<p>Retrieve colvar values and calculate their biasing forces. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__moving.html#a417b0e5218f4b0b7c6df1f9dc55309f6">colvarbias_restraint_moving</a>.</p>
 
 </div>
 </div>
@@ -1527,7 +1580,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_positive_k</b><
 
 <p>Output quantities such as the bias energy to the trajectory file. </p>
 
-<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html#a4f6550201639b4e077e58a688b389e49">colvarbias_restraint_centers_moving</a>.</p>
+<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html#a89effdcb7b845bd3a6ee7a8c3d475d1e">colvarbias_restraint_centers_moving</a>.</p>
 
 </div>
 </div>
@@ -1557,7 +1610,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_positive_k</b><
 
 <p>Write a label to the trajectory file (comment line) </p>
 
-<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html#adeb388111af54835c6ee75788256a441">colvarbias_restraint_centers_moving</a>.</p>
+<p>Reimplemented from <a class="el" href="classcolvarbias__restraint__centers__moving.html#ae9458fc61098f7656051a2fee1702d47">colvarbias_restraint_centers_moving</a>.</p>
 
 </div>
 </div>
@@ -1568,7 +1621,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_positive_k</b><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

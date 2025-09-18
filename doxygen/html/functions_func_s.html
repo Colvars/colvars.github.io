@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -125,7 +128,7 @@ $(function() {
 <li>set_result_text_from_str()&#160;:&#160;<a class="el" href="classcolvarscript.html#a64bb951b3848cfec71cbd005ec0c6eb8">colvarscript</a></li>
 <li>set_sizes()&#160;:&#160;<a class="el" href="classcolvar__grid.html#ad731d89768b605e22ddc9e88e5a54760">colvar_grid&lt; T &gt;</a></li>
 <li>set_smp_mode()&#160;:&#160;<a class="el" href="classcolvarproxy__smp.html#a771a3a2c2dd63b9703e382f0bfe9c768">colvarproxy_smp</a></li>
-<li>set_state_params()&#160;:&#160;<a class="el" href="classcolvar.html#a3f69b06db367bd6b8c19f484e1e14222">colvar</a>, <a class="el" href="classcolvarbias.html#a03ae30bb5ef52cd3f719f300ac57a581">colvarbias</a>, <a class="el" href="classcolvarbias__abmd.html#ad77f3c22b55e592ed8c589bb037a2df3">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#a4986dbcbaf5bd96d036a7fd41faf04e2">colvarbias_alb</a>, <a class="el" href="classcolvarbias__meta.html#a1011a7271071dc3f8297ee134819e7a3">colvarbias_meta</a>, <a class="el" href="classcolvarbias__restraint.html#a15c927ddf9b7bb6201e818f470c25d55">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__ti.html#ad1598673956ec1b04ac46fc2d142d7c2">colvarbias_ti</a></li>
+<li>set_state_params()&#160;:&#160;<a class="el" href="classcolvar.html#a3f69b06db367bd6b8c19f484e1e14222">colvar</a>, <a class="el" href="classcolvarbias.html#a03ae30bb5ef52cd3f719f300ac57a581">colvarbias</a>, <a class="el" href="classcolvarbias__abmd.html#ad77f3c22b55e592ed8c589bb037a2df3">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#a4986dbcbaf5bd96d036a7fd41faf04e2">colvarbias_alb</a>, <a class="el" href="classcolvarbias__meta.html#a1011a7271071dc3f8297ee134819e7a3">colvarbias_meta</a>, <a class="el" href="classcolvarbias__restraint.html#a15c927ddf9b7bb6201e818f470c25d55">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#af915c44e265d80d705d92ad7a76d95dc">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a3082986e02b0722dcc6b49c90a4af242">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#a28af2600c9c563e32d9ffd5382701868">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a8a615337b381f446f9091a1f167f9ba1">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a4caf129f211940daed7218b5cb077d67">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarbias__restraint__moving.html#a127d7f834c2a97f00c64374a181ffe25">colvarbias_restraint_moving</a>, <a class="el" href="classcolvarbias__ti.html#ad1598673956ec1b04ac46fc2d142d7c2">colvarbias_ti</a></li>
 <li>set_string()&#160;:&#160;<a class="el" href="classcolvarparse.html#a3a239a952244cf2433190d5bd221fc92">colvarparse</a></li>
 <li>set_target_temperature()&#160;:&#160;<a class="el" href="classcolvarproxy__system.html#a0c7f268afa1b1e2a9190a684c896b6bb">colvarproxy_system</a></li>
 <li>set_tcl_interp()&#160;:&#160;<a class="el" href="classcolvarproxy__tcl.html#ad22bd5188d65d5da7e92a3b02e70c946">colvarproxy_tcl</a></li>
@@ -136,7 +139,7 @@ $(function() {
 <li>set_weighted_gradient()&#160;:&#160;<a class="el" href="classcvm_1_1atom__group.html#adcf3908984a50143eae4bf257807aa39">cvm::atom_group</a></li>
 <li>set_zero_minimum()&#160;:&#160;<a class="el" href="classcolvargrid__integrate.html#aedd4db5c18cb2066ff37cca15d4573c6">colvargrid_integrate</a></li>
 <li>setActivationFunction()&#160;:&#160;<a class="el" href="classneuralnetworkCV_1_1denseLayer.html#abfd68f0d84da52a4c6c54e33e6281f79">neuralnetworkCV::denseLayer</a></li>
-<li>setf()&#160;:&#160;<a class="el" href="classcvm_1_1memory__stream.html#ae7c05d722900a1694ee55374f175b5e0">cvm::memory_stream</a></li>
+<li>setf()&#160;:&#160;<a class="el" href="classcvm_1_1memory__stream.html#a3d42fa036519aa48a40931c9e46a0b74">cvm::memory_stream</a></li>
 <li>setstate()&#160;:&#160;<a class="el" href="classcvm_1_1memory__stream.html#a8756e7befe61ba60a93e710edacc53d4">cvm::memory_stream</a></li>
 <li>setup()&#160;:&#160;<a class="el" href="classcolvar_1_1cvc.html#a47ace15dc26000806abbb092bef46ed6">colvar::cvc</a>, <a class="el" href="classcolvar.html#afe554f73889f4e5ff6573797ffc31aa4">colvar</a>, <a class="el" href="classcolvar__grid.html#a84dc1c5f4e3ab560f4524ebd4c46cf0d">colvar_grid&lt; T &gt;</a>, <a class="el" href="classcolvarproxy.html#ab8ca4f0643280baed6c0f97f14b46ea6">colvarproxy</a>, <a class="el" href="classcolvarproxy__lammps.html#a5a7f0db7b6817fd204fe4c8d8b54b9e2">colvarproxy_lammps</a>, <a class="el" href="classcolvarproxy__namd.html#a5c6b03395d096a53d9128a306e2cc6ff">colvarproxy_namd</a>, <a class="el" href="classcolvarproxy__vmd.html#adfabbc98a03706344697d86aa1bad74d">colvarproxy_vmd</a>, <a class="el" href="classcvm_1_1atom__group.html#adfc42202122509e62aa65b3abdd4a7c4">cvm::atom_group</a></li>
 <li>setup_input()&#160;:&#160;<a class="el" href="classcolvarmodule.html#af49979648aa93f1379a3954995d49177">colvarmodule</a></li>
@@ -177,7 +180,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

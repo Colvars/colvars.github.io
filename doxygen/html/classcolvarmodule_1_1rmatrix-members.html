@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -88,23 +91,24 @@ $(function() {
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html#ab9f9c9550b07da4af3b2082990077014">determinant</a>() const</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>operator*</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>reset</b>() (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html#afa4ba5424240af32e698c2835a90812d">rmatrix</a>()</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html#aa1c92851e379e6e02a9d0b5fa46a91ca">rmatrix</a>(cvm::real xxi, cvm::real xyi, cvm::real xzi, cvm::real yxi, cvm::real yyi, cvm::real yzi, cvm::real zxi, cvm::real zyi, cvm::real zzi)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>transpose</b>() const (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>xx</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>xy</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>xz</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>yx</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>yy</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>yz</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>zx</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>zy</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>zz</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator+=</b>(const rmatrix &amp;rhs) (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>reset</b>() (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html#afa4ba5424240af32e698c2835a90812d">rmatrix</a>()</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html#aa1c92851e379e6e02a9d0b5fa46a91ca">rmatrix</a>(cvm::real xxi, cvm::real xyi, cvm::real xzi, cvm::real yxi, cvm::real yyi, cvm::real yzi, cvm::real zxi, cvm::real zyi, cvm::real zzi)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>transpose</b>() const (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>xx</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>xy</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>xz</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>yx</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>yy</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>yz</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>zx</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>zy</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>zz</b> (defined in <a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a>)</td><td class="entry"><a class="el" href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

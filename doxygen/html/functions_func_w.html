@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -110,15 +113,15 @@ $(function() {
 <li>write_state_string()&#160;:&#160;<a class="el" href="classcolvarbias.html#ac1891cb8797814270d4994d94e761eef">colvarbias</a></li>
 <li>write_state_to_replicas()&#160;:&#160;<a class="el" href="classcolvarbias.html#a25fd4ff9c796628f169d603bd04a5b50">colvarbias</a>, <a class="el" href="classcolvarbias__meta.html#a5a23733c5dafeef3cefca99f7f751b48">colvarbias_meta</a></li>
 <li>write_to_stream_template_()&#160;:&#160;<a class="el" href="classcolvarvalue.html#ac801f51d10604a8ed7db48a566e1d854">colvarvalue</a></li>
-<li>write_traj()&#160;:&#160;<a class="el" href="classcolvar.html#a352a552ad373989932e085ddc67164c1">colvar</a>, <a class="el" href="classcolvarbias.html#a32004a21548c2504afb8c9939eeb85c6">colvarbias</a>, <a class="el" href="classcolvarbias__abmd.html#aaf19e554c835201204252986bb8c690f">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#a65698c14cc5afd534e9d6dd5a21c48e4">colvarbias_alb</a>, <a class="el" href="classcolvarbias__restraint.html#ac99ab4200e11cd4f41811f0b3ae2daf9">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#a4f6550201639b4e077e58a688b389e49">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#ae659c9a59a71686e2a308bc027d70afa">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#ae3dcd3998dde3584b33d142e051b22e5">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__histogram.html#a21af1402f4ebcd303900da63f233732b">colvarbias_restraint_histogram</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a10fa5f897059ab3f06f9e7e32c8b955e">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a08d1528f212faec9c79d21fd2a0fb39b">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarmodule.html#a1c758065533765a7ee64ae4def3fc73e">colvarmodule</a></li>
+<li>write_traj()&#160;:&#160;<a class="el" href="classcolvar.html#a352a552ad373989932e085ddc67164c1">colvar</a>, <a class="el" href="classcolvarbias.html#a32004a21548c2504afb8c9939eeb85c6">colvarbias</a>, <a class="el" href="classcolvarbias__abmd.html#aaf19e554c835201204252986bb8c690f">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#a65698c14cc5afd534e9d6dd5a21c48e4">colvarbias_alb</a>, <a class="el" href="classcolvarbias__restraint.html#ac99ab4200e11cd4f41811f0b3ae2daf9">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#a89effdcb7b845bd3a6ee7a8c3d475d1e">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#ae659c9a59a71686e2a308bc027d70afa">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#a0a92fb7676c8baf2a933801dbc58a1e4">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__histogram.html#a21af1402f4ebcd303900da63f233732b">colvarbias_restraint_histogram</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a91510982ddc3e678fea519b5529c7d74">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a08d1528f212faec9c79d21fd2a0fb39b">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarmodule.html#a1c758065533765a7ee64ae4def3fc73e">colvarmodule</a></li>
 <li>write_traj_files()&#160;:&#160;<a class="el" href="classcolvarmodule.html#a09443c22019d7a350ed871e3f980b370">colvarmodule</a></li>
-<li>write_traj_label()&#160;:&#160;<a class="el" href="classcolvar.html#a7c07a63bf4888667bd67c799348d312a">colvar</a>, <a class="el" href="classcolvarbias.html#aa3fc63d60bfd062f56642de1ba23d530">colvarbias</a>, <a class="el" href="classcolvarbias__abmd.html#a4516d1aff41a978a6a17b7dcef38085b">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#aacb45aeb3bb631956e18d49ac9eb41ad">colvarbias_alb</a>, <a class="el" href="classcolvarbias__restraint.html#ac3265322021defd7561b18b877594398">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#adeb388111af54835c6ee75788256a441">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a816cb5208717f378bc09ad144f150878">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#abf051cf328b7a37b914266305c84f99f">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__histogram.html#a1a6858f741ecc0b508258734e23b714a">colvarbias_restraint_histogram</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#aa67cb59f2a8c36be70e526d8fe23d02f">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a626ac8bbece2698da7ed1aae64113a9a">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarmodule.html#ab33910351fdcd6a8a38f1f98d4b5f639">colvarmodule</a></li>
+<li>write_traj_label()&#160;:&#160;<a class="el" href="classcolvar.html#a7c07a63bf4888667bd67c799348d312a">colvar</a>, <a class="el" href="classcolvarbias.html#aa3fc63d60bfd062f56642de1ba23d530">colvarbias</a>, <a class="el" href="classcolvarbias__abmd.html#a4516d1aff41a978a6a17b7dcef38085b">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__alb.html#aacb45aeb3bb631956e18d49ac9eb41ad">colvarbias_alb</a>, <a class="el" href="classcolvarbias__restraint.html#ac3265322021defd7561b18b877594398">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#ae9458fc61098f7656051a2fee1702d47">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a816cb5208717f378bc09ad144f150878">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#ad0fba66b1547f38db94f2154ee90330e">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__histogram.html#a1a6858f741ecc0b508258734e23b714a">colvarbias_restraint_histogram</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a5bd8b6e93429ed8c06e4d7f80b71296e">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a626ac8bbece2698da7ed1aae64113a9a">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarmodule.html#ab33910351fdcd6a8a38f1f98d4b5f639">colvarmodule</a></li>
 <li>write_vector()&#160;:&#160;<a class="el" href="classcvm_1_1memory__stream.html#a64d3a1c9443a4d034e2bfdb8a636c89c">cvm::memory_stream</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

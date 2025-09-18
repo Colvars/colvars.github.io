@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -99,55 +102,55 @@ Inheritance diagram for colvardeps:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvardeps__inherit__graph.png" border="0" usemap="#acolvardeps_inherit__map" alt="Inheritance graph"/></div>
 <map name="acolvardeps_inherit__map" id="acolvardeps_inherit__map">
-<area shape="rect" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="5,1525,89,1551"/>
-<area shape="rect" href="classcolvar.html" title="A collective variable (main class); to be defined, it needs at least one object of a derived class of..." alt="" coords="177,647,233,672"/>
-<area shape="rect" href="classcolvar_1_1cvc.html" title="Colvar component (base class for collective variables)" alt="" coords="163,696,247,721"/>
-<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="164,1525,245,1551"/>
-<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="137,1650,272,1690"/>
-<area shape="rect" href="classcvm_1_1atom__group.html" title="Store the information of a group of atoms in a structure&#45;of&#45;arrays (SoA) style." alt="" coords="143,1715,266,1740"/>
-<area shape="rect" href="classcolvar_1_1CVBasedPath.html" title=" " alt="" coords="339,499,485,524"/>
-<area shape="rect" href="classcolvar_1_1CartesianBasedPath.html" title=" " alt="" coords="320,548,504,573"/>
-<area shape="rect" href="classcolvar_1_1alch__Flambda.html" title=" " alt="" coords="339,597,485,623"/>
-<area shape="rect" href="classcolvar_1_1alch__lambda.html" title=" " alt="" coords="343,647,481,672"/>
-<area shape="rect" href="classcolvar_1_1alpha__angles.html" title="Colvar component: alpha helix content of a contiguous segment of 5 or more residues,..." alt="" coords="342,696,482,721"/>
-<area shape="rect" href="classcolvar_1_1angle.html" title="Colvar component: angle between the centers of mass of three groups (colvarvalue::type_scalar type,..." alt="" coords="365,745,459,771"/>
-<area shape="rect" href="classcolvar_1_1cartesian.html" title=" " alt="" coords="353,795,471,820"/>
-<area shape="rect" href="classcolvar_1_1coordnum.html" title="Colvar component: coordination number between two groups (colvarvalue::type_scalar type,..." alt="" coords="351,844,473,869"/>
-<area shape="rect" href="classcolvar_1_1dihedPC.html" title="Colvar component: dihedPC Projection of the config onto a dihedral principal component See e...." alt="" coords="355,893,469,919"/>
-<area shape="rect" href="classcolvar_1_1dihedral.html" title="Colvar component: dihedral between the centers of mass of four groups (colvarvalue::type_scalar type,..." alt="" coords="357,943,467,968"/>
-<area shape="rect" href="classcolvar_1_1dipole__angle.html" title="Colvar component: angle between the dipole of a molecule and an axis formed by two groups of atoms(co..." alt="" coords="344,992,480,1017"/>
-<area shape="rect" href="classcolvar_1_1dipole__magnitude.html" title="Colvar component: dipole magnitude of a molecule." alt="" coords="329,1041,495,1067"/>
-<area shape="rect" href="classcolvar_1_1distance.html" title="Colvar component: distance between the centers of mass of two groups (colvarvalue::type_scalar type,..." alt="" coords="355,1091,469,1116"/>
-<area shape="rect" href="classcolvar_1_1distance__inv.html" title="Colvar component: average distance between two groups of atoms, weighted as the sixth power,..." alt="" coords="343,1140,481,1165"/>
-<area shape="rect" href="classcolvar_1_1distance__pairs.html" title="Colvar component: N1xN2 vector of pairwise distances (colvarvalue::type_vector type,..." alt="" coords="337,1189,487,1215"/>
-<area shape="rect" href="classcolvar_1_1distance__z.html" title="Colvar component: projection of the distance vector along an axis(colvarvalue::type_scalar type,..." alt="" coords="349,1239,475,1264"/>
-<area shape="rect" href="classcolvar_1_1eigenvector.html" title="Colvar component: projection of 3N coordinates onto an eigenvector(colvarvalue::type_scalar type,..." alt="" coords="347,1288,477,1313"/>
-<area shape="rect" href="classcolvar_1_1gyration.html" title="Colvar component: Radius of gyration of an atom group (colvarvalue::type_scalar type,..." alt="" coords="357,5,467,31"/>
-<area shape="rect" href="classcolvar_1_1h__bond.html" title="Colvar component: hydrogen bond, defined as the product of a colvar::coordnum and 1/2*(1&#45;cos((180&#45;ang..." alt="" coords="359,55,465,80"/>
-<area shape="rect" href="classcolvar_1_1linearCombination.html" title="Current only linear combination of sub&#45;CVCs is available." alt="" coords="328,104,496,129"/>
-<area shape="rect" href="classcolvar_1_1map__total.html" title=" " alt="" coords="351,153,473,179"/>
-<area shape="rect" href="classcolvar_1_1orientation.html" title="Colvar component: orientation in space of an atom group, with respect to a set of reference coordinat..." alt="" coords="350,203,474,228"/>
-<area shape="rect" href="classcolvar_1_1polar__phi.html" title="Colvar component: polar coordinate phi of a group (colvarvalue::type_scalar type, range [&#45;180:180])" alt="" coords="354,252,470,277"/>
-<area shape="rect" href="classcolvar_1_1polar__theta.html" title="Colvar component: polar coordinate theta of a group (colvarvalue::type_scalar type,..." alt="" coords="348,301,476,327"/>
-<area shape="rect" href="classcolvar_1_1rmsd.html" title="Colvar component: root mean square deviation (RMSD) of a group with respect to a set of reference coo..." alt="" coords="365,351,459,376"/>
-<area shape="rect" href="classcolvar_1_1selfcoordnum.html" title="Colvar component: self&#45;coordination number within a group (colvarvalue::type_scalar type,..." alt="" coords="341,400,483,425"/>
-<area shape="rect" href="classcolvar_1_1torchANN.html" title=" " alt="" coords="351,449,473,475"/>
-<area shape="rect" href="classcolvar_1_1aspathCV.html" title=" " alt="" coords="559,376,680,401"/>
-<area shape="rect" href="classcolvar_1_1azpathCV.html" title=" " alt="" coords="558,425,681,451"/>
-<area shape="rect" href="classcolvar_1_1gspathCV.html" title="Colvar component: alternative path collective variable using geometry, variable s Allow any combinati..." alt="" coords="559,475,680,500"/>
-<area shape="rect" href="classcolvar_1_1gzpathCV.html" title=" " alt="" coords="559,524,680,549"/>
-<area shape="rect" href="classcolvar_1_1aspath.html" title=" " alt="" coords="568,573,671,599"/>
-<area shape="rect" href="classcolvar_1_1azpath.html" title=" " alt="" coords="567,623,671,648"/>
-<area shape="rect" href="classcolvarbias__abf.html" title="ABF bias." alt="" coords="359,1604,465,1629"/>
-<area shape="rect" href="classcolvarbias__alb.html" title=" " alt="" coords="359,1653,465,1679"/>
-<area shape="rect" href="classcolvarbias__histogram.html" title="Histogram &quot;bias&quot; (does as the name says)" alt="" coords="339,1703,485,1728"/>
-<area shape="rect" href="classcolvarbias__meta.html" title="Metadynamics bias (implementation of colvarbias)" alt="" coords="561,1399,678,1424"/>
-<area shape="rect" href="classcolvarbias__opes.html" title=" " alt="" coords="354,1389,470,1415"/>
-<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="552,1480,687,1505"/>
-<area shape="rect" href="classcolvarbias__restraint__histogram.html" title="Restrain the 1D histogram of a set of variables (or of a multidimensional one)" alt="" coords="345,1489,479,1529"/>
-<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="365,1439,459,1464"/>
-<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="345,1817,479,1857"/>
-<area shape="rect" href="classcolvarbias__restraint__k__moving.html" title="Options to change the restraint force constant over time." alt="" coords="345,1753,479,1793"/>
+<area shape="rect" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="5,1528,89,1553"/>
+<area shape="rect" href="classcolvar.html" title="A collective variable (main class); to be defined, it needs at least one object of a derived class of..." alt="" coords="171,647,227,672"/>
+<area shape="rect" href="classcolvar_1_1cvc.html" title="Colvar component (base class for collective variables)" alt="" coords="157,696,241,721"/>
+<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="158,1528,239,1553"/>
+<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="723,1621,857,1661"/>
+<area shape="rect" href="classcvm_1_1atom__group.html" title="Store the information of a group of atoms in a structure&#45;of&#45;arrays (SoA) style." alt="" coords="137,1803,260,1828"/>
+<area shape="rect" href="classcolvar_1_1CVBasedPath.html" title=" " alt="" coords="327,449,473,475"/>
+<area shape="rect" href="classcolvar_1_1CartesianBasedPath.html" title=" " alt="" coords="308,499,492,524"/>
+<area shape="rect" href="classcolvar_1_1alch__Flambda.html" title=" " alt="" coords="327,548,473,573"/>
+<area shape="rect" href="classcolvar_1_1alch__lambda.html" title=" " alt="" coords="331,597,469,623"/>
+<area shape="rect" href="classcolvar_1_1alpha__angles.html" title="Colvar component: alpha helix content of a contiguous segment of 5 or more residues,..." alt="" coords="330,647,470,672"/>
+<area shape="rect" href="classcolvar_1_1angle.html" title="Colvar component: angle between the centers of mass of three groups (colvarvalue::type_scalar type,..." alt="" coords="353,696,447,721"/>
+<area shape="rect" href="classcolvar_1_1cartesian.html" title=" " alt="" coords="341,745,459,771"/>
+<area shape="rect" href="classcolvar_1_1coordnum.html" title="Colvar component: coordination number between two groups (colvarvalue::type_scalar type,..." alt="" coords="339,795,461,820"/>
+<area shape="rect" href="classcolvar_1_1dihedPC.html" title="Colvar component: dihedPC Projection of the config onto a dihedral principal component See e...." alt="" coords="343,844,457,869"/>
+<area shape="rect" href="classcolvar_1_1dihedral.html" title="Colvar component: dihedral between the centers of mass of four groups (colvarvalue::type_scalar type,..." alt="" coords="345,893,455,919"/>
+<area shape="rect" href="classcolvar_1_1dipole__angle.html" title="Colvar component: angle between the dipole of a molecule and an axis formed by two groups of atoms(co..." alt="" coords="332,943,468,968"/>
+<area shape="rect" href="classcolvar_1_1dipole__magnitude.html" title="Colvar component: dipole magnitude of a molecule." alt="" coords="317,992,483,1017"/>
+<area shape="rect" href="classcolvar_1_1distance.html" title="Colvar component: distance between the centers of mass of two groups (colvarvalue::type_scalar type,..." alt="" coords="343,1041,457,1067"/>
+<area shape="rect" href="classcolvar_1_1distance__inv.html" title="Colvar component: average distance between two groups of atoms, weighted as the sixth power,..." alt="" coords="331,1091,469,1116"/>
+<area shape="rect" href="classcolvar_1_1distance__pairs.html" title="Colvar component: N1xN2 vector of pairwise distances (colvarvalue::type_vector type,..." alt="" coords="325,1140,475,1165"/>
+<area shape="rect" href="classcolvar_1_1distance__z.html" title="Colvar component: projection of the distance vector along an axis(colvarvalue::type_scalar type,..." alt="" coords="337,1189,463,1215"/>
+<area shape="rect" href="classcolvar_1_1eigenvector.html" title="Colvar component: projection of 3N coordinates onto an eigenvector(colvarvalue::type_scalar type,..." alt="" coords="335,1239,465,1264"/>
+<area shape="rect" href="classcolvar_1_1gyration.html" title="Colvar component: Radius of gyration of an atom group (colvarvalue::type_scalar type,..." alt="" coords="345,1288,455,1313"/>
+<area shape="rect" href="classcolvar_1_1h__bond.html" title="Colvar component: hydrogen bond, defined as the product of a colvar::coordnum and 1/2*(1&#45;cos((180&#45;ang..." alt="" coords="347,5,453,31"/>
+<area shape="rect" href="classcolvar_1_1linearCombination.html" title="Current only linear combination of sub&#45;CVCs is available." alt="" coords="316,55,484,80"/>
+<area shape="rect" href="classcolvar_1_1map__total.html" title=" " alt="" coords="339,104,461,129"/>
+<area shape="rect" href="classcolvar_1_1orientation.html" title="Colvar component: orientation in space of an atom group, with respect to a set of reference coordinat..." alt="" coords="338,153,462,179"/>
+<area shape="rect" href="classcolvar_1_1polar__phi.html" title="Colvar component: polar coordinate phi of a group (colvarvalue::type_scalar type, range [&#45;180:180])" alt="" coords="342,203,458,228"/>
+<area shape="rect" href="classcolvar_1_1polar__theta.html" title="Colvar component: polar coordinate theta of a group (colvarvalue::type_scalar type,..." alt="" coords="336,252,464,277"/>
+<area shape="rect" href="classcolvar_1_1rmsd.html" title="Colvar component: root mean square deviation (RMSD) of a group with respect to a set of reference coo..." alt="" coords="353,301,447,327"/>
+<area shape="rect" href="classcolvar_1_1selfcoordnum.html" title="Colvar component: self&#45;coordination number within a group (colvarvalue::type_scalar type,..." alt="" coords="329,351,471,376"/>
+<area shape="rect" href="classcolvar_1_1torchANN.html" title=" " alt="" coords="339,400,461,425"/>
+<area shape="rect" href="classcolvar_1_1aspathCV.html" title=" " alt="" coords="547,376,668,401"/>
+<area shape="rect" href="classcolvar_1_1azpathCV.html" title=" " alt="" coords="546,425,669,451"/>
+<area shape="rect" href="classcolvar_1_1gspathCV.html" title="Colvar component: alternative path collective variable using geometry, variable s Allow any combinati..." alt="" coords="547,475,668,500"/>
+<area shape="rect" href="classcolvar_1_1gzpathCV.html" title=" " alt="" coords="547,327,668,352"/>
+<area shape="rect" href="classcolvar_1_1aspath.html" title=" " alt="" coords="556,573,659,599"/>
+<area shape="rect" href="classcolvar_1_1azpath.html" title=" " alt="" coords="555,524,659,549"/>
+<area shape="rect" href="classcolvarbias__abf.html" title="ABF bias." alt="" coords="347,1552,453,1577"/>
+<area shape="rect" href="classcolvarbias__alb.html" title=" " alt="" coords="347,1601,453,1627"/>
+<area shape="rect" href="classcolvarbias__histogram.html" title="Histogram &quot;bias&quot; (does as the name says)" alt="" coords="327,1651,473,1676"/>
+<area shape="rect" href="classcolvarbias__meta.html" title="Metadynamics bias (implementation of colvarbias)" alt="" coords="549,1627,666,1652"/>
+<area shape="rect" href="classcolvarbias__opes.html" title=" " alt="" coords="342,1337,458,1363"/>
+<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="540,1503,675,1528"/>
+<area shape="rect" href="classcolvarbias__restraint__histogram.html" title="Restrain the 1D histogram of a set of variables (or of a multidimensional one)" alt="" coords="333,1438,467,1478"/>
+<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="353,1503,447,1528"/>
+<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="905,1589,1040,1629"/>
+<area shape="rect" href="classcolvarbias__restraint__k__moving.html" title="Options to change the restraint force constant over time." alt="" coords="905,1653,1040,1693"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -962,7 +965,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

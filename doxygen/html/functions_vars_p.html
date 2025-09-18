@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -98,6 +101,8 @@ $(function() {
 <li>periodic&#160;:&#160;<a class="el" href="classcolvar__grid.html#ae7ae2b01e5c6afa691889907419aa4ec">colvar_grid&lt; T &gt;</a></li>
 <li>pmf&#160;:&#160;<a class="el" href="classcolvarbias__abf.html#ae12340f7faa05c38802bc6337667407b">colvarbias_abf</a></li>
 <li>pmf_grid_exp_avg&#160;:&#160;<a class="el" href="classcolvarbias__reweightaMD.html#a12b798a51e0b8b7742ca759bbb29521a">colvarbias_reweightaMD</a></li>
+<li>pos1x&#160;:&#160;<a class="el" href="structrotation__derivative.html#a4c02342311315f58f834b890754ac1fd">rotation_derivative</a></li>
+<li>pos2x&#160;:&#160;<a class="el" href="structrotation__derivative.html#a849a585f7282e43555b5593dbc0e8707">rotation_derivative</a></li>
 <li>potential_energy&#160;:&#160;<a class="el" href="classcolvar.html#ae1a1f66c6a860b808945d5c3cc25c684">colvar</a></li>
 <li>prev_timestep&#160;:&#160;<a class="el" href="classcolvar.html#a755c10ec29af23615294659f066cbc81">colvar</a></li>
 <li>prev_v_ext&#160;:&#160;<a class="el" href="classcolvar.html#aa7f43820f71f58307d8d8c7a8de0c7ae">colvar</a></li>
@@ -109,7 +114,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

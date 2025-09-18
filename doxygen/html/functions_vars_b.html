@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -83,6 +86,7 @@ $(function() {
 <li>b_anisotropic&#160;:&#160;<a class="el" href="classcolvar_1_1coordnum.html#abef15fca699acc101e3896265dba773e">colvar::coordnum</a>, <a class="el" href="classcolvar_1_1groupcoordnum.html#a120e920110c5018d51642c9e337fe326">colvar::groupcoordnum</a></li>
 <li>b_chg_centers&#160;:&#160;<a class="el" href="classcolvarbias__restraint__moving.html#a32cb1e8e6b463ee18b9cdc8bf5637d95">colvarbias_restraint_moving</a></li>
 <li>b_chg_force_k&#160;:&#160;<a class="el" href="classcolvarbias__restraint__moving.html#ab1cff9041928155ca12d18febfbcedcb">colvarbias_restraint_moving</a></li>
+<li>b_chg_walls&#160;:&#160;<a class="el" href="classcolvarbias__restraint__moving.html#ad29cd63b5c615ec8e5bbf9de6f914ef0">colvarbias_restraint_moving</a></li>
 <li>b_CZAR_estimator&#160;:&#160;<a class="el" href="classcolvarbias__abf.html#a1a116474783af4c32ba6743592be455c">colvarbias_abf</a></li>
 <li>b_czar_window_file&#160;:&#160;<a class="el" href="classcolvarbias__abf.html#a40c24ef0201f56b3caf6bcd358252bc2">colvarbias_abf</a></li>
 <li>b_debug_gradients&#160;:&#160;<a class="el" href="classcolvarmodule_1_1rotation.html#aa4a250ae92a59d20a6dd2d9c3de8820d">colvarmodule::rotation</a></li>
@@ -119,7 +123,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -85,6 +88,8 @@ $(function() {
 <li>index_groups&#160;:&#160;<a class="el" href="classcolvarmodule.html#a616a6f4ef799ac663bd50beaa9d07cca">colvarmodule</a></li>
 <li>indirect_lambda_biasing_force&#160;:&#160;<a class="el" href="classcolvarproxy__system.html#ae0771d63a1a89423a30506f0974cc133">colvarproxy_system</a></li>
 <li>initial_centers&#160;:&#160;<a class="el" href="classcolvarbias__restraint__centers__moving.html#a0fe9078b5755279dc2dddcf2cd6b7f1f">colvarbias_restraint_centers_moving</a></li>
+<li>initial_lower_walls&#160;:&#160;<a class="el" href="classcolvarbias__restraint__harmonic__walls.html#a1d3e9c1ac019ae8ec50a3bd979a40390">colvarbias_restraint_harmonic_walls</a></li>
+<li>initial_upper_walls&#160;:&#160;<a class="el" href="classcolvarbias__restraint__harmonic__walls.html#ab14c853271087fc1e8e9ec309315dd1b">colvarbias_restraint_harmonic_walls</a></li>
 <li>input_prefix&#160;:&#160;<a class="el" href="classcolvarbias__abf.html#a42b9812a14ecf708d350f34f182498f1">colvarbias_abf</a></li>
 <li>input_prefix_str&#160;:&#160;<a class="el" href="classcolvarproxy__io.html#a674409e6fc8eda9a663ecac160c9582c">colvarproxy_io</a></li>
 <li>input_state_buffer_&#160;:&#160;<a class="el" href="classcolvarmodule.html#a8681c1170d103b67e8e2a71c2d745a2a">colvarmodule</a></li>
@@ -100,7 +105,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -101,13 +104,14 @@ Inheritance diagram for colvarbias_ti:</div>
 <area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="153,29,244,55"/>
 <area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="5,29,105,55"/>
 <area shape="rect" href="classcolvardeps.html" title="Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies..." alt="" coords="157,79,241,104"/>
-<area shape="rect" href="classcolvarbias__restraint__centers.html" title="Definition and parsing of the restraint centers." alt="" coords="754,66,889,106"/>
-<area shape="rect" href="classcolvarbias__restraint__k.html" title="Definition and parsing of the force constant." alt="" coords="747,132,896,157"/>
-<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="944,63,1079,103"/>
-<area shape="rect" href="classcolvarbias__restraint__harmonic.html" title="Harmonic bias restraint (implementation of colvarbias_restraint)" alt="" coords="1127,127,1261,167"/>
-<area shape="rect" href="classcolvarbias__restraint__linear.html" title="Linear bias restraint (implementation of colvarbias_restraint)" alt="" coords="1127,63,1261,103"/>
-<area shape="rect" href="classcolvarbias__restraint__k__moving.html" title="Options to change the restraint force constant over time." alt="" coords="944,127,1079,167"/>
-<area shape="rect" href="classcolvarbias__restraint__harmonic__walls.html" title="Wall restraint (implementation of colvarbias_restraint)" alt="" coords="1127,191,1261,231"/>
+<area shape="rect" href="classcolvarbias__restraint__centers.html" title="Definition and parsing of the restraint centers." alt="" coords="754,33,889,73"/>
+<area shape="rect" href="classcolvarbias__restraint__k.html" title="Definition and parsing of the force constant." alt="" coords="747,161,896,187"/>
+<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="754,97,889,137"/>
+<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="944,62,1079,102"/>
+<area shape="rect" href="classcolvarbias__restraint__harmonic.html" title="Harmonic bias restraint (implementation of colvarbias_restraint)" alt="" coords="1127,126,1261,166"/>
+<area shape="rect" href="classcolvarbias__restraint__linear.html" title="Linear bias restraint (implementation of colvarbias_restraint)" alt="" coords="1127,62,1261,102"/>
+<area shape="rect" href="classcolvarbias__restraint__k__moving.html" title="Options to change the restraint force constant over time." alt="" coords="944,126,1079,166"/>
+<area shape="rect" href="classcolvarbias__restraint__harmonic__walls.html" title="Wall restraint (implementation of colvarbias_restraint)" alt="" coords="1127,190,1261,230"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -1001,7 +1005,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#a773a0adb49e85c629940ce8049058f3f">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#a99e3735ab7ed7fc5d3f1397066b0eeca">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a892e3a2d0bc92e0e5a3349bf9abc8837">colvarbias_restraint</a>, and <a class="el" href="classcolvarbias__meta.html#a01e3e6d374c25299aca21d9f70dfcf36">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#a99e3735ab7ed7fc5d3f1397066b0eeca">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a892e3a2d0bc92e0e5a3349bf9abc8837">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a8808efd1ca3653e9ba6ce62d75b4822f">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a4934b76eef76f38b7f7d828b0d4ea1cb">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarbias__meta.html#a01e3e6d374c25299aca21d9f70dfcf36">colvarbias_meta</a>, <a class="el" href="classcolvarbias__restraint__moving.html#a7eeb2c1fe615bfa14e68eab16f605435">colvarbias_restraint_moving</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#a4433050abef633964e9019ab9a97e2fc">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#afb3c402954e4f9f85c0169159a127264">colvarbias_restraint_k_moving</a>, and <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#a54c073a002a98bbee08b4c5bf9a6378a">colvarbias_restraint_harmonic_walls</a>.</p>
 
 </div>
 </div>
@@ -1033,7 +1037,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#abf62dca4abfd96c84d6f132776f71201">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#aeb7a012cab504ec8ec4e5216ee91703f">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a8fa0c731265dfd908e42aa315d558bc2">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers.html#a2607d669764ffa878154595aba8f1d33">colvarbias_restraint_centers</a>, <a class="el" href="classcolvarbias__restraint__k.html#a1eb479f6092769df184487723512bb12">colvarbias_restraint_k</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#a7a94a65111eec72ba834bfacc5a0975f">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a7e4712743785be469bdffcca0ef58128">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a6d4c45b66c1958e98665f652c3d05122">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#abce3884a61c6e303328815ba01cd270d">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__linear.html#ac8bdf18cc52cafbfe1329e4d1a812ddf">colvarbias_restraint_linear</a>, and <a class="el" href="classcolvarbias__meta.html#abe229384167e12b115e1985ca855596e">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#aeb7a012cab504ec8ec4e5216ee91703f">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a8fa0c731265dfd908e42aa315d558bc2">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__centers.html#a2607d669764ffa878154595aba8f1d33">colvarbias_restraint_centers</a>, <a class="el" href="classcolvarbias__restraint__k.html#a1eb479f6092769df184487723512bb12">colvarbias_restraint_k</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a6d4c45b66c1958e98665f652c3d05122">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__linear.html#ac8bdf18cc52cafbfe1329e4d1a812ddf">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarbias__meta.html#abe229384167e12b115e1985ca855596e">colvarbias_meta</a>, <a class="el" href="classcolvarbias__restraint__moving.html#a08489fdd8ce5c4730235e99fe3c5ca53">colvarbias_restraint_moving</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#add137d1e9ac6bcb20d5ab2c40c4fe619">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a498327a01afcc6da5360ab9b8d27243c">colvarbias_restraint_k_moving</a>, and <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#a568c84a3d7daff9e1da63e0f3690cb8a">colvarbias_restraint_harmonic_walls</a>.</p>
 
 </div>
 </div>
@@ -1129,7 +1133,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#a03ae30bb5ef52cd3f719f300ac57a581">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#ad77f3c22b55e592ed8c589bb037a2df3">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a15c927ddf9b7bb6201e818f470c25d55">colvarbias_restraint</a>, and <a class="el" href="classcolvarbias__meta.html#a1011a7271071dc3f8297ee134819e7a3">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#ad77f3c22b55e592ed8c589bb037a2df3">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a15c927ddf9b7bb6201e818f470c25d55">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a3082986e02b0722dcc6b49c90a4af242">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a4caf129f211940daed7218b5cb077d67">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarbias__restraint__moving.html#a127d7f834c2a97f00c64374a181ffe25">colvarbias_restraint_moving</a>, <a class="el" href="classcolvarbias__restraint__centers__moving.html#af915c44e265d80d705d92ad7a76d95dc">colvarbias_restraint_centers_moving</a>, <a class="el" href="classcolvarbias__restraint__k__moving.html#a8a615337b381f446f9091a1f167f9ba1">colvarbias_restraint_k_moving</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#a28af2600c9c563e32d9ffd5382701868">colvarbias_restraint_harmonic_walls</a>, and <a class="el" href="classcolvarbias__meta.html#a1011a7271071dc3f8297ee134819e7a3">colvarbias_meta</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1163,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 
 <p>Reimplemented from <a class="el" href="classcolvarbias.html#af09b6980caa98d0a2c3e3c14f7f1a763">colvarbias</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#a2159a5036772492d201bd075c096f3a6">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a770d8d2aa235a6bba2f0ef12db47eb49">colvarbias_restraint</a>, and <a class="el" href="classcolvarbias__meta.html#a5f28948d2c16fac54ff8fab003bbb6ea">colvarbias_meta</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvarbias__abmd.html#a2159a5036772492d201bd075c096f3a6">colvarbias_abmd</a>, <a class="el" href="classcolvarbias__restraint.html#a770d8d2aa235a6bba2f0ef12db47eb49">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#aab6015ef96c759d5460c7c22b6467dd0">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a010d9ea97e55aa31a20f33fa3479dbfa">colvarbias_restraint_linear</a>, <a class="el" href="classcolvarbias__meta.html#a5f28948d2c16fac54ff8fab003bbb6ea">colvarbias_meta</a>, <a class="el" href="classcolvarbias__restraint__moving.html#a417b0e5218f4b0b7c6df1f9dc55309f6">colvarbias_restraint_moving</a>, and <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#a1284c87326bf3a705a68f4ac00bc1bb3">colvarbias_restraint_harmonic_walls</a>.</p>
 
 </div>
 </div>
@@ -1316,7 +1320,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval_feature</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

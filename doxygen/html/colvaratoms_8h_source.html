@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -395,7 +398,7 @@ $(function() {
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span><span class="preprocessor">#endif </span><span class="comment">// COLVARATOMS_SOA_H</span></div>
 <div class="ttc" id="aclasscolvardeps_html"><div class="ttname"><a href="classcolvardeps.html">colvardeps</a></div><div class="ttdoc">Parent class for a member object of a bias, cv or cvc etc. containing features and their dependencies...</div><div class="ttdef"><b>Definition:</b> colvardeps.h:34</div></div>
 <div class="ttc" id="aclasscolvarmodule_1_1rmatrix_html"><div class="ttname"><a href="classcolvarmodule_1_1rmatrix.html">colvarmodule::rmatrix</a></div><div class="ttdoc">2-dimensional array of real numbers with three components along each dimension (works with colvarmodu...</div><div class="ttdef"><b>Definition:</b> colvartypes.h:892</div></div>
-<div class="ttc" id="aclasscolvarmodule_1_1rotation_html"><div class="ttname"><a href="classcolvarmodule_1_1rotation.html">colvarmodule::rotation</a></div><div class="ttdoc">A rotation between two sets of coordinates (for the moment a wrapper for colvarmodule::quaternion)</div><div class="ttdef"><b>Definition:</b> colvartypes.h:1313</div></div>
+<div class="ttc" id="aclasscolvarmodule_1_1rotation_html"><div class="ttname"><a href="classcolvarmodule_1_1rotation.html">colvarmodule::rotation</a></div><div class="ttdoc">A rotation between two sets of coordinates (for the moment a wrapper for colvarmodule::quaternion)</div><div class="ttdef"><b>Definition:</b> colvartypes.h:1326</div></div>
 <div class="ttc" id="aclasscolvarmodule_1_1rvector_html"><div class="ttname"><a href="classcolvarmodule_1_1rvector.html">colvarmodule::rvector</a></div><div class="ttdoc">vector of real numbers with three components</div><div class="ttdef"><b>Definition:</b> colvartypes.h:724</div></div>
 <div class="ttc" id="aclasscolvarmodule_html_a1ef542d23cf36504a8154c281eba2d5b"><div class="ttname"><a href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">colvarmodule::real</a></div><div class="ttdeci">double real</div><div class="ttdoc">Defining an abstract real number allows to switch precision.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:139</div></div>
 <div class="ttc" id="aclasscolvarmodule_html_a3f4f925aecb0876de09d7649dd2cf320"><div class="ttname"><a href="classcolvarmodule.html#a3f4f925aecb0876de09d7649dd2cf320">colvarmodule::residue_id</a></div><div class="ttdeci">int residue_id</div><div class="ttdoc">Residue identifier.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:264</div></div>
@@ -412,7 +415,7 @@ $(function() {
 <div class="ttc" id="aclasscvm_1_1atom__group_1_1atom__modifier_html_ad9d3109c7516f065f4a3cfe248635491"><div class="ttname"><a href="classcvm_1_1atom__group_1_1atom__modifier.html#ad9d3109c7516f065f4a3cfe248635491">cvm::atom_group::atom_modifier::m_total_charge</a></div><div class="ttdeci">cvm::real m_total_charge</div><div class="ttdoc">Total charge of the atom group.</div><div class="ttdef"><b>Definition:</b> colvaratoms.h:180</div></div>
 <div class="ttc" id="aclasscvm_1_1atom__group_1_1atom__modifier_html_ae060752f01cba5fcfce9e81dd74077f6"><div class="ttname"><a href="classcvm_1_1atom__group_1_1atom__modifier.html#ae060752f01cba5fcfce9e81dd74077f6">cvm::atom_group::atom_modifier::update_from_soa</a></div><div class="ttdeci">void update_from_soa()</div><div class="ttdoc">Populate this temporary AoS object with the atoms from m_ag.</div><div class="ttdef"><b>Definition:</b> colvaratoms.cpp:256</div></div>
 <div class="ttc" id="aclasscvm_1_1atom__group_1_1group__force__object_html"><div class="ttname"><a href="classcvm_1_1atom__group_1_1group__force__object.html">cvm::atom_group::group_force_object</a></div><div class="ttdoc">A helper class for applying forces on an atom group in a way that is aware of the fitting group....</div><div class="ttdef"><b>Definition:</b> colvaratoms.h:694</div></div>
-<div class="ttc" id="aclasscvm_1_1atom__group_1_1group__force__object_html_a1c05ddd16d435722af26d2e86d9d67a5"><div class="ttname"><a href="classcvm_1_1atom__group_1_1group__force__object.html#a1c05ddd16d435722af26d2e86d9d67a5">cvm::atom_group::group_force_object::add_atom_force</a></div><div class="ttdeci">void add_atom_force(size_t i, const cvm::rvector &amp;force)</div><div class="ttdoc">Apply force to atom i.</div><div class="ttdef"><b>Definition:</b> colvaratoms.cpp:1772</div></div>
+<div class="ttc" id="aclasscvm_1_1atom__group_1_1group__force__object_html_a1c05ddd16d435722af26d2e86d9d67a5"><div class="ttname"><a href="classcvm_1_1atom__group_1_1group__force__object.html#a1c05ddd16d435722af26d2e86d9d67a5">cvm::atom_group::group_force_object::add_atom_force</a></div><div class="ttdeci">void add_atom_force(size_t i, const cvm::rvector &amp;force)</div><div class="ttdoc">Apply force to atom i.</div><div class="ttdef"><b>Definition:</b> colvaratoms.cpp:1774</div></div>
 <div class="ttc" id="aclasscvm_1_1atom__group_html"><div class="ttname"><a href="classcvm_1_1atom__group.html">cvm::atom_group</a></div><div class="ttdoc">Store the information of a group of atoms in a structure-of-arrays (SoA) style.</div><div class="ttdef"><b>Definition:</b> colvaratoms.h:51</div></div>
 <div class="ttc" id="aclasscvm_1_1atom__group_html_a010f95c6ccbfc855fcf15b5bc4f29dd3"><div class="ttname"><a href="classcvm_1_1atom__group.html#a010f95c6ccbfc855fcf15b5bc4f29dd3">cvm::atom_group::center_of_geometry</a></div><div class="ttdeci">cvm::atom_pos center_of_geometry() const</div><div class="ttdoc">Return the center of geometry of the atomic positions.</div><div class="ttdef"><b>Definition:</b> colvaratoms.h:379</div></div>
 <div class="ttc" id="aclasscvm_1_1atom__group_html_a036391ee84feab8c0e7c2fcba43a6d8c"><div class="ttname"><a href="classcvm_1_1atom__group.html#a036391ee84feab8c0e7c2fcba43a6d8c">cvm::atom_group::total_mass</a></div><div class="ttdeci">cvm::real total_mass</div><div class="ttdoc">Total mass of the atom group.</div><div class="ttdef"><b>Definition:</b> colvaratoms.h:761</div></div>
@@ -473,7 +476,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:10 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:06 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

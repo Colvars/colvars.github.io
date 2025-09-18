@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -79,6 +82,7 @@ $(function() {
 &#160;
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>dA_dlambda&#160;:&#160;<a class="el" href="classcolvarbias__restraint__moving.html#a9990e354392b8dc53abc216236332dff">colvarbias_restraint_moving</a></li>
 <li>data&#160;:&#160;<a class="el" href="classcolvar__grid.html#a55315b2161c9487ade559bf1174b31dd">colvar_grid&lt; T &gt;</a>, <a class="el" href="classcolvarparse_1_1read__block.html#a4ac899a6327487c41a0e5af396b8f79e">colvarparse::read_block</a></li>
 <li>data_begin_pos&#160;:&#160;<a class="el" href="classcolvarparse.html#a39c128c5f96f1d6d74038024c1e25ce9">colvarparse</a></li>
 <li>data_end_pos&#160;:&#160;<a class="el" href="classcolvarparse.html#a953417bf426b3f6743ad08a5d6f5549c">colvarparse</a></li>
@@ -101,7 +105,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

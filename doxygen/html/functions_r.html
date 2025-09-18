@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -199,9 +202,8 @@ $(function() {
 <li>restart_version_str&#160;:&#160;<a class="el" href="classcolvarmodule.html#ac8eae654d642ad81917b71444a454104">colvarmodule</a></li>
 <li>restore_children_deps()&#160;:&#160;<a class="el" href="classcolvardeps.html#ae4321d775985c4ae16df3cbb31d855c4">colvardeps</a></li>
 <li>restraint_convert_k()&#160;:&#160;<a class="el" href="classcolvarbias__alb.html#abb32a34f14ce77c9c56a7fb4a7f037c4">colvarbias_alb</a></li>
-<li>restraint_FE&#160;:&#160;<a class="el" href="classcolvarbias__restraint__k__moving.html#adb49c0b3bb970f1d639c049d10abc049">colvarbias_restraint_k_moving</a></li>
-<li>restraint_force()&#160;:&#160;<a class="el" href="classcolvarbias__alb.html#ab93316f3d4293ad377adf9070b5d7bb4">colvarbias_alb</a>, <a class="el" href="classcolvarbias__restraint.html#a65ed1842434dfcb07cfbbbc658d47d37">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a8b89cdc6a0b6d7e9146eb1a8023ccbb5">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#a4a0c8a09dfc370638f111e6a8ff0c880">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a986f94191703f623714050877e5b3506">colvarbias_restraint_linear</a></li>
-<li>restraint_potential()&#160;:&#160;<a class="el" href="classcolvarbias__restraint.html#ab330422af832dba5370421869c3943ed">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a03f7f5127cac4159b5d7b034c08f4568">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#aaa5ea2034fcd8b02765b4552e6785d21">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a105e2775f5c3a2850ee81c3e699a7578">colvarbias_restraint_linear</a></li>
+<li>restraint_force()&#160;:&#160;<a class="el" href="classcolvarbias__alb.html#ab93316f3d4293ad377adf9070b5d7bb4">colvarbias_alb</a>, <a class="el" href="classcolvarbias__restraint.html#a65ed1842434dfcb07cfbbbc658d47d37">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a8b89cdc6a0b6d7e9146eb1a8023ccbb5">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#a707e8363fe42ceab72a60f88d82a66d1">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a986f94191703f623714050877e5b3506">colvarbias_restraint_linear</a></li>
+<li>restraint_potential()&#160;:&#160;<a class="el" href="classcolvarbias__restraint.html#ab330422af832dba5370421869c3943ed">colvarbias_restraint</a>, <a class="el" href="classcolvarbias__restraint__harmonic.html#a03f7f5127cac4159b5d7b034c08f4568">colvarbias_restraint_harmonic</a>, <a class="el" href="classcolvarbias__restraint__harmonic__walls.html#aa4cb95a1cf242a6ddc12a0b873b480ad">colvarbias_restraint_harmonic_walls</a>, <a class="el" href="classcolvarbias__restraint__linear.html#a105e2775f5c3a2850ee81c3e699a7578">colvarbias_restraint_linear</a></li>
 <li>rmatrix()&#160;:&#160;<a class="el" href="classcolvarmodule_1_1rmatrix.html#afa4ba5424240af32e698c2835a90812d">colvarmodule::rmatrix</a></li>
 <li>rms_atom_groups_applied_force()&#160;:&#160;<a class="el" href="classcolvarproxy__atom__groups.html#a98607d49de843876e322801497111ffb">colvarproxy_atom_groups</a></li>
 <li>rms_atoms_applied_force()&#160;:&#160;<a class="el" href="classcolvarproxy__atoms.html#a59e25e8cf997cfaf9c7aa665a7155e76">colvarproxy_atoms</a></li>
@@ -225,7 +227,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

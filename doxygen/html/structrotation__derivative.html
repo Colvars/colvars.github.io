@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -129,6 +132,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaa2e12d56376cf54fa3faac84e969cee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#aaa2e12d56376cf54fa3faac84e969cee">calc_derivative_wrt_group2</a> (size_t ia, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *_noalias const dl0_2_out=nullptr, std::array&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, 4 &gt; *_noalias const dq0_2_out=nullptr, std::array&lt; std::array&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, 4 &gt;, 4 &gt; *_noalias const ds_2_out=nullptr) const</td></tr>
 <tr class="memdesc:aaa2e12d56376cf54fa3faac84e969cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the derivatives of S, the leading eigenvalue L and the leading eigenvector Q with respect to <code>m_pos2</code>  <a href="structrotation__derivative.html#aaa2e12d56376cf54fa3faac84e969cee">More...</a><br /></td></tr>
 <tr class="separator:aaa2e12d56376cf54fa3faac84e969cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cede9c27bf0f04b33eeeac0a4c20bea"><td class="memTemplParams" colspan="2">template&lt;int i&gt; </td></tr>
+<tr class="memitem:a2cede9c27bf0f04b33eeeac0a4c20bea"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#a2cede9c27bf0f04b33eeeac0a4c20bea">project_force_to_C_from_dxdqi</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> f_on_q) const</td></tr>
+<tr class="memdesc:a2cede9c27bf0f04b33eeeac0a4c20bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project the force on \(q_i\) (or the gradient of \(\frac{\mathrm{d}x}{\mathrm{d}q_i}\)) to the force on the correlation matrix \(C=\mathbf{r}_1^\intercal\mathbf{r}_2\), where \(\mathbf{r}_1\) and \(\mathbf{r}_2\) are \(N\times 3\) matrices containing the atom positions of atom group 1 and atom group 2 after centering on origin.  <a href="structrotation__derivative.html#a2cede9c27bf0f04b33eeeac0a4c20bea">More...</a><br /></td></tr>
+<tr class="separator:a2cede9c27bf0f04b33eeeac0a4c20bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac40fdc1fbd62342b73818675311723c"><td class="memTemplParams" colspan="2">template&lt;typename dim4_array_t &gt; </td></tr>
+<tr class="memitem:aac40fdc1fbd62342b73818675311723c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#aac40fdc1fbd62342b73818675311723c">project_force_to_C_from_dxdq</a> (const dim4_array_t &amp;sum_dxdq) const</td></tr>
+<tr class="memdesc:aac40fdc1fbd62342b73818675311723c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project the force on \(\mathbf{q}\) (or the gradient of \(\frac{\mathrm{d}x}{\mathrm{d}q_i}\)) to the force on the correlation matrix \(C=\mathbf{r}_1^\intercal\mathbf{r}_2\), where \(\mathbf{r}_1\) and \(\mathbf{r}_2\) are \(N\times 3\) matrices containing the atom positions of atom group 1 and atom group 2 after centering on origin.  <a href="structrotation__derivative.html#aac40fdc1fbd62342b73818675311723c">More...</a><br /></td></tr>
+<tr class="separator:aac40fdc1fbd62342b73818675311723c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38cb5ae35fd9fb3e5d2f84dc037aa8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#ad38cb5ae35fd9fb3e5d2f84dc037aa8a">project_force_to_group1</a> (size_t ia, const <a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a> &amp;dxdC) const</td></tr>
+<tr class="memdesc:ad38cb5ae35fd9fb3e5d2f84dc037aa8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project the force on the correlation matrix \(C\) to \(\mathbf{r}_1\).  <a href="structrotation__derivative.html#ad38cb5ae35fd9fb3e5d2f84dc037aa8a">More...</a><br /></td></tr>
+<tr class="separator:ad38cb5ae35fd9fb3e5d2f84dc037aa8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b0c62a2711e885d336857b4501146d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#aa4b0c62a2711e885d336857b4501146d">project_force_to_group2</a> (size_t ia, const <a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a> &amp;dxdC) const</td></tr>
+<tr class="memdesc:aa4b0c62a2711e885d336857b4501146d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project the force on the correlation matrix \(C\) to \(\mathbf{r}_2\).  <a href="structrotation__derivative.html#aa4b0c62a2711e885d336857b4501146d">More...</a><br /></td></tr>
+<tr class="separator:aa4b0c62a2711e885d336857b4501146d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -136,14 +153,26 @@ Public Attributes</h2></td></tr>
 const <a class="el" href="classcolvarmodule_1_1rotation.html">cvm::rotation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_rot</b></td></tr>
 <tr class="memdesc:aaa49391d7c6aebc8d08da6e8c654318e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the rotation. <br /></td></tr>
 <tr class="separator:aaa49391d7c6aebc8d08da6e8c654318e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a942e30e32ea0bb7370c07fe66b811472"><td class="memItemLeft" align="right" valign="top"><a id="a942e30e32ea0bb7370c07fe66b811472" name="a942e30e32ea0bb7370c07fe66b811472"></a>
-const std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_pos1</b></td></tr>
-<tr class="memdesc:a942e30e32ea0bb7370c07fe66b811472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the atom positions of group 1. <br /></td></tr>
-<tr class="separator:a942e30e32ea0bb7370c07fe66b811472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acce7d473829308e27b09cbd32e425b5b"><td class="memItemLeft" align="right" valign="top"><a id="acce7d473829308e27b09cbd32e425b5b" name="acce7d473829308e27b09cbd32e425b5b"></a>
-const std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_pos2</b></td></tr>
-<tr class="memdesc:acce7d473829308e27b09cbd32e425b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the atom positions of group 2. <br /></td></tr>
-<tr class="separator:acce7d473829308e27b09cbd32e425b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c02342311315f58f834b890754ac1fd"><td class="memItemLeft" align="right" valign="top"><a id="a4c02342311315f58f834b890754ac1fd" name="a4c02342311315f58f834b890754ac1fd"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos1x</b></td></tr>
+<tr class="memdesc:a4c02342311315f58f834b890754ac1fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the atom positions of group 1. <br /></td></tr>
+<tr class="separator:a4c02342311315f58f834b890754ac1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cdc399eea2223d6bb996e269dba3977"><td class="memItemLeft" align="right" valign="top"><a id="a2cdc399eea2223d6bb996e269dba3977" name="a2cdc399eea2223d6bb996e269dba3977"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos1y</b></td></tr>
+<tr class="separator:a2cdc399eea2223d6bb996e269dba3977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3bb6bda6a56aa523872c4ad3c2db9f"><td class="memItemLeft" align="right" valign="top"><a id="a4b3bb6bda6a56aa523872c4ad3c2db9f" name="a4b3bb6bda6a56aa523872c4ad3c2db9f"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos1z</b></td></tr>
+<tr class="separator:a4b3bb6bda6a56aa523872c4ad3c2db9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849a585f7282e43555b5593dbc0e8707"><td class="memItemLeft" align="right" valign="top"><a id="a849a585f7282e43555b5593dbc0e8707" name="a849a585f7282e43555b5593dbc0e8707"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos2x</b></td></tr>
+<tr class="memdesc:a849a585f7282e43555b5593dbc0e8707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the atom positions of group 2. <br /></td></tr>
+<tr class="separator:a849a585f7282e43555b5593dbc0e8707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae403e7b9bce8690f06081d9c412d5471"><td class="memItemLeft" align="right" valign="top"><a id="ae403e7b9bce8690f06081d9c412d5471" name="ae403e7b9bce8690f06081d9c412d5471"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos2y</b></td></tr>
+<tr class="separator:ae403e7b9bce8690f06081d9c412d5471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa7e31c86c5896d6a90f7f815a3cffe8"><td class="memItemLeft" align="right" valign="top"><a id="afa7e31c86c5896d6a90f7f815a3cffe8" name="afa7e31c86c5896d6a90f7f815a3cffe8"></a>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos2z</b></td></tr>
+<tr class="separator:afa7e31c86c5896d6a90f7f815a3cffe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5582ba4c888de3a4ff6f22c2767c7387"><td class="memItemLeft" align="right" valign="top"><a id="a5582ba4c888de3a4ff6f22c2767c7387" name="a5582ba4c888de3a4ff6f22c2767c7387"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_num_atoms_pos1</b></td></tr>
 <tr class="memdesc:a5582ba4c888de3a4ff6f22c2767c7387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of atoms in group1 (used in SOA) <br /></td></tr>
@@ -447,13 +476,195 @@ template&lt;bool use_dl, bool use_dq, bool use_ds&gt; </div>
 
 </div>
 </div>
+<a id="aac40fdc1fbd62342b73818675311723c" name="aac40fdc1fbd62342b73818675311723c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac40fdc1fbd62342b73818675311723c">&#9670;&#160;</a></span>project_force_to_C_from_dxdq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dim4_array_t &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a> rotation_derivative::project_force_to_C_from_dxdq </td>
+          <td>(</td>
+          <td class="paramtype">const dim4_array_t &amp;&#160;</td>
+          <td class="paramname"><em>sum_dxdq</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Project the force on \(\mathbf{q}\) (or the gradient of \(\frac{\mathrm{d}x}{\mathrm{d}q_i}\)) to the force on the correlation matrix \(C=\mathbf{r}_1^\intercal\mathbf{r}_2\), where \(\mathbf{r}_1\) and \(\mathbf{r}_2\) are \(N\times 3\) matrices containing the atom positions of atom group 1 and atom group 2 after centering on origin. </p>
+<p >See also <a class="el" href="structrotation__derivative.html#a2cede9c27bf0f04b33eeeac0a4c20bea" title="Project the force on  (or the gradient of ) to the force on the correlation matrix ,...">project_force_to_C_from_dxdqi()</a>.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">dim4_array_t</td><td>The type of force acting on \(\mathbf{q}\).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum_dxdq</td><td>The force on \(\mathbf{q}\) or the gradient vector \((\frac{\mathrm{d}x}{\mathrm{d}q_0}, \frac{\mathrm{d}x}{\mathrm{d}q_1}, \frac{\mathrm{d}x}{\mathrm{d}q_2}, \frac{\mathrm{d}x}{\mathrm{d}q_3})\).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A 3x3 matrix. The matrix element at row \(j\) and column \(k\) is \(\sum_{i=0}^3 f_{q_i}\frac{\mathrm{d}q_i}{\mathrm{d}C_{jk}}\). </dd></dl>
+
+</div>
+</div>
+<a id="a2cede9c27bf0f04b33eeeac0a4c20bea" name="a2cede9c27bf0f04b33eeeac0a4c20bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cede9c27bf0f04b33eeeac0a4c20bea">&#9670;&#160;</a></span>project_force_to_C_from_dxdqi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int i&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a> rotation_derivative::project_force_to_C_from_dxdqi </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td>
+          <td class="paramname"><em>f_on_q</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Project the force on \(q_i\) (or the gradient of \(\frac{\mathrm{d}x}{\mathrm{d}q_i}\)) to the force on the correlation matrix \(C=\mathbf{r}_1^\intercal\mathbf{r}_2\), where \(\mathbf{r}_1\) and \(\mathbf{r}_2\) are \(N\times 3\) matrices containing the atom positions of atom group 1 and atom group 2 after centering on origin. </p>
+<p >This function can be only called after prepare_derivative(rotation_derivative_dldq::use_dq). It mulitplies the input with \(\frac{\mathrm{d}q_i}{\mathrm{d}C}\).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">i</td><td>The i-th component of the quaternion, must be in the range [0, 3] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f_on_q</td><td>The force on \(q_i\) or the gradient of \(\frac{\mathrm{d}x}{\mathrm{d}q_i}\)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A 3x3 matrix. The matrix element at row \(j\) and column \(k\) is \(f_{q_i}\frac{\mathrm{d}q_i}{\mathrm{d}C_{jk}}\). </dd></dl>
+
+</div>
+</div>
+<a id="ad38cb5ae35fd9fb3e5d2f84dc037aa8a" name="ad38cb5ae35fd9fb3e5d2f84dc037aa8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad38cb5ae35fd9fb3e5d2f84dc037aa8a">&#9670;&#160;</a></span>project_force_to_group1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> rotation_derivative::project_force_to_group1 </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>ia</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>dxdC</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Project the force on the correlation matrix \(C\) to \(\mathbf{r}_1\). </p>
+<p >Let \(C=\mathbf{r}_1^\intercal\mathbf{r}_2\), and the force on \(C\) be \(F_{C}\). This function returns the force on the i-th atom of \(\mathbf{r}_1\).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ia</td><td>The atom index of the i-th atom in \(\mathbf{r}_1\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dxdC</td><td>The 3x3 matrix containing the forces on each element of \(C\)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The force on the i-th atom of \(\mathbf{r}_1\) </dd></dl>
+
+</div>
+</div>
+<a id="aa4b0c62a2711e885d336857b4501146d" name="aa4b0c62a2711e885d336857b4501146d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b0c62a2711e885d336857b4501146d">&#9670;&#160;</a></span>project_force_to_group2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> rotation_derivative::project_force_to_group2 </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>ia</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcolvarmodule_1_1rmatrix.html">cvm::rmatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>dxdC</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Project the force on the correlation matrix \(C\) to \(\mathbf{r}_2\). </p>
+<p >Let \(C=\mathbf{r}_1^\intercal\mathbf{r}_2\), and the force on \(C\) be \(F_{C}\). This function returns the force on the i-th atom of \(\mathbf{r}_2\).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ia</td><td>The atom index of the i-th atom in \(\mathbf{r}_2\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dxdC</td><td>The 3x3 matrix containing the forces on each element of \(C\)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The force on the i-th atom of \(\mathbf{r}_2\) </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="colvar__rotation__derivative_8h_source.html">colvar_rotation_derivative.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

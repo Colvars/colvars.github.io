@@ -12,13 +12,16 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -96,9 +99,9 @@ Inheritance diagram for colvarparams:</div>
 <area shape="rect" href="classcolvar.html" title="A collective variable (main class); to be defined, it needs at least one object of a derived class of..." alt="" coords="345,771,401,796"/>
 <area shape="rect" href="classcolvar_1_1cvc.html" title="Colvar component (base class for collective variables)" alt="" coords="331,820,415,845"/>
 <area shape="rect" href="classcolvar__grid.html" title="Grid of values of a function of several collective variables." alt="" coords="315,869,431,895"/>
-<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="333,1611,414,1636"/>
-<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="306,1661,441,1701"/>
-<area shape="rect" href="classcvm_1_1atom__group.html" title="Store the information of a group of atoms in a structure&#45;of&#45;arrays (SoA) style." alt="" coords="312,1725,435,1751"/>
+<area shape="rect" href="classcolvarbias.html" title="Collective variable bias, base class." alt="" coords="333,1636,414,1661"/>
+<area shape="rect" href="classcolvarbias__restraint__moving.html" title="Options to change the restraint configuration over time (shared between centers and k moving)" alt="" coords="917,1869,1052,1909"/>
+<area shape="rect" href="classcvm_1_1atom__group.html" title="Store the information of a group of atoms in a structure&#45;of&#45;arrays (SoA) style." alt="" coords="312,1952,435,1977"/>
 <area shape="rect" href="classcolvar__grid__count.html" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="533,5,656,31"/>
 <area shape="rect" href="classcolvar__grid__gradient.html" title="Class for accumulating the gradient of a scalar function on a grid." alt="" coords="526,104,663,129"/>
 <area shape="rect" href="classcolvar__grid__scalar.html" title="Class for accumulating a scalar function on a grid." alt="" coords="531,55,658,80"/>
@@ -129,15 +132,15 @@ Inheritance diagram for colvarparams:</div>
 <area shape="rect" href="classcolvar_1_1rmsd.html" title="Colvar component: root mean square deviation (RMSD) of a group with respect to a set of reference coo..." alt="" coords="548,597,641,623"/>
 <area shape="rect" href="classcolvar_1_1selfcoordnum.html" title="Colvar component: self&#45;coordination number within a group (colvarvalue::type_scalar type,..." alt="" coords="523,647,666,672"/>
 <area shape="rect" href="classcolvar_1_1torchANN.html" title=" " alt="" coords="533,696,656,721"/>
-<area shape="rect" href="classcolvarbias__abf.html" title="ABF bias." alt="" coords="541,1851,648,1876"/>
+<area shape="rect" href="classcolvarbias__abf.html" title="ABF bias." alt="" coords="541,1800,648,1825"/>
 <area shape="rect" href="classcolvarbias__alb.html" title=" " alt="" coords="542,1485,647,1511"/>
 <area shape="rect" href="classcolvarbias__histogram.html" title="Histogram &quot;bias&quot; (does as the name says)" alt="" coords="522,1535,667,1560"/>
-<area shape="rect" href="classcolvarbias__meta.html" title="Metadynamics bias (implementation of colvarbias)" alt="" coords="743,1645,861,1671"/>
+<area shape="rect" href="classcolvarbias__meta.html" title="Metadynamics bias (implementation of colvarbias)" alt="" coords="743,1668,861,1693"/>
 <area shape="rect" href="classcolvarbias__opes.html" title=" " alt="" coords="537,1636,653,1661"/>
-<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="735,1727,869,1752"/>
-<area shape="rect" href="classcolvarbias__restraint__histogram.html" title="Restrain the 1D histogram of a set of variables (or of a multidimensional one)" alt="" coords="527,1735,662,1775"/>
-<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="547,1685,642,1711"/>
-<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="527,1901,662,1941"/>
+<area shape="rect" href="classcolvarbias__restraint.html" title="Most general definition of a colvar restraint: see derived classes for specific types (implementation..." alt="" coords="735,1851,869,1876"/>
+<area shape="rect" href="classcolvarbias__restraint__histogram.html" title="Restrain the 1D histogram of a set of variables (or of a multidimensional one)" alt="" coords="527,1686,662,1726"/>
+<area shape="rect" href="classcolvarbias__ti.html" title="Base class for unconstrained thermodynamic&#45;integration FE estimator." alt="" coords="547,1751,642,1776"/>
+<area shape="rect" href="classcolvarbias__restraint__centers__moving.html" title="Options to change the restraint centers over time." alt="" coords="1100,1869,1235,1909"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -249,7 +252,7 @@ std::map&lt; std::string, <a class="el" href="classcolvarvalue.html">colvarvalue
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 9 2025 17:38:11 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Sep 18 2025 22:10:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
