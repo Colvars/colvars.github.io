@@ -6,7 +6,7 @@ var searchData=
   ['r21_3',['r21',['../classcolvar_1_1dipole__angle.html#a40b894b4c874859a92238e55a6756bb4',1,'colvar::dipole_angle::r21()'],['../classcolvar_1_1angle.html#a1b32c1888ac24e1884b494f979daba65',1,'colvar::angle::r21()']]],
   ['r21l_4',['r21l',['../classcolvar_1_1dipole__angle.html#a489d8fd2d8676bf8992225752eaf5620',1,'colvar::dipole_angle::r21l()'],['../classcolvar_1_1angle.html#adbd652d28a40bd7b9279ac081b21ec75',1,'colvar::angle::r21l()']]],
   ['rand_5fgaussian_5',['rand_gaussian',['../classcolvarproxy__vmd.html#ab25de40db265c3a5ccc072d234dc3ead',1,'colvarproxy_vmd::rand_gaussian()'],['../classcolvarproxy__namd.html#aa8de1461ae2842ecd5db6ae91efa5c3a',1,'colvarproxy_namd::rand_gaussian()'],['../classcolvarproxy__system.html#ad0e1c25ca4482865a40dd37656d5a0a6',1,'colvarproxy_system::rand_gaussian()'],['../classcolvarmodule.html#aa34a255c4171f307e7306a51411b0199',1,'colvarmodule::rand_gaussian()'],['../classcolvarproxy__lammps.html#ab4fa25a4b53dfd969da82365637c4626',1,'colvarproxy_lammps::rand_gaussian()']]],
-  ['random_6',['random',['../classcolvarproxy__namd.html#a1fe48e62a65ca57ed74b065ecdc3cb69',1,'colvarproxy_namd']]],
+  ['random_6',['random',['../classcolvarproxy__namd.html#a9f11de362b17279180930e41653febbe',1,'colvarproxy_namd']]],
   ['rank_7',['rank',['../classcolvarbias.html#ae52ca5fbd5a4b782c41884e1b81ccacb',1,'colvarbias']]],
   ['raw_5fdata_5fin_8',['raw_data_in',['../classcolvar__grid.html#afa8b23c88150bce43629816c04ad4207',1,'colvar_grid']]],
   ['raw_5fdata_5fnum_9',['raw_data_num',['../classcolvar__grid.html#ab6348b05c77d8c1f25803fa2131b4837',1,'colvar_grid']]],
