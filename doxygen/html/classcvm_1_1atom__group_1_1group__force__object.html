@@ -215,7 +215,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_has_fitting_force</
 <div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> f = compute_force_on_atom_ia();</div>
 <div class="line">  ag_force.add_atom_force(ia, f);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclasscolvarmodule_1_1rvector_html"><div class="ttname"><a href="classcolvarmodule_1_1rvector.html">colvarmodule::rvector</a></div><div class="ttdoc">vector of real numbers with three components</div><div class="ttdef"><b>Definition:</b> colvartypes.h:724</div></div>
+<div class="ttc" id="aclasscolvarmodule_1_1rvector_html"><div class="ttname"><a href="classcolvarmodule_1_1rvector.html">colvarmodule::rvector</a></div><div class="ttdoc">vector of real numbers with three components</div><div class="ttdef"><b>Definition:</b> colvartypes.h:726</div></div>
 </div><!-- fragment --><p> There are actually two scenarios under the hood: (i) If the atom group does not have a fitting group, then the force is added to atom i directly; (ii) If the atom group has a fitting group, the force on atom i will just be temporary stashed into ag-&gt;group_forces. At the end of the loop of apply_force(), the destructor ~group_force_object() will be called, which then call apply_force_with_fitting_group(). The forces on the main group will be rotated back by multiplying ag-&gt;group_forces with the inverse rotation. The forces on the fitting group (if enableFitGradients is on) will be calculated by calling calc_fit_forces. </p>
 
 </div>
@@ -227,7 +227,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_has_fitting_force</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 14 2025 19:11:59 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Nov 14 2025 20:13:32 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

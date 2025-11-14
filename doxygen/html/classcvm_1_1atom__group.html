@@ -90,6 +90,7 @@ $(function() {
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classcvm_1_1atom__group-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">cvm::atom_group Class Reference</div></div>
 </div><!--header-->
@@ -254,10 +255,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>calc_required_properti
 int&#160;</td><td class="memItemRight" valign="bottom"><b>calc_center_of_geometry</b> ()</td></tr>
 <tr class="memdesc:ace93592366fef0c604eb66171d3123ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the center of geometry of the atomic positions, assuming that they are already pbc-wrapped. <br /></td></tr>
 <tr class="separator:ace93592366fef0c604eb66171d3123ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9869e39ed744bd72cd6494241203b47"><td class="memItemLeft" align="right" valign="top"><a id="ab9869e39ed744bd72cd6494241203b47" name="ab9869e39ed744bd72cd6494241203b47"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>positions</b> () const</td></tr>
-<tr class="memdesc:ab9869e39ed744bd72cd6494241203b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of the current atom positions. <br /></td></tr>
-<tr class="separator:ab9869e39ed744bd72cd6494241203b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca03201b7f8adbbb9d407820d8f236d"><td class="memItemLeft" align="right" valign="top"><a id="a5ca03201b7f8adbbb9d407820d8f236d" name="a5ca03201b7f8adbbb9d407820d8f236d"></a>
+cvm::ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>positions</b> () const</td></tr>
+<tr class="memdesc:a5ca03201b7f8adbbb9d407820d8f236d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of the current atom positions. <br /></td></tr>
+<tr class="separator:a5ca03201b7f8adbbb9d407820d8f236d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a010f95c6ccbfc855fcf15b5bc4f29dd3"><td class="memItemLeft" align="right" valign="top"><a id="a010f95c6ccbfc855fcf15b5bc4f29dd3" name="a010f95c6ccbfc855fcf15b5bc4f29dd3"></a>
 <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a>&#160;</td><td class="memItemRight" valign="bottom"><b>center_of_geometry</b> () const</td></tr>
 <tr class="memdesc:a010f95c6ccbfc855fcf15b5bc4f29dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the center of geometry of the atomic positions. <br /></td></tr>
@@ -274,10 +275,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>calc_center_of_mass</b
 <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>center_of_mass_scalar_gradient</b> () const</td></tr>
 <tr class="memdesc:a2caaf546ab31816c15677463695c1c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return previously gradient of scalar variable with respect to the COM. <br /></td></tr>
 <tr class="separator:a2caaf546ab31816c15677463695c1c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48f133129ecffecc6628049fa3e18b2d"><td class="memItemLeft" align="right" valign="top"><a id="a48f133129ecffecc6628049fa3e18b2d" name="a48f133129ecffecc6628049fa3e18b2d"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>positions_shifted</b> (<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;shift) const</td></tr>
-<tr class="memdesc:a48f133129ecffecc6628049fa3e18b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of the current atom positions, shifted by a constant vector. <br /></td></tr>
-<tr class="separator:a48f133129ecffecc6628049fa3e18b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7156ee22665c4cedf608ae443e8d946a"><td class="memItemLeft" align="right" valign="top"><a id="a7156ee22665c4cedf608ae443e8d946a" name="a7156ee22665c4cedf608ae443e8d946a"></a>
+cvm::ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>positions_shifted</b> (<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;shift) const</td></tr>
+<tr class="memdesc:a7156ee22665c4cedf608ae443e8d946a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of the current atom positions, shifted by a constant vector. <br /></td></tr>
+<tr class="separator:a7156ee22665c4cedf608ae443e8d946a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afea3950c311d27c43d6a2ae7cf0ecc0b"><td class="memItemLeft" align="right" valign="top"><a id="afea3950c311d27c43d6a2ae7cf0ecc0b" name="afea3950c311d27c43d6a2ae7cf0ecc0b"></a>
 std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>velocities</b> () const</td></tr>
 <tr class="memdesc:afea3950c311d27c43d6a2ae7cf0ecc0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of the current atom velocities. <br /></td></tr>
@@ -341,6 +342,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ref_pos_from_aos<
 <tr class="memitem:a955ea21209dc6a5a44f04a0428185ddf"><td class="memItemLeft" align="right" valign="top"><a id="a955ea21209dc6a5a44f04a0428185ddf" name="a955ea21209dc6a5a44f04a0428185ddf"></a>
 <a class="el" href="classcvm_1_1atom__group_1_1group__force__object.html">group_force_object</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_group_force_object</b> ()</td></tr>
 <tr class="separator:a955ea21209dc6a5a44f04a0428185ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a07ceb6cc96eed8d6bb824f7942cf0"><td class="memItemLeft" align="right" valign="top"><a id="aa1a07ceb6cc96eed8d6bb824f7942cf0" name="aa1a07ceb6cc96eed8d6bb824f7942cf0"></a>
+std::unique_ptr&lt; <a class="el" href="classcolvars__gpu_1_1colvaratoms__gpu.html">colvars_gpu::colvaratoms_gpu</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_gpu_atom_group</b> ()</td></tr>
+<tr class="separator:aa1a07ceb6cc96eed8d6bb824f7942cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Accessors to atom IDs</div></td></tr>
 <tr class="memitem:ac7b73d5014a3ce9268630b92fa1f1ff2"><td class="memItemLeft" align="right" valign="top"><a id="ac7b73d5014a3ce9268630b92fa1f1ff2" name="ac7b73d5014a3ce9268630b92fa1f1ff2"></a>
 int &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> (size_t i)</td></tr>
@@ -745,13 +749,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_state</b> ()</t
 void&#160;</td><td class="memItemRight" valign="bottom"><b>check_enabled</b> (int f, std::string const &amp;reason) const</td></tr>
 <tr class="memdesc:ab523803ef20a5349cb1bdc3b17cb81cf inherit pub_methods_classcolvardeps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a feature is enabled, raising COLVARS_BUG_ERROR if not. <br /></td></tr>
 <tr class="separator:ab523803ef20a5349cb1bdc3b17cb81cf inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f7a75d7724facb41918c75830291ef inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a id="a64f7a75d7724facb41918c75830291ef" name="a64f7a75d7724facb41918c75830291ef"></a>
+std::vector&lt; <a class="el" href="classcolvardeps.html">colvardeps</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_parents</b> () const</td></tr>
+<tr class="memdesc:a64f7a75d7724facb41918c75830291ef inherit pub_methods_classcolvardeps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the parents. <br /></td></tr>
+<tr class="separator:a64f7a75d7724facb41918c75830291ef inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab197db1615f3b5476c35a7872da0fb14 inherit pub_methods_classcolvardeps"><td class="memItemLeft" align="right" valign="top"><a id="ab197db1615f3b5476c35a7872da0fb14" name="ab197db1615f3b5476c35a7872da0fb14"></a>
+std::vector&lt; <a class="el" href="classcolvardeps.html">colvardeps</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_children</b> () const</td></tr>
+<tr class="memdesc:ab197db1615f3b5476c35a7872da0fb14 inherit pub_methods_classcolvardeps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the children. <br /></td></tr>
+<tr class="separator:ab197db1615f3b5476c35a7872da0fb14 inherit pub_methods_classcolvardeps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:afd19e334c2afebfd3c167f5e94d4be45"><td class="memItemLeft" align="right" valign="top"><a id="afd19e334c2afebfd3c167f5e94d4be45" name="afd19e334c2afebfd3c167f5e94d4be45"></a>
-static std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pos_aos_to_soa</b> (const std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;aos_in)</td></tr>
-<tr class="memdesc:afd19e334c2afebfd3c167f5e94d4be45"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper function to re-arrange the a vector of <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> (in AoS style xyz...xyz) to an SoA vector (x...xy...yz...z) <br /></td></tr>
-<tr class="separator:afd19e334c2afebfd3c167f5e94d4be45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5de2782060c2744e5d94dfa1759755b"><td class="memItemLeft" align="right" valign="top"><a id="ae5de2782060c2744e5d94dfa1759755b" name="ae5de2782060c2744e5d94dfa1759755b"></a>
+static ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>pos_aos_to_soa</b> (const std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;aos_in)</td></tr>
+<tr class="memdesc:ae5de2782060c2744e5d94dfa1759755b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper function to re-arrange the a vector of <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> (in AoS style xyz...xyz) to an SoA vector (x...xy...yz...z) <br /></td></tr>
+<tr class="separator:ae5de2782060c2744e5d94dfa1759755b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ef6a831a9cf2dcff85834e4c078a43"><td class="memItemLeft" align="right" valign="top"><a id="ac1ef6a831a9cf2dcff85834e4c078a43" name="ac1ef6a831a9cf2dcff85834e4c078a43"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>delete_features</b> ()</td></tr>
 <tr class="separator:ac1ef6a831a9cf2dcff85834e4c078a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -816,10 +828,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>noforce</b></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>b_user_defined_fit</b></td></tr>
 <tr class="memdesc:a260948063bbc10349bd03a48151bbd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates that the user has explicitly set centerToReference or rotateReference, and the corresponding reference: cvc's (eg rmsd, eigenvector) will not override the user's choice. <br /></td></tr>
 <tr class="separator:a260948063bbc10349bd03a48151bbd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa65658b5bd6447fa546cf47849e97b1a"><td class="memItemLeft" align="right" valign="top"><a id="aa65658b5bd6447fa546cf47849e97b1a" name="aa65658b5bd6447fa546cf47849e97b1a"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fit_gradients</b></td></tr>
-<tr class="memdesc:aa65658b5bd6447fa546cf47849e97b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivatives of the fitting transformation. <br /></td></tr>
-<tr class="separator:aa65658b5bd6447fa546cf47849e97b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa9fe538e009e1e3ee24a3936fd0551"><td class="memItemLeft" align="right" valign="top"><a id="affa9fe538e009e1e3ee24a3936fd0551" name="affa9fe538e009e1e3ee24a3936fd0551"></a>
+cvm::ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>fit_gradients</b></td></tr>
+<tr class="memdesc:affa9fe538e009e1e3ee24a3936fd0551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivatives of the fitting transformation. <br /></td></tr>
+<tr class="separator:affa9fe538e009e1e3ee24a3936fd0551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a036391ee84feab8c0e7c2fcba43a6d8c"><td class="memItemLeft" align="right" valign="top"><a id="a036391ee84feab8c0e7c2fcba43a6d8c" name="a036391ee84feab8c0e7c2fcba43a6d8c"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>total_mass</b></td></tr>
 <tr class="memdesc:a036391ee84feab8c0e7c2fcba43a6d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total mass of the atom group. <br /></td></tr>
@@ -857,12 +869,12 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_atoms</b></td><
 <tr class="separator:aa78acba640ea1b8884938642fcdf7df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cd24a6718a3813577a6da01a4e7ed79"><td class="memItemLeft" align="right" valign="top"><a id="a0cd24a6718a3813577a6da01a4e7ed79" name="a0cd24a6718a3813577a6da01a4e7ed79"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_index</b></td></tr>
-<tr class="memdesc:a0cd24a6718a3813577a6da01a4e7ed79"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOA atom indices (size: num_atoms) <br /></td></tr>
+<tr class="memdesc:a0cd24a6718a3813577a6da01a4e7ed79"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOA atom proxy indices (size: num_atoms) <br /></td></tr>
 <tr class="separator:a0cd24a6718a3813577a6da01a4e7ed79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b74b8630a886ad96566f1ae451b8501"><td class="memItemLeft" align="right" valign="top"><a id="a6b74b8630a886ad96566f1ae451b8501" name="a6b74b8630a886ad96566f1ae451b8501"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_pos</b></td></tr>
-<tr class="memdesc:a6b74b8630a886ad96566f1ae451b8501"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOA atom positions (size: 3 * num_atoms) <br /></td></tr>
-<tr class="separator:a6b74b8630a886ad96566f1ae451b8501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7571afb18768c4466ba410758fd850e3"><td class="memItemLeft" align="right" valign="top"><a id="a7571afb18768c4466ba410758fd850e3" name="a7571afb18768c4466ba410758fd850e3"></a>
+cvm::ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_pos</b></td></tr>
+<tr class="memdesc:a7571afb18768c4466ba410758fd850e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOA atom positions (size: 3 * num_atoms) <br /></td></tr>
+<tr class="separator:a7571afb18768c4466ba410758fd850e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb108e8f943cabaf08ad5f47ce8f71de"><td class="memItemLeft" align="right" valign="top"><a id="acb108e8f943cabaf08ad5f47ce8f71de" name="acb108e8f943cabaf08ad5f47ce8f71de"></a>
 std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_charge</b></td></tr>
 <tr class="memdesc:acb108e8f943cabaf08ad5f47ce8f71de"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOA atom charges (size: num_atoms) <br /></td></tr>
@@ -875,10 +887,10 @@ std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a815
 std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_mass</b></td></tr>
 <tr class="memdesc:a0e1c8286b37e54500b3b943bee4c9f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOA atom mass (size: num_atoms) <br /></td></tr>
 <tr class="separator:a0e1c8286b37e54500b3b943bee4c9f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eca3d7c5ca2d1caabbb35cf0e5b7b1f"><td class="memItemLeft" align="right" valign="top"><a id="a0eca3d7c5ca2d1caabbb35cf0e5b7b1f" name="a0eca3d7c5ca2d1caabbb35cf0e5b7b1f"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_grad</b></td></tr>
-<tr class="memdesc:a0eca3d7c5ca2d1caabbb35cf0e5b7b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOA atom gradients (size: 3 * num_atoms) <br /></td></tr>
-<tr class="separator:a0eca3d7c5ca2d1caabbb35cf0e5b7b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5551e2b12ecaa5244e73c1f8e8ce897"><td class="memItemLeft" align="right" valign="top"><a id="ac5551e2b12ecaa5244e73c1f8e8ce897" name="ac5551e2b12ecaa5244e73c1f8e8ce897"></a>
+cvm::ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_grad</b></td></tr>
+<tr class="memdesc:ac5551e2b12ecaa5244e73c1f8e8ce897"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOA atom gradients (size: 3 * num_atoms) <br /></td></tr>
+<tr class="separator:ac5551e2b12ecaa5244e73c1f8e8ce897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d6a6e01e3b2c671dae324ed78190c71"><td class="memItemLeft" align="right" valign="top"><a id="a2d6a6e01e3b2c671dae324ed78190c71" name="a2d6a6e01e3b2c671dae324ed78190c71"></a>
 std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_total_force</b></td></tr>
 <tr class="memdesc:a2d6a6e01e3b2c671dae324ed78190c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOA atom total forces (size: 3 * num_atoms) <br /></td></tr>
@@ -907,14 +919,14 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>s
 int&#160;</td><td class="memItemRight" valign="bottom"><b>index</b></td></tr>
 <tr class="memdesc:aa977aa147f669341b4b5635b1b3be525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index in the colvarproxy arrays (if the group is scalable) <br /></td></tr>
 <tr class="separator:aa977aa147f669341b4b5635b1b3be525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06e7d942b7d9031b8fa197ee98728f8b"><td class="memItemLeft" align="right" valign="top"><a id="a06e7d942b7d9031b8fa197ee98728f8b" name="a06e7d942b7d9031b8fa197ee98728f8b"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>group_forces</b></td></tr>
-<tr class="memdesc:a06e7d942b7d9031b8fa197ee98728f8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The temporary forces acting on the main group atoms. Currently this is only used for calculating the fitting group forces for non-scalar components. <br /></td></tr>
-<tr class="separator:a06e7d942b7d9031b8fa197ee98728f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2a3445e8f7f424e461cc8cadb882bad"><td class="memItemLeft" align="right" valign="top"><a id="af2a3445e8f7f424e461cc8cadb882bad" name="af2a3445e8f7f424e461cc8cadb882bad"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ref_pos</b></td></tr>
-<tr class="memdesc:af2a3445e8f7f424e461cc8cadb882bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">use reference coordinates for f_ag_center or f_ag_rotate <br /></td></tr>
-<tr class="separator:af2a3445e8f7f424e461cc8cadb882bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a104f1831723317c8f48dc1d15eb2dc2b"><td class="memItemLeft" align="right" valign="top"><a id="a104f1831723317c8f48dc1d15eb2dc2b" name="a104f1831723317c8f48dc1d15eb2dc2b"></a>
+cvm::ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>group_forces</b></td></tr>
+<tr class="memdesc:a104f1831723317c8f48dc1d15eb2dc2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The temporary forces acting on the main group atoms. Currently this is only used for calculating the fitting group forces for non-scalar components. <br /></td></tr>
+<tr class="separator:a104f1831723317c8f48dc1d15eb2dc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bb8d07cde2b13b773d9b4d391ae95cb"><td class="memItemLeft" align="right" valign="top"><a id="a4bb8d07cde2b13b773d9b4d391ae95cb" name="a4bb8d07cde2b13b773d9b4d391ae95cb"></a>
+cvm::ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>ref_pos</b></td></tr>
+<tr class="memdesc:a4bb8d07cde2b13b773d9b4d391ae95cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">use reference coordinates for f_ag_center or f_ag_rotate <br /></td></tr>
+<tr class="separator:a4bb8d07cde2b13b773d9b4d391ae95cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc1d780249549d5d0fb17ba56b6d9f56"><td class="memItemLeft" align="right" valign="top"><a id="adc1d780249549d5d0fb17ba56b6d9f56" name="adc1d780249549d5d0fb17ba56b6d9f56"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_ref_pos</b></td></tr>
 <tr class="separator:adc1d780249549d5d0fb17ba56b6d9f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -930,10 +942,10 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_ref_pos</b></td
 <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cog_orig</b></td></tr>
 <tr class="memdesc:ab04d4a39b2914c365f52c524e014118f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center of geometry before any fitting. <br /></td></tr>
 <tr class="separator:ab04d4a39b2914c365f52c524e014118f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad37a6fc63f99fb37a2e71679f3ab36d6"><td class="memItemLeft" align="right" valign="top"><a id="ad37a6fc63f99fb37a2e71679f3ab36d6" name="ad37a6fc63f99fb37a2e71679f3ab36d6"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_pos_unrotated</b></td></tr>
-<tr class="memdesc:ad37a6fc63f99fb37a2e71679f3ab36d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unrotated atom positions for fit gradients. <br /></td></tr>
-<tr class="separator:ad37a6fc63f99fb37a2e71679f3ab36d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a1eeba7ce5ffc35bf331c6572392ed"><td class="memItemLeft" align="right" valign="top"><a id="aa4a1eeba7ce5ffc35bf331c6572392ed" name="aa4a1eeba7ce5ffc35bf331c6572392ed"></a>
+cvm::ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_pos_unrotated</b></td></tr>
+<tr class="memdesc:aa4a1eeba7ce5ffc35bf331c6572392ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unrotated atom positions for fit gradients. <br /></td></tr>
+<tr class="separator:aa4a1eeba7ce5ffc35bf331c6572392ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69e62f5ecc41dd8b98ae05a798dc5e40"><td class="memItemLeft" align="right" valign="top"><a id="a69e62f5ecc41dd8b98ae05a798dc5e40" name="a69e62f5ecc41dd8b98ae05a798dc5e40"></a>
 <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a>&#160;</td><td class="memItemRight" valign="bottom"><b>com</b></td></tr>
 <tr class="memdesc:a69e62f5ecc41dd8b98ae05a798dc5e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center of mass. <br /></td></tr>
@@ -950,6 +962,15 @@ std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a815
 std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>modify_lock</b></td></tr>
 <tr class="memdesc:a10a4c63adb5002f7ddf7d21489e1ccfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock for modifier. <br /></td></tr>
 <tr class="separator:a10a4c63adb5002f7ddf7d21489e1ccfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a04a2103ccc69a8e840091db4327400"><td class="memItemLeft" align="right" valign="top"><a id="a3a04a2103ccc69a8e840091db4327400" name="a3a04a2103ccc69a8e840091db4327400"></a>
+std::unique_ptr&lt; <a class="el" href="classcolvars__gpu_1_1colvaratoms__gpu.html">colvars_gpu::colvaratoms_gpu</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gpu_atom_group</b></td></tr>
+<tr class="separator:a3a04a2103ccc69a8e840091db4327400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a90bb0abd836ba282f3b7382b3dbc98f4"><td class="memItemLeft" align="right" valign="top"><a id="a90bb0abd836ba282f3b7382b3dbc98f4" name="a90bb0abd836ba282f3b7382b3dbc98f4"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>colvars_gpu::colvaratoms_gpu</b></td></tr>
+<tr class="separator:a90bb0abd836ba282f3b7382b3dbc98f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -1073,6 +1094,7 @@ Additional Inherited Members</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6afa427f692f7107e6e49ada3044feac1e">f_cvc_scalable_com</a>
 , <a class="el" href="classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6afcbb42277a600d382e59d94423ef6d75">f_cvc_collect_atom_ids</a>
+, <a class="el" href="classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6abbe94d9cfd2ea01915cd1883b719c0ca">f_cvc_require_cpu_buffers</a>
 , <a class="el" href="classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a1f9195739131b8807c1d422cbea8d0dc">f_cvc_ntot</a>
 <br />
  }</td></tr>
@@ -1935,7 +1957,7 @@ template&lt;bool B_ag_center, bool B_ag_rotate, typename main_force_accessor_T ,
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 14 2025 19:11:59 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Nov 14 2025 20:13:32 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -70,9 +70,10 @@ var searchData=
   ['f_5fcvc_5fone_5fsite_5ftotal_5fforce_67',['f_cvc_one_site_total_force',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a5b40f7f3f352bf5812b1e1d12e1e7fc3',1,'colvardeps']]],
   ['f_5fcvc_5fpbc_5fminimum_5fimage_68',['f_cvc_pbc_minimum_image',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a04c0126437467903de1c5b3540704cbf',1,'colvardeps']]],
   ['f_5fcvc_5fperiodic_69',['f_cvc_periodic',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a8518832894269f2804c976a9243dba9c',1,'colvardeps']]],
-  ['f_5fcvc_5fscalable_70',['f_cvc_scalable',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a56565bba434377a99356c86b4bd2d2d7',1,'colvardeps']]],
-  ['f_5fcvc_5fscalable_5fcom_71',['f_cvc_scalable_com',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6afa427f692f7107e6e49ada3044feac1e',1,'colvardeps']]],
-  ['f_5fcvc_5fscalar_72',['f_cvc_scalar',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a01543119f7014c1e87fd690b38689c34',1,'colvardeps']]],
-  ['f_5fcvc_5fupper_5fboundary_73',['f_cvc_upper_boundary',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6aea3867593b922aaacd273440a408b39f',1,'colvardeps']]],
-  ['f_5fcvc_5fwidth_74',['f_cvc_width',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6ac4817b87e24547727c4b13c6f942ce0c',1,'colvardeps']]]
+  ['f_5fcvc_5frequire_5fcpu_5fbuffers_70',['f_cvc_require_cpu_buffers',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6abbe94d9cfd2ea01915cd1883b719c0ca',1,'colvardeps']]],
+  ['f_5fcvc_5fscalable_71',['f_cvc_scalable',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a56565bba434377a99356c86b4bd2d2d7',1,'colvardeps']]],
+  ['f_5fcvc_5fscalable_5fcom_72',['f_cvc_scalable_com',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6afa427f692f7107e6e49ada3044feac1e',1,'colvardeps']]],
+  ['f_5fcvc_5fscalar_73',['f_cvc_scalar',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a01543119f7014c1e87fd690b38689c34',1,'colvardeps']]],
+  ['f_5fcvc_5fupper_5fboundary_74',['f_cvc_upper_boundary',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6aea3867593b922aaacd273440a408b39f',1,'colvardeps']]],
+  ['f_5fcvc_5fwidth_75',['f_cvc_width',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6ac4817b87e24547727c4b13c6f942ce0c',1,'colvardeps']]]
 ];

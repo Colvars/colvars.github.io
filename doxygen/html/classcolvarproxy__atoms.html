@@ -108,15 +108,15 @@ Inheritance diagram for colvarproxy_atoms:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a0fd6f8e6233b7a460484133cdb1b87e9"><td class="memTemplParams" colspan="2"><a id="a0fd6f8e6233b7a460484133cdb1b87e9" name="a0fd6f8e6233b7a460484133cdb1b87e9"></a>
+<tr class="memitem:ac954ae69bf6d432bc42f43a7bfe932bb"><td class="memTemplParams" colspan="2"><a id="ac954ae69bf6d432bc42f43a7bfe932bb" name="ac954ae69bf6d432bc42f43a7bfe932bb"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0fd6f8e6233b7a460484133cdb1b87e9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>allocator_type</b> = std::allocator&lt; T &gt;</td></tr>
-<tr class="separator:a0fd6f8e6233b7a460484133cdb1b87e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac954ae69bf6d432bc42f43a7bfe932bb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>allocator_type</b> = <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">colvars_gpu::CudaHostAllocator</a>&lt; T &gt;</td></tr>
+<tr class="separator:ac954ae69bf6d432bc42f43a7bfe932bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa858e73216b3983d144f94b7ca48a3b0"><td class="memItemLeft" align="right" valign="top"><a id="aa858e73216b3983d144f94b7ca48a3b0" name="aa858e73216b3983d144f94b7ca48a3b0"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_real_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, allocator_type&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_real_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;</td></tr>
 <tr class="separator:aa858e73216b3983d144f94b7ca48a3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac82156286030049be9cdf858db5ece4b"><td class="memItemLeft" align="right" valign="top"><a id="ac82156286030049be9cdf858db5ece4b" name="ac82156286030049be9cdf858db5ece4b"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_rvector_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, allocator_type&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_rvector_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;</td></tr>
 <tr class="separator:ac82156286030049be9cdf858db5ece4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -256,23 +256,23 @@ std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memdesc:acfcdcaa2a56d98d67a3a1aa5b2442d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep track of how many times each atom is used by a separate colvar object. <br /></td></tr>
 <tr class="separator:acfcdcaa2a56d98d67a3a1aa5b2442d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39477e1a47f57b89fb9b31c943ed650a"><td class="memItemLeft" align="right" valign="top"><a id="a39477e1a47f57b89fb9b31c943ed650a" name="a39477e1a47f57b89fb9b31c943ed650a"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, allocator_type&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_masses</b></td></tr>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_masses</b></td></tr>
 <tr class="memdesc:a39477e1a47f57b89fb9b31c943ed650a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Masses of the atoms (allow redefinition during a run, as done e.g. in LAMMPS) <br /></td></tr>
 <tr class="separator:a39477e1a47f57b89fb9b31c943ed650a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc13736e7e451314f833ef34b5845d90"><td class="memItemLeft" align="right" valign="top"><a id="acc13736e7e451314f833ef34b5845d90" name="acc13736e7e451314f833ef34b5845d90"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, allocator_type&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_charges</b></td></tr>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_charges</b></td></tr>
 <tr class="memdesc:acc13736e7e451314f833ef34b5845d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charges of the atoms (allow redefinition during a run, as done e.g. in LAMMPS) <br /></td></tr>
 <tr class="separator:acc13736e7e451314f833ef34b5845d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e81c227c7bf98ff04f962b876b72b83"><td class="memItemLeft" align="right" valign="top"><a id="a5e81c227c7bf98ff04f962b876b72b83" name="a5e81c227c7bf98ff04f962b876b72b83"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, allocator_type&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_positions</b></td></tr>
+std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_positions</b></td></tr>
 <tr class="memdesc:a5e81c227c7bf98ff04f962b876b72b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current three-dimensional positions of the atoms. <br /></td></tr>
 <tr class="separator:a5e81c227c7bf98ff04f962b876b72b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1584d3ca065bf33486c59a9784ebdc58"><td class="memItemLeft" align="right" valign="top"><a id="a1584d3ca065bf33486c59a9784ebdc58" name="a1584d3ca065bf33486c59a9784ebdc58"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, allocator_type&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_total_forces</b></td></tr>
+std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_total_forces</b></td></tr>
 <tr class="memdesc:a1584d3ca065bf33486c59a9784ebdc58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most recent total forces on each atom. <br /></td></tr>
 <tr class="separator:a1584d3ca065bf33486c59a9784ebdc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a800b0276c19bc6d76d57c0a3f2e2a714"><td class="memItemLeft" align="right" valign="top"><a id="a800b0276c19bc6d76d57c0a3f2e2a714" name="a800b0276c19bc6d76d57c0a3f2e2a714"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, allocator_type&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_new_colvar_forces</b></td></tr>
+std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_new_colvar_forces</b></td></tr>
 <tr class="memdesc:a800b0276c19bc6d76d57c0a3f2e2a714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces applied from colvars, to be communicated to the MD integrator. <br /></td></tr>
 <tr class="separator:a800b0276c19bc6d76d57c0a3f2e2a714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bc2be2bf5c79c3d31da2967f06db6d2"><td class="memItemLeft" align="right" valign="top"><a id="a2bc2be2bf5c79c3d31da2967f06db6d2" name="a2bc2be2bf5c79c3d31da2967f06db6d2"></a>
@@ -779,7 +779,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>updated_charges_</b><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 14 2025 19:11:59 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Nov 14 2025 20:13:31 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

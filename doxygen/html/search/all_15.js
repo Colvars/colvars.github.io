@@ -46,7 +46,9 @@ var searchData=
   ['usage_43',['usage',['../classcolvarmodule_1_1usage.html',1,'colvarmodule::usage'],['../classcolvarmodule_1_1usage.html#aa82fbf12cacca080bbf02eef3a5a1abb',1,'colvarmodule::usage::usage()']]],
   ['usage_5f_44',['usage_',['../classcolvarmodule.html#a2fa33c57a516c12bff27ce32555169c3',1,'colvarmodule']]],
   ['use_5factual_5fvalue_45',['use_actual_value',['../classcolvar__grid.html#ab2bab821472067686e64ac3395063634',1,'colvar_grid']]],
-  ['use_5fexplicit_5fgradients_46',['use_explicit_gradients',['../classcolvar_1_1linearCombination.html#aff56c9e8f236cd3d39929c2fb80a5ded',1,'colvar::linearCombination::use_explicit_gradients()'],['../classcolvar_1_1CVBasedPath.html#a1d576f5844c1aa9a9b2a7a2246b9646b',1,'colvar::CVBasedPath::use_explicit_gradients()']]],
-  ['use_5fgrids_47',['use_grids',['../classcolvarbias__meta.html#a1893ca0c315f92104b541250a69b4494',1,'colvarbias_meta']]],
-  ['use_5fscripted_5fforces_48',['use_scripted_forces',['../classcolvarmodule.html#a82833852c8b01bf6fa889906575bc9cf',1,'colvarmodule']]]
+  ['use_5fapply_5fcolvar_5fforce_46',['use_apply_colvar_force',['../classcolvars__gpu_1_1colvaratoms__gpu.html#a39540777e80343be69ba1567d5236faa',1,'colvars_gpu::colvaratoms_gpu']]],
+  ['use_5fexplicit_5fgradients_47',['use_explicit_gradients',['../classcolvar_1_1linearCombination.html#aff56c9e8f236cd3d39929c2fb80a5ded',1,'colvar::linearCombination::use_explicit_gradients()'],['../classcolvar_1_1CVBasedPath.html#a1d576f5844c1aa9a9b2a7a2246b9646b',1,'colvar::CVBasedPath::use_explicit_gradients()']]],
+  ['use_5fgrids_48',['use_grids',['../classcolvarbias__meta.html#a1893ca0c315f92104b541250a69b4494',1,'colvarbias_meta']]],
+  ['use_5fgroup_5fforce_49',['use_group_force',['../classcolvars__gpu_1_1colvaratoms__gpu.html#a6903b4806d07491893e9e11b859b1202',1,'colvars_gpu::colvaratoms_gpu']]],
+  ['use_5fscripted_5fforces_50',['use_scripted_forces',['../classcolvarmodule.html#a82833852c8b01bf6fa889906575bc9cf',1,'colvarmodule']]]
 ];

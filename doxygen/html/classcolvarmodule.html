@@ -104,12 +104,12 @@ Collaboration diagram for colvarmodule:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarmodule__coll__graph.png" border="0" usemap="#acolvarmodule_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarmodule_coll__map" id="acolvarmodule_coll__map">
-<area shape="rect" title="Collective variables module (main class)" alt="" coords="487,475,585,501"/>
-<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="716,327,805,353"/>
-<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="897,378,987,403"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="183,450,273,475"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="5,450,105,475"/>
-<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="157,499,299,525"/>
+<area shape="rect" title="Collective variables module (main class)" alt="" coords="487,525,585,550"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="716,353,805,378"/>
+<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="897,403,987,429"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="183,499,273,525"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="5,499,105,525"/>
+<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="157,549,299,574"/>
 <area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="467,81,605,106"/>
 <area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="155,81,301,106"/>
 <area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="470,130,602,155"/>
@@ -117,9 +117,10 @@ Collaboration diagram for colvarmodule:</div>
 <area shape="rect" href="classcolvarproxy__volmaps.html" title="Container of grid&#45;based objects." alt="" coords="464,229,608,254"/>
 <area shape="rect" href="classcolvarproxy__smp.html" title="Methods for SMP parallelization." alt="" coords="475,278,597,303"/>
 <area shape="rect" href="classcolvarproxy__replicas.html" title="Methods for multiple&#45;replica communication." alt="" coords="465,327,607,353"/>
-<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1072,353,1200,378"/>
+<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1072,378,1200,403"/>
 <area shape="rect" href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="481,377,591,402"/>
 <area shape="rect" href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="483,426,589,451"/>
+<area shape="rect" href="classcolvarproxy__gpu.html" title="Class for managing GPU memory allocation and data transfer." alt="" coords="477,475,595,501"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -165,12 +166,13 @@ typedef int&#160;</td><td class="memItemRight" valign="bottom"><b>residue_id</b>
 typedef <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>atom_pos</b></td></tr>
 <tr class="memdesc:a09096eb029040be41b5189049ac53263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atom position (different type name from rvector, to make possible future PBC-transparent implementations) <br /></td></tr>
 <tr class="separator:a09096eb029040be41b5189049ac53263"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb5c593d90631a0f325974f17c5819c1"><td class="memItemLeft" align="right" valign="top"><a id="afb5c593d90631a0f325974f17c5819c1" name="afb5c593d90631a0f325974f17c5819c1"></a>
-typedef std::vector&lt; atom &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>atom_iter</b></td></tr>
-<tr class="separator:afb5c593d90631a0f325974f17c5819c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6947a029dc9f6cb47b0b3878c880a690"><td class="memItemLeft" align="right" valign="top"><a id="a6947a029dc9f6cb47b0b3878c880a690" name="a6947a029dc9f6cb47b0b3878c880a690"></a>
-typedef std::vector&lt; atom &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>atom_const_iter</b></td></tr>
-<tr class="separator:a6947a029dc9f6cb47b0b3878c880a690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d728186ae5a2a44ab786bfe964ee8f"><td class="memTemplParams" colspan="2"><a id="af9d728186ae5a2a44ab786bfe964ee8f" name="af9d728186ae5a2a44ab786bfe964ee8f"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af9d728186ae5a2a44ab786bfe964ee8f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>allocator_type</b> = <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">colvars_gpu::CudaHostAllocator</a>&lt; T &gt;</td></tr>
+<tr class="separator:af9d728186ae5a2a44ab786bfe964ee8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b626c5c444ca50ae307b81c9c3e16c"><td class="memItemLeft" align="right" valign="top"><a id="a75b626c5c444ca50ae307b81c9c3e16c" name="a75b626c5c444ca50ae307b81c9c3e16c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ag_vector_real_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a> &gt; &gt;</td></tr>
+<tr class="separator:a75b626c5c444ca50ae307b81c9c3e16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -547,6 +549,10 @@ static atom_group *&#160;</td><td class="memItemRight" valign="bottom"><b>atom_g
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str</b> (char const *s)</td></tr>
 <tr class="memdesc:aecbb40c45714f5e893415a48908d3e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string for output purposes. <br /></td></tr>
 <tr class="separator:aecbb40c45714f5e893415a48908d3e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afefd5c3d8411e0cc26ce2975167d4f8e"><td class="memItemLeft" align="right" valign="top"><a id="afefd5c3d8411e0cc26ce2975167d4f8e" name="afefd5c3d8411e0cc26ce2975167d4f8e"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str</b> (const void *ptr)</td></tr>
+<tr class="memdesc:afefd5c3d8411e0cc26ce2975167d4f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string for output purposes. <br /></td></tr>
+<tr class="separator:afefd5c3d8411e0cc26ce2975167d4f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab38aa674b318495089c66053576fc7b2"><td class="memItemLeft" align="right" valign="top"><a id="ab38aa674b318495089c66053576fc7b2" name="ab38aa674b318495089c66053576fc7b2"></a>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str</b> (std::string const &amp;s)</td></tr>
 <tr class="memdesc:ab38aa674b318495089c66053576fc7b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string for output purposes. <br /></td></tr>
@@ -627,6 +633,12 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str<
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str</b> (std::vector&lt; std::string &gt; const &amp;x, size_t width=0, size_t prec=0)</td></tr>
 <tr class="memdesc:aba7a7c939ce9f26f55b8298af16e466d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string for output purposes. <br /></td></tr>
 <tr class="separator:aba7a7c939ce9f26f55b8298af16e466d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86850ba5779356d253eb6b94bed16a84"><td class="memItemLeft" align="right" valign="top"><a id="a86850ba5779356d253eb6b94bed16a84" name="a86850ba5779356d253eb6b94bed16a84"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str</b> (std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">colvars_gpu::CudaHostAllocator</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">rvector</a> &gt; &gt; const &amp;x, size_t width=0, size_t prec=0)</td></tr>
+<tr class="separator:a86850ba5779356d253eb6b94bed16a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44ff751131bad3cb7b17e23715cf158a"><td class="memItemLeft" align="right" valign="top"><a id="a44ff751131bad3cb7b17e23715cf158a" name="a44ff751131bad3cb7b17e23715cf158a"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_str</b> (std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">colvars_gpu::CudaHostAllocator</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a> &gt; &gt; const &amp;x, size_t width=0, size_t prec=0)</td></tr>
+<tr class="separator:a44ff751131bad3cb7b17e23715cf158a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aa7da803b714624ea4f33f0e7625c36"><td class="memItemLeft" align="right" valign="top"><a id="a2aa7da803b714624ea4f33f0e7625c36" name="a2aa7da803b714624ea4f33f0e7625c36"></a>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>wrap_string</b> (std::string const &amp;s, size_t nchars)</td></tr>
 <tr class="memdesc:a2aa7da803b714624ea4f33f0e7625c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce the number of characters in a string. <br /></td></tr>
@@ -729,6 +741,9 @@ std::vector&lt; std::vector&lt; int &gt; * &gt;&#160;</td><td class="memItemRigh
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>restart_out_name</b></td></tr>
 <tr class="memdesc:abf246f5197230f0af5e412865a44b28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output restart file name. <br /></td></tr>
 <tr class="separator:abf246f5197230f0af5e412865a44b28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba028a57f84c98890b1c878a43759cc"><td class="memItemLeft" align="right" valign="top"><a id="afba028a57f84c98890b1c878a43759cc" name="afba028a57f84c98890b1c878a43759cc"></a>
+std::unique_ptr&lt; <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc.html">colvars_gpu::colvarmodule_gpu_calc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gpu_calc</b></td></tr>
+<tr class="separator:afba028a57f84c98890b1c878a43759cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -784,7 +799,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>scripting_afte
 <tr class="memdesc:a92366ee715bcb65e9e569f63f76e14fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for all biases before calculating scripted forces? <br /></td></tr>
 <tr class="separator:a92366ee715bcb65e9e569f63f76e14fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec8407bc33f5f8ddabc92ec0991e672c"><td class="memItemLeft" align="right" valign="top"><a id="aec8407bc33f5f8ddabc92ec0991e672c" name="aec8407bc33f5f8ddabc92ec0991e672c"></a>
-static <a class="el" href="classcolvarproxy.html">colvarproxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy</b> = NULL</td></tr>
+static <a class="el" href="classcolvarproxy.html">colvarproxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy</b> = nullptr</td></tr>
 <tr class="memdesc:aec8407bc33f5f8ddabc92ec0991e672c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the proxy object, used to retrieve atomic data from the hosting program; it is static in order to be accessible from static functions in the colvarmodule class. <br /></td></tr>
 <tr class="separator:aec8407bc33f5f8ddabc92ec0991e672c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -1509,7 +1524,7 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>log_level_</b> 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 14 2025 19:11:59 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Nov 14 2025 20:13:31 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

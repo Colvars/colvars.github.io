@@ -97,8 +97,8 @@ Inheritance diagram for colvarproxy_namd:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarproxy__namd__inherit__graph.png" border="0" usemap="#acolvarproxy__namd_inherit__map" alt="Inheritance graph"/></div>
 <map name="acolvarproxy__namd_inherit__map" id="acolvarproxy__namd_inherit__map">
-<area shape="rect" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="361,203,489,228"/>
-<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="224,203,313,228"/>
+<area shape="rect" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="361,228,489,253"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="224,228,313,253"/>
 <area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="22,5,159,31"/>
 <area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="25,55,157,80"/>
 <area shape="rect" href="classcolvarproxy__atom__groups.html" title="Container of atom group data (allow collection of aggregated atomic data)" alt="" coords="5,104,176,129"/>
@@ -108,6 +108,7 @@ Inheritance diagram for colvarproxy_namd:</div>
 <area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="27,301,155,327"/>
 <area shape="rect" href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="35,351,146,376"/>
 <area shape="rect" href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="37,400,144,425"/>
+<area shape="rect" href="classcolvarproxy__gpu.html" title="Class for managing GPU memory allocation and data transfer." alt="" coords="32,449,149,475"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -115,10 +116,10 @@ Collaboration diagram for colvarproxy_namd:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarproxy__namd__coll__graph.png" border="0" usemap="#acolvarproxy__namd_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarproxy__namd_coll__map" id="acolvarproxy__namd_coll__map">
-<area shape="rect" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="792,382,920,407"/>
-<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="549,262,638,287"/>
-<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="1015,262,1104,287"/>
-<area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="807,173,905,198"/>
+<area shape="rect" title="Communication between colvars and NAMD (implementation of colvarproxy)" alt="" coords="792,398,920,423"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="549,278,638,303"/>
+<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="1015,278,1104,303"/>
+<area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="807,189,905,214"/>
 <area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="318,81,455,106"/>
 <area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="5,81,152,106"/>
 <area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="321,130,453,155"/>
@@ -126,14 +127,15 @@ Collaboration diagram for colvarproxy_namd:</div>
 <area shape="rect" href="classcolvarproxy__volmaps.html" title="Container of grid&#45;based objects." alt="" coords="315,229,459,254"/>
 <area shape="rect" href="classcolvarproxy__smp.html" title="Methods for SMP parallelization." alt="" coords="326,278,447,303"/>
 <area shape="rect" href="classcolvarproxy__replicas.html" title="Methods for multiple&#45;replica communication." alt="" coords="316,327,457,353"/>
-<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1189,302,1317,327"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="548,47,639,73"/>
+<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1189,318,1317,343"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="548,63,639,89"/>
 <area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="337,31,437,57"/>
-<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="523,127,664,153"/>
+<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="523,143,664,169"/>
 <area shape="rect" href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="331,377,442,402"/>
 <area shape="rect" href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="333,426,440,451"/>
-<area shape="rect" href="classGlobalMasterColvars.html" title=" " alt="" coords="521,450,665,475"/>
-<area shape="rect" title=" " alt="" coords="337,475,436,501"/>
+<area shape="rect" href="classcolvarproxy__gpu.html" title="Class for managing GPU memory allocation and data transfer." alt="" coords="328,475,445,501"/>
+<area shape="rect" href="classGlobalMasterColvars.html" title=" " alt="" coords="521,507,665,533"/>
+<area shape="rect" title=" " alt="" coords="337,525,436,550"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -320,7 +322,7 @@ template&lt;class T , int flags&gt; </td></tr>
 <tr class="memdesc:a05bb023c0858bbd38906563d8fc44108 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a05bb023c0858bbd38906563d8fc44108 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb5edeef6589a3e02be71f57e46e32fb inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="aeb5edeef6589a3e02be71f57e46e32fb" name="aeb5edeef6589a3e02be71f57e46e32fb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy</b> () override</td></tr>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy</b> () override</td></tr>
 <tr class="memdesc:aeb5edeef6589a3e02be71f57e46e32fb inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:aeb5edeef6589a3e02be71f57e46e32fb inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1a5f4f6f001526ebc97e20ac30c8499 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="ad1a5f4f6f001526ebc97e20ac30c8499" name="ad1a5f4f6f001526ebc97e20ac30c8499"></a>
@@ -804,6 +806,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_smp</
 virtual smp_mode_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_smp_mode</b> () const</td></tr>
 <tr class="memdesc:a25c9fa0eca5ca864333df7143d82b970 inherit pub_methods_classcolvarproxy__smp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current SMP mode. <br /></td></tr>
 <tr class="separator:a25c9fa0eca5ca864333df7143d82b970 inherit pub_methods_classcolvarproxy__smp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293859df6ab5ade2009f3bb86d41ebb3 inherit pub_methods_classcolvarproxy__smp"><td class="memItemLeft" align="right" valign="top"><a id="a293859df6ab5ade2009f3bb86d41ebb3" name="a293859df6ab5ade2009f3bb86d41ebb3"></a>
+virtual std::vector&lt; smp_mode_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_available_smp_modes</b> () const</td></tr>
+<tr class="memdesc:a293859df6ab5ade2009f3bb86d41ebb3 inherit pub_methods_classcolvarproxy__smp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get available SMP modes. <br /></td></tr>
+<tr class="separator:a293859df6ab5ade2009f3bb86d41ebb3 inherit pub_methods_classcolvarproxy__smp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac175643b9c6d8a5526f319f3558a6ce0 inherit pub_methods_classcolvarproxy__smp"><td class="memItemLeft" align="right" valign="top"><a id="ac175643b9c6d8a5526f319f3558a6ce0" name="ac175643b9c6d8a5526f319f3558a6ce0"></a>
+virtual smp_mode_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_preferred_smp_mode</b> () const</td></tr>
+<tr class="memdesc:ac175643b9c6d8a5526f319f3558a6ce0 inherit pub_methods_classcolvarproxy__smp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the preferred SMP mode. <br /></td></tr>
+<tr class="separator:ac175643b9c6d8a5526f319f3558a6ce0 inherit pub_methods_classcolvarproxy__smp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a771a3a2c2dd63b9703e382f0bfe9c768 inherit pub_methods_classcolvarproxy__smp"><td class="memItemLeft" align="right" valign="top"><a id="a771a3a2c2dd63b9703e382f0bfe9c768" name="a771a3a2c2dd63b9703e382f0bfe9c768"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_smp_mode</b> (smp_mode_t mode)</td></tr>
 <tr class="memdesc:a771a3a2c2dd63b9703e382f0bfe9c768 inherit pub_methods_classcolvarproxy__smp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current SMP mode. <br /></td></tr>
@@ -1058,6 +1068,155 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>output_stream
 <tr class="memitem:ad17c96f74bd858de163ad406045352a3 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#ad17c96f74bd858de163ad406045352a3">close_output_streams</a> ()</td></tr>
 <tr class="memdesc:ad17c96f74bd858de163ad406045352a3 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close all open files/channels to prevent data loss.  <a href="classcolvarproxy__io.html#ad17c96f74bd858de163ad406045352a3">More...</a><br /></td></tr>
 <tr class="separator:ad17c96f74bd858de163ad406045352a3 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcolvarproxy__gpu"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvarproxy__gpu')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvarproxy__gpu.html">colvarproxy_gpu</a></td></tr>
+<tr class="memitem:ae50ec77ce40ea4c72ccbdf28d9b5ad03 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="ae50ec77ce40ea4c72ccbdf28d9b5ad03" name="ae50ec77ce40ea4c72ccbdf28d9b5ad03"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>colvarproxy_gpu</b> ()</td></tr>
+<tr class="memdesc:ae50ec77ce40ea4c72ccbdf28d9b5ad03 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+<tr class="separator:ae50ec77ce40ea4c72ccbdf28d9b5ad03 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e9be5a92857ce6c71680d236aebd7d inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="ab5e9be5a92857ce6c71680d236aebd7d" name="ab5e9be5a92857ce6c71680d236aebd7d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_gpu_support</b> () const</td></tr>
+<tr class="memdesc:ab5e9be5a92857ce6c71680d236aebd7d inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the proxy supports GPU. <br /></td></tr>
+<tr class="separator:ab5e9be5a92857ce6c71680d236aebd7d inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1887360ba214623c66e3cb6c5784bd inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a9b1887360ba214623c66e3cb6c5784bd" name="a9b1887360ba214623c66e3cb6c5784bd"></a>
+virtual cudaStream_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_default_stream</b> ()</td></tr>
+<tr class="memdesc:a9b1887360ba214623c66e3cb6c5784bd inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the default CUDA stream from the proxy. <br /></td></tr>
+<tr class="separator:a9b1887360ba214623c66e3cb6c5784bd inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab487183208336d46c2cac0bea74fc5ec inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab487183208336d46c2cac0bea74fc5ec inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#ab487183208336d46c2cac0bea74fc5ec">allocate_host</a> (T **pp, const size_t len)</td></tr>
+<tr class="memdesc:ab487183208336d46c2cac0bea74fc5ec inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to allocate host-pinned memory.  <a href="classcolvarproxy__gpu.html#ab487183208336d46c2cac0bea74fc5ec">More...</a><br /></td></tr>
+<tr class="separator:ab487183208336d46c2cac0bea74fc5ec inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd985b8833111b3ce4d67337c53ccc66 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acd985b8833111b3ce4d67337c53ccc66 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#acd985b8833111b3ce4d67337c53ccc66">deallocate_host</a> (T **pp)</td></tr>
+<tr class="memdesc:acd985b8833111b3ce4d67337c53ccc66 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to deallocate host-pinned memory.  <a href="classcolvarproxy__gpu.html#acd985b8833111b3ce4d67337c53ccc66">More...</a><br /></td></tr>
+<tr class="separator:acd985b8833111b3ce4d67337c53ccc66 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacccb4e7c0385c3c77f4f5cb82591a26 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aacccb4e7c0385c3c77f4f5cb82591a26 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#aacccb4e7c0385c3c77f4f5cb82591a26">allocate_device</a> (T **pp, const size_t len)</td></tr>
+<tr class="memdesc:aacccb4e7c0385c3c77f4f5cb82591a26 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to allocate device memory.  <a href="classcolvarproxy__gpu.html#aacccb4e7c0385c3c77f4f5cb82591a26">More...</a><br /></td></tr>
+<tr class="separator:aacccb4e7c0385c3c77f4f5cb82591a26 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b148f849476b3b2a50c7a8098c302d0 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0b148f849476b3b2a50c7a8098c302d0 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#a0b148f849476b3b2a50c7a8098c302d0">reallocate_device</a> (T **pp, const size_t len)</td></tr>
+<tr class="memdesc:a0b148f849476b3b2a50c7a8098c302d0 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to reallocate device memory.  <a href="classcolvarproxy__gpu.html#a0b148f849476b3b2a50c7a8098c302d0">More...</a><br /></td></tr>
+<tr class="separator:a0b148f849476b3b2a50c7a8098c302d0 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548bed0385023d1d155a6b1d41894b89 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a548bed0385023d1d155a6b1d41894b89 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#a548bed0385023d1d155a6b1d41894b89">reallocate_host</a> (T **pp, const size_t len)</td></tr>
+<tr class="memdesc:a548bed0385023d1d155a6b1d41894b89 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to reallocate host-pinned memory.  <a href="classcolvarproxy__gpu.html#a548bed0385023d1d155a6b1d41894b89">More...</a><br /></td></tr>
+<tr class="separator:a548bed0385023d1d155a6b1d41894b89 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb5def914afc6f165d125b41666d6222 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aeb5def914afc6f165d125b41666d6222 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#aeb5def914afc6f165d125b41666d6222">allocate_device_async</a> (T **pp, const size_t len, cudaStream_t stream)</td></tr>
+<tr class="memdesc:aeb5def914afc6f165d125b41666d6222 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to allocate device memory asynchronously.  <a href="classcolvarproxy__gpu.html#aeb5def914afc6f165d125b41666d6222">More...</a><br /></td></tr>
+<tr class="separator:aeb5def914afc6f165d125b41666d6222 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0d61fbe749c24b7e9dddffb4c815a9 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7f0d61fbe749c24b7e9dddffb4c815a9 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#a7f0d61fbe749c24b7e9dddffb4c815a9">deallocate_device</a> (T **pp)</td></tr>
+<tr class="memdesc:a7f0d61fbe749c24b7e9dddffb4c815a9 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to deallocate device memory.  <a href="classcolvarproxy__gpu.html#a7f0d61fbe749c24b7e9dddffb4c815a9">More...</a><br /></td></tr>
+<tr class="separator:a7f0d61fbe749c24b7e9dddffb4c815a9 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2082db8e21d0e37a0bedf5753e706fd0 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2082db8e21d0e37a0bedf5753e706fd0 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#a2082db8e21d0e37a0bedf5753e706fd0">deallocate_device_async</a> (T **pp, cudaStream_t stream)</td></tr>
+<tr class="memdesc:a2082db8e21d0e37a0bedf5753e706fd0 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to deallocate device memory asynchronously.  <a href="classcolvarproxy__gpu.html#a2082db8e21d0e37a0bedf5753e706fd0">More...</a><br /></td></tr>
+<tr class="separator:a2082db8e21d0e37a0bedf5753e706fd0 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a028e6bcb2de1e71555931fbd21965 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad4a028e6bcb2de1e71555931fbd21965 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#ad4a028e6bcb2de1e71555931fbd21965">clear_device_array</a> (T *data, const size_t ndata)</td></tr>
+<tr class="memdesc:ad4a028e6bcb2de1e71555931fbd21965 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to clear a device array to zero.  <a href="classcolvarproxy__gpu.html#ad4a028e6bcb2de1e71555931fbd21965">More...</a><br /></td></tr>
+<tr class="separator:ad4a028e6bcb2de1e71555931fbd21965 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e2b1e02bafa852f7a4627ec8e178c2b inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9e2b1e02bafa852f7a4627ec8e178c2b inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#a9e2b1e02bafa852f7a4627ec8e178c2b">clear_device_array_async</a> (T *data, const size_t ndata, cudaStream_t stream)</td></tr>
+<tr class="memdesc:a9e2b1e02bafa852f7a4627ec8e178c2b inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to clear a device array to zero asynchronously.  <a href="classcolvarproxy__gpu.html#a9e2b1e02bafa852f7a4627ec8e178c2b">More...</a><br /></td></tr>
+<tr class="separator:a9e2b1e02bafa852f7a4627ec8e178c2b inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1781c0b0b3cd49d7b6b4e3099a150fef inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1781c0b0b3cd49d7b6b4e3099a150fef inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#a1781c0b0b3cd49d7b6b4e3099a150fef">copy_HtoD</a> (const T *h_array, T *d_array, size_t array_len)</td></tr>
+<tr class="memdesc:a1781c0b0b3cd49d7b6b4e3099a150fef inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to copy data from host to device.  <a href="classcolvarproxy__gpu.html#a1781c0b0b3cd49d7b6b4e3099a150fef">More...</a><br /></td></tr>
+<tr class="separator:a1781c0b0b3cd49d7b6b4e3099a150fef inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc4d25a85245b150490fc055e8d327c inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afdc4d25a85245b150490fc055e8d327c inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#afdc4d25a85245b150490fc055e8d327c">copy_HtoD_async</a> (const T *h_array, T *d_array, size_t array_len, cudaStream_t stream)</td></tr>
+<tr class="memdesc:afdc4d25a85245b150490fc055e8d327c inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to copy data from host to device asynchronously.  <a href="classcolvarproxy__gpu.html#afdc4d25a85245b150490fc055e8d327c">More...</a><br /></td></tr>
+<tr class="separator:afdc4d25a85245b150490fc055e8d327c inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bfa4be82cd35619a31656ad85364131 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3bfa4be82cd35619a31656ad85364131 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#a3bfa4be82cd35619a31656ad85364131">copy_DtoH</a> (const T *d_array, T *h_array, size_t array_len)</td></tr>
+<tr class="memdesc:a3bfa4be82cd35619a31656ad85364131 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to copy data from device to host.  <a href="classcolvarproxy__gpu.html#a3bfa4be82cd35619a31656ad85364131">More...</a><br /></td></tr>
+<tr class="separator:a3bfa4be82cd35619a31656ad85364131 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a947e6bdb4e15fbe3c4241cc3c3f00cc1 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a947e6bdb4e15fbe3c4241cc3c3f00cc1 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#a947e6bdb4e15fbe3c4241cc3c3f00cc1">copy_DtoH_async</a> (const T *d_array, T *h_array, size_t array_len, cudaStream_t stream)</td></tr>
+<tr class="memdesc:a947e6bdb4e15fbe3c4241cc3c3f00cc1 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to copy data from device to host asynchronously.  <a href="classcolvarproxy__gpu.html#a947e6bdb4e15fbe3c4241cc3c3f00cc1">More...</a><br /></td></tr>
+<tr class="separator:a947e6bdb4e15fbe3c4241cc3c3f00cc1 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5debf03c82bd32ec405e67c744c6e4 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7a5debf03c82bd32ec405e67c744c6e4 inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#a7a5debf03c82bd32ec405e67c744c6e4">copy_DtoD</a> (const T *d_src, T *d_dst, size_t array_len)</td></tr>
+<tr class="memdesc:a7a5debf03c82bd32ec405e67c744c6e4 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to copy data from device to device.  <a href="classcolvarproxy__gpu.html#a7a5debf03c82bd32ec405e67c744c6e4">More...</a><br /></td></tr>
+<tr class="separator:a7a5debf03c82bd32ec405e67c744c6e4 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22af6665a4593e8186172fd5474d39a inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa22af6665a4593e8186172fd5474d39a inherit pub_methods_classcolvarproxy__gpu"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#aa22af6665a4593e8186172fd5474d39a">copy_DtoD_async</a> (const T *d_src, T *d_dst, size_t array_len, cudaStream_t stream)</td></tr>
+<tr class="memdesc:aa22af6665a4593e8186172fd5474d39a inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to copy data from device to device asynchronously.  <a href="classcolvarproxy__gpu.html#aa22af6665a4593e8186172fd5474d39a">More...</a><br /></td></tr>
+<tr class="separator:aa22af6665a4593e8186172fd5474d39a inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb75774b12e1b44647ba7a83942004b4 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__gpu.html#adb75774b12e1b44647ba7a83942004b4">wait_for_extra_info_ready</a> ()</td></tr>
+<tr class="memdesc:adb75774b12e1b44647ba7a83942004b4 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called after atom groups are calculated on GPU.  <a href="classcolvarproxy__gpu.html#adb75774b12e1b44647ba7a83942004b4">More...</a><br /></td></tr>
+<tr class="separator:adb75774b12e1b44647ba7a83942004b4 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17aff6ff3fbf292da2d107827e7f54fb inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a17aff6ff3fbf292da2d107827e7f54fb" name="a17aff6ff3fbf292da2d107827e7f54fb"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_gpu</b> ()</td></tr>
+<tr class="memdesc:a17aff6ff3fbf292da2d107827e7f54fb inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:a17aff6ff3fbf292da2d107827e7f54fb inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6750d5398d329499d88b8d86fe4c8a65 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a6750d5398d329499d88b8d86fe4c8a65" name="a6750d5398d329499d88b8d86fe4c8a65"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocate_host_T</b> (void **pp, const size_t len, const size_t sizeofT)</td></tr>
+<tr class="memdesc:a6750d5398d329499d88b8d86fe4c8a65 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory management and data transfer implementations. <br /></td></tr>
+<tr class="separator:a6750d5398d329499d88b8d86fe4c8a65 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad62c668ce9902ca2cc7285d45b0c4f4 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="aad62c668ce9902ca2cc7285d45b0c4f4" name="aad62c668ce9902ca2cc7285d45b0c4f4"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>deallocate_host_T</b> (void **pp)</td></tr>
+<tr class="separator:aad62c668ce9902ca2cc7285d45b0c4f4 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae81ce0dd3c230fc7b6e1ce9beafcad68 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="ae81ce0dd3c230fc7b6e1ce9beafcad68" name="ae81ce0dd3c230fc7b6e1ce9beafcad68"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocate_device_T</b> (void **pp, const size_t len, const size_t sizeofT)</td></tr>
+<tr class="separator:ae81ce0dd3c230fc7b6e1ce9beafcad68 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be810cc76bb7241392f56e7f33f83c4 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a5be810cc76bb7241392f56e7f33f83c4" name="a5be810cc76bb7241392f56e7f33f83c4"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>deallocate_device_T</b> (void **pp)</td></tr>
+<tr class="separator:a5be810cc76bb7241392f56e7f33f83c4 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf98e2ed1ebd8dccd6bc44871933f253 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="adf98e2ed1ebd8dccd6bc44871933f253" name="adf98e2ed1ebd8dccd6bc44871933f253"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>clear_device_array_T</b> (void *data, const size_t ndata, const size_t sizeofT)</td></tr>
+<tr class="separator:adf98e2ed1ebd8dccd6bc44871933f253 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695b486f97816e6fd36f6a09ef9881ec inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a695b486f97816e6fd36f6a09ef9881ec" name="a695b486f97816e6fd36f6a09ef9881ec"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>allocate_device_T_async</b> (void **pp, const size_t len, const size_t sizeofT, cudaStream_t stream)</td></tr>
+<tr class="separator:a695b486f97816e6fd36f6a09ef9881ec inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e0bd81c5de6f21fc648bf3ffdc277f inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a95e0bd81c5de6f21fc648bf3ffdc277f" name="a95e0bd81c5de6f21fc648bf3ffdc277f"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>deallocate_device_T_async</b> (void **pp, cudaStream_t stream)</td></tr>
+<tr class="separator:a95e0bd81c5de6f21fc648bf3ffdc277f inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd182d715ad470d72c7c195cccd88e25 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="abd182d715ad470d72c7c195cccd88e25" name="abd182d715ad470d72c7c195cccd88e25"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>clear_device_array_T_async</b> (void *data, const size_t ndata, const size_t sizeofT, cudaStream_t stream)</td></tr>
+<tr class="separator:abd182d715ad470d72c7c195cccd88e25 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3d0722baa1c8e56cea016fa3392d2f inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a8b3d0722baa1c8e56cea016fa3392d2f" name="a8b3d0722baa1c8e56cea016fa3392d2f"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>copy_HtoD_T</b> (const void *h_array, void *d_array, size_t array_len, const size_t sizeofT)</td></tr>
+<tr class="separator:a8b3d0722baa1c8e56cea016fa3392d2f inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e26bfec422c06d4988e87d00bc0ded inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a01e26bfec422c06d4988e87d00bc0ded" name="a01e26bfec422c06d4988e87d00bc0ded"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>copy_HtoD_T_async</b> (const void *h_array, void *d_array, size_t array_len, const size_t sizeofT, cudaStream_t stream)</td></tr>
+<tr class="separator:a01e26bfec422c06d4988e87d00bc0ded inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8fd51b14a52ba5452712d75fce73fdf inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="ae8fd51b14a52ba5452712d75fce73fdf" name="ae8fd51b14a52ba5452712d75fce73fdf"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>copy_DtoH_T</b> (const void *d_array, void *h_array, size_t array_len, const size_t sizeofT)</td></tr>
+<tr class="separator:ae8fd51b14a52ba5452712d75fce73fdf inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7adb17124ecf226da8c2deb8c7080200 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a7adb17124ecf226da8c2deb8c7080200" name="a7adb17124ecf226da8c2deb8c7080200"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>copy_DtoH_T_async</b> (const void *d_array, void *h_array, size_t array_len, const size_t sizeofT, cudaStream_t stream)</td></tr>
+<tr class="separator:a7adb17124ecf226da8c2deb8c7080200 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e6365d271c9f37a63198c3de530b0e inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="ab3e6365d271c9f37a63198c3de530b0e" name="ab3e6365d271c9f37a63198c3de530b0e"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>copy_DtoD_T</b> (const void *d_src, void *d_dst, size_t array_len, const size_t sizeofT)</td></tr>
+<tr class="separator:ab3e6365d271c9f37a63198c3de530b0e inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad521cb29361012d62751cef94b04bd0c inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="ad521cb29361012d62751cef94b04bd0c" name="ad521cb29361012d62751cef94b04bd0c"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>copy_DtoD_T_async</b> (const void *d_src, void *d_dst, size_t array_len, const size_t sizeofT, cudaStream_t stream)</td></tr>
+<tr class="separator:ad521cb29361012d62751cef94b04bd0c inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a4cb3a729e3190da42935c8d190662 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a87a4cb3a729e3190da42935c8d190662" name="a87a4cb3a729e3190da42935c8d190662"></a>
+virtual float *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy_atoms_masses_gpu_float</b> ()</td></tr>
+<tr class="memdesc:a87a4cb3a729e3190da42935c8d190662 inherit pub_methods_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to get device pointers for atom properties This functions should be overridden in derived proxy classes that manage actual GPU memory. <br /></td></tr>
+<tr class="separator:a87a4cb3a729e3190da42935c8d190662 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a2296af38823c1a69d298ebec1e267 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a44a2296af38823c1a69d298ebec1e267" name="a44a2296af38823c1a69d298ebec1e267"></a>
+virtual float *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy_atoms_charges_gpu_float</b> ()</td></tr>
+<tr class="separator:a44a2296af38823c1a69d298ebec1e267 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0680063a7a5db32d6a3722f4eb8e24fe inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a0680063a7a5db32d6a3722f4eb8e24fe" name="a0680063a7a5db32d6a3722f4eb8e24fe"></a>
+virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy_atoms_masses_gpu</b> ()</td></tr>
+<tr class="separator:a0680063a7a5db32d6a3722f4eb8e24fe inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa46f420065b31b2bd1e10fbf2f43ee1a inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="aa46f420065b31b2bd1e10fbf2f43ee1a" name="aa46f420065b31b2bd1e10fbf2f43ee1a"></a>
+virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy_atoms_charges_gpu</b> ()</td></tr>
+<tr class="separator:aa46f420065b31b2bd1e10fbf2f43ee1a inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5de9dee572ea5e6626c3ac572c1b161 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="aa5de9dee572ea5e6626c3ac572c1b161" name="aa5de9dee572ea5e6626c3ac572c1b161"></a>
+virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy_atoms_positions_gpu</b> ()</td></tr>
+<tr class="separator:aa5de9dee572ea5e6626c3ac572c1b161 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c3b705612b66fa7d8982b097d14995 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a52c3b705612b66fa7d8982b097d14995" name="a52c3b705612b66fa7d8982b097d14995"></a>
+virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy_atoms_total_forces_gpu</b> ()</td></tr>
+<tr class="separator:a52c3b705612b66fa7d8982b097d14995 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1275da1510d5296d0f8e6569f8fa5883 inherit pub_methods_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="a1275da1510d5296d0f8e6569f8fa5883" name="a1275da1510d5296d0f8e6569f8fa5883"></a>
+virtual <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy_atoms_new_colvar_forces_gpu</b> ()</td></tr>
+<tr class="separator:a1275da1510d5296d0f8e6569f8fa5883 inherit pub_methods_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -1217,23 +1376,23 @@ std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memdesc:acfcdcaa2a56d98d67a3a1aa5b2442d25 inherit pro_attribs_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep track of how many times each atom is used by a separate colvar object. <br /></td></tr>
 <tr class="separator:acfcdcaa2a56d98d67a3a1aa5b2442d25 inherit pro_attribs_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39477e1a47f57b89fb9b31c943ed650a inherit pro_attribs_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="a39477e1a47f57b89fb9b31c943ed650a" name="a39477e1a47f57b89fb9b31c943ed650a"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, allocator_type&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_masses</b></td></tr>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_masses</b></td></tr>
 <tr class="memdesc:a39477e1a47f57b89fb9b31c943ed650a inherit pro_attribs_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Masses of the atoms (allow redefinition during a run, as done e.g. in LAMMPS) <br /></td></tr>
 <tr class="separator:a39477e1a47f57b89fb9b31c943ed650a inherit pro_attribs_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc13736e7e451314f833ef34b5845d90 inherit pro_attribs_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="acc13736e7e451314f833ef34b5845d90" name="acc13736e7e451314f833ef34b5845d90"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, allocator_type&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_charges</b></td></tr>
+std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_charges</b></td></tr>
 <tr class="memdesc:acc13736e7e451314f833ef34b5845d90 inherit pro_attribs_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charges of the atoms (allow redefinition during a run, as done e.g. in LAMMPS) <br /></td></tr>
 <tr class="separator:acc13736e7e451314f833ef34b5845d90 inherit pro_attribs_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e81c227c7bf98ff04f962b876b72b83 inherit pro_attribs_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="a5e81c227c7bf98ff04f962b876b72b83" name="a5e81c227c7bf98ff04f962b876b72b83"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, allocator_type&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_positions</b></td></tr>
+std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_positions</b></td></tr>
 <tr class="memdesc:a5e81c227c7bf98ff04f962b876b72b83 inherit pro_attribs_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current three-dimensional positions of the atoms. <br /></td></tr>
 <tr class="separator:a5e81c227c7bf98ff04f962b876b72b83 inherit pro_attribs_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1584d3ca065bf33486c59a9784ebdc58 inherit pro_attribs_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="a1584d3ca065bf33486c59a9784ebdc58" name="a1584d3ca065bf33486c59a9784ebdc58"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, allocator_type&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_total_forces</b></td></tr>
+std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_total_forces</b></td></tr>
 <tr class="memdesc:a1584d3ca065bf33486c59a9784ebdc58 inherit pro_attribs_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most recent total forces on each atom. <br /></td></tr>
 <tr class="separator:a1584d3ca065bf33486c59a9784ebdc58 inherit pro_attribs_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a800b0276c19bc6d76d57c0a3f2e2a714 inherit pro_attribs_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="a800b0276c19bc6d76d57c0a3f2e2a714" name="a800b0276c19bc6d76d57c0a3f2e2a714"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, allocator_type&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_new_colvar_forces</b></td></tr>
+std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_new_colvar_forces</b></td></tr>
 <tr class="memdesc:a800b0276c19bc6d76d57c0a3f2e2a714 inherit pro_attribs_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces applied from colvars, to be communicated to the MD integrator. <br /></td></tr>
 <tr class="separator:a800b0276c19bc6d76d57c0a3f2e2a714 inherit pro_attribs_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bc2be2bf5c79c3d31da2967f06db6d2 inherit pro_attribs_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="a2bc2be2bf5c79c3d31da2967f06db6d2" name="a2bc2be2bf5c79c3d31da2967f06db6d2"></a>
@@ -1379,19 +1538,24 @@ std::map&lt; std::string, std::ostream * &gt;&#160;</td><td class="memItemRight"
 std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><b>output_stream_error_</b></td></tr>
 <tr class="memdesc:a047405d4c8f5f4a698c16f7c2415cb42 inherit pro_attribs_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object whose reference is returned when write errors occur. <br /></td></tr>
 <tr class="separator:a047405d4c8f5f4a698c16f7c2415cb42 inherit pro_attribs_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classcolvarproxy__gpu"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvarproxy__gpu')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvarproxy__gpu.html">colvarproxy_gpu</a></td></tr>
+<tr class="memitem:ad7d8c9ef63cfa47b1bc8d9edc233d0c7 inherit pro_attribs_classcolvarproxy__gpu"><td class="memItemLeft" align="right" valign="top"><a id="ad7d8c9ef63cfa47b1bc8d9edc233d0c7" name="ad7d8c9ef63cfa47b1bc8d9edc233d0c7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>support_gpu</b></td></tr>
+<tr class="memdesc:ad7d8c9ef63cfa47b1bc8d9edc233d0c7 inherit pro_attribs_classcolvarproxy__gpu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the proxy supports GPU. <br /></td></tr>
+<tr class="separator:ad7d8c9ef63cfa47b1bc8d9edc233d0c7 inherit pro_attribs_classcolvarproxy__gpu"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classcolvarproxy__atoms"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__atoms')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__atoms.html">colvarproxy_atoms</a></td></tr>
-<tr class="memitem:a0fd6f8e6233b7a460484133cdb1b87e9 inherit pub_types_classcolvarproxy__atoms"><td class="memTemplParams" colspan="2"><a id="a0fd6f8e6233b7a460484133cdb1b87e9" name="a0fd6f8e6233b7a460484133cdb1b87e9"></a>
+<tr class="memitem:ac954ae69bf6d432bc42f43a7bfe932bb inherit pub_types_classcolvarproxy__atoms"><td class="memTemplParams" colspan="2"><a id="ac954ae69bf6d432bc42f43a7bfe932bb" name="ac954ae69bf6d432bc42f43a7bfe932bb"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0fd6f8e6233b7a460484133cdb1b87e9 inherit pub_types_classcolvarproxy__atoms"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>allocator_type</b> = std::allocator&lt; T &gt;</td></tr>
-<tr class="separator:a0fd6f8e6233b7a460484133cdb1b87e9 inherit pub_types_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac954ae69bf6d432bc42f43a7bfe932bb inherit pub_types_classcolvarproxy__atoms"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>allocator_type</b> = <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">colvars_gpu::CudaHostAllocator</a>&lt; T &gt;</td></tr>
+<tr class="separator:ac954ae69bf6d432bc42f43a7bfe932bb inherit pub_types_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa858e73216b3983d144f94b7ca48a3b0 inherit pub_types_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="aa858e73216b3983d144f94b7ca48a3b0" name="aa858e73216b3983d144f94b7ca48a3b0"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_real_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, allocator_type&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_real_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;</td></tr>
 <tr class="separator:aa858e73216b3983d144f94b7ca48a3b0 inherit pub_types_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac82156286030049be9cdf858db5ece4b inherit pub_types_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="ac82156286030049be9cdf858db5ece4b" name="ac82156286030049be9cdf858db5ece4b"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_rvector_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, allocator_type&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_rvector_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;</td></tr>
 <tr class="separator:ac82156286030049be9cdf858db5ece4b inherit pub_types_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classcolvarproxy__volmaps"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__volmaps')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__volmaps.html">colvarproxy_volmaps</a></td></tr>
 <tr class="memitem:a88e9efcff92b7a90d33d4c32cc7f80b5 inherit pub_types_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a88e9efcff92b7a90d33d4c32cc7f80b5" name="a88e9efcff92b7a90d33d4c32cc7f80b5"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>volmap_flag_null</b> = 0
@@ -1403,6 +1567,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_rvector_
 <tr class="inherit_header pub_types_classcolvarproxy__smp"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__smp')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__smp.html">colvarproxy_smp</a></td></tr>
 <tr class="memitem:a22219fbe8403d4243e1296ef6c136ebe inherit pub_types_classcolvarproxy__smp"><td class="memItemLeft" align="right" valign="top"><a id="a22219fbe8403d4243e1296ef6c136ebe" name="a22219fbe8403d4243e1296ef6c136ebe"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>smp_mode_t</b> { <b>cvcs</b>
 , <b>inner_loop</b>
+, <b>gpu</b>
 , <b>none</b>
  }</td></tr>
 <tr class="separator:a22219fbe8403d4243e1296ef6c136ebe inherit pub_types_classcolvarproxy__smp"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3208,7 +3373,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 14 2025 19:11:59 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Nov 14 2025 20:13:32 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

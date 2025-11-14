@@ -12,7 +12,7 @@ var searchData=
   ['scripted_5ffunction_9',['scripted_function',['../classcolvar.html#a7606b296cad2afa1589d61d39aa88231',1,'colvar']]],
   ['scripting_5fafter_5fbiases_10',['scripting_after_biases',['../classcolvarmodule.html#a92366ee715bcb65e9e569f63f76e14fd',1,'colvarmodule']]],
   ['set_5fcoupling_11',['set_coupling',['../classcolvarbias__alb.html#ac6390852bde5c825bcf9352b055f5fce',1,'colvarbias_alb']]],
-  ['shifted_5fpos_5fsoa_12',['shifted_pos_soa',['../classcolvar_1_1orientation.html#abeff8740b612e55fa6307bb013d271d7',1,'colvar::orientation']]],
+  ['shifted_5fpos_5fsoa_12',['shifted_pos_soa',['../classcolvar_1_1orientation.html#a23c7582a339ed9073c123126624181cf',1,'colvar::orientation']]],
   ['sigmas_13',['sigmas',['../classcolvarbias__meta_1_1hill.html#adb262a253c58b81a24701ab174d12df3',1,'colvarbias_meta::hill']]],
   ['simparams_14',['simparams',['../classcolvarproxy__namd.html#a42f6ee08cc1a43c077cda44b0f248110',1,'colvarproxy_namd']]],
   ['smp_5fmode_15',['smp_mode',['../classcolvarproxy__smp.html#a27a5c3a3eee34107ace196408415a483',1,'colvarproxy_smp']]],
@@ -30,6 +30,7 @@ var searchData=
   ['str_5fresult_5f_27',['str_result_',['../classcolvarscript.html#af771c55c3ab7a577ac5984bb0cc6eb0b',1,'colvarscript']]],
   ['sup_5fcoeff_28',['sup_coeff',['../classcolvar_1_1cvc.html#a0fcbf9fc6484f6ea71deb01472d90f95',1,'colvar::cvc']]],
   ['sup_5fnp_29',['sup_np',['../classcolvar_1_1cvc.html#a0a5b794497d12e7a37a5666f1eb1c85c',1,'colvar::cvc']]],
-  ['sw_30',['sW',['../classcolvarbias__meta_1_1hill.html#aa8583e52b1545df70c27b2fc440384e0',1,'colvarbias_meta::hill']]],
-  ['system_5fforce_31',['system_force',['../classcolvarbias__abf.html#a8caac1b2850ae8c7d6add4456307d214',1,'colvarbias_abf']]]
+  ['support_5fgpu_30',['support_gpu',['../classcolvarproxy__gpu.html#ad7d8c9ef63cfa47b1bc8d9edc233d0c7',1,'colvarproxy_gpu']]],
+  ['sw_31',['sW',['../classcolvarbias__meta_1_1hill.html#aa8583e52b1545df70c27b2fc440384e0',1,'colvarbias_meta::hill']]],
+  ['system_5fforce_32',['system_force',['../classcolvarbias__abf.html#a8caac1b2850ae8c7d6add4456307d214',1,'colvarbias_abf']]]
 ];

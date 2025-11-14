@@ -10,10 +10,11 @@ var searchData=
   ['new_5fhills_5fbegin_7',['new_hills_begin',['../classcolvarbias__meta.html#ad3fac5e8913488c5754055c4bc5c11e2',1,'colvarbias_meta']]],
   ['new_5fhills_5foff_5fgrid_5fbegin_8',['new_hills_off_grid_begin',['../classcolvarbias__meta.html#af2be3c99c6b0e56118c1ee6f026951ba',1,'colvarbias_meta']]],
   ['nn_9',['nn',['../classcolvar_1_1neuralNetwork.html#ade6823b5d30e8b3c63d5e1b6c26fefc1',1,'colvar::neuralNetwork']]],
-  ['noforce_10',['noforce',['../classcvm_1_1atom__group.html#a95f16ded0ee29e8c2fe76a723befb38b',1,'cvm::atom_group']]],
-  ['nt_11',['nt',['../classcolvar__grid.html#a77ec57aa6dfc304bcd743bdae48830c5',1,'colvar_grid']]],
-  ['num_5fatoms_12',['num_atoms',['../classcvm_1_1atom__group.html#aa78acba640ea1b8884938642fcdf7df7',1,'cvm::atom_group']]],
-  ['num_5fbiases_5ftypes_5fused_5f_13',['num_biases_types_used_',['../classcolvarmodule.html#a65c40e055d0f896770be2de86b078770',1,'colvarmodule']]],
-  ['nx_14',['nx',['../classcolvar__grid__params.html#af6d4c6c62ea66a83e53521dcff9454bb',1,'colvar_grid_params']]],
-  ['nxc_15',['nxc',['../classcolvar__grid__params.html#a13d836c5bd7df8e35d462a763d14b8ec',1,'colvar_grid_params']]]
+  ['nodes_10',['nodes',['../classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html#a33802b888344f2bf00b7874fbaafbc64',1,'colvars_gpu::colvarmodule_gpu_calc::compute_gpu_graph_t']]],
+  ['noforce_11',['noforce',['../classcvm_1_1atom__group.html#a95f16ded0ee29e8c2fe76a723befb38b',1,'cvm::atom_group']]],
+  ['nt_12',['nt',['../classcolvar__grid.html#a77ec57aa6dfc304bcd743bdae48830c5',1,'colvar_grid']]],
+  ['num_5fatoms_13',['num_atoms',['../classcvm_1_1atom__group.html#aa78acba640ea1b8884938642fcdf7df7',1,'cvm::atom_group']]],
+  ['num_5fbiases_5ftypes_5fused_5f_14',['num_biases_types_used_',['../classcolvarmodule.html#a65c40e055d0f896770be2de86b078770',1,'colvarmodule']]],
+  ['nx_15',['nx',['../classcolvar__grid__params.html#af6d4c6c62ea66a83e53521dcff9454bb',1,'colvar_grid_params']]],
+  ['nxc_16',['nxc',['../classcolvar__grid__params.html#a13d836c5bd7df8e35d462a763d14b8ec',1,'colvar_grid_params']]]
 ];

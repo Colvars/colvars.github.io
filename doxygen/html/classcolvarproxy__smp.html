@@ -109,6 +109,7 @@ Inheritance diagram for colvarproxy_smp:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a22219fbe8403d4243e1296ef6c136ebe"><td class="memItemLeft" align="right" valign="top"><a id="a22219fbe8403d4243e1296ef6c136ebe" name="a22219fbe8403d4243e1296ef6c136ebe"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>smp_mode_t</b> { <b>cvcs</b>
 , <b>inner_loop</b>
+, <b>gpu</b>
 , <b>none</b>
  }</td></tr>
 <tr class="separator:a22219fbe8403d4243e1296ef6c136ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +128,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_smp</
 virtual smp_mode_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_smp_mode</b> () const</td></tr>
 <tr class="memdesc:a25c9fa0eca5ca864333df7143d82b970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current SMP mode. <br /></td></tr>
 <tr class="separator:a25c9fa0eca5ca864333df7143d82b970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293859df6ab5ade2009f3bb86d41ebb3"><td class="memItemLeft" align="right" valign="top"><a id="a293859df6ab5ade2009f3bb86d41ebb3" name="a293859df6ab5ade2009f3bb86d41ebb3"></a>
+virtual std::vector&lt; smp_mode_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_available_smp_modes</b> () const</td></tr>
+<tr class="memdesc:a293859df6ab5ade2009f3bb86d41ebb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get available SMP modes. <br /></td></tr>
+<tr class="separator:a293859df6ab5ade2009f3bb86d41ebb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac175643b9c6d8a5526f319f3558a6ce0"><td class="memItemLeft" align="right" valign="top"><a id="ac175643b9c6d8a5526f319f3558a6ce0" name="ac175643b9c6d8a5526f319f3558a6ce0"></a>
+virtual smp_mode_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_preferred_smp_mode</b> () const</td></tr>
+<tr class="memdesc:ac175643b9c6d8a5526f319f3558a6ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the preferred SMP mode. <br /></td></tr>
+<tr class="separator:ac175643b9c6d8a5526f319f3558a6ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a771a3a2c2dd63b9703e382f0bfe9c768"><td class="memItemLeft" align="right" valign="top"><a id="a771a3a2c2dd63b9703e382f0bfe9c768" name="a771a3a2c2dd63b9703e382f0bfe9c768"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_smp_mode</b> (smp_mode_t mode)</td></tr>
 <tr class="memdesc:a771a3a2c2dd63b9703e382f0bfe9c768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current SMP mode. <br /></td></tr>
@@ -206,7 +215,7 @@ omp_lock_t *&#160;</td><td class="memItemRight" valign="bottom"><b>omp_lock_stat
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 14 2025 19:11:59 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Nov 14 2025 20:13:32 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

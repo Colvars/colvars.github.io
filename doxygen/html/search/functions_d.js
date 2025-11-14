@@ -5,7 +5,7 @@ var searchData=
   ['map_5fgrid_2',['map_grid',['../classcolvar__grid.html#ae5730d70387aaad037d79794f4e594ac',1,'colvar_grid']]],
   ['mark_5fkey_5fset_5fdefault_3',['mark_key_set_default',['../classcolvarparse.html#af698c38d74eaa9aabcf2ceb8f8bb897a',1,'colvarparse']]],
   ['mark_5fkey_5fset_5fuser_4',['mark_key_set_user',['../classcolvarparse.html#a7601cb725e04e7cfcb6ced0cec859829',1,'colvarparse']]],
-  ['match_5',['match',['../classcolvarmodule_1_1quaternion.html#a97dd1896dac7a4a41a9a7f6bb13387b8',1,'colvarmodule::quaternion']]],
+  ['match_5',['match',['../classcolvarmodule_1_1quaternion.html#a5c8cfc0ad51e6bf71fbfb0604b2d7372',1,'colvarmodule::quaternion']]],
   ['matrix_6',['matrix',['../classcolvarmodule_1_1rotation.html#aae07e30302d63bc6e20c55144d833b85',1,'colvarmodule::rotation']]],
   ['matrix2d_7',['matrix2d',['../classcolvarmodule_1_1matrix2d.html#ab6c1b868019c299e46c213fec0cfcbaf',1,'colvarmodule::matrix2d::matrix2d()'],['../classcolvarmodule_1_1matrix2d.html#a0983def70510fb207547193147729a93',1,'colvarmodule::matrix2d::matrix2d(matrix2d&lt; T &gt; const &amp;m)']]],
   ['max_5fatom_5fgroups_5fapplied_5fforce_8',['max_atom_groups_applied_force',['../classcolvarproxy__atom__groups.html#abe96ffea31071bfd68da3bc5a2ea0e5e',1,'colvarproxy_atom_groups']]],

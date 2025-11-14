@@ -117,9 +117,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>rotation_derivative_impl_</b> (<a class="el" href="classcolvar_1_1orientation.html">colvar::orientation</a> *orientation_cvc)</td></tr>
 <tr class="separator:a87441395b481f3c3d4152268bf9b50c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structrotation__derivative"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structrotation__derivative')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structrotation__derivative.html">rotation_derivative</a></td></tr>
-<tr class="memitem:a07bd235e304b0f0393aebc0a1083a391 inherit pub_methods_structrotation__derivative"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#a07bd235e304b0f0393aebc0a1083a391">rotation_derivative</a> (const <a class="el" href="classcolvarmodule_1_1rotation.html">cvm::rotation</a> &amp;rot, const std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &amp;pos1, const std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &amp;pos2, const size_t num_atoms_pos1, const size_t num_atoms_pos2)</td></tr>
-<tr class="memdesc:a07bd235e304b0f0393aebc0a1083a391 inherit pub_methods_structrotation__derivative"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the cvm::rotation::derivative class for SOA.  <a href="structrotation__derivative.html#a07bd235e304b0f0393aebc0a1083a391">More...</a><br /></td></tr>
-<tr class="separator:a07bd235e304b0f0393aebc0a1083a391 inherit pub_methods_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16cb286a74a10bbfeb7a341f40dd3acd inherit pub_methods_structrotation__derivative"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#a16cb286a74a10bbfeb7a341f40dd3acd">rotation_derivative</a> (const <a class="el" href="classcolvarmodule_1_1rotation.html">cvm::rotation</a> &amp;rot, const cvm::ag_vector_real_t &amp;pos1, const cvm::ag_vector_real_t &amp;pos2, const size_t num_atoms_pos1, const size_t num_atoms_pos2)</td></tr>
+<tr class="memdesc:a16cb286a74a10bbfeb7a341f40dd3acd inherit pub_methods_structrotation__derivative"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the cvm::rotation::derivative class for SOA.  <a href="structrotation__derivative.html#a16cb286a74a10bbfeb7a341f40dd3acd">More...</a><br /></td></tr>
+<tr class="separator:a16cb286a74a10bbfeb7a341f40dd3acd inherit pub_methods_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ecfc28b9018707bf86ad98045c00f32 inherit pub_methods_structrotation__derivative"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrotation__derivative.html#a4ecfc28b9018707bf86ad98045c00f32">prepare_derivative</a> (rotation_derivative_dldq require_dl_dq)</td></tr>
 <tr class="memdesc:a4ecfc28b9018707bf86ad98045c00f32 inherit pub_methods_structrotation__derivative"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function must be called before <code>calc_derivative_wrt_group1</code> and <code>calc_derivative_wrt_group2</code> in order to prepare the tmp_Q0Q0 and tmp_Q0Q0_L.  <a href="structrotation__derivative.html#a4ecfc28b9018707bf86ad98045c00f32">More...</a><br /></td></tr>
 <tr class="separator:a4ecfc28b9018707bf86ad98045c00f32 inherit pub_methods_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,26 +157,26 @@ Additional Inherited Members</h2></td></tr>
 const <a class="el" href="classcolvarmodule_1_1rotation.html">cvm::rotation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_rot</b></td></tr>
 <tr class="memdesc:aaa49391d7c6aebc8d08da6e8c654318e inherit pub_attribs_structrotation__derivative"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the rotation. <br /></td></tr>
 <tr class="separator:aaa49391d7c6aebc8d08da6e8c654318e inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c02342311315f58f834b890754ac1fd inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="a4c02342311315f58f834b890754ac1fd" name="a4c02342311315f58f834b890754ac1fd"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos1x</b></td></tr>
-<tr class="memdesc:a4c02342311315f58f834b890754ac1fd inherit pub_attribs_structrotation__derivative"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the atom positions of group 1. <br /></td></tr>
-<tr class="separator:a4c02342311315f58f834b890754ac1fd inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cdc399eea2223d6bb996e269dba3977 inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="a2cdc399eea2223d6bb996e269dba3977" name="a2cdc399eea2223d6bb996e269dba3977"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos1y</b></td></tr>
-<tr class="separator:a2cdc399eea2223d6bb996e269dba3977 inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b3bb6bda6a56aa523872c4ad3c2db9f inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="a4b3bb6bda6a56aa523872c4ad3c2db9f" name="a4b3bb6bda6a56aa523872c4ad3c2db9f"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos1z</b></td></tr>
-<tr class="separator:a4b3bb6bda6a56aa523872c4ad3c2db9f inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a849a585f7282e43555b5593dbc0e8707 inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="a849a585f7282e43555b5593dbc0e8707" name="a849a585f7282e43555b5593dbc0e8707"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos2x</b></td></tr>
-<tr class="memdesc:a849a585f7282e43555b5593dbc0e8707 inherit pub_attribs_structrotation__derivative"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the atom positions of group 2. <br /></td></tr>
-<tr class="separator:a849a585f7282e43555b5593dbc0e8707 inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae403e7b9bce8690f06081d9c412d5471 inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="ae403e7b9bce8690f06081d9c412d5471" name="ae403e7b9bce8690f06081d9c412d5471"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos2y</b></td></tr>
-<tr class="separator:ae403e7b9bce8690f06081d9c412d5471 inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa7e31c86c5896d6a90f7f815a3cffe8 inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="afa7e31c86c5896d6a90f7f815a3cffe8" name="afa7e31c86c5896d6a90f7f815a3cffe8"></a>
-std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos2z</b></td></tr>
-<tr class="separator:afa7e31c86c5896d6a90f7f815a3cffe8 inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9344e462b293e79dfc00316fea3d761f inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="a9344e462b293e79dfc00316fea3d761f" name="a9344e462b293e79dfc00316fea3d761f"></a>
+cvm::ag_vector_real_t::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos1x</b></td></tr>
+<tr class="memdesc:a9344e462b293e79dfc00316fea3d761f inherit pub_attribs_structrotation__derivative"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the atom positions of group 1. <br /></td></tr>
+<tr class="separator:a9344e462b293e79dfc00316fea3d761f inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e9885016d4d8532cf05185283a0977 inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="af6e9885016d4d8532cf05185283a0977" name="af6e9885016d4d8532cf05185283a0977"></a>
+cvm::ag_vector_real_t::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos1y</b></td></tr>
+<tr class="separator:af6e9885016d4d8532cf05185283a0977 inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0d2b10a021af23f88832f2bc0286f01 inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="af0d2b10a021af23f88832f2bc0286f01" name="af0d2b10a021af23f88832f2bc0286f01"></a>
+cvm::ag_vector_real_t::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos1z</b></td></tr>
+<tr class="separator:af0d2b10a021af23f88832f2bc0286f01 inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070cb6796561400ea56e3077fea0ffc2 inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="a070cb6796561400ea56e3077fea0ffc2" name="a070cb6796561400ea56e3077fea0ffc2"></a>
+cvm::ag_vector_real_t::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos2x</b></td></tr>
+<tr class="memdesc:a070cb6796561400ea56e3077fea0ffc2 inherit pub_attribs_structrotation__derivative"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the atom positions of group 2. <br /></td></tr>
+<tr class="separator:a070cb6796561400ea56e3077fea0ffc2 inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7615b9bec8b356769886f79634e37f4 inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="ac7615b9bec8b356769886f79634e37f4" name="ac7615b9bec8b356769886f79634e37f4"></a>
+cvm::ag_vector_real_t::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos2y</b></td></tr>
+<tr class="separator:ac7615b9bec8b356769886f79634e37f4 inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a5cca3f740f88355717e5bfe996f1a inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="aa4a5cca3f740f88355717e5bfe996f1a" name="aa4a5cca3f740f88355717e5bfe996f1a"></a>
+cvm::ag_vector_real_t::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>pos2z</b></td></tr>
+<tr class="separator:aa4a5cca3f740f88355717e5bfe996f1a inherit pub_attribs_structrotation__derivative"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5582ba4c888de3a4ff6f22c2767c7387 inherit pub_attribs_structrotation__derivative"><td class="memItemLeft" align="right" valign="top"><a id="a5582ba4c888de3a4ff6f22c2767c7387" name="a5582ba4c888de3a4ff6f22c2767c7387"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_num_atoms_pos1</b></td></tr>
 <tr class="memdesc:a5582ba4c888de3a4ff6f22c2767c7387 inherit pub_attribs_structrotation__derivative"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of atoms in group1 (used in SOA) <br /></td></tr>
@@ -199,7 +199,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_num_atoms_pos2</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 14 2025 19:11:58 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Nov 14 2025 20:13:31 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
