@@ -15,7 +15,7 @@
 </p><!--l. 141--><p class="noindent"><span class="colorbox" id="colorbox1"> </span></p><div class="minipage"><!--l. 180--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mspace class="thinspace" width="0.17em"></mspace></math><br class="newline"/>
 <!--l. 180--><p class="noindent"><span class="phvb8t-x-x-248">COLLECTIVE VARIABLES MODULE</span><br class="newline"/>
 </p><!--l. 180--><p class="noindent"><span class="phvb8t-x-x-248">Reference manual for NAMD</span><br class="newline"/>
-</p><!--l. 180--><p class="noindent"><br class="newline"/>Code version: 2025-11-14<br class="newline"/>
+</p><!--l. 180--><p class="noindent"><br class="newline"/>Code version: 2025-11-26<br class="newline"/>
 </p><!--l. 180--><p class="noindent">Updated versions of this manual: [<a href="https://colvars.github.io/master/colvars-refman-gromacs.html">GROMACS</a>] [<a href="https://colvars.github.io/master/colvars-refman-lammps.html">LAMMPS</a>] [<a href="https://colvars.github.io/master/colvars-refman-namd.html">NAMD</a>] [<a href="https://colvars.github.io/master/colvars-refman-tinkerhp.html">Tinker-HP</a>] [<a href="https://colvars.github.io/master/colvars-refman-vmd.html">VMD</a>]</p></div>
 <!--l. 184--><p class="indent"> <img alt="Colvars logo" class="cover_picture" src="cover-512px.jpg"/> <br class="newline"/><span class="phvr8t-x-x-120">Alejandro Bernardin, Haochuan Chen, Jeffrey R. Comer, Giacomo Fiorin, Haohao Fu, J</span><span class="phvr8t-x-x-120">é</span><span class="phvr8t-x-x-120">r</span><span class="phvr8t-x-x-120">ô</span><span class="phvr8t-x-x-120">me</span>
 <span class="phvr8t-x-x-120">H</span><span class="phvr8t-x-x-120">é</span><span class="phvr8t-x-x-120">nin, Axel Kohlmeyer, Fabrizio Marinelli, Hubert Santuz, Joshua V. Vermaas, Andrew D.</span>
@@ -2845,9 +2845,14 @@ the <!--l. 3320--><math display="inline" xmlns="http://www.w3.org/1998/Math/Math
 <!--l. 3320--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>ξ</mi></mrow><mrow><mi>k</mi><mo class="MathClass-punc">,</mo><mi>i</mi></mrow></msub></math> means the
 <!--l. 3320--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi></math>-th CV of
 the <!--l. 3320--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>-th
-reference frame. It should be note that these two CVs requires the <span class="ectt-1095">pathFile </span>option, which specifies a
-path file. Each line in the path file contains a set of space-seperated CV value of the reference frame. The
-sequence of reference frames matches the sequence of the lines.
+reference frame. It should be note that these two CVs requires the <span class="ectt-1095">pathFile </span>option, which
+specifies a path file. Each line in the path file contains a set of space-seperated CV value of
+the reference frame. The sequence of reference frames matches the sequence of the lines.
+The values of sub-CVs defined in <span class="ectt-1095">gspathCV</span><span class="ectt-1095"> {...} </span>and the <span class="ectt-1095">gzpathCV</span><span class="ectt-1095"> {...} </span>are passed as
+<!--l. 3320--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>z</mi></mstyle></math> <span class="phvb8t-x-x-109">by</span>
+<span class="phvb8t-x-x-109">their sorted names</span>. It is very important to manually specify the <span class="ectt-1095">name </span>fields of the sub-CVs, and if the
+<span class="ectt-1095">name </span>fields are not specified, Colvars would assign default names to sub-CVs, which would yield
+unexpected behavior.
 </p><!--l. 3323--><p class="noindent"><span class="phvb8t-x-x-109">List of keywords </span>(see also <a href="#sec:cvc_pbcs">4.2<!--tex4ht:ref: sec:cvc_pbcs --></a>, <a href="#sec:cvc_common">4.16<!--tex4ht:ref: sec:cvc_common --></a>, <a href="#sec:cvc_periodic">4.17<!--tex4ht:ref: sec:cvc_periodic --></a> and <a href="#sec:cvc_superp">4.19<!--tex4ht:ref: sec:cvc_superp --></a> for additional options): </p>
 <ul class="itemize1">
 <li class="itemize"><span class="colorbox" id="colorbox195"><a id="dx1-85001"></a><span class="ectt-1095">useSecondClosestFrame</span></span> — <span class="phvro8t-x-x-109">Define </span><!--l. 3332--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="bold"><mi>s</mi></mstyle></mrow><mrow><mi>m</mi><mo class="MathClass-bin">−</mo><mn>1</mn></mrow></msub></math>
@@ -2869,8 +2874,6 @@ sequence of reference frames matches the sequence of the lines.
      filename, context: <span class="ectt-1095">gspathCV </span>and <span class="ectt-1095">gzpathCV</span> <!--l. 3351--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-close">]</mo></math><br class="newline"/>Defines the nodes or images that constitutes the path in CV space. The CVs of an image
      are listed in a line of <span class="ectt-1095">pathFile </span>using space-seperated format. Lines from top to button in
      <span class="ectt-1095">pathFile </span>corresponds images from initial to last.
-                                                                                         
-                                                                                         
      </li>
 <li class="itemize"><span class="colorbox" id="colorbox198"><span class="ectt-1095">forceNoPBC</span></span> — <span class="phvro8t-x-x-109">Use absolute rather than minimum-image distances? </span>(see <a href="#colvar|cvc|forceNoPBC">description</a>)<br class="newline"/>Default: <span class="ectt-1095">no</span></li></ul>
 <div class="flushright">
@@ -2907,8 +2910,6 @@ sequence of reference frames matches the sequence of the lines.
 as the one proposed by Branduardi<span class="cite">[<a href="#XBranduardi2007">12</a>]</span> et al., except that it computes
 <!--l. 3426--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math> and
 <!--l. 3426--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math> in CV
-                                                                                         
-                                                                                         
 space instead of RMSDs in Cartesian space. Moreover, this implementation allows different
 coefficients for each CV components as described in <span class="cite">[<a href="#XHovan2019">13</a>]</span>. Assuming a path is composed of
 <!--l. 3428--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math> reference frames and
@@ -2941,14 +2942,14 @@ and <!--l. 3445--><math display="inline" xmlns="http://www.w3.org/1998/Math/Math
 <!--l. 3446--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math> is a parameter to
 smooth the variation of <!--l. 3446--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math>
 and <!--l. 3446--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math>. It should be
+                                                                                         
+                                                                                         
 noted that the index <!--l. 3447--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi></math>
 ranges from <!--l. 3447--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math> to
 <!--l. 3447--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi> <mo class="MathClass-bin">−</mo><mn>1</mn></math>, and the definition
 of <!--l. 3448--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math> is normalized
 by <!--l. 3448--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo class="MathClass-bin">∕</mo><mo class="MathClass-open">(</mo><mi>N</mi> <mo class="MathClass-bin">−</mo><mn>1</mn><mo class="MathClass-close">)</mo></math>. Consequently,
 the scope of <!--l. 3448--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math>
-                                                                                         
-                                                                                         
 is <!--l. 3449--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-open">[</mo><mn>0</mn> <mo class="MathClass-punc">:</mo> <mn>1</mn><mo class="MathClass-close">]</mo></math>.
 </p>
 <div class="flushright">
@@ -2958,7 +2959,9 @@ is <!--l. 3449--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathM
 <h5 class="subsubsectionHead"><span class="titlemark">4.12.1    </span> <a id="sec:cvc_aspathCV"></a><span class="ectt-1095">aspathCV</span>: progress along a path defined in CV space.</h5>
 <!--l. 3451--><p class="noindent"></p></div>
 <!--l. 3453--><p class="indent">   This colvar component computes the <!--l. 3453--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math>
-variable.
+variable. The values of sub-CVs are passed <span class="phvb8t-x-x-109">by their sorted names</span>. It is very important to manually
+specify the <span class="ectt-1095">name </span>fields of the sub-CVs, and if the <span class="ectt-1095">name </span>fields are not specified, Colvars would assign
+default names to sub-CVs, which would yield unexpected behavior.
 </p><!--l. 3455--><p class="indent"> <a id="colvar|aspathCV"></a>
 </p><!--l. 3457--><p class="noindent"><span class="phvb8t-x-x-109">List of keywords </span>(see also <a href="#sec:cvc_pbcs">4.2<!--tex4ht:ref: sec:cvc_pbcs --></a>, <a href="#sec:cvc_common">4.16<!--tex4ht:ref: sec:cvc_common --></a>, <a href="#sec:cvc_periodic">4.17<!--tex4ht:ref: sec:cvc_periodic --></a> and <a href="#sec:cvc_superp">4.19<!--tex4ht:ref: sec:cvc_superp --></a> for additional options): </p>
 <ul class="itemize1">
@@ -2985,7 +2988,10 @@ variable.
 <h5 class="subsubsectionHead"><span class="titlemark">4.12.2    </span> <a id="sec:cvc_azpathCV"></a><span class="ectt-1095">azpathCV</span>: distance from a path defined in CV space.</h5>
 <!--l. 3489--><p class="noindent"></p></div>
 <!--l. 3491--><p class="indent">   This colvar component computes the <!--l. 3491--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math>
-variable. Options are the same as in <a href="#sec:cvc_aspathCV">4.12.1<!--tex4ht:ref: sec:cvc_aspathCV --></a>.
+variable. Options are the same as in <a href="#sec:cvc_aspathCV">4.12.1<!--tex4ht:ref: sec:cvc_aspathCV --></a>. The values of sub-CVs are passed <span class="phvb8t-x-x-109">by their sorted names</span>. It
+is very important to manually specify the <span class="ectt-1095">name </span>fields of the sub-CVs, and if the <span class="ectt-1095">name </span>fields are not
+specified, Colvars would assign default names to sub-CVs, which would yield unexpected
+behavior.
 </p><!--l. 3493--><p class="indent">   The usage of <span class="ectt-1095">azpathCV </span>and <span class="ectt-1095">aspathCV </span>is illustrated below:</p>
 <div class="mdframed" id="mdframed-47">
 <!--l. 3495--><p class="noindent"></p><pre>colvar {<br class="newline"/>  # Progress along the path<br class="newline"/>  name as<br class="newline"/>  # Path defined by the CV space of two dihedral angles<br class="newline"/>  aspathCV {<br class="newline"/>    pathFile ./path.txt<br class="newline"/>    weights {1.0 1.0}<br class="newline"/>    lambda 0.005<br class="newline"/>    dihedral {<br class="newline"/>      name 001<br class="newline"/>      group1 {atomNumbers {5}}<br class="newline"/>      group2 {atomNumbers {7}}<br class="newline"/>      group3 {atomNumbers {9}}<br class="newline"/>      group4 {atomNumbers {15}}<br class="newline"/>    }<br class="newline"/>    dihedral {<br class="newline"/>      name 002<br class="newline"/>      group1 {atomNumbers {7}}<br class="newline"/>      group2 {atomNumbers {9}}<br class="newline"/>      group3 {atomNumbers {15}}<br class="newline"/>      group4 {atomNumbers {17}}<br class="newline"/>    }<br class="newline"/>  }<br class="newline"/>}<br class="newline"/><br class="newline"/>colvar {<br class="newline"/>  # Distance from the path<br class="newline"/>  name az<br class="newline"/>  azpathCV {<br class="newline"/>    pathFile ./path.txt<br class="newline"/>    weights {1.0 1.0}<br class="newline"/>    lambda 0.005<br class="newline"/>    dihedral {<br class="newline"/>      name 001<br class="newline"/>      group1 {atomNumbers {5}}<br class="newline"/>      group2 {atomNumbers {7}}<br class="newline"/>      group3 {atomNumbers {9}}<br class="newline"/>      group4 {atomNumbers {15}}<br class="newline"/>    }<br class="newline"/>    dihedral {<br class="newline"/>      name 002<br class="newline"/>      group1 {atomNumbers {7}}<br class="newline"/>      group2 {atomNumbers {9}}<br class="newline"/>      group3 {atomNumbers {15}}<br class="newline"/>      group4 {atomNumbers {17}}<br class="newline"/>    }<br class="newline"/>  }<br class="newline"/>} </pre><!--l. 3544--><p class="noindent"></p>
@@ -3038,6 +3044,8 @@ the <!--l. 3578--><math display="inline" xmlns="http://www.w3.org/1998/Math/Math
 The subtraction <!--l. 3579--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>x</mi></mrow><mrow><mi>j</mi></mrow></msub><mo class="MathClass-bin">−</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>i</mi><mo class="MathClass-punc">,</mo><mi>j</mi></mrow></msub></math> is
 actually calculated as <!--l. 3580--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub><mo class="MathClass-bin">−</mo><msub><mrow><mi>R</mi></mrow><mrow><mi>i</mi></mrow></msub><msub><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mrow><mi>i</mi><mo class="MathClass-punc">,</mo><mi>j</mi></mrow></msub></math>,
 where <!--l. 3580--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="normal"><mi>R</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math> is a
+                                                                                         
+                                                                                         
 3x3 rotation matrix that minimizes the RMSD between the current atomic positions of simulation and the
 <!--l. 3582--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi></math>-th reference
 frame. Bold <!--l. 3582--><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub></math>
@@ -3090,9 +3098,10 @@ the PCV progress component of the Tcl-scripted version (see <a href="#sec:apath_
 the transformation is defined by a dense neural network.<span class="cite">[<a href="#XChen2022">14</a>]</span> The network can be optimized using any
 framework, and its parameters are provided to Colvars in plain text files, as detailed below.
 An example Python script to export the parameters of a TensorFlow model is provided in
-                                                                                         
-                                                                                         
-<span class="ectt-1095">colvartools/extract_weights_biases.py </span>in the Colvars source tree.
+<span class="ectt-1095">colvartools/extract_weights_biases.py </span>in the Colvars source tree. The values of sub-CVs are passed
+<span class="phvb8t-x-x-109">by their sorted names</span>. It is very important to manually specify the <span class="ectt-1095">name </span>fields of the sub-CVs, and if the
+<span class="ectt-1095">name </span>fields are not specified, Colvars would assign default names to sub-CVs, which would yield
+unexpected behavior.
 </p>
 <hr class="figure"/><div class="figure">
 <a id="x1-930011"></a>
