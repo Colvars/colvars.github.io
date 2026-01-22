@@ -131,20 +131,44 @@ Collaboration diagram for colvar::rmsd:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad2167c0490c3d92366a05fe9ef3a1bc9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#ad2167c0490c3d92366a05fe9ef3a1bc9">init</a> (std::string const &amp;conf)</td></tr>
-<tr class="separator:ad2167c0490c3d92366a05fe9ef3a1bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada159e38e9e514551147cb1acef60f33"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#ada159e38e9e514551147cb1acef60f33">calc_value</a> ()</td></tr>
-<tr class="memdesc:ada159e38e9e514551147cb1acef60f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variable.  <a href="classcolvar_1_1rmsd.html#ada159e38e9e514551147cb1acef60f33">More...</a><br /></td></tr>
-<tr class="separator:ada159e38e9e514551147cb1acef60f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a809ce5175c73ffde116619c04372d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a1a809ce5175c73ffde116619c04372d2">calc_gradients</a> ()</td></tr>
-<tr class="memdesc:a1a809ce5175c73ffde116619c04372d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the atomic gradients, to be reused later in order to apply forces.  <a href="classcolvar_1_1rmsd.html#a1a809ce5175c73ffde116619c04372d2">More...</a><br /></td></tr>
-<tr class="separator:a1a809ce5175c73ffde116619c04372d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5e723f622dc38e3c961a3d9da52b1f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#aa5e723f622dc38e3c961a3d9da52b1f8">calc_force_invgrads</a> ()</td></tr>
-<tr class="memdesc:aa5e723f622dc38e3c961a3d9da52b1f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the total force from the system using the inverse atomic gradients.  <a href="classcolvar_1_1rmsd.html#aa5e723f622dc38e3c961a3d9da52b1f8">More...</a><br /></td></tr>
-<tr class="separator:aa5e723f622dc38e3c961a3d9da52b1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28bece9a71e23d9de329800a77af9bd0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a28bece9a71e23d9de329800a77af9bd0">calc_Jacobian_derivative</a> ()</td></tr>
-<tr class="memdesc:a28bece9a71e23d9de329800a77af9bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the divergence of the inverse atomic gradients.  <a href="classcolvar_1_1rmsd.html#a28bece9a71e23d9de329800a77af9bd0">More...</a><br /></td></tr>
-<tr class="separator:a28bece9a71e23d9de329800a77af9bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5cfa47b6f522568869eb19434b0b172"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#ae5cfa47b6f522568869eb19434b0b172">has_gpu_implementation</a> () const override</td></tr>
+<tr class="memdesc:ae5cfa47b6f522568869eb19434b0b172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the GPU availability.  <a href="classcolvar_1_1rmsd.html#ae5cfa47b6f522568869eb19434b0b172">More...</a><br /></td></tr>
+<tr class="separator:ae5cfa47b6f522568869eb19434b0b172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99653a30cb80a7644f64562d7bfca1e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a99653a30cb80a7644f64562d7bfca1e7">add_calc_value_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map) override</td></tr>
+<tr class="memdesc:a99653a30cb80a7644f64562d7bfca1e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variable on GPU.  <a href="classcolvar_1_1rmsd.html#a99653a30cb80a7644f64562d7bfca1e7">More...</a><br /></td></tr>
+<tr class="separator:a99653a30cb80a7644f64562d7bfca1e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affaa2c12d5598c9322177f843e829317"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#affaa2c12d5598c9322177f843e829317">calc_value_after_gpu</a> () override</td></tr>
+<tr class="memdesc:affaa2c12d5598c9322177f843e829317"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU-side calculation after the graph in add_calc_value_node is done on GPU.  <a href="classcolvar_1_1rmsd.html#affaa2c12d5598c9322177f843e829317">More...</a><br /></td></tr>
+<tr class="separator:affaa2c12d5598c9322177f843e829317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76232cf87e10918aa038e84c95dd3c65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a76232cf87e10918aa038e84c95dd3c65">add_calc_gradients_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map) override</td></tr>
+<tr class="memdesc:a76232cf87e10918aa038e84c95dd3c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the atomic gradients, to be reused later in order to apply forces on GPU.  <a href="classcolvar_1_1rmsd.html#a76232cf87e10918aa038e84c95dd3c65">More...</a><br /></td></tr>
+<tr class="separator:a76232cf87e10918aa038e84c95dd3c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e6612410a93f1f78b2c3c657754326"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#ae4e6612410a93f1f78b2c3c657754326">add_calc_force_invgrads_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map) override</td></tr>
+<tr class="memdesc:ae4e6612410a93f1f78b2c3c657754326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the total force from the system using the inverse atomic gradients on GPU.  <a href="classcolvar_1_1rmsd.html#ae4e6612410a93f1f78b2c3c657754326">More...</a><br /></td></tr>
+<tr class="separator:ae4e6612410a93f1f78b2c3c657754326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab94644d5bc25aa331a700296cfa3a22b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#ab94644d5bc25aa331a700296cfa3a22b">calc_force_invgrads_after_gpu</a> () override</td></tr>
+<tr class="memdesc:ab94644d5bc25aa331a700296cfa3a22b"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU-side calculation after the graph in add_calc_force_invgrads_node is done on GPU.  <a href="classcolvar_1_1rmsd.html#ab94644d5bc25aa331a700296cfa3a22b">More...</a><br /></td></tr>
+<tr class="separator:ab94644d5bc25aa331a700296cfa3a22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ee96c1e9b81b325882ca947e812687"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a25ee96c1e9b81b325882ca947e812687">add_calc_Jacobian_derivative_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map) override</td></tr>
+<tr class="memdesc:a25ee96c1e9b81b325882ca947e812687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the divergence of the inverse atomic gradients on GPU.  <a href="classcolvar_1_1rmsd.html#a25ee96c1e9b81b325882ca947e812687">More...</a><br /></td></tr>
+<tr class="separator:a25ee96c1e9b81b325882ca947e812687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eeb39439b7e2c77012efbdd79613862"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a5eeb39439b7e2c77012efbdd79613862">calc_Jacobian_derivative_after_gpu</a> () override</td></tr>
+<tr class="memdesc:a5eeb39439b7e2c77012efbdd79613862"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU-side calculation after the graph in add_calc_Jacobian_derivative_node is done on GPU.  <a href="classcolvar_1_1rmsd.html#a5eeb39439b7e2c77012efbdd79613862">More...</a><br /></td></tr>
+<tr class="separator:a5eeb39439b7e2c77012efbdd79613862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5063a0de906ff679326f462e8857d92"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#ab5063a0de906ff679326f462e8857d92">init</a> (std::string const &amp;conf) override</td></tr>
+<tr class="separator:ab5063a0de906ff679326f462e8857d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba5ca274b78d39af59f031584892f11c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#aba5ca274b78d39af59f031584892f11c">calc_value</a> () override</td></tr>
+<tr class="memdesc:aba5ca274b78d39af59f031584892f11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variable.  <a href="classcolvar_1_1rmsd.html#aba5ca274b78d39af59f031584892f11c">More...</a><br /></td></tr>
+<tr class="separator:aba5ca274b78d39af59f031584892f11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c74afd3d5cf1e1574d5505307d7455e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a5c74afd3d5cf1e1574d5505307d7455e">calc_gradients</a> () override</td></tr>
+<tr class="memdesc:a5c74afd3d5cf1e1574d5505307d7455e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the atomic gradients, to be reused later in order to apply forces.  <a href="classcolvar_1_1rmsd.html#a5c74afd3d5cf1e1574d5505307d7455e">More...</a><br /></td></tr>
+<tr class="separator:a5c74afd3d5cf1e1574d5505307d7455e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e84c5bf405ea8fc87e9053b912f936"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a74e84c5bf405ea8fc87e9053b912f936">calc_force_invgrads</a> () override</td></tr>
+<tr class="memdesc:a74e84c5bf405ea8fc87e9053b912f936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the total force from the system using the inverse atomic gradients.  <a href="classcolvar_1_1rmsd.html#a74e84c5bf405ea8fc87e9053b912f936">More...</a><br /></td></tr>
+<tr class="separator:a74e84c5bf405ea8fc87e9053b912f936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77451dfab60b703937cc147b19de4004"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a77451dfab60b703937cc147b19de4004">calc_Jacobian_derivative</a> () override</td></tr>
+<tr class="memdesc:a77451dfab60b703937cc147b19de4004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the divergence of the inverse atomic gradients.  <a href="classcolvar_1_1rmsd.html#a77451dfab60b703937cc147b19de4004">More...</a><br /></td></tr>
+<tr class="separator:a77451dfab60b703937cc147b19de4004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcolvar_1_1cvc"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvar_1_1cvc')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a></td></tr>
 <tr class="memitem:a1e660a59b5e2fc0b241788647e159ffc inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="a1e660a59b5e2fc0b241788647e159ffc" name="a1e660a59b5e2fc0b241788647e159ffc"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>function_type</b> () const</td></tr>
@@ -202,6 +226,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>calc_fit_gradients</b
 <tr class="memitem:aabf3f413ce2cad69c4e0fd9dff277008 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aabf3f413ce2cad69c4e0fd9dff277008">calc_Jacobian_derivative</a> ()</td></tr>
 <tr class="memdesc:aabf3f413ce2cad69c4e0fd9dff277008 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the divergence of the inverse atomic gradients.  <a href="classcolvar_1_1cvc.html#aabf3f413ce2cad69c4e0fd9dff277008">More...</a><br /></td></tr>
 <tr class="separator:aabf3f413ce2cad69c4e0fd9dff277008 inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd69e0bfc35c12925639a4f5878a6d64 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#abd69e0bfc35c12925639a4f5878a6d64">has_gpu_implementation</a> () const</td></tr>
+<tr class="memdesc:abd69e0bfc35c12925639a4f5878a6d64 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the GPU availability.  <a href="classcolvar_1_1cvc.html#abd69e0bfc35c12925639a4f5878a6d64">More...</a><br /></td></tr>
+<tr class="separator:abd69e0bfc35c12925639a4f5878a6d64 inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7035d4f66a4c5fd43487d2583a6ba134 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a7035d4f66a4c5fd43487d2583a6ba134">add_calc_value_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map)</td></tr>
+<tr class="memdesc:a7035d4f66a4c5fd43487d2583a6ba134 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variable on GPU.  <a href="classcolvar_1_1cvc.html#a7035d4f66a4c5fd43487d2583a6ba134">More...</a><br /></td></tr>
+<tr class="separator:a7035d4f66a4c5fd43487d2583a6ba134 inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893673d57cf3fdb648ba2f2717d9e581 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a893673d57cf3fdb648ba2f2717d9e581">calc_value_after_gpu</a> ()</td></tr>
+<tr class="memdesc:a893673d57cf3fdb648ba2f2717d9e581 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU-side calculation after the graph in add_calc_value_node is done on GPU.  <a href="classcolvar_1_1cvc.html#a893673d57cf3fdb648ba2f2717d9e581">More...</a><br /></td></tr>
+<tr class="separator:a893673d57cf3fdb648ba2f2717d9e581 inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca7484cab02cb1dda8a00393f819ab1 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a7ca7484cab02cb1dda8a00393f819ab1">add_calc_gradients_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map)</td></tr>
+<tr class="memdesc:a7ca7484cab02cb1dda8a00393f819ab1 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the atomic gradients, to be reused later in order to apply forces on GPU.  <a href="classcolvar_1_1cvc.html#a7ca7484cab02cb1dda8a00393f819ab1">More...</a><br /></td></tr>
+<tr class="separator:a7ca7484cab02cb1dda8a00393f819ab1 inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7479fc733dbf5cad3a7163675a49ea71 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a7479fc733dbf5cad3a7163675a49ea71">add_calc_force_invgrads_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map)</td></tr>
+<tr class="memdesc:a7479fc733dbf5cad3a7163675a49ea71 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the total force from the system using the inverse atomic gradients on GPU.  <a href="classcolvar_1_1cvc.html#a7479fc733dbf5cad3a7163675a49ea71">More...</a><br /></td></tr>
+<tr class="separator:a7479fc733dbf5cad3a7163675a49ea71 inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb1c6b5b4e7283d80d7bee3f38c686c inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aafb1c6b5b4e7283d80d7bee3f38c686c">calc_force_invgrads_after_gpu</a> ()</td></tr>
+<tr class="memdesc:aafb1c6b5b4e7283d80d7bee3f38c686c inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU-side calculation after the graph in add_calc_force_invgrads_node is done on GPU.  <a href="classcolvar_1_1cvc.html#aafb1c6b5b4e7283d80d7bee3f38c686c">More...</a><br /></td></tr>
+<tr class="separator:aafb1c6b5b4e7283d80d7bee3f38c686c inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2903f67d2dd0a534e5fb9732b325c88e inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a2903f67d2dd0a534e5fb9732b325c88e">add_calc_Jacobian_derivative_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map)</td></tr>
+<tr class="memdesc:a2903f67d2dd0a534e5fb9732b325c88e inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the divergence of the inverse atomic gradients on GPU.  <a href="classcolvar_1_1cvc.html#a2903f67d2dd0a534e5fb9732b325c88e">More...</a><br /></td></tr>
+<tr class="separator:a2903f67d2dd0a534e5fb9732b325c88e inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb10db3a35457208812a2a76f5ac0c45 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aeb10db3a35457208812a2a76f5ac0c45">calc_Jacobian_derivative_after_gpu</a> ()</td></tr>
+<tr class="memdesc:aeb10db3a35457208812a2a76f5ac0c45 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU-side calculation after the graph in add_calc_Jacobian_derivative_node is done on GPU.  <a href="classcolvar_1_1cvc.html#aeb10db3a35457208812a2a76f5ac0c45">More...</a><br /></td></tr>
+<tr class="separator:aeb10db3a35457208812a2a76f5ac0c45 inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00bc33e818f00f2f64446f2a223906e inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#ab00bc33e818f00f2f64446f2a223906e">debug_gradients_gpu</a> (<a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvars_gpu::colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;calc_value_graph, <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvars_gpu::colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;calc_gradients_graph)</td></tr>
+<tr class="memdesc:ab00bc33e818f00f2f64446f2a223906e inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate finite-difference gradients alongside the analytical ones, for each Cartesian component on GPU.  <a href="classcolvar_1_1cvc.html#ab00bc33e818f00f2f64446f2a223906e">More...</a><br /></td></tr>
+<tr class="separator:ab00bc33e818f00f2f64446f2a223906e inherit pub_methods_classcolvar_1_1cvc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5493ee83f85a8562663fd2bcfeea75f2 inherit pub_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="a5493ee83f85a8562663fd2bcfeea75f2" name="a5493ee83f85a8562663fd2bcfeea75f2"></a>
 <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> () const</td></tr>
 <tr class="memdesc:a5493ee83f85a8562663fd2bcfeea75f2 inherit pub_methods_classcolvar_1_1cvc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the previously calculated value. <br /></td></tr>
@@ -476,10 +527,10 @@ std::vector&lt; <a class="el" href="classcolvardeps.html">colvardeps</a> * &gt;&
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a0529d1900b7a8a7bf4dd4e5125308bfc"><td class="memItemLeft" align="right" valign="top"><a id="a0529d1900b7a8a7bf4dd4e5125308bfc" name="a0529d1900b7a8a7bf4dd4e5125308bfc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>init_permutation</b> (std::string const &amp;conf)</td></tr>
-<tr class="memdesc:a0529d1900b7a8a7bf4dd4e5125308bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permutation RMSD input parsing. <br /></td></tr>
-<tr class="separator:a0529d1900b7a8a7bf4dd4e5125308bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2893bfdb3f0a89380f03b1ce58a841d6"><td class="memItemLeft" align="right" valign="top"><a id="a2893bfdb3f0a89380f03b1ce58a841d6" name="a2893bfdb3f0a89380f03b1ce58a841d6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>init_permutation</b> (std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;ref_pos, std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a2893bfdb3f0a89380f03b1ce58a841d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permutation RMSD input parsing. <br /></td></tr>
+<tr class="separator:a2893bfdb3f0a89380f03b1ce58a841d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcolvar_1_1cvc"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcolvar_1_1cvc')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcolvar_1_1cvc.html">colvar::cvc</a></td></tr>
 <tr class="memitem:a0e2b96c978400bbb2a8b83e7355e0600 inherit pro_methods_classcolvar_1_1cvc"><td class="memItemLeft" align="right" valign="top"><a id="a0e2b96c978400bbb2a8b83e7355e0600" name="a0e2b96c978400bbb2a8b83e7355e0600"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>set_function_type</b> (std::string const &amp;type)</td></tr>
@@ -597,12 +648,51 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>atoms</b> = nullptr</td></tr>
 <tr class="memdesc:a4a24aa909ae26b479c41e9a373ee07d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atom group. <br /></td></tr>
 <tr class="separator:a4a24aa909ae26b479c41e9a373ee07d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45d6bbfd23c3b24f44cd2e32306e4732"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a45d6bbfd23c3b24f44cd2e32306e4732">ref_pos</a></td></tr>
-<tr class="separator:a45d6bbfd23c3b24f44cd2e32306e4732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed92ed89dd6e8b3213979a67c4a7324"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1rmsd.html#a4ed92ed89dd6e8b3213979a67c4a7324">num_ref_pos</a> = 0</td></tr>
+<tr class="separator:a4ed92ed89dd6e8b3213979a67c4a7324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d00f56621c8ef5074a80bb2d0836a7"><td class="memItemLeft" align="right" valign="top"><a id="ae2d00f56621c8ef5074a80bb2d0836a7" name="ae2d00f56621c8ef5074a80bb2d0836a7"></a>
+cvm::ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>ref_pos_soa</b></td></tr>
+<tr class="separator:ae2d00f56621c8ef5074a80bb2d0836a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b8071c232ba72e8a4000c240d5ccb8c"><td class="memItemLeft" align="right" valign="top"><a id="a0b8071c232ba72e8a4000c240d5ccb8c" name="a0b8071c232ba72e8a4000c240d5ccb8c"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>d_ref_pos_soa</b></td></tr>
+<tr class="separator:a0b8071c232ba72e8a4000c240d5ccb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb7d2a2d8773d925e9de12c342088403"><td class="memItemLeft" align="right" valign="top"><a id="afb7d2a2d8773d925e9de12c342088403" name="afb7d2a2d8773d925e9de12c342088403"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>d_permutation_msds</b></td></tr>
+<tr class="separator:afb7d2a2d8773d925e9de12c342088403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a2f3ee7a3ad145d708f78efb4f82c9"><td class="memItemLeft" align="right" valign="top"><a id="aa3a2f3ee7a3ad145d708f78efb4f82c9" name="aa3a2f3ee7a3ad145d708f78efb4f82c9"></a>
+unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><b>d_tbcounts</b></td></tr>
+<tr class="separator:aa3a2f3ee7a3ad145d708f78efb4f82c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7e809d29c1208f6f059636c33b89af"><td class="memItemLeft" align="right" valign="top"><a id="a7a7e809d29c1208f6f059636c33b89af" name="a7a7e809d29c1208f6f059636c33b89af"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>h_rmsd</b></td></tr>
+<tr class="separator:a7a7e809d29c1208f6f059636c33b89af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1765851a1e0fe583149dfb7942df7b2f"><td class="memItemLeft" align="right" valign="top"><a id="a1765851a1e0fe583149dfb7942df7b2f" name="a1765851a1e0fe583149dfb7942df7b2f"></a>
+size_t *&#160;</td><td class="memItemRight" valign="bottom"><b>h_best_perm_index</b></td></tr>
+<tr class="separator:a1765851a1e0fe583149dfb7942df7b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6076cf9c4288c59d34afef7aaa783619"><td class="memItemLeft" align="right" valign="top"><a id="a6076cf9c4288c59d34afef7aaa783619" name="a6076cf9c4288c59d34afef7aaa783619"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>d_ft</b></td></tr>
+<tr class="separator:a6076cf9c4288c59d34afef7aaa783619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa82b0610cebb9c7016954d33b51632"><td class="memItemLeft" align="right" valign="top"><a id="a5fa82b0610cebb9c7016954d33b51632" name="a5fa82b0610cebb9c7016954d33b51632"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>h_ft</b></td></tr>
+<tr class="separator:a5fa82b0610cebb9c7016954d33b51632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba42258f9fb85b692c59e7a52aed167d"><td class="memItemLeft" align="right" valign="top"><a id="aba42258f9fb85b692c59e7a52aed167d" name="aba42258f9fb85b692c59e7a52aed167d"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>d_jd</b></td></tr>
+<tr class="separator:aba42258f9fb85b692c59e7a52aed167d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977d0ffa33171f61e885fc3b810a3666"><td class="memItemLeft" align="right" valign="top"><a id="a977d0ffa33171f61e885fc3b810a3666" name="a977d0ffa33171f61e885fc3b810a3666"></a>
+<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>h_jd</b></td></tr>
+<tr class="separator:a977d0ffa33171f61e885fc3b810a3666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08bec1788bcab2ea272836aca9d6841e"><td class="memItemLeft" align="right" valign="top"><a id="a08bec1788bcab2ea272836aca9d6841e" name="a08bec1788bcab2ea272836aca9d6841e"></a>
+unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><b>d_tbcount_ft</b></td></tr>
+<tr class="separator:a08bec1788bcab2ea272836aca9d6841e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe83feb9354db4480468185e8a53382"><td class="memItemLeft" align="right" valign="top"><a id="affe83feb9354db4480468185e8a53382" name="affe83feb9354db4480468185e8a53382"></a>
+unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><b>d_tbcount_jd</b></td></tr>
+<tr class="separator:affe83feb9354db4480468185e8a53382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85be6f6db4ecd62479c19086aa88fa0c"><td class="memItemLeft" align="right" valign="top"><a id="a85be6f6db4ecd62479c19086aa88fa0c" name="a85be6f6db4ecd62479c19086aa88fa0c"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>n_permutations</b> = 1</td></tr>
 <tr class="memdesc:a85be6f6db4ecd62479c19086aa88fa0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of permutations of symmetry-related atoms. <br /></td></tr>
 <tr class="separator:a85be6f6db4ecd62479c19086aa88fa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ae63bb95fccabb5089b4aa3a10e0b1"><td class="memItemLeft" align="right" valign="top"><a id="a42ae63bb95fccabb5089b4aa3a10e0b1" name="a42ae63bb95fccabb5089b4aa3a10e0b1"></a>
+cvm::ag_vector_real_t&#160;</td><td class="memItemRight" valign="bottom"><b>permutation_msds</b></td></tr>
+<tr class="separator:a42ae63bb95fccabb5089b4aa3a10e0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f45e0e3e56a02680c32e9d8d1053f7f"><td class="memItemLeft" align="right" valign="top"><a id="a0f45e0e3e56a02680c32e9d8d1053f7f" name="a0f45e0e3e56a02680c32e9d8d1053f7f"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>best_perm_index</b> = 0</td></tr>
 <tr class="memdesc:a0f45e0e3e56a02680c32e9d8d1053f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the permutation yielding the smallest RMSD (0 for identity) <br /></td></tr>
@@ -919,8 +1009,168 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Colvar component: root mean square deviation (RMSD) of a group with respect to a set of reference coordinates; uses <a class="el" href="classcolvar_1_1orientation.html">colvar::orientation</a> to calculate the rotation matrix (<a class="el" href="classcolvarvalue.html#a0433b10db3c5ecfd895a40dcc3a2cc50ad81844a872e39af912b6049608facdfd" title="Scalar number, implemented as colvarmodule::real (default)">colvarvalue::type_scalar</a> type, range [0:*)) </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa5e723f622dc38e3c961a3d9da52b1f8" name="aa5e723f622dc38e3c961a3d9da52b1f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5e723f622dc38e3c961a3d9da52b1f8">&#9670;&#160;</a></span>calc_force_invgrads()</h2>
+<a id="ae4e6612410a93f1f78b2c3c657754326" name="ae4e6612410a93f1f78b2c3c657754326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e6612410a93f1f78b2c3c657754326">&#9670;&#160;</a></span>add_calc_force_invgrads_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvar::rmsd::add_calc_force_invgrads_node </td>
+          <td>(</td>
+          <td class="paramtype">cudaGraph_t &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nodes_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the total force from the system using the inverse atomic gradients on GPU. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvar_1_1cvc.html#a7479fc733dbf5cad3a7163675a49ea71">colvar::cvc</a>.</p>
+
+</div>
+</div>
+<a id="a76232cf87e10918aa038e84c95dd3c65" name="a76232cf87e10918aa038e84c95dd3c65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76232cf87e10918aa038e84c95dd3c65">&#9670;&#160;</a></span>add_calc_gradients_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvar::rmsd::add_calc_gradients_node </td>
+          <td>(</td>
+          <td class="paramtype">cudaGraph_t &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nodes_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the atomic gradients, to be reused later in order to apply forces on GPU. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvar_1_1cvc.html#a7ca7484cab02cb1dda8a00393f819ab1">colvar::cvc</a>.</p>
+
+</div>
+</div>
+<a id="a25ee96c1e9b81b325882ca947e812687" name="a25ee96c1e9b81b325882ca947e812687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ee96c1e9b81b325882ca947e812687">&#9670;&#160;</a></span>add_calc_Jacobian_derivative_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvar::rmsd::add_calc_Jacobian_derivative_node </td>
+          <td>(</td>
+          <td class="paramtype">cudaGraph_t &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nodes_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the divergence of the inverse atomic gradients on GPU. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvar_1_1cvc.html#a2903f67d2dd0a534e5fb9732b325c88e">colvar::cvc</a>.</p>
+
+</div>
+</div>
+<a id="a99653a30cb80a7644f64562d7bfca1e7" name="a99653a30cb80a7644f64562d7bfca1e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99653a30cb80a7644f64562d7bfca1e7">&#9670;&#160;</a></span>add_calc_value_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvar::rmsd::add_calc_value_node </td>
+          <td>(</td>
+          <td class="paramtype">cudaGraph_t &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nodes_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the variable on GPU. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvar_1_1cvc.html#a7035d4f66a4c5fd43487d2583a6ba134">colvar::cvc</a>.</p>
+
+</div>
+</div>
+<a id="a74e84c5bf405ea8fc87e9053b912f936" name="a74e84c5bf405ea8fc87e9053b912f936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e84c5bf405ea8fc87e9053b912f936">&#9670;&#160;</a></span>calc_force_invgrads()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -937,7 +1187,7 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -948,8 +1198,37 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
 
 </div>
 </div>
-<a id="a1a809ce5175c73ffde116619c04372d2" name="a1a809ce5175c73ffde116619c04372d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a809ce5175c73ffde116619c04372d2">&#9670;&#160;</a></span>calc_gradients()</h2>
+<a id="ab94644d5bc25aa331a700296cfa3a22b" name="ab94644d5bc25aa331a700296cfa3a22b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab94644d5bc25aa331a700296cfa3a22b">&#9670;&#160;</a></span>calc_force_invgrads_after_gpu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvar::rmsd::calc_force_invgrads_after_gpu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CPU-side calculation after the graph in add_calc_force_invgrads_node is done on GPU. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvar_1_1cvc.html#aafb1c6b5b4e7283d80d7bee3f38c686c">colvar::cvc</a>.</p>
+
+</div>
+</div>
+<a id="a5c74afd3d5cf1e1574d5505307d7455e" name="a5c74afd3d5cf1e1574d5505307d7455e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c74afd3d5cf1e1574d5505307d7455e">&#9670;&#160;</a></span>calc_gradients()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -966,7 +1245,7 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -977,8 +1256,8 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
 
 </div>
 </div>
-<a id="a28bece9a71e23d9de329800a77af9bd0" name="a28bece9a71e23d9de329800a77af9bd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28bece9a71e23d9de329800a77af9bd0">&#9670;&#160;</a></span>calc_Jacobian_derivative()</h2>
+<a id="a77451dfab60b703937cc147b19de4004" name="a77451dfab60b703937cc147b19de4004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77451dfab60b703937cc147b19de4004">&#9670;&#160;</a></span>calc_Jacobian_derivative()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -995,7 +1274,7 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1006,8 +1285,37 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
 
 </div>
 </div>
-<a id="ada159e38e9e514551147cb1acef60f33" name="ada159e38e9e514551147cb1acef60f33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada159e38e9e514551147cb1acef60f33">&#9670;&#160;</a></span>calc_value()</h2>
+<a id="a5eeb39439b7e2c77012efbdd79613862" name="a5eeb39439b7e2c77012efbdd79613862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eeb39439b7e2c77012efbdd79613862">&#9670;&#160;</a></span>calc_Jacobian_derivative_after_gpu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvar::rmsd::calc_Jacobian_derivative_after_gpu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CPU-side calculation after the graph in add_calc_Jacobian_derivative_node is done on GPU. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvar_1_1cvc.html#aeb10db3a35457208812a2a76f5ac0c45">colvar::cvc</a>.</p>
+
+</div>
+</div>
+<a id="aba5ca274b78d39af59f031584892f11c" name="aba5ca274b78d39af59f031584892f11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba5ca274b78d39af59f031584892f11c">&#9670;&#160;</a></span>calc_value()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1024,7 +1332,7 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1035,8 +1343,66 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
 
 </div>
 </div>
-<a id="ad2167c0490c3d92366a05fe9ef3a1bc9" name="ad2167c0490c3d92366a05fe9ef3a1bc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2167c0490c3d92366a05fe9ef3a1bc9">&#9670;&#160;</a></span>init()</h2>
+<a id="affaa2c12d5598c9322177f843e829317" name="affaa2c12d5598c9322177f843e829317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affaa2c12d5598c9322177f843e829317">&#9670;&#160;</a></span>calc_value_after_gpu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvar::rmsd::calc_value_after_gpu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CPU-side calculation after the graph in add_calc_value_node is done on GPU. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvar_1_1cvc.html#a893673d57cf3fdb648ba2f2717d9e581">colvar::cvc</a>.</p>
+
+</div>
+</div>
+<a id="ae5cfa47b6f522568869eb19434b0b172" name="ae5cfa47b6f522568869eb19434b0b172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5cfa47b6f522568869eb19434b0b172">&#9670;&#160;</a></span>has_gpu_implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool colvar::rmsd::has_gpu_implementation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check the GPU availability. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvar_1_1cvc.html#abd69e0bfc35c12925639a4f5878a6d64">colvar::cvc</a>.</p>
+
+</div>
+</div>
+<a id="ab5063a0de906ff679326f462e8857d92" name="ab5063a0de906ff679326f462e8857d92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5063a0de906ff679326f462e8857d92">&#9670;&#160;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1054,7 +1420,7 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1070,8 +1436,8 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a45d6bbfd23c3b24f44cd2e32306e4732" name="a45d6bbfd23c3b24f44cd2e32306e4732"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45d6bbfd23c3b24f44cd2e32306e4732">&#9670;&#160;</a></span>ref_pos</h2>
+<a id="a4ed92ed89dd6e8b3213979a67c4a7324" name="a4ed92ed89dd6e8b3213979a67c4a7324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed92ed89dd6e8b3213979a67c4a7324">&#9670;&#160;</a></span>num_ref_pos</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1080,7 +1446,7 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a>&gt; colvar::rmsd::ref_pos</td>
+          <td class="memname">size_t colvar::rmsd::num_ref_pos = 0</td>
         </tr>
       </table>
   </td>
@@ -1100,7 +1466,7 @@ static std::vector&lt; <a class="el" href="classcolvardeps_1_1feature.html">feat
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 5 2025 22:56:59 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Jan 22 2026 16:40:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

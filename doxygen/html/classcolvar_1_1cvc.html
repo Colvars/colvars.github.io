@@ -229,6 +229,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>calc_fit_gradients</b
 <tr class="memitem:aabf3f413ce2cad69c4e0fd9dff277008"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aabf3f413ce2cad69c4e0fd9dff277008">calc_Jacobian_derivative</a> ()</td></tr>
 <tr class="memdesc:aabf3f413ce2cad69c4e0fd9dff277008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the divergence of the inverse atomic gradients.  <a href="classcolvar_1_1cvc.html#aabf3f413ce2cad69c4e0fd9dff277008">More...</a><br /></td></tr>
 <tr class="separator:aabf3f413ce2cad69c4e0fd9dff277008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd69e0bfc35c12925639a4f5878a6d64"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#abd69e0bfc35c12925639a4f5878a6d64">has_gpu_implementation</a> () const</td></tr>
+<tr class="memdesc:abd69e0bfc35c12925639a4f5878a6d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the GPU availability.  <a href="classcolvar_1_1cvc.html#abd69e0bfc35c12925639a4f5878a6d64">More...</a><br /></td></tr>
+<tr class="separator:abd69e0bfc35c12925639a4f5878a6d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7035d4f66a4c5fd43487d2583a6ba134"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a7035d4f66a4c5fd43487d2583a6ba134">add_calc_value_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map)</td></tr>
+<tr class="memdesc:a7035d4f66a4c5fd43487d2583a6ba134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variable on GPU.  <a href="classcolvar_1_1cvc.html#a7035d4f66a4c5fd43487d2583a6ba134">More...</a><br /></td></tr>
+<tr class="separator:a7035d4f66a4c5fd43487d2583a6ba134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893673d57cf3fdb648ba2f2717d9e581"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a893673d57cf3fdb648ba2f2717d9e581">calc_value_after_gpu</a> ()</td></tr>
+<tr class="memdesc:a893673d57cf3fdb648ba2f2717d9e581"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU-side calculation after the graph in add_calc_value_node is done on GPU.  <a href="classcolvar_1_1cvc.html#a893673d57cf3fdb648ba2f2717d9e581">More...</a><br /></td></tr>
+<tr class="separator:a893673d57cf3fdb648ba2f2717d9e581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca7484cab02cb1dda8a00393f819ab1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a7ca7484cab02cb1dda8a00393f819ab1">add_calc_gradients_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map)</td></tr>
+<tr class="memdesc:a7ca7484cab02cb1dda8a00393f819ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the atomic gradients, to be reused later in order to apply forces on GPU.  <a href="classcolvar_1_1cvc.html#a7ca7484cab02cb1dda8a00393f819ab1">More...</a><br /></td></tr>
+<tr class="separator:a7ca7484cab02cb1dda8a00393f819ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7479fc733dbf5cad3a7163675a49ea71"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a7479fc733dbf5cad3a7163675a49ea71">add_calc_force_invgrads_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map)</td></tr>
+<tr class="memdesc:a7479fc733dbf5cad3a7163675a49ea71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the total force from the system using the inverse atomic gradients on GPU.  <a href="classcolvar_1_1cvc.html#a7479fc733dbf5cad3a7163675a49ea71">More...</a><br /></td></tr>
+<tr class="separator:a7479fc733dbf5cad3a7163675a49ea71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb1c6b5b4e7283d80d7bee3f38c686c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aafb1c6b5b4e7283d80d7bee3f38c686c">calc_force_invgrads_after_gpu</a> ()</td></tr>
+<tr class="memdesc:aafb1c6b5b4e7283d80d7bee3f38c686c"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU-side calculation after the graph in add_calc_force_invgrads_node is done on GPU.  <a href="classcolvar_1_1cvc.html#aafb1c6b5b4e7283d80d7bee3f38c686c">More...</a><br /></td></tr>
+<tr class="separator:aafb1c6b5b4e7283d80d7bee3f38c686c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2903f67d2dd0a534e5fb9732b325c88e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#a2903f67d2dd0a534e5fb9732b325c88e">add_calc_Jacobian_derivative_node</a> (cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map)</td></tr>
+<tr class="memdesc:a2903f67d2dd0a534e5fb9732b325c88e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the divergence of the inverse atomic gradients on GPU.  <a href="classcolvar_1_1cvc.html#a2903f67d2dd0a534e5fb9732b325c88e">More...</a><br /></td></tr>
+<tr class="separator:a2903f67d2dd0a534e5fb9732b325c88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb10db3a35457208812a2a76f5ac0c45"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#aeb10db3a35457208812a2a76f5ac0c45">calc_Jacobian_derivative_after_gpu</a> ()</td></tr>
+<tr class="memdesc:aeb10db3a35457208812a2a76f5ac0c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU-side calculation after the graph in add_calc_Jacobian_derivative_node is done on GPU.  <a href="classcolvar_1_1cvc.html#aeb10db3a35457208812a2a76f5ac0c45">More...</a><br /></td></tr>
+<tr class="separator:aeb10db3a35457208812a2a76f5ac0c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00bc33e818f00f2f64446f2a223906e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvar_1_1cvc.html#ab00bc33e818f00f2f64446f2a223906e">debug_gradients_gpu</a> (<a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvars_gpu::colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;calc_value_graph, <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvars_gpu::colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;calc_gradients_graph)</td></tr>
+<tr class="memdesc:ab00bc33e818f00f2f64446f2a223906e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate finite-difference gradients alongside the analytical ones, for each Cartesian component on GPU.  <a href="classcolvar_1_1cvc.html#ab00bc33e818f00f2f64446f2a223906e">More...</a><br /></td></tr>
+<tr class="separator:ab00bc33e818f00f2f64446f2a223906e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5493ee83f85a8562663fd2bcfeea75f2"><td class="memItemLeft" align="right" valign="top"><a id="a5493ee83f85a8562663fd2bcfeea75f2" name="a5493ee83f85a8562663fd2bcfeea75f2"></a>
 <a class="el" href="classcolvarvalue.html">colvarvalue</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> () const</td></tr>
 <tr class="memdesc:a5493ee83f85a8562663fd2bcfeea75f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the previously calculated value. <br /></td></tr>
@@ -946,6 +973,166 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 </ol>
 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7479fc733dbf5cad3a7163675a49ea71" name="a7479fc733dbf5cad3a7163675a49ea71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7479fc733dbf5cad3a7163675a49ea71">&#9670;&#160;</a></span>add_calc_force_invgrads_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int colvar::cvc::add_calc_force_invgrads_node </td>
+          <td>(</td>
+          <td class="paramtype">cudaGraph_t &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nodes_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the total force from the system using the inverse atomic gradients on GPU. </p>
+
+<p>Reimplemented in <a class="el" href="classcolvar_1_1rmsd.html#ae4e6612410a93f1f78b2c3c657754326">colvar::rmsd</a>.</p>
+
+</div>
+</div>
+<a id="a7ca7484cab02cb1dda8a00393f819ab1" name="a7ca7484cab02cb1dda8a00393f819ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca7484cab02cb1dda8a00393f819ab1">&#9670;&#160;</a></span>add_calc_gradients_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int colvar::cvc::add_calc_gradients_node </td>
+          <td>(</td>
+          <td class="paramtype">cudaGraph_t &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nodes_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the atomic gradients, to be reused later in order to apply forces on GPU. </p>
+
+<p>Reimplemented in <a class="el" href="classcolvar_1_1rmsd.html#a76232cf87e10918aa038e84c95dd3c65">colvar::rmsd</a>.</p>
+
+</div>
+</div>
+<a id="a2903f67d2dd0a534e5fb9732b325c88e" name="a2903f67d2dd0a534e5fb9732b325c88e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2903f67d2dd0a534e5fb9732b325c88e">&#9670;&#160;</a></span>add_calc_Jacobian_derivative_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int colvar::cvc::add_calc_Jacobian_derivative_node </td>
+          <td>(</td>
+          <td class="paramtype">cudaGraph_t &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nodes_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the divergence of the inverse atomic gradients on GPU. </p>
+
+<p>Reimplemented in <a class="el" href="classcolvar_1_1rmsd.html#a25ee96c1e9b81b325882ca947e812687">colvar::rmsd</a>.</p>
+
+</div>
+</div>
+<a id="a7035d4f66a4c5fd43487d2583a6ba134" name="a7035d4f66a4c5fd43487d2583a6ba134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7035d4f66a4c5fd43487d2583a6ba134">&#9670;&#160;</a></span>add_calc_value_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int colvar::cvc::add_calc_value_node </td>
+          <td>(</td>
+          <td class="paramtype">cudaGraph_t &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nodes_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the variable on GPU. </p>
+
+<p>Reimplemented in <a class="el" href="classcolvar_1_1rmsd.html#a99653a30cb80a7644f64562d7bfca1e7">colvar::rmsd</a>.</p>
+
+</div>
+</div>
 <a id="af285602bab26ce5d535301cbffc8fe71" name="af285602bab26ce5d535301cbffc8fe71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af285602bab26ce5d535301cbffc8fe71">&#9670;&#160;</a></span>apply_force()</h2>
 
@@ -1007,7 +1194,36 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 
 <p>Calculate the total force from the system using the inverse atomic gradients. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvar_1_1distance.html#a89a9bcc1e0f0f93d5607830e0e8d60c2">colvar::distance</a>, <a class="el" href="classcolvar_1_1distance__z.html#a744179fdeb7ee700524e72cba0f7968f">colvar::distance_z</a>, <a class="el" href="classcolvar_1_1distance__xy.html#aef595cda21a9ee1743c2535a359319b5">colvar::distance_xy</a>, <a class="el" href="classcolvar_1_1gyration.html#a188f98a312b2f6a303fc45d1f9f3b7e6">colvar::gyration</a>, <a class="el" href="classcolvar_1_1eigenvector.html#ae0ef74ddf9ac9349d142eaf7d7b3a9a8">colvar::eigenvector</a>, <a class="el" href="classcolvar_1_1angle.html#ac4952be1e24197aad15b73a5fe3f429c">colvar::angle</a>, <a class="el" href="classcolvar_1_1dihedral.html#a5adf39100cfa44ac27a702008959247a">colvar::dihedral</a>, <a class="el" href="classcolvar_1_1rmsd.html#aa5e723f622dc38e3c961a3d9da52b1f8">colvar::rmsd</a>, and <a class="el" href="classcolvar_1_1alch__lambda.html#a0eb176f574bc02eb7dc9f7412df957c0">colvar::alch_lambda</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvar_1_1distance.html#a89a9bcc1e0f0f93d5607830e0e8d60c2">colvar::distance</a>, <a class="el" href="classcolvar_1_1distance__z.html#a744179fdeb7ee700524e72cba0f7968f">colvar::distance_z</a>, <a class="el" href="classcolvar_1_1distance__xy.html#aef595cda21a9ee1743c2535a359319b5">colvar::distance_xy</a>, <a class="el" href="classcolvar_1_1gyration.html#a188f98a312b2f6a303fc45d1f9f3b7e6">colvar::gyration</a>, <a class="el" href="classcolvar_1_1eigenvector.html#ae0ef74ddf9ac9349d142eaf7d7b3a9a8">colvar::eigenvector</a>, <a class="el" href="classcolvar_1_1angle.html#ac4952be1e24197aad15b73a5fe3f429c">colvar::angle</a>, <a class="el" href="classcolvar_1_1dihedral.html#a5adf39100cfa44ac27a702008959247a">colvar::dihedral</a>, <a class="el" href="classcolvar_1_1alch__lambda.html#a0eb176f574bc02eb7dc9f7412df957c0">colvar::alch_lambda</a>, and <a class="el" href="classcolvar_1_1rmsd.html#a74e84c5bf405ea8fc87e9053b912f936">colvar::rmsd</a>.</p>
+
+</div>
+</div>
+<a id="aafb1c6b5b4e7283d80d7bee3f38c686c" name="aafb1c6b5b4e7283d80d7bee3f38c686c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb1c6b5b4e7283d80d7bee3f38c686c">&#9670;&#160;</a></span>calc_force_invgrads_after_gpu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int colvar::cvc::calc_force_invgrads_after_gpu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CPU-side calculation after the graph in add_calc_force_invgrads_node is done on GPU. </p>
+
+<p>Reimplemented in <a class="el" href="classcolvar_1_1rmsd.html#ab94644d5bc25aa331a700296cfa3a22b">colvar::rmsd</a>.</p>
 
 </div>
 </div>
@@ -1036,7 +1252,7 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 
 <p>Calculate the atomic gradients, to be reused later in order to apply forces. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvar_1_1distance.html#a9f2fbbfd0b561b2adf4bc856f5928830">colvar::distance</a>, <a class="el" href="classcolvar_1_1distance__vec.html#a779491e501f2225e1c373204b6ddf18a">colvar::distance_vec</a>, <a class="el" href="classcolvar_1_1distance__dir.html#a657775d095f5b4d1153775f4052a0a6c">colvar::distance_dir</a>, <a class="el" href="classcolvar_1_1distance__z.html#a205c7647d7ba96d3393be102f8b41533">colvar::distance_z</a>, <a class="el" href="classcolvar_1_1distance__xy.html#a42c315bc20d4675468299d7af7e1714a">colvar::distance_xy</a>, <a class="el" href="classcolvar_1_1polar__phi.html#afee4bb39dbb2aeb8edf2e3123c9a662d">colvar::polar_phi</a>, <a class="el" href="classcolvar_1_1polar__theta.html#aca34d0d09ad23531b4f83705b6da46e9">colvar::polar_theta</a>, <a class="el" href="classcolvar_1_1distance__inv.html#afb40ec0a0cd8938eaad65f6b90ac79ea">colvar::distance_inv</a>, <a class="el" href="classcolvar_1_1distance__pairs.html#aff9cef918f09c8d7529f81c0db40527b">colvar::distance_pairs</a>, <a class="el" href="classcolvar_1_1dipole__magnitude.html#a936882f434481819c1c7af8a13b81021">colvar::dipole_magnitude</a>, <a class="el" href="classcolvar_1_1gyration.html#a6bd74682dc41e45e92bb0a3b178db554">colvar::gyration</a>, <a class="el" href="classcolvar_1_1inertia.html#a9313ad451f0e15ed8a5f9a6598bf19a0">colvar::inertia</a>, <a class="el" href="classcolvar_1_1inertia__z.html#ac2365ba096b0f9725817e80292ab850d">colvar::inertia_z</a>, <a class="el" href="classcolvar_1_1eigenvector.html#ad0d023f7f92f87f4ecb98b3e459a3b11">colvar::eigenvector</a>, <a class="el" href="classcolvar_1_1angle.html#a3d15bb9055d4a1c0153d6c251be2f0cf">colvar::angle</a>, <a class="el" href="classcolvar_1_1dipole__angle.html#af194798bed2e5f1c8611907822ab8c1b">colvar::dipole_angle</a>, <a class="el" href="classcolvar_1_1dihedral.html#a0e8c940dd17cdb78d243114e7a591ead">colvar::dihedral</a>, <a class="el" href="classcolvar_1_1coordnum.html#a693d26148653d294f8d9941ff64fd0a2">colvar::coordnum</a>, <a class="el" href="classcolvar_1_1selfcoordnum.html#a5719e146a3a02bbc2e79cdd71c085580">colvar::selfcoordnum</a>, <a class="el" href="classcolvar_1_1groupcoordnum.html#afa421e5f6f1e519ab836b0ada3299740">colvar::groupcoordnum</a>, <a class="el" href="classcolvar_1_1h__bond.html#aee263fbe27836dd9b718c94f2f6fde3e">colvar::h_bond</a>, <a class="el" href="classcolvar_1_1alpha__angles.html#a00cb8d180cd394da2c7bf0e7a2257ef0">colvar::alpha_angles</a>, <a class="el" href="classcolvar_1_1dihedPC.html#aaacd9f11f2249dd5d8ff754f8242d34b">colvar::dihedPC</a>, <a class="el" href="classcolvar_1_1orientation.html#a458aa79d2dcb37e2236732e10c0cb39d">colvar::orientation</a>, <a class="el" href="classcolvar_1_1orientation__angle.html#a2a94460af9acdc6bbce77b2924360d68">colvar::orientation_angle</a>, <a class="el" href="classcolvar_1_1orientation__proj.html#ae41742782bf67a6aa57cc6c27eb6a847">colvar::orientation_proj</a>, <a class="el" href="classcolvar_1_1tilt.html#a1383bdcd231e875469a82583c314c409">colvar::tilt</a>, <a class="el" href="classcolvar_1_1spin__angle.html#aee72fe5b9a57268e149ccff0efe785f2">colvar::spin_angle</a>, <a class="el" href="classcolvar_1_1euler__phi.html#a06d106f9747480335c33b332894d0fe8">colvar::euler_phi</a>, <a class="el" href="classcolvar_1_1euler__psi.html#a8d11b5860579f878267dc5b5bf265528">colvar::euler_psi</a>, <a class="el" href="classcolvar_1_1euler__theta.html#a210f9e3d7dc7126b77fb01e52dc0c3df">colvar::euler_theta</a>, <a class="el" href="classcolvar_1_1rmsd.html#a1a809ce5175c73ffde116619c04372d2">colvar::rmsd</a>, <a class="el" href="classcolvar_1_1cartesian.html#a0c21ed1b1aa1b338128de1d73fce04f7">colvar::cartesian</a>, <a class="el" href="classcolvar_1_1alch__Flambda.html#a1944cec36efd0697aac0ec9ce3d78463">colvar::alch_Flambda</a>, <a class="el" href="classcolvar_1_1gspath.html#a02eb22a3f4225b9d6c5ffba4c7e9979d">colvar::gspath</a>, <a class="el" href="classcolvar_1_1gzpath.html#a749b86f3fe46dcbcfbe31756e5c123e9">colvar::gzpath</a>, <a class="el" href="classcolvar_1_1linearCombination.html#a7aa7f94d5a179d3232f49d2fab581f81">colvar::linearCombination</a>, <a class="el" href="classcolvar_1_1customColvar.html#a7bdf62edd656b467bb982e35929d5014">colvar::customColvar</a>, <a class="el" href="classcolvar_1_1gspathCV.html#a3c1b5a3449ffaa3eab2c036d6fe96934">colvar::gspathCV</a>, <a class="el" href="classcolvar_1_1gzpathCV.html#af4d6b8aa1fd77c5e9997bc8c01a6c162">colvar::gzpathCV</a>, <a class="el" href="classcolvar_1_1aspath.html#a7dd5c5ad72414f596bebefd3789829cd">colvar::aspath</a>, <a class="el" href="classcolvar_1_1azpath.html#a3adb2d6af4235f7fc85ad4167ef3aac2">colvar::azpath</a>, <a class="el" href="classcolvar_1_1aspathCV.html#aa558fcef268f365c8ddd4ea9b9c0b69f">colvar::aspathCV</a>, <a class="el" href="classcolvar_1_1azpathCV.html#a7cb3e69d53cf0b486b229f0aa2e1bd71">colvar::azpathCV</a>, <a class="el" href="classcolvar_1_1neuralNetwork.html#ae8da2b42136b152b709668a8c8158ec0">colvar::neuralNetwork</a>, and <a class="el" href="classcolvar_1_1map__total.html#ab563b09728a671c9a0432cda09271d10">colvar::map_total</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvar_1_1distance.html#a9f2fbbfd0b561b2adf4bc856f5928830">colvar::distance</a>, <a class="el" href="classcolvar_1_1distance__vec.html#a779491e501f2225e1c373204b6ddf18a">colvar::distance_vec</a>, <a class="el" href="classcolvar_1_1distance__dir.html#a657775d095f5b4d1153775f4052a0a6c">colvar::distance_dir</a>, <a class="el" href="classcolvar_1_1distance__z.html#a205c7647d7ba96d3393be102f8b41533">colvar::distance_z</a>, <a class="el" href="classcolvar_1_1distance__xy.html#a42c315bc20d4675468299d7af7e1714a">colvar::distance_xy</a>, <a class="el" href="classcolvar_1_1polar__phi.html#afee4bb39dbb2aeb8edf2e3123c9a662d">colvar::polar_phi</a>, <a class="el" href="classcolvar_1_1polar__theta.html#aca34d0d09ad23531b4f83705b6da46e9">colvar::polar_theta</a>, <a class="el" href="classcolvar_1_1distance__inv.html#afb40ec0a0cd8938eaad65f6b90ac79ea">colvar::distance_inv</a>, <a class="el" href="classcolvar_1_1distance__pairs.html#aff9cef918f09c8d7529f81c0db40527b">colvar::distance_pairs</a>, <a class="el" href="classcolvar_1_1dipole__magnitude.html#a936882f434481819c1c7af8a13b81021">colvar::dipole_magnitude</a>, <a class="el" href="classcolvar_1_1gyration.html#a6bd74682dc41e45e92bb0a3b178db554">colvar::gyration</a>, <a class="el" href="classcolvar_1_1inertia.html#a9313ad451f0e15ed8a5f9a6598bf19a0">colvar::inertia</a>, <a class="el" href="classcolvar_1_1inertia__z.html#ac2365ba096b0f9725817e80292ab850d">colvar::inertia_z</a>, <a class="el" href="classcolvar_1_1eigenvector.html#ad0d023f7f92f87f4ecb98b3e459a3b11">colvar::eigenvector</a>, <a class="el" href="classcolvar_1_1angle.html#a3d15bb9055d4a1c0153d6c251be2f0cf">colvar::angle</a>, <a class="el" href="classcolvar_1_1dipole__angle.html#af194798bed2e5f1c8611907822ab8c1b">colvar::dipole_angle</a>, <a class="el" href="classcolvar_1_1dihedral.html#a0e8c940dd17cdb78d243114e7a591ead">colvar::dihedral</a>, <a class="el" href="classcolvar_1_1coordnum.html#a693d26148653d294f8d9941ff64fd0a2">colvar::coordnum</a>, <a class="el" href="classcolvar_1_1selfcoordnum.html#a5719e146a3a02bbc2e79cdd71c085580">colvar::selfcoordnum</a>, <a class="el" href="classcolvar_1_1groupcoordnum.html#afa421e5f6f1e519ab836b0ada3299740">colvar::groupcoordnum</a>, <a class="el" href="classcolvar_1_1h__bond.html#aee263fbe27836dd9b718c94f2f6fde3e">colvar::h_bond</a>, <a class="el" href="classcolvar_1_1alpha__angles.html#a00cb8d180cd394da2c7bf0e7a2257ef0">colvar::alpha_angles</a>, <a class="el" href="classcolvar_1_1dihedPC.html#aaacd9f11f2249dd5d8ff754f8242d34b">colvar::dihedPC</a>, <a class="el" href="classcolvar_1_1orientation.html#a458aa79d2dcb37e2236732e10c0cb39d">colvar::orientation</a>, <a class="el" href="classcolvar_1_1orientation__angle.html#a2a94460af9acdc6bbce77b2924360d68">colvar::orientation_angle</a>, <a class="el" href="classcolvar_1_1orientation__proj.html#ae41742782bf67a6aa57cc6c27eb6a847">colvar::orientation_proj</a>, <a class="el" href="classcolvar_1_1tilt.html#a1383bdcd231e875469a82583c314c409">colvar::tilt</a>, <a class="el" href="classcolvar_1_1spin__angle.html#aee72fe5b9a57268e149ccff0efe785f2">colvar::spin_angle</a>, <a class="el" href="classcolvar_1_1euler__phi.html#a06d106f9747480335c33b332894d0fe8">colvar::euler_phi</a>, <a class="el" href="classcolvar_1_1euler__psi.html#a8d11b5860579f878267dc5b5bf265528">colvar::euler_psi</a>, <a class="el" href="classcolvar_1_1euler__theta.html#a210f9e3d7dc7126b77fb01e52dc0c3df">colvar::euler_theta</a>, <a class="el" href="classcolvar_1_1cartesian.html#a0c21ed1b1aa1b338128de1d73fce04f7">colvar::cartesian</a>, <a class="el" href="classcolvar_1_1alch__Flambda.html#a1944cec36efd0697aac0ec9ce3d78463">colvar::alch_Flambda</a>, <a class="el" href="classcolvar_1_1gspath.html#a02eb22a3f4225b9d6c5ffba4c7e9979d">colvar::gspath</a>, <a class="el" href="classcolvar_1_1gzpath.html#a749b86f3fe46dcbcfbe31756e5c123e9">colvar::gzpath</a>, <a class="el" href="classcolvar_1_1linearCombination.html#a7aa7f94d5a179d3232f49d2fab581f81">colvar::linearCombination</a>, <a class="el" href="classcolvar_1_1customColvar.html#a7bdf62edd656b467bb982e35929d5014">colvar::customColvar</a>, <a class="el" href="classcolvar_1_1gspathCV.html#a3c1b5a3449ffaa3eab2c036d6fe96934">colvar::gspathCV</a>, <a class="el" href="classcolvar_1_1gzpathCV.html#af4d6b8aa1fd77c5e9997bc8c01a6c162">colvar::gzpathCV</a>, <a class="el" href="classcolvar_1_1aspath.html#a7dd5c5ad72414f596bebefd3789829cd">colvar::aspath</a>, <a class="el" href="classcolvar_1_1azpath.html#a3adb2d6af4235f7fc85ad4167ef3aac2">colvar::azpath</a>, <a class="el" href="classcolvar_1_1aspathCV.html#aa558fcef268f365c8ddd4ea9b9c0b69f">colvar::aspathCV</a>, <a class="el" href="classcolvar_1_1azpathCV.html#a7cb3e69d53cf0b486b229f0aa2e1bd71">colvar::azpathCV</a>, <a class="el" href="classcolvar_1_1neuralNetwork.html#ae8da2b42136b152b709668a8c8158ec0">colvar::neuralNetwork</a>, <a class="el" href="classcolvar_1_1map__total.html#ab563b09728a671c9a0432cda09271d10">colvar::map_total</a>, and <a class="el" href="classcolvar_1_1rmsd.html#a5c74afd3d5cf1e1574d5505307d7455e">colvar::rmsd</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +1281,36 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 
 <p>Calculate the divergence of the inverse atomic gradients. </p>
 
-<p>Reimplemented in <a class="el" href="classcolvar_1_1distance.html#a3b49027b0c1479eacdd793cdeb50ad5d">colvar::distance</a>, <a class="el" href="classcolvar_1_1distance__z.html#afbc7a82d381aa28c15e5372b34b13b77">colvar::distance_z</a>, <a class="el" href="classcolvar_1_1distance__xy.html#afced97648f28acdb97825701d88a05e3">colvar::distance_xy</a>, <a class="el" href="classcolvar_1_1gyration.html#ab91c750374d6553d67936ee4c217b1b8">colvar::gyration</a>, <a class="el" href="classcolvar_1_1eigenvector.html#a5896562f44b52d9ea01f5058acd5de87">colvar::eigenvector</a>, <a class="el" href="classcolvar_1_1angle.html#a4815ef926a9eddf30ad9dfc68a5fe876">colvar::angle</a>, <a class="el" href="classcolvar_1_1dihedral.html#a5c451d55176cd48d037e5b109b605edb">colvar::dihedral</a>, <a class="el" href="classcolvar_1_1rmsd.html#a28bece9a71e23d9de329800a77af9bd0">colvar::rmsd</a>, and <a class="el" href="classcolvar_1_1alch__lambda.html#af1a01dcc83d8a5c4514db110e6dfefb5">colvar::alch_lambda</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvar_1_1distance.html#a3b49027b0c1479eacdd793cdeb50ad5d">colvar::distance</a>, <a class="el" href="classcolvar_1_1distance__z.html#afbc7a82d381aa28c15e5372b34b13b77">colvar::distance_z</a>, <a class="el" href="classcolvar_1_1distance__xy.html#afced97648f28acdb97825701d88a05e3">colvar::distance_xy</a>, <a class="el" href="classcolvar_1_1gyration.html#ab91c750374d6553d67936ee4c217b1b8">colvar::gyration</a>, <a class="el" href="classcolvar_1_1eigenvector.html#a5896562f44b52d9ea01f5058acd5de87">colvar::eigenvector</a>, <a class="el" href="classcolvar_1_1angle.html#a4815ef926a9eddf30ad9dfc68a5fe876">colvar::angle</a>, <a class="el" href="classcolvar_1_1dihedral.html#a5c451d55176cd48d037e5b109b605edb">colvar::dihedral</a>, <a class="el" href="classcolvar_1_1alch__lambda.html#af1a01dcc83d8a5c4514db110e6dfefb5">colvar::alch_lambda</a>, and <a class="el" href="classcolvar_1_1rmsd.html#a77451dfab60b703937cc147b19de4004">colvar::rmsd</a>.</p>
+
+</div>
+</div>
+<a id="aeb10db3a35457208812a2a76f5ac0c45" name="aeb10db3a35457208812a2a76f5ac0c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb10db3a35457208812a2a76f5ac0c45">&#9670;&#160;</a></span>calc_Jacobian_derivative_after_gpu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int colvar::cvc::calc_Jacobian_derivative_after_gpu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CPU-side calculation after the graph in add_calc_Jacobian_derivative_node is done on GPU. </p>
+
+<p>Reimplemented in <a class="el" href="classcolvar_1_1rmsd.html#a5eeb39439b7e2c77012efbdd79613862">colvar::rmsd</a>.</p>
 
 </div>
 </div>
@@ -1094,7 +1339,36 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 
 <p>Calculate the variable. </p>
 
-<p>Implemented in <a class="el" href="classcolvar_1_1distance.html#a533bb11f3df825cce4cb52bc6d6e2e75">colvar::distance</a>, <a class="el" href="classcolvar_1_1distance__vec.html#a5664c65eaed3f1c4c93da828cc426521">colvar::distance_vec</a>, <a class="el" href="classcolvar_1_1distance__dir.html#abda7f03c1c637ba50e7afe5a7b753d5f">colvar::distance_dir</a>, <a class="el" href="classcolvar_1_1distance__z.html#ad62afcf34130f20deeaae1a671a54763">colvar::distance_z</a>, <a class="el" href="classcolvar_1_1distance__xy.html#ae6b0fae8b6d57f794abe92f9b5005f4a">colvar::distance_xy</a>, <a class="el" href="classcolvar_1_1polar__phi.html#a52c9cdb0539d07a5403fdf9e1bc60c5a">colvar::polar_phi</a>, <a class="el" href="classcolvar_1_1polar__theta.html#ab2d435159d66da838dd44d2dd1a630e0">colvar::polar_theta</a>, <a class="el" href="classcolvar_1_1distance__inv.html#abca523ebce2937623724e35f4b888643">colvar::distance_inv</a>, <a class="el" href="classcolvar_1_1distance__pairs.html#a4e1fefa4525f3474f45e19ec0e8346fc">colvar::distance_pairs</a>, <a class="el" href="classcolvar_1_1dipole__magnitude.html#a935154dc689b34b402eac3c4f2ca3ff4">colvar::dipole_magnitude</a>, <a class="el" href="classcolvar_1_1gyration.html#a1582d962aae39b7d93cf220851652bda">colvar::gyration</a>, <a class="el" href="classcolvar_1_1inertia.html#a37b3cec8f63f46dfd30d9fe2a5e4e193">colvar::inertia</a>, <a class="el" href="classcolvar_1_1inertia__z.html#a9d3979b93874f74e71c30e71c9eeebf7">colvar::inertia_z</a>, <a class="el" href="classcolvar_1_1eigenvector.html#a5ed6d04e17fc5b0ce2f69e671766d07f">colvar::eigenvector</a>, <a class="el" href="classcolvar_1_1angle.html#aad28f79050250ec9476cf99707456341">colvar::angle</a>, <a class="el" href="classcolvar_1_1dipole__angle.html#a490a9f024a956c1f3c83cfe5e1d5945e">colvar::dipole_angle</a>, <a class="el" href="classcolvar_1_1dihedral.html#aebd60c8a49845689dc0c97c8f3e27e54">colvar::dihedral</a>, <a class="el" href="classcolvar_1_1coordnum.html#a1f66cd5fc18a9ec33bfe1ad81534843c">colvar::coordnum</a>, <a class="el" href="classcolvar_1_1selfcoordnum.html#ad7fe55093b479530b3921096b00113c8">colvar::selfcoordnum</a>, <a class="el" href="classcolvar_1_1groupcoordnum.html#ab1a1651cd66385edac800181cda658ab">colvar::groupcoordnum</a>, <a class="el" href="classcolvar_1_1h__bond.html#a52f322572969be485306aec81639c95a">colvar::h_bond</a>, <a class="el" href="classcolvar_1_1alpha__angles.html#a41c82a5b739f5ba9872e8dca95c34eee">colvar::alpha_angles</a>, <a class="el" href="classcolvar_1_1dihedPC.html#a49b2a62b37cc4bdd64e80dcf0f58fa94">colvar::dihedPC</a>, <a class="el" href="classcolvar_1_1orientation.html#a3dfd0311b72ee82823699b27e6408a5e">colvar::orientation</a>, <a class="el" href="classcolvar_1_1orientation__angle.html#a12ef35f5709365ed6021bc3a610f7b82">colvar::orientation_angle</a>, <a class="el" href="classcolvar_1_1orientation__proj.html#a6f263276feb4849ce65fa77adc954f83">colvar::orientation_proj</a>, <a class="el" href="classcolvar_1_1tilt.html#a98cbfeed2a9bec0dde8d23a626f5100c">colvar::tilt</a>, <a class="el" href="classcolvar_1_1spin__angle.html#a6a01fc3b64ec5bec6805a567f3219183">colvar::spin_angle</a>, <a class="el" href="classcolvar_1_1euler__phi.html#a890db64b76199729796146294098d82a">colvar::euler_phi</a>, <a class="el" href="classcolvar_1_1euler__psi.html#ac298c5e79922b48a1f1bfae832421951">colvar::euler_psi</a>, <a class="el" href="classcolvar_1_1euler__theta.html#ab191fd2c97d0530ed63ab6e696a17860">colvar::euler_theta</a>, <a class="el" href="classcolvar_1_1rmsd.html#ada159e38e9e514551147cb1acef60f33">colvar::rmsd</a>, <a class="el" href="classcolvar_1_1cartesian.html#a9828387ba859795fd9ca1ec33c3afadd">colvar::cartesian</a>, <a class="el" href="classcolvar_1_1alch__lambda.html#a1e4cb30c3d1be4154ec2bac473cf9f94">colvar::alch_lambda</a>, <a class="el" href="classcolvar_1_1alch__Flambda.html#a95890332e4e03c5dfe0e4d78dc0661f3">colvar::alch_Flambda</a>, <a class="el" href="classcolvar_1_1gspath.html#a0d05a68b719d03fbd22c9346cb4faf41">colvar::gspath</a>, <a class="el" href="classcolvar_1_1gzpath.html#a0219f6336a292e5ea329224b4b5318b8">colvar::gzpath</a>, <a class="el" href="classcolvar_1_1linearCombination.html#a4fd09ccf03f12fc5729b25aeef86b333">colvar::linearCombination</a>, <a class="el" href="classcolvar_1_1customColvar.html#aedce5c76ead3d6d4e9835e8ef475b1c9">colvar::customColvar</a>, <a class="el" href="classcolvar_1_1gspathCV.html#af3d9e1b6646ed8638493d9e716c9c363">colvar::gspathCV</a>, <a class="el" href="classcolvar_1_1gzpathCV.html#ab0fb384ffffad62dbb87a7689e75b18f">colvar::gzpathCV</a>, <a class="el" href="classcolvar_1_1aspath.html#ae129475df0f0962ed825a1a957cf6bb4">colvar::aspath</a>, <a class="el" href="classcolvar_1_1azpath.html#aff28d5f06f7ca7a30e83c5851b586784">colvar::azpath</a>, <a class="el" href="classcolvar_1_1aspathCV.html#a9c57073a0adde8ac5735fac9a8436efb">colvar::aspathCV</a>, <a class="el" href="classcolvar_1_1azpathCV.html#ac67d7ae54502179d3c8b20495b51b0dc">colvar::azpathCV</a>, <a class="el" href="classcolvar_1_1neuralNetwork.html#ace5bfa9aab88b338489332935a83ed5c">colvar::neuralNetwork</a>, <a class="el" href="classcolvar_1_1map__total.html#a1c685c57c2489061b2d9f0b660551f45">colvar::map_total</a>, <a class="el" href="classcolvar_1_1torchANN.html#a963d4545351d50b9b9fbc39f5a6e9f29">colvar::torchANN</a>, <a class="el" href="classcolvar_1_1CartesianBasedPath.html#ab087705d566978f7ec7a2f8176a76b1a">colvar::CartesianBasedPath</a>, and <a class="el" href="classcolvar_1_1CVBasedPath.html#aa194cd3571e4b9e3f889f1c76d0887ed">colvar::CVBasedPath</a>.</p>
+<p>Implemented in <a class="el" href="classcolvar_1_1distance.html#a533bb11f3df825cce4cb52bc6d6e2e75">colvar::distance</a>, <a class="el" href="classcolvar_1_1distance__vec.html#a5664c65eaed3f1c4c93da828cc426521">colvar::distance_vec</a>, <a class="el" href="classcolvar_1_1distance__dir.html#abda7f03c1c637ba50e7afe5a7b753d5f">colvar::distance_dir</a>, <a class="el" href="classcolvar_1_1distance__z.html#ad62afcf34130f20deeaae1a671a54763">colvar::distance_z</a>, <a class="el" href="classcolvar_1_1distance__xy.html#ae6b0fae8b6d57f794abe92f9b5005f4a">colvar::distance_xy</a>, <a class="el" href="classcolvar_1_1polar__phi.html#a52c9cdb0539d07a5403fdf9e1bc60c5a">colvar::polar_phi</a>, <a class="el" href="classcolvar_1_1polar__theta.html#ab2d435159d66da838dd44d2dd1a630e0">colvar::polar_theta</a>, <a class="el" href="classcolvar_1_1distance__inv.html#abca523ebce2937623724e35f4b888643">colvar::distance_inv</a>, <a class="el" href="classcolvar_1_1distance__pairs.html#a4e1fefa4525f3474f45e19ec0e8346fc">colvar::distance_pairs</a>, <a class="el" href="classcolvar_1_1dipole__magnitude.html#a935154dc689b34b402eac3c4f2ca3ff4">colvar::dipole_magnitude</a>, <a class="el" href="classcolvar_1_1gyration.html#a1582d962aae39b7d93cf220851652bda">colvar::gyration</a>, <a class="el" href="classcolvar_1_1inertia.html#a37b3cec8f63f46dfd30d9fe2a5e4e193">colvar::inertia</a>, <a class="el" href="classcolvar_1_1inertia__z.html#a9d3979b93874f74e71c30e71c9eeebf7">colvar::inertia_z</a>, <a class="el" href="classcolvar_1_1eigenvector.html#a5ed6d04e17fc5b0ce2f69e671766d07f">colvar::eigenvector</a>, <a class="el" href="classcolvar_1_1angle.html#aad28f79050250ec9476cf99707456341">colvar::angle</a>, <a class="el" href="classcolvar_1_1dipole__angle.html#a490a9f024a956c1f3c83cfe5e1d5945e">colvar::dipole_angle</a>, <a class="el" href="classcolvar_1_1dihedral.html#aebd60c8a49845689dc0c97c8f3e27e54">colvar::dihedral</a>, <a class="el" href="classcolvar_1_1coordnum.html#a1f66cd5fc18a9ec33bfe1ad81534843c">colvar::coordnum</a>, <a class="el" href="classcolvar_1_1selfcoordnum.html#ad7fe55093b479530b3921096b00113c8">colvar::selfcoordnum</a>, <a class="el" href="classcolvar_1_1groupcoordnum.html#ab1a1651cd66385edac800181cda658ab">colvar::groupcoordnum</a>, <a class="el" href="classcolvar_1_1h__bond.html#a52f322572969be485306aec81639c95a">colvar::h_bond</a>, <a class="el" href="classcolvar_1_1alpha__angles.html#a41c82a5b739f5ba9872e8dca95c34eee">colvar::alpha_angles</a>, <a class="el" href="classcolvar_1_1dihedPC.html#a49b2a62b37cc4bdd64e80dcf0f58fa94">colvar::dihedPC</a>, <a class="el" href="classcolvar_1_1orientation.html#a3dfd0311b72ee82823699b27e6408a5e">colvar::orientation</a>, <a class="el" href="classcolvar_1_1orientation__angle.html#a12ef35f5709365ed6021bc3a610f7b82">colvar::orientation_angle</a>, <a class="el" href="classcolvar_1_1orientation__proj.html#a6f263276feb4849ce65fa77adc954f83">colvar::orientation_proj</a>, <a class="el" href="classcolvar_1_1tilt.html#a98cbfeed2a9bec0dde8d23a626f5100c">colvar::tilt</a>, <a class="el" href="classcolvar_1_1spin__angle.html#a6a01fc3b64ec5bec6805a567f3219183">colvar::spin_angle</a>, <a class="el" href="classcolvar_1_1euler__phi.html#a890db64b76199729796146294098d82a">colvar::euler_phi</a>, <a class="el" href="classcolvar_1_1euler__psi.html#ac298c5e79922b48a1f1bfae832421951">colvar::euler_psi</a>, <a class="el" href="classcolvar_1_1euler__theta.html#ab191fd2c97d0530ed63ab6e696a17860">colvar::euler_theta</a>, <a class="el" href="classcolvar_1_1cartesian.html#a9828387ba859795fd9ca1ec33c3afadd">colvar::cartesian</a>, <a class="el" href="classcolvar_1_1alch__lambda.html#a1e4cb30c3d1be4154ec2bac473cf9f94">colvar::alch_lambda</a>, <a class="el" href="classcolvar_1_1alch__Flambda.html#a95890332e4e03c5dfe0e4d78dc0661f3">colvar::alch_Flambda</a>, <a class="el" href="classcolvar_1_1gspath.html#a0d05a68b719d03fbd22c9346cb4faf41">colvar::gspath</a>, <a class="el" href="classcolvar_1_1gzpath.html#a0219f6336a292e5ea329224b4b5318b8">colvar::gzpath</a>, <a class="el" href="classcolvar_1_1linearCombination.html#a4fd09ccf03f12fc5729b25aeef86b333">colvar::linearCombination</a>, <a class="el" href="classcolvar_1_1customColvar.html#aedce5c76ead3d6d4e9835e8ef475b1c9">colvar::customColvar</a>, <a class="el" href="classcolvar_1_1gspathCV.html#af3d9e1b6646ed8638493d9e716c9c363">colvar::gspathCV</a>, <a class="el" href="classcolvar_1_1gzpathCV.html#ab0fb384ffffad62dbb87a7689e75b18f">colvar::gzpathCV</a>, <a class="el" href="classcolvar_1_1aspath.html#ae129475df0f0962ed825a1a957cf6bb4">colvar::aspath</a>, <a class="el" href="classcolvar_1_1azpath.html#aff28d5f06f7ca7a30e83c5851b586784">colvar::azpath</a>, <a class="el" href="classcolvar_1_1aspathCV.html#a9c57073a0adde8ac5735fac9a8436efb">colvar::aspathCV</a>, <a class="el" href="classcolvar_1_1azpathCV.html#ac67d7ae54502179d3c8b20495b51b0dc">colvar::azpathCV</a>, <a class="el" href="classcolvar_1_1neuralNetwork.html#ace5bfa9aab88b338489332935a83ed5c">colvar::neuralNetwork</a>, <a class="el" href="classcolvar_1_1map__total.html#a1c685c57c2489061b2d9f0b660551f45">colvar::map_total</a>, <a class="el" href="classcolvar_1_1torchANN.html#a963d4545351d50b9b9fbc39f5a6e9f29">colvar::torchANN</a>, <a class="el" href="classcolvar_1_1rmsd.html#aba5ca274b78d39af59f031584892f11c">colvar::rmsd</a>, <a class="el" href="classcolvar_1_1CartesianBasedPath.html#ab087705d566978f7ec7a2f8176a76b1a">colvar::CartesianBasedPath</a>, and <a class="el" href="classcolvar_1_1CVBasedPath.html#aa194cd3571e4b9e3f889f1c76d0887ed">colvar::CVBasedPath</a>.</p>
+
+</div>
+</div>
+<a id="a893673d57cf3fdb648ba2f2717d9e581" name="a893673d57cf3fdb648ba2f2717d9e581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a893673d57cf3fdb648ba2f2717d9e581">&#9670;&#160;</a></span>calc_value_after_gpu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int colvar::cvc::calc_value_after_gpu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CPU-side calculation after the graph in add_calc_value_node is done on GPU. </p>
+
+<p>Reimplemented in <a class="el" href="classcolvar_1_1rmsd.html#affaa2c12d5598c9322177f843e829317">colvar::rmsd</a>.</p>
 
 </div>
 </div>
@@ -1162,6 +1436,45 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 </div><div class="memdoc">
 
 <p>Calculate finite-difference gradients alongside the analytical ones, for each Cartesian component. </p>
+<dl class="section note"><dt>Note</dt><dd>Some CVCs change the gradients when running <a class="el" href="classcolvar_1_1cvc.html#a94c7ad776b079668644d057d67dfbd74" title="Calculate the variable.">calc_value()</a>, so it is better to copy the original gradients out at first.</dd></dl>
+
+</div>
+</div>
+<a id="ab00bc33e818f00f2f64446f2a223906e" name="ab00bc33e818f00f2f64446f2a223906e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab00bc33e818f00f2f64446f2a223906e">&#9670;&#160;</a></span>debug_gradients_gpu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvar::cvc::debug_gradients_gpu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvars_gpu::colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>calc_value_graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvars_gpu::colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>calc_gradients_graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate finite-difference gradients alongside the analytical ones, for each Cartesian component on GPU. </p>
 <dl class="section note"><dt>Note</dt><dd>Some CVCs change the gradients when running <a class="el" href="classcolvar_1_1cvc.html#a94c7ad776b079668644d057d67dfbd74" title="Calculate the variable.">calc_value()</a>, so it is better to copy the original gradients out at first.</dd></dl>
 
 </div>
@@ -1316,6 +1629,35 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 
 </div>
 </div>
+<a id="abd69e0bfc35c12925639a4f5878a6d64" name="abd69e0bfc35c12925639a4f5878a6d64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd69e0bfc35c12925639a4f5878a6d64">&#9670;&#160;</a></span>has_gpu_implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool colvar::cvc::has_gpu_implementation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check the GPU availability. </p>
+
+<p>Reimplemented in <a class="el" href="classcolvar_1_1rmsd.html#ae5cfa47b6f522568869eb19434b0b172">colvar::rmsd</a>.</p>
+
+</div>
+</div>
 <a id="a20958d9050359e9200bf0e57e5ad33f3" name="a20958d9050359e9200bf0e57e5ad33f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20958d9050359e9200bf0e57e5ad33f3">&#9670;&#160;</a></span>init()</h2>
 
@@ -1346,7 +1688,7 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classcolvar_1_1distance.html#a9681f4ee311fe9b6cd05d3ae1dfd107b">colvar::distance</a>, <a class="el" href="classcolvar_1_1distance__z.html#afbb8b15e0f90ec52bf4edbbb58a42294">colvar::distance_z</a>, <a class="el" href="classcolvar_1_1polar__phi.html#aca9299c8bc27f42a52ef1ea11e6492e9">colvar::polar_phi</a>, <a class="el" href="classcolvar_1_1polar__theta.html#a8a4cac53752d8d64675ac3621ed92796">colvar::polar_theta</a>, <a class="el" href="classcolvar_1_1distance__inv.html#a77fd4e18ec399225516655f8b246da6a">colvar::distance_inv</a>, <a class="el" href="classcolvar_1_1distance__pairs.html#a4a0a69031e2d10652e6236bdf46d4e4b">colvar::distance_pairs</a>, <a class="el" href="classcolvar_1_1dipole__magnitude.html#aecc6e21fd34a47208f6f4bd8d6579b54">colvar::dipole_magnitude</a>, <a class="el" href="classcolvar_1_1gyration.html#aeb4a34dd6584453c3f2c4a325b2df220">colvar::gyration</a>, <a class="el" href="classcolvar_1_1inertia__z.html#ad3a21cb14cec27389946534e1570b96e">colvar::inertia_z</a>, <a class="el" href="classcolvar_1_1eigenvector.html#a2b1ef9f3f99a00496edecb24527f07a6">colvar::eigenvector</a>, <a class="el" href="classcolvar_1_1angle.html#aa18d53f990a571f00f772597eab3f209">colvar::angle</a>, <a class="el" href="classcolvar_1_1dipole__angle.html#a751b719fb0670cdd659cfc2cad97a553">colvar::dipole_angle</a>, <a class="el" href="classcolvar_1_1dihedral.html#a2e018efaaede58e0ce8d7e540e7d8e17">colvar::dihedral</a>, <a class="el" href="classcolvar_1_1coordnum.html#ac12e596c3bb4c8fb5a83c78bdb4be9ea">colvar::coordnum</a>, <a class="el" href="classcolvar_1_1selfcoordnum.html#a6cb2300d5746da8d64e6e49cf0453619">colvar::selfcoordnum</a>, <a class="el" href="classcolvar_1_1groupcoordnum.html#a9756ff38ea91bfeef2916bd6fb419110">colvar::groupcoordnum</a>, <a class="el" href="classcolvar_1_1h__bond.html#af91deaed755f730f4a7c60292d89b4c2">colvar::h_bond</a>, <a class="el" href="classcolvar_1_1alpha__angles.html#ac57731bfbacabd8bc7234f06573c133c">colvar::alpha_angles</a>, <a class="el" href="classcolvar_1_1dihedPC.html#a58a95aa6a604662b138c8a8479aba102">colvar::dihedPC</a>, <a class="el" href="classcolvar_1_1orientation.html#ad251a89cb4f2ac960081c0a5acf3a540">colvar::orientation</a>, <a class="el" href="classcolvar_1_1tilt.html#a70b1653dab7a0b2507cad18ebf8076fc">colvar::tilt</a>, <a class="el" href="classcolvar_1_1rmsd.html#ad2167c0490c3d92366a05fe9ef3a1bc9">colvar::rmsd</a>, <a class="el" href="classcolvar_1_1cartesian.html#a5c25148fb02ef6949b1621c29c6e3788">colvar::cartesian</a>, <a class="el" href="classcolvar_1_1CartesianBasedPath.html#acc4e3de11f81d016b7e3f1a704d72c23">colvar::CartesianBasedPath</a>, <a class="el" href="classcolvar_1_1gspath.html#aebd4e9f2feeb550c511fe2633f027b3f">colvar::gspath</a>, <a class="el" href="classcolvar_1_1gzpath.html#a721525365af69ba53326d89d329bdd21">colvar::gzpath</a>, <a class="el" href="classcolvar_1_1linearCombination.html#afde6b22ad1fabf4f0d0cc6b57a8c018a">colvar::linearCombination</a>, <a class="el" href="classcolvar_1_1customColvar.html#aca0ffbcad9c64da20d642e42b303eda5">colvar::customColvar</a>, <a class="el" href="classcolvar_1_1CVBasedPath.html#a6e824d705381dea48e05c342b6cb8ce4">colvar::CVBasedPath</a>, <a class="el" href="classcolvar_1_1gspathCV.html#a2b95bab040f4fcb3416b679e13c1e0ea">colvar::gspathCV</a>, <a class="el" href="classcolvar_1_1gzpathCV.html#a35660b4cb2e2fbb468620f8bb1f30e86">colvar::gzpathCV</a>, <a class="el" href="classcolvar_1_1aspath.html#af1eb999e86d50a5d7ddd823d6d697e45">colvar::aspath</a>, <a class="el" href="classcolvar_1_1azpath.html#a05b38efcef0ed506894e38a8ee88763f">colvar::azpath</a>, <a class="el" href="classcolvar_1_1aspathCV.html#a1c36b0bcba38b3bec7352f22b4a3c86e">colvar::aspathCV</a>, <a class="el" href="classcolvar_1_1azpathCV.html#ab3ada787227455528deae6f67a3cab9f">colvar::azpathCV</a>, <a class="el" href="classcolvar_1_1neuralNetwork.html#ae5503d675270c79de44513cbc5f3615b">colvar::neuralNetwork</a>, <a class="el" href="classcolvar_1_1map__total.html#aba3ccd082a90cc6383145ec3aa7131a4">colvar::map_total</a>, and <a class="el" href="classcolvar_1_1torchANN.html#ae52d7854604a474080e5a9b38498ef3a">colvar::torchANN</a>.</p>
+<p>Reimplemented in <a class="el" href="classcolvar_1_1distance.html#a9681f4ee311fe9b6cd05d3ae1dfd107b">colvar::distance</a>, <a class="el" href="classcolvar_1_1distance__z.html#afbb8b15e0f90ec52bf4edbbb58a42294">colvar::distance_z</a>, <a class="el" href="classcolvar_1_1polar__phi.html#aca9299c8bc27f42a52ef1ea11e6492e9">colvar::polar_phi</a>, <a class="el" href="classcolvar_1_1polar__theta.html#a8a4cac53752d8d64675ac3621ed92796">colvar::polar_theta</a>, <a class="el" href="classcolvar_1_1distance__inv.html#a77fd4e18ec399225516655f8b246da6a">colvar::distance_inv</a>, <a class="el" href="classcolvar_1_1distance__pairs.html#a4a0a69031e2d10652e6236bdf46d4e4b">colvar::distance_pairs</a>, <a class="el" href="classcolvar_1_1dipole__magnitude.html#aecc6e21fd34a47208f6f4bd8d6579b54">colvar::dipole_magnitude</a>, <a class="el" href="classcolvar_1_1gyration.html#aeb4a34dd6584453c3f2c4a325b2df220">colvar::gyration</a>, <a class="el" href="classcolvar_1_1inertia__z.html#ad3a21cb14cec27389946534e1570b96e">colvar::inertia_z</a>, <a class="el" href="classcolvar_1_1eigenvector.html#a2b1ef9f3f99a00496edecb24527f07a6">colvar::eigenvector</a>, <a class="el" href="classcolvar_1_1angle.html#aa18d53f990a571f00f772597eab3f209">colvar::angle</a>, <a class="el" href="classcolvar_1_1dipole__angle.html#a751b719fb0670cdd659cfc2cad97a553">colvar::dipole_angle</a>, <a class="el" href="classcolvar_1_1dihedral.html#a2e018efaaede58e0ce8d7e540e7d8e17">colvar::dihedral</a>, <a class="el" href="classcolvar_1_1coordnum.html#ac12e596c3bb4c8fb5a83c78bdb4be9ea">colvar::coordnum</a>, <a class="el" href="classcolvar_1_1selfcoordnum.html#a6cb2300d5746da8d64e6e49cf0453619">colvar::selfcoordnum</a>, <a class="el" href="classcolvar_1_1groupcoordnum.html#a9756ff38ea91bfeef2916bd6fb419110">colvar::groupcoordnum</a>, <a class="el" href="classcolvar_1_1h__bond.html#af91deaed755f730f4a7c60292d89b4c2">colvar::h_bond</a>, <a class="el" href="classcolvar_1_1alpha__angles.html#ac57731bfbacabd8bc7234f06573c133c">colvar::alpha_angles</a>, <a class="el" href="classcolvar_1_1dihedPC.html#a58a95aa6a604662b138c8a8479aba102">colvar::dihedPC</a>, <a class="el" href="classcolvar_1_1orientation.html#ad251a89cb4f2ac960081c0a5acf3a540">colvar::orientation</a>, <a class="el" href="classcolvar_1_1tilt.html#a70b1653dab7a0b2507cad18ebf8076fc">colvar::tilt</a>, <a class="el" href="classcolvar_1_1cartesian.html#a5c25148fb02ef6949b1621c29c6e3788">colvar::cartesian</a>, <a class="el" href="classcolvar_1_1CartesianBasedPath.html#acc4e3de11f81d016b7e3f1a704d72c23">colvar::CartesianBasedPath</a>, <a class="el" href="classcolvar_1_1gspath.html#aebd4e9f2feeb550c511fe2633f027b3f">colvar::gspath</a>, <a class="el" href="classcolvar_1_1gzpath.html#a721525365af69ba53326d89d329bdd21">colvar::gzpath</a>, <a class="el" href="classcolvar_1_1linearCombination.html#afde6b22ad1fabf4f0d0cc6b57a8c018a">colvar::linearCombination</a>, <a class="el" href="classcolvar_1_1customColvar.html#aca0ffbcad9c64da20d642e42b303eda5">colvar::customColvar</a>, <a class="el" href="classcolvar_1_1CVBasedPath.html#a6e824d705381dea48e05c342b6cb8ce4">colvar::CVBasedPath</a>, <a class="el" href="classcolvar_1_1gspathCV.html#a2b95bab040f4fcb3416b679e13c1e0ea">colvar::gspathCV</a>, <a class="el" href="classcolvar_1_1gzpathCV.html#a35660b4cb2e2fbb468620f8bb1f30e86">colvar::gzpathCV</a>, <a class="el" href="classcolvar_1_1aspath.html#af1eb999e86d50a5d7ddd823d6d697e45">colvar::aspath</a>, <a class="el" href="classcolvar_1_1azpath.html#a05b38efcef0ed506894e38a8ee88763f">colvar::azpath</a>, <a class="el" href="classcolvar_1_1aspathCV.html#a1c36b0bcba38b3bec7352f22b4a3c86e">colvar::aspathCV</a>, <a class="el" href="classcolvar_1_1azpathCV.html#ab3ada787227455528deae6f67a3cab9f">colvar::azpathCV</a>, <a class="el" href="classcolvar_1_1neuralNetwork.html#ae5503d675270c79de44513cbc5f3615b">colvar::neuralNetwork</a>, <a class="el" href="classcolvar_1_1map__total.html#aba3ccd082a90cc6383145ec3aa7131a4">colvar::map_total</a>, <a class="el" href="classcolvar_1_1torchANN.html#ae52d7854604a474080e5a9b38498ef3a">colvar::torchANN</a>, and <a class="el" href="classcolvar_1_1rmsd.html#ab5063a0de906ff679326f462e8857d92">colvar::rmsd</a>.</p>
 
 </div>
 </div>
@@ -1520,7 +1862,7 @@ static const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>w
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 5 2025 22:56:59 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Jan 22 2026 16:40:06 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

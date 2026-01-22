@@ -19,7 +19,7 @@ var searchData=
   ['ref_5fcv_16',['ref_cv',['../classcolvar_1_1CVBasedPath.html#a23147a9c908910c2d50bad1f5c92339f',1,'colvar::CVBasedPath']]],
   ['ref_5finitialized_17',['ref_initialized',['../classcolvarbias__abmd.html#ad5737318642f3a68e0204a108b7ceca9',1,'colvarbias_abmd']]],
   ['ref_5fp_18',['ref_p',['../classcolvarbias__restraint__histogram.html#a422ba38a4eca6c5f51cf96d12125aa87',1,'colvarbias_restraint_histogram']]],
-  ['ref_5fpos_19',['ref_pos',['../classcvm_1_1atom__group.html#a4bb8d07cde2b13b773d9b4d391ae95cb',1,'cvm::atom_group::ref_pos()'],['../classcolvar_1_1eigenvector.html#a1125fc781287a0c7c51de54d5a59757b',1,'colvar::eigenvector::ref_pos()'],['../classcolvar_1_1rmsd.html#a45d6bbfd23c3b24f44cd2e32306e4732',1,'colvar::rmsd::ref_pos()']]],
+  ['ref_5fpos_19',['ref_pos',['../classcvm_1_1atom__group.html#a4bb8d07cde2b13b773d9b4d391ae95cb',1,'cvm::atom_group::ref_pos()'],['../classcolvar_1_1eigenvector.html#a1125fc781287a0c7c51de54d5a59757b',1,'colvar::eigenvector::ref_pos()']]],
   ['ref_5fpos_5fcog_20',['ref_pos_cog',['../classcvm_1_1atom__group.html#a03c652ebcf8b0748cdb3709e7d220ae2',1,'cvm::atom_group']]],
   ['ref_5fpos_5fsoa_21',['ref_pos_soa',['../classcolvar_1_1orientation.html#a49f746032bc3fdc502f86f2db93a75c4',1,'colvar::orientation']]],
   ['ref_5fquat_22',['ref_quat',['../classcolvar_1_1orientation.html#aa1d5873b1a590ce3d8ca71b51e6eb328',1,'colvar::orientation']]],

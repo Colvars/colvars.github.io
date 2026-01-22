@@ -274,6 +274,18 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>parse_module_c
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>engine_ready</b> () const</td></tr>
 <tr class="memdesc:a645e9aa04269d03885a32cebe59f8a7e inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the engine allows to fully initialize Colvars immediately. <br /></td></tr>
 <tr class="separator:a645e9aa04269d03885a32cebe59f8a7e inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1ab276c1e107bbdfaff3457fdc6fd6 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="abe1ab276c1e107bbdfaff3457fdc6fd6" name="abe1ab276c1e107bbdfaff3457fdc6fd6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_forces_valid</b> () const</td></tr>
+<tr class="memdesc:abe1ab276c1e107bbdfaff3457fdc6fd6 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are total forces currently valid? (They would not be right after configuration change) <br /></td></tr>
+<tr class="separator:abe1ab276c1e107bbdfaff3457fdc6fd6 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4548ce4b25442f039bc24eefd4904dd inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="ad4548ce4b25442f039bc24eefd4904dd" name="ad4548ce4b25442f039bc24eefd4904dd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_total_forces_invalid</b> ()</td></tr>
+<tr class="memdesc:ad4548ce4b25442f039bc24eefd4904dd inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the total forces as invalid (due to e.g. a configuration change) <br /></td></tr>
+<tr class="separator:ad4548ce4b25442f039bc24eefd4904dd inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11af9ac30785222757bc6a68b3c28a75 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="a11af9ac30785222757bc6a68b3c28a75" name="a11af9ac30785222757bc6a68b3c28a75"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_total_forces_valid</b> ()</td></tr>
+<tr class="memdesc:a11af9ac30785222757bc6a68b3c28a75 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the total forces as up to date. <br /></td></tr>
+<tr class="separator:a11af9ac30785222757bc6a68b3c28a75 inherit pub_methods_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d904fe4e6ca1362b983d52c95280ac3 inherit pub_methods_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="a1d904fe4e6ca1362b983d52c95280ac3" name="a1d904fe4e6ca1362b983d52c95280ac3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_config</b> (std::string const &amp;cmd, std::string const &amp;conf)</td></tr>
 <tr class="memdesc:a1d904fe4e6ca1362b983d52c95280ac3 inherit pub_methods_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueue new configuration text, to be parsed as soon as possible. <br /></td></tr>
@@ -1161,6 +1173,10 @@ Inform&#160;</td><td class="memItemRight" valign="bottom"><b>msgColvars</b></td>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>engine_ready_</b></td></tr>
 <tr class="memdesc:a96a77424d61bcdad737a82a0dcdc610c inherit pro_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the engine allows to fully initialize Colvars immediately. <br /></td></tr>
 <tr class="separator:a96a77424d61bcdad737a82a0dcdc610c inherit pro_attribs_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae685e63908f4372158fd37e72dfbdc1a inherit pro_attribs_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="ae685e63908f4372158fd37e72dfbdc1a" name="ae685e63908f4372158fd37e72dfbdc1a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_forces_valid_</b> = false</td></tr>
+<tr class="memdesc:ae685e63908f4372158fd37e72dfbdc1a inherit pro_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the total forces are currently valid. <br /></td></tr>
+<tr class="separator:ae685e63908f4372158fd37e72dfbdc1a inherit pro_attribs_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1165ea0cdb0069c641b145a0ef462df3 inherit pro_attribs_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="a1165ea0cdb0069c641b145a0ef462df3" name="a1165ea0cdb0069c641b145a0ef462df3"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>error_output</b></td></tr>
 <tr class="memdesc:a1165ea0cdb0069c641b145a0ef462df3 inherit pro_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collected error messages. <br /></td></tr>
@@ -1471,12 +1487,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>units</b></td>
 <tr class="memdesc:ae0771d63a1a89423a30506f0974cc133 inherit pub_attribs_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force to be applied onto alch. lambda, propagated from biasing forces on dE_dlambda. <br /></td></tr>
 <tr class="separator:ae0771d63a1a89423a30506f0974cc133 inherit pub_attribs_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classcolvarproxy__script"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classcolvarproxy__script')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classcolvarproxy__script.html">colvarproxy_script</a></td></tr>
-<tr class="memitem:a9cd4a4cbc5f7107bac5a8e51ee544182 inherit pub_attribs_classcolvarproxy__script"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarscript.html">colvarscript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__script.html#a9cd4a4cbc5f7107bac5a8e51ee544182">script</a></td></tr>
+<tr class="memitem:a9cd4a4cbc5f7107bac5a8e51ee544182 inherit pub_attribs_classcolvarproxy__script"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarscript.html">colvarscript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__script.html#a9cd4a4cbc5f7107bac5a8e51ee544182">script</a> = nullptr</td></tr>
 <tr class="separator:a9cd4a4cbc5f7107bac5a8e51ee544182 inherit pub_attribs_classcolvarproxy__script"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ed6215a91e384bad57bfe828e3396a0 inherit pub_attribs_classcolvarproxy__script"><td class="memItemLeft" align="right" valign="top"><a id="a0ed6215a91e384bad57bfe828e3396a0" name="a0ed6215a91e384bad57bfe828e3396a0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>have_scripts</b></td></tr>
-<tr class="memdesc:a0ed6215a91e384bad57bfe828e3396a0 inherit pub_attribs_classcolvarproxy__script"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we have a scripting interface? <br /></td></tr>
-<tr class="separator:a0ed6215a91e384bad57bfe828e3396a0 inherit pub_attribs_classcolvarproxy__script"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_types_classcolvarproxy__system"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classcolvarproxy__system')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classcolvarproxy__system.html">colvarproxy_system</a></td></tr>
 <tr class="memitem:a207331557018b66dce3c71407bef9a77 inherit pro_types_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a207331557018b66dce3c71407bef9a77">Boundaries_type</a> { <b>boundaries_non_periodic</b>
 , <b>boundaries_pbc_ortho</b>
@@ -2657,7 +2669,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 5 2025 22:57:00 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Jan 22 2026 16:40:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

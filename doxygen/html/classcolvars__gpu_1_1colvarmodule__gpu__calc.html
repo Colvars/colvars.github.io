@@ -101,9 +101,9 @@ Collaboration diagram for colvars_gpu::colvarmodule_gpu_calc:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvars__gpu_1_1colvarmodule__gpu__calc__coll__graph.png" border="0" usemap="#acolvars__gpu_1_1colvarmodule__gpu__calc_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvars__gpu_1_1colvarmodule__gpu__calc_coll__map" id="acolvars__gpu_1_1colvarmodule__gpu__calc_coll__map">
-<area shape="rect" title="Class for managing the GPU calculation of CVCs." alt="" coords="365,152,541,192"/>
-<area shape="rect" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html" title="A struct for holding a CUDA graph and its execution object." alt="" coords="5,34,181,89"/>
-<area shape="rect" href="classcolvars__gpu_1_1colvar__nvtx__prof.html" title="Class for managing NVTX profiling ranges." alt="" coords="26,263,161,303"/>
+<area shape="rect" title="Class for managing the GPU calculation of CVCs." alt="" coords="389,213,565,253"/>
+<area shape="rect" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html" title="A struct for holding a CUDA graph and its execution object." alt="" coords="5,95,181,150"/>
+<area shape="rect" href="classcolvars__gpu_1_1colvar__nvtx__prof.html" title="Class for managing NVTX profiling ranges." alt="" coords="26,324,161,364"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -142,27 +142,27 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a202418ae51486536c7691447587b9ebc"><td class="memItemLeft" align="right" valign="top"><a id="a202418ae51486536c7691447587b9ebc" name="a202418ae51486536c7691447587b9ebc"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>cv_update_flags</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars)</td></tr>
 <tr class="separator:a202418ae51486536c7691447587b9ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af70c5d70c1bca0ca82b8941f1d9b9169"><td class="memItemLeft" align="right" valign="top"><a id="af70c5d70c1bca0ca82b8941f1d9b9169" name="af70c5d70c1bca0ca82b8941f1d9b9169"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cvc_calc_total_force</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module, bool use_current_step=false)</td></tr>
-<tr class="separator:af70c5d70c1bca0ca82b8941f1d9b9169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af429e8a30dbaa9f18504b6bc1693407b"><td class="memItemLeft" align="right" valign="top"><a id="af429e8a30dbaa9f18504b6bc1693407b" name="af429e8a30dbaa9f18504b6bc1693407b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>cvc_calc_total_force</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;g, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module, bool use_current_step=false)</td></tr>
+<tr class="separator:af429e8a30dbaa9f18504b6bc1693407b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2974ce2619126a7321ec4738b9c70e7"><td class="memItemLeft" align="right" valign="top"><a id="ab2974ce2619126a7321ec4738b9c70e7" name="ab2974ce2619126a7321ec4738b9c70e7"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group_read_data_gpu</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;g, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module)</td></tr>
 <tr class="separator:ab2974ce2619126a7321ec4738b9c70e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b0efdb12bc3c094ea856d21e68e9a74"><td class="memItemLeft" align="right" valign="top"><a id="a9b0efdb12bc3c094ea856d21e68e9a74" name="a9b0efdb12bc3c094ea856d21e68e9a74"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cvc_calc_value</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module)</td></tr>
-<tr class="separator:a9b0efdb12bc3c094ea856d21e68e9a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77bead896c6b6bc812b4780d26a2e46d"><td class="memItemLeft" align="right" valign="top"><a id="a77bead896c6b6bc812b4780d26a2e46d" name="a77bead896c6b6bc812b4780d26a2e46d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cvc_calc_gradients</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module)</td></tr>
-<tr class="separator:a77bead896c6b6bc812b4780d26a2e46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c311d3fa3349f28f61eab20e551e335"><td class="memItemLeft" align="right" valign="top"><a id="a3c311d3fa3349f28f61eab20e551e335" name="a3c311d3fa3349f28f61eab20e551e335"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>cvc_calc_value</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;g, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module)</td></tr>
+<tr class="separator:a3c311d3fa3349f28f61eab20e551e335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29ed44c2ddd5e2bd306213cb4f0b29d"><td class="memItemLeft" align="right" valign="top"><a id="ad29ed44c2ddd5e2bd306213cb4f0b29d" name="ad29ed44c2ddd5e2bd306213cb4f0b29d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>cvc_calc_gradients</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;g, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module)</td></tr>
+<tr class="separator:ad29ed44c2ddd5e2bd306213cb4f0b29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74e7907a131545d668b78eacc9c5c1d3"><td class="memItemLeft" align="right" valign="top"><a id="a74e7907a131545d668b78eacc9c5c1d3" name="a74e7907a131545d668b78eacc9c5c1d3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group_calc_fit_gradients</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;g, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module)</td></tr>
 <tr class="separator:a74e7907a131545d668b78eacc9c5c1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdcadead03d8a01b8b35083df000471c"><td class="memItemLeft" align="right" valign="top"><a id="abdcadead03d8a01b8b35083df000471c" name="abdcadead03d8a01b8b35083df000471c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>cvc_debug_gradients</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module)</td></tr>
 <tr class="separator:abdcadead03d8a01b8b35083df000471c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6ab1c1057619ee65724c0de981fe63c"><td class="memItemLeft" align="right" valign="top"><a id="ac6ab1c1057619ee65724c0de981fe63c" name="ac6ab1c1057619ee65724c0de981fe63c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cvc_calc_Jacobian_derivative</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module)</td></tr>
-<tr class="separator:ac6ab1c1057619ee65724c0de981fe63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb4e325caf3b2e47e19417d63e8abad0"><td class="memItemLeft" align="right" valign="top"><a id="abb4e325caf3b2e47e19417d63e8abad0" name="abb4e325caf3b2e47e19417d63e8abad0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>cvc_calc_Jacobian_derivative</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">colvarmodule_gpu_calc::compute_gpu_graph_t</a> &amp;g, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module)</td></tr>
+<tr class="separator:abb4e325caf3b2e47e19417d63e8abad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0e37de1e9ab2c378b05f9139e52ef14"><td class="memItemLeft" align="right" valign="top"><a id="ac0e37de1e9ab2c378b05f9139e52ef14" name="ac0e37de1e9ab2c378b05f9139e52ef14"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>cv_collect_cvc_data</b> (const std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; &amp;colvars, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *colvar_module)</td></tr>
 <tr class="separator:ac0e37de1e9ab2c378b05f9139e52ef14"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +173,22 @@ Private Attributes</h2></td></tr>
 <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">compute_gpu_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>read_data_compute</b></td></tr>
 <tr class="memdesc:a4e7c87322fa56f1d3db3a72e4349be46"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA graph for reading data to GPU and calculating required properties. <br /></td></tr>
 <tr class="separator:a4e7c87322fa56f1d3db3a72e4349be46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a20215518ba772c205edd182cd00974"><td class="memItemLeft" align="right" valign="top"><a id="a2a20215518ba772c205edd182cd00974" name="a2a20215518ba772c205edd182cd00974"></a>
+<a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">compute_gpu_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>calc_value_compute</b></td></tr>
+<tr class="memdesc:a2a20215518ba772c205edd182cd00974"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA graph for calculating CVCs. <br /></td></tr>
+<tr class="separator:a2a20215518ba772c205edd182cd00974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bcce5cf3bf91eaa722f9e87cf90b598"><td class="memItemLeft" align="right" valign="top"><a id="a7bcce5cf3bf91eaa722f9e87cf90b598" name="a7bcce5cf3bf91eaa722f9e87cf90b598"></a>
+<a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">compute_gpu_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>calc_gradients_compute</b></td></tr>
+<tr class="memdesc:a7bcce5cf3bf91eaa722f9e87cf90b598"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA graph for calculating CVC gradients. <br /></td></tr>
+<tr class="separator:a7bcce5cf3bf91eaa722f9e87cf90b598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06662cab4d636daf7ed5e4c92bd03f4"><td class="memItemLeft" align="right" valign="top"><a id="aa06662cab4d636daf7ed5e4c92bd03f4" name="aa06662cab4d636daf7ed5e4c92bd03f4"></a>
+<a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">compute_gpu_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>calc_Jacobian_derivative_compute</b></td></tr>
+<tr class="memdesc:aa06662cab4d636daf7ed5e4c92bd03f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA graph for calculating CVC Jacobians. <br /></td></tr>
+<tr class="separator:aa06662cab4d636daf7ed5e4c92bd03f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15fd3bf55d00d21e24e14a37027521b4"><td class="memItemLeft" align="right" valign="top"><a id="a15fd3bf55d00d21e24e14a37027521b4" name="a15fd3bf55d00d21e24e14a37027521b4"></a>
+<a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">compute_gpu_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>calc_total_force_compute</b></td></tr>
+<tr class="memdesc:a15fd3bf55d00d21e24e14a37027521b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA graph for calculating CVC total forces. <br /></td></tr>
+<tr class="separator:a15fd3bf55d00d21e24e14a37027521b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4811436ff0bbc673941ae5e019740bd7"><td class="memItemLeft" align="right" valign="top"><a id="a4811436ff0bbc673941ae5e019740bd7" name="a4811436ff0bbc673941ae5e019740bd7"></a>
 <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html">compute_gpu_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>calc_fit_gradients_compute</b></td></tr>
 <tr class="memdesc:a4811436ff0bbc673941ae5e019740bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA graph for calculating fit gradients. <br /></td></tr>
@@ -354,7 +370,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 5 2025 22:57:00 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Jan 22 2026 16:40:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

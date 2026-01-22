@@ -15,6 +15,7 @@ var searchData=
   ['nt_12',['nt',['../classcolvar__grid.html#a77ec57aa6dfc304bcd743bdae48830c5',1,'colvar_grid']]],
   ['num_5fatoms_13',['num_atoms',['../classcvm_1_1atom__group.html#aa78acba640ea1b8884938642fcdf7df7',1,'cvm::atom_group']]],
   ['num_5fbiases_5ftypes_5fused_5f_14',['num_biases_types_used_',['../classcolvarmodule.html#a65c40e055d0f896770be2de86b078770',1,'colvarmodule']]],
-  ['nx_15',['nx',['../classcolvar__grid__params.html#af6d4c6c62ea66a83e53521dcff9454bb',1,'colvar_grid_params']]],
-  ['nxc_16',['nxc',['../classcolvar__grid__params.html#a13d836c5bd7df8e35d462a763d14b8ec',1,'colvar_grid_params']]]
+  ['num_5fref_5fpos_15',['num_ref_pos',['../classcolvar_1_1rmsd.html#a4ed92ed89dd6e8b3213979a67c4a7324',1,'colvar::rmsd']]],
+  ['nx_16',['nx',['../classcolvar__grid__params.html#af6d4c6c62ea66a83e53521dcff9454bb',1,'colvar_grid_params']]],
+  ['nxc_17',['nxc',['../classcolvar__grid__params.html#a13d836c5bd7df8e35d462a763d14b8ec',1,'colvar_grid_params']]]
 ];
