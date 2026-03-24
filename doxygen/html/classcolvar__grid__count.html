@@ -107,11 +107,26 @@ Collaboration diagram for colvar_grid_count:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvar__grid__count__coll__graph.png" border="0" usemap="#acolvar__grid__count_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvar__grid__count_coll__map" id="acolvar__grid__count_coll__map">
-<area shape="rect" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="79,225,202,251"/>
-<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="69,152,212,177"/>
-<area shape="rect" href="classcolvar__grid__params.html" title="Unified base class for grid of values of a function of several collective variables." alt="" coords="5,79,140,104"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="165,79,255,104"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="160,5,260,31"/>
+<area shape="rect" title="Colvar_grid derived class to hold counters in discrete n&#45;dim colvar space." alt="" coords="663,155,785,181"/>
+<area shape="rect" href="classcolvar__grid.html" title=" " alt="" coords="399,206,541,231"/>
+<area shape="rect" href="classcolvar__grid__params.html" title="Unified base class for grid of values of a function of several collective variables." alt="" coords="155,206,289,231"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="177,423,267,449"/>
+<area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="421,469,519,494"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="5,423,105,449"/>
+<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="653,417,795,442"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="1167,337,1256,362"/>
+<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="679,538,769,563"/>
+<area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="963,41,1101,66"/>
+<area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="651,205,797,230"/>
+<area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="966,90,1098,115"/>
+<area shape="rect" href="classcolvarproxy__atom__groups.html" title="Container of atom group data (allow collection of aggregated atomic data)" alt="" coords="947,139,1117,165"/>
+<area shape="rect" href="classcolvarproxy__volmaps.html" title="Container of grid&#45;based objects." alt="" coords="960,189,1104,214"/>
+<area shape="rect" href="classcolvarproxy__smp.html" title="Methods for SMP parallelization." alt="" coords="971,238,1093,263"/>
+<area shape="rect" href="classcolvarproxy__replicas.html" title="Methods for multiple&#45;replica communication." alt="" coords="961,287,1103,313"/>
+<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="968,599,1096,625"/>
+<area shape="rect" href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="977,337,1087,362"/>
+<area shape="rect" href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="979,386,1085,411"/>
+<area shape="rect" href="classcolvarproxy__gpu.html" title="Class for managing GPU memory allocation and data transfer." alt="" coords="973,435,1091,461"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -504,14 +519,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>write_opendx</b> (std:
 <tr class="memdesc:ad6cffeae9f14fe8d8aa656e2798b3764 inherit pub_methods_classcolvar__grid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the grid data without labels, as they are represented in memory. <br /></td></tr>
 <tr class="separator:ad6cffeae9f14fe8d8aa656e2798b3764 inherit pub_methods_classcolvar__grid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
-<tr class="memitem:ad1163ce6827f1ced025996d9cb72efa0 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="ad1163ce6827f1ced025996d9cb72efa0" name="ad1163ce6827f1ced025996d9cb72efa0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>colvarparse</b> ()</td></tr>
-<tr class="memdesc:ad1163ce6827f1ced025996d9cb72efa0 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
-<tr class="separator:ad1163ce6827f1ced025996d9cb72efa0 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1d9c4cd80e52eb65f5a216755fcc00d inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="ab1d9c4cd80e52eb65f5a216755fcc00d" name="ab1d9c4cd80e52eb65f5a216755fcc00d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>colvarparse</b> (const std::string &amp;conf)</td></tr>
-<tr class="memdesc:ab1d9c4cd80e52eb65f5a216755fcc00d inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that stores the object's config string. <br /></td></tr>
-<tr class="separator:ab1d9c4cd80e52eb65f5a216755fcc00d inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8128af540ab8df1db9dca29b95f8db1a inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a8128af540ab8df1db9dca29b95f8db1a" name="a8128af540ab8df1db9dca29b95f8db1a"></a>
+<a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_cvmodule</b> ()</td></tr>
+<tr class="separator:a8128af540ab8df1db9dca29b95f8db1a inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef659b28c7483f044cc6f5a4fd6dc4a inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a8ef659b28c7483f044cc6f5a4fd6dc4a">colvarparse</a> (<a class="el" href="classcolvarmodule.html">colvarmodule</a> *cvmodule_in)</td></tr>
+<tr class="memdesc:a8ef659b28c7483f044cc6f5a4fd6dc4a inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classcolvarparse.html#a8ef659b28c7483f044cc6f5a4fd6dc4a">More...</a><br /></td></tr>
+<tr class="separator:a8ef659b28c7483f044cc6f5a4fd6dc4a inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d75938be7b479966b3a5434ae180095 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a9d75938be7b479966b3a5434ae180095" name="a9d75938be7b479966b3a5434ae180095"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
 <tr class="memdesc:a9d75938be7b479966b3a5434ae180095 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object ready to parse a new configuration string. <br /></td></tr>
@@ -596,6 +609,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_keyval</b> (std::
 <tr class="memitem:a81fce3c907913611a2b1d6fa53103979 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a81fce3c907913611a2b1d6fa53103979">read_config_line</a> (std::istream &amp;is, std::string &amp;line)</td></tr>
 <tr class="memdesc:a81fce3c907913611a2b1d6fa53103979 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a configuration line, adds it to config_string, and returns the stream.  <a href="classcolvarparse.html#a81fce3c907913611a2b1d6fa53103979">More...</a><br /></td></tr>
 <tr class="separator:a81fce3c907913611a2b1d6fa53103979 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324475b683561f9334742718f97f9c52 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a324475b683561f9334742718f97f9c52">check_ascii</a> (std::string const &amp;conf)</td></tr>
+<tr class="memdesc:a324475b683561f9334742718f97f9c52 inherit pub_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a config string contains non-ASCII characters.  <a href="classcolvarparse.html#a324475b683561f9334742718f97f9c52">More...</a><br /></td></tr>
+<tr class="separator:a324475b683561f9334742718f97f9c52 inherit pub_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77c2e160cbab52541a7a1183c8f89382 inherit pub_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a77c2e160cbab52541a7a1183c8f89382" name="a77c2e160cbab52541a7a1183c8f89382"></a>
 template&lt;&gt; </td></tr>
 <tr class="memitem:a77c2e160cbab52541a7a1183c8f89382 inherit pub_methods_classcolvarparse"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>_get_keyval_scalar_value_</b> (std::string const &amp;key_str, std::string const &amp;data, bool &amp;value, bool const &amp;)</td></tr>
@@ -665,9 +681,6 @@ static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>
 <tr class="memitem:a6440783bfcdbc5b9f215fd608418b9e8 inherit pub_static_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a6440783bfcdbc5b9f215fd608418b9e8">check_braces</a> (std::string const &amp;conf, size_t const start_pos)</td></tr>
 <tr class="memdesc:a6440783bfcdbc5b9f215fd608418b9e8 inherit pub_static_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the content of a config string has matching braces.  <a href="classcolvarparse.html#a6440783bfcdbc5b9f215fd608418b9e8">More...</a><br /></td></tr>
 <tr class="separator:a6440783bfcdbc5b9f215fd608418b9e8 inherit pub_static_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a324475b683561f9334742718f97f9c52 inherit pub_static_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a324475b683561f9334742718f97f9c52">check_ascii</a> (std::string const &amp;conf)</td></tr>
-<tr class="memdesc:a324475b683561f9334742718f97f9c52 inherit pub_static_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a config string contains non-ASCII characters.  <a href="classcolvarparse.html#a324475b683561f9334742718f97f9c52">More...</a><br /></td></tr>
-<tr class="separator:a324475b683561f9334742718f97f9c52 inherit pub_static_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a237d6ad8d95aeecea8bd55a800457b87 inherit pub_static_methods_classcolvarparse"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarparse.html#a237d6ad8d95aeecea8bd55a800457b87">split_string</a> (const std::string &amp;data, const std::string &amp;delim, std::vector&lt; std::string &gt; &amp;dest)</td></tr>
 <tr class="memdesc:a237d6ad8d95aeecea8bd55a800457b87 inherit pub_static_methods_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a string with a specified delimiter into a vector.  <a href="classcolvarparse.html#a237d6ad8d95aeecea8bd55a800457b87">More...</a><br /></td></tr>
 <tr class="separator:a237d6ad8d95aeecea8bd55a800457b87 inherit pub_static_methods_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -826,6 +839,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>register_param_grad</
 <tr class="memdesc:aa100fed51577e32a6b418fccd926e418 inherit pro_methods_classcolvarparams"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register the gradient of the given parameter. <br /></td></tr>
 <tr class="separator:aa100fed51577e32a6b418fccd926e418 inherit pro_methods_classcolvarparams"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcolvarparse"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcolvarparse')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcolvarparse.html">colvarparse</a></td></tr>
+<tr class="memitem:a7a8e0957febcbd34255717fe4aae2991 inherit pro_attribs_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a7a8e0957febcbd34255717fe4aae2991" name="a7a8e0957febcbd34255717fe4aae2991"></a>
+<a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cvmodule</b> = nullptr</td></tr>
+<tr class="separator:a7a8e0957febcbd34255717fe4aae2991 inherit pro_attribs_classcolvarparse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ac164fe1f145b794a514c9145ca4ced inherit pro_attribs_classcolvarparse"><td class="memItemLeft" align="right" valign="top"><a id="a3ac164fe1f145b794a514c9145ca4ced" name="a3ac164fe1f145b794a514c9145ca4ced"></a>
 std::string const&#160;</td><td class="memItemRight" valign="bottom"><b>keyword_delimiters_left</b></td></tr>
 <tr class="memdesc:a3ac164fe1f145b794a514c9145ca4ced inherit pro_attribs_classcolvarparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characters allowed immediately to the left of a kewyord. <br /></td></tr>
@@ -996,7 +1012,7 @@ std::map&lt; std::string, <a class="el" href="classcolvarvalue.html">colvarvalue
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 22 2026 16:40:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 24 2026 21:48:36 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

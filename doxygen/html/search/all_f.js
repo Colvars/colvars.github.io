@@ -24,7 +24,7 @@ var searchData=
   ['output_5fbuffer_21',['output_buffer',['../classcvm_1_1memory__stream.html#a3001a5bdca52296cf9b3bfe217fbb30a',1,'cvm::memory_stream']]],
   ['output_5ffreq_22',['output_freq',['../classcolvarbias.html#a8a34b9372b8df39531ecb2e04c752190',1,'colvarbias']]],
   ['output_5flocation_23',['output_location',['../classcvm_1_1memory__stream.html#a104304f4e2f2e0182da0067fb5ef0d19',1,'cvm::memory_stream']]],
-  ['output_5fprefix_24',['output_prefix',['../classcolvarbias.html#af6a378920ad82509ba44089c668f584d',1,'colvarbias::output_prefix()'],['../classcolvarmodule.html#aea0e1fab0f3202d0520efd99c1874f2c',1,'colvarmodule::output_prefix()'],['../classcolvarproxy__io.html#ad394a4fb49ced4697800447576cbc486',1,'colvarproxy_io::output_prefix() const']]],
+  ['output_5fprefix_24',['output_prefix',['../classcolvarbias.html#af6a378920ad82509ba44089c668f584d',1,'colvarbias::output_prefix()'],['../classcolvarmodule.html#a821a1cf8bb6173b7e4236244e5c5d087',1,'colvarmodule::output_prefix()'],['../classcolvarproxy__io.html#ad394a4fb49ced4697800447576cbc486',1,'colvarproxy_io::output_prefix() const']]],
   ['output_5fprefix_5fstr_25',['output_prefix_str',['../classcolvarproxy__io.html#a3218271b970fc670e6a6361897d1f998',1,'colvarproxy_io']]],
   ['output_5fstream_26',['output_stream',['../classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034',1,'colvarproxy_io::output_stream()'],['../classcolvarproxy__namd.html#a94ffd9f0a0837958f0d1a50291b61b7b',1,'colvarproxy_namd::output_stream()']]],
   ['output_5fstream_5ferror_5f_27',['output_stream_error_',['../classcolvarproxy__io.html#a047405d4c8f5f4a698c16f7c2415cb42',1,'colvarproxy_io']]],

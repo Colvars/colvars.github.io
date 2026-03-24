@@ -207,7 +207,7 @@ $(function() {
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>           <span class="keywordflow">if</span> (cmdstr.size()) {</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>             script-&gt;set_result_str(script-&gt;get_command_cmdline_help(colvarscript::use_bias,</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                                                                     cmdstr));</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>             <span class="keywordflow">return</span> cvm::get_error();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>             <span class="keywordflow">return</span> cvmodule-&gt;get_error();</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>           } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>             <span class="keywordflow">return</span> COLVARSCRIPT_ERROR;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>           }</div>
@@ -239,7 +239,7 @@ $(function() {
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>         1, 1,</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>         <span class="stringliteral">&quot;prefix : string - Prefix for the state file of this bias&quot;</span>,</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>         std::string <span class="keyword">const</span> prefix =</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>           <a class="code hl_function" href="classcolvarmodule.html#a0ec2a243a95db3bc8df0062c6bd71e75">cvm::state_file_prefix</a>(script-&gt;obj_to_str(script-&gt;get_bias_cmd_arg(0, objc, objv)));</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>           cvmodule-&gt;state_file_prefix(script-&gt;obj_to_str(script-&gt;get_bias_cmd_arg(0, objc, objv)));</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>         <span class="keywordflow">return</span> this_bias-&gt;write_state_prefix(prefix);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>         )</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
@@ -298,12 +298,11 @@ $(function() {
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>         script-&gt;set_result_colvarvalue(this_bias-&gt;get_energy());</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>         <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>         )</div>
-<div class="ttc" id="aclasscolvarmodule_html_a0ec2a243a95db3bc8df0062c6bd71e75"><div class="ttname"><a href="classcolvarmodule.html#a0ec2a243a95db3bc8df0062c6bd71e75">colvarmodule::state_file_prefix</a></div><div class="ttdeci">static std::string state_file_prefix(char const *filename)</div><div class="ttdoc">Strips .colvars.state from filename and checks that it is not empty.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:1652</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_aecbb40c45714f5e893415a48908d3e54"><div class="ttname"><a href="classcolvarmodule.html#aecbb40c45714f5e893415a48908d3e54">colvarmodule::to_str</a></div><div class="ttdeci">static std::string to_str(char const *s)</div><div class="ttdoc">Convert to string for output purposes.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:2543</div></div>
+<div class="ttc" id="aclasscolvarmodule_html_aecbb40c45714f5e893415a48908d3e54"><div class="ttname"><a href="classcolvarmodule.html#aecbb40c45714f5e893415a48908d3e54">colvarmodule::to_str</a></div><div class="ttdeci">static std::string to_str(char const *s)</div><div class="ttdoc">Convert to string for output purposes.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:2541</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 22 2026 16:40:06 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 24 2026 21:48:36 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

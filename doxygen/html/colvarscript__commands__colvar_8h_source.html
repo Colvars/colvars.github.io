@@ -103,13 +103,13 @@ $(function() {
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>         <span class="stringliteral">&quot;force : float or array - Applied force; must match colvar dimensionality&quot;</span>,</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>         std::string <span class="keyword">const</span> f_str(script-&gt;obj_to_str(script-&gt;get_colvar_cmd_arg(0, objc, objv)));</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>         std::istringstream is(f_str);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>         is.width(<a class="code hl_variable" href="classcolvarmodule.html#ac1a09d132016191cc18c746419c3444a">cvm::cv_width</a>);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>         is.precision(<a class="code hl_variable" href="classcolvarmodule.html#aa8e7962b7bc1429cdcfebf461cde7ae9">cvm::cv_prec</a>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>         is.width(script-&gt;module()-&gt;cv_width);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>         is.precision(script-&gt;module()-&gt;cv_prec);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>         <a class="code hl_class" href="classcolvarvalue.html">colvarvalue</a> force(this_colvar-&gt;value());</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>         force.is_derivative();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>         <span class="keywordflow">if</span> (force.from_simple_string(is.str()) != COLVARS_OK) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>         if (force.from_simple_string(is.str()) != COLVARS_OK) {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>           script-&gt;add_error_msg(<span class="stringliteral">&quot;addforce : error parsing force value&quot;</span>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>           <span class="keywordflow">return</span> COLVARSCRIPT_ERROR;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>           return COLVARSCRIPT_ERROR;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>         }</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>         this_colvar-&gt;enable(<a class="code hl_enumvalue" href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628abd7418bb2a7b1fc58fd7ed9aed02707f">colvardeps::f_cv_apply_force</a>);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>         this_colvar-&gt;add_bias_force(force);</div>
@@ -257,7 +257,7 @@ $(function() {
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>           <span class="keywordflow">if</span> (cmdstr.size()) {</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>             script-&gt;set_result_str(script-&gt;get_command_cmdline_help(colvarscript::use_colvar,</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                                                                     cmdstr));</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>             <span class="keywordflow">return</span> cvm::get_error();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>             <span class="keywordflow">return</span> script-&gt;module()-&gt;get_error();</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>           } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>             <span class="keywordflow">return</span> COLVARSCRIPT_ERROR;</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>           }</div>
@@ -272,9 +272,9 @@ $(function() {
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>         1, 1,</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>         <span class="stringliteral">&quot;confs : sequence of strings - New configurations; empty strings are skipped&quot;</span>,</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>         std::vector&lt;std::string&gt; <span class="keyword">const</span> confs(script-&gt;obj_to_str_vector(script-&gt;get_colvar_cmd_arg(0, objc, objv)));</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>         <a class="code hl_function" href="classcolvarmodule.html#aa33462920a2351c1ef9735d15f4170a5">cvm::increase_depth</a>();</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>         script-&gt;module()-&gt;increase_depth();</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>         <span class="keywordtype">int</span> res = this_colvar-&gt;update_cvc_config(confs);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>         <a class="code hl_function" href="classcolvarmodule.html#ad769e38e5023ff3ae4b6f8585c02dae7">cvm::decrease_depth</a>();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>         script-&gt;module()-&gt;decrease_depth();</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>         <span class="keywordflow">if</span> (res != COLVARS_OK) {</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>           script-&gt;add_error_msg(<span class="stringliteral">&quot;Error setting CVC flags&quot;</span>);</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>           <span class="keywordflow">return</span> COLVARSCRIPT_ERROR;</div>
@@ -344,20 +344,16 @@ $(function() {
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>         0, 0,</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>         script-&gt;set_result_str(<a class="code hl_function" href="classcolvarmodule.html#aecbb40c45714f5e893415a48908d3e54">cvm::to_str</a>(this_colvar-&gt;width, 0,</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                                            <a class="code hl_variable" href="classcolvarmodule.html#aa8e7962b7bc1429cdcfebf461cde7ae9">cvm::cv_prec</a>));</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                                            script-&gt;module()-&gt;cv_prec));</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>         <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>         )</div>
-<div class="ttc" id="aclasscolvardeps_html_aebed48f7608034a9e3ce66f1fe45f628abd7418bb2a7b1fc58fd7ed9aed02707f"><div class="ttname"><a href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628abd7418bb2a7b1fc58fd7ed9aed02707f">colvardeps::f_cv_apply_force</a></div><div class="ttdeci">@ f_cv_apply_force</div><div class="ttdoc">External force can be applied, either to atoms or to an extended DOF.</div><div class="ttdef"><b>Definition:</b> colvardeps.h:272</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_aa33462920a2351c1ef9735d15f4170a5"><div class="ttname"><a href="classcolvarmodule.html#aa33462920a2351c1ef9735d15f4170a5">colvarmodule::increase_depth</a></div><div class="ttdeci">static void increase_depth()</div><div class="ttdoc">Increase the depth (number of indentations in the output)</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:2125</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_aa8e7962b7bc1429cdcfebf461cde7ae9"><div class="ttname"><a href="classcolvarmodule.html#aa8e7962b7bc1429cdcfebf461cde7ae9">colvarmodule::cv_prec</a></div><div class="ttdeci">static size_t const cv_prec</div><div class="ttdoc">Number of digits to represent a collective variables value(s)</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:720</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_ac1a09d132016191cc18c746419c3444a"><div class="ttname"><a href="classcolvarmodule.html#ac1a09d132016191cc18c746419c3444a">colvarmodule::cv_width</a></div><div class="ttdeci">static size_t const cv_width</div><div class="ttdoc">Number of characters to represent a collective variables value(s)</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:722</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_ad769e38e5023ff3ae4b6f8585c02dae7"><div class="ttname"><a href="classcolvarmodule.html#ad769e38e5023ff3ae4b6f8585c02dae7">colvarmodule::decrease_depth</a></div><div class="ttdeci">static void decrease_depth()</div><div class="ttdoc">Decrease the depth (number of indentations in the output)</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:2131</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_aecbb40c45714f5e893415a48908d3e54"><div class="ttname"><a href="classcolvarmodule.html#aecbb40c45714f5e893415a48908d3e54">colvarmodule::to_str</a></div><div class="ttdeci">static std::string to_str(char const *s)</div><div class="ttdoc">Convert to string for output purposes.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:2543</div></div>
+<div class="ttc" id="aclasscolvardeps_html_aebed48f7608034a9e3ce66f1fe45f628abd7418bb2a7b1fc58fd7ed9aed02707f"><div class="ttname"><a href="classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628abd7418bb2a7b1fc58fd7ed9aed02707f">colvardeps::f_cv_apply_force</a></div><div class="ttdeci">@ f_cv_apply_force</div><div class="ttdoc">External force can be applied, either to atoms or to an extended DOF.</div><div class="ttdef"><b>Definition:</b> colvardeps.h:273</div></div>
+<div class="ttc" id="aclasscolvarmodule_html_aecbb40c45714f5e893415a48908d3e54"><div class="ttname"><a href="classcolvarmodule.html#aecbb40c45714f5e893415a48908d3e54">colvarmodule::to_str</a></div><div class="ttdeci">static std::string to_str(char const *s)</div><div class="ttdoc">Convert to string for output purposes.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:2541</div></div>
 <div class="ttc" id="aclasscolvarvalue_html"><div class="ttname"><a href="classcolvarvalue.html">colvarvalue</a></div><div class="ttdoc">Value of a collective variable: this is a metatype which can be set at runtime. By default it is set ...</div><div class="ttdef"><b>Definition:</b> colvarvalue.h:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 22 2026 16:40:06 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 24 2026 21:48:36 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

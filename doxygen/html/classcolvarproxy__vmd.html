@@ -80,6 +80,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classcolvarproxy__vmd-members.html">List of all members</a>  </div>
@@ -115,10 +116,10 @@ Collaboration diagram for colvarproxy_vmd:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvarproxy__vmd__coll__graph.png" border="0" usemap="#acolvarproxy__vmd_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvarproxy__vmd_coll__map" id="acolvarproxy__vmd_coll__map">
-<area shape="rect" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="757,221,879,246"/>
-<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="547,255,637,281"/>
-<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="973,273,1063,298"/>
-<area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="769,150,867,175"/>
+<area shape="rect" title="Communication between colvars and VMD (implementation of colvarproxy)" alt="" coords="731,243,852,269"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="521,278,611,303"/>
+<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="987,209,1077,234"/>
+<area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="742,299,841,325"/>
 <area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="318,81,455,106"/>
 <area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="5,81,152,106"/>
 <area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="321,130,453,155"/>
@@ -126,16 +127,56 @@ Collaboration diagram for colvarproxy_vmd:</div>
 <area shape="rect" href="classcolvarproxy__volmaps.html" title="Container of grid&#45;based objects." alt="" coords="315,229,459,254"/>
 <area shape="rect" href="classcolvarproxy__smp.html" title="Methods for SMP parallelization." alt="" coords="326,278,447,303"/>
 <area shape="rect" href="classcolvarproxy__replicas.html" title="Methods for multiple&#45;replica communication." alt="" coords="316,327,457,353"/>
-<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1148,313,1276,338"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="547,43,637,69"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="337,31,437,57"/>
-<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="521,105,663,130"/>
+<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1188,454,1316,479"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="987,390,1077,415"/>
+<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="961,279,1103,305"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="741,425,841,450"/>
 <area shape="rect" href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="331,377,442,402"/>
 <area shape="rect" href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="333,426,440,451"/>
 <area shape="rect" href="classcolvarproxy__gpu.html" title="Class for managing GPU memory allocation and data transfer." alt="" coords="328,475,445,501"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae9dbf79a49d657bf3f7c9733433412f4"><td class="memItemLeft" align="right" valign="top"><a id="ae9dbf79a49d657bf3f7c9733433412f4" name="ae9dbf79a49d657bf3f7c9733433412f4"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>e_pdb_field</b> { <br />
+&#160;&#160;<b>e_pdb_none</b>
+, <b>e_pdb_occ</b>
+, <b>e_pdb_beta</b>
+, <b>e_pdb_x</b>
+, <br />
+&#160;&#160;<b>e_pdb_y</b>
+, <b>e_pdb_z</b>
+, <b>e_pdb_ntot</b>
+<br />
+ }</td></tr>
+<tr class="separator:ae9dbf79a49d657bf3f7c9733433412f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classcolvarproxy__atoms"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__atoms')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__atoms.html">colvarproxy_atoms</a></td></tr>
+<tr class="memitem:ac954ae69bf6d432bc42f43a7bfe932bb inherit pub_types_classcolvarproxy__atoms"><td class="memTemplParams" colspan="2"><a id="ac954ae69bf6d432bc42f43a7bfe932bb" name="ac954ae69bf6d432bc42f43a7bfe932bb"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac954ae69bf6d432bc42f43a7bfe932bb inherit pub_types_classcolvarproxy__atoms"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>allocator_type</b> = <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">colvars_gpu::CudaHostAllocator</a>&lt; T &gt;</td></tr>
+<tr class="separator:ac954ae69bf6d432bc42f43a7bfe932bb inherit pub_types_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa858e73216b3983d144f94b7ca48a3b0 inherit pub_types_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="aa858e73216b3983d144f94b7ca48a3b0" name="aa858e73216b3983d144f94b7ca48a3b0"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_real_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;</td></tr>
+<tr class="separator:aa858e73216b3983d144f94b7ca48a3b0 inherit pub_types_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82156286030049be9cdf858db5ece4b inherit pub_types_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="ac82156286030049be9cdf858db5ece4b" name="ac82156286030049be9cdf858db5ece4b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_rvector_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;</td></tr>
+<tr class="separator:ac82156286030049be9cdf858db5ece4b inherit pub_types_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classcolvarproxy__volmaps"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__volmaps')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__volmaps.html">colvarproxy_volmaps</a></td></tr>
+<tr class="memitem:a88e9efcff92b7a90d33d4c32cc7f80b5 inherit pub_types_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a88e9efcff92b7a90d33d4c32cc7f80b5" name="a88e9efcff92b7a90d33d4c32cc7f80b5"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>volmap_flag_null</b> = 0
+, <b>volmap_flag_gradients</b> = 1
+, <b>volmap_flag_use_atom_field</b> = (1&lt;&lt;8)
+ }</td></tr>
+<tr class="memdesc:a88e9efcff92b7a90d33d4c32cc7f80b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags controlling what computation is done on the map. <br /></td></tr>
+<tr class="separator:a88e9efcff92b7a90d33d4c32cc7f80b5 inherit pub_types_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classcolvarproxy__smp"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__smp')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__smp.html">colvarproxy_smp</a></td></tr>
+<tr class="memitem:a22219fbe8403d4243e1296ef6c136ebe inherit pub_types_classcolvarproxy__smp"><td class="memItemLeft" align="right" valign="top"><a id="a22219fbe8403d4243e1296ef6c136ebe" name="a22219fbe8403d4243e1296ef6c136ebe"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>smp_mode_t</b> { <b>cvcs</b>
+, <b>inner_loop</b>
+, <b>gpu</b>
+, <b>none</b>
+ }</td></tr>
+<tr class="separator:a22219fbe8403d4243e1296ef6c136ebe inherit pub_types_classcolvarproxy__smp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2609831de6791eab62959224168b1f76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a2609831de6791eab62959224168b1f76">colvarproxy_vmd</a> (Tcl_Interp *interp, VMDApp *<a class="el" href="classcolvarproxy__vmd.html#a78dff91177b772a99db73a2821649043">vmd</a>, int molid)</td></tr>
@@ -161,7 +202,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>update_atomic_properti
 <tr class="memdesc:afc8019dfc55a830f5dff22e01759a16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the current frame number in the argument given.  <a href="classcolvarproxy__vmd.html#afc8019dfc55a830f5dff22e01759a16d">More...</a><br /></td></tr>
 <tr class="separator:afc8019dfc55a830f5dff22e01759a16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb923553934e47aa29aa4c38e34963a0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#afb923553934e47aa29aa4c38e34963a0">set_frame</a> (long int f)</td></tr>
-<tr class="memdesc:afb923553934e47aa29aa4c38e34963a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current frame number (as well as <a class="el" href="classcolvarmodule.html#a1295c39b7d73afaded97f8b0a98cbf5c" title="Current step number.">colvarmodule::it</a>)  <a href="classcolvarproxy__vmd.html#afb923553934e47aa29aa4c38e34963a0">More...</a><br /></td></tr>
+<tr class="memdesc:afb923553934e47aa29aa4c38e34963a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current frame number (as well as cvmodule-&gt;it)  <a href="classcolvarproxy__vmd.html#afb923553934e47aa29aa4c38e34963a0">More...</a><br /></td></tr>
 <tr class="separator:afb923553934e47aa29aa4c38e34963a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4e267aaee0a02f22324e07f48b99a5e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#ac4e267aaee0a02f22324e07f48b99a5e">init_tcl_pointers</a> ()</td></tr>
 <tr class="memdesc:ac4e267aaee0a02f22324e07f48b99a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Tcl pointers.  <a href="classcolvarproxy__vmd.html#ac4e267aaee0a02f22324e07f48b99a5e">More...</a><br /></td></tr>
@@ -188,6 +229,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>update_atomic_properti
 <tr class="separator:ab4dbbe45b5c1abbb7bfb503330df3e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab862704b13991b12cad5bfe6442bee02"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#ab862704b13991b12cad5bfe6442bee02">run_colvar_gradient_callback</a> (std::string const &amp;name, std::vector&lt; const <a class="el" href="classcolvarvalue.html">colvarvalue</a> * &gt; const &amp;cvc_values, std::vector&lt; <a class="el" href="classcolvarmodule_1_1matrix2d.html">cvm::matrix2d</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt; &amp;gradient)</td></tr>
 <tr class="separator:ab862704b13991b12cad5bfe6442bee02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8ac81c702334438916777e807bec07"><td class="memItemLeft" align="right" valign="top"><a id="abb8ac81c702334438916777e807bec07" name="abb8ac81c702334438916777e807bec07"></a>
+e_pdb_field&#160;</td><td class="memItemRight" valign="bottom"><b>pdb_field_str2enum</b> (std::string const &amp;pdb_field_str)</td></tr>
+<tr class="separator:abb8ac81c702334438916777e807bec07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7eca6404d26117572cfcc2be1fac433f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__vmd.html#a7eca6404d26117572cfcc2be1fac433f">load_atoms_pdb</a> (char const *filename, <a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> &amp;atoms, std::string const &amp;pdb_field, double const pdb_field_value=0.0)</td></tr>
 <tr class="memdesc:a7eca6404d26117572cfcc2be1fac433f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a selection of atom IDs from a PDB coordinate file.  <a href="classcolvarproxy__vmd.html#a7eca6404d26117572cfcc2be1fac433f">More...</a><br /></td></tr>
 <tr class="separator:a7eca6404d26117572cfcc2be1fac433f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -889,7 +933,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_io</b
 <tr class="memdesc:a4a67e47e06c5b376645c06aae20a3b0f inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the current frame number in the argument given.  <a href="classcolvarproxy__io.html#a4a67e47e06c5b376645c06aae20a3b0f">More...</a><br /></td></tr>
 <tr class="separator:a4a67e47e06c5b376645c06aae20a3b0f inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a63ab0af74cdfd5c175fe6e5dc00a82 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__io.html#a7a63ab0af74cdfd5c175fe6e5dc00a82">set_frame</a> (long int)</td></tr>
-<tr class="memdesc:a7a63ab0af74cdfd5c175fe6e5dc00a82 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current frame number (as well as <a class="el" href="classcolvarmodule.html#a1295c39b7d73afaded97f8b0a98cbf5c" title="Current step number.">colvarmodule::it</a>)  <a href="classcolvarproxy__io.html#a7a63ab0af74cdfd5c175fe6e5dc00a82">More...</a><br /></td></tr>
+<tr class="memdesc:a7a63ab0af74cdfd5c175fe6e5dc00a82 inherit pub_methods_classcolvarproxy__io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current frame number (as well as cvmodule-&gt;it)  <a href="classcolvarproxy__io.html#a7a63ab0af74cdfd5c175fe6e5dc00a82">More...</a><br /></td></tr>
 <tr class="separator:a7a63ab0af74cdfd5c175fe6e5dc00a82 inherit pub_methods_classcolvarproxy__io"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a618be1184c81bba7809daa72fdfacc49 inherit pub_methods_classcolvarproxy__io"><td class="memItemLeft" align="right" valign="top"><a id="a618be1184c81bba7809daa72fdfacc49" name="a618be1184c81bba7809daa72fdfacc49"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_current_work_dir</b> () const</td></tr>
@@ -1447,36 +1491,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>support_gpu</b></td><
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classcolvarproxy__atoms"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__atoms')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__atoms.html">colvarproxy_atoms</a></td></tr>
-<tr class="memitem:ac954ae69bf6d432bc42f43a7bfe932bb inherit pub_types_classcolvarproxy__atoms"><td class="memTemplParams" colspan="2"><a id="ac954ae69bf6d432bc42f43a7bfe932bb" name="ac954ae69bf6d432bc42f43a7bfe932bb"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac954ae69bf6d432bc42f43a7bfe932bb inherit pub_types_classcolvarproxy__atoms"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>allocator_type</b> = <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">colvars_gpu::CudaHostAllocator</a>&lt; T &gt;</td></tr>
-<tr class="separator:ac954ae69bf6d432bc42f43a7bfe932bb inherit pub_types_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa858e73216b3983d144f94b7ca48a3b0 inherit pub_types_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="aa858e73216b3983d144f94b7ca48a3b0" name="aa858e73216b3983d144f94b7ca48a3b0"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_real_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> &gt; &gt;</td></tr>
-<tr class="separator:aa858e73216b3983d144f94b7ca48a3b0 inherit pub_types_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac82156286030049be9cdf858db5ece4b inherit pub_types_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top"><a id="ac82156286030049be9cdf858db5ece4b" name="ac82156286030049be9cdf858db5ece4b"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_rvector_t</b> = std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>, <a class="el" href="classcolvars__gpu_1_1CudaHostAllocator.html">allocator_type</a>&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> &gt; &gt;</td></tr>
-<tr class="separator:ac82156286030049be9cdf858db5ece4b inherit pub_types_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classcolvarproxy__volmaps"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__volmaps')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__volmaps.html">colvarproxy_volmaps</a></td></tr>
-<tr class="memitem:a88e9efcff92b7a90d33d4c32cc7f80b5 inherit pub_types_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a88e9efcff92b7a90d33d4c32cc7f80b5" name="a88e9efcff92b7a90d33d4c32cc7f80b5"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>volmap_flag_null</b> = 0
-, <b>volmap_flag_gradients</b> = 1
-, <b>volmap_flag_use_atom_field</b> = (1&lt;&lt;8)
- }</td></tr>
-<tr class="memdesc:a88e9efcff92b7a90d33d4c32cc7f80b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags controlling what computation is done on the map. <br /></td></tr>
-<tr class="separator:a88e9efcff92b7a90d33d4c32cc7f80b5 inherit pub_types_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classcolvarproxy__smp"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcolvarproxy__smp')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcolvarproxy__smp.html">colvarproxy_smp</a></td></tr>
-<tr class="memitem:a22219fbe8403d4243e1296ef6c136ebe inherit pub_types_classcolvarproxy__smp"><td class="memItemLeft" align="right" valign="top"><a id="a22219fbe8403d4243e1296ef6c136ebe" name="a22219fbe8403d4243e1296ef6c136ebe"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>smp_mode_t</b> { <b>cvcs</b>
-, <b>inner_loop</b>
-, <b>gpu</b>
-, <b>none</b>
- }</td></tr>
-<tr class="separator:a22219fbe8403d4243e1296ef6c136ebe inherit pub_types_classcolvarproxy__smp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classcolvarproxy"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classcolvarproxy')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classcolvarproxy.html">colvarproxy</a></td></tr>
-<tr class="memitem:a24379da129608ec8fbbb3effa820bd1d inherit pub_attribs_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="a24379da129608ec8fbbb3effa820bd1d" name="a24379da129608ec8fbbb3effa820bd1d"></a>
-<a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>colvars</b></td></tr>
-<tr class="memdesc:a24379da129608ec8fbbb3effa820bd1d inherit pub_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the main object. <br /></td></tr>
-<tr class="separator:a24379da129608ec8fbbb3effa820bd1d inherit pub_attribs_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae612e3c4cb646a1d82f23d840b5efaf1 inherit pub_attribs_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="ae612e3c4cb646a1d82f23d840b5efaf1" name="ae612e3c4cb646a1d82f23d840b5efaf1"></a>
+<a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cvmodule</b></td></tr>
+<tr class="memdesc:ae612e3c4cb646a1d82f23d840b5efaf1 inherit pub_attribs_classcolvarproxy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the associated colvarmodule object. <br /></td></tr>
+<tr class="separator:ae612e3c4cb646a1d82f23d840b5efaf1 inherit pub_attribs_classcolvarproxy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classcolvarproxy__system"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classcolvarproxy__system')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classcolvarproxy__system.html">colvarproxy_system</a></td></tr>
 <tr class="memitem:a8a5e36132ec3e2a88b606d21a2f73ffc inherit pub_attribs_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="a8a5e36132ec3e2a88b606d21a2f73ffc" name="a8a5e36132ec3e2a88b606d21a2f73ffc"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>units</b></td></tr>
@@ -2559,7 +2578,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 </table>
 </div><div class="memdoc">
 
-<p>Set the current frame number (as well as <a class="el" href="classcolvarmodule.html#a1295c39b7d73afaded97f8b0a98cbf5c" title="Current step number.">colvarmodule::it</a>) </p>
+<p>Set the current frame number (as well as cvmodule-&gt;it) </p>
 
 <p>Reimplemented from <a class="el" href="classcolvarproxy__io.html#a7a63ab0af74cdfd5c175fe6e5dc00a82">colvarproxy_io</a>.</p>
 
@@ -2669,7 +2688,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 22 2026 16:40:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 24 2026 21:48:37 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

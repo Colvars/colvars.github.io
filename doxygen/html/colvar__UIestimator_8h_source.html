@@ -107,7 +107,7 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;typeinfo&gt;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// only for colvar module!</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// when integrated into other code, just remove this line and &quot;...cvm::backup_file(...)&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// when integrated into other code, just remove this line and &quot;...cvmodule-&gt;backup_file(...)&quot;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="colvarmodule_8h.html">colvarmodule.h</a>&quot;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="colvarproxy_8h.html">colvarproxy.h</a>&quot;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
@@ -303,150 +303,150 @@ $(function() {
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="classUIestimator_1_1UIestimator.html">  215</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classUIestimator_1_1UIestimator.html">UIestimator</a> {     <span class="comment">// the implemension of UI estimator</span></div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <a class="code hl_class" href="classUIestimator_1_1UIestimator.html">UIestimator</a>() {}</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <a class="code hl_class" href="classcolvarmodule.html">colvarmodule</a> *cvmodule;</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="comment">//called when (re)start an eabf simulation</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <a class="code hl_class" href="classUIestimator_1_1UIestimator.html">UIestimator</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp; lowerboundary_input,</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            <span class="keyword">const</span> std::vector&lt;double&gt; &amp; upperboundary_input,</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <span class="keyword">const</span> std::vector&lt;double&gt; &amp; width_input,</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keyword">const</span> std::vector&lt;double&gt; &amp; krestr_input,                <span class="comment">// force constant in eABF</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keyword">const</span> std::string &amp; output_filename_input,              <span class="comment">// the prefix of output files</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> output_freq_input,</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keyword">const</span> <span class="keywordtype">bool</span> restart_input,                              <span class="comment">// whether restart from a .count and a .grad file</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp; input_filename_input,   <span class="comment">// the prefixes of input files</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="keyword">const</span> <span class="keywordtype">double</span> temperature_input) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <span class="comment">// initialize variables</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            this-&gt;lowerboundary = lowerboundary_input;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            this-&gt;upperboundary = upperboundary_input;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            this-&gt;width = width_input;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            this-&gt;krestr = krestr_input;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            this-&gt;output_filename = output_filename_input;</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            this-&gt;output_freq = output_freq_input;</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            this-&gt;restart = restart_input;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            this-&gt;input_filename = input_filename_input;</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            this-&gt;temperature = temperature_input;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            dimension = lowerboundary.size();</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keywordflow">for</span> (i = 0; i &lt; dimension; i++) {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                sum_x.push_back(<a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;double&gt;</a>(lowerboundary, upperboundary, width, Y_SIZE, 0.0));</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                sum_x_square.push_back(<a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;double&gt;</a>(lowerboundary, upperboundary, width, Y_SIZE, 0.0));</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                x_av.push_back(<a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;double&gt;</a>(lowerboundary, upperboundary, width, Y_SIZE, 0.0));</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                sigma_square.push_back(<a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;double&gt;</a>(lowerboundary, upperboundary, width, Y_SIZE, 0.0));</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            }</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            count_y = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;int&gt;</a>(lowerboundary, upperboundary, width, Y_SIZE, 0);</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            distribution_x_y = <a class="code hl_class" href="classUIestimator_1_1n__matrix.html">n_matrix</a>(lowerboundary, upperboundary, width, Y_SIZE);</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            grad = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;std::vector&lt;double&gt;</a> &gt;(lowerboundary, upperboundary, width, 1, std::vector&lt;double&gt;(dimension, 0.0));</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            count = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;int&gt;</a>(lowerboundary, upperboundary, width, 1, 0);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            written = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            written_1D = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keywordflow">if</span> (dimension == 1) {</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                std::vector&lt;double&gt; upperboundary_temp = upperboundary;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                upperboundary_temp[0] = upperboundary[0] + width[0];</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                oneD_pmf = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;double&gt;</a>(lowerboundary, upperboundary_temp, width, 1, 0.0);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            }</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            <span class="keywordflow">if</span> (restart == <span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                input_grad = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;std::vector&lt;double&gt;</a> &gt;(lowerboundary, upperboundary, width, 1, std::vector&lt;double&gt;(dimension, 0.0));</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                input_count = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;int&gt;</a>(lowerboundary, upperboundary, width, 1, 0);</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                <span class="comment">// initialize input_Grad and input_count</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                <span class="comment">// the loop_flag is a n-dimensional vector, increae from lowerboundary to upperboundary when looping</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                std::vector&lt;double&gt; loop_flag(dimension, 0);</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                <span class="keywordflow">for</span> (i = 0; i &lt; dimension; i++) {</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                    loop_flag[i] = lowerboundary[i];</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                }</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                i = 0;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                <span class="keywordflow">while</span> (i &gt;= 0) {</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                    <span class="keywordflow">for</span> (j = 0; j &lt; dimension; j++) {</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                        input_grad.set_value(loop_flag, std::vector&lt;double&gt;(dimension,0));</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                    }</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                    input_count.set_value(loop_flag, 0);</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                    <span class="comment">// iterate over any dimensions</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                    i = dimension - 1;</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                    <span class="keywordflow">while</span> (i &gt;= 0) {</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                        loop_flag[i] += width[i];</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                        <span class="keywordflow">if</span> (loop_flag[i] &gt; upperboundary[i] - width[i] + EPSILON) {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                            loop_flag[i] = lowerboundary[i];</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                            i--;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                        }</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                    }</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                }</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                read_inputfiles(input_filename);</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            }</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        }</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        <a class="code hl_class" href="classUIestimator_1_1UIestimator.html">~UIestimator</a>() {}</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        <span class="comment">// called from MD engine every step</span></div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordtype">bool</span> update(<a class="code hl_typedef" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a> <span class="comment">/* step */</span>,</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                    std::vector&lt;double&gt; x, std::vector&lt;double&gt; y) {</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            <span class="keywordtype">int</span> i;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            <span class="keywordflow">for</span> (i = 0; i &lt; dimension; i++) {</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                <span class="comment">// for dihedral RC, it is possible that x = 179 and y = -179, should correct it</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                <span class="comment">// may have problem, need to fix</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                <span class="keywordflow">if</span> (x[i] &gt; 150 &amp;&amp; y[i] &lt; -150) {</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                    y[i] += 360;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                }</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                <span class="keywordflow">if</span> (x[i] &lt; -150 &amp;&amp; y[i] &gt; 150) {</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                    y[i] -= 360;</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                }</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                <span class="keywordflow">if</span> (x[i] &lt; lowerboundary[i] - EXTENDED_X_SIZE * width[i] + EPSILON || x[i] &gt; upperboundary[i] + EXTENDED_X_SIZE * width[i] - EPSILON \</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                    || y[i] - x[i] &lt; -HALF_Y_SIZE * width[i] + EPSILON || y[i] - x[i] &gt; HALF_Y_SIZE * width[i] - EPSILON \</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                    || y[i] - lowerboundary[i] &lt; -HALF_Y_SIZE * width[i] + EPSILON || y[i] - upperboundary[i] &gt; HALF_Y_SIZE * width[i] - EPSILON)</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            }</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            <span class="keywordflow">for</span> (i = 0; i &lt; dimension; i++) {</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                sum_x[i].increase_value(y, x[i]);</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                sum_x_square[i].increase_value(y, x[i] * x[i]);</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            }</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            count_y.increase_value(y, 1);</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            <span class="keywordflow">for</span> (i = 0; i &lt; dimension; i++) {</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                <span class="comment">// adapt colvars precision</span></div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                <span class="keywordflow">if</span> (x[i] &lt; lowerboundary[i] + EPSILON || x[i] &gt; upperboundary[i] - EPSILON)</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            }</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            distribution_x_y.increase_value(x, y, 1);</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        }</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <span class="comment">// update the output_filename</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        <span class="keywordtype">void</span> update_output_filename(<span class="keyword">const</span> std::string&amp; filename) {</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            output_filename = filename;</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        }</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        std::vector&lt;n_vector&lt;double&gt; &gt; sum_x;                        <span class="comment">// the sum of x in each y bin</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        std::vector&lt;n_vector&lt;double&gt; &gt; sum_x_square;                 <span class="comment">// the sum of x in each y bin</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;int&gt;</a> count_y;                              <span class="comment">// the distribution of y</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        <a class="code hl_class" href="classUIestimator_1_1n__matrix.html">n_matrix</a> distribution_x_y;   <span class="comment">// the distribution of &lt;x, y&gt; pair</span></div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        <span class="keywordtype">int</span> dimension;</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        std::vector&lt;double&gt; lowerboundary;</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        std::vector&lt;double&gt; upperboundary;</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        std::vector&lt;double&gt; width;</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        std::vector&lt;double&gt; krestr;</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        std::string output_filename;</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        <span class="keywordtype">int</span> output_freq;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <a class="code hl_class" href="classUIestimator_1_1UIestimator.html">UIestimator</a>() {}</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="comment">//called when (re)start an eabf simulation</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <a class="code hl_class" href="classUIestimator_1_1UIestimator.html">UIestimator</a>(<a class="code hl_class" href="classcolvarmodule.html">colvarmodule</a> * cvmodule_in,</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keyword">const</span> std::vector&lt;double&gt; &amp; lowerboundary_in,</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keyword">const</span> std::vector&lt;double&gt; &amp; upperboundary_in,</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keyword">const</span> std::vector&lt;double&gt; &amp; width_in,</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keyword">const</span> std::vector&lt;double&gt; &amp; krestr_in,                <span class="comment">// force constant in eABF</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            <span class="keyword">const</span> std::string &amp; output_filename_in,              <span class="comment">// the prefix of output files</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="keyword">const</span> <span class="keywordtype">bool</span> restart_in,                              <span class="comment">// whether restart from a .count and a .grad file</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp; input_filename_in,   <span class="comment">// the prefixes of input files</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <span class="keyword">const</span> <span class="keywordtype">double</span> temperature_in)</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                : cvmodule(cvmodule_in),</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                lowerboundary(lowerboundary_in),</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                upperboundary(upperboundary_in),</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                width(width_in),</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                krestr(krestr_in),</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                output_filename(output_filename_in),</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                restart(restart_in),</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                input_filename(input_filename_in),</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                temperature(temperature_in)</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            dimension = lowerboundary.size();</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            <span class="keywordflow">for</span> (i = 0; i &lt; dimension; i++) {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                sum_x.push_back(<a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;double&gt;</a>(lowerboundary, upperboundary, width, Y_SIZE, 0.0));</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                sum_x_square.push_back(<a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;double&gt;</a>(lowerboundary, upperboundary, width, Y_SIZE, 0.0));</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                x_av.push_back(<a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;double&gt;</a>(lowerboundary, upperboundary, width, Y_SIZE, 0.0));</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                sigma_square.push_back(<a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;double&gt;</a>(lowerboundary, upperboundary, width, Y_SIZE, 0.0));</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            count_y = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;int&gt;</a>(lowerboundary, upperboundary, width, Y_SIZE, 0);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            distribution_x_y = <a class="code hl_class" href="classUIestimator_1_1n__matrix.html">n_matrix</a>(lowerboundary, upperboundary, width, Y_SIZE);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            grad = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;std::vector&lt;double&gt;</a> &gt;(lowerboundary, upperboundary, width, 1, std::vector&lt;double&gt;(dimension, 0.0));</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            count = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;int&gt;</a>(lowerboundary, upperboundary, width, 1, 0);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            written = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            written_1D = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keywordflow">if</span> (dimension == 1) {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                std::vector&lt;double&gt; upperboundary_temp = upperboundary;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                upperboundary_temp[0] = upperboundary[0] + width[0];</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                oneD_pmf = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;double&gt;</a>(lowerboundary, upperboundary_temp, width, 1, 0.0);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            }</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            <span class="keywordflow">if</span> (restart == <span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                input_grad = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;std::vector&lt;double&gt;</a> &gt;(lowerboundary, upperboundary, width, 1, std::vector&lt;double&gt;(dimension, 0.0));</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                input_count = <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;int&gt;</a>(lowerboundary, upperboundary, width, 1, 0);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                <span class="comment">// initialize input_Grad and input_count</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                <span class="comment">// the loop_flag is a n-dimensional vector, increae from lowerboundary to upperboundary when looping</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                std::vector&lt;double&gt; loop_flag(dimension, 0);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                <span class="keywordflow">for</span> (i = 0; i &lt; dimension; i++) {</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                    loop_flag[i] = lowerboundary[i];</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                i = 0;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                <span class="keywordflow">while</span> (i &gt;= 0) {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                    <span class="keywordflow">for</span> (j = 0; j &lt; dimension; j++) {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                        input_grad.set_value(loop_flag, std::vector&lt;double&gt;(dimension,0));</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                    }</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                    input_count.set_value(loop_flag, 0);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                    <span class="comment">// iterate over any dimensions</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                    i = dimension - 1;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                    <span class="keywordflow">while</span> (i &gt;= 0) {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                        loop_flag[i] += width[i];</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                        <span class="keywordflow">if</span> (loop_flag[i] &gt; upperboundary[i] - width[i] + EPSILON) {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                            loop_flag[i] = lowerboundary[i];</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                            i--;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                        }</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                    }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                }</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                read_inputfiles(input_filename);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            }</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <a class="code hl_class" href="classUIestimator_1_1UIestimator.html">~UIestimator</a>() {}</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="comment">// called from MD engine every step</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="keywordtype">bool</span> update(<a class="code hl_typedef" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a> <span class="comment">/* step */</span>,</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                    std::vector&lt;double&gt; x, std::vector&lt;double&gt; y) {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            <span class="keywordtype">int</span> i;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            <span class="keywordflow">for</span> (i = 0; i &lt; dimension; i++) {</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                <span class="comment">// for dihedral RC, it is possible that x = 179 and y = -179, should correct it</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                <span class="comment">// may have problem, need to fix</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                <span class="keywordflow">if</span> (x[i] &gt; 150 &amp;&amp; y[i] &lt; -150) {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                    y[i] += 360;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                }</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                <span class="keywordflow">if</span> (x[i] &lt; -150 &amp;&amp; y[i] &gt; 150) {</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                    y[i] -= 360;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                <span class="keywordflow">if</span> (x[i] &lt; lowerboundary[i] - EXTENDED_X_SIZE * width[i] + EPSILON || x[i] &gt; upperboundary[i] + EXTENDED_X_SIZE * width[i] - EPSILON \</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                    || y[i] - x[i] &lt; -HALF_Y_SIZE * width[i] + EPSILON || y[i] - x[i] &gt; HALF_Y_SIZE * width[i] - EPSILON \</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                    || y[i] - lowerboundary[i] &lt; -HALF_Y_SIZE * width[i] + EPSILON || y[i] - upperboundary[i] &gt; HALF_Y_SIZE * width[i] - EPSILON)</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            }</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            <span class="keywordflow">for</span> (i = 0; i &lt; dimension; i++) {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                sum_x[i].increase_value(y, x[i]);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                sum_x_square[i].increase_value(y, x[i] * x[i]);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            count_y.increase_value(y, 1);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            <span class="keywordflow">for</span> (i = 0; i &lt; dimension; i++) {</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                <span class="comment">// adapt colvars precision</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                <span class="keywordflow">if</span> (x[i] &lt; lowerboundary[i] + EPSILON || x[i] &gt; upperboundary[i] - EPSILON)</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            }</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            distribution_x_y.increase_value(x, y, 1);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        }</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        <span class="comment">// update the output_filename</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <span class="keywordtype">void</span> update_output_filename(<span class="keyword">const</span> std::string&amp; filename) {</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            output_filename = filename;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        }</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        std::vector&lt;n_vector&lt;double&gt; &gt; sum_x;                        <span class="comment">// the sum of x in each y bin</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        std::vector&lt;n_vector&lt;double&gt; &gt; sum_x_square;                 <span class="comment">// the sum of x in each y bin</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        <a class="code hl_class" href="classUIestimator_1_1n__vector.html">n_vector&lt;int&gt;</a> count_y;                              <span class="comment">// the distribution of y</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        <a class="code hl_class" href="classUIestimator_1_1n__matrix.html">n_matrix</a> distribution_x_y;   <span class="comment">// the distribution of &lt;x, y&gt; pair</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <span class="keywordtype">int</span> dimension;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        std::vector&lt;double&gt; lowerboundary;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        std::vector&lt;double&gt; upperboundary;</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        std::vector&lt;double&gt; width;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        std::vector&lt;double&gt; krestr;</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        std::string output_filename;</div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        <span class="keywordtype">bool</span> restart;</div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        std::vector&lt;std::string&gt; input_filename;</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        <span class="keywordtype">double</span> temperature;</div>
@@ -469,7 +469,7 @@ $(function() {
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        <span class="comment">// calculate gradients from the internal variables</span></div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>        <span class="keywordtype">void</span> calc_pmf() {</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>            <a class="code hl_class" href="classcolvarproxy.html">colvarproxy</a> *proxy = <a class="code hl_function" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">cvm::main</a>()-&gt;<a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">proxy</a>;</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>            <a class="code hl_class" href="classcolvarproxy.html">colvarproxy</a> *proxy = cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>;</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>            <span class="keywordtype">int</span> norm;</div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>            <span class="keywordtype">int</span> i, j, k;</div>
@@ -604,9 +604,9 @@ $(function() {
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>            std::string pmf_filename = output_filename + <span class="stringliteral">&quot;.UI.pmf&quot;</span>;</div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span> </div>
 <div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>            <span class="comment">// only for colvars module!</span></div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>            <span class="keywordflow">if</span> (written_1D) <a class="code hl_function" href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">cvm::backup_file</a>(pmf_filename.c_str());</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>            <span class="keywordflow">if</span> (written_1D) cvmodule-&gt;<a class="code hl_function" href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">backup_file</a>(pmf_filename.c_str());</div>
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span> </div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>            std::ostream &amp;ofile_pmf = <a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a>(pmf_filename,</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>            std::ostream &amp;ofile_pmf = cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a>(pmf_filename,</div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>                                                                <span class="stringliteral">&quot;PMF file&quot;</span>);</div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span> </div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>            std::vector&lt;double&gt; position(1, 0);</div>
@@ -615,7 +615,7 @@ $(function() {
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                position[0] = i + EPSILON;</div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>                ofile_pmf &lt;&lt; oneD_pmf.get_value(position) &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>            }</div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>            <a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a0bd315e7520bf6cb0b0f829b3d16dc7b">close_output_stream</a>(pmf_filename);</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>            cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a0bd315e7520bf6cb0b0f829b3d16dc7b">close_output_stream</a>(pmf_filename);</div>
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span> </div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>            written_1D = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>        }</div>
@@ -633,7 +633,7 @@ $(function() {
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        <span class="keywordtype">void</span> write_interal_data() {</div>
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>            std::string internal_filename = output_filename + <span class="stringliteral">&quot;.UI.internal&quot;</span>;</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span> </div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>            std::ostream &amp;ofile_internal = <a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a>(internal_filename,</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>            std::ostream &amp;ofile_internal = cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a>(internal_filename,</div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                                                                     <span class="stringliteral">&quot;UI internal file&quot;</span>);</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span> </div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>            std::vector&lt;double&gt; loop_flag(dimension, 0);</div>
@@ -673,7 +673,7 @@ $(function() {
 <div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>                }</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>            }</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>            <a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a0bd315e7520bf6cb0b0f829b3d16dc7b">close_output_stream</a>(internal_filename.c_str());</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>            cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a0bd315e7520bf6cb0b0f829b3d16dc7b">close_output_stream</a>(internal_filename.c_str());</div>
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>        }</div>
 <div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span> </div>
 <div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>        <span class="comment">// write output files</span></div>
@@ -685,15 +685,15 @@ $(function() {
 <div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>            <span class="keywordtype">int</span> i, j;</div>
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span><span class="comment">//</span></div>
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>            <span class="comment">// only for colvars module!</span></div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            <span class="keywordflow">if</span> (written) <a class="code hl_function" href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">cvm::backup_file</a>(grad_filename.c_str());</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            <span class="comment">//if (written) cvm::backup_file(hist_filename.c_str());</span></div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>            <span class="keywordflow">if</span> (written) <a class="code hl_function" href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">cvm::backup_file</a>(count_filename.c_str());</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            <span class="keywordflow">if</span> (written) cvmodule-&gt;<a class="code hl_function" href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">backup_file</a>(grad_filename.c_str());</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            <span class="comment">//if (written) cvmodule-&gt;backup_file(hist_filename.c_str());</span></div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>            <span class="keywordflow">if</span> (written) cvmodule-&gt;<a class="code hl_function" href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">backup_file</a>(count_filename.c_str());</div>
 <div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span> </div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>            std::ostream &amp;ofile = <a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a>(grad_filename,</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>            std::ostream &amp;ofile = cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a>(grad_filename,</div>
 <div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>                                                            <span class="stringliteral">&quot;gradient file&quot;</span>);</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>            std::ostream &amp;ofile_hist = <a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a>(hist_filename,</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>            std::ostream &amp;ofile_hist = cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a>(hist_filename,</div>
 <div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>                                                                 <span class="stringliteral">&quot;gradient history file&quot;</span>);</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>            std::ostream &amp;ofile_count = <a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a>(count_filename,</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>            std::ostream &amp;ofile_count = cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">output_stream</a>(count_filename,</div>
 <div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>                                                                  <span class="stringliteral">&quot;count file&quot;</span>);</div>
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span> </div>
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>            writehead(ofile);</div>
@@ -758,9 +758,9 @@ $(function() {
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>                }</div>
 <div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>            }</div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>            <a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a0bd315e7520bf6cb0b0f829b3d16dc7b">close_output_stream</a>(grad_filename.c_str());</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>            <span class="comment">// cvm::proxy-&gt;close_output_stream(hist_filename.c_str());</span></div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>            <a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a0bd315e7520bf6cb0b0f829b3d16dc7b">close_output_stream</a>(count_filename.c_str());</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>            cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a0bd315e7520bf6cb0b0f829b3d16dc7b">close_output_stream</a>(grad_filename.c_str());</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>            <span class="comment">// cvmodule-&gt;proxy-&gt;close_output_stream(hist_filename.c_str());</span></div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>            cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__io.html#a0bd315e7520bf6cb0b0f829b3d16dc7b">close_output_stream</a>(count_filename.c_str());</div>
 <div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span> </div>
 <div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>            written = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>        }</div>
@@ -773,7 +773,7 @@ $(function() {
 <div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>            <span class="keywordtype">int</span> dimension_temp;</div>
 <div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>            <span class="keywordtype">int</span> i, j, k, l, m;</div>
 <div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span> </div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>            <a class="code hl_class" href="classcolvarproxy.html">colvarproxy</a> *proxy = <a class="code hl_function" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">cvm::main</a>()-&gt;<a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">proxy</a>;</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>            <a class="code hl_class" href="classcolvarproxy.html">colvarproxy</a> *proxy = cvmodule-&gt;<a class="code hl_variable" href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">proxy</a>;</div>
 <div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>            std::vector&lt;double&gt; loop_bin_size(dimension, 0);</div>
 <div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>            std::vector&lt;double&gt; position_temp(dimension, 0);</div>
 <div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>            std::vector&lt;double&gt; grad_temp(dimension, 0);</div>
@@ -838,11 +838,11 @@ $(function() {
 <div class="ttc" id="aclassUIestimator_1_1UIestimator_html"><div class="ttname"><a href="classUIestimator_1_1UIestimator.html">UIestimator::UIestimator</a></div><div class="ttdef"><b>Definition:</b> colvar_UIestimator.h:215</div></div>
 <div class="ttc" id="aclassUIestimator_1_1n__matrix_html"><div class="ttname"><a href="classUIestimator_1_1n__matrix.html">UIestimator::n_matrix</a></div><div class="ttdef"><b>Definition:</b> colvar_UIestimator.h:33</div></div>
 <div class="ttc" id="aclassUIestimator_1_1n__vector_html"><div class="ttname"><a href="classUIestimator_1_1n__vector.html">UIestimator::n_vector</a></div><div class="ttdef"><b>Definition:</b> colvar_UIestimator.h:140</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_a0f81a085c6050e309f8238ed64f042c2"><div class="ttname"><a href="classcolvarmodule.html#a0f81a085c6050e309f8238ed64f042c2">colvarmodule::pow</a></div><div class="ttdeci">static real pow(real const &amp;x, real const &amp;y)</div><div class="ttdoc">Reimplemented to work around MS compiler issues.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:118</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_a49efc5129a53b498b9238d3561a0440a"><div class="ttname"><a href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">colvarmodule::backup_file</a></div><div class="ttdeci">static int backup_file(char const *filename)</div><div class="ttdoc">Backup a file before writing it.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:1887</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_aaade094070e7dbdddc1f4c4d99041d07"><div class="ttname"><a href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">colvarmodule::main</a></div><div class="ttdeci">static colvarmodule * main()</div><div class="ttdoc">Access the one instance of the Colvars module.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:200</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_aec8407bc33f5f8ddabc92ec0991e672c"><div class="ttname"><a href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">colvarmodule::proxy</a></div><div class="ttdeci">static colvarproxy * proxy</div><div class="ttdoc">Pointer to the proxy object, used to retrieve atomic data from the hosting program; it is static in o...</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:931</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_af5c180df4b713800d770d96612c59489"><div class="ttname"><a href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">colvarmodule::step_number</a></div><div class="ttdeci">long long step_number</div><div class="ttdoc">Use a 64-bit integer to store the step number.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:95</div></div>
+<div class="ttc" id="aclasscolvarmodule_html"><div class="ttname"><a href="classcolvarmodule.html">colvarmodule</a></div><div class="ttdoc">Collective variables module (main class)</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:72</div></div>
+<div class="ttc" id="aclasscolvarmodule_html_a0f81a085c6050e309f8238ed64f042c2"><div class="ttname"><a href="classcolvarmodule.html#a0f81a085c6050e309f8238ed64f042c2">colvarmodule::pow</a></div><div class="ttdeci">static real pow(real const &amp;x, real const &amp;y)</div><div class="ttdoc">Reimplemented to work around MS compiler issues.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:119</div></div>
+<div class="ttc" id="aclasscolvarmodule_html_a49efc5129a53b498b9238d3561a0440a"><div class="ttname"><a href="classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a">colvarmodule::backup_file</a></div><div class="ttdeci">int backup_file(char const *filename)</div><div class="ttdoc">Backup a file before writing it.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:1887</div></div>
+<div class="ttc" id="aclasscolvarmodule_html_af5c180df4b713800d770d96612c59489"><div class="ttname"><a href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">colvarmodule::step_number</a></div><div class="ttdeci">long long step_number</div><div class="ttdoc">Use a 64-bit integer to store the step number.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:96</div></div>
+<div class="ttc" id="aclasscolvarmodule_html_afeb26a10701cbf0c8b066b41745445d1"><div class="ttname"><a href="classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1">colvarmodule::proxy</a></div><div class="ttdeci">colvarproxy * proxy</div><div class="ttdoc">Pointer to the proxy object, used to retrieve atomic data from the hosting program.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:957</div></div>
 <div class="ttc" id="aclasscolvarproxy__io_html_a0bd315e7520bf6cb0b0f829b3d16dc7b"><div class="ttname"><a href="classcolvarproxy__io.html#a0bd315e7520bf6cb0b0f829b3d16dc7b">colvarproxy_io::close_output_stream</a></div><div class="ttdeci">virtual int close_output_stream(std::string const &amp;output_name)</div><div class="ttdoc">Closes the given output file/channel.</div><div class="ttdef"><b>Definition:</b> colvarproxy_io.cpp:474</div></div>
 <div class="ttc" id="aclasscolvarproxy__io_html_a834c08a7b1df1886adf3e05933530034"><div class="ttname"><a href="classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034">colvarproxy_io::output_stream</a></div><div class="ttdeci">virtual std::ostream &amp; output_stream(std::string const &amp;output_name, std::string const description)</div><div class="ttdef"><b>Definition:</b> colvarproxy_io.cpp:407</div></div>
 <div class="ttc" id="aclasscolvarproxy_html"><div class="ttname"><a href="classcolvarproxy.html">colvarproxy</a></div><div class="ttdef"><b>Definition:</b> colvarproxy.h:564</div></div>
@@ -851,7 +851,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 22 2026 16:40:06 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 24 2026 21:48:35 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

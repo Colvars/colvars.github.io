@@ -174,8 +174,8 @@ $(function() {
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>         <span class="stringliteral">&quot;E : float - Amount of energy to add&quot;</span>,</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>         <span class="keywordtype">char</span> <span class="keyword">const</span> *Earg =</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>           script-&gt;obj_to_str(script-&gt;get_module_cmd_arg(0, objc, objv));</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>         <a class="code hl_function" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">cvm::main</a>()-&gt;<a class="code hl_variable" href="classcolvarmodule.html#a7a5a4cccf4d66137beac717cb7ea3e63">total_bias_energy</a> += strtod(Earg, NULL);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>         <span class="keywordflow">return</span> cvm::get_error(); <span class="comment">// TODO Make this multi-language</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>         script-&gt;module()-&gt;total_bias_energy += strtod(Earg, NULL);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>         <span class="keywordflow">return</span> script-&gt;module()-&gt;get_error(); <span class="comment">// TODO Make this multi-language</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>         )</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>CVSCRIPT(cv_bias,</div>
@@ -204,12 +204,12 @@ $(function() {
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>         script-&gt;proxy()-&gt;add_config(<span class="stringliteral">&quot;config&quot;</span>, conf);</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>         <span class="keywordflow">if</span> (script-&gt;proxy()-&gt;engine_ready()) {</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>           <span class="comment">// Engine allows immediate initialization</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>           <span class="keywordflow">if</span> ((script-&gt;proxy()-&gt;parse_module_config() |</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>           if ((script-&gt;proxy()-&gt;parse_module_config() |</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                script-&gt;proxy()-&gt;setup()) == COLVARS_OK) {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>             <span class="keywordflow">return</span> COLVARS_OK;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>             return COLVARS_OK;</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>           } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>             script-&gt;add_error_msg(<span class="stringliteral">&quot;Error parsing configuration string&quot;</span>);</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>             <span class="keywordflow">return</span> COLVARSCRIPT_ERROR;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>             return COLVARSCRIPT_ERROR;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>           }</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>         }</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>         <span class="comment">// Engine not ready, config will be read during proxy-&gt;setup()</span></div>
@@ -223,14 +223,14 @@ $(function() {
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>         <span class="keywordtype">char</span> <span class="keyword">const</span> *conf_file_name =</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>         script-&gt;obj_to_str(script-&gt;get_module_cmd_arg(0, objc, objv));</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>         script-&gt;proxy()-&gt;add_config(<span class="stringliteral">&quot;configfile&quot;</span>, std::string(conf_file_name));</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>         <span class="keywordflow">if</span> (script-&gt;proxy()-&gt;engine_ready()) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>         if (script-&gt;proxy()-&gt;engine_ready()) {</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>           <span class="comment">// Engine allows immediate initialization</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>           <span class="keywordflow">if</span> ((script-&gt;proxy()-&gt;parse_module_config() |</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>           if ((script-&gt;proxy()-&gt;parse_module_config() |</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                script-&gt;proxy()-&gt;setup()) == COLVARS_OK) {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>             <span class="keywordflow">return</span> COLVARS_OK;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>             return COLVARS_OK;</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>           } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>             script-&gt;add_error_msg(<span class="stringliteral">&quot;Error parsing configuration file&quot;</span>);</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>             <span class="keywordflow">return</span> COLVARSCRIPT_ERROR;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>             return COLVARSCRIPT_ERROR;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>           }</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>         }</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>         <span class="comment">// Engine not ready, config will be read during proxy-&gt;setup()</span></div>
@@ -245,21 +245,21 @@ $(function() {
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>         )</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>CVSCRIPT(cv_featurereport,</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>         <span class="stringliteral">&quot;Return a summary of Colvars features used so far and their citations\n&quot;</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>         <span class="stringliteral">&quot;report : string - Feature report and citations&quot;</span>,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>         &quot;Return a summary of Colvars features used so far and their citations\n&quot;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>         &quot;report : <span class="keywordtype">string</span> - Feature report and citations&quot;,</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>         0, 0,</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>         <span class="keywordflow">return</span> script-&gt;set_result_str(script-&gt;module()-&gt;feature_report());</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>         &quot;&quot;,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>         return script-&gt;set_result_str(script-&gt;module()-&gt;feature_report());</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>         )</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>CVSCRIPT(cv_frame,</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>         <span class="stringliteral">&quot;Get or set current frame number (VMD only)\n&quot;</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>         <span class="stringliteral">&quot;frame : integer - Frame number&quot;</span>,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>         &quot;Get or set current frame number (VMD only)\n&quot;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>         &quot;frame : integer - Frame number&quot;,</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>         0, 1,</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>         <span class="stringliteral">&quot;frame : integer - Frame number&quot;</span>,</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>         <span class="keywordtype">char</span> <span class="keyword">const</span> *arg =</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>         &quot;frame : integer - Frame number&quot;,</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>         <span class="keywordtype">char</span> const *arg =</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>           script-&gt;obj_to_str(script-&gt;get_module_cmd_arg(0, objc, objv));</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>         <span class="keywordflow">if</span> (arg == NULL) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>         if (arg == NULL) {</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>           <span class="keywordtype">long</span> <span class="keywordtype">int</span> f = -1;</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>           <span class="keywordflow">if</span> (script-&gt;proxy()-&gt;get_frame(f) == COLVARS_OK) {</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>             script-&gt;set_result_long_int(f);</div>
@@ -378,7 +378,7 @@ $(function() {
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>         <span class="stringliteral">&quot;conf : string - Current configuration string&quot;</span>,</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>         0, 0,</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>         script-&gt;set_result_str(<a class="code hl_function" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">cvm::main</a>()-&gt;<a class="code hl_function" href="classcolvarmodule.html#a92a4be89e021c073aea18c946c0dc67a">get_config</a>());</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>         script-&gt;set_result_str(script-&gt;module()-&gt;get_config());</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>         <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>         )</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
@@ -387,7 +387,7 @@ $(function() {
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>         <span class="stringliteral">&quot;E : float - Amount of energy (internal units)&quot;</span>,</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>         0, 0,</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>         script-&gt;set_result_real(<a class="code hl_function" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">cvm::main</a>()-&gt;<a class="code hl_variable" href="classcolvarmodule.html#a7a5a4cccf4d66137beac717cb7ea3e63">total_bias_energy</a>);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>         script-&gt;set_result_real(script-&gt;module()-&gt;total_bias_energy);</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>         <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>         )</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
@@ -423,7 +423,7 @@ $(function() {
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>         <span class="stringliteral">&quot;step : int - Absolute step number&quot;</span>,</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>         0, 0,</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>         script-&gt;set_result_int(<a class="code hl_function" href="classcolvarmodule.html#aeefe0d9d151a9d6ca4f8a9b9a72c8ee6">cvm::step_absolute</a>());</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>         script-&gt;set_result_int(script-&gt;module()-&gt;step_absolute());</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>         <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>         )</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
@@ -432,7 +432,7 @@ $(function() {
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>         <span class="stringliteral">&quot;step : int - Relative step number&quot;</span>,</div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>         0, 0,</div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>         script-&gt;set_result_int(<a class="code hl_function" href="classcolvarmodule.html#ae4389d7af99ed3d120843889f5cac6d5">cvm::step_relative</a>());</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>         script-&gt;set_result_int(script-&gt;module()-&gt;step_relative());</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>         <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>         )</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
@@ -454,7 +454,7 @@ $(function() {
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>               script-&gt;set_result_str(script-&gt;get_command_cmdline_help(colvarscript::use_module,</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                                                                       cmdstr));</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>             }</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>             <span class="keywordflow">return</span> cvm::get_error();</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>             <span class="keywordflow">return</span> script-&gt;module()-&gt;get_error();</div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>           } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>             <span class="keywordflow">return</span> COLVARSCRIPT_ERROR;</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>           }</div>
@@ -559,7 +559,7 @@ $(function() {
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>         <span class="keywordtype">char</span> <span class="keyword">const</span> *arg =</div>
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>           script-&gt;obj_to_str(script-&gt;get_module_cmd_arg(0, objc, objv));</div>
 <div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>         <span class="keywordtype">int</span> error_code =</div>
-<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>           script-&gt;proxy()-&gt;set_input_prefix(<a class="code hl_function" href="classcolvarmodule.html#a0ec2a243a95db3bc8df0062c6bd71e75">cvm::state_file_prefix</a>(arg));</div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>           script-&gt;proxy()-&gt;set_input_prefix(script-&gt;module()-&gt;state_file_prefix(arg));</div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>         error_code |= script-&gt;module()-&gt;setup_input();</div>
 <div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>         <span class="keywordflow">if</span> (error_code != COLVARS_OK) {</div>
 <div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>           script-&gt;add_error_msg(<span class="stringliteral">&quot;Error loading state file&quot;</span>);</div>
@@ -617,7 +617,7 @@ $(function() {
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>         <span class="stringliteral">&quot;version : string - Colvars version&quot;</span>,</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>         0, 0,</div>
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>         script-&gt;set_result_int(<a class="code hl_function" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">cvm::main</a>()-&gt;<a class="code hl_function" href="classcolvarmodule.html#a529361d06e70ce7081fae20eedc310a2">patch_version_number</a>());</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>         script-&gt;set_result_int(script-&gt;module()-&gt;patch_version_number());</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>         <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>         )</div>
 <div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span> </div>
@@ -636,7 +636,7 @@ $(function() {
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>         <span class="stringliteral">&quot;Delete all internal configuration&quot;</span>,</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>         0, 0,</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>         <a class="code hl_function" href="classcolvarmodule.html#a8577e7cbc07b18b4fa46c5cb66ac95dd">cvm::log</a>(<span class="stringliteral">&quot;Resetting the Collective Variables module.&quot;</span>);</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>         script-&gt;module()-&gt;log(<span class="stringliteral">&quot;Resetting the Collective Variables module.&quot;</span>);</div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>         <span class="keywordflow">return</span> script-&gt;module()-&gt;reset();</div>
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>         )</div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span> </div>
@@ -644,8 +644,8 @@ $(function() {
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>         <span class="stringliteral">&quot;Clear the index groups loaded so far, allowing to replace them&quot;</span>,</div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>         0, 0,</div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>         <a class="code hl_function" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">cvm::main</a>()-&gt;<a class="code hl_variable" href="classcolvarmodule.html#a2db24c08bb98b1fd5beba926a323bafc">index_group_names</a>.clear();</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>         <a class="code hl_function" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">cvm::main</a>()-&gt;<a class="code hl_variable" href="classcolvarmodule.html#a616a6f4ef799ac663bd50beaa9d07cca">index_groups</a>.clear();</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>         script-&gt;module()-&gt;index_group_names.clear();</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>         script-&gt;module()-&gt;index_groups.clear();</div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>         <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>         )</div>
 <div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
@@ -654,7 +654,7 @@ $(function() {
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>         1, 1,</div>
 <div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>         <span class="stringliteral">&quot;prefix : string - Output prefix with trailing \&quot;.colvars.state\&quot; gets removed)&quot;</span>,</div>
 <div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>         std::string <span class="keyword">const</span> prefix =</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>           <a class="code hl_function" href="classcolvarmodule.html#a0ec2a243a95db3bc8df0062c6bd71e75">cvm::state_file_prefix</a>(script-&gt;obj_to_str(script-&gt;get_module_cmd_arg(0, objc, objv)));</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>           script-&gt;module()-&gt;state_file_prefix(script-&gt;obj_to_str(script-&gt;get_module_cmd_arg(0, objc, objv)));</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>         <span class="keywordtype">int</span> error_code = script-&gt;proxy()-&gt;set_output_prefix(prefix);</div>
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>         error_code |= script-&gt;module()-&gt;setup_output();</div>
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>         error_code |= script-&gt;module()-&gt;write_restart_file(prefix+</div>
@@ -707,9 +707,9 @@ $(function() {
 <div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>         <span class="keywordtype">char</span> <span class="keyword">const</span> *argstr =</div>
 <div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>           script-&gt;obj_to_str(script-&gt;get_module_cmd_arg(0, objc, objv));</div>
 <div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>         <span class="keywordflow">if</span> (argstr) {</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>           <span class="keywordflow">return</span> <a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;<a class="code hl_function" href="classcolvarproxy__system.html#a13c3cf0990c1a7fb63ac93ff5c82a757">set_unit_system</a>(argstr, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>           <span class="keywordflow">return</span> script-&gt;module()-&gt;proxy-&gt;set_unit_system(argstr, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>         } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>           script-&gt;set_result_str(<a class="code hl_variable" href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">cvm::proxy</a>-&gt;units);</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>           script-&gt;set_result_str(script-&gt;module()-&gt;proxy-&gt;units);</div>
 <div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>           <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>         }</div>
 <div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>         )</div>
@@ -740,7 +740,7 @@ $(function() {
 <div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>         <span class="stringliteral">&quot;version : string - Colvars version&quot;</span>,</div>
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>         0, 0,</div>
 <div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>         script-&gt;set_result_str(<a class="code hl_function" href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">cvm::main</a>()-&gt;<a class="code hl_function" href="classcolvarmodule.html#aac7deda838913390b44837fd18160638">version</a>());</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>         script-&gt;set_result_str(script-&gt;module()-&gt;version());</div>
 <div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>         <span class="keywordflow">return</span> COLVARS_OK;</div>
 <div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>         )</div>
 <div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span> </div>
@@ -752,23 +752,10 @@ $(function() {
 <div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>#endif</div>
 <div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span> </div>
 <div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>#endif <span class="comment">// #ifndef COLVARSCRIPT_COMMANDS_H</span></div>
-<div class="ttc" id="aclasscolvarmodule_html_a0ec2a243a95db3bc8df0062c6bd71e75"><div class="ttname"><a href="classcolvarmodule.html#a0ec2a243a95db3bc8df0062c6bd71e75">colvarmodule::state_file_prefix</a></div><div class="ttdeci">static std::string state_file_prefix(char const *filename)</div><div class="ttdoc">Strips .colvars.state from filename and checks that it is not empty.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:1652</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_a2db24c08bb98b1fd5beba926a323bafc"><div class="ttname"><a href="classcolvarmodule.html#a2db24c08bb98b1fd5beba926a323bafc">colvarmodule::index_group_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; index_group_names</div><div class="ttdoc">Names of groups from one or more Gromacs .ndx files.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:805</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_a529361d06e70ce7081fae20eedc310a2"><div class="ttname"><a href="classcolvarmodule.html#a529361d06e70ce7081fae20eedc310a2">colvarmodule::patch_version_number</a></div><div class="ttdeci">int patch_version_number() const</div><div class="ttdoc">Get the patch version number (non-zero only in the patch releases of other packages)</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:49</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_a616a6f4ef799ac663bd50beaa9d07cca"><div class="ttname"><a href="classcolvarmodule.html#a616a6f4ef799ac663bd50beaa9d07cca">colvarmodule::index_groups</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; * &gt; index_groups</div><div class="ttdoc">Groups from one or more Gromacs .ndx files.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:808</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_a7a5a4cccf4d66137beac717cb7ea3e63"><div class="ttname"><a href="classcolvarmodule.html#a7a5a4cccf4d66137beac717cb7ea3e63">colvarmodule::total_bias_energy</a></div><div class="ttdeci">real total_bias_energy</div><div class="ttdoc">Energy of built-in and scripted biases, summed per time-step.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:360</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_a8577e7cbc07b18b4fa46c5cb66ac95dd"><div class="ttname"><a href="classcolvarmodule.html#a8577e7cbc07b18b4fa46c5cb66ac95dd">colvarmodule::log</a></div><div class="ttdeci">static void log(std::string const &amp;message, int min_log_level=10)</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:2104</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_a92a4be89e021c073aea18c946c0dc67a"><div class="ttname"><a href="classcolvarmodule.html#a92a4be89e021c073aea18c946c0dc67a">colvarmodule::get_config</a></div><div class="ttdeci">std::string const &amp; get_config() const</div><div class="ttdoc">Get the configuration string read so far (includes comments)</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:387</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_aaade094070e7dbdddc1f4c4d99041d07"><div class="ttname"><a href="classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07">colvarmodule::main</a></div><div class="ttdeci">static colvarmodule * main()</div><div class="ttdoc">Access the one instance of the Colvars module.</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:200</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_aac7deda838913390b44837fd18160638"><div class="ttname"><a href="classcolvarmodule.html#aac7deda838913390b44837fd18160638">colvarmodule::version</a></div><div class="ttdeci">std::string version() const</div><div class="ttdoc">Get the version string (YYYY-MM-DD format)</div><div class="ttdef"><b>Definition:</b> colvarmodule.cpp:37</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_ae4389d7af99ed3d120843889f5cac6d5"><div class="ttname"><a href="classcolvarmodule.html#ae4389d7af99ed3d120843889f5cac6d5">colvarmodule::step_relative</a></div><div class="ttdeci">static step_number step_relative()</div><div class="ttdoc">Return the current step number from the beginning of this run.</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:277</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_aec8407bc33f5f8ddabc92ec0991e672c"><div class="ttname"><a href="classcolvarmodule.html#aec8407bc33f5f8ddabc92ec0991e672c">colvarmodule::proxy</a></div><div class="ttdeci">static colvarproxy * proxy</div><div class="ttdoc">Pointer to the proxy object, used to retrieve atomic data from the hosting program; it is static in o...</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:931</div></div>
-<div class="ttc" id="aclasscolvarmodule_html_aeefe0d9d151a9d6ca4f8a9b9a72c8ee6"><div class="ttname"><a href="classcolvarmodule.html#aeefe0d9d151a9d6ca4f8a9b9a72c8ee6">colvarmodule::step_absolute</a></div><div class="ttdeci">static step_number step_absolute()</div><div class="ttdef"><b>Definition:</b> colvarmodule.h:284</div></div>
-<div class="ttc" id="aclasscolvarproxy__system_html_a13c3cf0990c1a7fb63ac93ff5c82a757"><div class="ttname"><a href="classcolvarproxy__system.html#a13c3cf0990c1a7fb63ac93ff5c82a757">colvarproxy_system::set_unit_system</a></div><div class="ttdeci">virtual int set_unit_system(std::string const &amp;units, bool check_only)</div><div class="ttdoc">Request to set the units used internally by Colvars.</div><div class="ttdef"><b>Definition:</b> colvarproxy_system.cpp:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 22 2026 16:40:06 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 24 2026 21:48:36 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

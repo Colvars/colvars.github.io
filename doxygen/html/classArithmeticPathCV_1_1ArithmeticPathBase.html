@@ -95,16 +95,33 @@ Collaboration diagram for ArithmeticPathCV::ArithmeticPathBase&lt; scalar_type &
 <div class="dyncontent">
 <div class="center"><img src="classArithmeticPathCV_1_1ArithmeticPathBase__coll__graph.png" border="0" usemap="#aArithmeticPathCV_1_1ArithmeticPathBase_3_01scalar__type_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aArithmeticPathCV_1_1ArithmeticPathBase_3_01scalar__type_01_4_coll__map" id="aArithmeticPathCV_1_1ArithmeticPathBase_3_01scalar__type_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,108,197,148"/>
-<area shape="rect" title=" " alt="" coords="27,5,175,31"/>
+<area shape="rect" title=" " alt="" coords="617,29,809,69"/>
+<area shape="rect" title=" " alt="" coords="313,14,461,39"/>
+<area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="337,239,436,265"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="668,198,759,223"/>
+<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="643,285,784,310"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="669,523,758,549"/>
+<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="901,154,991,179"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="337,103,437,129"/>
+<area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="318,409,455,434"/>
+<area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="5,409,152,434"/>
+<area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="321,458,453,483"/>
+<area shape="rect" href="classcolvarproxy__atom__groups.html" title="Container of atom group data (allow collection of aggregated atomic data)" alt="" coords="301,507,472,533"/>
+<area shape="rect" href="classcolvarproxy__volmaps.html" title="Container of grid&#45;based objects." alt="" coords="315,557,459,582"/>
+<area shape="rect" href="classcolvarproxy__smp.html" title="Methods for SMP parallelization." alt="" coords="326,606,447,631"/>
+<area shape="rect" href="classcolvarproxy__replicas.html" title="Methods for multiple&#45;replica communication." alt="" coords="316,655,457,681"/>
+<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1076,129,1204,154"/>
+<area shape="rect" href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="331,705,442,730"/>
+<area shape="rect" href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="333,754,440,779"/>
+<area shape="rect" href="classcolvarproxy__gpu.html" title="Class for managing GPU memory allocation and data transfer." alt="" coords="328,803,445,829"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8c10540969b3455d40e92fbceebbe416"><td class="memItemLeft" align="right" valign="top"><a id="a8c10540969b3455d40e92fbceebbe416" name="a8c10540969b3455d40e92fbceebbe416"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (size_t p_num_elements, size_t p_total_frames, scalar_type p_lambda, const vector&lt; scalar_type &gt; &amp;p_weights)</td></tr>
-<tr class="separator:a8c10540969b3455d40e92fbceebbe416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1be68645583bc134af37cd9524da4f7"><td class="memItemLeft" align="right" valign="top"><a id="ab1be68645583bc134af37cd9524da4f7" name="ab1be68645583bc134af37cd9524da4f7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (size_t p_num_elements, size_t p_total_frames, scalar_type p_lambda, const vector&lt; scalar_type &gt; &amp;p_weights, <a class="el" href="classcolvarmodule.html">colvarmodule</a> *cvmodule_in)</td></tr>
+<tr class="separator:ab1be68645583bc134af37cd9524da4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafd25a6ff259f3b4aa26e561b078fa11"><td class="memItemLeft" align="right" valign="top"><a id="aafd25a6ff259f3b4aa26e561b078fa11" name="aafd25a6ff259f3b4aa26e561b078fa11"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reComputeLambda</b> (const vector&lt; scalar_type &gt; &amp;rmsd_between_refs)</td></tr>
 <tr class="separator:aafd25a6ff259f3b4aa26e561b078fa11"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,6 +163,9 @@ scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>normalization_
 <tr class="memitem:af734f9e38a975d206d9dfce21fdcd4ad"><td class="memItemLeft" align="right" valign="top"><a id="af734f9e38a975d206d9dfce21fdcd4ad" name="af734f9e38a975d206d9dfce21fdcd4ad"></a>
 scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>saved_s</b></td></tr>
 <tr class="separator:af734f9e38a975d206d9dfce21fdcd4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a6fbb109a21a2f63804241b08ef210"><td class="memItemLeft" align="right" valign="top"><a id="a56a6fbb109a21a2f63804241b08ef210" name="a56a6fbb109a21a2f63804241b08ef210"></a>
+<a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cvmodule</b></td></tr>
+<tr class="separator:a56a6fbb109a21a2f63804241b08ef210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="colvar__arithmeticpath_8h_source.html">colvar_arithmeticpath.h</a></li>
@@ -153,7 +173,7 @@ scalar_type&#160;</td><td class="memItemRight" valign="bottom"><b>saved_s</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 22 2026 16:40:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 24 2026 21:48:37 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

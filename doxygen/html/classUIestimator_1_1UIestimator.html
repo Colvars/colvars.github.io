@@ -85,6 +85,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classUIestimator_1_1UIestimator-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">UIestimator::UIestimator Class Reference</div></div>
@@ -95,19 +96,36 @@ Collaboration diagram for UIestimator::UIestimator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classUIestimator_1_1UIestimator__coll__graph.png" border="0" usemap="#aUIestimator_1_1UIestimator_coll__map" alt="Collaboration graph"/></div>
 <map name="aUIestimator_1_1UIestimator_coll__map" id="aUIestimator_1_1UIestimator_coll__map">
-<area shape="rect" title=" " alt="" coords="319,101,485,126"/>
-<area shape="rect" href="classUIestimator_1_1n__vector.html" title=" " alt="" coords="17,5,163,45"/>
-<area shape="rect" href="classUIestimator_1_1n__matrix.html" title=" " alt="" coords="16,70,164,95"/>
-<area shape="rect" href="classUIestimator_1_1n__vector.html" title=" " alt="" coords="5,123,175,163"/>
-<area shape="rect" href="classUIestimator_1_1n__vector.html" title=" " alt="" coords="17,187,163,227"/>
+<area shape="rect" title=" " alt="" coords="616,123,783,148"/>
+<area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="337,448,436,473"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="654,335,745,360"/>
+<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="629,444,770,469"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="655,737,744,763"/>
+<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="875,687,964,712"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="337,255,437,280"/>
+<area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="318,605,455,631"/>
+<area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="5,605,152,631"/>
+<area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="321,655,453,680"/>
+<area shape="rect" href="classcolvarproxy__atom__groups.html" title="Container of atom group data (allow collection of aggregated atomic data)" alt="" coords="301,704,472,729"/>
+<area shape="rect" href="classcolvarproxy__volmaps.html" title="Container of grid&#45;based objects." alt="" coords="315,753,459,779"/>
+<area shape="rect" href="classcolvarproxy__smp.html" title="Methods for SMP parallelization." alt="" coords="326,803,447,828"/>
+<area shape="rect" href="classcolvarproxy__replicas.html" title="Methods for multiple&#45;replica communication." alt="" coords="316,852,457,877"/>
+<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1049,716,1177,741"/>
+<area shape="rect" href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="331,901,442,927"/>
+<area shape="rect" href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="333,951,440,976"/>
+<area shape="rect" href="classcolvarproxy__gpu.html" title="Class for managing GPU memory allocation and data transfer." alt="" coords="328,1000,445,1025"/>
+<area shape="rect" href="classUIestimator_1_1n__vector.html" title=" " alt="" coords="313,190,460,230"/>
+<area shape="rect" href="classUIestimator_1_1n__matrix.html" title=" " alt="" coords="313,5,461,31"/>
+<area shape="rect" href="classUIestimator_1_1n__vector.html" title=" " alt="" coords="302,57,471,97"/>
+<area shape="rect" href="classUIestimator_1_1n__vector.html" title=" " alt="" coords="313,121,460,161"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af929c1a2aecfc223c19dc339f154687b"><td class="memItemLeft" align="right" valign="top"><a id="af929c1a2aecfc223c19dc339f154687b" name="af929c1a2aecfc223c19dc339f154687b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>UIestimator</b> (const std::vector&lt; double &gt; &amp;lowerboundary_input, const std::vector&lt; double &gt; &amp;upperboundary_input, const std::vector&lt; double &gt; &amp;width_input, const std::vector&lt; double &gt; &amp;krestr_input, const std::string &amp;output_filename_input, const int output_freq_input, const bool restart_input, const std::vector&lt; std::string &gt; &amp;input_filename_input, const double temperature_input)</td></tr>
-<tr class="separator:af929c1a2aecfc223c19dc339f154687b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5403568cf991eed0a29c443ae42f52"><td class="memItemLeft" align="right" valign="top"><a id="a9c5403568cf991eed0a29c443ae42f52" name="a9c5403568cf991eed0a29c443ae42f52"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UIestimator</b> (<a class="el" href="classcolvarmodule.html">colvarmodule</a> *cvmodule_in, const std::vector&lt; double &gt; &amp;lowerboundary_in, const std::vector&lt; double &gt; &amp;upperboundary_in, const std::vector&lt; double &gt; &amp;width_in, const std::vector&lt; double &gt; &amp;krestr_in, const std::string &amp;output_filename_in, const bool restart_in, const std::vector&lt; std::string &gt; &amp;input_filename_in, const double temperature_in)</td></tr>
+<tr class="separator:a9c5403568cf991eed0a29c443ae42f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c1ceb5e416660559684a6871282493"><td class="memItemLeft" align="right" valign="top"><a id="ad1c1ceb5e416660559684a6871282493" name="ad1c1ceb5e416660559684a6871282493"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a>, std::vector&lt; double &gt; x, std::vector&lt; double &gt; y)</td></tr>
 <tr class="separator:ad1c1ceb5e416660559684a6871282493"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +153,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write_files</b> ()</t
 <tr class="memitem:a5defd07e941b69f843aa72dba16bc960"><td class="memItemLeft" align="right" valign="top"><a id="a5defd07e941b69f843aa72dba16bc960" name="a5defd07e941b69f843aa72dba16bc960"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>read_inputfiles</b> (const std::vector&lt; std::string &gt; filename)</td></tr>
 <tr class="separator:a5defd07e941b69f843aa72dba16bc960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a46d704592ac410fcd758217b1f9b4538"><td class="memItemLeft" align="right" valign="top"><a id="a46d704592ac410fcd758217b1f9b4538" name="a46d704592ac410fcd758217b1f9b4538"></a>
+<a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cvmodule</b></td></tr>
+<tr class="separator:a46d704592ac410fcd758217b1f9b4538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -168,9 +192,6 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memitem:a7039d4767d45d3a6e8ba0c3e2bcb6b38"><td class="memItemLeft" align="right" valign="top"><a id="a7039d4767d45d3a6e8ba0c3e2bcb6b38" name="a7039d4767d45d3a6e8ba0c3e2bcb6b38"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>output_filename</b></td></tr>
 <tr class="separator:a7039d4767d45d3a6e8ba0c3e2bcb6b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b49f58a957c6c207a71e62644f892f"><td class="memItemLeft" align="right" valign="top"><a id="a64b49f58a957c6c207a71e62644f892f" name="a64b49f58a957c6c207a71e62644f892f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>output_freq</b></td></tr>
-<tr class="separator:a64b49f58a957c6c207a71e62644f892f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88da3a25fe6a8ad5fde29e9b3401b0f6"><td class="memItemLeft" align="right" valign="top"><a id="a88da3a25fe6a8ad5fde29e9b3401b0f6" name="a88da3a25fe6a8ad5fde29e9b3401b0f6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>restart</b></td></tr>
 <tr class="separator:a88da3a25fe6a8ad5fde29e9b3401b0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,7 +235,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>written_1D</b></td></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 22 2026 16:40:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 24 2026 21:48:37 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -85,6 +85,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classcolvarmodule_1_1usage-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">colvarmodule::usage Class Reference</div></div>
@@ -93,13 +94,37 @@ $(function() {
 
 <p>Track usage of Colvars features.  
  <a href="classcolvarmodule_1_1usage.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for colvarmodule::usage:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcolvarmodule_1_1usage__coll__graph.png" border="0" usemap="#acolvarmodule_1_1usage_coll__map" alt="Collaboration graph"/></div>
+<map name="acolvarmodule_1_1usage_coll__map" id="acolvarmodule_1_1usage_coll__map">
+<area shape="rect" title="Track usage of Colvars features." alt="" coords="5,115,147,141"/>
+<area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="257,115,355,141"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="493,206,584,231"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="981,343,1071,369"/>
+<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="494,131,583,157"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="256,250,356,275"/>
+<area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="778,491,915,517"/>
+<area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="465,491,612,517"/>
+<area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="781,245,913,270"/>
+<area shape="rect" href="classcolvarproxy__atom__groups.html" title="Container of atom group data (allow collection of aggregated atomic data)" alt="" coords="761,294,932,319"/>
+<area shape="rect" href="classcolvarproxy__volmaps.html" title="Container of grid&#45;based objects." alt="" coords="775,343,919,369"/>
+<area shape="rect" href="classcolvarproxy__smp.html" title="Methods for SMP parallelization." alt="" coords="786,393,907,418"/>
+<area shape="rect" href="classcolvarproxy__replicas.html" title="Methods for multiple&#45;replica communication." alt="" coords="776,442,917,467"/>
+<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="783,131,911,157"/>
+<area shape="rect" href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="791,541,902,566"/>
+<area shape="rect" href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="793,590,900,615"/>
+<area shape="rect" href="classcolvarproxy__gpu.html" title="Class for managing GPU memory allocation and data transfer." alt="" coords="788,639,905,665"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa82fbf12cacca080bbf02eef3a5a1abb"><td class="memItemLeft" align="right" valign="top"><a id="aa82fbf12cacca080bbf02eef3a5a1abb" name="aa82fbf12cacca080bbf02eef3a5a1abb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>usage</b> ()</td></tr>
-<tr class="memdesc:aa82fbf12cacca080bbf02eef3a5a1abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
-<tr class="separator:aa82fbf12cacca080bbf02eef3a5a1abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5c765ee99cf5ad3919d3798cf32d86"><td class="memItemLeft" align="right" valign="top"><a id="a9f5c765ee99cf5ad3919d3798cf32d86" name="a9f5c765ee99cf5ad3919d3798cf32d86"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>usage</b> (<a class="el" href="classcolvarmodule.html">colvarmodule</a> *cvmodule_in)</td></tr>
+<tr class="memdesc:a9f5c765ee99cf5ad3919d3798cf32d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+<tr class="separator:a9f5c765ee99cf5ad3919d3798cf32d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eb9688ca646fb92bf63afd6ee253958"><td class="memItemLeft" align="right" valign="top"><a id="a2eb9688ca646fb92bf63afd6ee253958" name="a2eb9688ca646fb92bf63afd6ee253958"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>cite_feature</b> (std::string const &amp;feature)</td></tr>
 <tr class="memdesc:a2eb9688ca646fb92bf63afd6ee253958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment usage count for the given feature; return error if not found. <br /></td></tr>
@@ -112,6 +137,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>cite_paper</b> (std::s
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>report</b> (int flag)</td></tr>
 <tr class="memdesc:afc83da5069854cb34ec1b0e4614c7288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a report for used features (0 = URL, 1 = BibTeX) <br /></td></tr>
 <tr class="separator:afc83da5069854cb34ec1b0e4614c7288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a4a2f06f4c8a4f693fc3101433eac2736"><td class="memItemLeft" align="right" valign="top"><a id="a4a2f06f4c8a4f693fc3101433eac2736" name="a4a2f06f4c8a4f693fc3101433eac2736"></a>
+<a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cvmodule</b></td></tr>
+<tr class="separator:a4a2f06f4c8a4f693fc3101433eac2736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -144,7 +175,7 @@ std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" va
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 22 2026 16:40:07 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Mar 24 2026 21:48:36 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

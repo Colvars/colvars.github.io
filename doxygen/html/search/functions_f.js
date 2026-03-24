@@ -10,7 +10,7 @@ var searchData=
   ['operator_7c_7',['operator|',['../colvarparse_8h.html#a8cce97d215886ef0a37e3f07e0826c83',1,'colvarparse.h']]],
   ['output_5fbuffer_8',['output_buffer',['../classcvm_1_1memory__stream.html#a3001a5bdca52296cf9b3bfe217fbb30a',1,'cvm::memory_stream']]],
   ['output_5flocation_9',['output_location',['../classcvm_1_1memory__stream.html#a104304f4e2f2e0182da0067fb5ef0d19',1,'cvm::memory_stream']]],
-  ['output_5fprefix_10',['output_prefix',['../classcolvarmodule.html#aea0e1fab0f3202d0520efd99c1874f2c',1,'colvarmodule::output_prefix()'],['../classcolvarproxy__io.html#ad394a4fb49ced4697800447576cbc486',1,'colvarproxy_io::output_prefix() const']]],
+  ['output_5fprefix_10',['output_prefix',['../classcolvarmodule.html#a821a1cf8bb6173b7e4236244e5c5d087',1,'colvarmodule::output_prefix()'],['../classcolvarproxy__io.html#ad394a4fb49ced4697800447576cbc486',1,'colvarproxy_io::output_prefix() const']]],
   ['output_5fstream_11',['output_stream',['../classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034',1,'colvarproxy_io::output_stream()'],['../classcolvarproxy__namd.html#a94ffd9f0a0837958f0d1a50291b61b7b',1,'colvarproxy_namd::output_stream()']]],
   ['output_5fstream_5fexists_12',['output_stream_exists',['../classcolvarproxy__io.html#a9f6b7ccd8b68569ddab5b061ddeebe86',1,'colvarproxy_io']]],
   ['output_5ftraj_13',['output_traj',['../classcolvarbias__meta_1_1hill.html#ace9d0b2e01e7e042961b0c80d25001b5',1,'colvarbias_meta::hill']]],
