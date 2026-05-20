@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['r0_0',['r0',['../classcolvar_1_1selfcoordnum.html#adad6196c38860e9590080870c7b46112',1,'colvar::selfcoordnum::r0()'],['../classcolvar_1_1coordnum.html#a892f0166432807e51bc8d2e2d71fd194',1,'colvar::coordnum::r0()'],['../classcolvar_1_1alpha__angles.html#aad92a8ecfa66484194c52ec940d36aed',1,'colvar::alpha_angles::r0()'],['../classcolvar_1_1groupcoordnum.html#aedb71de81d5eb86714df29ba057a4791',1,'colvar::groupcoordnum::r0()'],['../classcolvar_1_1h__bond.html#a7dd11f17797f33d3fe3bd271cdd229bd',1,'colvar::h_bond::r0()']]],
-  ['r0_5fvec_1',['r0_vec',['../classcolvar_1_1coordnum.html#afb42bd7e45175a419ca5bfc037f6ec92',1,'colvar::coordnum::r0_vec()'],['../classcolvar_1_1groupcoordnum.html#a0dc9030d37d7ea6bde84654eeaa48638',1,'colvar::groupcoordnum::r0_vec()']]],
+  ['r0_0',['r0',['../classcolvar_1_1alpha__angles.html#aad92a8ecfa66484194c52ec940d36aed',1,'colvar::alpha_angles']]],
+  ['r0_5fvec_1',['r0_vec',['../classcolvar_1_1coordnum.html#afb42bd7e45175a419ca5bfc037f6ec92',1,'colvar::coordnum::r0_vec()'],['../classcolvar_1_1h__bond.html#adadb7dbd97b7857be7982808c7ecc690',1,'colvar::h_bond::r0_vec()']]],
   ['r12_2',['r12',['../classcolvar_1_1dihedral.html#a4fa33a834478d2ac8e5f88cf009c47cd',1,'colvar::dihedral']]],
   ['r21_3',['r21',['../classcolvar_1_1angle.html#a1b32c1888ac24e1884b494f979daba65',1,'colvar::angle::r21()'],['../classcolvar_1_1dipole__angle.html#a40b894b4c874859a92238e55a6756bb4',1,'colvar::dipole_angle::r21()']]],
   ['r21l_4',['r21l',['../classcolvar_1_1angle.html#adbd652d28a40bd7b9279ac081b21ec75',1,'colvar::angle::r21l()'],['../classcolvar_1_1dipole__angle.html#a489d8fd2d8676bf8992225752eaf5620',1,'colvar::dipole_angle::r21l()']]],
@@ -29,7 +29,7 @@ var searchData=
   ['replica_5ffile_5fname_26',['replica_file_name',['../classcolvarbias__meta.html#ad80baedff55b5220d5ae830c6f1adaf2',1,'colvarbias_meta']]],
   ['replica_5fhills_5ffile_27',['replica_hills_file',['../classcolvarbias__meta.html#a4fd7733db5e8c953b89196125f967425',1,'colvarbias_meta']]],
   ['replica_5fhills_5ffile_5fpos_28',['replica_hills_file_pos',['../classcolvarbias__meta.html#aafce84d1ae7508a814ced00601b03440',1,'colvarbias_meta']]],
-  ['replica_5fid_29',['replica_id',['../classcolvarbias__meta.html#a0a1d3153d281d4c5397c2802865e7253',1,'colvarbias_meta::replica_id()'],['../classcolvarbias__opes.html#a1d090328cdcc6e358bb76cbd0e41fbd8',1,'colvarbias_opes::replica_id()']]],
+  ['replica_5fid_29',['replica_id',['../classcolvarbias__opes.html#a1d090328cdcc6e358bb76cbd0e41fbd8',1,'colvarbias_opes::replica_id()'],['../classcolvarbias__meta.html#a0a1d3153d281d4c5397c2802865e7253',1,'colvarbias_meta::replica_id()']]],
   ['replica_5flist_5ffile_30',['replica_list_file',['../classcolvarbias__meta.html#a35c9b1bd6c7f3adb7bf27b846d572045',1,'colvarbias_meta']]],
   ['replica_5fstate_5ffile_31',['replica_state_file',['../classcolvarbias__meta.html#a5bda66f1f8710a219ceadd0f703b0d83',1,'colvarbias_meta']]],
   ['replica_5fstate_5ffile_5fin_5fsync_32',['replica_state_file_in_sync',['../classcolvarbias__meta.html#aabb2fea025b59a2b7448660486351067',1,'colvarbias_meta']]],

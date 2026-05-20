@@ -7,10 +7,11 @@ var searchData=
   ['arithmeticpathbase_4',['ArithmeticPathBase',['../classArithmeticPathCV_1_1ArithmeticPathBase.html',1,'ArithmeticPathCV']]],
   ['arithmeticpathbase_3c_20cvm_3a_3areal_20_3e_5',['ArithmeticPathBase&lt; cvm::real &gt;',['../classArithmeticPathCV_1_1ArithmeticPathBase.html',1,'ArithmeticPathCV']]],
   ['arithmeticpathimpl_6',['ArithmeticPathImpl',['../structArithmeticPathImpl.html',1,'']]],
-  ['aspath_7',['aspath',['../classcolvar_1_1aspath.html',1,'colvar']]],
-  ['aspathcv_8',['aspathCV',['../classcolvar_1_1aspathCV.html',1,'colvar']]],
-  ['atom_5fgroup_9',['atom_group',['../classcvm_1_1atom__group.html',1,'cvm']]],
-  ['atom_5fmodifier_10',['atom_modifier',['../classcvm_1_1atom__group_1_1atom__modifier.html',1,'cvm::atom_group']]],
-  ['azpath_11',['azpath',['../classcolvar_1_1azpath.html',1,'colvar']]],
-  ['azpathcv_12',['azpathCV',['../classcolvar_1_1azpathCV.html',1,'colvar']]]
+  ['array1d_7',['array1d',['../classcolvars__gpu_1_1array1d.html',1,'colvars_gpu']]],
+  ['aspath_8',['aspath',['../classcolvar_1_1aspath.html',1,'colvar']]],
+  ['aspathcv_9',['aspathCV',['../classcolvar_1_1aspathCV.html',1,'colvar']]],
+  ['atom_5fgroup_10',['atom_group',['../classcvm_1_1atom__group.html',1,'cvm']]],
+  ['atom_5fmodifier_11',['atom_modifier',['../classcvm_1_1atom__group_1_1atom__modifier.html',1,'cvm::atom_group']]],
+  ['azpath_12',['azpath',['../classcolvar_1_1azpath.html',1,'colvar']]],
+  ['azpathcv_13',['azpathCV',['../classcolvar_1_1azpathCV.html',1,'colvar']]]
 ];

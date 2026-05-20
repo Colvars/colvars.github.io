@@ -81,6 +81,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -170,9 +171,17 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_time_step_
 <tr class="memitem:a08a7bdceb8b248be2b25bd692db857e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a08a7bdceb8b248be2b25bd692db857e7">add_energy</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> energy)</td></tr>
 <tr class="memdesc:a08a7bdceb8b248be2b25bd692db857e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass restraint energy value for current timestep to MD engine.  <a href="classcolvarproxy__system.html#a08a7bdceb8b248be2b25bd692db857e7">More...</a><br /></td></tr>
 <tr class="separator:a08a7bdceb8b248be2b25bd692db857e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51283ce8473f9d5cee48ba08c0f52cf6"><td class="memItemLeft" align="right" valign="top"><a id="a51283ce8473f9d5cee48ba08c0f52cf6" name="a51283ce8473f9d5cee48ba08c0f52cf6"></a>
+bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>use_internal_pbc</b> ()</td></tr>
+<tr class="memdesc:a51283ce8473f9d5cee48ba08c0f52cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the PBC functions from the Colvars library (as opposed to MD engine) <br /></td></tr>
+<tr class="separator:a51283ce8473f9d5cee48ba08c0f52cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb4d3c83d0056453dcef04bad51d4f98"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98">position_distance</a> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2) const</td></tr>
-<tr class="memdesc:acb4d3c83d0056453dcef04bad51d4f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions.  <a href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98">More...</a><br /></td></tr>
+<tr class="memdesc:acb4d3c83d0056453dcef04bad51d4f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions (using the MD engine's convention)  <a href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98">More...</a><br /></td></tr>
 <tr class="separator:acb4d3c83d0056453dcef04bad51d4f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9feea560d247f23b663cc0179057a511"><td class="memItemLeft" align="right" valign="top"><a id="a9feea560d247f23b663cc0179057a511" name="a9feea560d247f23b663cc0179057a511"></a>
+<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_distance_internal</b> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2) const</td></tr>
+<tr class="memdesc:a9feea560d247f23b663cc0179057a511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline version of <a class="el" href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98" title="Get the PBC-aware distance vector between two positions (using the MD engine&#39;s convention)">position_distance()</a> <br /></td></tr>
+<tr class="separator:a9feea560d247f23b663cc0179057a511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c66f44f9884db5aecce398652cb4fe3"><td class="memItemLeft" align="right" valign="top"><a id="a3c66f44f9884db5aecce398652cb4fe3" name="a3c66f44f9884db5aecce398652cb4fe3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update_pbc_lattice</b> ()</td></tr>
 <tr class="memdesc:a3c66f44f9884db5aecce398652cb4fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recompute PBC reciprocal lattice (assumes XYZ periodicity) <br /></td></tr>
@@ -222,6 +231,11 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>get_d2E_dlambd
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>accelMD_enabled</b> () const</td></tr>
 <tr class="separator:a234bee0343910d9c792061e77cbe2cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a0be83c5c754bbda94878386bc1b92dec"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a0be83c5c754bbda94878386bc1b92dec">position_distance_kernel</a> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;a, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;b, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;c, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;a_r, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;b_r, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;c_r, bool a_p=false, bool b_p=false, bool c_p=false)</td></tr>
+<tr class="separator:a0be83c5c754bbda94878386bc1b92dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a8a5e36132ec3e2a88b606d21a2f73ffc"><td class="memItemLeft" align="right" valign="top"><a id="a8a5e36132ec3e2a88b606d21a2f73ffc" name="a8a5e36132ec3e2a88b606d21a2f73ffc"></a>
@@ -240,7 +254,6 @@ Protected Types</h2></td></tr>
 , <b>boundaries_pbc_triclinic</b>
 , <b>boundaries_unsupported</b>
  }</td></tr>
-<tr class="memdesc:a207331557018b66dce3c71407bef9a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of boundary conditions.  <a href="classcolvarproxy__system.html#a207331557018b66dce3c71407bef9a77">More...</a><br /></td></tr>
 <tr class="separator:a207331557018b66dce3c71407bef9a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -280,6 +293,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>time_step_factor_</b> 
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested</b></td></tr>
 <tr class="memdesc:a06bb0f93d033632f2ff0c79c05d55baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the total forces have been requested. <br /></td></tr>
 <tr class="separator:a06bb0f93d033632f2ff0c79c05d55baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a007956482988d0d39e9463478a4a3dd9"><td class="memItemLeft" align="right" valign="top"><a id="a007956482988d0d39e9463478a4a3dd9" name="a007956482988d0d39e9463478a4a3dd9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_internal_pbc_</b> = false</td></tr>
+<tr class="memdesc:a007956482988d0d39e9463478a4a3dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the PBC functions from the Colvars library (as opposed to MD engine) <br /></td></tr>
+<tr class="separator:a007956482988d0d39e9463478a4a3dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada312da21ae5b62d1f31032537cadfaf"><td class="memItemLeft" align="right" valign="top"><a id="ada312da21ae5b62d1f31032537cadfaf" name="ada312da21ae5b62d1f31032537cadfaf"></a>
 <a class="el" href="classcolvarproxy__system.html#a207331557018b66dce3c71407bef9a77">Boundaries_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>boundaries_type</b></td></tr>
 <tr class="memdesc:ada312da21ae5b62d1f31032537cadfaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of boundary conditions. <br /></td></tr>
@@ -327,9 +344,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Type of boundary conditions. </p>
-<p >Orthogonal and triclinic cells are made available to objects. For any other conditions (mixed periodicity, triclinic cells in LAMMPS) minimum-image distances are computed by the host engine regardless. </p>
+<p >Type of boundary conditions defined for the current computation</p>
+<p >Orthogonal and triclinic cells are made available to objects. For any other conditions (mixed periodicity, triclinic cells in LAMMPS) minimum-image distances are computed by the host engine by default </p>
 
 </div>
 </div>
@@ -521,9 +537,116 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 </table>
 </div><div class="memdoc">
 
-<p>Get the PBC-aware distance vector between two positions. </p>
+<p>Get the PBC-aware distance vector between two positions (using the MD engine's convention) </p>
 
 <p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#ae1a90b25c34e96254cda66b2752de805">colvarproxy_namd</a>, and <a class="el" href="classcolvarproxy__lammps.html#a613952285da6ae5048ac1165131b8e3e">colvarproxy_lammps</a>.</p>
+
+</div>
+</div>
+<a id="a0be83c5c754bbda94878386bc1b92dec" name="a0be83c5c754bbda94878386bc1b92dec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0be83c5c754bbda94878386bc1b92dec">&#9670;&#160;</a></span>position_distance_kernel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> colvarproxy_system::position_distance_kernel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;&#160;</td>
+          <td class="paramname"><em>pos1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;&#160;</td>
+          <td class="paramname"><em>pos2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;&#160;</td>
+          <td class="paramname"><em>a_r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;&#160;</td>
+          <td class="paramname"><em>b_r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;&#160;</td>
+          <td class="paramname"><em>c_r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>a_p</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b_p</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>c_p</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Kernel used by <a class="el" href="classcolvarproxy__system.html#a9feea560d247f23b663cc0179057a511" title="Inline version of position_distance()">position_distance_internal()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos1</td><td>First position </td></tr>
+    <tr><td class="paramname">pos2</td><td>Second position </td></tr>
+    <tr><td class="paramname">a</td><td>Unit cell vector </td></tr>
+    <tr><td class="paramname">b</td><td>Unit cell vector </td></tr>
+    <tr><td class="paramname">c</td><td>Unit cell vector </td></tr>
+    <tr><td class="paramname">a_r</td><td>Reciprocal cell vector </td></tr>
+    <tr><td class="paramname">b_r</td><td>Reciprocal cell vector </td></tr>
+    <tr><td class="paramname">c_r</td><td>Reciprocal cell vector </td></tr>
+    <tr><td class="paramname">a_p</td><td>Is this dimension periodic? </td></tr>
+    <tr><td class="paramname">b_p</td><td>Is this dimension periodic? </td></tr>
+    <tr><td class="paramname">c_p</td><td>Is this dimension periodic? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(pos2 - pos1) without periodicity, minimum-image difference otherwise </dd></dl>
 
 </div>
 </div>
@@ -780,7 +903,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 24 2026 21:48:37 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed May 20 2026 15:05:16 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

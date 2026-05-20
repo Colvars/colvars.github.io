@@ -16,7 +16,7 @@ var searchData=
   ['magic_13',['magic',['../classcolvarscript.html#a54a1c84d4eb9e01cbbc0f8c99b420f65',1,'colvarscript']]],
   ['main_14',['main',['../classcolvar_1_1distance__z.html#a28518aa5c21b928dbde766a9da6812dd',1,'colvar::distance_z::main()'],['../classcolvarmodule.html#aaade094070e7dbdddc1f4c4d99041d07',1,'colvarmodule::main()']]],
   ['main_20page_15',['Main page',['../index.html',1,'']]],
-  ['main_5floop_16',['main_loop',['../classcolvar_1_1coordnum.html#adb0961965c055eb19c546049365ced84',1,'colvar::coordnum']]],
+  ['main_5floop_16',['main_loop',['../classcolvar_1_1coordnum.html#ae41d35e1ea5ac4c279c81e1ee60083ec',1,'colvar::coordnum']]],
   ['map_5fgrid_17',['map_grid',['../classcolvar__grid.html#ae5730d70387aaad037d79794f4e594ac',1,'colvar_grid']]],
   ['map_5ftotal_18',['map_total',['../classcolvar_1_1map__total.html',1,'colvar']]],
   ['mark_5fkey_5fset_5fdefault_19',['mark_key_set_default',['../classcolvarparse.html#af698c38d74eaa9aabcf2ceb8f8bb897a',1,'colvarparse']]],

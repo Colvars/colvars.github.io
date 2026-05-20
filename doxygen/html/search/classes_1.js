@@ -56,12 +56,11 @@ var searchData=
   ['colvarproxy_5fvolmaps_53',['colvarproxy_volmaps',['../classcolvarproxy__volmaps.html',1,'']]],
   ['colvarscript_54',['colvarscript',['../classcolvarscript.html',1,'']]],
   ['colvarvalue_55',['colvarvalue',['../classcolvarvalue.html',1,'']]],
-  ['commdata_56',['commdata',['../structLAMMPS__NS_1_1commdata.html',1,'LAMMPS_NS']]],
-  ['compute_5fgpu_5fgraph_5ft_57',['compute_gpu_graph_t',['../classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html',1,'colvars_gpu::colvarmodule_gpu_calc']]],
-  ['compute_5fnode_5ft_58',['compute_node_t',['../structcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__node__t.html',1,'colvars_gpu::colvarmodule_gpu_calc']]],
-  ['coordnum_59',['coordnum',['../classcolvar_1_1coordnum.html',1,'colvar']]],
-  ['cudahostallocator_60',['CudaHostAllocator',['../classcolvars__gpu_1_1CudaHostAllocator.html',1,'colvars_gpu']]],
-  ['customcolvar_61',['customColvar',['../classcolvar_1_1customColvar.html',1,'colvar']]],
-  ['cvbasedpath_62',['CVBasedPath',['../classcolvar_1_1CVBasedPath.html',1,'colvar']]],
-  ['cvc_63',['cvc',['../classcolvar_1_1cvc.html',1,'colvar']]]
+  ['compute_5fgpu_5fgraph_5ft_56',['compute_gpu_graph_t',['../classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html',1,'colvars_gpu::colvarmodule_gpu_calc']]],
+  ['compute_5fnode_5ft_57',['compute_node_t',['../structcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__node__t.html',1,'colvars_gpu::colvarmodule_gpu_calc']]],
+  ['coordnum_58',['coordnum',['../classcolvar_1_1coordnum.html',1,'colvar']]],
+  ['cudahostallocator_59',['CudaHostAllocator',['../classcolvars__gpu_1_1CudaHostAllocator.html',1,'colvars_gpu']]],
+  ['customcolvar_60',['customColvar',['../classcolvar_1_1customColvar.html',1,'colvar']]],
+  ['cvbasedpath_61',['CVBasedPath',['../classcolvar_1_1CVBasedPath.html',1,'colvar']]],
+  ['cvc_62',['cvc',['../classcolvar_1_1cvc.html',1,'colvar']]]
 ];

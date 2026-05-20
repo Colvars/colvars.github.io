@@ -189,7 +189,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <tr class="memdesc:ae5cdc961b37b8ab2d79634729877b53c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a message to the main log and/or let the host code know about it.  <a href="classcolvarproxy__lammps.html#ae5cdc961b37b8ab2d79634729877b53c">More...</a><br /></td></tr>
 <tr class="separator:ae5cdc961b37b8ab2d79634729877b53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a613952285da6ae5048ac1165131b8e3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__lammps.html#a613952285da6ae5048ac1165131b8e3e">position_distance</a> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2) const override</td></tr>
-<tr class="memdesc:a613952285da6ae5048ac1165131b8e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions.  <a href="classcolvarproxy__lammps.html#a613952285da6ae5048ac1165131b8e3e">More...</a><br /></td></tr>
+<tr class="memdesc:a613952285da6ae5048ac1165131b8e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions (using the MD engine's convention)  <a href="classcolvarproxy__lammps.html#a613952285da6ae5048ac1165131b8e3e">More...</a><br /></td></tr>
 <tr class="separator:a613952285da6ae5048ac1165131b8e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4fa25a4b53dfd969da82365637c4626"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__lammps.html#ab4fa25a4b53dfd969da82365637c4626">rand_gaussian</a> () override</td></tr>
 <tr class="memdesc:ab4fa25a4b53dfd969da82365637c4626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pseudo-random number with Gaussian distribution.  <a href="classcolvarproxy__lammps.html#ab4fa25a4b53dfd969da82365637c4626">More...</a><br /></td></tr>
@@ -372,9 +372,17 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_time_step_
 <tr class="memitem:a08a7bdceb8b248be2b25bd692db857e7 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a08a7bdceb8b248be2b25bd692db857e7">add_energy</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> energy)</td></tr>
 <tr class="memdesc:a08a7bdceb8b248be2b25bd692db857e7 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass restraint energy value for current timestep to MD engine.  <a href="classcolvarproxy__system.html#a08a7bdceb8b248be2b25bd692db857e7">More...</a><br /></td></tr>
 <tr class="separator:a08a7bdceb8b248be2b25bd692db857e7 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51283ce8473f9d5cee48ba08c0f52cf6 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="a51283ce8473f9d5cee48ba08c0f52cf6" name="a51283ce8473f9d5cee48ba08c0f52cf6"></a>
+bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>use_internal_pbc</b> ()</td></tr>
+<tr class="memdesc:a51283ce8473f9d5cee48ba08c0f52cf6 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the PBC functions from the Colvars library (as opposed to MD engine) <br /></td></tr>
+<tr class="separator:a51283ce8473f9d5cee48ba08c0f52cf6 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb4d3c83d0056453dcef04bad51d4f98 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98">position_distance</a> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2) const</td></tr>
-<tr class="memdesc:acb4d3c83d0056453dcef04bad51d4f98 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions.  <a href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98">More...</a><br /></td></tr>
+<tr class="memdesc:acb4d3c83d0056453dcef04bad51d4f98 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions (using the MD engine's convention)  <a href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98">More...</a><br /></td></tr>
 <tr class="separator:acb4d3c83d0056453dcef04bad51d4f98 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9feea560d247f23b663cc0179057a511 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="a9feea560d247f23b663cc0179057a511" name="a9feea560d247f23b663cc0179057a511"></a>
+<a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_distance_internal</b> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2) const</td></tr>
+<tr class="memdesc:a9feea560d247f23b663cc0179057a511 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline version of <a class="el" href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98" title="Get the PBC-aware distance vector between two positions (using the MD engine&#39;s convention)">position_distance()</a> <br /></td></tr>
+<tr class="separator:a9feea560d247f23b663cc0179057a511 inherit pub_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c66f44f9884db5aecce398652cb4fe3 inherit pub_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="a3c66f44f9884db5aecce398652cb4fe3" name="a3c66f44f9884db5aecce398652cb4fe3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update_pbc_lattice</b> ()</td></tr>
 <tr class="memdesc:a3c66f44f9884db5aecce398652cb4fe3 inherit pub_methods_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recompute PBC reciprocal lattice (assumes XYZ periodicity) <br /></td></tr>
@@ -1218,6 +1226,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>time_step_factor_</b> 
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>total_force_requested</b></td></tr>
 <tr class="memdesc:a06bb0f93d033632f2ff0c79c05d55baf inherit pro_attribs_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the total forces have been requested. <br /></td></tr>
 <tr class="separator:a06bb0f93d033632f2ff0c79c05d55baf inherit pro_attribs_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a007956482988d0d39e9463478a4a3dd9 inherit pro_attribs_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="a007956482988d0d39e9463478a4a3dd9" name="a007956482988d0d39e9463478a4a3dd9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_internal_pbc_</b> = false</td></tr>
+<tr class="memdesc:a007956482988d0d39e9463478a4a3dd9 inherit pro_attribs_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the PBC functions from the Colvars library (as opposed to MD engine) <br /></td></tr>
+<tr class="separator:a007956482988d0d39e9463478a4a3dd9 inherit pro_attribs_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada312da21ae5b62d1f31032537cadfaf inherit pro_attribs_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top"><a id="ada312da21ae5b62d1f31032537cadfaf" name="ada312da21ae5b62d1f31032537cadfaf"></a>
 <a class="el" href="classcolvarproxy__system.html#a207331557018b66dce3c71407bef9a77">Boundaries_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>boundaries_type</b></td></tr>
 <tr class="memdesc:ada312da21ae5b62d1f31032537cadfaf inherit pro_attribs_classcolvarproxy__system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of boundary conditions. <br /></td></tr>
@@ -1447,6 +1459,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_rvector_
 , <b>none</b>
  }</td></tr>
 <tr class="separator:a22219fbe8403d4243e1296ef6c136ebe inherit pub_types_classcolvarproxy__smp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classcolvarproxy__system"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classcolvarproxy__system')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classcolvarproxy__system.html">colvarproxy_system</a></td></tr>
+<tr class="memitem:a0be83c5c754bbda94878386bc1b92dec inherit pub_static_methods_classcolvarproxy__system"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#a0be83c5c754bbda94878386bc1b92dec">position_distance_kernel</a> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;a, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;b, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;c, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;a_r, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;b_r, <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> const &amp;c_r, bool a_p=false, bool b_p=false, bool c_p=false)</td></tr>
+<tr class="separator:a0be83c5c754bbda94878386bc1b92dec inherit pub_static_methods_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classcolvarproxy"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classcolvarproxy')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classcolvarproxy.html">colvarproxy</a></td></tr>
 <tr class="memitem:ae612e3c4cb646a1d82f23d840b5efaf1 inherit pub_attribs_classcolvarproxy"><td class="memItemLeft" align="right" valign="top"><a id="ae612e3c4cb646a1d82f23d840b5efaf1" name="ae612e3c4cb646a1d82f23d840b5efaf1"></a>
 <a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cvmodule</b></td></tr>
@@ -1470,7 +1485,6 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>units</b></td>
 , <b>boundaries_pbc_triclinic</b>
 , <b>boundaries_unsupported</b>
  }</td></tr>
-<tr class="memdesc:a207331557018b66dce3c71407bef9a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of boundary conditions.  <a href="classcolvarproxy__system.html#a207331557018b66dce3c71407bef9a77">More...</a><br /></td></tr>
 <tr class="separator:a207331557018b66dce3c71407bef9a77 inherit pro_types_classcolvarproxy__system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcolvarproxy__atoms"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcolvarproxy__atoms')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcolvarproxy__atoms.html">colvarproxy_atoms</a></td></tr>
 <tr class="memitem:a146404504435fa3394d8f7731d0b4695 inherit pro_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a146404504435fa3394d8f7731d0b4695">add_atom_slot</a> (int atom_id)</td></tr>
@@ -1757,7 +1771,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 </table>
 </div><div class="memdoc">
 
-<p>Get the PBC-aware distance vector between two positions. </p>
+<p>Get the PBC-aware distance vector between two positions (using the MD engine's convention) </p>
 
 <p>Reimplemented from <a class="el" href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98">colvarproxy_system</a>.</p>
 
@@ -1956,7 +1970,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 24 2026 21:48:36 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed May 20 2026 15:05:16 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
