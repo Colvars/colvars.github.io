@@ -22,7 +22,7 @@ var searchData=
   ['position_5fdistance_5finternal_19',['position_distance_internal',['../classcolvarproxy__system.html#a9feea560d247f23b663cc0179057a511',1,'colvarproxy_system']]],
   ['position_5fdistance_5fkernel_20',['position_distance_kernel',['../classcolvarproxy__system.html#a0be83c5c754bbda94878386bc1b92dec',1,'colvarproxy_system']]],
   ['positions_21',['positions',['../classcvm_1_1atom__group.html#a5ca03201b7f8adbbb9d407820d8f236d',1,'cvm::atom_group']]],
-  ['positions_5fshifted_22',['positions_shifted',['../classcvm_1_1atom__group.html#a7156ee22665c4cedf608ae443e8d946a',1,'cvm::atom_group']]],
+  ['positions_5fshifted_22',['positions_shifted',['../classcvm_1_1atom__group.html#ada03b32688562408aadc4654d76775ba',1,'cvm::atom_group']]],
   ['post_5frun_23',['post_run',['../classcolvarproxy.html#a8b33aeda6fb45e826372bcab45d64f15',1,'colvarproxy']]],
   ['pow_24',['pow',['../classcolvarmodule.html#a0f81a085c6050e309f8238ed64f042c2',1,'colvarmodule']]],
   ['prepare_5fderivative_25',['prepare_derivative',['../structrotation__derivative.html#a4ecfc28b9018707bf86ad98045c00f32',1,'rotation_derivative']]],
