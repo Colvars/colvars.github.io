@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['command_0',['command',['../classcolvarscript.html#a4762b77de87959c61288f913f9b974a6',1,'colvarscript']]],
-  ['communication_1',['Communication',['../classcolvarbias__meta.html#a795c12aae8c0ae64166839531e1b7841',1,'colvarbias_meta::Communication()'],['../classcolvarbias__opes.html#aa0746502440f618545740b18182851f4',1,'colvarbias_opes::Communication()']]]
+  ['feature_5ftype_0',['feature_type',['../classcolvardeps.html#a507771dd1cc74ce0d9a549a6f8d8cd9c',1,'colvardeps']]],
+  ['features_5fatomgroup_1',['features_atomgroup',['../classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95',1,'colvardeps']]],
+  ['features_5fbiases_2',['features_biases',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603da',1,'colvardeps']]],
+  ['features_5fcolvar_3',['features_colvar',['../classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628',1,'colvardeps']]],
+  ['features_5fcvc_4',['features_cvc',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6',1,'colvardeps']]]
 ];

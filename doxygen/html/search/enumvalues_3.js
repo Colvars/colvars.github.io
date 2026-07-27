@@ -9,5 +9,7 @@ var searchData=
   ['parse_5foverride_6',['parse_override',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4ac18497c0e911807ddfd52b44e7cf674d',1,'colvarparse']]],
   ['parse_5frequired_7',['parse_required',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4aea8b5ea1146e79da1990cec345839063',1,'colvarparse']]],
   ['parse_5frestart_8',['parse_restart',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4a907207b4cc805305732c158cd3204d5b',1,'colvarparse']]],
-  ['parse_5fsilent_9',['parse_silent',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4acd1135f68e4757747be4c0e586dcf82e',1,'colvarparse']]]
+  ['parse_5fsilent_9',['parse_silent',['../classcolvarparse.html#aa59ba1cad3b7c486df29d56f5feb6bf4acd1135f68e4757747be4c0e586dcf82e',1,'colvarparse']]],
+  ['pbc_5forthogonal_10',['pbc_orthogonal',['../classcolvarmodule_1_1system__boundary__conditions.html#abcaf616a33384392b9f49a1c59ea1473aa6ae3ae899ea41d9c8f3e43fc5e08831',1,'colvarmodule::system_boundary_conditions']]],
+  ['pbc_5ftriclinic_11',['pbc_triclinic',['../classcolvarmodule_1_1system__boundary__conditions.html#abcaf616a33384392b9f49a1c59ea1473a3e808d365243f3fe79ea9e126eec9560',1,'colvarmodule::system_boundary_conditions']]]
 ];

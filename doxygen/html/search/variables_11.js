@@ -11,7 +11,7 @@ var searchData=
   ['read_5fpos_5f_8',['read_pos_',['../classcvm_1_1memory__stream.html#a4a196d78a472c3ea848117b80d33219a',1,'cvm::memory_stream']]],
   ['real_5fvalue_9',['real_value',['../classcolvarvalue.html#a3d8306bfe40191ebabdf0448db42ae7d',1,'colvarvalue']]],
   ['rebin_5fgrids_10',['rebin_grids',['../classcolvarbias__meta.html#a5474168b9843a9fe5fce5f4e261fafba',1,'colvarbias_meta']]],
-  ['reciprocal_5fcell_5fx_11',['reciprocal_cell_x',['../classcolvarproxy__system.html#a73887f740b0a2c7b2e4b3cd8e0bd3096',1,'colvarproxy_system']]],
+  ['reciprocal_5fcell_5fx_11',['reciprocal_cell_x',['../classcolvarmodule_1_1system__boundary__conditions.html#aeb603f81206cb51339d43eff60b1cb89',1,'colvarmodule::system_boundary_conditions']]],
   ['reduction_12',['reduction',['../classcolvarproxy__namd.html#adb099b35dd2457a711f177111c297704',1,'colvarproxy_namd']]],
   ['ref1_13',['ref1',['../classcolvar_1_1distance__z.html#a8eb8fab874c6370e247aff2fe799ded3',1,'colvar::distance_z']]],
   ['ref2_14',['ref2',['../classcolvar_1_1distance__z.html#abe77b74ab1e5f8ee3d0f7456c59f0508',1,'colvar::distance_z']]],

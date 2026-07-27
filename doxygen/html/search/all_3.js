@@ -218,7 +218,7 @@ var searchData=
   ['compute_5fmax_5fvolmaps_5fapplied_5fforce_215',['compute_max_volmaps_applied_force',['../classcolvarproxy__volmaps.html#a41b2e361898c4bb384c019a7073da13a',1,'colvarproxy_volmaps']]],
   ['compute_5fnode_5ft_216',['compute_node_t',['../structcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__node__t.html',1,'colvars_gpu::colvarmodule_gpu_calc']]],
   ['compute_5foverlap_5fmatrix_217',['compute_overlap_matrix',['../classcolvarmodule_1_1rotation.html#abe137a79d267adb3e5444835d0d40f10',1,'colvarmodule::rotation']]],
-  ['compute_5fpair_5fcoordnum_218',['compute_pair_coordnum',['../classcolvar_1_1coordnum.html#a830a565f8bd64ca26e76b410ac0bf902',1,'colvar::coordnum']]],
+  ['compute_5fpair_5fcoordnum_218',['compute_pair_coordnum',['../classcolvar_1_1coordnum.html#a9fd75f971c70f1149f13c02bd7399327',1,'colvar::coordnum']]],
   ['compute_5frms_5fatom_5fgroups_5fapplied_5fforce_219',['compute_rms_atom_groups_applied_force',['../classcolvarproxy__atom__groups.html#abd4de15b745b16799943f1c4987b988f',1,'colvarproxy_atom_groups']]],
   ['compute_5frms_5fatoms_5fapplied_5fforce_220',['compute_rms_atoms_applied_force',['../classcolvarproxy__atoms.html#ae0319887c2ddea44963bb719fae8e9f3',1,'colvarproxy_atoms']]],
   ['compute_5frms_5fvolmaps_5fapplied_5fforce_221',['compute_rms_volmaps_applied_force',['../classcolvarproxy__volmaps.html#a7e52d28eea946aebacedc8e2109f77c3',1,'colvarproxy_volmaps']]],
