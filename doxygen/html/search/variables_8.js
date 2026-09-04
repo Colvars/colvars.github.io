@@ -8,7 +8,7 @@ var searchData=
   ['initial_5fcenters_5',['initial_centers',['../classcolvarbias__restraint__centers__moving.html#a0fe9078b5755279dc2dddcf2cd6b7f1f',1,'colvarbias_restraint_centers_moving']]],
   ['initial_5flower_5fwalls_6',['initial_lower_walls',['../classcolvarbias__restraint__harmonic__walls.html#a1d3e9c1ac019ae8ec50a3bd979a40390',1,'colvarbias_restraint_harmonic_walls']]],
   ['initial_5fupper_5fwalls_7',['initial_upper_walls',['../classcolvarbias__restraint__harmonic__walls.html#ab14c853271087fc1e8e9ec309315dd1b',1,'colvarbias_restraint_harmonic_walls']]],
-  ['initialized_8',['initialized',['../structcolvars__gpu_1_1colvaratoms__gpu__debug__graph__t.html#a0669039f41b447a13b979a55d9ea1bcf',1,'colvars_gpu::colvaratoms_gpu_debug_graph_t']]],
+  ['initialized_8',['initialized',['../structcolvar_1_1coordnum_1_1coordnum__gpu__impl__t_1_1coordNumPairListT.html#aa5870cd9652cb3d29ba9a7143e563c1f',1,'colvar::coordnum::coordnum_gpu_impl_t::coordNumPairListT']]],
   ['input_5fprefix_9',['input_prefix',['../classcolvarbias__abf.html#a42b9812a14ecf708d350f34f182498f1',1,'colvarbias_abf']]],
   ['input_5fprefix_5fstr_10',['input_prefix_str',['../classcolvarproxy__io.html#a674409e6fc8eda9a663ecac160c9582c',1,'colvarproxy_io']]],
   ['input_5fstate_5fbuffer_5f_11',['input_state_buffer_',['../classcolvarmodule.html#a8681c1170d103b67e8e2a71c2d745a2a',1,'colvarmodule']]],

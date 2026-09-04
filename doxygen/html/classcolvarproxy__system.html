@@ -174,13 +174,14 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>set_time_step_
 bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>use_internal_pbc</b> ()</td></tr>
 <tr class="memdesc:a51283ce8473f9d5cee48ba08c0f52cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Account for system boundaries within the Colvars library (as opposed to using the MD engine) <br /></td></tr>
 <tr class="separator:a51283ce8473f9d5cee48ba08c0f52cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb4d3c83d0056453dcef04bad51d4f98"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98">position_distance</a> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2) const</td></tr>
-<tr class="memdesc:acb4d3c83d0056453dcef04bad51d4f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions (using Colvars internal boundary handling)  <a href="classcolvarproxy__system.html#acb4d3c83d0056453dcef04bad51d4f98">More...</a><br /></td></tr>
+<tr class="memitem:acb4d3c83d0056453dcef04bad51d4f98"><td class="memItemLeft" align="right" valign="top"><a id="acb4d3c83d0056453dcef04bad51d4f98" name="acb4d3c83d0056453dcef04bad51d4f98"></a>
+virtual <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_distance</b> (<a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos1, <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;pos2) const</td></tr>
+<tr class="memdesc:acb4d3c83d0056453dcef04bad51d4f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PBC-aware distance vector between two positions (using Colvars internal boundary handling) <br /></td></tr>
 <tr class="separator:acb4d3c83d0056453dcef04bad51d4f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a672f0a767c7846cf6edb1dadbdfc7ab0"><td class="memItemLeft" align="right" valign="top"><a id="a672f0a767c7846cf6edb1dadbdfc7ab0" name="a672f0a767c7846cf6edb1dadbdfc7ab0"></a>
-<a class="el" href="classcolvarmodule_1_1system__boundary__conditions.html">cvm::system_boundary_conditions</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_system_boundaries</b> () const</td></tr>
-<tr class="memdesc:a672f0a767c7846cf6edb1dadbdfc7ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current system boundary conditions. <br /></td></tr>
-<tr class="separator:a672f0a767c7846cf6edb1dadbdfc7ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a502629ded544a3a630c52bf9858789e0"><td class="memItemLeft" align="right" valign="top"><a id="a502629ded544a3a630c52bf9858789e0" name="a502629ded544a3a630c52bf9858789e0"></a>
+virtual <a class="el" href="classcolvarmodule_1_1system__boundary__conditions.html">cvm::system_boundary_conditions</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_system_boundaries</b> ()</td></tr>
+<tr class="memdesc:a502629ded544a3a630c52bf9858789e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current system boundary conditions. <br /></td></tr>
+<tr class="separator:a502629ded544a3a630c52bf9858789e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecfcfbb18eac82861822ed156743b019"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__system.html#aecfcfbb18eac82861822ed156743b019">request_total_force</a> (bool yesno)</td></tr>
 <tr class="memdesc:aecfcfbb18eac82861822ed156743b019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell the proxy whether total forces are needed (they may not always be available)  <a href="classcolvarproxy__system.html#aecfcfbb18eac82861822ed156743b019">More...</a><br /></td></tr>
 <tr class="separator:aecfcfbb18eac82861822ed156743b019"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -432,46 +433,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_internal_pbc_</b>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#afe50b25c910ef688f0b5b7e508189238">colvarproxy_vmd</a>.</p>
-
-</div>
-</div>
-<a id="acb4d3c83d0056453dcef04bad51d4f98" name="acb4d3c83d0056453dcef04bad51d4f98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb4d3c83d0056453dcef04bad51d4f98">&#9670;&#160;</a></span>position_distance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> colvarproxy_system::position_distance </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;&#160;</td>
-          <td class="paramname"><em>pos1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> const &amp;&#160;</td>
-          <td class="paramname"><em>pos2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the PBC-aware distance vector between two positions (using Colvars internal boundary handling) </p>
-
-<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#ae1a90b25c34e96254cda66b2752de805">colvarproxy_namd</a>, and <a class="el" href="classcolvarproxy__lammps.html#a613952285da6ae5048ac1165131b8e3e">colvarproxy_lammps</a>.</p>
 
 </div>
 </div>
@@ -728,7 +689,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_internal_pbc_</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 27 2026 22:03:50 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Sep 4 2026 18:58:41 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

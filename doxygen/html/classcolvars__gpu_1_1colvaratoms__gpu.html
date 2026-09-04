@@ -84,7 +84,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcolvars__gpu_1_1colvaratoms__gpu-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">colvars_gpu::colvaratoms_gpu Class Reference</div></div>
@@ -100,35 +102,44 @@ Collaboration diagram for colvars_gpu::colvaratoms_gpu:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcolvars__gpu_1_1colvaratoms__gpu__coll__graph.png" border="0" usemap="#acolvars__gpu_1_1colvaratoms__gpu_coll__map" alt="Collaboration graph"/></div>
 <map name="acolvars__gpu_1_1colvaratoms__gpu_coll__map" id="acolvars__gpu_1_1colvaratoms__gpu_coll__map">
-<area shape="rect" title="The main class for calculating the atom group properties on GPU." alt="" coords="1871,197,2069,222"/>
-<area shape="rect" href="structcolvars__gpu_1_1colvaratoms__gpu__buffer__t.html" title="A struct for holding GPU atom group buffers." alt="" coords="475,287,645,327"/>
-<area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="5,363,152,389"/>
-<area shape="rect" href="classcolvarmodule_1_1system__boundary__conditions.html" title="Class to store the system&#39;s boundary conditions." alt="" coords="301,427,451,467"/>
-<area shape="rect" href="structcolvars__gpu_1_1colvaratoms__gpu__calc__fit__info__t.html" title="A struct for temporary variables for calculating the fit gradients." alt="" coords="1372,93,1543,133"/>
-<area shape="rect" href="classcolvarmodule_1_1rmatrix.html" title="2&#45;dimensional array of real numbers with three components along each dimension (works with colvarmodu..." alt="" coords="899,81,1046,106"/>
-<area shape="rect" href="classcolvars__gpu_1_1rotation__gpu.html" title=" " alt="" coords="1177,39,1348,65"/>
-<area shape="rect" href="structcolvars__gpu_1_1colvaratoms__gpu__debug__graph__t.html" title="A struct for the graph for debug gradients." alt="" coords="1567,161,1737,201"/>
-<area shape="rect" href="structcolvars__gpu_1_1rotation__derivative__gpu.html" title=" " alt="" coords="1581,225,1723,265"/>
-<area shape="rect" href="classcolvarmodule_1_1quaternion.html" title="1&#45;dimensional vector of real numbers with four components and a quaternion algebra" alt="" coords="889,10,1056,35"/>
-<area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="1213,519,1312,545"/>
-<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="1607,463,1697,489"/>
-<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="1581,550,1723,575"/>
-<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="928,565,1017,590"/>
-<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="1607,662,1697,687"/>
-<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="1213,369,1313,394"/>
-<area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="686,506,823,531"/>
-<area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="689,555,821,581"/>
-<area shape="rect" href="classcolvarproxy__atom__groups.html" title="Container of atom group data (allow collection of aggregated atomic data)" alt="" coords="669,605,840,630"/>
-<area shape="rect" href="classcolvarproxy__volmaps.html" title="Container of grid&#45;based objects." alt="" coords="683,654,827,679"/>
-<area shape="rect" href="classcolvarproxy__smp.html" title="Methods for SMP parallelization." alt="" coords="694,703,815,729"/>
-<area shape="rect" href="classcolvarproxy__replicas.html" title="Methods for multiple&#45;replica communication." alt="" coords="684,753,825,778"/>
-<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1906,697,2034,722"/>
-<area shape="rect" href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="699,358,810,383"/>
-<area shape="rect" href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="701,407,808,433"/>
-<area shape="rect" href="classcolvarproxy__gpu.html" title="Class for managing GPU memory allocation and data transfer." alt="" coords="696,457,813,482"/>
+<area shape="rect" title="The main class for calculating the atom group properties on GPU." alt="" coords="1927,203,2125,229"/>
+<area shape="rect" href="structcolvars__gpu_1_1colvaratoms__gpu__buffer__t.html" title="A struct for holding GPU atom group buffers." alt="" coords="475,277,645,317"/>
+<area shape="rect" href="classcolvarmodule_1_1rvector.html" title="vector of real numbers with three components" alt="" coords="5,354,152,379"/>
+<area shape="rect" href="classcolvarmodule_1_1system__boundary__conditions.html" title="Class to store the system&#39;s boundary conditions." alt="" coords="301,417,451,457"/>
+<area shape="rect" href="structcolvars__gpu_1_1colvaratoms__gpu__calc__fit__info__t.html" title="A struct for temporary variables for calculating the fit gradients." alt="" coords="1372,95,1543,135"/>
+<area shape="rect" href="classcolvarmodule_1_1rmatrix.html" title="2&#45;dimensional array of real numbers with three components along each dimension (works with colvarmodu..." alt="" coords="899,82,1046,107"/>
+<area shape="rect" href="classcolvars__gpu_1_1rotation__gpu.html" title=" " alt="" coords="1177,41,1348,66"/>
+<area shape="rect" href="classcolvars__gpu_1_1gpu__graph__t.html" title="A struct for holding a CUDA graph and its execution object." alt="" coords="1567,166,1737,191"/>
+<area shape="rect" href="structcolvars__gpu_1_1rotation__derivative__gpu.html" title=" " alt="" coords="1581,216,1723,256"/>
+<area shape="rect" href="classcolvarmodule_1_1quaternion.html" title="1&#45;dimensional vector of real numbers with four components and a quaternion algebra" alt="" coords="889,11,1056,37"/>
+<area shape="rect" href="classcolvarmodule.html" title="Collective variables module (main class)" alt="" coords="1213,510,1312,535"/>
+<area shape="rect" href="classcolvarparse.html" title="Base class containing parsing functions; all objects which need to parse input inherit from this." alt="" coords="1607,454,1697,479"/>
+<area shape="rect" href="classcolvarmodule_1_1usage.html" title="Track usage of Colvars features." alt="" coords="1581,541,1723,566"/>
+<area shape="rect" href="classcolvarproxy.html" title=" " alt="" coords="928,555,1017,581"/>
+<area shape="rect" href="classcolvarscript.html" title=" " alt="" coords="1607,653,1697,678"/>
+<area shape="rect" href="classcolvarparams.html" title=" " alt="" coords="1213,359,1313,385"/>
+<area shape="rect" href="classcolvarproxy__system.html" title="Methods for accessing the simulation system (PBCs, integrator, etc)" alt="" coords="686,497,823,522"/>
+<area shape="rect" href="classcolvarproxy__atoms.html" title="Container of atomic data for processing by Colvars." alt="" coords="689,546,821,571"/>
+<area shape="rect" href="classcolvarproxy__atom__groups.html" title="Container of atom group data (allow collection of aggregated atomic data)" alt="" coords="669,595,840,621"/>
+<area shape="rect" href="classcolvarproxy__volmaps.html" title="Container of grid&#45;based objects." alt="" coords="683,645,827,670"/>
+<area shape="rect" href="classcolvarproxy__smp.html" title="Methods for SMP parallelization." alt="" coords="694,694,815,719"/>
+<area shape="rect" href="classcolvarproxy__replicas.html" title="Methods for multiple&#45;replica communication." alt="" coords="684,743,825,769"/>
+<area shape="rect" href="classcolvarproxy__script.html" title="Methods for scripting language interface (Tcl or Python)" alt="" coords="1962,687,2090,713"/>
+<area shape="rect" href="classcolvarproxy__tcl.html" title="Methods for using Tcl within Colvars." alt="" coords="699,349,810,374"/>
+<area shape="rect" href="classcolvarproxy__io.html" title="Methods for data input/output." alt="" coords="701,398,808,423"/>
+<area shape="rect" href="classcolvarproxy__gpu.html" title="Class for managing GPU memory allocation and data transfer." alt="" coords="696,447,813,473"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac42981ddee6cbede674fb8f96d1d1c68"><td class="memItemLeft" align="right" valign="top"><a id="ac42981ddee6cbede674fb8f96d1d1c68" name="ac42981ddee6cbede674fb8f96d1d1c68"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>event_type</b> { <b>read_and_calculate</b> = 0
+, <b>calc_fit_gradients</b>
+, <b>apply_force</b>
+, <b>num_event_types</b>
+ }</td></tr>
+<tr class="separator:ac42981ddee6cbede674fb8f96d1d1c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a08c7d4cd86a98c8941fdd74dbc5dc233"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvars__gpu_1_1colvaratoms__gpu.html#a08c7d4cd86a98c8941fdd74dbc5dc233">colvaratoms_gpu</a> (<a class="el" href="classcolvarmodule.html">colvarmodule</a> *cvmodule_in)</td></tr>
@@ -144,6 +155,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26cfb6fafc4d00cd530a7d8b28bee438"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvars__gpu_1_1colvaratoms__gpu.html#a26cfb6fafc4d00cd530a7d8b28bee438">destroy_gpu</a> ()</td></tr>
 <tr class="memdesc:a26cfb6fafc4d00cd530a7d8b28bee438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classcolvars__gpu_1_1colvaratoms__gpu.html#a26cfb6fafc4d00cd530a7d8b28bee438">More...</a><br /></td></tr>
 <tr class="separator:a26cfb6fafc4d00cd530a7d8b28bee438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410834515da8485de0753b8ee76e22c6"><td class="memItemLeft" align="right" valign="top"><a id="a410834515da8485de0753b8ee76e22c6" name="a410834515da8485de0753b8ee76e22c6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>reset_gpu_graphs</b> ()</td></tr>
+<tr class="memdesc:a410834515da8485de0753b8ee76e22c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the CUDA graphs. This is used when proxy_gpu_buffers_reallocated() is called. <br /></td></tr>
+<tr class="separator:a410834515da8485de0753b8ee76e22c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67bcdeaeb726b23bf2f518fb804ae5a"><td class="memItemLeft" align="right" valign="top"><a id="af67bcdeaeb726b23bf2f518fb804ae5a" name="af67bcdeaeb726b23bf2f518fb804ae5a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>read_data_gpu</b> (<a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *cpu_atoms)</td></tr>
+<tr class="memdesc:af67bcdeaeb726b23bf2f518fb804ae5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the data of atom group on GPU and calculate the required properties. <br /></td></tr>
+<tr class="separator:af67bcdeaeb726b23bf2f518fb804ae5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093f075eec49c1553e4c539d2c6e49f0"><td class="memItemLeft" align="right" valign="top"><a id="a093f075eec49c1553e4c539d2c6e49f0" name="a093f075eec49c1553e4c539d2c6e49f0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>calc_fit_gradients_gpu</b> (<a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *cpu_atoms)</td></tr>
+<tr class="memdesc:a093f075eec49c1553e4c539d2c6e49f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the fit gradients on GPU. <br /></td></tr>
+<tr class="separator:a093f075eec49c1553e4c539d2c6e49f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fd7c60c44bbd2d58a33f9db4b742db3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvars__gpu_1_1colvaratoms__gpu.html#a0fd7c60c44bbd2d58a33f9db4b742db3">sync_to_gpu_buffers</a> (const <a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *cpu_atoms)</td></tr>
 <tr class="memdesc:a0fd7c60c44bbd2d58a33f9db4b742db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronize atom-wise data fields from the CPU buffers.  <a href="classcolvars__gpu_1_1colvaratoms__gpu.html#a0fd7c60c44bbd2d58a33f9db4b742db3">More...</a><br /></td></tr>
 <tr class="separator:a0fd7c60c44bbd2d58a33f9db4b742db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,9 +185,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a45c228feef257f22247c400a610a7099"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvars__gpu_1_1colvaratoms__gpu.html#a45c228feef257f22247c400a610a7099">add_update_cpu_buffers_nodes</a> (<a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *cpu_atoms, cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map)</td></tr>
 <tr class="memdesc:a45c228feef257f22247c400a610a7099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add nodes for updating the CPU buffers after the GPU calculation.  <a href="classcolvars__gpu_1_1colvaratoms__gpu.html#a45c228feef257f22247c400a610a7099">More...</a><br /></td></tr>
 <tr class="separator:a45c228feef257f22247c400a610a7099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72e0b568b1ba8c9a1682b31c9e837531"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvars__gpu_1_1colvaratoms__gpu.html#a72e0b568b1ba8c9a1682b31c9e837531">after_read_data_sync</a> (<a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *cpu_atoms, bool copy_to_cpu, cudaStream_t stream)</td></tr>
-<tr class="memdesc:a72e0b568b1ba8c9a1682b31c9e837531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the CPU COM, COG and rotation object after GPU synchronization.  <a href="classcolvars__gpu_1_1colvaratoms__gpu.html#a72e0b568b1ba8c9a1682b31c9e837531">More...</a><br /></td></tr>
-<tr class="separator:a72e0b568b1ba8c9a1682b31c9e837531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03d75dfaa1411dc8b52634b9d80348ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvars__gpu_1_1colvaratoms__gpu.html#a03d75dfaa1411dc8b52634b9d80348ce">after_read_data_sync</a> (<a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *cpu_atoms, bool copy_to_cpu)</td></tr>
+<tr class="memdesc:a03d75dfaa1411dc8b52634b9d80348ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the CPU COM, COG and rotation object after GPU synchronization.  <a href="classcolvars__gpu_1_1colvaratoms__gpu.html#a03d75dfaa1411dc8b52634b9d80348ce">More...</a><br /></td></tr>
+<tr class="separator:a03d75dfaa1411dc8b52634b9d80348ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02109629a97ee6a2b5af084d60f592af"><td class="memItemLeft" align="right" valign="top"><a id="a02109629a97ee6a2b5af084d60f592af" name="a02109629a97ee6a2b5af084d60f592af"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>begin_apply_force_gpu</b> ()</td></tr>
 <tr class="memdesc:a02109629a97ee6a2b5af084d60f592af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the CPU force buffer for scalar components before applying forces on GPU. <br /></td></tr>
@@ -216,6 +239,21 @@ const <a class="el" href="classcolvars__gpu_1_1rotation__gpu.html">colvars_gpu::
 <tr class="memitem:acc02476600a0201eb5ae94996b0d7070"><td class="memItemLeft" align="right" valign="top"><a id="acc02476600a0201eb5ae94996b0d7070" name="acc02476600a0201eb5ae94996b0d7070"></a>
 const <a class="el" href="structcolvars__gpu_1_1rotation__derivative__gpu.html">colvars_gpu::rotation_derivative_gpu</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_rot_deriv_gpu</b> () const</td></tr>
 <tr class="separator:acc02476600a0201eb5ae94996b0d7070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5f658f401262dc721a4705e18be23ca"><td class="memItemLeft" align="right" valign="top"><a id="ab5f658f401262dc721a4705e18be23ca" name="ab5f658f401262dc721a4705e18be23ca"></a>
+const cudaEvent_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_event</b> (event_type type) const</td></tr>
+<tr class="memdesc:ab5f658f401262dc721a4705e18be23ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter of a specific CUDA event. <br /></td></tr>
+<tr class="separator:ab5f658f401262dc721a4705e18be23ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f05da04f814ce4e69a142d53ca7de62"><td class="memItemLeft" align="right" valign="top"><a id="a1f05da04f814ce4e69a142d53ca7de62" name="a1f05da04f814ce4e69a142d53ca7de62"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>add_force_to_proxy_gpu</b> (<a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *cpu_atoms)</td></tr>
+<tr class="memdesc:a1f05da04f814ce4e69a142d53ca7de62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add forces to proxy after being communicated from colvarmodule. <br /></td></tr>
+<tr class="separator:a1f05da04f814ce4e69a142d53ca7de62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4b39a452120fbdc92cd95726911016ec"><td class="memItemLeft" align="right" valign="top"><a id="a4b39a452120fbdc92cd95726911016ec" name="a4b39a452120fbdc92cd95726911016ec"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>set_weighted_gradient_gpu</b> (<a class="el" href="classcvm_1_1atom__group.html">cvm::atom_group</a> *cpu_atoms, const <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvector</a> *d_com_grad, cudaStream_t stream)</td></tr>
+<tr class="memdesc:a4b39a452120fbdc92cd95726911016ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand: save the specified gradient on each atom to the GPU buffer, weighting with the atom mass (mostly used in combination with <code>cvm::atom_group::center_of_mass()</code> ) <br /></td></tr>
+<tr class="separator:a4b39a452120fbdc92cd95726911016ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -230,10 +268,10 @@ Private Attributes</h2></td></tr>
 <a class="el" href="structcolvars__gpu_1_1colvaratoms__gpu__calc__fit__info__t.html">colvaratoms_gpu_calc_fit_info_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>calc_fit_forces_gpu_info</b></td></tr>
 <tr class="memdesc:ae7dfbe771ade228a472497029c08a416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary variables for calc_fit_forces (or "calc_fit_gradients" for vector CVCs) GPU kernel. <br /></td></tr>
 <tr class="separator:ae7dfbe771ade228a472497029c08a416"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a422b3f106c62899ba59d0f6ed2c04026"><td class="memItemLeft" align="right" valign="top"><a id="a422b3f106c62899ba59d0f6ed2c04026" name="a422b3f106c62899ba59d0f6ed2c04026"></a>
-<a class="el" href="structcolvars__gpu_1_1colvaratoms__gpu__debug__graph__t.html">colvaratoms_gpu_debug_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>debug_graphs</b></td></tr>
-<tr class="memdesc:a422b3f106c62899ba59d0f6ed2c04026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Separate CUDA graphs for supporting debug gradients. <br /></td></tr>
-<tr class="separator:a422b3f106c62899ba59d0f6ed2c04026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8b17070da19f7904009dfc092041d0"><td class="memItemLeft" align="right" valign="top"><a id="a5e8b17070da19f7904009dfc092041d0" name="a5e8b17070da19f7904009dfc092041d0"></a>
+<a class="el" href="classcolvars__gpu_1_1gpu__graph__t.html">gpu_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>graph_debug</b></td></tr>
+<tr class="memdesc:a5e8b17070da19f7904009dfc092041d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Separate CUDA graphs for supporting debug gradients. <br /></td></tr>
+<tr class="separator:a5e8b17070da19f7904009dfc092041d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a699d1680f617c93d2f6b52fa16527297"><td class="memItemLeft" align="right" valign="top"><a id="a699d1680f617c93d2f6b52fa16527297" name="a699d1680f617c93d2f6b52fa16527297"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>h_sum_applied_colvar_force</b></td></tr>
 <tr class="memdesc:a699d1680f617c93d2f6b52fa16527297"><td class="mdescLeft">&#160;</td><td class="mdescRight">For intercepting the forces applied from the CPU interface. <br /></td></tr>
@@ -258,6 +296,22 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_group_force</b></
 <a class="el" href="classcolvarmodule.html">colvarmodule</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cvmodule</b></td></tr>
 <tr class="memdesc:a3edc79af996df7a74ed68b669c4dcf56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the parent colvarmodule. <br /></td></tr>
 <tr class="separator:a3edc79af996df7a74ed68b669c4dcf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3744b25fb2d1372814c0a3bd5df82615"><td class="memItemLeft" align="right" valign="top"><a id="a3744b25fb2d1372814c0a3bd5df82615" name="a3744b25fb2d1372814c0a3bd5df82615"></a>
+<a class="el" href="classcolvars__gpu_1_1gpu__graph__t.html">gpu_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>graph_read_compute</b></td></tr>
+<tr class="memdesc:a3744b25fb2d1372814c0a3bd5df82615"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA graph for reading atoms and compute required properties. <br /></td></tr>
+<tr class="separator:a3744b25fb2d1372814c0a3bd5df82615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae526d54c955be9ed57e63ab66c532075"><td class="memItemLeft" align="right" valign="top"><a id="ae526d54c955be9ed57e63ab66c532075" name="ae526d54c955be9ed57e63ab66c532075"></a>
+<a class="el" href="classcolvars__gpu_1_1gpu__graph__t.html">gpu_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>graph_calc_fit_gradients</b></td></tr>
+<tr class="memdesc:ae526d54c955be9ed57e63ab66c532075"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA graph for calculating fit gradients. <br /></td></tr>
+<tr class="separator:ae526d54c955be9ed57e63ab66c532075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e9e2fca083e04cf45afc771508da95"><td class="memItemLeft" align="right" valign="top"><a id="a19e9e2fca083e04cf45afc771508da95" name="a19e9e2fca083e04cf45afc771508da95"></a>
+<a class="el" href="classcolvars__gpu_1_1gpu__graph__t.html">gpu_graph_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>graph_apply_force</b></td></tr>
+<tr class="memdesc:a19e9e2fca083e04cf45afc771508da95"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA graph for applying forces. <br /></td></tr>
+<tr class="separator:a19e9e2fca083e04cf45afc771508da95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f9123c30f34242b954e9801bd24ce1"><td class="memItemLeft" align="right" valign="top"><a id="af0f9123c30f34242b954e9801bd24ce1" name="af0f9123c30f34242b954e9801bd24ce1"></a>
+std::array&lt; cudaEvent_t, static_cast&lt; int &gt;(event_type::num_event_types)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>events</b> = {}</td></tr>
+<tr class="memdesc:af0f9123c30f34242b954e9801bd24ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA events. <br /></td></tr>
+<tr class="separator:af0f9123c30f34242b954e9801bd24ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The main class for calculating the atom group properties on GPU. </p>
@@ -579,8 +633,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_group_force</b></
 
 </div>
 </div>
-<a id="a72e0b568b1ba8c9a1682b31c9e837531" name="a72e0b568b1ba8c9a1682b31c9e837531"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72e0b568b1ba8c9a1682b31c9e837531">&#9670;&#160;</a></span>after_read_data_sync()</h2>
+<a id="a03d75dfaa1411dc8b52634b9d80348ce" name="a03d75dfaa1411dc8b52634b9d80348ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d75dfaa1411dc8b52634b9d80348ce">&#9670;&#160;</a></span>after_read_data_sync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -595,13 +649,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_group_force</b></
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>copy_to_cpu</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cudaStream_t&#160;</td>
-          <td class="paramname"><em>stream</em>&#160;</td>
+          <td class="paramname"><em>copy_to_cpu</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -616,7 +664,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_group_force</b></
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cpu_atoms</td><td>CPU atom group class </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">copy_to_cpu</td><td>If true, copy the COM, COG and rotation object to CPU buffers </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">stream</td><td>CUDA stream to be synchronized </td></tr>
   </table>
   </dd>
 </dl>
@@ -1056,7 +1103,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_group_force</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 27 2026 22:03:50 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Sep 4 2026 18:58:41 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

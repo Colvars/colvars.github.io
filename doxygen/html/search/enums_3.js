@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['key_5fset_5fmode_0',['key_set_mode',['../classcolvarparse.html#a43cd0db6d3985cf207042e74e7e95c52',1,'colvarparse']]]
+  ['feature_5ftype_0',['feature_type',['../classcolvardeps.html#a507771dd1cc74ce0d9a549a6f8d8cd9c',1,'colvardeps']]],
+  ['features_5fatomgroup_1',['features_atomgroup',['../classcolvardeps.html#a65d8eea75a4a6cb5b047b79ffac26f95',1,'colvardeps']]],
+  ['features_5fbiases_2',['features_biases',['../classcolvardeps.html#abf010b3abf3aa69fc260847bce6603da',1,'colvardeps']]],
+  ['features_5fcolvar_3',['features_colvar',['../classcolvardeps.html#aebed48f7608034a9e3ce66f1fe45f628',1,'colvardeps']]],
+  ['features_5fcvc_4',['features_cvc',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6',1,'colvardeps']]]
 ];

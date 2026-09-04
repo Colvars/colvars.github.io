@@ -8,7 +8,7 @@ var searchData=
   ['deallocate_5fhost_5',['deallocate_host',['../classcolvarproxy__gpu.html#acd985b8833111b3ce4d67337c53ccc66',1,'colvarproxy_gpu']]],
   ['debug_6',['debug',['../classcolvarmodule.html#a28a9efac455d9a4d050da77fd0a07e38',1,'colvarmodule']]],
   ['debug_5fgradients_7',['debug_gradients',['../classcolvar_1_1cvc.html#a22544af1994d52e16080d22b7c904865',1,'colvar::cvc::debug_gradients()'],['../classcolvarmodule_1_1rotation.html#ac232fd8e56d8431c9e2f77b51f15a87c',1,'colvarmodule::rotation::debug_gradients()']]],
-  ['debug_5fgradients_5fgpu_8',['debug_gradients_gpu',['../classcolvar_1_1cvc.html#ab00bc33e818f00f2f64446f2a223906e',1,'colvar::cvc']]],
+  ['debug_5fgradients_5fgpu_8',['debug_gradients_gpu',['../classcolvar_1_1cvc.html#a145dc1086e1136e1c57f68fc42326eb8',1,'colvar::cvc']]],
   ['decr_5fref_5fcount_9',['decr_ref_count',['../classcolvardeps.html#a8be1d5a26aa37cbd4eb3dc6180a128af',1,'colvardeps']]],
   ['decrease_5fdepth_10',['decrease_depth',['../classcolvarmodule.html#ad769e38e5023ff3ae4b6f8585c02dae7',1,'colvarmodule']]],
   ['default_5frestart_5ffrequency_11',['default_restart_frequency',['../classcolvarproxy__io.html#a78938e510424b12ff9a971c1b05503d3',1,'colvarproxy_io']]],
@@ -37,5 +37,5 @@ var searchData=
   ['du_5fdlambda_5fcenters_34',['dU_dlambda_centers',['../classcolvarbias__restraint__moving.html#a4cd293404e03411c5ae702a6bb956713',1,'colvarbias_restraint_moving::dU_dlambda_centers()'],['../classcolvarbias__restraint__centers__moving.html#aa535ec6db939756235db0ab7020fc5ff',1,'colvarbias_restraint_centers_moving::dU_dlambda_centers()']]],
   ['du_5fdlambda_5fk_35',['dU_dlambda_k',['../classcolvarbias__restraint__moving.html#ae960846211bf2406f9d362a4876d82af',1,'colvarbias_restraint_moving::dU_dlambda_k()'],['../classcolvarbias__restraint__k__moving.html#a370c789be6e7ff23ab1f006828bfe01c',1,'colvarbias_restraint_k_moving::dU_dlambda_k()']]],
   ['du_5fdlambda_5fwalls_36',['dU_dlambda_walls',['../classcolvarbias__restraint__moving.html#a932c3a2172bdd9fa020834412095b8b9',1,'colvarbias_restraint_moving::dU_dlambda_walls()'],['../classcolvarbias__restraint__harmonic__walls.html#ae140dc9235d16bf4cb0bb1a9d076a3e4',1,'colvarbias_restraint_harmonic_walls::dU_dlambda_walls()']]],
-  ['dump_5fgraph_37',['dump_graph',['../classcolvars__gpu_1_1colvarmodule__gpu__calc_1_1compute__gpu__graph__t.html#a8c90f5649709cd8864f5c0e7ec9bd8ac',1,'colvars_gpu::colvarmodule_gpu_calc::compute_gpu_graph_t']]]
+  ['dump_5fgraph_37',['dump_graph',['../classcolvars__gpu_1_1gpu__graph__t.html#a930eaddaad032f8997b42ee6ad48b368',1,'colvars_gpu::gpu_graph_t']]]
 ];

@@ -123,10 +123,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
 <tr class="memitem:a06352a1bb67af0e45eb010c1977809b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvars__gpu_1_1rotation__gpu.html#a06352a1bb67af0e45eb010c1977809b9">add_optimal_rotation_nodes</a> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *const d_pos1, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *const d_pos2, const size_t num_atoms_pos1, const size_t num_atoms_pos2, cudaGraph_t &amp;graph, std::unordered_map&lt; std::string, cudaGraphNode_t &gt; &amp;nodes_map)</td></tr>
 <tr class="memdesc:a06352a1bb67af0e45eb010c1977809b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the optimal rotation and store the corresponding eigenvalue and eigenvector in the arguments l0 and q0; if the gradients have been previously requested, calculate them as well.  <a href="classcolvars__gpu_1_1rotation__gpu.html#a06352a1bb67af0e45eb010c1977809b9">More...</a><br /></td></tr>
 <tr class="separator:a06352a1bb67af0e45eb010c1977809b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89c185ea80e7a69821c593d8b8c8bdf6"><td class="memItemLeft" align="right" valign="top"><a id="a89c185ea80e7a69821c593d8b8c8bdf6" name="a89c185ea80e7a69821c593d8b8c8bdf6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>after_sync_check</b> () const</td></tr>
-<tr class="memdesc:a89c185ea80e7a69821c593d8b8c8bdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking after synchronization ( eigendecomposition iterations and max crossing) <br /></td></tr>
-<tr class="separator:a89c185ea80e7a69821c593d8b8c8bdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e19a83845fdef83d67dcc1a6408951"><td class="memItemLeft" align="right" valign="top"><a id="ab4e19a83845fdef83d67dcc1a6408951" name="ab4e19a83845fdef83d67dcc1a6408951"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_error</b> () const</td></tr>
+<tr class="memdesc:ab4e19a83845fdef83d67dcc1a6408951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking after synchronization ( eigendecomposition iterations and max crossing) <br /></td></tr>
+<tr class="separator:ab4e19a83845fdef83d67dcc1a6408951"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9cb9458a0196c37c331cbcb390df5ad"><td class="memItemLeft" align="right" valign="top"><a id="af9cb9458a0196c37c331cbcb390df5ad" name="af9cb9458a0196c37c331cbcb390df5ad"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_S</b> () const</td></tr>
 <tr class="separator:af9cb9458a0196c37c331cbcb390df5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,6 +190,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>b_initialized</b></td
 <tr class="memitem:ae70f60521858659a823e1316bfe20714"><td class="memItemLeft" align="right" valign="top"><a id="ae70f60521858659a823e1316bfe20714" name="ae70f60521858659a823e1316bfe20714"></a>
 <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">cvm::real</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>h_S_eigvec</b></td></tr>
 <tr class="separator:ae70f60521858659a823e1316bfe20714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7834e9dd45132f6d879ffa3e9d5d69dd"><td class="memItemLeft" align="right" valign="top"><a id="a7834e9dd45132f6d879ffa3e9d5d69dd" name="a7834e9dd45132f6d879ffa3e9d5d69dd"></a>
+cudaEvent_t&#160;</td><td class="memItemRight" valign="bottom"><b>jacobi_done</b></td></tr>
+<tr class="memdesc:a7834e9dd45132f6d879ffa3e9d5d69dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">CUDA event for checking if max iterations are reached. <br /></td></tr>
+<tr class="separator:a7834e9dd45132f6d879ffa3e9d5d69dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -336,7 +340,7 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>rotation_derivative
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 27 2026 22:03:50 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Sep 4 2026 18:58:41 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

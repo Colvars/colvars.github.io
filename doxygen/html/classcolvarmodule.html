@@ -213,12 +213,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_error</b> ()</t
 std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_prefix</b> ()</td></tr>
 <tr class="memdesc:a821a1cf8bb6173b7e4236244e5c5d087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for the above. <br /></td></tr>
 <tr class="separator:a821a1cf8bb6173b7e4236244e5c5d087"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9696a719b54adb663278226b5c147472"><td class="memItemLeft" align="right" valign="top"><a id="a9696a719b54adb663278226b5c147472" name="a9696a719b54adb663278226b5c147472"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>register_named_atom_group_soa</b> (atom_group *ag)</td></tr>
-<tr class="separator:a9696a719b54adb663278226b5c147472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b3c1cf7d7cd2d5e440178db7bec2c00"><td class="memItemLeft" align="right" valign="top"><a id="a9b3c1cf7d7cd2d5e440178db7bec2c00" name="a9b3c1cf7d7cd2d5e440178db7bec2c00"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unregister_named_atom_group_soa</b> (atom_group *ag)</td></tr>
-<tr class="separator:a9b3c1cf7d7cd2d5e440178db7bec2c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ece56309fcfb1de303e9cd0813299a7"><td class="memItemLeft" align="right" valign="top"><a id="a1ece56309fcfb1de303e9cd0813299a7" name="a1ece56309fcfb1de303e9cd0813299a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>register_named_atom_group</b> (atom_group *ag)</td></tr>
+<tr class="separator:a1ece56309fcfb1de303e9cd0813299a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af09e174650ea1e7a824385ac9bc5f8fe"><td class="memItemLeft" align="right" valign="top"><a id="af09e174650ea1e7a824385ac9bc5f8fe" name="af09e174650ea1e7a824385ac9bc5f8fe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>unregister_named_atom_group</b> (atom_group *ag)</td></tr>
+<tr class="separator:af09e174650ea1e7a824385ac9bc5f8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6dbf186f9cfd9edf6ee9b24dc88f48e"><td class="memItemLeft" align="right" valign="top"><a id="ad6dbf186f9cfd9edf6ee9b24dc88f48e" name="ad6dbf186f9cfd9edf6ee9b24dc88f48e"></a>
 std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>variables</b> ()</td></tr>
 <tr class="memdesc:ad6dbf186f9cfd9edf6ee9b24dc88f48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of collective variables. <br /></td></tr>
@@ -416,10 +416,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>write_restart_string</
 <a class="el" href="classcolvar.html">colvar</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>colvar_by_name</b> (std::string const &amp;name)</td></tr>
 <tr class="memdesc:af06cc62b3134a4501f64855f9bded965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a colvar by name; returns NULL if not found. <br /></td></tr>
 <tr class="separator:af06cc62b3134a4501f64855f9bded965"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63f2f9e65633667ec13734f9833885b5"><td class="memItemLeft" align="right" valign="top"><a id="a63f2f9e65633667ec13734f9833885b5" name="a63f2f9e65633667ec13734f9833885b5"></a>
-atom_group *&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group_soa_by_name</b> (std::string const &amp;name)</td></tr>
-<tr class="memdesc:a63f2f9e65633667ec13734f9833885b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a named atom group by name; returns NULL if not found. <br /></td></tr>
-<tr class="separator:a63f2f9e65633667ec13734f9833885b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5fa6869606607b25d8f1dd1240dbfd"><td class="memItemLeft" align="right" valign="top"><a id="a6e5fa6869606607b25d8f1dd1240dbfd" name="a6e5fa6869606607b25d8f1dd1240dbfd"></a>
+atom_group *&#160;</td><td class="memItemRight" valign="bottom"><b>atom_group_by_name</b> (std::string const &amp;name)</td></tr>
+<tr class="memdesc:a6e5fa6869606607b25d8f1dd1240dbfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a named atom group by name; returns NULL if not found. <br /></td></tr>
+<tr class="separator:a6e5fa6869606607b25d8f1dd1240dbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac73c2f5e8836309d4794044adebd32a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarmodule.html#ac73c2f5e8836309d4794044adebd32a3">change_configuration</a> (std::string const &amp;bias_name, std::string const &amp;conf)</td></tr>
 <tr class="separator:ac73c2f5e8836309d4794044adebd32a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc138957ee1375fa6b5e19ef0788abcc"><td class="memItemLeft" align="right" valign="top"><a id="abc138957ee1375fa6b5e19ef0788abcc" name="abc138957ee1375fa6b5e19ef0788abcc"></a>
@@ -444,6 +444,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>calc_biases</b> ()</td
 int&#160;</td><td class="memItemRight" valign="bottom"><b>update_colvar_forces</b> ()</td></tr>
 <tr class="memdesc:a325fc7ac57e99a5513e72a2c9dee48e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate bias and restraint forces, send colvar forces to atoms. <br /></td></tr>
 <tr class="separator:a325fc7ac57e99a5513e72a2c9dee48e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f63439302f35c0b3cecc22b346366d7"><td class="memItemLeft" align="right" valign="top"><a id="a1f63439302f35c0b3cecc22b346366d7" name="a1f63439302f35c0b3cecc22b346366d7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>proxy_gpu_buffers_reallocated_done</b> ()</td></tr>
+<tr class="memdesc:a1f63439302f35c0b3cecc22b346366d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called from proxy when it completes buffers reallocation. <br /></td></tr>
+<tr class="separator:a1f63439302f35c0b3cecc22b346366d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8a8246f0858993d60ecc5cd23a0020"><td class="memItemLeft" align="right" valign="top"><a id="abb8a8246f0858993d60ecc5cd23a0020" name="abb8a8246f0858993d60ecc5cd23a0020"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>analyze</b> ()</td></tr>
 <tr class="memdesc:abb8a8246f0858993d60ecc5cd23a0020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform analysis. <br /></td></tr>
@@ -556,10 +560,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>calc_scripted_forces</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5c3c6107b0f716e6673008a62ff5b766"><td class="memItemLeft" align="right" valign="top"><a id="a5c3c6107b0f716e6673008a62ff5b766" name="a5c3c6107b0f716e6673008a62ff5b766"></a>
-static <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>integer_power</b> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a> const &amp;x, int const n)</td></tr>
-<tr class="memdesc:a5c3c6107b0f716e6673008a62ff5b766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override the STL <a class="el" href="classcolvarmodule.html#a0f81a085c6050e309f8238ed64f042c2" title="Reimplemented to work around MS compiler issues.">pow()</a> with a product for n integer. <br /></td></tr>
-<tr class="separator:a5c3c6107b0f716e6673008a62ff5b766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5580e114edeb0b58ca984bd94583de"><td class="memItemLeft" align="right" valign="top"><a id="aae5580e114edeb0b58ca984bd94583de" name="aae5580e114edeb0b58ca984bd94583de"></a>
+static COLVARS_HOST_DEVICE <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>integer_power</b> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a> const &amp;x, int const n)</td></tr>
+<tr class="memdesc:aae5580e114edeb0b58ca984bd94583de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override the STL <a class="el" href="classcolvarmodule.html#a0f81a085c6050e309f8238ed64f042c2" title="Reimplemented to work around MS compiler issues.">pow()</a> with a product for n integer. <br /></td></tr>
+<tr class="separator:aae5580e114edeb0b58ca984bd94583de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f81a085c6050e309f8238ed64f042c2"><td class="memItemLeft" align="right" valign="top"><a id="a0f81a085c6050e309f8238ed64f042c2" name="a0f81a085c6050e309f8238ed64f042c2"></a>
 static <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pow</b> (<a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a> const &amp;x, <a class="el" href="classcolvarmodule.html#a1ef542d23cf36504a8154c281eba2d5b">real</a> const &amp;y)</td></tr>
 <tr class="memdesc:a0f81a085c6050e309f8238ed64f042c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reimplemented to work around MS compiler issues. <br /></td></tr>
@@ -780,9 +784,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>scripting_after_biase
 <a class="el" href="classcolvarproxy.html">colvarproxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy</b> = nullptr</td></tr>
 <tr class="memdesc:afeb26a10701cbf0c8b066b41745445d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the proxy object, used to retrieve atomic data from the hosting program. <br /></td></tr>
 <tr class="separator:afeb26a10701cbf0c8b066b41745445d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afba028a57f84c98890b1c878a43759cc"><td class="memItemLeft" align="right" valign="top"><a id="afba028a57f84c98890b1c878a43759cc" name="afba028a57f84c98890b1c878a43759cc"></a>
-std::unique_ptr&lt; <a class="el" href="classcolvars__gpu_1_1colvarmodule__gpu__calc.html">colvars_gpu::colvarmodule_gpu_calc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gpu_calc</b></td></tr>
-<tr class="separator:afba028a57f84c98890b1c878a43759cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -915,10 +916,10 @@ std::vector&lt; <a class="el" href="classcolvar.html">colvar</a> * &gt;&#160;</t
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>colvars_smp_items</b></td></tr>
 <tr class="memdesc:a4824af5f8f54ef36f0330cfc8087c8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indexes of the items to calculate for each colvar. <br /></td></tr>
 <tr class="separator:a4824af5f8f54ef36f0330cfc8087c8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3209115e987bcfc79ef1fba47b3ae2c"><td class="memItemLeft" align="right" valign="top"><a id="aa3209115e987bcfc79ef1fba47b3ae2c" name="aa3209115e987bcfc79ef1fba47b3ae2c"></a>
-std::vector&lt; atom_group * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>named_atom_groups_soa</b></td></tr>
-<tr class="memdesc:aa3209115e987bcfc79ef1fba47b3ae2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of named atom groups. <br /></td></tr>
-<tr class="separator:aa3209115e987bcfc79ef1fba47b3ae2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bcdb9ad4bd044a43cf8cf1209375e59"><td class="memItemLeft" align="right" valign="top"><a id="a1bcdb9ad4bd044a43cf8cf1209375e59" name="a1bcdb9ad4bd044a43cf8cf1209375e59"></a>
+std::vector&lt; atom_group * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>named_atom_groups</b></td></tr>
+<tr class="memdesc:a1bcdb9ad4bd044a43cf8cf1209375e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of named atom groups. <br /></td></tr>
+<tr class="separator:a1bcdb9ad4bd044a43cf8cf1209375e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65c40e055d0f896770be2de86b078770"><td class="memItemLeft" align="right" valign="top"><a id="a65c40e055d0f896770be2de86b078770" name="a65c40e055d0f896770be2de86b078770"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>num_biases_types_used_</b></td></tr>
 <tr class="memdesc:a65c40e055d0f896770be2de86b078770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to a map counting how many biases of each type were used. <br /></td></tr>
@@ -1584,7 +1585,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>log_level_</b> = 10</t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 27 2026 22:03:50 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Sep 4 2026 18:58:41 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

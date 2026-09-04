@@ -16,10 +16,9 @@ var searchData=
   ['force_5fbin_13',['force_bin',['../classcolvarbias__abf.html#a8bef8bc1790956132203b724ab293bc0',1,'colvarbias_abf']]],
   ['force_5fk_14',['force_k',['../classcolvarbias__restraint__k.html#a146c3e4ddc97733b73469e76dd912ec6',1,'colvarbias_restraint_k::force_k()'],['../classcolvarbias__restraint__histogram.html#a517858459d101946c1351e9721f4a609',1,'colvarbias_restraint_histogram::force_k()']]],
   ['force_5fk_5fincr_15',['force_k_incr',['../classcolvarbias__restraint__k__moving.html#a5568f8986d427c8aba19ccdbdfd56c8e',1,'colvarbias_restraint_k_moving']]],
-  ['forced_5fatom_5fgroups_16',['forced_atom_groups',['../classcolvars__gpu_1_1colvarmodule__gpu__calc.html#aa1597ec819e84ed6ed925e160f09c6e8',1,'colvars_gpu::colvarmodule_gpu_calc']]],
-  ['fr_17',['fr',['../classcolvar.html#a96afb151773f647bf182a4e679127366',1,'colvar']]],
-  ['ft_18',['ft',['../classcolvar.html#ad27fad6f1211cccf9b2dafaf4787f9f2',1,'colvar::ft()'],['../classcolvar_1_1cvc.html#a65f2cc4aad4a485579a3d8bb096ac78a',1,'colvar::cvc::ft()']]],
-  ['ft_5freported_19',['ft_reported',['../classcolvar.html#ab61e0b9d2a9de816b587262ee9a9142e',1,'colvar']]],
-  ['full_5fsamples_20',['full_samples',['../classcolvarbias__abf.html#a81640af3a7a6bb5661c3b00606686ccc',1,'colvarbias_abf::full_samples()'],['../classcolvar__grid__gradient.html#ad155f24be828356ac678587d4733857b',1,'colvar_grid_gradient::full_samples()']]],
-  ['function_5ftypes_21',['function_types',['../classcolvar_1_1cvc.html#a13d9531bec5aaf8f607ec986638ac8af',1,'colvar::cvc']]]
+  ['fr_16',['fr',['../classcolvar.html#a96afb151773f647bf182a4e679127366',1,'colvar']]],
+  ['ft_17',['ft',['../classcolvar.html#ad27fad6f1211cccf9b2dafaf4787f9f2',1,'colvar::ft()'],['../classcolvar_1_1cvc.html#a65f2cc4aad4a485579a3d8bb096ac78a',1,'colvar::cvc::ft()']]],
+  ['ft_5freported_18',['ft_reported',['../classcolvar.html#ab61e0b9d2a9de816b587262ee9a9142e',1,'colvar']]],
+  ['full_5fsamples_19',['full_samples',['../classcolvarbias__abf.html#a81640af3a7a6bb5661c3b00606686ccc',1,'colvarbias_abf::full_samples()'],['../classcolvar__grid__gradient.html#ad155f24be828356ac678587d4733857b',1,'colvar_grid_gradient::full_samples()']]],
+  ['function_5ftypes_20',['function_types',['../classcolvar_1_1cvc.html#a13d9531bec5aaf8f607ec986638ac8af',1,'colvar::cvc']]]
 ];

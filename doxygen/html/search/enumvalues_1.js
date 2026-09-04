@@ -74,6 +74,7 @@ var searchData=
   ['f_5fcvc_5fscalable_71',['f_cvc_scalable',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a56565bba434377a99356c86b4bd2d2d7',1,'colvardeps']]],
   ['f_5fcvc_5fscalable_5fcom_72',['f_cvc_scalable_com',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6afa427f692f7107e6e49ada3044feac1e',1,'colvardeps']]],
   ['f_5fcvc_5fscalar_73',['f_cvc_scalar',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6a01543119f7014c1e87fd690b38689c34',1,'colvardeps']]],
-  ['f_5fcvc_5fupper_5fboundary_74',['f_cvc_upper_boundary',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6aea3867593b922aaacd273440a408b39f',1,'colvardeps']]],
-  ['f_5fcvc_5fwidth_75',['f_cvc_width',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6ac4817b87e24547727c4b13c6f942ce0c',1,'colvardeps']]]
+  ['f_5fcvc_5fsupport_5fgpu_74',['f_cvc_support_gpu',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6ae12cbb98cc471ff6eda8cafd569ac35d',1,'colvardeps']]],
+  ['f_5fcvc_5fupper_5fboundary_75',['f_cvc_upper_boundary',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6aea3867593b922aaacd273440a408b39f',1,'colvardeps']]],
+  ['f_5fcvc_5fwidth_76',['f_cvc_width',['../classcolvardeps.html#a3ba5bed19d1e8c68b30b2bc3648c8ef6ac4817b87e24547727c4b13c6f942ce0c',1,'colvardeps']]]
 ];
