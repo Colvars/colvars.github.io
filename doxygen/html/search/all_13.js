@@ -134,7 +134,7 @@ var searchData=
   ['sup_5fnp_131',['sup_np',['../classcolvar_1_1cvc.html#a0a5b794497d12e7a37a5666f1eb1c85c',1,'colvar::cvc']]],
   ['support_5fgpu_132',['support_gpu',['../classcolvarproxy__gpu.html#ad7d8c9ef63cfa47b1bc8d9edc233d0c7',1,'colvarproxy_gpu']]],
   ['sw_133',['sW',['../classcolvarbias__meta_1_1hill.html#aa8583e52b1545df70c27b2fc440384e0',1,'colvarbias_meta::hill']]],
-  ['switching_5ffunction_134',['switching_function',['../classcolvar_1_1coordnum.html#ae9a3ada3a5dd26c3d3f6deaa99d704cd',1,'colvar::coordnum']]],
+  ['switching_5ffunction_134',['switching_function',['../classcolvar_1_1coordnum.html#a356bd182de8176c15e03692a66edf9da',1,'colvar::coordnum']]],
   ['sync_5fto_5fgpu_5fbuffers_135',['sync_to_gpu_buffers',['../classcolvars__gpu_1_1colvaratoms__gpu.html#a0fd7c60c44bbd2d58a33f9db4b742db3',1,'colvars_gpu::colvaratoms_gpu']]],
   ['sync_5fto_5fsoa_136',['sync_to_soa',['../classcvm_1_1atom__group_1_1atom__modifier.html#a790a121ce322cdf8383d86be9dcd5e4b',1,'cvm::atom_group::atom_modifier']]],
   ['system_5fboundary_5fconditions_137',['system_boundary_conditions',['../classcolvarmodule_1_1system__boundary__conditions.html',1,'colvarmodule::system_boundary_conditions'],['../classcolvarmodule_1_1system__boundary__conditions.html#a873a5cef303e32c008dd64bf699126b4',1,'colvarmodule::system_boundary_conditions::system_boundary_conditions()'],['../classcolvarmodule_1_1system__boundary__conditions.html#a093ea17d857925a95bef7875e54fc824',1,'colvarmodule::system_boundary_conditions::system_boundary_conditions(system_boundary_conditions const &amp;)=default']]],

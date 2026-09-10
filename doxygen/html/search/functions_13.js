@@ -98,7 +98,7 @@ var searchData=
   ['str_5fresult_95',['str_result',['../classcolvarscript.html#a38951da77c686bd2899c01a7d8529a32',1,'colvarscript']]],
   ['strip_5fvalues_96',['strip_values',['../classcolvarparse.html#acb077a5cdd16f48b0ffd70d1cbd21d12',1,'colvarparse']]],
   ['sum_97',['sum',['../classcolvarvalue.html#adc9ad41fa76496e4a426ddff8a4101b1',1,'colvarvalue']]],
-  ['switching_5ffunction_98',['switching_function',['../classcolvar_1_1coordnum.html#ae9a3ada3a5dd26c3d3f6deaa99d704cd',1,'colvar::coordnum']]],
+  ['switching_5ffunction_98',['switching_function',['../classcolvar_1_1coordnum.html#a356bd182de8176c15e03692a66edf9da',1,'colvar::coordnum']]],
   ['sync_5fto_5fgpu_5fbuffers_99',['sync_to_gpu_buffers',['../classcolvars__gpu_1_1colvaratoms__gpu.html#a0fd7c60c44bbd2d58a33f9db4b742db3',1,'colvars_gpu::colvaratoms_gpu']]],
   ['sync_5fto_5fsoa_100',['sync_to_soa',['../classcvm_1_1atom__group_1_1atom__modifier.html#a790a121ce322cdf8383d86be9dcd5e4b',1,'cvm::atom_group::atom_modifier']]],
   ['system_5fboundary_5fconditions_101',['system_boundary_conditions',['../classcolvarmodule_1_1system__boundary__conditions.html#a873a5cef303e32c008dd64bf699126b4',1,'colvarmodule::system_boundary_conditions::system_boundary_conditions()'],['../classcolvarmodule_1_1system__boundary__conditions.html#a093ea17d857925a95bef7875e54fc824',1,'colvarmodule::system_boundary_conditions::system_boundary_conditions(system_boundary_conditions const &amp;)=default']]]
