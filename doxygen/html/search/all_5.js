@@ -44,5 +44,6 @@ var searchData=
   ['ext_5fsigma_41',['ext_sigma',['../classcolvar.html#aadad461e8c74538b62bc1ba7909974b7',1,'colvar']]],
   ['external_5finput_5fbuffer_5f_42',['external_input_buffer_',['../classcvm_1_1memory__stream.html#aabced9423023953f693a1f166379f495',1,'cvm::memory_stream']]],
   ['external_5foutput_5fbuffer_5f_43',['external_output_buffer_',['../classcvm_1_1memory__stream.html#ac2878261aaaf83fa0a0f96b153fb95fe',1,'cvm::memory_stream']]],
-  ['extra_5fconf_44',['extra_conf',['../classcolvarmodule.html#a534947622515b66a789161e1f7e9f511',1,'colvarmodule']]]
+  ['extra_5fconf_44',['extra_conf',['../classcolvarmodule.html#a534947622515b66a789161e1f7e9f511',1,'colvarmodule']]],
+  ['extrapolate_5fpotential_45',['extrapolate_potential',['../classcolvargrid__integrate.html#add7adaf5c776449f6e3ab0246fd3b52e',1,'colvargrid_integrate']]]
 ];

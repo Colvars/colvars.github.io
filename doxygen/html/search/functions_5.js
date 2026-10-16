@@ -11,5 +11,6 @@ var searchData=
   ['error_5fstatic_8',['error_static',['../classcolvarmodule.html#a435fd06bdc368f3be39c60a73790aa10',1,'colvarmodule']]],
   ['exclude_5ffeature_5fself_9',['exclude_feature_self',['../classcolvardeps.html#abcee45fc45d7997eb2811af75e384c77',1,'colvardeps']]],
   ['exp_10',['exp',['../classcolvarmodule.html#a3a3baa8868433119af4068bcf480841e',1,'colvarmodule']]],
-  ['expand_5foutput_5fbuffer_11',['expand_output_buffer',['../classcvm_1_1memory__stream.html#adb1606c3b0ad4be0f625eedde4edb9e3',1,'cvm::memory_stream']]]
+  ['expand_5foutput_5fbuffer_11',['expand_output_buffer',['../classcvm_1_1memory__stream.html#adb1606c3b0ad4be0f625eedde4edb9e3',1,'cvm::memory_stream']]],
+  ['extrapolate_5fpotential_12',['extrapolate_potential',['../classcolvargrid__integrate.html#add7adaf5c776449f6e3ab0246fd3b52e',1,'colvargrid_integrate']]]
 ];

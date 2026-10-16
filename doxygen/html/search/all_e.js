@@ -23,7 +23,7 @@ var searchData=
   ['noforce_20',['noforce',['../classcvm_1_1atom__group.html#a95f16ded0ee29e8c2fe76a723befb38b',1,'cvm::atom_group']]],
   ['norm_21',['norm',['../classcolvarmodule_1_1quaternion.html#a8238710e7e2065ae82c79b1f60e6f38f',1,'colvarmodule::quaternion::norm()'],['../classcolvarvalue.html#a47497ef53222a1cd9901e006372003be',1,'colvarvalue::norm()']]],
   ['norm2_22',['norm2',['../classcolvarmodule_1_1vector1d.html#a4dd1f69b3febb6f2dee5ec41ba1ca205',1,'colvarmodule::vector1d::norm2()'],['../classcolvarvalue.html#afe75dcec4c913e8a1d195670d1c2b125',1,'colvarvalue::norm2()'],['../classcolvarmodule_1_1quaternion.html#a6be430ff15321f7ed878777e5ed29fd6',1,'colvarmodule::quaternion::norm2()']]],
-  ['nr_5flinbcg_5fsym_23',['nr_linbcg_sym',['../classcolvargrid__integrate.html#a04726bd47735fe41c0751ae6450db3a1',1,'colvargrid_integrate']]],
+  ['nr_5flinbcg_5fsym_23',['nr_linbcg_sym',['../classcolvargrid__integrate.html#aa27e9a53e17fe6c6dde1e25dfb04da08',1,'colvargrid_integrate']]],
   ['nt_24',['nt',['../classcolvar__grid.html#a77ec57aa6dfc304bcd743bdae48830c5',1,'colvar_grid']]],
   ['num_5factive_5fcvcs_25',['num_active_cvcs',['../classcolvar.html#ae4b38ab767676a204aba0b09af3c24e9',1,'colvar']]],
   ['num_5fatoms_26',['num_atoms',['../classcvm_1_1atom__group.html#aa78acba640ea1b8884938642fcdf7df7',1,'cvm::atom_group']]],

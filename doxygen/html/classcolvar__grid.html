@@ -135,8 +135,12 @@ Collaboration diagram for colvar_grid&lt; T &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abd03cdad1218f36276d32a680d23d52e"><td class="memItemLeft" align="right" valign="top"><a id="abd03cdad1218f36276d32a680d23d52e" name="abd03cdad1218f36276d32a680d23d52e"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>address</b> (std::vector&lt; int &gt; const &amp;ix) const</td></tr>
-<tr class="memdesc:abd03cdad1218f36276d32a680d23d52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the low-level index corresponding to an index. <br /></td></tr>
+<tr class="memdesc:abd03cdad1218f36276d32a680d23d52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the low-level (unrolled) address corresponding to an index. <br /></td></tr>
 <tr class="separator:abd03cdad1218f36276d32a680d23d52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf83e63a09771723f963635f53e3c23"><td class="memItemLeft" align="right" valign="top"><a id="adbf83e63a09771723f963635f53e3c23" name="adbf83e63a09771723f963635f53e3c23"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>index</b> (size_t <a class="el" href="classcolvar__grid.html#abd03cdad1218f36276d32a680d23d52e">address</a>, std::vector&lt; int &gt; &amp;ix)</td></tr>
+<tr class="memdesc:adbf83e63a09771723f963635f53e3c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse of <a class="el" href="classcolvar__grid.html#abd03cdad1218f36276d32a680d23d52e" title="Get the low-level (unrolled) address corresponding to an index.">address()</a>: n-dim index from linear address. <br /></td></tr>
+<tr class="separator:adbf83e63a09771723f963635f53e3c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81eac89843540fdf1136e5f9bf9224ea"><td class="memItemLeft" align="right" valign="top"><a id="a81eac89843540fdf1136e5f9bf9224ea" name="a81eac89843540fdf1136e5f9bf9224ea"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_variables</b> () const</td></tr>
 <tr class="memdesc:a81eac89843540fdf1136e5f9bf9224ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of colvar objects. <br /></td></tr>
@@ -1305,7 +1309,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 10 2026 14:31:57 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Oct 16 2026 15:27:38 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

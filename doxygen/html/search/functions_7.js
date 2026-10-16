@@ -50,7 +50,7 @@ var searchData=
   ['get_5fframe_47',['get_frame',['../classcolvarproxy__io.html#a4a67e47e06c5b376645c06aae20a3b0f',1,'colvarproxy_io::get_frame()'],['../classcolvarproxy__vmd.html#afc8019dfc55a830f5dff22e01759a16d',1,'colvarproxy_vmd::get_frame()']]],
   ['get_5fglobal_5fcvc_5fmap_48',['get_global_cvc_map',['../classcolvar.html#ae2ca067a307411802f40e7d7ad5c1c7f',1,'colvar']]],
   ['get_5fgpu_5fbuffers_49',['get_gpu_buffers',['../classcolvars__gpu_1_1colvaratoms__gpu.html#a840f4cc826a13a15eaaf22b42e832dd6',1,'colvars_gpu::colvaratoms_gpu']]],
-  ['get_5fgrad_50',['get_grad',['../classcolvargrid__integrate.html#aa19954aa4a839d23f727c56cfbf0716f',1,'colvargrid_integrate']]],
+  ['get_5fgrad_50',['get_grad',['../classcolvargrid__integrate.html#a8c205b5f0d24e40b603230b51373bab9',1,'colvargrid_integrate']]],
   ['get_5fkey_5fstring_5fmulti_5fvalue_51',['get_key_string_multi_value',['../classcolvarparse.html#a6a2db7eeae98f841284db3b1f75fbac6',1,'colvarparse']]],
   ['get_5fkey_5fstring_5fvalue_52',['get_key_string_value',['../classcolvarparse.html#ad05ee4a070fed61e86edcf9ac5f04006',1,'colvarparse']]],
   ['get_5fkeyval_5ffeature_53',['get_keyval_feature',['../classcolvardeps.html#ab9abd034505e8223e4a80fc02b205505',1,'colvardeps']]],

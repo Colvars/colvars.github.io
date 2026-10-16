@@ -16,11 +16,12 @@ var searchData=
   ['input_5fstreams_5f_13',['input_streams_',['../classcolvarproxy__io.html#aeffbb65a2078684a46bcc49abdaa7215',1,'colvarproxy_io']]],
   ['integrate_5fiterations_14',['integrate_iterations',['../classcolvarbias__abf.html#acc07c7f78869cdce21478f072a8f490d',1,'colvarbias_abf']]],
   ['integrate_5ftol_15',['integrate_tol',['../classcolvarbias__abf.html#a7b33cadf0e4538e1554a7d63f7a5700c',1,'colvarbias_abf']]],
-  ['internal_5fbuffer_5f_16',['internal_buffer_',['../classcvm_1_1memory__stream.html#a44ad72799af8239521aa14c7ac1ec11f',1,'cvm::memory_stream']]],
-  ['internal_5fgridforce_5fgrids_5f_17',['internal_gridforce_grids_',['../classcolvarproxy__namd.html#a923f53f72cfb9f4e98d7031c6f2d4b37',1,'colvarproxy_namd']]],
-  ['inv_5fr0_5fvec_18',['inv_r0_vec',['../classcolvar_1_1coordnum.html#a260b1c807e9999098bb5874b7e6ff97b',1,'colvar::coordnum']]],
-  ['inv_5fr0sq_5fvec_19',['inv_r0sq_vec',['../classcolvar_1_1coordnum.html#ade468a861f293767cd40bd9592a379de',1,'colvar::coordnum']]],
-  ['it_20',['it',['../classcolvarbias__meta_1_1hill.html#a59a4d5767e023bb387ea1d770a11ca05',1,'colvarbias_meta::hill::it()'],['../classcolvarmodule.html#a93ee142c3d07f37f437a94d4eb89bb6d',1,'colvarmodule::it()']]],
-  ['it_5frestart_21',['it_restart',['../classcolvarmodule.html#a261f1e4f7a69c672cbaed2d8850badc9',1,'colvarmodule']]],
-  ['it_5fwidth_22',['it_width',['../classcolvarmodule.html#a58ae91763eaa42447a0f1ea0d4292c96',1,'colvarmodule']]]
+  ['integrate_5fweighted_16',['integrate_weighted',['../classcolvarbias__abf.html#ac5ca5a36d5ea6757845a0089e1ca4a3a',1,'colvarbias_abf']]],
+  ['internal_5fbuffer_5f_17',['internal_buffer_',['../classcvm_1_1memory__stream.html#a44ad72799af8239521aa14c7ac1ec11f',1,'cvm::memory_stream']]],
+  ['internal_5fgridforce_5fgrids_5f_18',['internal_gridforce_grids_',['../classcolvarproxy__namd.html#a923f53f72cfb9f4e98d7031c6f2d4b37',1,'colvarproxy_namd']]],
+  ['inv_5fr0_5fvec_19',['inv_r0_vec',['../classcolvar_1_1coordnum.html#a260b1c807e9999098bb5874b7e6ff97b',1,'colvar::coordnum']]],
+  ['inv_5fr0sq_5fvec_20',['inv_r0sq_vec',['../classcolvar_1_1coordnum.html#ade468a861f293767cd40bd9592a379de',1,'colvar::coordnum']]],
+  ['it_21',['it',['../classcolvarbias__meta_1_1hill.html#a59a4d5767e023bb387ea1d770a11ca05',1,'colvarbias_meta::hill::it()'],['../classcolvarmodule.html#a93ee142c3d07f37f437a94d4eb89bb6d',1,'colvarmodule::it()']]],
+  ['it_5frestart_22',['it_restart',['../classcolvarmodule.html#a261f1e4f7a69c672cbaed2d8850badc9',1,'colvarmodule']]],
+  ['it_5fwidth_23',['it_width',['../classcolvarmodule.html#a58ae91763eaa42447a0f1ea0d4292c96',1,'colvarmodule']]]
 ];

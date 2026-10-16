@@ -55,9 +55,8 @@ var searchData=
   ['apply_5ftranslation_52',['apply_translation',['../classcvm_1_1atom__group.html#a7c211018f48a1f704c862bfee2de853b',1,'cvm::atom_group']]],
   ['asin_53',['asin',['../classcolvarmodule.html#a113e8340ba7baadb2a6d9126dea5c83c',1,'colvarmodule']]],
   ['atan2_54',['atan2',['../classcolvarmodule.html#a9d2b1ec2b83904ce905d1a672fa6e2f7',1,'colvarmodule']]],
-  ['atimes_55',['atimes',['../classcolvargrid__integrate.html#a733a103793daf0beaf49035679bcd3c2',1,'colvargrid_integrate']]],
-  ['atom_5fgroup_56',['atom_group',['../classcvm_1_1atom__group.html#a3e66458c99a3b6ebf898c42f993f5670',1,'cvm::atom_group::atom_group()'],['../classcvm_1_1atom__group.html#a6eca1f3ce90928be2880aadb1b078f2f',1,'cvm::atom_group::atom_group(char const *key_in)']]],
-  ['atom_5fgroup_5fby_5fname_57',['atom_group_by_name',['../classcolvarmodule.html#a6e5fa6869606607b25d8f1dd1240dbfd',1,'colvarmodule']]],
-  ['atom_5fmodifier_58',['atom_modifier',['../classcvm_1_1atom__group_1_1atom__modifier.html#a7069a010a66f6b38cbe4c48bc688d514',1,'cvm::atom_group::atom_modifier']]],
-  ['average_59',['average',['../classcolvar__grid__gradient.html#a39313aab41e6f20809ff0a2b7e5f67ce',1,'colvar_grid_gradient']]]
+  ['atom_5fgroup_55',['atom_group',['../classcvm_1_1atom__group.html#a3e66458c99a3b6ebf898c42f993f5670',1,'cvm::atom_group::atom_group()'],['../classcvm_1_1atom__group.html#a6eca1f3ce90928be2880aadb1b078f2f',1,'cvm::atom_group::atom_group(char const *key_in)']]],
+  ['atom_5fgroup_5fby_5fname_56',['atom_group_by_name',['../classcolvarmodule.html#a6e5fa6869606607b25d8f1dd1240dbfd',1,'colvarmodule']]],
+  ['atom_5fmodifier_57',['atom_modifier',['../classcvm_1_1atom__group_1_1atom__modifier.html#a7069a010a66f6b38cbe4c48bc688d514',1,'cvm::atom_group::atom_modifier']]],
+  ['average_58',['average',['../classcolvar__grid__gradient.html#a39313aab41e6f20809ff0a2b7e5f67ce',1,'colvar_grid_gradient']]]
 ];
