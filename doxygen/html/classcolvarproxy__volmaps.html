@@ -129,8 +129,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="memdesc:a050524325feba0a0254dcf2605930153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear volumetric map data. <br /></td></tr>
 <tr class="separator:a050524325feba0a0254dcf2605930153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b86dc899a90ed84ef0e11ba0146978f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a5b86dc899a90ed84ef0e11ba0146978f">check_volmaps_available</a> ()</td></tr>
-<tr class="memdesc:a5b86dc899a90ed84ef0e11ba0146978f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether this implementation can use volumetric maps as CVs.  <a href="classcolvarproxy__volmaps.html#a5b86dc899a90ed84ef0e11ba0146978f">More...</a><br /></td></tr>
+<tr class="memdesc:a5b86dc899a90ed84ef0e11ba0146978f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether the engine provides code to load volumetric maps as CVs.  <a href="classcolvarproxy__volmaps.html#a5b86dc899a90ed84ef0e11ba0146978f">More...</a><br /></td></tr>
 <tr class="separator:a5b86dc899a90ed84ef0e11ba0146978f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed30b6ea758b4ab800ba5c3abca522c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#abed30b6ea758b4ab800ba5c3abca522c">check_engine_volmaps_available</a> ()</td></tr>
+<tr class="memdesc:abed30b6ea758b4ab800ba5c3abca522c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether the engine supports offloaded computation of volumetric maps.  <a href="classcolvarproxy__volmaps.html#abed30b6ea758b4ab800ba5c3abca522c">More...</a><br /></td></tr>
+<tr class="separator:abed30b6ea758b4ab800ba5c3abca522c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b771e07fc726c0a9db4e9d96e03d606"><td class="memItemLeft" align="right" valign="top"><a id="a9b771e07fc726c0a9db4e9d96e03d606" name="a9b771e07fc726c0a9db4e9d96e03d606"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>add_volmap_slot</b> (int volmap_id)</td></tr>
 <tr class="memdesc:a9b771e07fc726c0a9db4e9d96e03d606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a slot for a volumetric map not requested yet. <br /></td></tr>
@@ -206,6 +209,35 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Container of grid-based objects. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abed30b6ea758b4ab800ba5c3abca522c" name="abed30b6ea758b4ab800ba5c3abca522c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed30b6ea758b4ab800ba5c3abca522c">&#9670;&#160;</a></span>check_engine_volmaps_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvarproxy_volmaps::check_engine_volmaps_available </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test whether the engine supports offloaded computation of volumetric maps. </p>
+
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a55a4d1fe5e0ba42db9772146ed8a4ae2">colvarproxy_namd</a>.</p>
+
+</div>
+</div>
 <a id="a5b86dc899a90ed84ef0e11ba0146978f" name="a5b86dc899a90ed84ef0e11ba0146978f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b86dc899a90ed84ef0e11ba0146978f">&#9670;&#160;</a></span>check_volmaps_available()</h2>
 
@@ -229,7 +261,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 </table>
 </div><div class="memdoc">
 
-<p>Test whether this implementation can use volumetric maps as CVs. </p>
+<p>Test whether the engine provides code to load volumetric maps as CVs. </p>
 
 <p>Reimplemented in <a class="el" href="classcolvarproxy__vmd.html#a54cfba7941e7989dc5860ce2ab0dd27e">colvarproxy_vmd</a>, and <a class="el" href="classcolvarproxy__namd.html#aa3729cf1bc9b71dbfbc07838d06d0951">colvarproxy_namd</a>.</p>
 
@@ -515,7 +547,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 22 2026 18:35:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Oct 23 2026 14:42:15 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

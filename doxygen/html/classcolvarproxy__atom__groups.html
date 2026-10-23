@@ -119,9 +119,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_atom_
 int&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="memdesc:abc5e48e211fbc0f0376b0bc8215ff687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear atom group data. <br /></td></tr>
 <tr class="separator:abc5e48e211fbc0f0376b0bc8215ff687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57d97efe7bea3715ef18d54b27d24097"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atom__groups.html#a57d97efe7bea3715ef18d54b27d24097">scalable_group_coms</a> ()</td></tr>
-<tr class="memdesc:a57d97efe7bea3715ef18d54b27d24097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this proxy implementation has capability for scalable groups.  <a href="classcolvarproxy__atom__groups.html#a57d97efe7bea3715ef18d54b27d24097">More...</a><br /></td></tr>
-<tr class="separator:a57d97efe7bea3715ef18d54b27d24097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab3373951b628bfb423484a16cbc337"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atom__groups.html#a2ab3373951b628bfb423484a16cbc337">check_scalable_group_coms</a> ()</td></tr>
+<tr class="memdesc:a2ab3373951b628bfb423484a16cbc337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this proxy supports offloaded computation of centers of mass (outside Colvars)  <a href="classcolvarproxy__atom__groups.html#a2ab3373951b628bfb423484a16cbc337">More...</a><br /></td></tr>
+<tr class="separator:a2ab3373951b628bfb423484a16cbc337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7b86cc87985e3c3c910a8e8c477bebd"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atom__groups.html#ad7b86cc87985e3c3c910a8e8c477bebd">init_atom_group</a> (std::vector&lt; int &gt; const &amp;atoms_ids)</td></tr>
 <tr class="memdesc:ad7b86cc87985e3c3c910a8e8c477bebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare this group for collective variables calculation, selecting atoms by internal ids (0-based)  <a href="classcolvarproxy__atom__groups.html#ad7b86cc87985e3c3c910a8e8c477bebd">More...</a><br /></td></tr>
 <tr class="separator:ad7b86cc87985e3c3c910a8e8c477bebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,6 +244,35 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Container of atom group data (allow collection of aggregated atomic data) </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2ab3373951b628bfb423484a16cbc337" name="a2ab3373951b628bfb423484a16cbc337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab3373951b628bfb423484a16cbc337">&#9670;&#160;</a></span>check_scalable_group_coms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvarproxy_atom_groups::check_scalable_group_coms </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if this proxy supports offloaded computation of centers of mass (outside Colvars) </p>
+
+<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#ad829f6a8d8d0348a7770056172d60f9b">colvarproxy_namd</a>.</p>
+
+</div>
+</div>
 <a id="a2ad6a01f7ff54329e5c5bd54e7e8277e" name="a2ad6a01f7ff54329e5c5bd54e7e8277e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ad6a01f7ff54329e5c5bd54e7e8277e">&#9670;&#160;</a></span>clear_atom_group()</h2>
 
@@ -304,35 +333,6 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 
 </div>
 </div>
-<a id="a57d97efe7bea3715ef18d54b27d24097" name="a57d97efe7bea3715ef18d54b27d24097"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57d97efe7bea3715ef18d54b27d24097">&#9670;&#160;</a></span>scalable_group_coms()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int colvarproxy_atom_groups::scalable_group_coms </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Whether this proxy implementation has capability for scalable groups. </p>
-
-<p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#aa9df1465c5a6f8d378fc79d3a94a2166">colvarproxy_namd</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="colvarproxy_8h_source.html">colvarproxy.h</a></li>
 <li>colvarproxy.cpp</li>
@@ -340,7 +340,7 @@ std::vector&lt; <a class="el" href="classcolvarmodule_1_1rvector.html">cvm::rvec
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 22 2026 18:35:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Oct 23 2026 14:42:15 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

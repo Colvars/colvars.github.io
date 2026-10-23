@@ -15,7 +15,7 @@ var searchData=
   ['parents_12',['parents',['../classcolvardeps.html#ae0b2b33dae9fdb9de73aad8d0f4d292a',1,'colvardeps']]],
   ['parse_13',['parse',['../classcolvarmodule.html#a8be73a0b3c3d72211fbd8349e7d1d41e',1,'colvarmodule']]],
   ['patch_5fversion_5fint_14',['patch_version_int',['../classcolvarmodule.html#a6db2ce26fc77e27d7aa28124e4587516',1,'colvarmodule']]],
-  ['period_15',['period',['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period()'],['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period()']]],
+  ['period_15',['period',['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period()'],['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period()']]],
   ['periodic_16',['periodic',['../classcolvar__grid.html#ae7ae2b01e5c6afa691889907419aa4ec',1,'colvar_grid']]],
   ['periodic_5fx_17',['periodic_x',['../classcolvarmodule_1_1system__boundary__conditions.html#a6f738017cf3f3526250780c24e4ad233',1,'colvarmodule::system_boundary_conditions']]],
   ['pmf_18',['pmf',['../classcolvarbias__abf.html#ae12340f7faa05c38802bc6337667407b',1,'colvarbias_abf']]],
@@ -28,6 +28,7 @@ var searchData=
   ['prev_5fx_5fext_25',['prev_x_ext',['../classcolvar.html#a75d391e937bd036d1c732e37dc3e0322',1,'colvar']]],
   ['previous_5fbin_26',['previous_bin',['../classcolvarbias__reweightaMD.html#a210fd6ebf21cfaedef355bc25dc86855',1,'colvarbias_reweightaMD']]],
   ['previous_5fcolvar_5fforces_27',['previous_colvar_forces',['../classcolvarbias.html#a881b022eeedaeabdbd7c5dd1b5a1510c',1,'colvarbias']]],
-  ['proxy_28',['proxy',['../classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1',1,'colvarmodule']]],
-  ['proxy_5fstatic_29',['proxy_static',['../classcolvarmodule.html#a1907a60727be1a6eabf3f546ce7b110a',1,'colvarmodule']]]
+  ['previous_5fnamd_5fstep_28',['previous_NAMD_step',['../classcolvarproxy__namd.html#a8211bac892c0fe6b603da6ebe4ff5a88',1,'colvarproxy_namd']]],
+  ['proxy_29',['proxy',['../classcolvarmodule.html#afeb26a10701cbf0c8b066b41745445d1',1,'colvarmodule']]],
+  ['proxy_5fstatic_30',['proxy_static',['../classcolvarmodule.html#a1907a60727be1a6eabf3f546ce7b110a',1,'colvarmodule']]]
 ];

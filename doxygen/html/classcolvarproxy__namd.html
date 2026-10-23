@@ -143,15 +143,15 @@ Collaboration diagram for colvarproxy_namd:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4ea9db4f051d61f96fe32c3299caf14b"><td class="memItemLeft" align="right" valign="top"><a id="a4ea9db4f051d61f96fe32c3299caf14b" name="a4ea9db4f051d61f96fe32c3299caf14b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>e_pdb_field</b> { <br />
-&#160;&#160;<b>e_pdb_none</b>
-, <b>e_pdb_occ</b>
-, <b>e_pdb_beta</b>
-, <b>e_pdb_x</b>
+<tr class="memitem:a4ea9db4f051d61f96fe32c3299caf14b"><td class="memItemLeft" align="right" valign="top"><a id="a4ea9db4f051d61f96fe32c3299caf14b" name="a4ea9db4f051d61f96fe32c3299caf14b"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>e_pdb_field</b> { <br />
+&#160;&#160;<b>none</b>
+, <b>occ</b>
+, <b>beta</b>
+, <b>x</b>
 , <br />
-&#160;&#160;<b>e_pdb_y</b>
-, <b>e_pdb_z</b>
-, <b>e_pdb_ntot</b>
+&#160;&#160;<b>y</b>
+, <b>z</b>
+, <b>ntot</b>
 <br />
  }</td></tr>
 <tr class="separator:a4ea9db4f051d61f96fe32c3299caf14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,12 +190,21 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>atom_buffer_rvector_
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a74cdc57d9357c7d60adadc4fe70bb6af"><td class="memItemLeft" align="right" valign="top"><a id="a74cdc57d9357c7d60adadc4fe70bb6af" name="a74cdc57d9357c7d60adadc4fe70bb6af"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_gm_object</b> (<a class="el" href="classGlobalMasterColvars.html">GlobalMasterColvars</a> *gm)</td></tr>
+<tr class="memdesc:a74cdc57d9357c7d60adadc4fe70bb6af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell the proxy that it will be using the GlobalMaster interface. <br /></td></tr>
+<tr class="separator:a74cdc57d9357c7d60adadc4fe70bb6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f9d15a0073d2ef88879cb17a06dec9"><td class="memItemLeft" align="right" valign="top"><a id="a59f9d15a0073d2ef88879cb17a06dec9" name="a59f9d15a0073d2ef88879cb17a06dec9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="memdesc:a59f9d15a0073d2ef88879cb17a06dec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize proxy data based on the chosen interface. <br /></td></tr>
+<tr class="separator:a59f9d15a0073d2ef88879cb17a06dec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9729b27aeb94adfe9bc1c446d53a78b3"><td class="memItemLeft" align="right" valign="top"><a id="a9729b27aeb94adfe9bc1c446d53a78b3" name="a9729b27aeb94adfe9bc1c446d53a78b3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>init_module</b> ()</td></tr>
+<tr class="memdesc:a9729b27aeb94adfe9bc1c446d53a78b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the module. <br /></td></tr>
+<tr class="separator:a9729b27aeb94adfe9bc1c446d53a78b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05887eb56ce6f72e94e4fb228532bd91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#a05887eb56ce6f72e94e4fb228532bd91">init_tcl_pointers</a> () override</td></tr>
 <tr class="memdesc:a05887eb56ce6f72e94e4fb228532bd91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Tcl pointers.  <a href="classcolvarproxy__namd.html#a05887eb56ce6f72e94e4fb228532bd91">More...</a><br /></td></tr>
 <tr class="separator:a05887eb56ce6f72e94e4fb228532bd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7eae5a0c787f507a9f253be46223b08"><td class="memItemLeft" align="right" valign="top"><a id="ae7eae5a0c787f507a9f253be46223b08" name="ae7eae5a0c787f507a9f253be46223b08"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>colvarproxy_namd</b> (<a class="el" href="classGlobalMasterColvars.html">GlobalMasterColvars</a> *gm)</td></tr>
-<tr class="separator:ae7eae5a0c787f507a9f253be46223b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c6b03395d096a53d9128a306e2cc6ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#a5c6b03395d096a53d9128a306e2cc6ff">setup</a> () override</td></tr>
 <tr class="memdesc:a5c6b03395d096a53d9128a306e2cc6ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re)initialize required member data (called after the module)  <a href="classcolvarproxy__namd.html#a5c6b03395d096a53d9128a306e2cc6ff">More...</a><br /></td></tr>
 <tr class="separator:a5c6b03395d096a53d9128a306e2cc6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,13 +215,36 @@ Public Member Functions</h2></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>update_target_temperature</b> ()</td></tr>
 <tr class="memdesc:a261f38754b56968e55c26eba22f37bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the target temperature from the NAMD thermostats supported so far. <br /></td></tr>
 <tr class="separator:a261f38754b56968e55c26eba22f37bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d5db1a6c005fc07a26807d6409b7937"><td class="memItemLeft" align="right" valign="top"><a id="a4d5db1a6c005fc07a26807d6409b7937" name="a4d5db1a6c005fc07a26807d6409b7937"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init_atoms_map</b> ()</td></tr>
-<tr class="memdesc:a4d5db1a6c005fc07a26807d6409b7937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate an atoms map with the same size as the NAMD topology. <br /></td></tr>
-<tr class="separator:a4d5db1a6c005fc07a26807d6409b7937"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdae698d28a56ef0b7d0b83695474451"><td class="memItemLeft" align="right" valign="top"><a id="afdae698d28a56ef0b7d0b83695474451" name="afdae698d28a56ef0b7d0b83695474451"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>update_atoms_map</b> (AtomIDList::const_iterator begin, AtomIDList::const_iterator end)</td></tr>
-<tr class="separator:afdae698d28a56ef0b7d0b83695474451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a8faa5167c28279b887b10f5a0f76f"><td class="memItemLeft" align="right" valign="top"><a id="a72a8faa5167c28279b887b10f5a0f76f" name="a72a8faa5167c28279b887b10f5a0f76f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>init_gm_atoms_map</b> ()</td></tr>
+<tr class="memdesc:a72a8faa5167c28279b887b10f5a0f76f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create map from NAMD atom indices to colvarproxy array indices (used by GlobalMaster) <br /></td></tr>
+<tr class="separator:a72a8faa5167c28279b887b10f5a0f76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb16d95e4c162f7fa935b718b43aef11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#adb16d95e4c162f7fa935b718b43aef11">request_gm_atom_by_id</a> (int aid, int index)</td></tr>
+<tr class="separator:adb16d95e4c162f7fa935b718b43aef11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78594cf25ee75eda5dae282ccdef9a66"><td class="memItemLeft" align="right" valign="top"><a id="a78594cf25ee75eda5dae282ccdef9a66" name="a78594cf25ee75eda5dae282ccdef9a66"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>update_gm_atoms_map</b> (AtomIDList::const_iterator begin, AtomIDList::const_iterator end)</td></tr>
+<tr class="memdesc:a78594cf25ee75eda5dae282ccdef9a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update map to reflect other requested atoms, including other GlobalMaster objects. <br /></td></tr>
+<tr class="separator:a78594cf25ee75eda5dae282ccdef9a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ba73fa0964acbd0a418623892be983"><td class="memItemLeft" align="right" valign="top"><a id="ac4ba73fa0964acbd0a418623892be983" name="ac4ba73fa0964acbd0a418623892be983"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>setup_gm_atom_buffers</b> ()</td></tr>
+<tr class="memdesc:ac4ba73fa0964acbd0a418623892be983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and zero out data buffers for atoms requested through GlobalMaster. <br /></td></tr>
+<tr class="separator:ac4ba73fa0964acbd0a418623892be983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9556bbaa7d448b4dce3400376a757358"><td class="memItemLeft" align="right" valign="top"><a id="a9556bbaa7d448b4dce3400376a757358" name="a9556bbaa7d448b4dce3400376a757358"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>setup_gm_atom_group_buffers</b> ()</td></tr>
+<tr class="memdesc:a9556bbaa7d448b4dce3400376a757358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and zero out data buffers for atom groups requested through GlobalMaster. <br /></td></tr>
+<tr class="separator:a9556bbaa7d448b4dce3400376a757358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a357b2eaca371210de00bcfd459791c"><td class="memItemLeft" align="right" valign="top"><a id="a9a357b2eaca371210de00bcfd459791c" name="a9a357b2eaca371210de00bcfd459791c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>setup_gm_volmap_buffers</b> ()</td></tr>
+<tr class="memdesc:a9a357b2eaca371210de00bcfd459791c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and zero out data buffers for grid objects requested through GlobalMaster. <br /></td></tr>
+<tr class="separator:a9a357b2eaca371210de00bcfd459791c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39ffa8cfa839c0e3e04f268c67cab99"><td class="memItemLeft" align="right" valign="top"><a id="ab39ffa8cfa839c0e3e04f268c67cab99" name="ab39ffa8cfa839c0e3e04f268c67cab99"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>read_gm_atom_buffers</b> ()</td></tr>
+<tr class="memdesc:ab39ffa8cfa839c0e3e04f268c67cab99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the current coordinates and total forces. <br /></td></tr>
+<tr class="separator:ab39ffa8cfa839c0e3e04f268c67cab99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a138dc25160ffa1b5e3b838b3b555e"><td class="memItemLeft" align="right" valign="top"><a id="a07a138dc25160ffa1b5e3b838b3b555e" name="a07a138dc25160ffa1b5e3b838b3b555e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>send_gm_atom_forces</b> ()</td></tr>
+<tr class="memdesc:a07a138dc25160ffa1b5e3b838b3b555e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send Colvars forces to GlobalMaster. <br /></td></tr>
+<tr class="separator:a07a138dc25160ffa1b5e3b838b3b555e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1cb3c124cace653c3ef92fd2075b8a4"><td class="memItemLeft" align="right" valign="top"><a id="ab1cb3c124cace653c3ef92fd2075b8a4" name="ab1cb3c124cace653c3ef92fd2075b8a4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>calculate</b> ()</td></tr>
 <tr class="separator:ab1cb3c124cace653c3ef92fd2075b8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -294,9 +326,9 @@ e_pdb_field&#160;</td><td class="memItemRight" valign="bottom"><b>pdb_field_str2
 <tr class="memitem:a58236e80bb340aab8aa46154ded21173"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#a58236e80bb340aab8aa46154ded21173">load_coords_pdb</a> (char const *filename, std::vector&lt; <a class="el" href="classcolvarmodule.html#a09096eb029040be41b5189049ac53263">cvm::atom_pos</a> &gt; &amp;pos, const std::vector&lt; int &gt; &amp;indices, std::string const &amp;pdb_field, double const pdb_field_value) override</td></tr>
 <tr class="memdesc:a58236e80bb340aab8aa46154ded21173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a set of coordinates from a PDB file.  <a href="classcolvarproxy__namd.html#a58236e80bb340aab8aa46154ded21173">More...</a><br /></td></tr>
 <tr class="separator:a58236e80bb340aab8aa46154ded21173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9df1465c5a6f8d378fc79d3a94a2166"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#aa9df1465c5a6f8d378fc79d3a94a2166">scalable_group_coms</a> () override</td></tr>
-<tr class="memdesc:aa9df1465c5a6f8d378fc79d3a94a2166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this proxy implementation has capability for scalable groups.  <a href="classcolvarproxy__namd.html#aa9df1465c5a6f8d378fc79d3a94a2166">More...</a><br /></td></tr>
-<tr class="separator:aa9df1465c5a6f8d378fc79d3a94a2166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad829f6a8d8d0348a7770056172d60f9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#ad829f6a8d8d0348a7770056172d60f9b">check_scalable_group_coms</a> () override</td></tr>
+<tr class="memdesc:ad829f6a8d8d0348a7770056172d60f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this proxy supports offloaded computation of centers of mass (outside Colvars)  <a href="classcolvarproxy__namd.html#ad829f6a8d8d0348a7770056172d60f9b">More...</a><br /></td></tr>
+<tr class="separator:ad829f6a8d8d0348a7770056172d60f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ee91b65cb1bbd098a6149a2579c2418"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#a3ee91b65cb1bbd098a6149a2579c2418">init_atom_group</a> (std::vector&lt; int &gt; const &amp;<a class="el" href="classcolvarproxy__atoms.html#afeb475a689124e91c7228fbaaf35ed7e">atoms_ids</a>) override</td></tr>
 <tr class="memdesc:a3ee91b65cb1bbd098a6149a2579c2418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare this group for collective variables calculation, selecting atoms by internal ids (0-based)  <a href="classcolvarproxy__namd.html#a3ee91b65cb1bbd098a6149a2579c2418">More...</a><br /></td></tr>
 <tr class="separator:a3ee91b65cb1bbd098a6149a2579c2418"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,8 +339,11 @@ e_pdb_field&#160;</td><td class="memItemRight" valign="bottom"><b>pdb_field_str2
 int&#160;</td><td class="memItemRight" valign="bottom"><b>update_group_properties</b> (int index)</td></tr>
 <tr class="separator:a8262f62a65ab5f7068543ecff19215bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3729cf1bc9b71dbfbc07838d06d0951"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#aa3729cf1bc9b71dbfbc07838d06d0951">check_volmaps_available</a> () override</td></tr>
-<tr class="memdesc:aa3729cf1bc9b71dbfbc07838d06d0951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether this implementation can use volumetric maps as CVs.  <a href="classcolvarproxy__namd.html#aa3729cf1bc9b71dbfbc07838d06d0951">More...</a><br /></td></tr>
+<tr class="memdesc:aa3729cf1bc9b71dbfbc07838d06d0951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether the engine provides code to load volumetric maps as CVs.  <a href="classcolvarproxy__namd.html#aa3729cf1bc9b71dbfbc07838d06d0951">More...</a><br /></td></tr>
 <tr class="separator:aa3729cf1bc9b71dbfbc07838d06d0951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a4d1fe5e0ba42db9772146ed8a4ae2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#a55a4d1fe5e0ba42db9772146ed8a4ae2">check_engine_volmaps_available</a> () override</td></tr>
+<tr class="memdesc:a55a4d1fe5e0ba42db9772146ed8a4ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether the engine supports offloaded computation of volumetric maps.  <a href="classcolvarproxy__namd.html#a55a4d1fe5e0ba42db9772146ed8a4ae2">More...</a><br /></td></tr>
+<tr class="separator:a55a4d1fe5e0ba42db9772146ed8a4ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a196425174a056d114f93a2dd6ab02f24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__namd.html#a196425174a056d114f93a2dd6ab02f24">request_engine_volmap_by_id</a> (int volmap_id) override</td></tr>
 <tr class="memdesc:a196425174a056d114f93a2dd6ab02f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a MGridForces map for computation by NAMD.  <a href="classcolvarproxy__namd.html#a196425174a056d114f93a2dd6ab02f24">More...</a><br /></td></tr>
 <tr class="separator:a196425174a056d114f93a2dd6ab02f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -723,9 +758,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~colvarproxy_atom_
 int&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="memdesc:abc5e48e211fbc0f0376b0bc8215ff687 inherit pub_methods_classcolvarproxy__atom__groups"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear atom group data. <br /></td></tr>
 <tr class="separator:abc5e48e211fbc0f0376b0bc8215ff687 inherit pub_methods_classcolvarproxy__atom__groups"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57d97efe7bea3715ef18d54b27d24097 inherit pub_methods_classcolvarproxy__atom__groups"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atom__groups.html#a57d97efe7bea3715ef18d54b27d24097">scalable_group_coms</a> ()</td></tr>
-<tr class="memdesc:a57d97efe7bea3715ef18d54b27d24097 inherit pub_methods_classcolvarproxy__atom__groups"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this proxy implementation has capability for scalable groups.  <a href="classcolvarproxy__atom__groups.html#a57d97efe7bea3715ef18d54b27d24097">More...</a><br /></td></tr>
-<tr class="separator:a57d97efe7bea3715ef18d54b27d24097 inherit pub_methods_classcolvarproxy__atom__groups"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab3373951b628bfb423484a16cbc337 inherit pub_methods_classcolvarproxy__atom__groups"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atom__groups.html#a2ab3373951b628bfb423484a16cbc337">check_scalable_group_coms</a> ()</td></tr>
+<tr class="memdesc:a2ab3373951b628bfb423484a16cbc337 inherit pub_methods_classcolvarproxy__atom__groups"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this proxy supports offloaded computation of centers of mass (outside Colvars)  <a href="classcolvarproxy__atom__groups.html#a2ab3373951b628bfb423484a16cbc337">More...</a><br /></td></tr>
+<tr class="separator:a2ab3373951b628bfb423484a16cbc337 inherit pub_methods_classcolvarproxy__atom__groups"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7b86cc87985e3c3c910a8e8c477bebd inherit pub_methods_classcolvarproxy__atom__groups"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atom__groups.html#ad7b86cc87985e3c3c910a8e8c477bebd">init_atom_group</a> (std::vector&lt; int &gt; const &amp;atoms_ids)</td></tr>
 <tr class="memdesc:ad7b86cc87985e3c3c910a8e8c477bebd inherit pub_methods_classcolvarproxy__atom__groups"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare this group for collective variables calculation, selecting atoms by internal ids (0-based)  <a href="classcolvarproxy__atom__groups.html#ad7b86cc87985e3c3c910a8e8c477bebd">More...</a><br /></td></tr>
 <tr class="separator:ad7b86cc87985e3c3c910a8e8c477bebd inherit pub_methods_classcolvarproxy__atom__groups"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -812,8 +847,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="memdesc:a050524325feba0a0254dcf2605930153 inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear volumetric map data. <br /></td></tr>
 <tr class="separator:a050524325feba0a0254dcf2605930153 inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b86dc899a90ed84ef0e11ba0146978f inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#a5b86dc899a90ed84ef0e11ba0146978f">check_volmaps_available</a> ()</td></tr>
-<tr class="memdesc:a5b86dc899a90ed84ef0e11ba0146978f inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether this implementation can use volumetric maps as CVs.  <a href="classcolvarproxy__volmaps.html#a5b86dc899a90ed84ef0e11ba0146978f">More...</a><br /></td></tr>
+<tr class="memdesc:a5b86dc899a90ed84ef0e11ba0146978f inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether the engine provides code to load volumetric maps as CVs.  <a href="classcolvarproxy__volmaps.html#a5b86dc899a90ed84ef0e11ba0146978f">More...</a><br /></td></tr>
 <tr class="separator:a5b86dc899a90ed84ef0e11ba0146978f inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed30b6ea758b4ab800ba5c3abca522c inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__volmaps.html#abed30b6ea758b4ab800ba5c3abca522c">check_engine_volmaps_available</a> ()</td></tr>
+<tr class="memdesc:abed30b6ea758b4ab800ba5c3abca522c inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether the engine supports offloaded computation of volumetric maps.  <a href="classcolvarproxy__volmaps.html#abed30b6ea758b4ab800ba5c3abca522c">More...</a><br /></td></tr>
+<tr class="separator:abed30b6ea758b4ab800ba5c3abca522c inherit pub_methods_classcolvarproxy__volmaps"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b771e07fc726c0a9db4e9d96e03d606 inherit pub_methods_classcolvarproxy__volmaps"><td class="memItemLeft" align="right" valign="top"><a id="a9b771e07fc726c0a9db4e9d96e03d606" name="a9b771e07fc726c0a9db4e9d96e03d606"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>add_volmap_slot</b> (int volmap_id)</td></tr>
 <tr class="memdesc:a9b771e07fc726c0a9db4e9d96e03d606 inherit pub_methods_classcolvarproxy__volmaps"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a slot for a volumetric map not requested yet. <br /></td></tr>
@@ -1312,6 +1350,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update_accelMD_info</
 <tr class="inherit_header pro_methods_classcolvarproxy__atoms"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcolvarproxy__atoms')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcolvarproxy__atoms.html">colvarproxy_atoms</a></td></tr>
 <tr class="memitem:a146404504435fa3394d8f7731d0b4695 inherit pro_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a146404504435fa3394d8f7731d0b4695">add_atom_slot</a> (int atom_id)</td></tr>
 <tr class="separator:a146404504435fa3394d8f7731d0b4695 inherit pro_methods_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6347b8a25bbf9d32ac65404a30744ce9 inherit pro_methods_classcolvarproxy__atoms"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a6347b8a25bbf9d32ac65404a30744ce9">find_atom_by_id</a> (int atom_id)</td></tr>
+<tr class="memdesc:a6347b8a25bbf9d32ac65404a30744ce9 inherit pro_methods_classcolvarproxy__atoms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the index of an atom by its ID.  <a href="classcolvarproxy__atoms.html#a6347b8a25bbf9d32ac65404a30744ce9">More...</a><br /></td></tr>
+<tr class="separator:a6347b8a25bbf9d32ac65404a30744ce9 inherit pro_methods_classcolvarproxy__atoms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcolvarproxy__atom__groups"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcolvarproxy__atom__groups')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcolvarproxy__atom__groups.html">colvarproxy_atom_groups</a></td></tr>
 <tr class="memitem:a4de551c4cdac5d6228201a00c274ecc8 inherit pro_methods_classcolvarproxy__atom__groups"><td class="memItemLeft" align="right" valign="top"><a id="a4de551c4cdac5d6228201a00c274ecc8" name="a4de551c4cdac5d6228201a00c274ecc8"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>add_atom_group_slot</b> (int atom_group_id)</td></tr>
@@ -1324,16 +1365,16 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="classGlobalMasterColvars.html">GlobalMasterColvars</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>globalmaster</b> = nullptr</td></tr>
 <tr class="memdesc:a0a78c0c6c1f43eea5156cd8626d91058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the parent GlobalMaster object. <br /></td></tr>
 <tr class="separator:a0a78c0c6c1f43eea5156cd8626d91058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae556a924426549a025061b6048c045d9"><td class="memItemLeft" align="right" valign="top"><a id="ae556a924426549a025061b6048c045d9" name="ae556a924426549a025061b6048c045d9"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atoms_map</b></td></tr>
-<tr class="memdesc:ae556a924426549a025061b6048c045d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of atom indices (relative to the colvarproxy arrays), usedfor faster copy of atomic data. <br /></td></tr>
-<tr class="separator:ae556a924426549a025061b6048c045d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719cf07adf64ff4a0a364e7426e9bfe3"><td class="memItemLeft" align="right" valign="top"><a id="a719cf07adf64ff4a0a364e7426e9bfe3" name="a719cf07adf64ff4a0a364e7426e9bfe3"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>gm_atoms_map</b></td></tr>
+<tr class="memdesc:a719cf07adf64ff4a0a364e7426e9bfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from NAMD atom indices to colvarproxy array indices (used by GlobalMaster) <br /></td></tr>
+<tr class="separator:a719cf07adf64ff4a0a364e7426e9bfe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42f6ee08cc1a43c077cda44b0f248110"><td class="memItemLeft" align="right" valign="top"><a id="a42f6ee08cc1a43c077cda44b0f248110" name="a42f6ee08cc1a43c077cda44b0f248110"></a>
-SimParameters *&#160;</td><td class="memItemRight" valign="bottom"><b>simparams</b></td></tr>
+SimParameters *&#160;</td><td class="memItemRight" valign="bottom"><b>simparams</b> = nullptr</td></tr>
 <tr class="memdesc:a42f6ee08cc1a43c077cda44b0f248110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the NAMD simulation input object. <br /></td></tr>
 <tr class="separator:a42f6ee08cc1a43c077cda44b0f248110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a580758c9cec965d6904a590e6a524070"><td class="memItemLeft" align="right" valign="top"><a id="a580758c9cec965d6904a590e6a524070" name="a580758c9cec965d6904a590e6a524070"></a>
-Controller const  *&#160;</td><td class="memItemRight" valign="bottom"><b>controller</b></td></tr>
+Controller const  *&#160;</td><td class="memItemRight" valign="bottom"><b>controller</b> = nullptr</td></tr>
 <tr class="memdesc:a580758c9cec965d6904a590e6a524070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to Controller object. <br /></td></tr>
 <tr class="separator:a580758c9cec965d6904a590e6a524070"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f11de362b17279180930e41653febbe"><td class="memItemLeft" align="right" valign="top"><a id="a9f11de362b17279180930e41653febbe" name="a9f11de362b17279180930e41653febbe"></a>
@@ -1341,10 +1382,16 @@ std::unique_ptr&lt; Random &gt;&#160;</td><td class="memItemRight" valign="botto
 <tr class="memdesc:a9f11de362b17279180930e41653febbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">NAMD-style PRNG object. <br /></td></tr>
 <tr class="separator:a9f11de362b17279180930e41653febbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2824fd22e3e90f4ef12ef145f34e04b0"><td class="memItemLeft" align="right" valign="top"><a id="a2824fd22e3e90f4ef12ef145f34e04b0" name="a2824fd22e3e90f4ef12ef145f34e04b0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>first_timestep</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>first_timestep</b> = true</td></tr>
+<tr class="memdesc:a2824fd22e3e90f4ef12ef145f34e04b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use to distinguish between "run 0" and actual runs. <br /></td></tr>
 <tr class="separator:a2824fd22e3e90f4ef12ef145f34e04b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a538bc76897aadde0b74dd1fc845428cd"><td class="memItemLeft" align="right" valign="top"><a id="a538bc76897aadde0b74dd1fc845428cd" name="a538bc76897aadde0b74dd1fc845428cd"></a>
+<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><b>NAMD_step</b> = 0L</td></tr>
+<tr class="memdesc:a538bc76897aadde0b74dd1fc845428cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current NAMD simulation step (promoted from int) <br /></td></tr>
+<tr class="separator:a538bc76897aadde0b74dd1fc845428cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8211bac892c0fe6b603da6ebe4ff5a88"><td class="memItemLeft" align="right" valign="top"><a id="a8211bac892c0fe6b603da6ebe4ff5a88" name="a8211bac892c0fe6b603da6ebe4ff5a88"></a>
-<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><b>previous_NAMD_step</b></td></tr>
+<a class="el" href="classcolvarmodule.html#af5c180df4b713800d770d96612c59489">cvm::step_number</a>&#160;</td><td class="memItemRight" valign="bottom"><b>previous_NAMD_step</b> = 0L</td></tr>
+<tr class="memdesc:a8211bac892c0fe6b603da6ebe4ff5a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous NAMD simulation step; used to test if the simulation is advancing. <br /></td></tr>
 <tr class="separator:a8211bac892c0fe6b603da6ebe4ff5a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb099b35dd2457a711f177111c297704"><td class="memItemLeft" align="right" valign="top"><a id="adb099b35dd2457a711f177111c297704" name="adb099b35dd2457a711f177111c297704"></a>
 SubmitReduction *&#160;</td><td class="memItemRight" valign="bottom"><b>reduction</b></td></tr>
@@ -1847,6 +1894,35 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>units</b></td>
 
 </div>
 </div>
+<a id="a55a4d1fe5e0ba42db9772146ed8a4ae2" name="a55a4d1fe5e0ba42db9772146ed8a4ae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a4d1fe5e0ba42db9772146ed8a4ae2">&#9670;&#160;</a></span>check_engine_volmaps_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvarproxy_namd::check_engine_volmaps_available </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test whether the engine supports offloaded computation of volumetric maps. </p>
+
+<p>Reimplemented from <a class="el" href="classcolvarproxy__volmaps.html#abed30b6ea758b4ab800ba5c3abca522c">colvarproxy_volmaps</a>.</p>
+
+</div>
+</div>
 <a id="a8c8b8fde65dd03467cb707df297ca547" name="a8c8b8fde65dd03467cb707df297ca547"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c8b8fde65dd03467cb707df297ca547">&#9670;&#160;</a></span>check_replicas_enabled()</h2>
 
@@ -1876,6 +1952,35 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>units</b></td>
 
 </div>
 </div>
+<a id="ad829f6a8d8d0348a7770056172d60f9b" name="ad829f6a8d8d0348a7770056172d60f9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad829f6a8d8d0348a7770056172d60f9b">&#9670;&#160;</a></span>check_scalable_group_coms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvarproxy_namd::check_scalable_group_coms </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if this proxy supports offloaded computation of centers of mass (outside Colvars) </p>
+
+<p>Reimplemented from <a class="el" href="classcolvarproxy__atom__groups.html#a2ab3373951b628bfb423484a16cbc337">colvarproxy_atom_groups</a>.</p>
+
+</div>
+</div>
 <a id="aa3729cf1bc9b71dbfbc07838d06d0951" name="aa3729cf1bc9b71dbfbc07838d06d0951"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3729cf1bc9b71dbfbc07838d06d0951">&#9670;&#160;</a></span>check_volmaps_available()</h2>
 
@@ -1899,7 +2004,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>units</b></td>
 </table>
 </div><div class="memdoc">
 
-<p>Test whether this implementation can use volumetric maps as CVs. </p>
+<p>Test whether the engine provides code to load volumetric maps as CVs. </p>
 
 <p>Reimplemented from <a class="el" href="classcolvarproxy__volmaps.html#a5b86dc899a90ed84ef0e11ba0146978f">colvarproxy_volmaps</a>.</p>
 
@@ -3026,6 +3131,41 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>units</b></td>
 
 </div>
 </div>
+<a id="adb16d95e4c162f7fa935b718b43aef11" name="adb16d95e4c162f7fa935b718b43aef11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb16d95e4c162f7fa935b718b43aef11">&#9670;&#160;</a></span>request_gm_atom_by_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void colvarproxy_namd::request_gm_atom_by_id </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>aid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Request the given atom through the GlobalMaster object </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aid</td><td>Atom ID to request </td></tr>
+    <tr><td class="paramname">index</td><td>Index in the colvarproxy array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ade828d14f3f24eb0a055fafc859c4bc8" name="ade828d14f3f24eb0a055fafc859c4bc8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade828d14f3f24eb0a055fafc859c4bc8">&#9670;&#160;</a></span>request_total_force()</h2>
 
@@ -3202,35 +3342,6 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>units</b></td>
 
 </div>
 </div>
-<a id="aa9df1465c5a6f8d378fc79d3a94a2166" name="aa9df1465c5a6f8d378fc79d3a94a2166"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9df1465c5a6f8d378fc79d3a94a2166">&#9670;&#160;</a></span>scalable_group_coms()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int colvarproxy_namd::scalable_group_coms </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Whether this proxy implementation has capability for scalable groups. </p>
-
-<p>Reimplemented from <a class="el" href="classcolvarproxy__atom__groups.html#a57d97efe7bea3715ef18d54b27d24097">colvarproxy_atom_groups</a>.</p>
-
-</div>
-</div>
 <a id="a39ce273031cff58ca3c61d12a06d44cd" name="a39ce273031cff58ca3c61d12a06d44cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a39ce273031cff58ca3c61d12a06d44cd">&#9670;&#160;</a></span>send_alch_lambda()</h2>
 
@@ -3365,7 +3476,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>units</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 22 2026 18:35:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Oct 23 2026 14:42:15 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

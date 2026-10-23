@@ -244,6 +244,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>updated_charges</b> (
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a146404504435fa3394d8f7731d0b4695"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a146404504435fa3394d8f7731d0b4695">add_atom_slot</a> (int atom_id)</td></tr>
 <tr class="separator:a146404504435fa3394d8f7731d0b4695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6347b8a25bbf9d32ac65404a30744ce9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcolvarproxy__atoms.html#a6347b8a25bbf9d32ac65404a30744ce9">find_atom_by_id</a> (int atom_id)</td></tr>
+<tr class="memdesc:a6347b8a25bbf9d32ac65404a30744ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the index of an atom by its ID.  <a href="classcolvarproxy__atoms.html#a6347b8a25bbf9d32ac65404a30744ce9">More...</a><br /></td></tr>
+<tr class="separator:a6347b8a25bbf9d32ac65404a30744ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -503,6 +506,41 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>updated_charges_</b><
 <p>Used by the atom class destructor: rather than deleting the array slot (costly) set the corresponding atoms_refcount to zero. </p>
 
 <p>Reimplemented in <a class="el" href="classcolvarproxy__namd.html#a23135ba0af1a7621a1eba51ce8af3448">colvarproxy_namd</a>.</p>
+
+</div>
+</div>
+<a id="a6347b8a25bbf9d32ac65404a30744ce9" name="a6347b8a25bbf9d32ac65404a30744ce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6347b8a25bbf9d32ac65404a30744ce9">&#9670;&#160;</a></span>find_atom_by_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int colvarproxy_atoms::find_atom_by_id </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>atom_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Find the index of an atom by its ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">atom_id</td><td>Atom ID to search for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Index of the atom in the arrays, or -1 if not found </dd></dl>
 
 </div>
 </div>
@@ -779,7 +817,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>updated_charges_</b><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 22 2026 18:35:53 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Oct 23 2026 14:42:15 for Collective Variables Module - Developer Documentation by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
