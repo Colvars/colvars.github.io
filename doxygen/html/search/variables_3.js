@@ -32,7 +32,7 @@ var searchData=
   ['d_5ftbcount_29',['d_tbcount',['../structcolvars__gpu_1_1colvaratoms__gpu__calc__fit__info__t.html#a7c4b62204b2963bd3c3ecacd37411374',1,'colvars_gpu::colvaratoms_gpu_calc_fit_info_t']]],
   ['d_5ftilepairlist_5f32_30',['d_tilePairList_32',['../structcolvar_1_1coordnum_1_1coordnum__gpu__impl__t_1_1coordNumPairListT.html#a9c8abb56a6eb8af20ede0bfe355884da',1,'colvar::coordnum::coordnum_gpu_impl_t::coordNumPairListT']]],
   ['da_5fdlambda_31',['dA_dlambda',['../classcolvarbias__restraint__moving.html#a9990e354392b8dc53abc216236332dff',1,'colvarbias_restraint_moving']]],
-  ['data_32',['data',['../classcolvar__grid.html#a55315b2161c9487ade559bf1174b31dd',1,'colvar_grid::data()'],['../classcolvarparse_1_1read__block.html#a4ac899a6327487c41a0e5af396b8f79e',1,'colvarparse::read_block::data()']]],
+  ['data_32',['data',['../classcolvar__grid.html#a55315b2161c9487ade559bf1174b31dd',1,'colvar_grid::data'],['../classcolvarparse_1_1read__block.html#a4ac899a6327487c41a0e5af396b8f79e',1,'colvarparse::read_block::data']]],
   ['data_5fbegin_5fpos_33',['data_begin_pos',['../classcolvarparse.html#a39c128c5f96f1d6d74038024c1e25ce9',1,'colvarparse']]],
   ['data_5fend_5fpos_34',['data_end_pos',['../classcolvarparse.html#a953417bf426b3f6743ad08a5d6f5549c',1,'colvarparse']]],
   ['data_5flength_5f_35',['data_length_',['../classcvm_1_1memory__stream.html#a8aab6b9d2aa7b1c1b8afbb6a6acbdcec',1,'cvm::memory_stream']]],
@@ -42,11 +42,11 @@ var searchData=
   ['depth_5fs_39',['depth_s',['../classcolvarmodule.html#ac3dea574de8fb04e4f9baaae06fa1851',1,'colvarmodule']]],
   ['depth_5fv_40',['depth_v',['../classcolvarmodule.html#af8d8103cf679d3dc032f5bd10ff2cc4b',1,'colvarmodule']]],
   ['dip_41',['dip',['../classcvm_1_1atom__group.html#a28b175b73a81f4ea4ac1fd9aae3b887f',1,'cvm::atom_group']]],
-  ['dist_5fv_42',['dist_v',['../classcolvar_1_1distance.html#a5ba17d6d1753880b9454d2605f57cf11',1,'colvar::distance::dist_v()'],['../classcolvar_1_1distance__z.html#a20bf5a25f3b2bf4abd78b667cc4f5fe9',1,'colvar::distance_z::dist_v()']]],
+  ['dist_5fv_42',['dist_v',['../classcolvar_1_1distance.html#a5ba17d6d1753880b9454d2605f57cf11',1,'colvar::distance::dist_v'],['../classcolvar_1_1distance__z.html#a20bf5a25f3b2bf4abd78b667cc4f5fe9',1,'colvar::distance_z::dist_v']]],
   ['dist_5fv_5fortho_43',['dist_v_ortho',['../classcolvar_1_1distance__xy.html#a0125d34eb0809093f5164c3b36ccc53c',1,'colvar::distance_xy']]],
   ['dummy_5fatom_5fpos_44',['dummy_atom_pos',['../classcvm_1_1atom__group.html#a68343dbd7dc8cdf7ec7b6241715c7f4d',1,'cvm::atom_group']]],
   ['dump_5ffes_45',['dump_fes',['../classcolvarbias__meta.html#aef7b9224c8f7648d4b2b04a98ba6e10e',1,'colvarbias_meta']]],
   ['dump_5ffes_5fsave_46',['dump_fes_save',['../classcolvarbias__meta.html#a6677ef5fc246955636a8131477ead3b6',1,'colvarbias_meta']]],
   ['dump_5freplica_5ffes_47',['dump_replica_fes',['../classcolvarbias__meta.html#a02eca63a774e39d015ec7a94bda6edc7',1,'colvarbias_meta']]],
-  ['dxdr1_48',['dxdr1',['../classcolvar_1_1angle.html#ad4bd3c7146e911a631468ece2bbe9f4e',1,'colvar::angle::dxdr1()'],['../classcolvar_1_1dipole__angle.html#a55bff6207dfde50fe9306978823acf50',1,'colvar::dipole_angle::dxdr1()']]]
+  ['dxdr1_48',['dxdr1',['../classcolvar_1_1angle.html#ad4bd3c7146e911a631468ece2bbe9f4e',1,'colvar::angle::dxdr1'],['../classcolvar_1_1dipole__angle.html#a55bff6207dfde50fe9306978823acf50',1,'colvar::dipole_angle::dxdr1']]]
 ];

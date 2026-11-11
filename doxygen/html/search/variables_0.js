@@ -32,12 +32,12 @@ var searchData=
   ['atom_5fids_29',['atom_ids',['../classcolvar.html#afd2b3585b5c211102c67cb9c11ac38cc',1,'colvar']]],
   ['atom_5fweights_30',['atom_weights',['../classcolvar_1_1map__total.html#acabca344a51707cecf0bc2bb754e47d8',1,'colvar::map_total']]],
   ['atomic_5fgradients_31',['atomic_gradients',['../classcolvar.html#aae7ce01c5662a7bb251cf420f1b8fe66',1,'colvar']]],
-  ['atoms_32',['atoms',['../classcolvar_1_1map__total.html#aac0044242f68801e6cf6811b953d8228',1,'colvar::map_total::atoms()'],['../classcolvar_1_1gyration.html#a0ce38e320c5e0936b66cedb6ab985277',1,'colvar::gyration::atoms()'],['../classcolvar_1_1CartesianBasedPath.html#a5da55523d7f2af76324a02f7f3cfe1a6',1,'colvar::CartesianBasedPath::atoms()'],['../classcolvar_1_1cartesian.html#a19ea688c0dfd2c623670cf77b2dddb4f',1,'colvar::cartesian::atoms()'],['../classcolvar_1_1orientation.html#adf69b5f0c000e8ab5d2657ec23331e61',1,'colvar::orientation::atoms()'],['../classcolvar_1_1eigenvector.html#aab81fe544c868f794da8ddbce929fe4b',1,'colvar::eigenvector::atoms()'],['../classcolvar_1_1dipole__magnitude.html#a5e7bae9d8152a681223f02c02fc74b8e',1,'colvar::dipole_magnitude::atoms()'],['../classcolvar_1_1rmsd.html#a4a24aa909ae26b479c41e9a373ee07d7',1,'colvar::rmsd::atoms()']]],
+  ['atoms_32',['atoms',['../classcolvar_1_1dipole__magnitude.html#a5e7bae9d8152a681223f02c02fc74b8e',1,'colvar::dipole_magnitude::atoms'],['../classcolvar_1_1gyration.html#a0ce38e320c5e0936b66cedb6ab985277',1,'colvar::gyration::atoms'],['../classcolvar_1_1eigenvector.html#aab81fe544c868f794da8ddbce929fe4b',1,'colvar::eigenvector::atoms'],['../classcolvar_1_1orientation.html#adf69b5f0c000e8ab5d2657ec23331e61',1,'colvar::orientation::atoms'],['../classcolvar_1_1rmsd.html#a4a24aa909ae26b479c41e9a373ee07d7',1,'colvar::rmsd::atoms'],['../classcolvar_1_1cartesian.html#a19ea688c0dfd2c623670cf77b2dddb4f',1,'colvar::cartesian::atoms'],['../classcolvar_1_1CartesianBasedPath.html#a5da55523d7f2af76324a02f7f3cfe1a6',1,'colvar::CartesianBasedPath::atoms'],['../classcolvar_1_1map__total.html#aac0044242f68801e6cf6811b953d8228',1,'colvar::map_total::atoms']]],
   ['atoms_5fcharge_33',['atoms_charge',['../classcvm_1_1atom__group.html#acb108e8f943cabaf08ad5f47ce8f71de',1,'cvm::atom_group']]],
   ['atoms_5fcharges_34',['atoms_charges',['../classcolvarproxy__atoms.html#acc13736e7e451314f833ef34b5845d90',1,'colvarproxy_atoms']]],
   ['atoms_5fcog_35',['atoms_cog',['../classcolvar_1_1orientation.html#a51b67076d313e49609353761210ee473',1,'colvar::orientation']]],
   ['atoms_5fgrad_36',['atoms_grad',['../classcvm_1_1atom__group.html#ac5551e2b12ecaa5244e73c1f8e8ce897',1,'cvm::atom_group']]],
-  ['atoms_5fids_37',['atoms_ids',['../classcvm_1_1atom__group.html#a4eaaa9c93e86121f63495f019d031b7e',1,'cvm::atom_group::atoms_ids()'],['../classcolvarproxy__atoms.html#afeb475a689124e91c7228fbaaf35ed7e',1,'colvarproxy_atoms::atoms_ids()']]],
+  ['atoms_5fids_37',['atoms_ids',['../classcvm_1_1atom__group.html#a4eaaa9c93e86121f63495f019d031b7e',1,'cvm::atom_group::atoms_ids'],['../classcolvarproxy__atoms.html#afeb475a689124e91c7228fbaaf35ed7e',1,'colvarproxy_atoms::atoms_ids']]],
   ['atoms_5findex_38',['atoms_index',['../classcvm_1_1atom__group.html#a0cd24a6718a3813577a6da01a4e7ed79',1,'cvm::atom_group']]],
   ['atoms_5fmass_39',['atoms_mass',['../classcvm_1_1atom__group.html#a0e1c8286b37e54500b3b943bee4c9f6e',1,'cvm::atom_group']]],
   ['atoms_5fmasses_40',['atoms_masses',['../classcolvarproxy__atoms.html#a39477e1a47f57b89fb9b31c943ed650a',1,'colvarproxy_atoms']]],
@@ -56,6 +56,6 @@ var searchData=
   ['atoms_5fweight_53',['atoms_weight',['../classcvm_1_1atom__group.html#a4055060f1f1ae0eb354ab72a41b05c54',1,'cvm::atom_group']]],
   ['available_54',['available',['../structcolvardeps_1_1feature__state.html#abc1639b17da2a354f36bad983b03ec53',1,'colvardeps::feature_state']]],
   ['axes_55',['axes',['../classcolvar_1_1cartesian.html#ac7200484e8b8ebcfe38c5f5e0b8ab1a1',1,'colvar::cartesian']]],
-  ['axis_56',['axis',['../classcolvar_1_1distance__z.html#ac2391f9b06bcc5fd701fc5880a4ad2b9',1,'colvar::distance_z::axis()'],['../classcolvar_1_1inertia__z.html#a5b15fb8095906b2455aebe640606e608',1,'colvar::inertia_z::axis()']]],
+  ['axis_56',['axis',['../classcolvar_1_1distance__z.html#ac2391f9b06bcc5fd701fc5880a4ad2b9',1,'colvar::distance_z::axis'],['../classcolvar_1_1inertia__z.html#a5b15fb8095906b2455aebe640606e608',1,'colvar::inertia_z::axis']]],
   ['axis_5fnorm_57',['axis_norm',['../classcolvar_1_1distance__z.html#a81b0dff0696f2afc3bca6a9d3cab904d',1,'colvar::distance_z']]]
 ];

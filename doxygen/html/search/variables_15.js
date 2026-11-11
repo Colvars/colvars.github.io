@@ -6,7 +6,7 @@ var searchData=
   ['v_5freported_3',['v_reported',['../classcolvar.html#a95f2fece7c36c4f27664256330054cc5',1,'colvar']]],
   ['value_5ftype_4',['value_type',['../classcolvarvalue.html#ae5dd1b418a731a80e4d90bc431cd12c0',1,'colvarvalue']]],
   ['vector1d_5fvalue_5',['vector1d_value',['../classcolvarvalue.html#ad01f76030670a7789f3c6bf2141fc2a0',1,'colvarvalue']]],
-  ['version_5fint_6',['version_int',['../classcolvarmodule.html#aaef1f5d12fc5f6cee66460a57a71861f',1,'colvarmodule::version_int()'],['../classcolvarproxy.html#a35b3fe489dcc03a99d89df8d8815effb',1,'colvarproxy::version_int()']]],
+  ['version_5fint_6',['version_int',['../classcolvarmodule.html#aaef1f5d12fc5f6cee66460a57a71861f',1,'colvarmodule::version_int'],['../classcolvarproxy.html#a35b3fe489dcc03a99d89df8d8815effb',1,'colvarproxy::version_int']]],
   ['vmd_7',['vmd',['../classcolvarproxy__vmd.html#a78dff91177b772a99db73a2821649043',1,'colvarproxy_vmd']]],
   ['vmdmol_8',['vmdmol',['../classcolvarproxy__vmd.html#a93653170953144fa86a880181e589023',1,'colvarproxy_vmd']]],
   ['vmdmol_5fframe_9',['vmdmol_frame',['../classcolvarproxy__vmd.html#aa23e9eac128153a22834f9a21e252a41',1,'colvarproxy_vmd']]],

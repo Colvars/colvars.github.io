@@ -15,7 +15,7 @@ var searchData=
   ['parents_12',['parents',['../classcolvardeps.html#ae0b2b33dae9fdb9de73aad8d0f4d292a',1,'colvardeps']]],
   ['parse_13',['parse',['../classcolvarmodule.html#a8be73a0b3c3d72211fbd8349e7d1d41e',1,'colvarmodule']]],
   ['patch_5fversion_5fint_14',['patch_version_int',['../classcolvarmodule.html#a6db2ce26fc77e27d7aa28124e4587516',1,'colvarmodule']]],
-  ['period_15',['period',['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period()'],['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period()']]],
+  ['period_15',['period',['../classcolvar.html#a446ab5f644a3f9c6715e119bbfc6de6b',1,'colvar::period'],['../classcolvar_1_1cvc.html#afab0fd74a819ed40e50553e362621fdc',1,'colvar::cvc::period']]],
   ['periodic_16',['periodic',['../classcolvar__grid.html#ae7ae2b01e5c6afa691889907419aa4ec',1,'colvar_grid']]],
   ['periodic_5fx_17',['periodic_x',['../classcolvarmodule_1_1system__boundary__conditions.html#a6f738017cf3f3526250780c24e4ad233',1,'colvarmodule::system_boundary_conditions']]],
   ['pmf_18',['pmf',['../classcolvarbias__abf.html#ae12340f7faa05c38802bc6337667407b',1,'colvarbias_abf']]],

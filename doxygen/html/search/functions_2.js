@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['backup_5ffile_0',['backup_file',['../classcolvarproxy__io.html#a2fc47c258f554a7da5102bb3e6c05a03',1,'colvarproxy_io::backup_file(char const *filename)'],['../classcolvarproxy__io.html#a750002770ded15f35739c6af63e6fb0b',1,'colvarproxy_io::backup_file(std::string const &amp;filename)'],['../classcolvarproxy__namd.html#a6010f5a807c8307d13911765bdfcfc89',1,'colvarproxy_namd::backup_file()'],['../classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a',1,'colvarmodule::backup_file()']]],
+  ['backup_5ffile_0',['backup_file',['../classcolvarmodule.html#a49efc5129a53b498b9238d3561a0440a',1,'colvarmodule::backup_file()'],['../classcolvarproxy__io.html#a2fc47c258f554a7da5102bb3e6c05a03',1,'colvarproxy_io::backup_file(char const *filename)'],['../classcolvarproxy__io.html#a750002770ded15f35739c6af63e6fb0b',1,'colvarproxy_io::backup_file(std::string const &amp;filename)'],['../classcolvarproxy__namd.html#a6010f5a807c8307d13911765bdfcfc89',1,'colvarproxy_namd::backup_file()']]],
   ['begin_5fapply_5fforce_5ffrom_5fcpu_5fto_5fgpu_1',['begin_apply_force_from_cpu_to_gpu',['../classcolvar_1_1cvc.html#ae459a2deec23769ddad51fdf39dee8c7',1,'colvar::cvc']]],
   ['begin_5fapply_5fforce_5fgpu_2',['begin_apply_force_gpu',['../classcolvars__gpu_1_1colvaratoms__gpu.html#a02109629a97ee6a2b5af084d60f592af',1,'colvars_gpu::colvaratoms_gpu']]],
   ['begin_5freading_3',['begin_reading',['../classcvm_1_1memory__stream.html#ad952f24ee0a7e2ab28be29492630216f',1,'cvm::memory_stream']]],

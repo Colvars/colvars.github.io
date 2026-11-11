@@ -9,7 +9,7 @@ var searchData=
   ['h_5fsum_5fapplied_5fcolvar_5fforce_6',['h_sum_applied_colvar_force',['../classcolvars__gpu_1_1colvaratoms__gpu.html#a699d1680f617c93d2f6b52fa16527297',1,'colvars_gpu::colvaratoms_gpu']]],
   ['hard_5flower_5fboundaries_7',['hard_lower_boundaries',['../classcolvar__grid.html#aae4b6fde4775d004cb9e8872833d01be',1,'colvar_grid']]],
   ['hard_5fupper_5fboundaries_8',['hard_upper_boundaries',['../classcolvar__grid.html#a3537a8b9704b79a68da7eb5e75313e6d',1,'colvar_grid']]],
-  ['has_5fdata_9',['has_data',['../classcolvarbias.html#aa33d58dccf5a5c2a1cab78a4412b8ed1',1,'colvarbias::has_data()'],['../classcolvar__grid.html#a5fbd378c88cf06662a64d6ccd27a8d63',1,'colvar_grid::has_data()']]],
+  ['has_5fdata_9',['has_data',['../classcolvarbias.html#aa33d58dccf5a5c2a1cab78a4412b8ed1',1,'colvarbias::has_data'],['../classcolvar__grid.html#a5fbd378c88cf06662a64d6ccd27a8d63',1,'colvar_grid::has_data']]],
   ['has_5fgpu_5fsupport_10',['has_gpu_support',['../classcolvarproxy__gpu.html#ab5e9be5a92857ce6c71680d236aebd7d',1,'colvarproxy_gpu']]],
   ['has_5fparent_5fdata_11',['has_parent_data',['../classcolvar__grid.html#a95468da24b815194702cb7dbb1257af8',1,'colvar_grid']]],
   ['has_5fremaining_12',['has_remaining',['../classcvm_1_1memory__stream.html#a015fba11afd141b4c3564c5d798e99e6',1,'cvm::memory_stream']]],
@@ -28,6 +28,6 @@ var searchData=
   ['hills_5ftraj_5ffile_5fname_25',['hills_traj_file_name',['../classcolvarbias__meta.html#ade7d0a41d81031cc7b2a24e98815fdf8',1,'colvarbias_meta']]],
   ['hills_5ftraj_5fos_5fbuf_26',['hills_traj_os_buf',['../classcolvarbias__meta.html#a62ac038709ae6de3a1e23e10bb5eca3e',1,'colvarbias_meta']]],
   ['hist_5fto_5fpmf_27',['hist_to_pmf',['../classcolvarbias__reweightaMD.html#ad6aff88317062d835992d1fb21e97fec',1,'colvarbias_reweightaMD']]],
-  ['history_5ffreq_28',['history_freq',['../classcolvarbias__abf.html#ac6c3f90b9d2e231ff13b1fcc3d500449',1,'colvarbias_abf::history_freq()'],['../classcolvarbias__reweightaMD.html#ade943ada9d16e25c4a0ca97ecc813e1c',1,'colvarbias_reweightaMD::history_freq()']]],
+  ['history_5ffreq_28',['history_freq',['../classcolvarbias__abf.html#ac6c3f90b9d2e231ff13b1fcc3d500449',1,'colvarbias_abf::history_freq'],['../classcolvarbias__reweightaMD.html#ade943ada9d16e25c4a0ca97ecc813e1c',1,'colvarbias_reweightaMD::history_freq']]],
   ['history_5flast_5fstep_29',['history_last_step',['../classcolvarbias__abf.html#a8889a9568b07d43a83bec607a0993f0d',1,'colvarbias_abf']]]
 ];
