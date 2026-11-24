@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2 Writing a Colvars configuration: a crash course ‣ Collective Variables Module Reference manual for Tinker-HP</title>
+<!--Generated on Tue Nov 24 17:52:48 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on Code version: 2026‐11‐24.-->
+
+<link rel="shortcut icon" href="logo/colvars-logo-compact.svg" type="image/svg+xml">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="latexml/colvars-refman.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/mml-chtml.js"></script>
+<link rel="up" href="./" title="Collective Variables Module Reference manual for Tinker-HP">
+<link rel="start" href="./" title="Collective Variables Module Reference manual for Tinker-HP">
+<link rel="prev" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for Tinker-HP">
+<link rel="next" href="sec_colvarmodule.html" title="3 Enabling and controlling the Colvars module in Tinker-HP ‣ Collective Variables Module Reference manual for Tinker-HP">
+<link rel="section" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for Tinker-HP">
+<link rel="section" href="sec_colvarmodule.html" title="3 Enabling and controlling the Colvars module in Tinker-HP ‣ Collective Variables Module Reference manual for Tinker-HP">
+<link rel="section" href="sec_colvar.html" title="4 Defining collective variables ‣ Collective Variables Module Reference manual for Tinker-HP">
+<link rel="section" href="sec_colvar_atom_groups.html" title="5 Selecting atoms ‣ Collective Variables Module Reference manual for Tinker-HP">
+<link rel="section" href="sec_colvarbias.html" title="6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for Tinker-HP">
+<link rel="section" href="sec_colvars_config_changes.html" title="7 Syntax changes from older versions ‣ Collective Variables Module Reference manual for Tinker-HP">
+<link rel="section" href="sec_compilation_notes.html" title="8 Compilation notes ‣ Collective Variables Module Reference manual for Tinker-HP">
+<link rel="index" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for Tinker-HP">
+<link rel="bibliography" href="bib.html" title="References ‣ Collective Variables Module Reference manual for Tinker-HP">
+</head>
+<body>
+<nav class="ltx_page_navbar"><a href="./" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for Tinker-HP</span></a>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self"><span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></span></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Enabling and controlling the Colvars module in Tinker-HP</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Defining collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar_atom_groups.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Selecting atoms</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Syntax changes from older versions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Compilation notes</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_index"><a href="idx.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_title">Index</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="bib.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="./" title="" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for Tinker-HP</span></a><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Enabling and controlling the Colvars module in Tinker-HP</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Writing a Colvars configuration: a crash course</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">The Colvars configuration is a plain text file or string that defines collective variables, biases, and general parameters of the Colvars module.
+It is passed to the module using back-end-specific commands documented in section <a href="sec_colvarmodule.html" title="3 Enabling and controlling the Colvars module in Tinker-HP ‣ Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>.</p>
+</div>
+<section id="SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Example: steering two groups of atoms away from each other.</h2>
+
+<div id="SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Now let us look at a complete, non-trivial configuration.
+Suppose that we want to run a steered MD experiment where a small molecule is pulled away from a protein binding site.
+In Colvars terms, this is done by applying a moving restraint to the distance between the two objects.
+The configuration will contain two blocks, one defining the distance variable (see section <a href="sec_colvar.html" title="4 Defining collective variables ‣ Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> and <a href="sec_colvar.html#colvar%7Cdistance" title="4.3.1 distance: center-of-mass distance between two groups. ‣ 4.3 Distances ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.3.1</span></a>), and the other the moving harmonic restraint (<a href="sec_colvarbias.html#sec:colvarbias_harmonic" title="6.8 Harmonic restraints ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.8</span></a>).</p>
+</div>
+<div id="SS0.SSS0.Px1.p2" class="ltx_para">
+<pre class="ltx_verbatim cv_example cv_example_colvars ltx_font_typewriter">
+colvar {
+  name dist
+  distance {
+    group1 { atomNumbersRange 42-55 }
+    group2 { indexGroup C-alpha_15-30 }
+  }
+}
+
+harmonic {
+  colvars dist
+  forceConstant 20.0
+  centers 4.0         # initial distance
+  targetCenters 15.0  # final distance
+  targetNumSteps 500000
+}
+</pre>
+</div>
+<div id="SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">Reading this input in plain English: the variable here named <em class="ltx_emph ltx_font_italic">dist</em> consists in a distance function between the centers of two groups: the ligand (atoms 42 to 55) and the <math id="SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>-carbon atoms of residues 15 to 30 in the protein .
+To the “<em class="ltx_emph ltx_font_italic">dist</em>” variable, we apply a <span class="ltx_text ltx_font_typewriter">harmonic</span> potential of force constant 20 kcal/mol/Å<sup class="ltx_sup">2</sup>, initially centered around a value of 4 Å, which will increase to 15 Å over 500,000 simulation steps.</p>
+</div>
+<div id="SS0.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">The atom selection keywords are detailed in section <a href="sec_colvar_atom_groups.html" title="5 Selecting atoms ‣ Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Example: using multiple variables and multiple biasing/analysis methods together.</h2>
+
+<div id="SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">A more complex example configuration is included below, showing how a variable may be constructed by combining multiple existing functions, and how multiple variables or multiple biases may be used concurrently.
+The colvar indicated below as “<math id="SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>” is defined as the difference between two distances (see <a href="sec_colvar.html#sec:cvc_distances" title="4.3 Distances ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.3</span></a>): the first distance (<math id="SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="d_{1}" display="inline"><msub><mi>d</mi><mn>1</mn></msub></math>) is taken between the center of mass of atoms 1 and 2 and that of atoms 3 to 5, the second (<math id="SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="d_{2}" display="inline"><msub><mi>d</mi><mn>2</mn></msub></math>) between atom 7 and the center of mass of atoms 8 to 10 (see <a href="sec_colvar_atom_groups.html" title="5 Selecting atoms ‣ Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>).
+The difference <math id="SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="d=d_{1}-d_{2}" display="inline"><mrow><mi>d</mi><mo>=</mo><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>−</mo><msub><mi>d</mi><mn>2</mn></msub></mrow></mrow></math> is obtained by multiplying the two by a coefficient <math id="SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="C=+1" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo>+</mo><mn>1</mn></mrow></mrow></math> or <math id="SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="C=-1" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>, respectively (see <a href="sec_colvar.html#sec:cvc_superp" title="4.18 Linear and polynomial combinations of components ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.18</span></a>).
+The colvar called “<math id="SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>” is the coordination number calculated between atoms 1 to 10 and atoms 11 to 20. A harmonic restraint (see <a href="sec_colvarbias.html#sec:colvarbias_harmonic" title="6.8 Harmonic restraints ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.8</span></a>) is applied to both <math id="SS0.SSS0.Px2.p1.m8" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> and <math id="SS0.SSS0.Px2.p1.m9" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>: to allow using the same force constant <math id="SS0.SSS0.Px2.p1.m10" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, both <math id="SS0.SSS0.Px2.p1.m11" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> and <math id="SS0.SSS0.Px2.p1.m12" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are scaled by their respective fluctuation widths <math id="SS0.SSS0.Px2.p1.m13" class="ltx_Math" alttext="w_{d}" display="inline"><msub><mi>w</mi><mi>d</mi></msub></math> and <math id="SS0.SSS0.Px2.p1.m14" class="ltx_Math" alttext="w_{c}" display="inline"><msub><mi>w</mi><mi>c</mi></msub></math>.
+
+The values of “<math id="SS0.SSS0.Px2.p1.m15" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>” are also recorded throughout the simulation as a joint 2-dimensional histogram (see <a href="sec_colvarbias.html#sec:colvarbias_histogram" title="6.13 Multidimensional histograms ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.13</span></a>).</p>
+</div>
+<div id="SS0.SSS0.Px2.p2" class="ltx_para">
+<pre class="ltx_verbatim cv_example cv_example_colvars ltx_font_typewriter">
+colvar {
+  # difference of two distances
+  name d 
+  width 0.2  # estimated fluctuation width 
+  distance {
+    componentCoeff  1.0
+    group1 { atomNumbers 1 2 }
+    group2 { atomNumbers 3 4 5 }
+  }
+  distance {
+    componentCoeff -1.0
+    group1 { atomNumbers 7 }
+    group2 { atomNumbers 8 9 10 }
+  }
+}
+
+colvar {
+  name c
+  coordNum {
+    cutoff 6.0
+    group1 { atomNumbersRange  1-10 }
+    group2 { atomNumbersRange 11-20 }
+    tolerance 1.0e-6
+    pairListFrequency 1000
+  }
+}
+
+
+harmonic {
+  colvars d c
+  centers 3.0 4.0
+  forceConstant 5.0
+}
+
+histogram {
+  colvars c
+}
+</pre>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a><a href="bib.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref" rel="index"><span class="ltx_text ltx_ref_title">Index</span></a><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for Tinker-HP" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Enabling and controlling the Colvars module in Tinker-HP</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Tue Nov 24 17:52:48 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

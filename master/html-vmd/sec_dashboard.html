@@ -1,0 +1,433 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD</title>
+<!--Generated on Tue Nov 24 17:53:19 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on Code version: 2026‐11‐24.-->
+
+<link rel="shortcut icon" href="logo/colvars-logo-compact.svg" type="image/svg+xml">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="latexml/colvars-refman.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/mml-chtml.js"></script>
+<link rel="up" href="./" title="Collective Variables Module Reference manual for VMD">
+<link rel="start" href="./" title="Collective Variables Module Reference manual for VMD">
+<link rel="prev" href="sec_colvars_crash_course.html" title="2 Writing a Colvars configuration: a crash course ‣ Collective Variables Module Reference manual for VMD">
+<link rel="next" href="sec_colvarmodule.html" title="4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvars_crash_course.html" title="2 Writing a Colvars configuration: a crash course ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvarmodule.html" title="4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvar.html" title="5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvar_atom_groups.html" title="6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvarbias.html" title="7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_cvscript_cmdline.html" title="8 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvars_config_changes.html" title="9 Syntax changes from older versions ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_compilation_notes.html" title="10 Compilation notes ‣ Collective Variables Module Reference manual for VMD">
+<link rel="index" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for VMD">
+<link rel="bibliography" href="bib.html" title="References ‣ Collective Variables Module Reference manual for VMD">
+</head>
+<body>
+<nav class="ltx_page_navbar"><a href="./" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for VMD</span></a>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Colvars dashboard</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:dashboard_tutorial" title="In 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>A mini-tutorial</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:dashboard_main" title="In 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>The Dashboard window</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:dashboard_load_save" title="In 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Loading / Saving configuration files</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:dashboard_auto_colvars" title="In 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>Automatic colvar generators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:dashboard_config_editor" title="In 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>The configuration editor</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="#sec:dashboard_visualization" title="In 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.6 </span>Plotting and visualizing collective variables</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_paragraph"><a href="#SS6.SSS0.Px1" title="In 3.6 Plotting and visualizing collective variables ‣ 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">Timeline plots</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_paragraph"><a href="#SS6.SSS0.Px2" title="In 3.6 Plotting and visualizing collective variables ‣ 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">Pairwise scatterplots</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_paragraph"><a href="#SS6.SSS0.Px3" title="In 3.6 Plotting and visualizing collective variables ‣ 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">Histogram</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:dashboard_biases" title="In 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7 </span>Monitoring colvar biases in the Dashboard</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:dashboard_custom_vars" title="In 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.8 </span>Plotting custom time-dependent quantities as colvars</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Enabling and controlling the Colvars module in VMD</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Defining collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar_atom_groups.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Selecting atoms</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Biasing and analysis methods</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_cvscript_cmdline.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Tcl command-line interface: list of commands</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9 </span>Syntax changes from older versions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Compilation notes</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_index"><a href="idx.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">Index</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="bib.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="./" title="" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for VMD</span></a><a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Enabling and controlling the Colvars module in VMD</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>The Colvars dashboard</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">The Colvars Dashboard is a graphical interface for interactive visualization and refinement of collective variables aided by molecular structures and trajectories.
+It is accessible in VMD’s Main Menu under “Extensions/Analysis/Colvars Dashboard”.
+Throughout the interface, keyboard shortcuts for common operations are indicated in square brackets.
+Context menus in the colvar and bias tables can be accessed using either right click or Control-click.</p>
+</div>
+<section id="sec:dashboard_tutorial" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span>A mini-tutorial</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Here are the steps for a quick first tour of the Dashboard:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">load an MD trajectory into VMD;</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">open the Dashboard;</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">click “New” to create a new collective variable;</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">in the Editor window, click “Apply” to accept the default template;</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">in the Dashboard window, click “Show atoms” to display the two atom groups involved in this distance coordinate;</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">click “Timeline plot”;</p>
+</div>
+</li>
+<li id="I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span> 
+<div id="I1.i7.p1" class="ltx_para">
+<p class="ltx_p">click anywhere in the timeline plot to navigate in the trajectory.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">Alternately, use the Automatic colvars features in the Actions tab.</p>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">Now, clicking “Edit” in the Dashboard window (or right-clicking on a colvar in the list view), you can modify the collective variable to reflect interesting geometric properties of the system.
+The power of the collective variables approach lies in the variety of geometric functions (“components”) and their combinations.
+The editor window provides a number of helpers to make it easy and quick to define the most relevant variables.
+See section <a href="#sec:dashboard_config_editor" title="3.5 The configuration editor ‣ 3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.5</span></a> for details.</p>
+</div>
+</section>
+<section id="sec:dashboard_main" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2 </span>The Dashboard window</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">The Dashboard window displays a table listing currently defined variables, and their values for the current frame indicated at the bottom of the window.
+By default the frame is updated to track VMD’s currently displayed frame, but that can be changed by toggling the “Track frame” checkbox, e.g. to animate the trajectory without recomputing expensive variables.
+Vector-values variables can be expanded to list their scalar elements. This is necessary when individual scalar quantities have to be selected for plotting.
+Other operations act on variables as a whole and ignore specific selected scalar elements.
+Right-clicking in the table brings up a context menu with specific actions for the selected variables.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">Buttons above the table allow for general operations on the state of the Colvars module.
+Below the table, the <span class="ltx_text ltx_font_italic">Actions</span> tab allows operations on selected variables, while the <span class="ltx_text ltx_font_italic">Settings</span> tab offers advanced settings for the various visualizations.</p>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">If variables are modified, added or deleted by an external script, hit “Refresh” or press F5 to update the displayed variables and values.
+Starting the Dashboard also enables trajectory animation using the left/right arrow keys within VMD’s graphical window.
+Atomic coordinates can be modified using VMD’s “Mouse/Move” functions, and the Colvars module can then be updated by pressing F5 directly from the graphical window.</p>
+</div>
+<div id="SS2.p4" class="ltx_para">
+<p class="ltx_p">A dropdown list allows for changing the current unit system if no variables are defined (see section <a href="sec_colvarmodule.html#sec:units" title="4.1 Units in the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a>).
+When changing units, it is strongly recommended to check the configuration for all colvars to ensure that all quantities are expressed in the desired set of units.</p>
+</div>
+<div id="SS2.p5" class="ltx_para">
+<p class="ltx_p">The Colvars Module interacts with one VMD Molecule at a time.
+At the bottom of the <span class="ltx_text ltx_font_italic">Actions</span> tab, a dropdown lets the user change which VMD molecule is associated with the Colvars module.
+Internally, changing it means recording the configuration of currently defined colvars, deleting the current instance of the Colvars module,
+creating a new one linked to the target molecule, and applying the saved configuration.
+Beware of incompatible colvar definitions, such as atom groups listing atom IDs that exist in one molecule, but not the other.
+Auto-updating selections (see below) can be used to adapt the colvar definitions to a different system using VMD selection texts.</p>
+</div>
+</section>
+<section id="sec:dashboard_load_save" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.3 </span>Loading / Saving configuration files</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">This saves the current configuration of the colvars Module to a file.
+This includes comments found in the input, general parameters of the Colvars Module, the collective variables themselves, and collective variable biases.
+The resulting configuration file can be read by Colvars, either back in VMD, or within a supported MD engine.</p>
+</div>
+</section>
+<section id="sec:dashboard_auto_colvars" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.4 </span>Automatic colvar generators</h2>
+
+<div id="SS4.p1" class="ltx_para">
+<p class="ltx_p">The Actions tab offers two buttons to generate sets of colvars from the current VMD session:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">"protein auto-colvars" creates variables describing classic quantities used to describe protein structures;</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">"colvars from VMD labels" creates variables based on visible labels (Bonds, Angles, Dihedrals) for the current molecule
+(see Molecule selector in the same tab). Such labels can be created by setting the label mode with the key 2, 3, or 4, and picking atoms with the mouse.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="SS4.p2" class="ltx_para">
+<p class="ltx_p">These automatically generated colvars can be used as-is, or customized using the configuration editor (Edit in the context menu, or in the Actions tab).</p>
+</div>
+</section>
+<section id="sec:dashboard_config_editor" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.5 </span>The configuration editor</h2>
+
+<div id="SS5.p1" class="ltx_para">
+<p class="ltx_p">The configuration editor can be started with the “Edit” or “New” buttons.
+Using the “Edit” button, the configuration of selected variables is loaded, and those variables will be replaced when applying the new configuration.</p>
+</div>
+<div id="SS5.p2" class="ltx_para">
+<p class="ltx_p">The editor window offers links to online documentation, as well as helpers to write correct configuration files.</p>
+</div>
+<div id="SS5.p3" class="ltx_para">
+<p class="ltx_p">As a first step, the most useful helper is the collection of template files.
+Some parameters that must be supplied are indicated by the symbol @.
+Colvar templates can be inserted at the beginning of the configuration, whereas “component” templates define basis functions that belong inside a colvar block.
+Templates are indented using 4 spaces per level to indicate their position in the nested structure of the configuration: general options, colvars and biases at level 0,
+bias and colvar parameters like components at level 1, component parameters such as atom groups at level 2, and atom group parameters at level 3.</p>
+</div>
+<div id="SS5.p4" class="ltx_para">
+<p class="ltx_p">The next helper buttons allow importing atom selections from VMD, either typing a VMD atom selection text, by copying the selection of an existing graphical representation, or by inserting the list of atoms currently labeled in VMD using the “Pick atom” feature.
+Atom selections should be inserted within an atom group block, within a component block (such as <span class="ltx_text ltx_font_typewriter">distance</span>).
+By default atom selections are preceded with a comment line marking them as <em class="ltx_emph ltx_font_italic">auto-updating</em>.
+This instructs the Dashboard to update the list of atoms whenever the configuration is applied, that is, when it is edited, when the file is loaded by the Dashboard, or when changing the VMD molecule linked to Colvars.
+This is useful when working across systems with different atom numberings, but topologies that make the relevant atom groups identifiable using VMD selection texts.
+Special fields (O, B, and user) may be used, as well as atom positions (e.g. <span class="ltx_text ltx_font_typewriter">z &gt; 0</span>).
+If the selection text is modified manually, the atom list will be updated when applying the new configuration.
+This auto-updating behavior can be disabled by removing the special comment line or altering the keywords “auto-updating selection”.</p>
+</div>
+<div id="SS5.p5" class="ltx_para">
+<p class="ltx_p">Note that atom lists are <span class="ltx_text ltx_font_bold">not auto-updated</span>:</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">when changing frame within the same molecule (animating a trajectory);</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">when the configuration is read by the Colvars module outside of VMD (eg. within an MD engine).</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="SS5.p6" class="ltx_para">
+<p class="ltx_p">The “Insert labeled…” button combined with the selection box allows for inserting components matching VMD’s geometry measurements: Bonds (distances), angles, and dihedrals.
+Hidden labels are not used for inserting components.</p>
+</div>
+</section>
+<section id="sec:dashboard_visualization" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.6 </span>Plotting and visualizing collective variables</h2>
+
+<section id="SS6.SSS0.Px1" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Timeline plots</h3>
+
+<div id="SS6.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">show the selected variables as a function of time. A vertical bar indicates the current frame, which can be changed either using VMD’s trajectory animation controls, or directly in the plot window by clicking the mouse inside the graph, or using the keyboard left/right arrows.
+Shift+arrow steps by 10 frames for faster animation, and Ctrl+arrow steps over 50 frames.
+The Home/End keys jump to the first and last frames, respectively.
+The up/down arrows operate a zoom/unzoom along the time axis.
+Visible data can be fitted vertically using the h key. All data can be fitted horizontally using the h key.</p>
+</div>
+</section>
+<section id="SS6.SSS0.Px2" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Pairwise scatterplots</h3>
+
+<div id="SS6.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">are useful to identify correlation between variables. To create a pairwise plot, select exactly two scalar variables (or scalar components of vector variables), and click “Pairwise plot”.
+Frames are represented by circles, and lines connect consecutive frames.
+The blue dot tracks the current frame: clicking a circle jumps to the corresponding frame.
+Arrow keys and Home/End animate the trajectory as in the timeline plot.</p>
+</div>
+</section>
+<section id="SS6.SSS0.Px3" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Histogram</h3>
+
+<div id="SS6.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">displays a histogram of the selected scalar variable over the trajectory, using approximately the number of bins specified in the Settings tab (adjusted after selecting a round number for the bin width).
+The current value of the colvar is indicated by a vertical bar.
+Clicking anywhere in the plot jumps to the frame with the nearest value of the colvar.
+Keyboard navigation of the trajectory is similar to the other plots, except that the trajectory is traversed according to colvar values rather than frame numbers.
+This enables exploration of frames corresponding to a neighborhood of colvar values, even when they are not contiguous in time.</p>
+</div>
+<div id="SS6.SSS0.Px3.p2" class="ltx_para">
+<p class="ltx_p">“Show atoms” creates representations of the atoms involved in the definition of the selected colvars.
+Each atom group is shown in a different color.
+“Show gradient” is available for scalar variables only.
+It creates a graphical representation of the atomic gradients of the selected variables, visualizing how the value of the collective variable would vary in response to a change in atomic coordinates.
+The graphical representation of the gradients is controlled by parameters in the Settings tab.
+Vectors representing the gradient are rescaled as indicated by the radio buttons <em class="ltx_emph ltx_font_italic">Max. vector norm</em> and <em class="ltx_emph ltx_font_italic">Scaling factor</em>.
+<em class="ltx_emph ltx_font_italic">Max. vector norm</em> rescales gradients so that the largest vector component of each colvar’s gradient is represented by an arrow of the specified length, in Å.
+<em class="ltx_emph ltx_font_italic">Scaling factor</em> rescales gradients by the specified factor, divided by the colvar’s <span class="ltx_text ltx_font_typewriter">width</span> parameter (1 by default, see <a href="sec_colvar.html#sec:colvar_grid_params" title="5.21 Defining grid parameters for a colvar ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.21</span></a>).
+This use of <span class="ltx_text ltx_font_typewriter">width</span> makes it easier to compare the gradients of collective variables that are not commensurate.
+The scaling factor has the unit <math id="SS6.SSS0.Px3.p2.m1" class="ltx_Math" alttext="\AA*L/(cv/width)" display="inline"><mrow><mrow><mi>Å</mi><mo lspace="0.222em" rspace="0.222em">∗</mo><mi>L</mi></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>v</mi></mrow><mo>/</mo><mi>w</mi></mrow><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, where <math id="SS6.SSS0.Px3.p2.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is the current length unit, and <math id="SS6.SSS0.Px3.p2.m3" class="ltx_Math" alttext="cv" display="inline"><mrow><mi>c</mi><mo>⁢</mo><mi>v</mi></mrow></math> represents the natural unit of the collective variable.
+By default <math id="SS6.SSS0.Px3.p2.m4" class="ltx_Math" alttext="width" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>h</mi></mrow></math> is unity, but <math id="SS6.SSS0.Px3.p2.m5" class="ltx_Math" alttext="(cv/width)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>v</mi></mrow><mo>/</mo><mi>w</mi></mrow><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></math> may be seen as dimensionless if <math id="SS6.SSS0.Px3.p2.m6" class="ltx_Math" alttext="width" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>h</mi></mrow></math> is expressed in cv units.</p>
+</div>
+<div id="SS6.SSS0.Px3.p3" class="ltx_para">
+<p class="ltx_p">The Dashboard offers visualizations for specific types of variables:</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Variables that represent rotation operations (as unit quaternions), such as those based on an <span class="ltx_text ltx_font_typewriter">orientation</span> component, can be displayed by right-clicking on them in the colvar table.
+This creates a representation of the rotation as an arrow representing its axis, and two arms separated by the angle of the rotation, between 0 and 180 degrees.</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">For variables that are computed based on volumetric maps, representations of the related maps can be created using the "Show volmap" button, or again through a specific entry in the context menu available via right-click.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Parameters for fine-tuning these visualizations can be set in the <span class="ltx_text ltx_font_italic">Settings</span> tab.</p>
+</div>
+</section>
+</section>
+<section id="sec:dashboard_biases" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.7 </span>Monitoring colvar biases in the Dashboard</h2>
+
+<div id="SS7.p1" class="ltx_para">
+<p class="ltx_p">The main Dashboard window features a "Biases" tab that contains a list of currently defined biases, their current energy, and the colvars that they depend upon.
+A new harmonic bias acting on a given set of colvars can be created by selecting the colvars and opening the context menu in the colvar table (right click or control-click).
+A button enables creating a Timeline plot with the energies of currently selected biases, similar to the colvar Timeline plot.
+Only one plot can be active at a time.
+Another button creates a visualization of the biasing forces computed by the selected biases, similar to the gradient display for colvars.
+The graphical representation of forces is controlled by the same parameters as the gradients, shown in the Settings tab.
+The difference is the scaling factor unit, which is Ångström per Colvars force unit (that is, Ångström times Colvars length unit per Colvars energy unit).</p>
+</div>
+<div id="SS7.p2" class="ltx_para">
+<p class="ltx_p">Note that the energy of history-dependent biases such as ABF or metadynamics may not be updated in VMD.
+However, values of the bias energy from a previous simulation can be displayed if a state file has been loaded with <span class="ltx_text ltx_font_typewriter">cv load</span> (section <a href="sec_colvarmodule.html#sec:cv_scripting" title="4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2</span></a>), or in the case of ABF, if <a href="sec_colvarbias.html#abf%7CinputPrefix" title="11st item ‣ 7.3.2 Parameters for ABF ‣ 7.3 Adaptive Biasing Force ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">inputPrefix</a> was specified.</p>
+</div>
+<div id="SS7.p3" class="ltx_para">
+<p class="ltx_p">Hitting the Save button will save the configuration of any bias listed in this tab, except the harmonic wall biases that are created automatically from a colvar for which the lower or upper wall options are specified.</p>
+</div>
+</section>
+<section id="sec:dashboard_custom_vars" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.8 </span>Plotting custom time-dependent quantities as colvars</h2>
+
+<div id="SS8.p1" class="ltx_para">
+<p class="ltx_p">Sometimes, important time-dependent quantities are available for a trajectory, but must be computed by an external tool (e.g. energies from a simulation).
+These can be visualized alongside colvars by taking advantage of the scripted colvar feature.</p>
+</div>
+<div id="SS8.p2" class="ltx_para">
+<p class="ltx_p">Such a custom variable can either be computed on the fly (by calling an external tool or a VMD feature) or pre-computed and cached.
+For example, we can use VMD to compute the protein solvent-accessible surface area (SASA) on the fly:</p>
+</div>
+<div id="SS8.p3" class="ltx_para">
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+set sasa_sel [atomselect top "protein and noh"]
+
+proc calc_user_colvar { x } {
+  # Follow current Colvars frame
+  $::sasa_sel frame [cv frame]
+  return [measure sasa 1 $::sasa_sel]
+}
+</pre>
+</div>
+<div id="SS8.p4" class="ltx_para">
+<p class="ltx_p">The Tcl script above should be entered into VMD’s text console, or sourced from a file.
+Then we can define a colvar that will be calculated by the scripted procedure above, by entering the following configuration as a new colvar in the Dashboad Editor Window:</p>
+</div>
+<div id="SS8.p5" class="ltx_para">
+<pre class="ltx_verbatim cv_example cv_example_colvars ltx_font_typewriter">
+colvar {
+    name user
+    scriptedFunction user_colvar
+    distance {
+        # The distance component is just a placeholder
+        group1 {
+            dummyatom (0, 0, 0)
+        }
+        group2 {
+            dummyatom (0, 0, 0)
+        }
+    }
+}
+</pre>
+</div>
+<div id="SS8.p6" class="ltx_para">
+<p class="ltx_p">If the SASA computation is slow, it can be cached to make subsequent interaction responsive.
+To that effect, we source the following script to pre-compute the SASA for every frame and store it in VMD’s User field for atom 0.
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+set atom0_sel [atomselect top "index 0"]
+
+for {set f 0} {$f &lt; [molinfo top get numframes]} {incr f} {
+  $::sasa_sel frame $f
+  $::atom0_sel frame $f
+  $::atom0_sel set user [measure sasa 1 $::sasa_sel]
+}
+</pre></p>
+</div>
+<div id="SS8.p7" class="ltx_para">
+<p class="ltx_p">Then we use the following Tcl procedure to compute a custom variable that is simply equal to the User field for atom 0 for the current frame:
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+
+proc calc_user_colvar { x } {
+  # Follow current Colvars frame
+  $::atom0_sel frame [cv frame]
+  return [$::atom0_sel get user]
+}
+</pre>
+This version results in extremely fast updates.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a><a href="bib.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="index"><span class="ltx_text ltx_ref_title">Index</span></a><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Enabling and controlling the Colvars module in VMD</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Tue Nov 24 17:53:19 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

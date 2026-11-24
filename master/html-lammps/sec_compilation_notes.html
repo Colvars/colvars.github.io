@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>9 Compilation notes ‣ Collective Variables Module Reference manual for LAMMPS</title>
+<!--Generated on Tue Nov 24 17:52:43 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on Code version: 2026‐11‐24.-->
+
+<link rel="shortcut icon" href="logo/colvars-logo-compact.svg" type="image/svg+xml">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="latexml/colvars-refman.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/mml-chtml.js"></script>
+<link rel="up" href="./" title="Collective Variables Module Reference manual for LAMMPS">
+<link rel="start" href="./" title="Collective Variables Module Reference manual for LAMMPS">
+<link rel="prev" href="sec_colvars_config_changes.html" title="8 Syntax changes from older versions ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="next" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="section" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="section" href="sec_colvars_crash_course.html" title="2 Writing a Colvars configuration: a crash course ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="section" href="sec_colvarmodule.html" title="3 Enabling and controlling the Colvars module in LAMMPS ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="section" href="sec_colvar.html" title="4 Defining collective variables ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="section" href="sec_colvar_atom_groups.html" title="5 Selecting atoms ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="section" href="sec_colvarbias.html" title="6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="section" href="sec_cvscript_cmdline.html" title="7 fix_modify command-line interface: list of commands ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="section" href="sec_colvars_config_changes.html" title="8 Syntax changes from older versions ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="index" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for LAMMPS">
+<link rel="bibliography" href="bib.html" title="References ‣ Collective Variables Module Reference manual for LAMMPS">
+</head>
+<body>
+<nav class="ltx_page_navbar"><a href="./" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for LAMMPS</span></a>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Enabling and controlling the Colvars module in LAMMPS</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Defining collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar_atom_groups.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Selecting atoms</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_cvscript_cmdline.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span><span class="ltx_text ltx_font_typewriter">fix_modify</span> command-line interface: list of commands</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Syntax changes from older versions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self"><span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9 </span>Compilation notes</span></span></li>
+<li class="ltx_tocentry ltx_tocentry_index"><a href="idx.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref"><span class="ltx_text ltx_ref_title">Index</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="bib.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="./" title="" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for LAMMPS</span></a><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Syntax changes from older versions</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title">Index</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">9 </span>Compilation notes</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">The Colvars module is typically built using the recipes of each supported software package: for this reason, no installation instructions are needed, and the vast majority of the features described in this manual are supported in the most common builds of each package.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">This section lists the few cases where the choice of compilation settings affects the availability features in the Colvars module.</p>
+</div>
+<div id="p3" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Scripting commands using the Tcl language (<a href="https://www.tcl.tk" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.tcl.tk</a>) are supported in VMD, NAMD, and Tinker-HP. All precompiled builds of NAMD and VMD include Tcl, and it is highly recommended to enable Tcl support in any custom build, using precompiled Tcl libraries from the UIUC website.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The Lepton library (<a href="https://simtk.org/projects/lepton" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://simtk.org/projects/lepton</a>) used to implement the <span class="ltx_text ltx_font_typewriter">customFunction</span> feature is currently included only in NAMD (always on), in LAMMPS (on by default) and in the Colvars-patched GROMACS releases (but currently, not in the standard releases). For VMD, a <a href="https://github.com/giacomofiorin/vmd-patches" title="" class="ltx_ref ltx_href">patch</a> that allows to link Lepton is available.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The Torch library is required to support the <span class="ltx_text ltx_font_typewriter">torchANN</span> variable type, which is conditionally compiled if a Torch library is present.  In most engines, patching will be required to support this.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Colvars requires the C++11 language standard or higher, which is either supported (VMD) or required (GROMACS, LAMMPS, NAMD) by all the engines. However, many of the VMD official builds are produced on very old architectures, where C++11 features are disabled at build time, thus limiting functionality. For details please see:
+<br class="ltx_break"><a href="https://colvars.github.io/README-c++11.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://colvars.github.io/README-c++11.html</a></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Syntax changes from older versions</span></a><a href="bib.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref" rel="index"><span class="ltx_text ltx_ref_title">Index</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for LAMMPS" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title">Index</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Tue Nov 24 17:52:43 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

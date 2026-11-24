@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>9 Syntax changes from older versions ‣ Collective Variables Module Reference manual for VMD</title>
+<!--Generated on Tue Nov 24 17:53:19 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on Code version: 2026‐11‐24.-->
+
+<link rel="shortcut icon" href="logo/colvars-logo-compact.svg" type="image/svg+xml">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="latexml/colvars-refman.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/mml-chtml.js"></script>
+<link rel="up" href="./" title="Collective Variables Module Reference manual for VMD">
+<link rel="start" href="./" title="Collective Variables Module Reference manual for VMD">
+<link rel="prev" href="sec_cvscript_cmdline.html" title="8 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for VMD">
+<link rel="next" href="sec_compilation_notes.html" title="10 Compilation notes ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvars_crash_course.html" title="2 Writing a Colvars configuration: a crash course ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_dashboard.html" title="3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvarmodule.html" title="4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvar.html" title="5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvar_atom_groups.html" title="6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvarbias.html" title="7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_cvscript_cmdline.html" title="8 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_compilation_notes.html" title="10 Compilation notes ‣ Collective Variables Module Reference manual for VMD">
+<link rel="index" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for VMD">
+<link rel="bibliography" href="bib.html" title="References ‣ Collective Variables Module Reference manual for VMD">
+</head>
+<body>
+<nav class="ltx_page_navbar"><a href="./" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for VMD</span></a>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_dashboard.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Colvars dashboard</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Enabling and controlling the Colvars module in VMD</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Defining collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar_atom_groups.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Selecting atoms</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Biasing and analysis methods</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_cvscript_cmdline.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Tcl command-line interface: list of commands</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self"><span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9 </span>Syntax changes from older versions</span></span></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Compilation notes</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_index"><a href="idx.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">Index</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="bib.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="./" title="" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for VMD</span></a><a href="sec_cvscript_cmdline.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Tcl command-line interface: list of commands</span></a><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Compilation notes</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">9 </span>Syntax changes from older versions</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">The following is a list of syntax changes in Colvars since its first release.
+Many of the older keywords are still recognized by the current code, thanks to specific compatibility code.
+<em class="ltx_emph ltx_font_italic">This is not a list of new features:</em> its primary purpose is to make you aware of those improvements that affect the use of old configuration files with new versions of the code.</p>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Note:</span> if you are using any of the NAMD and VMD tutorials:
+<br class="ltx_break"><a href="https://www.ks.uiuc.edu/Training/Tutorials/" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ks.uiuc.edu/Training/Tutorials/</a>
+<br class="ltx_break">please be aware that <em class="ltx_emph ltx_font_italic">several of these tutorials are not actively maintained</em>: for those cases, this list will help you reconcile any inconsistencies.</p>
+</div>
+<div id="p3" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Colvars version 2016-06-09 or later (VMD version 1.9.3 or later).
+<br class="ltx_break"></span>The legacy keyword <span class="ltx_text ltx_font_typewriter">refPositionsGroup</span> has been renamed <a href="sec_colvar_atom_groups.html#atom-group%7CfittingGroup" title="8th item ‣ Warning on rotating frames of reference and ABF. ‣ 6.2 Moving frame of reference. ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">fittingGroup</a> for clarity (the legacy version is still supported).</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Colvars version 2016-08-10 or later (VMD version 1.9.3 or later).
+<br class="ltx_break"></span>“System forces” have been replaced by “total forces” (see for example <a href="sec_colvar.html#colvar%7CoutputTotalForce" title="4th item ‣ 5.22 Trajectory output ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">outputTotalForce</a>).
+See the following page for more information:
+<br class="ltx_break"><a href="https://colvars.github.io/README-totalforce.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://colvars.github.io/README-totalforce.html</a></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Colvars version 2017-01-09 or later (VMD version 1.9.4 or later).
+<br class="ltx_break"></span>A new type of restraint, <span class="ltx_text ltx_font_typewriter">harmonicWalls</span> (see <a href="sec_colvarbias.html#sec:colvarbias_harmonic_walls" title="7.10 Harmonic wall restraints ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.10</span></a>), replaces and improves upon the legacy keywords <span class="ltx_text ltx_font_typewriter">lowerWall</span> and <span class="ltx_text ltx_font_typewriter">upperWall</span>: these are still supported as short-hands.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Colvars version 2018-11-15 or later (VMD version 1.9.4 or later).
+<br class="ltx_break"></span>The global <span class="ltx_text ltx_font_typewriter">analysis</span> keyword has been discontinued: specific analysis tasks are controlled directly by the keywords <a href="sec_colvar.html#colvar%7CcorrFunc" title="1st item ‣ 5.26 Statistical analysis ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">corrFunc</a> and <a href="sec_colvar.html#colvar%7CrunAve" title="9th item ‣ 5.26 Statistical analysis ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">runAve</a>, which continue to remain <span class="ltx_text ltx_font_typewriter">off</span> by default.</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Colvars version 2020-02-25 or later (VMD version 1.9.4 or later).
+<br class="ltx_break"></span>The parameter <a href="sec_colvarbias.html#metadynamics%7ChillWidth" title="9th item ‣ 7.6.2 Required metadynamics keywords ‣ 7.6 Metadynamics ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">hillWidth</a>, expressing the Gaussian width <math id="I1.i5.p1.m1" class="ltx_Math" alttext="2\sigma" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>σ</mi></mrow></math> in relative units (number of grid points), does not have a default value any more.
+A new alternative parameter <a href="sec_colvarbias.html#metadynamics%7CgaussianSigmas" title="10th item ‣ 7.6.2 Required metadynamics keywords ‣ 7.6 Metadynamics ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">gaussianSigmas</a> allows setting the <math id="I1.i5.p1.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> parameters explicitly for each variable if needed.
+<br class="ltx_break">Furthermore, to facilitate the use of other analysis tools such as for example <span class="ltx_text ltx_font_typewriter">sum_hills</span>:
+<br class="ltx_break"><a href="https://www.plumed.org/doc-v2.6/user-doc/html/sum_hills.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.plumed.org/doc-v2.6/user-doc/html/sum_hills.html</a>
+<br class="ltx_break">the format of the file written by <a href="sec_colvarbias.html#metadynamics%7CwriteHillsTrajectory" title="3rd item ‣ 7.6.3 Output files ‣ 7.6 Metadynamics ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">writeHillsTrajectory</a> has also been changed to use <math id="I1.i5.p1.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> instead of <math id="I1.i5.p1.m4" class="ltx_Math" alttext="2\sigma" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>σ</mi></mrow></math>.
+This change does not affect how the biasing potential is written in the state file, or the simulated trajectory.</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Colvars version 2020-02-25 or later (VMD version 1.9.4 or later).
+<br class="ltx_break"></span>The legacy keywords <span class="ltx_text ltx_font_typewriter">lowerWall</span> and <span class="ltx_text ltx_font_typewriter">upperWall</span> of a <span class="ltx_text ltx_font_typewriter">colvar</span> definition block do not have default values any longer, and need to be set explicitly, preferably as part of the <span class="ltx_text ltx_font_typewriter">harmonicWalls</span> restraint.
+When using an ABF bias, it is recommended to set the two walls equal to <a href="sec_colvar.html#colvar%7ClowerBoundary" title="1st item ‣ 5.21 Defining grid parameters for a colvar ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">lowerBoundary</a> and <a href="sec_colvar.html#colvar%7CupperBoundary" title="2nd item ‣ 5.21 Defining grid parameters for a colvar ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">upperBoundary</a>, respectively.
+When using a metadynamics bias, it is recommended to set the two walls strictly <em class="ltx_emph ltx_font_italic">within</em> <a href="sec_colvar.html#colvar%7ClowerBoundary" title="1st item ‣ 5.21 Defining grid parameters for a colvar ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">lowerBoundary</a> and <a href="sec_colvar.html#colvar%7CupperBoundary" title="2nd item ‣ 5.21 Defining grid parameters for a colvar ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">upperBoundary</a>; see <a href="sec_colvarbias.html#sec:colvarbias_meta_boundaries" title="7.6.1 Treatment of the PMF boundaries ‣ 7.6 Metadynamics ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.6.1</span></a> for details.</p>
+</div>
+</li>
+<li id="I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Colvars version 2020-11-09 or later.
+<br class="ltx_break"></span>The legacy keyword <span class="ltx_text ltx_font_typewriter">disableForces</span> for atom groups is now deprecated and will be discontinued in a future release.
+Atom groups now have an automated way to save computation if forces are not used, and enabling this option otherwise would lead to incorrect behavior.</p>
+</div>
+</li>
+<li id="I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Colvars version 2026-XX-XX or later.
+<br class="ltx_break"></span>Periodic boundary conditions are handled internally, rather than using code by VMD to compute the minimum-image convention (see <a href="sec_colvar.html#sec:cvc_pbcs" title="5.2 Treatment of periodic boundary conditions ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2</span></a>).</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="sec_cvscript_cmdline.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Tcl command-line interface: list of commands</span></a><a href="bib.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="index"><span class="ltx_text ltx_ref_title">Index</span></a><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Compilation notes</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Tue Nov 24 17:53:19 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

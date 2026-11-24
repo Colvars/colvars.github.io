@@ -1,0 +1,865 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>7 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for NAMD</title>
+<!--Generated on Tue Nov 24 17:52:47 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on Code version: 2026‐11‐24.-->
+
+<link rel="shortcut icon" href="logo/colvars-logo-compact.svg" type="image/svg+xml">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="latexml/colvars-refman.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/mml-chtml.js"></script>
+<link rel="up" href="./" title="Collective Variables Module Reference manual for NAMD">
+<link rel="start" href="./" title="Collective Variables Module Reference manual for NAMD">
+<link rel="prev" href="sec_colvarbias.html" title="6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="next" href="sec_colvars_config_changes.html" title="8 Syntax changes from older versions ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvars_crash_course.html" title="2 Writing a Colvars configuration: a crash course ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvarmodule.html" title="3 Enabling and controlling the Colvars module in NAMD ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvar.html" title="4 Defining collective variables ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvar_atom_groups.html" title="5 Selecting atoms ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvarbias.html" title="6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvars_config_changes.html" title="8 Syntax changes from older versions ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_compilation_notes.html" title="9 Compilation notes ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="index" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="bibliography" href="bib.html" title="References ‣ Collective Variables Module Reference manual for NAMD">
+</head>
+<body>
+<nav class="ltx_page_navbar"><a href="./" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for NAMD</span></a>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Enabling and controlling the Colvars module in NAMD</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Defining collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar_atom_groups.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Selecting atoms</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Tcl command-line interface: list of commands</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:cvscript_cmdline_cv" title="In 7 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.1 </span>Commands to manage the Colvars module</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:cvscript_cmdline_colvar" title="In 7 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.2 </span>Commands to manage individual collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:cvscript_cmdline_bias" title="In 7 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.3 </span>Commands to manage individual biases</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Syntax changes from older versions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9 </span>Compilation notes</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_index"><a href="idx.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">Index</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="bib.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="./" title="" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for NAMD</span></a><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Syntax changes from older versions</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Tcl command-line interface: list of commands</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">This section lists all the commands used in NAMD to control the behavior of the Colvars module from within a run script.</p>
+</div>
+<section id="sec:cvscript_cmdline_cv" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">7.1 </span>Commands to manage the Colvars module</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv addenergy &lt;E&gt;</span>
+
+    Add an energy to the MD engine (no effect in VMD)
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    E : float - Amount of energy to add
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv config &lt;conf&gt;</span>
+
+    Read configuration from the given string
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    conf : string - Configuration string
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv configfile &lt;conf_file&gt;</span>
+
+    Read configuration from a file
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    conf_file : string - Path to configuration file
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv delete</span>
+
+    Delete this Colvars module instance (VMD only)
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv featurereport</span>
+
+    Return a summary of Colvars features used so far and their citations
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    report : string - Feature report and citations
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv frame [frame]</span>
+
+    Get or set current frame number (VMD only)
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    frame : integer - Frame number (optional)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    frame : integer - Frame number
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getatomappliedforces</span>
+
+    Get the list of forces applied by Colvars to atoms
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    forces : array of arrays of floats - Atomic forces
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getatomappliedforcesmax</span>
+
+    Get the maximum norm of forces applied by Colvars to atoms
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    force : float - Maximum atomic force
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getatomappliedforcesmaxid</span>
+
+    Get the atom ID with the largest applied force
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    id : int - ID of the atom with the maximum atomic force
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getatomappliedforcesrms</span>
+
+    Get the root-mean-square norm of forces applied by Colvars to atoms
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    force : float - RMS atomic force
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv resetatomappliedforces</span>
+
+    Reset forces applied by Colvars to atoms
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getatomids</span>
+
+    Get the list of indices of atoms used in Colvars
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    indices : array of ints - Atom indices
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getatomcharges</span>
+
+    Get the list of charges of atoms used in Colvars
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    charges : array of floats - Atomic charges
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getatommasses</span>
+
+    Get the list of masses of atoms used in Colvars
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    masses : array of floats - Atomic masses
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getatompositions</span>
+
+    Get the list of cached positions of atoms used in Colvars
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    positions : array of arrays of floats - Atomic positions
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getatomtotalforces</span>
+
+    Get the list of cached total forces of atoms used in Colvars
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    forces : array of arrays of floats - Atomic total foces
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getconfig</span>
+
+    Get the module's configuration string read so far
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    conf : string - Current configuration string
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getenergy</span>
+
+    Get the current Colvars energy
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    E : float - Amount of energy (internal units)
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getnumactiveatomgroups</span>
+
+    Get the number of atom groups that currently have positive ref counts
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    count : integer - Total number of atom groups
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getnumactiveatoms</span>
+
+    Get the number of atoms that currently have positive ref counts
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    count : integer - Total number of atoms
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getnumatoms</span>
+
+    Get the number of requested atoms, including those not in use now
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    count : integer - Total number of atoms
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getstepabsolute</span>
+
+    Get the current step number of the simulation (including restarts)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    step : int - Absolute step number
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv getsteprelative</span>
+
+    Get the current step number from the start of this job
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    step : int - Relative step number
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv help [command]</span>
+
+    Get the help string of the Colvars scripting interface
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    command : string - Get the help string of this specific command (optional)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    help : string - Help string
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv languageversion</span>
+
+    Get the C++ language version number
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    version : string - C++ language version
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv list [param]</span>
+
+    Return a list of all variables or biases
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    param : string - "colvars" or "biases"; default is "colvars" (optional)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    list : sequence of strings - List of elements
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv listcommands</span>
+
+    Get the list of script functions, prefixed with "cv_", "colvar_" or "bias_"
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    list : sequence of strings - List of commands
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv listindexfiles</span>
+
+    Get a list of the index files loaded in this session
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    list : sequence of strings - List of index file names
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv listinputfiles</span>
+
+    Get a list of all input/configuration files loaded in this session
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    list : sequence of strings - List of file names
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv load &lt;prefix&gt;</span>
+
+    Load data from a state file into all matching colvars and biases
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    prefix : string - Path to existing state file or input prefix
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv loadfromstring &lt;buffer&gt;</span>
+
+    Load state data from a string into all matching colvars and biases
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    buffer : string - String buffer containing the state information
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv molid [molid]</span>
+
+    Get or set the molecule ID on which Colvars is defined (VMD only)
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    molid : integer - New molecule ID; -1 means undefined (optional)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    molid : integer - Current molecule ID
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv printframe</span>
+
+    Return the values that would be written to colvars.traj
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    values : string - The values
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv patchversion</span>
+
+    Get the Colvars patch version number (used for bugfixes only)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    version : string - Colvars version
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv printframelabels</span>
+
+    Return the labels that would be written to colvars.traj
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    Labels : string - The labels
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv reset</span>
+
+    Delete all internal configuration
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv resetindexgroups</span>
+
+    Clear the index groups loaded so far, allowing to replace them
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv save &lt;prefix&gt;</span>
+
+    Change the prefix of all output files and save them
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    prefix : string - Output prefix with trailing ".colvars.state" gets removed)
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv savetostring</span>
+
+    Write the Colvars state to a string and return it
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    state : string - The saved state
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv targettemperature [T]</span>
+
+    Get/set target temperature, overriding internally what the MD engine reports
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    T : float - New target temperature in K (internal use) (optional)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    T : float - Current target temperature in K
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv timestep [dt]</span>
+
+    Get/set integration timestep, overriding internally what the MD engine reports
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    dt : float - New integration timestep in MD engine units (optional)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    dt : float - Current integration timestep in MD engine units
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv units [units]</span>
+
+    Get or set the current Colvars unit system
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    units : string - The new unit system (optional)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    units : string - The current unit system
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv update</span>
+
+    Recalculate colvars and biases
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv version</span>
+
+    Get the Colvars version string
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    version : string - Colvars version
+</pre>
+</div>
+</section>
+<section id="sec:cvscript_cmdline_colvar" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">7.2 </span>Commands to manage individual collective variables</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name addforce &lt;force&gt;</span>
+
+    Apply the given force onto this colvar (no effects outside run)
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    force : float or array - Applied force; must match colvar dimensionality
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    force : float or array - Applied force; matches colvar dimensionality
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name communicateforces</span>
+
+    Communicate bias forces from this colvar to atoms
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name cvcflags &lt;flags&gt;</span>
+
+    Enable or disable individual components by setting their active flags
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    flags : integer array - Zero/nonzero value disables/enables the CVC
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name delete</span>
+
+    Delete this colvar, along with all biases that depend on it
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name get &lt;feature&gt;</span>
+
+    Get the value of the given feature for this colvar
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    feature : string - Name of the feature
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    state : 1/0 - State of the given feature
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name getappliedforce</span>
+
+    Return the total of the forces applied to this colvar
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    force : float - Applied force; matches the colvar dimensionality
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name resetbiasforce</span>
+
+    Return the total of the forces applied to this colvar
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name getatomgroups</span>
+
+    Return the atom indices used by this colvar as a list of lists
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    groups : array of arrays of ints - Atom indices
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name getatomids</span>
+
+    Return the list of atom indices used by this colvar
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    indices : array of ints - Atom indices
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name getconfig</span>
+
+    Return the configuration string of this colvar
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    conf : string - Current configuration string
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name getgradients</span>
+
+    Return the atomic gradients of this colvar
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    gradients : array of arrays of floats - Atomic gradients
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name gettotalforce</span>
+
+    Return the sum of internal and external forces to this colvar
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    force : float - Total force; matches the colvar dimensionality
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name getvolmapids</span>
+
+    Return the list of volumetric map indices used by this colvar
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name help [command]</span>
+
+    Get a help summary or the help string of one colvar subcommand
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    command : string - Get the help string of this specific command (optional)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    help : string - Help string
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name modifycvcs &lt;confs&gt;</span>
+
+    Modify configuration of individual components by passing string arguments
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    confs : sequence of strings - New configurations; empty strings are skipped
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name run_ave</span>
+
+    Get the current running average of the value of this colvar
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    value : float or array - Averaged value; matches the colvar dimensionality
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name set &lt;feature&gt; &lt;value&gt;</span>
+
+    Set the given feature of this colvar to a new value
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    feature : string - Name of the feature
+
+    value : string - String representation of the new feature value
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name state</span>
+
+    Print a string representation of the feature state of this colvar
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    state : string - The feature state
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name type</span>
+
+    Get the type description of this colvar
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    type : string - Type description
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name update</span>
+
+    Recompute this colvar and return its up-to-date value
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    value : float or array - Current value; matches the colvar dimensionality
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name value</span>
+
+    Get the current value of this colvar
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    value : float or array - Current value; matches the colvar dimensionality
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv colvar name width</span>
+
+    Get the width of this colvar
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    width : float - Value of the width
+</pre>
+</div>
+</section>
+<section id="sec:cvscript_cmdline_bias" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">7.3 </span>Commands to manage individual biases</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name bin</span>
+
+    Get the current grid bin index (flattened if more than 1d)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    bin : integer - Bin index
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name bincount [index]</span>
+
+    Get the number of samples at the given grid bin (1D ABF only for now)
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    index : integer - Grid index; defaults to current bin (optional)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    samples : integer - Number of samples
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name local_sample_count [radius]</span>
+
+    Get the number of samples around the current binsamples : integer - Number of samples
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    radius : integer - Sum over radius bins around current bin (optional)
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name binnum</span>
+
+    Get the total number of grid points of this bias (1D ABF only for now)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    Bins : integer - Number of grid points
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name delete</span>
+
+    Delete this bias
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name energy</span>
+
+    Get the current energy of this bias
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    E : float - Energy value
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name get &lt;feature&gt;</span>
+
+    Get the value of the given feature for this bias
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    feature : string - Name of the feature
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    state : 1/0 - State of the given feature
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name getconfig</span>
+
+    Return the configuration string of this bias
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    conf : string - Current configuration string
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name help [command]</span>
+
+    Get a help summary or the help string of one bias subcommand
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    command : string - Get the help string of this specific command (optional)
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    help : string - Help string
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name load &lt;prefix&gt;</span>
+
+    Load data into this bias
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    prefix : string - Read from a file with this name or prefix
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name loadfromstring &lt;buffer&gt;</span>
+
+    Load state data into this bias from a string
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    buffer : string - String buffer containing the state information
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name save &lt;prefix&gt;</span>
+
+    Save data from this bias into a file with the given prefix
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    prefix : string - Prefix for the state file of this bias
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name savetostring</span>
+
+    Save data from this bias into a string and return it
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    state : string - The bias state
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name set &lt;feature&gt; &lt;value&gt;</span>
+
+    Set the given feature of this bias to a new value
+
+    <span class="ltx_text ltx_font_bold">Parameters</span>
+
+    feature : string - Name of the feature
+
+    value : string - String representation of the new feature value
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name share</span>
+
+    Share bias information with other replicas (multiple-walker scheme)
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name state</span>
+
+    Print a string representation of the feature state of this bias
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    state : string - String representation of the bias features
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name type</span>
+
+    Print the type of this bias object
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    type : string - Type of this bias object (e.g. metadynamics)
+</pre>
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_bold">cv bias name update</span>
+
+    Recompute this bias and return its up-to-date energy
+
+    <span class="ltx_text ltx_font_bold">Returns</span>
+
+    E : float - Energy value
+</pre>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a><a href="bib.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="index"><span class="ltx_text ltx_ref_title">Index</span></a><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Syntax changes from older versions</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Tue Nov 24 17:52:47 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

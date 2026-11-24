@@ -1,0 +1,572 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5 Selecting atoms ‣ Collective Variables Module Reference manual for NAMD</title>
+<!--Generated on Tue Nov 24 17:52:47 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on Code version: 2026‐11‐24.-->
+
+<link rel="shortcut icon" href="logo/colvars-logo-compact.svg" type="image/svg+xml">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="latexml/colvars-refman.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/mml-chtml.js"></script>
+<link rel="up" href="./" title="Collective Variables Module Reference manual for NAMD">
+<link rel="start" href="./" title="Collective Variables Module Reference manual for NAMD">
+<link rel="prev" href="sec_colvar.html" title="4 Defining collective variables ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="next" href="sec_colvarbias.html" title="6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvars_crash_course.html" title="2 Writing a Colvars configuration: a crash course ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvarmodule.html" title="3 Enabling and controlling the Colvars module in NAMD ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvar.html" title="4 Defining collective variables ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvarbias.html" title="6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_cvscript_cmdline.html" title="7 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_colvars_config_changes.html" title="8 Syntax changes from older versions ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="section" href="sec_compilation_notes.html" title="9 Compilation notes ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="index" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for NAMD">
+<link rel="bibliography" href="bib.html" title="References ‣ Collective Variables Module Reference manual for NAMD">
+<meta name="keywords" lang="en" content=", , , , , , , , , , , , , , , , , , , atom group">
+</head>
+<body>
+<nav class="ltx_page_navbar"><a href="./" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for NAMD</span></a>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Enabling and controlling the Colvars module in NAMD</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Defining collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Selecting atoms</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:colvar_atom_groups_sel" title="In 5 Selecting atoms ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>Atom selection keywords</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="#sec:colvar_atom_groups_ref_frame" title="In 5 Selecting atoms ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2 </span>Moving frame of reference.</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:fit_gradients" title="In 5.2 Moving frame of reference. ‣ 5 Selecting atoms ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.1 </span>Note on fit gradients</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:colvar_atom_groups_wrapping" title="In 5 Selecting atoms ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Treatment of periodic boundary conditions.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:colvar_atom_groups_scaling" title="In 5 Selecting atoms ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4 </span>Performance of a Colvars calculation based on group size.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_cvscript_cmdline.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Tcl command-line interface: list of commands</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Syntax changes from older versions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9 </span>Compilation notes</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_index"><a href="idx.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">Index</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="bib.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="./" title="" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for NAMD</span></a><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Defining collective variables</span></a><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Selecting atoms</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">To define collective variables, atoms are usually selected as groups. Each group is defined using an identifying keyword that is unique in the context of the specific colvar component (e.g. for a distance component, the two groups are identified by the <span class="ltx_text ltx_font_typewriter">group1</span> and <span class="ltx_text ltx_font_typewriter">group2</span> keywords).</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The group’s identifying keyword is followed by a brace-delimited block containing selection keywords and other parameters, one of which is <span class="ltx_text ltx_font_typewriter">name</span>:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">name</span> — <em class="ltx_emph ltx_font_italic">Unique name for the atom group</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ string, context: atom group ]</span></p>
+</div>
+<div id="I1.i1.p2" class="ltx_para">
+<p class="ltx_p">This parameter defines a globally unique name for this atom group, which can be referred to
+in the definition of other atom groups (including in other colvars) by invoking
+<span class="ltx_text ltx_font_typewriter">atomsOfGroup</span> as a selection keyword.
+This has two benefits: (1) it can make the configuration shorter and more legible, and (2) several
+related atom groups can be defined using a common set of atoms, so that this selection can be
+changed in one place, keeping all related groups synchronized with the same atom set.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Other keywords are documented in the following sections.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">In the example below, the <span class="ltx_text ltx_font_typewriter">gyration</span> component uses the identifying keyword <span class="ltx_text ltx_font_typewriter">atoms</span> to define its associated group, which is defined based on the index group named “<span class="ltx_text ltx_font_typewriter">Protein-H</span>”. Optionally, the group is also given the unique name “<span class="ltx_text ltx_font_typewriter">my_protein</span>”, so that atom groups defined later in the Colvars configuration may refer to it.
+<pre class="ltx_verbatim cv_example cv_example_colvars ltx_font_typewriter">
+colvar {
+  name rgyr
+  gyration {
+    atoms {
+      name my_protein
+      indexGroup Protein-H
+    }
+  }
+}
+</pre></p>
+</div>
+<section id="sec:colvar_atom_groups_sel" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.1 </span>Atom selection keywords</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Selection keywords may be used individually or in combination with each other, and each can be repeated any number of times.
+Selection is incremental: each keyword adds the corresponding atoms to the selection, so that different sets of atoms can be combined.
+However, atoms included by multiple keywords are only counted once.
+Below is an example configuration for an atom group called “<span class="ltx_text ltx_font_typewriter">atoms</span>”.
+<span class="ltx_text ltx_font_bold">Note: <em class="ltx_emph ltx_font_medium ltx_font_italic">this is an unusually varied combination of selection keywords, demonstrating how they can be combined together: most simulations only use one of them.</em>
+<br class="ltx_break"></span></p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<pre class="ltx_verbatim cv_example cv_example_colvars ltx_font_typewriter">
+atoms {
+
+  # add atoms 1 and 3 to this group (note: first atom in the system is 1)
+  atomNumbers { 
+    1 3
+  }
+
+  # add atoms starting from 20 up to and including 50
+  atomNumbersRange  20-50
+  # add all the atoms with occupancy 2 in the file atoms.pdb
+  atomsFile             atoms.pdb
+  atomsCol              O
+  atomsColValue         2.0
+
+  # add all the C-alphas within residues 11 to 20 of segments "PR1" and "PR2"
+  psfSegID              PR1 PR2
+  atomNameResidueRange  CA 11-20
+  atomNameResidueRange  CA 11-20
+  # add index group (requires a .ndx file to be provided globally)
+  indexGroup Water
+}
+</pre>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">The resulting selection includes atoms 1 and 3, those between 20 and 50, the <math id="SS1.p3.m1" class="ltx_Math" alttext="\mathrm{C}_{\alpha}" display="inline"><msub><mi mathvariant="normal">C</mi><mi>α</mi></msub></math> atoms between residues 11 and 20 of the two segments <span class="ltx_text ltx_font_typewriter">PR1</span> and <span class="ltx_text ltx_font_typewriter">PR2</span>, and those in the index group called “Water”.
+The indices of this group are read from the file provided by the global keyword <a href="sec_colvarmodule.html#Colvars-global%7CindexFile" title="3rd item ‣ 3.5 Global keywords ‣ 3 Enabling and controlling the Colvars module in NAMD ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref ltx_font_typewriter">indexFile</a>.</p>
+</div>
+<div id="SS1.p4" class="ltx_para">
+<p class="ltx_p">The complete list of selection keywords available in NAMD is:</p>
+</div>
+<div id="SS1.p5" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">atomNumbers</span> — <em class="ltx_emph ltx_font_italic">List of atom numbers</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ space-separated list of positive integers, context: atom group ]</span></p>
+</div>
+<div id="I2.i1.p2" class="ltx_para">
+<p class="ltx_p">This option adds to the group all the atoms whose numbers are in
+the list. <em class="ltx_emph ltx_font_italic">The number of the first atom in the system is 1: to convert from a VMD selection, use “atomselect get serial”.</em></p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">indexGroup</span> — <em class="ltx_emph ltx_font_italic">Name of index group to be used (GROMACS format)</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ string, context: atom group ]</span></p>
+</div>
+<div id="I2.i2.p2" class="ltx_para">
+<p class="ltx_p">If the name of an index file has been provided by <span class="ltx_text ltx_font_typewriter">indexFile</span>, this option allows to select one index group from that file: the atoms from that index group will be used to define the current group.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">atomsOfGroup</span> — <em class="ltx_emph ltx_font_italic">Name of group defined previously</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ string, context: atom group ]</span></p>
+</div>
+<div id="I2.i3.p2" class="ltx_para">
+<p class="ltx_p">Refers to a group defined previously using its user-defined <span class="ltx_text ltx_font_typewriter">name</span>.
+This adds all atoms of that named group to the current group.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">atomNumbersRange</span> — <em class="ltx_emph ltx_font_italic">Atoms within a number range</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ <math id="I2.i4.p1.m1" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math>Starting number<math id="I2.i4.p1.m2" class="ltx_Math" alttext="&gt;" display="inline"><mo>&gt;</mo></math>-<math id="I2.i4.p1.m3" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math>Ending number<math id="I2.i4.p1.m4" class="ltx_Math" alttext="&gt;" display="inline"><mo>&gt;</mo></math>, context: atom group ]</span></p>
+</div>
+<div id="I2.i4.p2" class="ltx_para">
+<p class="ltx_p">This option includes in the group all atoms whose numbers are within the range specified. <em class="ltx_emph ltx_font_italic">The number of the first atom in the system is 1.</em></p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">atomNameResidueRange</span> — <em class="ltx_emph ltx_font_italic">Named atoms within a range of residue numbers</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ <math id="I2.i5.p1.m1" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math>Atom name<math id="I2.i5.p1.m2" class="ltx_Math" alttext="&gt;" display="inline"><mo>&gt;</mo></math> <math id="I2.i5.p1.m3" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math>Starting residue<math id="I2.i5.p1.m4" class="ltx_Math" alttext="&gt;" display="inline"><mo>&gt;</mo></math>-<math id="I2.i5.p1.m5" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math>Ending residue<math id="I2.i5.p1.m6" class="ltx_Math" alttext="&gt;" display="inline"><mo>&gt;</mo></math>, context: atom group ]</span></p>
+</div>
+<div id="I2.i5.p2" class="ltx_para">
+<p class="ltx_p">This option adds to the group all the atoms with the provided
+name, within residues in the given range.</p>
+</div>
+</li>
+<li id="I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">psfSegID</span> — <em class="ltx_emph ltx_font_italic">PSF segment identifier</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ space-separated list of strings (max 4 characters), context: atom group ]</span></p>
+</div>
+<div id="I2.i6.p2" class="ltx_para">
+<p class="ltx_p">This option sets the PSF segment identifier for
+<span class="ltx_text ltx_font_typewriter">atomNameResidueRange</span>. Multiple values may be provided,
+which correspond to multiple instances of
+<span class="ltx_text ltx_font_typewriter">atomNameResidueRange</span>, in order of their occurrence.
+This option is only necessary if a PSF topology file is used.</p>
+</div>
+</li>
+<li id="atom-group|atomsFile" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">atomsFile</span> — <em class="ltx_emph ltx_font_italic">PDB file name for atom selection</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ UNIX filename, context: atom group ]</span></p>
+</div>
+<div id="I2.i7.p2" class="ltx_para">
+<p class="ltx_p">This option selects atoms from the PDB file provided and adds them
+to the group according to numerical flags in the column
+<span class="ltx_text ltx_font_typewriter">atomsCol</span>. <span class="ltx_text ltx_font_bold">Note:</span> <em class="ltx_emph ltx_font_italic">the sequence of atoms in the PDB file
+provided must match that in the system’s topology</em>.</p>
+</div>
+</li>
+<li id="atom-group|atomsCol" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">atomsCol</span> — <em class="ltx_emph ltx_font_italic">PDB column to use for atom selection flags</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ <span class="ltx_text ltx_font_typewriter">O</span>, <span class="ltx_text ltx_font_typewriter">B</span>, <span class="ltx_text ltx_font_typewriter">X</span>, <span class="ltx_text ltx_font_typewriter">Y</span>, or <span class="ltx_text ltx_font_typewriter">Z</span>, context: atom group ]</span></p>
+</div>
+<div id="I2.i8.p2" class="ltx_para">
+<p class="ltx_p">This option specifies which PDB column in <span class="ltx_text ltx_font_typewriter">atomsFile</span> is used to determine which atoms are to be included in the group.</p>
+</div>
+</li>
+<li id="atom-group|atomsColValue" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">atomsColValue</span> — <em class="ltx_emph ltx_font_italic">Atom selection flag in the PDB column</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ positive decimal, context: atom group ]</span></p>
+</div>
+<div id="I2.i9.p2" class="ltx_para">
+<p class="ltx_p">If defined, this value in <span class="ltx_text ltx_font_typewriter">atomsCol</span> identifies atoms in <span class="ltx_text ltx_font_typewriter">atomsFile</span> that are included in the group.
+If undefined, all atoms with a non-zero value in <span class="ltx_text ltx_font_typewriter">atomsCol</span> are included.</p>
+</div>
+</li>
+<li id="I2.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">dummyAtom</span> — <em class="ltx_emph ltx_font_italic">Dummy atom position (Å)</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ <span class="ltx_text ltx_font_typewriter">(x, y, z)</span> triplet, context: atom group ]</span></p>
+</div>
+<div id="I2.i10.p2" class="ltx_para">
+<p class="ltx_p">Instead of selecting any atom, this option makes the group a virtual particle at a fixed position in space. This is useful e.g. to replace a group’s center of geometry with a user-defined position.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="sec:colvar_atom_groups_ref_frame" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2 </span>Moving frame of reference.</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">The following options define an automatic calculation of an optimal translation (<span class="ltx_text ltx_font_typewriter">centerToReference</span>) or optimal rotation (<span class="ltx_text ltx_font_typewriter">rotateToReference</span>), that superimposes the positions of this group to a provided set of reference coordinates.
+Alternately, <span class="ltx_text ltx_font_typewriter">centerToOrigin</span> applies a translation to place the geometric center of the group at (0, 0, 0).
+This can allow, for example, to effectively remove from certain colvars the effects of molecular tumbling and of diffusion.
+Given the set of atomic positions <math id="SS2.p1.m1" class="ltx_Math" alttext="\mathbf{x}_{i}" display="inline"><msub><mi>𝐱</mi><mi>i</mi></msub></math>, the colvar <math id="SS2.p1.m2" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math> can be defined on a set of roto-translated positions <math id="SS2.p1.m3" class="ltx_Math" alttext="\mathbf{x}_{i}^{\prime}=R(\mathbf{x}_{i}-\mathbf{x}^{\mathrm{C}})+\mathbf{x}^{%
+\mathrm{ref}}" display="inline"><mrow><msubsup><mi>𝐱</mi><mi>i</mi><mo>′</mo></msubsup><mo>=</mo><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>𝐱</mi><mi>i</mi></msub><mo>−</mo><msup><mi>𝐱</mi><mi mathvariant="normal">C</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><msup><mi>𝐱</mi><mi>ref</mi></msup></mrow></mrow></math>.
+<math id="SS2.p1.m4" class="ltx_Math" alttext="\mathbf{x}^{\mathrm{C}}" display="inline"><msup><mi>𝐱</mi><mi mathvariant="normal">C</mi></msup></math> is the geometric center of the <math id="SS2.p1.m5" class="ltx_Math" alttext="\mathbf{x}_{i}" display="inline"><msub><mi>𝐱</mi><mi>i</mi></msub></math>, <math id="SS2.p1.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is the optimal rotation matrix to the reference positions and <math id="SS2.p1.m7" class="ltx_Math" alttext="\mathbf{x}^{\mathrm{ref}}" display="inline"><msup><mi>𝐱</mi><mi>ref</mi></msup></math> is the geometric center of the reference positions.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">Components that are defined based on pairwise distances are naturally invariant under global roto-translations.
+Other components are instead affected by global rotations or translations: however, they can be made invariant if they are expressed in the frame of reference of a chosen group of atoms, using the <span class="ltx_text ltx_font_typewriter">centerToReference</span> and <span class="ltx_text ltx_font_typewriter">rotateToReference</span> options.
+Finally, a few components are defined by convention using a roto-translated frame (e.g. the minimal RMSD): for these components, <span class="ltx_text ltx_font_typewriter">centerToReference</span> and <span class="ltx_text ltx_font_typewriter">rotateToReference</span> are enabled by default.
+In typical applications, the default settings result in the expected behavior.</p>
+</div>
+<section id="SS2.SSS0.Px1" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Warning on rotating frames of reference and periodic boundary conditions.</h4>
+
+<div id="SS2.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">rotateToReference</span> affects coordinates that depend on minimum-image distances in periodic boundary conditions (PBC).
+After rotation of the coordinates, the periodic cell vectors become irrelevant: the rotated system is effectively non-periodic.
+A safe way to handle this is to ensure that the relevant inter-group distance vectors remain smaller than the half-size of the periodic cell.
+If this is not desirable, one should avoid the rotating frame of reference, and apply orientational restraints to the reference group instead, in order to keep the orientation of the reference group consistent with the orientation of the periodic cell.</p>
+</div>
+</section>
+<section id="SS2.SSS0.Px2" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Warning on rotating frames of reference and ABF.</h4>
+
+<div id="SS2.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Note that <span class="ltx_text ltx_font_typewriter">centerToReference</span> and <span class="ltx_text ltx_font_typewriter">rotateToReference</span> may affect the Jacobian derivative of colvar components in a way that is not taken into account by default.
+Be careful when using these options in ABF simulations or when using total force values.</p>
+</div>
+<div id="SS2.SSS0.Px2.p2" class="ltx_para">
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">centerToReference</span> — <em class="ltx_emph ltx_font_italic">Implicitly remove translations for this group</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">Default: <span class="ltx_text ltx_font_typewriter">off</span> [ boolean, context: atom group ]</span></p>
+</div>
+<div id="I3.i1.p2" class="ltx_para">
+<p class="ltx_p">If this option is <span class="ltx_text ltx_font_typewriter">on</span>, the center of geometry of the group will be aligned with that of the reference positions provided by either <span class="ltx_text ltx_font_typewriter">refPositions</span> or <span class="ltx_text ltx_font_typewriter">refPositionsFile</span>.
+Colvar components will only have access to the aligned positions.
+<span class="ltx_text ltx_font_bold">Note</span>: unless otherwise specified, <span class="ltx_text ltx_font_typewriter">rmsd</span> and <span class="ltx_text ltx_font_typewriter">eigenvector</span> set this option to <span class="ltx_text ltx_font_typewriter">on</span> <em class="ltx_emph ltx_font_italic">by default</em>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">centerToOrigin</span> — <em class="ltx_emph ltx_font_italic">Implicitly remove translations for this group by keeping its center at the origin</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">Default: <span class="ltx_text ltx_font_typewriter">off</span> [ boolean, context: atom group ]</span></p>
+</div>
+<div id="I3.i2.p2" class="ltx_para">
+<p class="ltx_p">This option implies <span class="ltx_text ltx_font_typewriter">centerToReference</span>.
+If this option is <span class="ltx_text ltx_font_typewriter">on</span>, coordinates from the group will be translated so that the center of geometry of the group remains at (0, 0, 0), except if
+<span class="ltx_text ltx_font_typewriter">fittingGroup</span> is enabled.
+In that case, the translation applied is the translation that brings the center of geometry of the fitting group to (0, 0, 0).</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">rotateToReference</span> — <em class="ltx_emph ltx_font_italic">Implicitly remove rotations for this group</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">Default: <span class="ltx_text ltx_font_typewriter">off</span> [ boolean, context: atom group ]</span></p>
+</div>
+<div id="I3.i3.p2" class="ltx_para">
+<p class="ltx_p">If this option is <span class="ltx_text ltx_font_typewriter">on</span>, the coordinates of this group will be optimally superimposed to the reference positions provided by either <span class="ltx_text ltx_font_typewriter">refPositions</span> or <span class="ltx_text ltx_font_typewriter">refPositionsFile</span>.
+The rotation will be performed around the center of geometry if <span class="ltx_text ltx_font_typewriter">centerToReference</span> is <span class="ltx_text ltx_font_typewriter">on</span>, or around the origin otherwise.
+The algorithm used is the same employed by the <span class="ltx_text ltx_font_typewriter">orientation</span> colvar component <cite class="ltx_cite ltx_citemacro_cite">Coutsias<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib7" title="Using quaternions to calculate RMSD" class="ltx_ref">2004</a>)</cite>.
+Forces applied to the atoms of this group will also be implicitly rotated back to the original frame.
+<span class="ltx_text ltx_font_bold">Note</span>: unless otherwise specified, <span class="ltx_text ltx_font_typewriter">rmsd</span> and <span class="ltx_text ltx_font_typewriter">eigenvector</span> set this option to <span class="ltx_text ltx_font_typewriter">on</span> <em class="ltx_emph ltx_font_italic">by default</em>.</p>
+</div>
+</li>
+<li id="atom-group|refPositions" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">refPositions</span> — <em class="ltx_emph ltx_font_italic">Reference positions for fitting (Å)</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ space-separated list of <span class="ltx_text ltx_font_typewriter">(x, y, z)</span> triplets, context: atom group ]</span></p>
+</div>
+<div id="I3.i4.p2" class="ltx_para">
+<p class="ltx_p">This option provides a list of reference coordinates for <span class="ltx_text ltx_font_typewriter">centerToReference</span> and/or <span class="ltx_text ltx_font_typewriter">rotateToReference</span>, and is mutually exclusive with <span class="ltx_text ltx_font_typewriter">refPositionsFile</span>.
+If only <span class="ltx_text ltx_font_typewriter">centerToReference</span> is <span class="ltx_text ltx_font_typewriter">on</span>, the list may contain a single (x, y, z) triplet; if also <span class="ltx_text ltx_font_typewriter">rotateToReference</span> is <span class="ltx_text ltx_font_typewriter">on</span>, the list should be as long as the atom group, and <em class="ltx_emph ltx_font_italic">its order must match the order in which atoms were defined</em>.</p>
+</div>
+</li>
+<li id="atom-group|refPositionsFile" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">refPositionsFile</span> — <em class="ltx_emph ltx_font_italic">File containing the reference positions for fitting</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ UNIX filename, context: atom group ]</span></p>
+</div>
+<div id="I3.i5.p2" class="ltx_para">
+<p class="ltx_p">This option provides a list of reference coordinates for <span class="ltx_text ltx_font_typewriter">centerToReference</span> and/or <span class="ltx_text ltx_font_typewriter">rotateToReference</span>, and is mutually exclusive with <span class="ltx_text ltx_font_typewriter">refPositions</span>.
+The acceptable file format is XYZ (<a href="sec_colvarmodule.html#sec:colvars_xyz_format" title="3.8.3 XYZ coordinate files ‣ 3.8 File formats ‣ 3 Enabling and controlling the Colvars module in NAMD ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.8.3</span></a>), which is read in double precision.
+Alternatively, a PDB file may be read (see <a href="sec_colvarmodule.html#sec:colvars_pdb_format" title="3.8.4 PDB coordinate files ‣ 3.8 File formats ‣ 3 Enabling and controlling the Colvars module in NAMD ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.8.4</span></a>) using NAMD’s reader; however, due to the constraints of the PDB format <em class="ltx_emph ltx_font_italic">PDB files are discouraged if the precision of the reference coordinates is a concern</em>.</p>
+</div>
+</li>
+<li id="atom-group|refPositionsCol" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">refPositionsCol</span> — <em class="ltx_emph ltx_font_italic">PDB column containing atom flags</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ <span class="ltx_text ltx_font_typewriter">O</span>, <span class="ltx_text ltx_font_typewriter">B</span>, <span class="ltx_text ltx_font_typewriter">X</span>, <span class="ltx_text ltx_font_typewriter">Y</span>, or <span class="ltx_text ltx_font_typewriter">Z</span>, context: atom group ]</span></p>
+</div>
+<div id="I3.i6.p2" class="ltx_para">
+<p class="ltx_p">Like <span class="ltx_text ltx_font_typewriter">atomsCol</span> for <span class="ltx_text ltx_font_typewriter">atomsFile</span>, indicates which column to use to identify the atoms in <span class="ltx_text ltx_font_typewriter">refPositionsFile</span> (if this is a PDB file).</p>
+</div>
+</li>
+<li id="atom-group|refPositionsColValue" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">refPositionsColValue</span> — <em class="ltx_emph ltx_font_italic">Atom selection flag in the PDB column</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ positive decimal, context: atom group ]</span></p>
+</div>
+<div id="I3.i7.p2" class="ltx_para">
+<p class="ltx_p">Analogous to <span class="ltx_text ltx_font_typewriter">atomsColValue</span>, but applied to <span class="ltx_text ltx_font_typewriter">refPositionsCol</span>.</p>
+</div>
+</li>
+<li id="atom-group|fittingGroup" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">fittingGroup</span> — <em class="ltx_emph ltx_font_italic">Use an alternate set of atoms to define the roto-translation</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">Default: This atom group itself [ <span class="ltx_ref ltx_ref_self">Atom group</span>, context: atom group ]</span></p>
+</div>
+<div id="I3.i8.p2" class="ltx_para">
+<p class="ltx_p">If either <span class="ltx_text ltx_font_typewriter">centerToReference</span> or <span class="ltx_text ltx_font_typewriter">rotateToReference</span> is defined, this keyword defines an alternate atom group to calculate the optimal roto-translation.
+Use this option to define a continuous rotation if the structure of the group involved changes significantly (a typical symptom would be the message “Warning: discontinuous rotation!”).</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="SS2.SSS0.Px2.p3" class="ltx_para">
+<p class="ltx_p">The following example illustrates the use of <span class="ltx_text ltx_font_typewriter">fittingGroup</span> as part of a Distance to Bound Configuration (DBC)
+coordinate for use in ligand restraints for binding affinity calculations.<cite class="ltx_cite ltx_citemacro_cite">Salari<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib33" title="A streamlined, general approach for computing ligand binding free energies and its application to GPCR-bound cholesterol." class="ltx_ref">2018</a>)</cite>
+The group called “<span class="ltx_text ltx_font_typewriter">atoms</span>” describes coordinates of a ligand’s atoms, expressed in a moving frame of
+reference tied to a binding site (here within a protein).
+An optimal roto-translation is calculated automatically by fitting the C<sub class="ltx_sub"><span class="ltx_text ltx_font_italic">α</span></sub> trace of the rest of the protein onto the coordinates provided by a PDB file.
+To define a DBC coordinate, this atom group would be used within an <a href="sec_colvar.html#colvar%7Crmsd" title="4.6.1 rmsd: root mean square displacement (RMSD) from reference positions. ‣ 4.6 Collective metrics ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref ltx_font_typewriter">rmsd</a> function.</p>
+</div>
+<div id="SS2.SSS0.Px2.p4" class="ltx_para">
+<pre class="ltx_verbatim cv_example cv_example_colvars ltx_font_typewriter">
+# Example: defining a group "atoms" (the ligand) whose coordinates are expressed 
+# in a roto-translated frame of reference defined by a second group (the receptor)
+atoms {
+
+  atomNumbers 1 2 3 4 5 6 7 # atoms of the ligand (1-based)
+
+  centerToReference yes
+  rotateToReference yes
+  fittingGroup {
+    # define the frame by fitting alpha carbon atoms
+    # in 2 protein segments close to the site
+    psfSegID              PROT PROT
+    atomNameResidueRange  CA 1-40
+    atomNameResidueRange  CA 59-100
+  } 
+  refPositionsFile all.pdb  # can be the entire system
+}
+</pre>
+</div>
+</section>
+<section id="sec:fit_gradients" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">5.2.1 </span>Note on fit gradients</h3>
+
+<div id="SS2.SSS1.p1" class="ltx_para">
+<p class="ltx_p">When either <span class="ltx_text ltx_font_typewriter">centerToReference</span> or <span class="ltx_text ltx_font_typewriter">rotateToReference</span> is on,
+the gradients of some colvars include terms proportional to
+<math id="SS2.SSS1.p1.m1" class="ltx_Math" alttext="\partial{}R/\partial\mathbf{x}_{i}" display="inline"><mrow><mo rspace="0em">∂</mo><mrow><mi>R</mi><mo>/</mo><mrow><mo lspace="0em" rspace="0em">∂</mo><msub><mi>𝐱</mi><mi>i</mi></msub></mrow></mrow></mrow></math> (rotational gradients) and
+<math id="SS2.SSS1.p1.m2" class="ltx_Math" alttext="\partial\mathbf{x}^{\mathrm{C}}/\partial\mathbf{x}_{i}" display="inline"><mrow><mo rspace="0em">∂</mo><mrow><msup><mi>𝐱</mi><mi mathvariant="normal">C</mi></msup><mo>/</mo><mrow><mo lspace="0em" rspace="0em">∂</mo><msub><mi>𝐱</mi><mi>i</mi></msub></mrow></mrow></mrow></math> (translational gradients).
+In practice, these terms are calculated as follows,
+<br class="ltx_break"><math id="SS2.SSS1.p1.m3" class="ltx_math_unparsed" alttext="\begin{aligned} \nabla_{k}\zeta(\mathbf{X})&amp;=\sum_{l,\rm main}\left[\nabla_{l}%
+f\cdot\nabla_{k}R\left(\mathbf{x}_{l}-\mathbf{\bar{x}}^{\rm(fit)}\right)-\frac%
+{1}{n^{\rm(fit)}}\nabla_{l}f\cdot R\mathbbm{1}\right]\\
+&amp;=\left(\sum_{l,\rm main}\nabla_{l}f\cdot\frac{\partial R}{\partial q_{0}}%
+\left(\mathbf{x}_{l}-\mathbf{\bar{x}}^{\rm(fit)}\right),\sum_{l,\rm main}%
+\nabla_{l}f\cdot\frac{\partial R}{\partial q_{1}}\left(\mathbf{x}_{l}-\mathbf{%
+\bar{x}}^{\rm(fit)}\right),\sum_{l,\rm main}\nabla_{l}f\cdot\frac{\partial R}{%
+\partial q_{2}}\left(\mathbf{x}_{l}-\mathbf{\bar{x}}^{\rm(fit)}\right),\right.%
+\\
+&amp;\left.\sum_{l,\rm main}\nabla_{l}f\cdot\frac{\partial R}{\partial q_{3}}\left%
+(\mathbf{x}_{l}-\mathbf{\bar{x}}^{\rm(fit)}\right)\right)\cdot\left(\nabla_{k}%
+q_{0},\nabla_{k}q_{1},\nabla_{k}q_{2},\nabla_{k}q_{3}\right)-\frac{1}{n^{\rm(%
+fit)}}R^{\intercal}\sum_{l,\rm main}{\nabla_{l}f}\end{aligned}" display="inline"><mtable columnspacing="0pt" rowspacing="0pt"><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mrow><msub><mo>∇</mo><mi>k</mi></msub><mi>ζ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐗</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mi>l</mi><mo>,</mo><mi>main</mi></mrow></munder></mstyle><mrow><mo>[</mo><mrow><mrow><mrow><mrow><msub><mo rspace="0.167em">∇</mo><mi>l</mi></msub><mi>f</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><msub><mo rspace="0.167em">∇</mo><mi>k</mi></msub><mi>R</mi></mrow></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi>𝐱</mi><mi>l</mi></msub><mo>−</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mrow><mo stretchy="false">(</mo><mi>fit</mi><mo stretchy="false">)</mo></mrow></msup></mrow><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>n</mi><mrow><mo stretchy="false">(</mo><mi>fit</mi><mo stretchy="false">)</mo></mrow></msup></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><msub><mo rspace="0.167em">∇</mo><mi>l</mi></msub><mrow><mrow><mi>f</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>R</mi></mrow><mo>⁢</mo><mn>𝟙</mn></mrow></mrow></mrow></mrow><mo>]</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mo>=</mo><mrow><mo>(</mo><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mi>l</mi><mo>,</mo><mi>main</mi></mrow></munder></mstyle><msub><mo lspace="0.167em" rspace="0.167em">∇</mo><mi>l</mi></msub><mi>f</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>R</mi></mrow><mrow><mo rspace="0em">∂</mo><msub><mi>q</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mrow><mo>(</mo><msub><mi>𝐱</mi><mi>l</mi></msub><mo>−</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mrow><mo stretchy="false">(</mo><mi>fit</mi><mo stretchy="false">)</mo></mrow></msup><mo>)</mo></mrow><mo>,</mo><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mi>l</mi><mo>,</mo><mi>main</mi></mrow></munder></mstyle><msub><mo lspace="0.167em" rspace="0.167em">∇</mo><mi>l</mi></msub><mi>f</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>R</mi></mrow><mrow><mo rspace="0em">∂</mo><msub><mi>q</mi><mn>1</mn></msub></mrow></mfrac></mstyle><mrow><mo>(</mo><msub><mi>𝐱</mi><mi>l</mi></msub><mo>−</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mrow><mo stretchy="false">(</mo><mi>fit</mi><mo stretchy="false">)</mo></mrow></msup><mo>)</mo></mrow><mo>,</mo><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mi>l</mi><mo>,</mo><mi>main</mi></mrow></munder></mstyle><msub><mo lspace="0.167em" rspace="0.167em">∇</mo><mi>l</mi></msub><mi>f</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>R</mi></mrow><mrow><mo rspace="0em">∂</mo><msub><mi>q</mi><mn>2</mn></msub></mrow></mfrac></mstyle><mrow><mo>(</mo><msub><mi>𝐱</mi><mi>l</mi></msub><mo>−</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mrow><mo stretchy="false">(</mo><mi>fit</mi><mo stretchy="false">)</mo></mrow></msup><mo>)</mo></mrow><mo>,</mo></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mi>l</mi><mo>,</mo><mi>main</mi></mrow></munder></mstyle><msub><mo lspace="0.167em" rspace="0.167em">∇</mo><mi>l</mi></msub><mi>f</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>R</mi></mrow><mrow><mo rspace="0em">∂</mo><msub><mi>q</mi><mn>3</mn></msub></mrow></mfrac></mstyle><mrow><mo>(</mo><msub><mi>𝐱</mi><mi>l</mi></msub><mo>−</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mrow><mo stretchy="false">(</mo><mi>fit</mi><mo stretchy="false">)</mo></mrow></msup><mo>)</mo></mrow><mo rspace="0.055em">)</mo><mo rspace="0.222em">⋅</mo><mo>(</mo><msub><mo rspace="0.167em">∇</mo><mi>k</mi></msub><msub><mi>q</mi><mn>0</mn></msub><mo>,</mo><msub><mo rspace="0.167em">∇</mo><mi>k</mi></msub><msub><mi>q</mi><mn>1</mn></msub><mo>,</mo><msub><mo rspace="0.167em">∇</mo><mi>k</mi></msub><msub><mi>q</mi><mn>2</mn></msub><mo>,</mo><msub><mo rspace="0.167em">∇</mo><mi>k</mi></msub><msub><mi>q</mi><mn>3</mn></msub><mo>)</mo><mo>−</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>n</mi><mrow><mo stretchy="false">(</mo><mi>fit</mi><mo stretchy="false">)</mo></mrow></msup></mfrac></mstyle><mi>R</mi><msup><mi></mi><mo>⊺</mo></msup><mstyle displaystyle="true"><mo movablelimits="false">∑</mo></mstyle><msub><mi></mi><mrow><mi>l</mi><mo>,</mo><mi>main</mi></mrow></msub><mo lspace="0.167em" rspace="0.167em">∇</mo><msub><mi></mi><mi>l</mi></msub><mi>f</mi></mrow></mtd></mtr></mtable></math>
+<br class="ltx_break"></p>
+</div>
+<div id="SS2.SSS1.p2" class="ltx_para">
+<p class="ltx_p">In the case of a minimum RMSD component, the contributions of those derivatives to the gradients cancel out, so this term is not computed. Other types of variable require projecting each of the gradients of the variable onto each of the gradients of the roto-translation.
+When <a href="#atom-group%7CfittingGroup" title="8th item ‣ Warning on rotating frames of reference and ABF. ‣ 5.2 Moving frame of reference. ‣ 5 Selecting atoms ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref ltx_font_typewriter">fittingGroup</a> is enabled, the computation is a <math id="SS2.SSS1.p2.m1" class="ltx_Math" alttext="O(n^{(\rm fit)}+n^{(\rm main)})" display="inline"><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mrow><mo stretchy="false">(</mo><mi>fit</mi><mo stretchy="false">)</mo></mrow></msup><mo>+</mo><msup><mi>n</mi><mrow><mo stretchy="false">(</mo><mi>main</mi><mo stretchy="false">)</mo></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math> loop – that is, linear in both atom group sizes, for all variables including RMSDs.</p>
+</div>
+</section>
+</section>
+<section id="sec:colvar_atom_groups_wrapping" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.3 </span>Treatment of periodic boundary conditions.</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">In simulations with periodic boundary conditions (PBCs), Colvars computes all distances between two points following the nearest-image convention, using PBC parameters provided by NAMD.
+However, many common variables rely on a consistent definition of the center of mass or geometry of a group of atoms.
+This requires the use of <em class="ltx_emph ltx_font_italic">unwrapped</em> coordinates, which are not subject to “jumps” when they diffuse across periodic boundaries.</p>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<p class="ltx_p">When PBCs are defined, NAMD maintains
+the coordinates of all the atoms within a molecule contiguous to
+each other (i.e. there are no spurious “jumps” in the molecular
+bonds). However, this condition may fail if the group spans
+different molecules. In that case, writing the NAMD output and restart files
+using <span class="ltx_text ltx_font_typewriter">wrapAll</span> or <span class="ltx_text ltx_font_typewriter">wrapWater</span> could produce wrong results
+when a simulation run is continued from a previous one.
+The user should then determine, according to which
+type of colvars are being calculated, whether <span class="ltx_text ltx_font_typewriter">wrapAll</span> or
+<span class="ltx_text ltx_font_typewriter">wrapWater</span> can be enabled while ensuring that the input coordinates for each
+run contain all atom groups in one piece.</p>
+</div>
+<div id="SS3.p3" class="ltx_para">
+<p class="ltx_p">In general, internal coordinate wrapping by NAMD does not affect the calculation of colvars if each atom group satisfies one or more of the following:</p>
+<ol id="I4" class="ltx_enumerate">
+<li id="I4.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">i)</em></span> 
+<div id="I4.ix1.p1" class="ltx_para">
+<p class="ltx_p">it is composed by only one atom;</p>
+</div>
+</li>
+<li id="I4.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">ii)</em></span> 
+<div id="I4.ix2.p1" class="ltx_para">
+<p class="ltx_p">it is used by a colvar component which does not make use of its center of geometry, but only of pairwise distances (<span class="ltx_text ltx_font_typewriter">distanceInv</span>, <span class="ltx_text ltx_font_typewriter">coordNum</span>, <span class="ltx_text ltx_font_typewriter">hBond</span>, <span class="ltx_text ltx_font_typewriter">alpha</span>, <span class="ltx_text ltx_font_typewriter">dihedralPC</span>);</p>
+</div>
+</li>
+<li id="I4.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">iii)</em></span> 
+<div id="I4.ix3.p1" class="ltx_para">
+<p class="ltx_p">it is used by a colvar component that ignores the ill-defined Cartesian components of its center of mass (such as the <math id="I4.ix3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="I4.ix3.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> components of a membrane’s center of mass modeled with <span class="ltx_text ltx_font_typewriter">distanceZ</span>);</p>
+</div>
+</li>
+<li id="I4.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">iv)</em></span> 
+<div id="I4.ix4.p1" class="ltx_para">
+<p class="ltx_p">it has all of its atoms within the same molecular fragment.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="sec:colvar_atom_groups_scaling" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.4 </span>Performance of a Colvars calculation based on group size.</h2>
+
+<div id="SS4.p1" class="ltx_para">
+<p class="ltx_p">In simulations performed with MD simulation engines such as GROMACS, LAMMPS or NAMD, the computation of energy and forces is distributed (i.e., parallelized) over multiple nodes, as well as over the CPU/GPU cores of each node.
+When Colvars is enabled, atomic coordinates are collected on a single CPU core, where collective variables and their biases are computed.
+This means that in the case of simulations that are already being run over large numbers of nodes, or inside a GPU, a Colvars calculation may produce a significant overhead.
+This overhead comes from the combined cost of two operation: transmitting atomic coordinates, and computing functions of the same.
+The latency-tolerant design and dynamic load balancing of NAMD may alleviate both factors, but a noticeable performance impact may be observed.</p>
+</div>
+<div id="SS4.p2" class="ltx_para">
+<p class="ltx_p">Performance can be improved in multiple ways:</p>
+</div>
+<div id="SS4.p3" class="ltx_para">
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">As a general rule, the size of atom groups should be kept relatively small (up to a few thousands of atoms, depending on the size of the entire system in comparison).
+For example, restraining a protein through a RMSD colvar defined over all of its atoms is only marginally different than one defined over only the <math id="I5.i1.p1.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> carbon atoms, but the difference in computational cost is much higher.
+To gain an estimate of the computational cost of a specific Colvars configuration, one may use a test calculation of the same colvar in VMD (hint: use the <span class="ltx_text ltx_font_typewriter">time</span> Tcl command to measure the cost of running <span class="ltx_text ltx_font_typewriter">cv update</span>).</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p">The calculation of variables, components and biases can be distributed over the processor cores of the node where the Colvars module is executed.
+Currently, an equal weight is assigned to each colvar, or to each component of those colvars that include more than one component.
+The performance of simulations that use many colvars or components is improved automatically.
+For simulations that use a single large colvar, it may be advisable to partition it in multiple components, which will be then distributed across the available cores.
+In NAMD, this feature is enabled in all binaries compiled using SMP builds of Charm++ with the CkLoop extension (including “multicore” builds).
+
+
+The messages “SMP parallelism is available” or “SMP parallelism is enabled”, printed by Colvars at initialization time, indicate the availability or status of this feature.
+If available, the option is turned on by default, but may be disabled using the keyword <a href="sec_colvarmodule.html#Colvars-global%7Csmp" title="4th item ‣ 3.5 Global keywords ‣ 3 Enabling and controlling the Colvars module in NAMD ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref ltx_font_typewriter">smp</a> if required for debugging or troubleshooting.</p>
+</div>
+</li>
+<li id="I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I5.i3.p1" class="ltx_para">
+<p class="ltx_p">NAMD also offers a parallelized calculation of the centers of mass of groups of atoms.
+This option is on by default for all components that are simple functions of centers of mass, and is controlled by the keyword <a href="sec_colvar.html#sec:cvc_common" title="4.16 Shared keywords for all components ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for NAMD" class="ltx_ref ltx_font_typewriter">scalable</a>.
+When supported, the message “Will enable scalable calculation for group …” is printed for each group.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="sec_colvar.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Defining collective variables</span></a><a href="bib.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="index"><span class="ltx_text ltx_ref_title">Index</span></a><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for NAMD" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Tue Nov 24 17:52:47 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,1232 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD</title>
+<!--Generated on Tue Nov 24 17:53:19 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on Code version: 2026‐11‐24.-->
+
+<link rel="shortcut icon" href="logo/colvars-logo-compact.svg" type="image/svg+xml">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="latexml/colvars-refman.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/mml-chtml.js"></script>
+<link rel="up" href="./" title="Collective Variables Module Reference manual for VMD">
+<link rel="start" href="./" title="Collective Variables Module Reference manual for VMD">
+<link rel="prev" href="sec_dashboard.html" title="3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD">
+<link rel="next" href="sec_colvar.html" title="5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvars_crash_course.html" title="2 Writing a Colvars configuration: a crash course ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_dashboard.html" title="3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvar.html" title="5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvar_atom_groups.html" title="6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvarbias.html" title="7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_cvscript_cmdline.html" title="8 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_colvars_config_changes.html" title="9 Syntax changes from older versions ‣ Collective Variables Module Reference manual for VMD">
+<link rel="section" href="sec_compilation_notes.html" title="10 Compilation notes ‣ Collective Variables Module Reference manual for VMD">
+<link rel="index" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for VMD">
+<link rel="bibliography" href="bib.html" title="References ‣ Collective Variables Module Reference manual for VMD">
+<meta name="keywords" lang="en" content=", , , , , , global">
+</head>
+<body>
+<nav class="ltx_page_navbar"><a href="./" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for VMD</span></a>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_dashboard.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Colvars dashboard</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Enabling and controlling the Colvars module in VMD</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:units" title="In 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.1 </span>Units in the Colvars module</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="#sec:cv_scripting" title="In 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2 </span>Using the scripting interface to control the Colvars module</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:cv_command_init" title="In 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.1 </span>Setting up the Colvars module</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:cv_command_version" title="In 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.2 </span>Using the Colvars version in scripts</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:cv_command_loadsave" title="In 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.3 </span>Loading and saving the Colvars state and other information</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:cv_command_atomic_data" title="In 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.4 </span>Accessing atomic data</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:cv_command_vmd_traj" title="In 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.5 </span>Analyzing a trajectory in VMD</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:cv_command_colvar" title="In 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.6 </span>Managing collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:cv_command_colvar_force" title="In 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.7 </span>Applying and analyzing forces on collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:cv_command_bias" title="In 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.8 </span>Managing collective variable biases</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:cv_command_bias_loadsave" title="In 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.9 </span>Loading and saving the state of individual biases</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:colvars_config_syntax" title="In 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3 </span>Configuration syntax used by the Colvars module</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:colvars_global" title="In 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.4 </span>Global keywords</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="#sec:colvars_input" title="In 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.5 </span>Input state file</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:change_config_restart" title="In 4.5 Input state file ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.5.1 </span>Changing configuration upon restarting.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sec:colvars_output" title="In 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.6 </span>Output files</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="#sec:colvars_file_formats" title="In 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7 </span>File formats</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:colvars_text_format" title="In 4.7 File formats ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.1 </span>Configuration and state files.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:colvars_ndx_format" title="In 4.7 File formats ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.2 </span>Index (NDX) files</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:colvars_xyz_format" title="In 4.7 File formats ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.3 </span>XYZ coordinate files</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:colvars_pdb_format" title="In 4.7 File formats ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.4 </span>PDB coordinate files</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:colvar_multicolumn_grid" title="In 4.7 File formats ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.5 </span>Grid files: multicolumn text format</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#sec:colvars_traj_format" title="In 4.7 File formats ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.6 </span>Output trajectory files</span></a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Defining collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar_atom_groups.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Selecting atoms</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Biasing and analysis methods</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_cvscript_cmdline.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Tcl command-line interface: list of commands</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9 </span>Syntax changes from older versions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Compilation notes</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_index"><a href="idx.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">Index</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="bib.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="./" title="" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for VMD</span></a><a href="sec_dashboard.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Colvars dashboard</span></a><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Defining collective variables</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Enabling and controlling the Colvars module in VMD</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Here, we document the syntax of the commands and parameters used to set up and use the Colvars module in VMD.
+One of these parameters is the configuration file or the configuration text for the module itself, whose syntax is described in <a href="#sec:colvars_config_syntax" title="4.3 Configuration syntax used by the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.3</span></a> and in the following sections.</p>
+</div>
+<section id="sec:units" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.1 </span>Units in the Colvars module</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">The “internal units” of the Colvars module are the units in which values are expressed in the configuration file, and in which collective variable values, energies, etc. are expressed in the output and colvars trajectory files.
+Generally <span class="ltx_text ltx_font_bold">the Colvars module uses internally the same units as its back-end MD engine, with the exception of VMD</span>, where different unit sets are supported to allow for easy setup, visualization and analysis of Colvars simulations performed with any simulation engine.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">Note that <span class="ltx_text ltx_font_bold">angles</span> are expressed in degrees, and derived quantities such as force constants are based on degrees as well.
+Some colvar components have default values, expressed in Ångström (Å) in this documentation. They are converted to the current length unit, if different from Å.
+Atomic coordinates read from <span class="ltx_text ltx_font_bold">XYZ files</span> (and PDB files where applicable) are expected to be expressed in Ångström, no matter what unit system is in use by the back-end (VMD) or the Colvars Module. They are converted internally to the current length unit as needed.
+Note that force constants in <span class="ltx_text ltx_font_typewriter">harmonic</span> and <span class="ltx_text ltx_font_typewriter">harmonicWalls</span> biases (<a href="sec_colvarbias.html#sec:colvarbias_harmonic" title="7.8 Harmonic restraints ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.8</span></a>) are rescaled according to the <a href="sec_colvar.html#colvar%7Cwidth" title="3rd item ‣ 5.21 Defining grid parameters for a colvar ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">width</a> parameter of colvars, so that they are formally in energy units, although if <a href="sec_colvar.html#colvar%7Cwidth" title="3rd item ‣ 5.21 Defining grid parameters for a colvar ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">width</a> is given its default value of 1.0, force constants are effectively expressed in <span class="ltx_text ltx_font_italic">energy unit</span>/<span class="ltx_text ltx_font_italic">(colvar unit)<sup class="ltx_sup"><span class="ltx_text ltx_font_upright">2</span></sup></span>.</p>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">To avoid errors due to reading configuration files written in a different unit system, it can be specified within the input:</p>
+</div>
+<div id="SS1.p4" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">units</span> — <em class="ltx_emph ltx_font_italic">Unit system to be used</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ string, context: global ]</span></p>
+</div>
+<div id="I1.i1.p2" class="ltx_para">
+<p class="ltx_p">A string defining the units to be used internally by Colvars.
+Supported values are: <span class="ltx_text ltx_font_italic">real</span> (Å, kcal/mol), <span class="ltx_text ltx_font_italic">gromacs</span> (nm, kJ/mol), <span class="ltx_text ltx_font_italic">metal</span> (Å, eV), and <span class="ltx_text ltx_font_italic">electron</span> (Bohr, Hartree).
+In VMD, the default system of units for Colvars is VMD’s native units: <span class="ltx_text ltx_font_italic">real</span> (Å, kcal/mol).
+However, the <span class="ltx_text ltx_font_typewriter">units</span> keyword will switch to a different unit system than the
+current one if no colvars were defined before reading the current configuration.
+If colvars are already defined, <span class="ltx_text ltx_font_typewriter">units</span> will refuse changing the unit system to avoid making the definition of those variables erroneous in the new system of units.
+If needed this precaution can be overridden using the <span class="ltx_text ltx_font_typewriter">cv units</span> scripting command
+(<a href="#sec:cv_scripting" title="4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2</span></a>).</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="sec:cv_scripting" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.2 </span>Using the scripting interface to control the Colvars module</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">After the first initialization of the Colvars module, the internal state of Colvars objects may be queried or modified in a VMD script:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv &lt;<em class="ltx_emph ltx_font_italic">method</em>&gt; arg1 arg2 ...
+</pre>
+
+where <math id="SS2.p1.m1" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math><em class="ltx_emph ltx_font_typewriter ltx_font_italic">method</em><math id="SS2.p1.m2" class="ltx_Math" alttext="&gt;" display="inline"><mo>&gt;</mo></math> is the name of a specific procedure and <span class="ltx_text ltx_font_typewriter">arg1</span>, <span class="ltx_text ltx_font_typewriter">arg2</span>, …are its required and/or optional arguments.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">In VMD, the <span class="ltx_text ltx_font_typewriter">cv</span> command is used by the Dashboard graphical interface,(<a href="sec_dashboard.html" title="3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>), but can be also used in scripts or interactively from the command-line terminal (for example, in remote terminal sessions) or in the Tk Console.</p>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">In the remainder of this section, the most frequently used commands of the Colvars scripting interface are discussed and exemplified.
+For a full list of scripting commands available, see section <a href="sec_cvscript_cmdline.html" title="8 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>.
+
+<br class="ltx_break"></p>
+</div>
+<section id="sec:cv_command_init" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.1 </span>Setting up the Colvars module</h3>
+
+<div id="SS2.SSS1.p1" class="ltx_para">
+<p class="ltx_p">The first step to using Colvars in VMD is choosing which “molecule” (i.e. which system): because VMD can handle multiple “molecules”, the Colvars module needs to remain attached to a specific VMD molecule. For example:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv molid "top"
+</pre>
+
+will attach the Colvars module onto the molecule currently holding the “top” status (alternatively, you can refer to a molecule by its numeric ID in lieu of <span class="ltx_text ltx_font_typewriter">top</span>).
+All following invocations of the <span class="ltx_text ltx_font_typewriter">cv</span> command will continue operating on the same molecule, regardless of whether other molecules are loaded, or which one has the “top” status.
+The <span class="ltx_text ltx_font_typewriter">cv molid</span> command without argument will return the molid currently associated with Colvars.</p>
+</div>
+<div id="SS2.SSS1.p2" class="ltx_para">
+<p class="ltx_p">To define new collective variables and/or biases for immediate use in the current session, configuration can be loaded from an external configuration file:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv configfile "colvars-file.in"
+</pre>
+
+This can in principle be called at any time, if only flags internal to Colvars are being modified.
+In practice, when new atoms or any new atomic properties (e.g. total forces) are being requested, initialization steps will be required that are not carried out during a simulation.
+Therefore, it is generally good practice in a simulation to change the Colvars configuration outside the scope between segments of the same computation.
+However, in VMD initialization is always immediate, allowing interactive usage by Tcl scripts or the Dashboard.
+</p>
+</div>
+<div id="SS2.SSS1.p3" class="ltx_para">
+<p class="ltx_p">To load the configuration directly from a string the “<span class="ltx_text ltx_font_typewriter">config</span>” method may be used:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv config "keyword { ... }"
+</pre>
+
+</p>
+</div>
+</section>
+<section id="sec:cv_command_version" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.2 </span>Using the Colvars version in scripts</h3>
+
+<div id="SS2.SSS2.p1" class="ltx_para">
+<p class="ltx_p">The vast majority of the syntax in Colvars is backward-compatible, adding keywords when new features are introduced.
+However, when using multiple versions simultaneously it may be useful to test within the script whether the version is recent enough to support the desired feature.
+The “<span class="ltx_text ltx_font_typewriter">version</span>” can be used to get the Colvars version for this use:
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+if { [cv version] &gt;= "2020-02-25" } {
+  cv config "(use a recent feature)"
+}
+</pre></p>
+</div>
+</section>
+<section id="sec:cv_command_loadsave" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.3 </span>Loading and saving the Colvars state and other information</h3>
+
+<div id="SS2.SSS3.p1" class="ltx_para">
+<p class="ltx_p">After a configuration is fully defined, the “<span class="ltx_text ltx_font_typewriter">load</span>” method may be used to load a state file from a previous simulation that contains e.g. data from history-dependent biases), to either continue that simulation or analyze its results:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv load "&lt;oldjob&gt;.colvars.state"
+</pre>
+
+or more simply using the prefix of the state file itself:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv load "&lt;oldjob&gt;"
+</pre>
+
+Anything following the “<span class="ltx_text ltx_font_typewriter">.colvars.state</span>” suffix will be stripped.</p>
+</div>
+<div id="SS2.SSS3.p2" class="ltx_para">
+<p class="ltx_p">The “<span class="ltx_text ltx_font_typewriter">save</span>” method, analogous to “<span class="ltx_text ltx_font_typewriter">load</span>”, allows to save all restart information to a state file.
+This is normally not required during a simulation if <a href="#Colvars-global%7CcolvarsRestartFrequency" title="2nd item ‣ 4.4 Global keywords ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">colvarsRestartFrequency</a> is defined (either directly or indirectly by the VMD restart frequency).
+Because not only a state file (used to continue simulations) but also other data files (used to analyze the trajectory) are written, it is generally recommended to call the <span class="ltx_text ltx_font_typewriter">save</span> method using a prefix, rather than a complete file name:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv save "&lt;job&gt;"
+</pre>
+
+</p>
+</div>
+</section>
+<section id="sec:cv_command_atomic_data" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.4 </span>Accessing atomic data</h3>
+
+<div id="SS2.SSS4.p1" class="ltx_para">
+<p class="ltx_p">For computational efficiency the Colvars module keeps internal copies of the numeric IDs, masses, charges, positions, and optionally total forces of the atoms requested for a Colvars computation.
+At each simulation step, up-to-date versions of these properties are copied from the central memory of VMD into the internal memory of the Colvars module.
+In a post-processing workflow or outside a simulation (e.g. when using VMD), this copy can be carried out as part of the <span class="ltx_text ltx_font_typewriter">update</span> method:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv update  
+</pre>
+
+which also performs the (re-)computation of all variables and biases defined in Colvars.
+</p>
+</div>
+<div id="SS2.SSS4.p2" class="ltx_para">
+<p class="ltx_p">For example, the current sequence of numeric IDs of the atoms processed by Colvars can be obtained as:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv getatomids  
+</pre>
+
+and their current positions as:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv getatompositions  
+</pre>
+
+This may prove useful to test the correctness of the coordinates passed to Colvars, particularly in regard to periodic boundary conditions (<a href="sec_colvar_atom_groups.html#sec:colvar_atom_groups_wrapping" title="6.3 Treatment of periodic boundary conditions. ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.3</span></a>).
+There is currently no mechanism to modify the above fields via the scripting interface, but such capability will be added in the future.</p>
+</div>
+<div id="SS2.SSS4.p3" class="ltx_para">
+<p class="ltx_p">While running a simulation, or when setting one up in VMD, it is possible to examine all the forces that were last applied by Colvars to the atoms, or are about to be applied:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv getatomappliedforces  
+</pre>
+
+where the length and order of this sequence matches that provided by the <span class="ltx_text ltx_font_typewriter">getatomids</span> method.
+A simpler way of testing the stability of a Colvars configuration before or during a simulation makes use of aggregated data, such as the energy:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv getenergy  
+</pre>
+
+the root-mean-square of the Colvars applied forces:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv getatomappliedforcesrms  
+</pre>
+
+or the maximum norm of the applied forces:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv getatomappliedforcesmax  
+</pre>
+
+which can be matched to a specific atom via its numeric ID obtained as:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv getatomappliedforcesmaxid  
+</pre>
+
+</p>
+</div>
+<div id="SS2.SSS4.p4" class="ltx_para">
+<p class="ltx_p">See <a href="sec_cvscript_cmdline.html#sec:cvscript_cmdline_cv" title="8.1 Commands to manage the Colvars module ‣ 8 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.1</span></a> for a complete list of scripting commands used to manage atomic data and runtime parameters of the Colvars module.</p>
+</div>
+</section>
+<section id="sec:cv_command_vmd_traj" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.5 </span>Analyzing a trajectory in VMD</h3>
+
+<div id="SS2.SSS5.p1" class="ltx_para">
+<p class="ltx_p">One of the typical uses of Colvars in VMD is computing the values of one or more variables along an existing trajectory.
+This is most easily done using the Dashboard (section <a href="sec_dashboard.html" title="3 The Colvars dashboard ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>), but can also be done by a script, as in the example below:</p>
+</div>
+<div id="SS2.SSS5.p2" class="ltx_para">
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+<span class="ltx_text ltx_font_serif ltx_font_bold"># Activate the module on the current VMD molecule</span>
+cv molid top
+<span class="ltx_text ltx_font_serif ltx_font_bold"># Load a Colvars config file</span>
+cv configfile test.in
+set out [open "test.colvars.traj" "w"]
+<span class="ltx_text ltx_font_serif ltx_font_bold"># Write the labels to the file</span>
+puts -nonewline ${out} [cv printframelabels]
+for { set fr 0 } { ${fr} &lt; [molinfo top get numframes] } { incr fr } {
+  <span class="ltx_text ltx_font_serif ltx_font_bold"># Point Colvars to this trajectory frame</span>
+  cv frame ${fr}
+  <span class="ltx_text ltx_font_serif ltx_font_bold"># Recompute variables and biases (required in VMD)</span>
+  cv update
+  <span class="ltx_text ltx_font_serif ltx_font_bold"># Print variables and biases to the file</span>
+  puts -nonewline ${out} [cv printframe]
+}
+close ${out}
+</pre>
+</div>
+</section>
+<section id="sec:cv_command_colvar" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.6 </span>Managing collective variables</h3>
+
+<div id="SS2.SSS6.p1" class="ltx_para">
+<p class="ltx_p">After one or more collective variables are defined, they can be accessed with the following syntax.
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv colvar "&lt;name&gt;" &lt;<em class="ltx_emph ltx_font_italic">method</em>&gt; arg1 arg2 ...
+</pre>
+
+where “<math id="SS2.SSS6.p1.m1" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math><span class="ltx_text ltx_font_typewriter">name<math id="SS2.SSS6.p1.m2" class="ltx_Math" alttext="&gt;" display="inline"><mo>&gt;</mo></math></span>” is the name of the variable.</p>
+</div>
+<div id="SS2.SSS6.p2" class="ltx_para">
+<p class="ltx_p">For example, to recompute the collective variable “<span class="ltx_text ltx_font_typewriter">xi</span>” after a change in its parameters, the following command can be used:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv colvar "xi" update 
+</pre>
+
+This ordinarily is not needed during a simulation run, where all variables are recomputed at every step (along with biasing forces acting on them).
+However, when analyzing an existing trajectory, e.g. in VMD, a call to <span class="ltx_text ltx_font_typewriter">update</span> is generally required.</p>
+</div>
+<div id="SS2.SSS6.p3" class="ltx_para">
+<p class="ltx_p">While in all typical cases all configuration of the variables is done with the “<span class="ltx_text ltx_font_typewriter">config</span>” or “<span class="ltx_text ltx_font_typewriter">configfile</span>” methods, a limited set of changes can be enacted at runtime using:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv colvar "&lt;name&gt;" modifycvcs arg1 arg2 ...
+</pre>
+
+where each argument is a string passed to the function or functions that are used to compute the variable, and are called colvar components, or CVCs (<a href="sec_colvar.html#sec:cvc_list" title="5.1 Choosing a function ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a>).
+For example, a variable “<span class="ltx_text ltx_font_typewriter">DeltaZ</span>” made of a single “<span class="ltx_text ltx_font_typewriter">distanceZ</span>” component can be made periodic with a period equal to the unit cell dimension along the <math id="SS2.SSS6.p3.m1" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math>-axis:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv colvar "DeltaZ" modifycvcs "period ${Lz}"
+</pre>
+
+Please note that this option is currently limited to changing the values of the polynomial superposition parameters <a href="sec_colvar.html#sec:cvc_superp" title="5.18 Linear and polynomial combinations of components ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">componentCoeff</a>, or of the <a href="sec_colvar.html#sec:cvc_superp" title="5.18 Linear and polynomial combinations of components ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">componentExp</a> to update on the fly, of <a href="sec_colvar.html#sec:cvc_periodic" title="5.16 Periodic components ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">period</a>, <a href="sec_colvar.html#sec:cvc_periodic" title="5.16 Periodic components ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">wrapAround</a> or <a href="sec_colvar.html#colvar%7Ccvc%7CforceNoPBC" title="1st item ‣ 5.2 Treatment of periodic boundary conditions ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">forceNoPBC</a> options for components where it is relevant.</p>
+</div>
+<div id="SS2.SSS6.p4" class="ltx_para">
+<p class="ltx_p">If the variable is computed using many components, it is possible to selectively turn some of them on or off:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv colvar "&lt;name&gt;" cvcflags &lt;flags&gt;
+</pre>
+
+where “<math id="SS2.SSS6.p4.m1" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math><span class="ltx_text ltx_font_typewriter">flags<math id="SS2.SSS6.p4.m2" class="ltx_Math" alttext="&gt;" display="inline"><mo>&gt;</mo></math></span>” is a list of 0/1 values, one per component.
+This is useful for example when script-based path collective variables in Cartesian coordinates (<a href="sec_colvar.html#sec:apath_scripted" title="5.11.3 Path collective variables in Cartesian coordinates ‣ 5.11 Arithmetic path collective variables ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.11.3</span></a>) are used, to minimize computational cost by disabling the computation of terms that are very close to zero.</p>
+</div>
+<div id="SS2.SSS6.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Important:</span> None of the changes enacted by the “<span class="ltx_text ltx_font_typewriter">modifycvcs</span>” or “<span class="ltx_text ltx_font_typewriter">cvcflags</span>” methods will be saved to state files, and will be lost when restarting a simulation, deleting the corresponding collective variable, or resetting the module with the “<span class="ltx_text ltx_font_typewriter">delete</span>” or “<span class="ltx_text ltx_font_typewriter">reset</span>” methods.</p>
+</div>
+</section>
+<section id="sec:cv_command_colvar_force" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.7 </span>Applying and analyzing forces on collective variables</h3>
+
+<div id="SS2.SSS7.p1" class="ltx_para">
+<p class="ltx_p">As soon as a colvar “<span class="ltx_text ltx_font_typewriter">xi</span>” and its associated biasing potentials are up to date (i.e. during a MD run, or after the respective “<span class="ltx_text ltx_font_typewriter">update</span>” methods have been called), the force applied onto the colvar is known and may be accessed through the <span class="ltx_text ltx_font_typewriter">getappliedforce</span> method:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv colvar "xi" getappliedforce 
+</pre>
+
+See also the use of the <a href="sec_colvar.html#colvar%7CoutputAppliedForce" title="5th item ‣ 5.22 Trajectory output ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">outputAppliedForce</a> option to have this force be saved to file during a simulation.</p>
+</div>
+<div id="SS2.SSS7.p2" class="ltx_para">
+<p class="ltx_p">Aside from the biasing methods already implemented within Colvars (<a href="sec_colvarbias.html" title="7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>) this force may be incremented <em class="ltx_emph ltx_font_italic">ad hoc</em>, for example as part of a custom restraint implemented by <a href="sec_colvarbias.html#Colvars-global%7CscriptedColvarForces" title="1st item ‣ 7.15 Defining scripted biases ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">scriptedColvarForces</a>:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv colvar "xi" addforce &lt;force&gt;
+</pre>
+
+where “<math id="SS2.SSS7.p2.m1" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math><span class="ltx_text ltx_font_typewriter">force<math id="SS2.SSS7.p2.m2" class="ltx_Math" alttext="&gt;" display="inline"><mo>&gt;</mo></math></span>” is a scalar or a vector (depending on the type of variable “<span class="ltx_text ltx_font_typewriter">xi</span>”).
+
+
+Note that in VMD, any forces applied via <span class="ltx_text ltx_font_typewriter">addforce</span> do not have any effect on the movement of atoms: this feature is only available for compatibility.</p>
+</div>
+<div id="SS2.SSS7.p3" class="ltx_para">
+<p class="ltx_p">For certain types of variable, the force applied directly on a colvar may be combined with those acting <em class="ltx_emph ltx_font_italic">indirectly</em> on it via the interatomic force field, making up the <em class="ltx_emph ltx_font_italic">total force</em>.
+When the <a href="sec_colvar.html#colvar%7CoutputTotalForce" title="4th item ‣ 5.22 Trajectory output ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">outputTotalForce</a> keyword is enabled, or when a biasing method that makes explicit use of the total force is enabled, the total force may be obtained as:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv colvar "xi" gettotalforce 
+</pre>
+
+Note that not all types of variable support total-force computation, and the value of the total force may not be available immediately within the same simulation step: see the documentation of <a href="sec_colvar.html#colvar%7CoutputTotalForce" title="4th item ‣ 5.22 Trajectory output ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">outputTotalForce</a> for more details.</p>
+</div>
+<div id="SS2.SSS7.p4" class="ltx_para">
+<p class="ltx_p">See <a href="sec_cvscript_cmdline.html#sec:cvscript_cmdline_colvar" title="8.2 Commands to manage individual collective variables ‣ 8 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.2</span></a> for a complete list of scripting commands used to manage collective variables.</p>
+</div>
+</section>
+<section id="sec:cv_command_bias" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.8 </span>Managing collective variable biases</h3>
+
+<div id="SS2.SSS8.p1" class="ltx_para">
+<p class="ltx_p">Because biases depend only upon data internal to the Colvars module (i.e. they do not need atomic coordinates from VMD), it is generally easy to create them or update their configuration at any time.
+For example, given the most current value of the variable “<span class="ltx_text ltx_font_typewriter">xi</span>”, an already-defined harmonic restraint on it named “<span class="ltx_text ltx_font_typewriter">h_xi</span>” can be updated as:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv bias "h_xi" update 
+</pre>
+
+During a running simulation this step is not needed, because an automatic update of each bias is already carried out.</p>
+</div>
+</section>
+<section id="sec:cv_command_bias_loadsave" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.2.9 </span>Loading and saving the state of individual biases</h3>
+
+<div id="SS2.SSS9.p1" class="ltx_para">
+<p class="ltx_p">Some types of bias are history-dependent, and the magnitude of their forces depends not only on the values of their corresponding variables, but also on previous simulation history.
+It is thus useful to load information from a state file that contains information specifically for one bias only, for example:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv bias "metadynamics1" load "old.colvars.state"
+</pre>
+
+or alternatively, using the prefix of the file instead of its full name:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv bias "metadynamics1" load "old"
+</pre>
+
+A corresponding “<span class="ltx_text ltx_font_typewriter">save</span>” function is also available:
+
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+cv bias "metadynamics1" save "new"
+</pre>
+
+Please note that the file above must contain only the state information for that particular bias: <em class="ltx_emph ltx_font_italic">loading a state file for the whole module is not allowed.</em></p>
+</div>
+<div id="SS2.SSS9.p2" class="ltx_para">
+<p class="ltx_p">This pair of functions is also used internally by Colvars to implement e.g. multiple-walker metadynamics (<a href="sec_colvarbias.html#sec:colvarbias_meta_mr" title="7.6.7 Multiple-walker metadynamics ‣ 7.6 Metadynamics ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.6.7</span></a>), but they can be called from a scripted function to implement alternative coupling schemes.</p>
+</div>
+<div id="SS2.SSS9.p3" class="ltx_para">
+<p class="ltx_p">See <a href="sec_cvscript_cmdline.html#sec:cvscript_cmdline_bias" title="8.3 Commands to manage individual biases ‣ 8 Tcl command-line interface: list of commands ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.3</span></a> for a complete list of scripting commands used to manage biases.</p>
+</div>
+</section>
+</section>
+<section id="sec:colvars_config_syntax" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.3 </span>Configuration syntax used by the Colvars module</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">Configuration for the Colvars module is passed using an external file, or inlined as a string in a VMD script using the Tcl command <span class="ltx_text ltx_font_typewriter">cv config "..."</span>.
+Configuration lines follow the format “<span class="ltx_text ltx_font_typewriter">keyword value</span>” or “<span class="ltx_text ltx_font_typewriter">keyword { ... }</span>”, where the keyword and its value must be separated by one or more space characters.
+The following formatting rules apply:</p>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Keywords are case-insensitive</em>; for example, <span class="ltx_text ltx_font_typewriter">upperBoundary</span> is the same as <span class="ltx_text ltx_font_typewriter">upperboundary</span> and <span class="ltx_text ltx_font_typewriter">UPPERBOUNDARY</span>); note that their string values are however still case-sensitive (e.g. names of variables, file names).</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">A long value, or a list of multiple values, can be distributed across multiple lines by using <em class="ltx_emph ltx_font_italic">curly braces</em>, “<span class="ltx_text ltx_font_typewriter">{</span>” and “<span class="ltx_text ltx_font_typewriter">}</span>”: the opening brace “<span class="ltx_text ltx_font_typewriter">{</span>” must occur on the same line as the keyword, following at least one space character; the closing brace “<span class="ltx_text ltx_font_typewriter">}</span>” may be at any position after that; any keywords following the closing brace on the same line are not valid (they should appear instead on a different line).</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Many keywords are nested, and are only meaningful within the specific context of another keyword; for example, the keyword <span class="ltx_text ltx_font_typewriter">name</span> is available inside the block of the keyword <span class="ltx_text ltx_font_typewriter">colvar {...}</span>, but not outside of it; for every keyword documented in the following, the <em class="ltx_emph ltx_font_italic">“parent” keyword</em> that defines such context is also indicated.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">If a keyword requiring a boolean value (<span class="ltx_text ltx_font_typewriter">yes|on|true</span> or <span class="ltx_text ltx_font_typewriter">no|off|false</span>) is provided without an explicit value, it defaults to ‘<span class="ltx_text ltx_font_typewriter">yes|on|true</span>’; for example, ‘<span class="ltx_text ltx_font_typewriter">outputAppliedForce</span>’ may be used as shorthand for ‘<span class="ltx_text ltx_font_typewriter">outputAppliedForce on</span>’.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">The hash character “<span class="ltx_text ltx_font_typewriter">#</span>” indicates a <em class="ltx_emph ltx_font_italic">comment</em>: all text in the same line following this character will be ignored.</p>
+</div>
+</li>
+<li id="I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i6.p1" class="ltx_para">
+<p class="ltx_p">Outside of comments, <em class="ltx_emph ltx_font_italic">only ASCII characters</em> are allowed for defining keywords, and the only white-space characters supported are spaces, tabs and newlines: a warning will be printed upon detection of non-ASCII characters in a configuration line, which include both characters that are visibly “special”, as well as those with a very similar appearance to ASCII ones (for instance, <a href="https://en.wikipedia.org/wiki/Non-breaking_space" title="" class="ltx_ref ltx_href">non-breaking spaces</a>); common ways to identify/remove non-ASCII characters are using the Emacs text editor, or using <span class="ltx_text ltx_font_typewriter">LC_ALL=C vi</span>.</p>
+</div>
+</li>
+<li id="I2.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i7.p1" class="ltx_para">
+<p class="ltx_p">Tcl syntax is generally not available inside a Colvars configuration file/string, but it is possible to use Tcl variables or bracket expansion of commands when configuration is passed via the command <span class="ltx_text ltx_font_typewriter">cv config "..."</span>;  for example, it is possible to convert the atom selection $<em class="ltx_emph ltx_font_italic">sel</em> into an atom group (see <a href="sec_colvar_atom_groups.html#sec:colvar_atom_groups_sel" title="6.1 Atom selection keywords ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.1</span></a>) using <span class="ltx_text ltx_font_typewriter">cv config "atomNumbers { [$sel get serial] }"</span>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="sec:colvars_global" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.4 </span>Global keywords</h2>
+
+<div id="SS4.p1" class="ltx_para">
+<p class="ltx_p">The following keywords are available in the global context of the Colvars configuration, i.e. they are not nested inside other keywords:</p>
+<ul id="I3" class="ltx_itemize">
+<li id="Colvars-global|colvarsTrajFrequency" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">colvarsTrajFrequency</span> — <em class="ltx_emph ltx_font_italic">Colvar value trajectory frequency</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">Default: 100 [ positive integer, context: global ]</span></p>
+</div>
+<div id="I3.i1.p2" class="ltx_para">
+<p class="ltx_p">The values of each colvar (and of other related quantities, if requested) are written to the file <em class="ltx_emph ltx_font_italic">outputName</em><span class="ltx_text ltx_font_typewriter">.colvars.traj</span> every these many steps throughout the simulation.
+If the value is 0, such trajectory file is not written.
+For optimization the output is buffered, and synchronized with the disk only when the restart file is being written.</p>
+</div>
+</li>
+<li id="Colvars-global|colvarsRestartFrequency" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">colvarsRestartFrequency</span> — <em class="ltx_emph ltx_font_italic">Colvar module restart frequency</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">Default: 0 [ positive integer, context: global ]</span></p>
+</div>
+<div id="I3.i2.p2" class="ltx_para">
+<p class="ltx_p">When this value is non-zero, a state file suitable for restarting will be written every these many steps.
+Additionally, any other output files produced by Colvars are written as well (except the trajectory file, which is written every <a href="#Colvars-global%7CcolvarsTrajFrequency" title="1st item ‣ 4.4 Global keywords ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">colvarsTrajFrequency</a> steps).
+In VMD, the simulation step is not progressed and this parameter is effectively ignored.
+It is generally a good idea to leave this parameter at its default value, unless needed for special cases or to disable automatic writing of output files altogether.
+
+If neeed, writing of all output files can still be triggered at any time via the <span class="ltx_text ltx_font_typewriter">save</span> scripting function.</p>
+</div>
+</li>
+<li id="Colvars-global|indexFile" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">indexFile</span> — <em class="ltx_emph ltx_font_italic">Index file for atom selection (GROMACS “ndx” format)</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ UNIX filename, context: global ]</span></p>
+</div>
+<div id="I3.i3.p2" class="ltx_para">
+<p class="ltx_p">This option reads an index file (usually with a <span class="ltx_text ltx_font_typewriter">.ndx</span>
+extension) as produced by the <span class="ltx_text ltx_font_typewriter">make_ndx</span> tool of GROMACS.
+This keyword may be repeated to load multiple index files.
+A group with the same name may appear multiple times, as long as it contains the same indices in identical order each time: an error is raised otherwise.
+
+The names of index groups contained in this file can then be used to define
+atom groups with the <span class="ltx_text ltx_font_typewriter">indexGroup</span> keyword.
+Other supported methods to select atoms are described in <a href="sec_colvar_atom_groups.html" title="6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>.</p>
+</div>
+</li>
+<li id="Colvars-global|smp" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">smp</span> — <em class="ltx_emph ltx_font_italic">Whether SMP parallelism should be used</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">Default: <span class="ltx_text ltx_font_typewriter">on</span> [ boolean, context: global ]</span></p>
+</div>
+<div id="I3.i4.p2" class="ltx_para">
+<p class="ltx_p">If this flag is enabled (default), SMP parallelism over threads will be used to compute variables and biases, provided that this is supported by the VMD build in use.</p>
+</div>
+</li>
+<li id="Colvars-global|sourceTclFile" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text cv_keyword ltx_font_typewriter">sourceTclFile</span> — <em class="ltx_emph ltx_font_italic">Tcl file to be sourced at startup</em>
+<br class="ltx_break"><span class="ltx_text cv_keymeta">[ UNIX filename, context: global ]</span></p>
+</div>
+<div id="I3.i5.p2" class="ltx_para">
+<p class="ltx_p">This option causes the provided Tcl script file to be loaded at startup, e.g. to initialize the Tcl callback procedures for scripted variables or biases.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="sec:colvars_input" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.5 </span>Input state file</h2>
+
+<div id="SS5.p1" class="ltx_para">
+<p class="ltx_p">Several of the sampling methods implemented in Colvars are time- or history-dependent, i.e. they work by accumulating data as a simulation progresses, and use these data to determine their biasing forces. If the simulation engine uses a checkpoint or restart file (as GROMACS and LAMMPS do), any data needed by Colvars are embedded into that file. Otherwise, a dedicated <em class="ltx_emph ltx_font_italic">state file</em> can be loaded into Colvars directly.</p>
+</div>
+<div id="SS5.p2" class="ltx_para">
+<p class="ltx_p">When a dedicated Colvars state file is used, it may be in either one of two formats:</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Formatted, i.e. <em class="ltx_emph ltx_font_italic">“text”</em> format, which takes more space and is slower to to load/save but is also portable across different platforms and even different simulation engines (save for changes in physical units). This format is used by default, unless explicitly requested otherwise.</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">Unformatted, i.e. <em class="ltx_emph ltx_font_italic">“binary”</em> format, which is both space-efficient and quick to load/save, but requires that the same VMD build was used to write the file and that the Colvars configuration remains the same. This format is supported by Colvars versions starting 2023-09-25.
+Colvars state files can be written in binary format by setting the environment variable “<span class="ltx_text ltx_font_typewriter">COLVARS_BINARY_RESTART</span>” to 1.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="SS5.p3" class="ltx_para">
+<p class="ltx_p">In either format, the state file contains accumulated data as well as the step number at the end of the run.
+The step number read from a state file overrides any value that VMD provides, and will be incremented if the simulation proceeds.
+This means that the step number used internally by Colvars may not always match the step number reported by VMD.</p>
+</div>
+<section id="sec:change_config_restart" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.5.1 </span>Changing configuration upon restarting.</h3>
+
+<div id="SS5.SSS1.p1" class="ltx_para">
+<p class="ltx_p">In some cases, it is useful to modify the configuration of variables or biases between consecutive runs, for example by adding or removing a restraint.
+Some special provisions will happen in that case.
+When a state file is loaded, no information is available about any newly added variable or bias, which will thus remain uninitialized until the first compute step.
+Conversely, any information that the state file may contain about variables or biases that are no longer defined will be silently ignored.
+Please note that these checks are performed based only on the <em class="ltx_emph ltx_font_italic">names</em> of variables and biases: it is your responsibility to ensure that these names have <em class="ltx_emph ltx_font_italic">consistent definitions between runs.</em></p>
+</div>
+<div id="SS5.SSS1.p2" class="ltx_para">
+<p class="ltx_p">The flexibility just described carries some limitations: namely, it is only supported when reading <em class="ltx_emph ltx_font_italic">text-format</em> Colvars state files.
+Instead, restarting from binary files after a configuration change will trigger an error.
+It is also important to remind that when switching to a different build of VMD, the binary format may change slightly, even if the release version is the same.</p>
+</div>
+<div id="SS5.SSS1.p3" class="ltx_para">
+<p class="ltx_p">To work around the potential issues just described, a text-format Colvars state file should be loaded.
+This is the default in VMD unless the “<span class="ltx_text ltx_font_typewriter">COLVARS_BINARY_RESTART</span>” is set to 1, and this information is only provided here for troubleshooting purposes.</p>
+</div>
+</section>
+</section>
+<section id="sec:colvars_output" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.6 </span>Output files</h2>
+
+<div id="SS6.p1" class="ltx_para">
+<p class="ltx_p">When the output prefix <em class="ltx_emph ltx_font_italic">outputName</em> is defined, the following output files are written during a simulation run:</p>
+</div>
+<div id="SS6.p2" class="ltx_para">
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">state file</em>, named <em class="ltx_emph ltx_font_italic">outputName</em><span class="ltx_text ltx_font_typewriter">.colvars.state</span>, which is written at the end of the specified run, and can also be written at any time with the scripting command <span class="ltx_text ltx_font_typewriter">save</span> (<a href="#sec:cv_command_loadsave" title="4.2.3 Loading and saving the Colvars state and other information ‣ 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2.3</span></a>).
+This file is in plain text format by default, or in binary format if the environment variable <span class="ltx_text ltx_font_typewriter">COLVARS_BINARY_RESTART</span> is set to a non-zero integer.
+The state file can be used to continue a simulation: unless its contents are embedded in the checkpoint file of the MD engine itself (currently, GROMACS and LAMMPS support this), instructions for loading the Colvars state file will be required in the simulation script (see <a href="#sec:colvars_input" title="4.5 Input state file ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.5</span></a>).</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p">If the parameter <a href="#Colvars-global%7CcolvarsRestartFrequency" title="2nd item ‣ 4.4 Global keywords ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">colvarsRestartFrequency</a> is larger than zero and the <em class="ltx_emph ltx_font_italic">restartName</em> prefix is defined, a <em class="ltx_emph ltx_font_italic">restart file</em> is written every that many steps: this file is fully equivalent to the final state file.
+The name of this file is <em class="ltx_emph ltx_font_italic">restartName</em><span class="ltx_text ltx_font_typewriter">.colvars.state</span>.</p>
+</div>
+</li>
+<li id="I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I5.i3.p1" class="ltx_para">
+<p class="ltx_p">If the parameter <a href="#Colvars-global%7CcolvarsTrajFrequency" title="1st item ‣ 4.4 Global keywords ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">colvarsTrajFrequency</a> is greater than 0 (default value: 100 steps), a <em class="ltx_emph ltx_font_italic">trajectory file</em>, named <em class="ltx_emph ltx_font_italic">outputName</em><span class="ltx_text ltx_font_typewriter">.colvars.traj</span>, is written during the simulation. Unlike a state file, this file is not needed to restart a simulation, but can be used for post-processing and analysis. The format of this file is described in sec. <a href="#sec:colvars_traj_format" title="4.7.6 Output trajectory files ‣ 4.7 File formats ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.7.6</span></a>.</p>
+</div>
+</li>
+<li id="I5.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I5.i4.p1" class="ltx_para">
+<p class="ltx_p">Additionally, certain features, when enabled, can emit output files with a specific purpose: for example, potentials of mean force (PMFs) can be written to file to be analyzed or plotted. These files are described in the respective sections, but as a general rule they all use names beginning with the <em class="ltx_emph ltx_font_italic">outputName</em> prefix.
+Like the trajectory file, these additional files are needed only for analyzing a simulation’s results, but not to continue it.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="sec:colvars_file_formats" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.7 </span>File formats</h2>
+
+<div id="SS7.p1" class="ltx_para">
+<p class="ltx_p">This section summarizes the file formats of various files that Colvars may be reading or writing.</p>
+</div>
+<section id="sec:colvars_text_format" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.7.1 </span>Configuration and state files.</h3>
+
+<div id="SS7.SSS1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Configuration files</em> are text files that are generally read as input by VMD, and may be optionally inlined in a VMD script (see <a href="#sec:cv_command_init" title="4.2.1 Setting up the Colvars module ‣ 4.2 Using the scripting interface to control the Colvars module ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2.1</span></a>).
+Starting from version 2017-02-01, changes in newline encodings are handled transparently, i.e. it is possible to typeset a configuration file in Windows (CR-LF newlines) and then use it with Linux or macOS (LF-only newlines).</p>
+</div>
+<div id="SS7.SSS1.p2" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Formatted state files</em>, although not written manually, follow otherwise the same text format as configuration files. <span class="ltx_text ltx_font_typewriter">Binary state files</span> can only be read by the Colvars code itself.</p>
+</div>
+</section>
+<section id="sec:colvars_ndx_format" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.7.2 </span>Index (NDX) files</h3>
+
+<div id="SS7.SSS2.p1" class="ltx_para">
+<p class="ltx_p">For atom selections that cannot be specified only by using internal Colvars keywords, external <em class="ltx_emph ltx_font_italic">index files</em> may also be used following the <a href="http://manual.gromacs.org/documentation/current/reference-manual/file-formats.html#ndx" title="" class="ltx_ref ltx_href">NDX format</a> used in GROMACS:
+<pre class="ltx_verbatim cv_example cv_example_datafile ltx_font_typewriter">
+[ group_1_name ]
+  i1  i2  i3  i4  ...
+  ...             ...  iN
+[ group_2_name ]
+  ...
+</pre>
+where <em class="ltx_emph ltx_font_italic">i1</em> through <em class="ltx_emph ltx_font_italic">iN</em> are 1-based indices. Each group name may not contain spaces or tabs: otherwise, a parsing error will be raised.</p>
+</div>
+<div id="SS7.SSS2.p2" class="ltx_para">
+<p class="ltx_p">Multiple index files may be provided to Colvars, each using the keyword <a href="#Colvars-global%7CindexFile" title="3rd item ‣ 4.4 Global keywords ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">indexFile</a>. Two index files may contain groups with the same names, however these must also represent identical atom selections, i.e. the same sequence of indices including order.</p>
+</div>
+<div id="SS7.SSS2.p3" class="ltx_para">
+<p class="ltx_p">Other than with GROMACS, an index group may also be generated from the VMD command-line interface, using the helper function <span class="ltx_text ltx_font_typewriter">write_index_group</span> provided in the <span class="ltx_text ltx_font_typewriter">colvartools</span> folder:
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+source colvartools/write_index_group.tcl
+set sel [atomselect top "resname XXX and not hydrogen"]
+write_index_group indexfile.ndx $sel "Ligand"
+</pre></p>
+</div>
+</section>
+<section id="sec:colvars_xyz_format" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.7.3 </span>XYZ coordinate files</h3>
+
+<div id="SS7.SSS3.p1" class="ltx_para">
+<p class="ltx_p">XYZ coordinate files are text files with the extension “<span class="ltx_text ltx_font_typewriter">.xyz</span>”. They are read by the Colvars module using an internal reader, and expect the following format:</p>
+</div>
+<div id="SS7.SSS3.p2" class="ltx_para ltx_noindent">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_right"><em class="ltx_emph ltx_font_italic">Comment</em></td>
+<td class="ltx_td ltx_align_right"><em class="ltx_emph ltx_font_italic">line</em></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m2" class="ltx_Math" alttext="E_{1}" display="inline"><msub><mi>E</mi><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m3" class="ltx_Math" alttext="x_{1}" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m4" class="ltx_Math" alttext="y_{1}" display="inline"><msub><mi>y</mi><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m5" class="ltx_Math" alttext="z_{1}" display="inline"><msub><mi>z</mi><mn>1</mn></msub></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m6" class="ltx_Math" alttext="E_{2}" display="inline"><msub><mi>E</mi><mn>2</mn></msub></math></td>
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m7" class="ltx_Math" alttext="x_{2}" display="inline"><msub><mi>x</mi><mn>2</mn></msub></math></td>
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m8" class="ltx_Math" alttext="y_{2}" display="inline"><msub><mi>y</mi><mn>2</mn></msub></math></td>
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m9" class="ltx_Math" alttext="z_{2}" display="inline"><msub><mi>z</mi><mn>2</mn></msub></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right">…</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m10" class="ltx_Math" alttext="E_{N}" display="inline"><msub><mi>E</mi><mi>N</mi></msub></math></td>
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m11" class="ltx_Math" alttext="x_{N}" display="inline"><msub><mi>x</mi><mi>N</mi></msub></math></td>
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m12" class="ltx_Math" alttext="y_{N}" display="inline"><msub><mi>y</mi><mi>N</mi></msub></math></td>
+<td class="ltx_td ltx_align_right"><math id="SS7.SSS3.p2.m13" class="ltx_Math" alttext="z_{N}" display="inline"><msub><mi>z</mi><mi>N</mi></msub></math></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="SS7.SSS3.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">where <math id="SS7.SSS3.p3.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> is the number of atomic coordinates in the file and <math id="SS7.SSS3.p3.m2" class="ltx_Math" alttext="E_{i}" display="inline"><msub><mi>E</mi><mi>i</mi></msub></math> is the chemical element of the <math id="SS7.SSS3.p3.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>-th atom.
+Because <math id="SS7.SSS3.p3.m4" class="ltx_Math" alttext="E_{i}" display="inline"><msub><mi>E</mi><mi>i</mi></msub></math> is not used in Colvars, any string that does not contain tabs or spaces is acceptable.</p>
+</div>
+<div id="SS7.SSS3.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Note:</span> all XYZ coordinates are assumed to be expressed in Å units.</p>
+</div>
+<div id="SS7.SSS3.p5" class="ltx_para">
+<p class="ltx_p">An XYZ file may contain either one of the following scenarios:</p>
+<ol id="I6" class="ltx_enumerate">
+<li id="I6.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">(i)</em></span> 
+<div id="I6.ix1.p1" class="ltx_para">
+<p class="ltx_p">The file contains as many coordinates as the atoms that they are being read for: all coordinates will be read from the file following the same order as the atoms appear in the selection generated using the keywords listed in section <a href="sec_colvar_atom_groups.html" title="6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>.
+(Note that the order is guaranteed only if a single type of selection keyword is used one or more times, and not guaranteed when different types of selection keywords are used.)</p>
+</div>
+</li>
+<li id="I6.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">(ii)</em></span> 
+<div id="I6.ix2.p1" class="ltx_para">
+<p class="ltx_p">The file contains more coordinates than needed, and it is assumed to contain coordinates for the entire system: only coordinates that match the numeric indices of the selected atoms are read, in order of increasing number.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="SS7.SSS3.p6" class="ltx_para">
+<p class="ltx_p">XYZ-file coordinates are read directly by Colvars and stored internally as double-precision floating point numbers (unlike VMD’s reader, which uses single precision).</p>
+</div>
+</section>
+<section id="sec:colvars_pdb_format" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.7.4 </span>PDB coordinate files</h3>
+
+<div id="SS7.SSS4.p1" class="ltx_para">
+<p class="ltx_p">PDB coordinate files are read by the Colvars module using existing functionality in VMD, and therefore follow the same format.
+The values of the atomic coordinates and other fields, such as occupancy or temperature factors, are then communicated to Colvars by VMD.</p>
+</div>
+<div id="SS7.SSS4.p2" class="ltx_para">
+<p class="ltx_p">PDB files may be used either as one of the available mechanisms to select atoms (see the <a href="sec_colvar_atom_groups.html#atom-group%7CatomsFile" title="7th item ‣ 6.1 Atom selection keywords ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">atomsFile</a> keyword), or more frequently to read reference coordinates for least-squares fit alignment (see the <a href="sec_colvar_atom_groups.html#atom-group%7CrefPositionsFile" title="5th item ‣ Warning on rotating frames of reference and ABF. ‣ 6.2 Moving frame of reference. ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">refPositionsFile</a> keyword).</p>
+</div>
+<div id="SS7.SSS4.p3" class="ltx_para">
+<p class="ltx_p">To select atoms via the <a href="sec_colvar_atom_groups.html#atom-group%7CatomsFile" title="7th item ‣ 6.1 Atom selection keywords ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">atomsFile</a> keyword, the option <a href="sec_colvar_atom_groups.html#atom-group%7CatomsCol" title="8th item ‣ 6.1 Atom selection keywords ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">atomsFile</a> is required, and atoms are selected based on either one of the following cases.</p>
+<ol id="I7" class="ltx_enumerate">
+<li id="I7.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">(i)</em></span> 
+<div id="I7.ix1.p1" class="ltx_para">
+<p class="ltx_p">All atoms with a non-zero value of the corresponding column are selected.</p>
+</div>
+</li>
+<li id="I7.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">(ii)</em></span> 
+<div id="I7.ix2.p1" class="ltx_para">
+<p class="ltx_p">If and only if <a href="sec_colvar_atom_groups.html#atom-group%7CatomsColValue" title="9th item ‣ 6.1 Atom selection keywords ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">atomsColValue</a> is provided, only atoms with a value of <span class="ltx_text ltx_font_typewriter">atomsCol</span> equaling <span class="ltx_text ltx_font_typewriter">atomsColValue</span> are selected.
+This can be useful to reuse the same PDB file for generating multiple selections.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="SS7.SSS4.p4" class="ltx_para">
+<p class="ltx_p">To read coordinates via the <a href="sec_colvar_atom_groups.html#atom-group%7CrefPositionsFile" title="5th item ‣ Warning on rotating frames of reference and ABF. ‣ 6.2 Moving frame of reference. ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">refPositionsFile</a> keyword, there are four possible scenarios.</p>
+<ol id="I8" class="ltx_enumerate">
+<li id="I8.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">(i)</em></span> 
+<div id="I8.ix1.p1" class="ltx_para">
+<p class="ltx_p">The file contains as many coordinates as the atoms that they are being read for: all coordinates will be read from the file following the same order as the atoms appear in the selection generated using the keywords listed in section <a href="sec_colvar_atom_groups.html" title="6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>.
+(Note that the order is guaranteed only if a single type of selection keyword is used one or more times, and not guaranteed when different types of selection keywords are used.)</p>
+</div>
+</li>
+<li id="I8.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">(ii)</em></span> 
+<div id="I8.ix2.p1" class="ltx_para">
+<p class="ltx_p">The file contains more coordinates than needed, and it is assumed to contain coordinates for the entire system: only coordinates that match the numeric indices of the selected atoms are read, in order of increasing number.</p>
+</div>
+</li>
+<li id="I8.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">(iii)</em></span> 
+<div id="I8.ix3.p1" class="ltx_para">
+<p class="ltx_p">If the corresponding <a href="sec_colvar_atom_groups.html#atom-group%7CrefPositionsCol" title="6th item ‣ Warning on rotating frames of reference and ABF. ‣ 6.2 Moving frame of reference. ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">refPositionsCol</a> keyword is specified, only positions with a non-zero value of the column <span class="ltx_text ltx_font_typewriter">refPositionsCol</span> are read.
+This is particularly useful when all atoms were selected via <a href="sec_colvar_atom_groups.html#atom-group%7CatomsFile" title="7th item ‣ 6.1 Atom selection keywords ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">atomsFile</a> and <a href="sec_colvar_atom_groups.html#atom-group%7CatomsCol" title="8th item ‣ 6.1 Atom selection keywords ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">atomsCol</a>, which can then be the same as <span class="ltx_text ltx_font_typewriter">refPositionsCol</span> for loading coordinates.</p>
+</div>
+</li>
+<li id="I8.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><em class="ltx_emph ltx_font_italic">(iv)</em></span> 
+<div id="I8.ix4.p1" class="ltx_para">
+<p class="ltx_p">This is a special case of the previous point: if both <a href="sec_colvar_atom_groups.html#atom-group%7CrefPositionsCol" title="6th item ‣ Warning on rotating frames of reference and ABF. ‣ 6.2 Moving frame of reference. ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">refPositionsCol</a> and <a href="sec_colvar_atom_groups.html#atom-group%7CrefPositionsColValue" title="7th item ‣ Warning on rotating frames of reference and ABF. ‣ 6.2 Moving frame of reference. ‣ 6 Selecting atoms ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">refPositionsColValue</a> are specified, only atoms for which the <span class="ltx_text ltx_font_typewriter">refPositionsCol</span> column as the value <span class="ltx_text ltx_font_typewriter">refPositionsColValue</span> are read.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="SS7.SSS4.p5" class="ltx_para">
+<p class="ltx_p">Due to the fixed-precision PDB format, it is not recommended to use PDB files to read coordinates when precision is a concern, and the XYZ format (see <a href="#sec:colvars_ndx_format" title="4.7.2 Index (NDX) files ‣ 4.7 File formats ‣ 4 Enabling and controlling the Colvars module in VMD ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.7.2</span></a>) is recommended instead.</p>
+</div>
+</section>
+<section id="sec:colvar_multicolumn_grid" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.7.5 </span>Grid files: multicolumn text format</h3>
+
+<div id="SS7.SSS5.p1" class="ltx_para">
+<p class="ltx_p">Many simulation methods and analysis tools write files that contain functions of the collective variables tabulated on a grid (e.g. potentials of mean force or multidimensional histograms) for the purpose of analyzing results.
+Such files are produced by ABF (<a href="sec_colvarbias.html#sec:colvarbias_abf" title="7.3 Adaptive Biasing Force ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.3</span></a>), metadynamics (<a href="sec_colvarbias.html#sec:colvarbias_meta" title="7.6 Metadynamics ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.6</span></a>), multidimensional histograms (<a href="sec_colvarbias.html#sec:colvarbias_histogram" title="7.13 Multidimensional histograms ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.13</span></a>), as well as any restraint with optional thermodynamic integration support (<a href="sec_colvarbias.html#sec:colvarbias_ti" title="7.2 Thermodynamic integration ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.2</span></a>).</p>
+</div>
+<div id="SS7.SSS5.p2" class="ltx_para">
+<p class="ltx_p">In some cases, these files may also be read as input of a new simulation.
+Suitable input files for this purpose are typically generated as output files of previous simulations, or directly by the user in the specific case of ensemble-biased metadynamics (<a href="sec_colvarbias.html#sec:colvarbias_ebmeta" title="7.6.5 Ensemble-Biased Metadynamics ‣ 7.6 Metadynamics ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.6.5</span></a>).
+This section explains the “multicolumn” format used by these files.
+For a multidimensional function <math id="SS7.SSS5.p2.m1" class="ltx_Math" alttext="f(\xi_{1},\xi_{2},\ldots)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ξ</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></mrow></math> the multicolumn grid format is defined as follows:
+<br class="ltx_break"></p>
+</div>
+<div id="SS7.SSS5.p3" class="ltx_para">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">#</td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m1" class="ltx_Math" alttext="N_{\mathrm{cv}}" display="inline"><msub><mi>N</mi><mi>cv</mi></msub></math></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">#</td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m2" class="ltx_Math" alttext="\mathtt{min}(\xi_{1})" display="inline"><mrow><mi>𝚖𝚒𝚗</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m3" class="ltx_Math" alttext="\mathtt{width}(\xi_{1})" display="inline"><mrow><mi>𝚠𝚒𝚍𝚝𝚑</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m4" class="ltx_Math" alttext="\mathtt{npoints}({\xi_{1}})" display="inline"><mrow><mi>𝚗𝚙𝚘𝚒𝚗𝚝𝚜</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m5" class="ltx_Math" alttext="\mathtt{periodic}({\xi_{1}})" display="inline"><mrow><mi>𝚙𝚎𝚛𝚒𝚘𝚍𝚒𝚌</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">#</td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m6" class="ltx_Math" alttext="\mathtt{min}(\xi_{2})" display="inline"><mrow><mi>𝚖𝚒𝚗</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m7" class="ltx_Math" alttext="\mathtt{width}(\xi_{2})" display="inline"><mrow><mi>𝚠𝚒𝚍𝚝𝚑</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m8" class="ltx_Math" alttext="\mathtt{npoints}({\xi_{2}})" display="inline"><mrow><mi>𝚗𝚙𝚘𝚒𝚗𝚝𝚜</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m9" class="ltx_Math" alttext="\mathtt{periodic}({\xi_{2}})" display="inline"><mrow><mi>𝚙𝚎𝚛𝚒𝚘𝚍𝚒𝚌</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">#</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">#</td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m10" class="ltx_Math" alttext="\mathtt{min}(\xi_{N_{\mathrm{cv}}})" display="inline"><mrow><mi>𝚖𝚒𝚗</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m11" class="ltx_Math" alttext="\mathtt{width}(\xi_{N_{\mathrm{cv}}})" display="inline"><mrow><mi>𝚠𝚒𝚍𝚝𝚑</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m12" class="ltx_Math" alttext="\mathtt{npoints}({\xi_{N_{\mathrm{cv}}}})" display="inline"><mrow><mi>𝚗𝚙𝚘𝚒𝚗𝚝𝚜</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m13" class="ltx_Math" alttext="\mathtt{periodic}({\xi_{N_{\mathrm{cv}}}})" display="inline"><mrow><mi>𝚙𝚎𝚛𝚒𝚘𝚍𝚒𝚌</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m14" class="ltx_Math" alttext="\xi^{1}_{1}" display="inline"><msubsup><mi>ξ</mi><mn>1</mn><mn>1</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m15" class="ltx_Math" alttext="\xi^{1}_{2}" display="inline"><msubsup><mi>ξ</mi><mn>2</mn><mn>1</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m16" class="ltx_Math" alttext="\xi^{1}_{N_{\mathrm{cv}}}" display="inline"><msubsup><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub><mn>1</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left">f(<math id="SS7.SSS5.p3.m17" class="ltx_Math" alttext="\xi^{1}_{1}" display="inline"><msubsup><mi>ξ</mi><mn>1</mn><mn>1</mn></msubsup></math>, <math id="SS7.SSS5.p3.m18" class="ltx_Math" alttext="\xi^{1}_{2}" display="inline"><msubsup><mi>ξ</mi><mn>2</mn><mn>1</mn></msubsup></math>, …, <math id="SS7.SSS5.p3.m19" class="ltx_Math" alttext="\xi^{1}_{N_{\mathrm{cv}}}" display="inline"><msubsup><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub><mn>1</mn></msubsup></math>)</td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m20" class="ltx_Math" alttext="\xi^{1}_{1}" display="inline"><msubsup><mi>ξ</mi><mn>1</mn><mn>1</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m21" class="ltx_Math" alttext="\xi^{1}_{2}" display="inline"><msubsup><mi>ξ</mi><mn>2</mn><mn>1</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left"><math id="SS7.SSS5.p3.m22" class="ltx_Math" alttext="\xi^{2}_{N_{\mathrm{cv}}}" display="inline"><msubsup><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub><mn>2</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left">f(<math id="SS7.SSS5.p3.m23" class="ltx_Math" alttext="\xi^{1}_{1}" display="inline"><msubsup><mi>ξ</mi><mn>1</mn><mn>1</mn></msubsup></math>, <math id="SS7.SSS5.p3.m24" class="ltx_Math" alttext="\xi^{1}_{2}" display="inline"><msubsup><mi>ξ</mi><mn>2</mn><mn>1</mn></msubsup></math>, …, <math id="SS7.SSS5.p3.m25" class="ltx_Math" alttext="\xi^{2}_{N_{\mathrm{cv}}}" display="inline"><msubsup><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub><mn>2</mn></msubsup></math>)</td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="SS7.SSS5.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">Lines beginning with the character “<span class="ltx_text ltx_font_typewriter">#</span>” are the header of the file.
+<math id="SS7.SSS5.p4.m1" class="ltx_Math" alttext="N_{\mathrm{cv}}" display="inline"><msub><mi>N</mi><mi>cv</mi></msub></math> is the number of collective variables sampled by the grid.
+For each variable <math id="SS7.SSS5.p4.m2" class="ltx_Math" alttext="\xi_{i}" display="inline"><msub><mi>ξ</mi><mi>i</mi></msub></math>, <math id="SS7.SSS5.p4.m3" class="ltx_Math" alttext="\mathtt{min}(\xi_{i})" display="inline"><mrow><mi>𝚖𝚒𝚗</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is the lowest value sampled by the grid (i.e. the left-most boundary of the grid along <math id="SS7.SSS5.p4.m4" class="ltx_Math" alttext="\xi_{i}" display="inline"><msub><mi>ξ</mi><mi>i</mi></msub></math>), <math id="SS7.SSS5.p4.m5" class="ltx_Math" alttext="\mathtt{width}(\xi_{i})" display="inline"><mrow><mi>𝚠𝚒𝚍𝚝𝚑</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is the width of each grid step along <math id="SS7.SSS5.p4.m6" class="ltx_Math" alttext="\xi_{i}" display="inline"><msub><mi>ξ</mi><mi>i</mi></msub></math>, <math id="SS7.SSS5.p4.m7" class="ltx_Math" alttext="\mathtt{npoints}(\xi_{i})" display="inline"><mrow><mi>𝚗𝚙𝚘𝚒𝚗𝚝𝚜</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is the number of points and <math id="SS7.SSS5.p4.m8" class="ltx_Math" alttext="\mathtt{periodic}(\xi_{i})" display="inline"><mrow><mi>𝚙𝚎𝚛𝚒𝚘𝚍𝚒𝚌</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is a flag whose value is 1 or 0 depending on whether the grid is periodic along <math id="SS7.SSS5.p4.m9" class="ltx_Math" alttext="\xi_{i}" display="inline"><msub><mi>ξ</mi><mi>i</mi></msub></math>.
+In most situations:</p>
+<ul id="I9" class="ltx_itemize">
+<li id="I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I9.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I9.i1.p1.m1" class="ltx_Math" alttext="\mathtt{min}(\xi_{i})" display="inline"><mrow><mi>𝚖𝚒𝚗</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is given by the <a href="sec_colvar.html#colvar%7ClowerBoundary" title="1st item ‣ 5.21 Defining grid parameters for a colvar ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">lowerBoundary</a> keyword of the variable <math id="I9.i1.p1.m2" class="ltx_Math" alttext="\xi_{i}" display="inline"><msub><mi>ξ</mi><mi>i</mi></msub></math>;</p>
+</div>
+</li>
+<li id="I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I9.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I9.i2.p1.m1" class="ltx_Math" alttext="\mathtt{width}(\xi_{i})" display="inline"><mrow><mi>𝚠𝚒𝚍𝚝𝚑</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is given by the <a href="sec_colvar.html#colvar%7Cwidth" title="3rd item ‣ 5.21 Defining grid parameters for a colvar ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">width</a> keyword;</p>
+</div>
+</li>
+<li id="I9.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I9.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I9.i3.p1.m1" class="ltx_Math" alttext="\mathtt{npoints}(\xi_{i})" display="inline"><mrow><mi>𝚗𝚙𝚘𝚒𝚗𝚝𝚜</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is calculated from the two above numbers and the <a href="sec_colvar.html#colvar%7CupperBoundary" title="2nd item ‣ 5.21 Defining grid parameters for a colvar ‣ 5 Defining collective variables ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref ltx_font_typewriter">upperBoundary</a> keyword;</p>
+</div>
+</li>
+<li id="I9.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I9.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I9.i4.p1.m1" class="ltx_Math" alttext="\mathtt{periodic}(\xi_{i})" display="inline"><mrow><mi>𝚙𝚎𝚛𝚒𝚘𝚍𝚒𝚌</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is set to 1 if and only if <math id="I9.i4.p1.m2" class="ltx_Math" alttext="\xi_{i}" display="inline"><msub><mi>ξ</mi><mi>i</mi></msub></math> is periodic and the grids’ boundaries cover its period.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="SS7.SSS5.p5" class="ltx_para">
+<p class="ltx_p">How the grid’s boundaries affect the sequence of points depends on how the contents of the file were computed. In many cases, such as histograms and PMFs computed by metadynamics (<a href="sec_colvarbias.html#sec:colvarbias_ebmeta" title="7.6.5 Ensemble-Biased Metadynamics ‣ 7.6 Metadynamics ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.6.5</span></a>), the values of <math id="SS7.SSS5.p5.m1" class="ltx_Math" alttext="\xi_{i}" display="inline"><msub><mi>ξ</mi><mi>i</mi></msub></math> in the first few columns correspond to the <em class="ltx_emph ltx_font_italic">midpoints</em> of the corresponding bins, i.e. <math id="SS7.SSS5.p5.m2" class="ltx_Math" alttext="\xi^{1}_{1}=\mathtt{min}(\xi_{i})+\mathtt{width}(\xi_{i})/2" display="inline"><mrow><msubsup><mi>ξ</mi><mn>1</mn><mn>1</mn></msubsup><mo>=</mo><mrow><mrow><mi>𝚖𝚒𝚗</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mi>𝚠𝚒𝚍𝚝𝚑</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></mrow></mrow></math>.
+However, there is a slightly different format in PMF files computed by ABF (<a href="sec_colvarbias.html#sec:colvarbias_abf" title="7.3 Adaptive Biasing Force ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.3</span></a>) or other biases that use thermodynamic integration (<a href="sec_colvarbias.html#sec:colvarbias_ti" title="7.2 Thermodynamic integration ‣ 7 Biasing and analysis methods ‣ Collective Variables Module Reference manual for VMD" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.2</span></a>).
+In these cases, it is free-energy gradients that are accumulated on an <span class="ltx_text ltx_font_typewriter">(npoints)</span>-long grid along each variable <math id="SS7.SSS5.p5.m3" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math>: after these gradients are integrated, the resulting PMF is discretized on a slightly larger grid with <span class="ltx_text ltx_font_typewriter">(npoints+1)</span> points along <math id="SS7.SSS5.p5.m4" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math> (unless the interval is periodic).
+Therefore, the grid’s outer edges extend by <math id="SS7.SSS5.p5.m5" class="ltx_Math" alttext="\mathtt{width}(\xi_{i})/2" display="inline"><mrow><mrow><mi>𝚠𝚒𝚍𝚝𝚑</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></math> above and below the specified boundaries, so that for instance <math id="SS7.SSS5.p5.m6" class="ltx_Math" alttext="\mathtt{min}(\xi_{i})" display="inline"><mrow><mi>𝚖𝚒𝚗</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> in the header appears to be shifted back by <math id="SS7.SSS5.p5.m7" class="ltx_Math" alttext="\mathtt{width}(\xi_{i})/2" display="inline"><mrow><mrow><mi>𝚠𝚒𝚍𝚝𝚑</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></math> compared to what would be expected. <em class="ltx_emph ltx_font_italic">Please keep this difference in mind when comparing PMFs computed by different methods.</em></p>
+</div>
+<div id="SS7.SSS5.p6" class="ltx_para">
+<p class="ltx_p">After the header, the rest of the file contains values of the tabulated function
+<math id="SS7.SSS5.p6.m1" class="ltx_Math" alttext="f(\xi_{1},\xi_{2},\ldots,\xi_{N_{\mathrm{cv}}})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ξ</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow></math>, one for each line.
+The first <math id="SS7.SSS5.p6.m2" class="ltx_Math" alttext="N_{\mathrm{cv}}" display="inline"><msub><mi>N</mi><mi>cv</mi></msub></math> columns contain values of <math id="SS7.SSS5.p6.m3" class="ltx_Math" alttext="\xi_{1}" display="inline"><msub><mi>ξ</mi><mn>1</mn></msub></math>, <math id="SS7.SSS5.p6.m4" class="ltx_Math" alttext="\xi_{2}" display="inline"><msub><mi>ξ</mi><mn>2</mn></msub></math>, …<math id="SS7.SSS5.p6.m5" class="ltx_Math" alttext="\xi_{N_{\mathrm{cv}}}" display="inline"><msub><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub></msub></math> and the last column contains the value of the function <math id="SS7.SSS5.p6.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.
+Points are sorted in ascending order with the fastest-changing values at the right (“C-style” order).
+Each sweep of the right-most variable <math id="SS7.SSS5.p6.m7" class="ltx_Math" alttext="\xi_{N_{\mathrm{cv}}}" display="inline"><msub><mi>ξ</mi><msub><mi>N</mi><mi>cv</mi></msub></msub></math> is terminated by an empty line.
+For two dimensional grid files, this allows quick visualization by programs such as GNUplot.
+
+<br class="ltx_break"></p>
+</div>
+<div id="SS7.SSS5.p7" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 1:</span> multicolumn text file for a one-dimensional histogram with <span class="ltx_text ltx_font_typewriter">lowerBoundary</span> = 15, <span class="ltx_text ltx_font_typewriter">upperBoundary</span> = 48 and <span class="ltx_text ltx_font_typewriter">width</span> = 0.1.</p>
+</div>
+<div id="SS7.SSS5.p8" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column">#</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_typewriter">1</span></th>
+<th class="ltx_td ltx_th ltx_th_column"></th>
+<th class="ltx_td ltx_th ltx_th_column"></th>
+<th class="ltx_td ltx_th ltx_th_column"></th>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column">#</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_typewriter">15</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_typewriter">0.1</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_typewriter">330</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_typewriter">0</span></th>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">15.05</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">6.14012e-07</span></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">15.15</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">7.47644e-07</span></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">47.85</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">1.65944e-06</span></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">47.95</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">1.46712e-06</span></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="SS7.SSS5.p9" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 2:</span> multicolumn text file for a two-dimensional histogram of two dihedral angles (periodic interval with 6<sup class="ltx_sup">∘</sup> bins):</p>
+</div>
+<div id="SS7.SSS5.p10" class="ltx_para">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">#</td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">2</span></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">#</td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">-180.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">6.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">30</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">1</span></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">#</td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">-180.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">6.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">30</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">1</span></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">-177.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">-177.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">8.97117e-06</span></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">-177.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">-171.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">1.53525e-06</span></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">-177.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">177.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">2.442956-06</span></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">-171.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">-177.0</span></td>
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">2.04702e-05</span></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td ltx_align_left">…</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="sec:colvars_traj_format" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.7.6 </span>Output trajectory files</h3>
+
+<div id="SS7.SSS6.p1" class="ltx_para">
+<p class="ltx_p">The Colvars trajectory file (with a suffix <span class="ltx_text ltx_font_typewriter">.colvars.traj</span>) is a plain text file (scientific notation with 14-digit precision) whose columns represent quantities such as colvar values, applied forces, or individual restraints’ energies. Under most scenarios, plotting or analyzing this file is straightforward: for example, the following contains a variable “<math id="SS7.SSS6.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>” and the energy of a restraint “<math id="SS7.SSS6.p1.m2" class="ltx_Math" alttext="{rA}" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mi>A</mi></mrow></math>”:
+<pre class="ltx_verbatim cv_example cv_example_datafile ltx_font_typewriter">
+#       step   A                     E_rA
+           0    1.42467449615693e+01  6.30982865292123e+02
+         100    1.42282559728026e+01  6.20640585041317e+02
+…</pre></p>
+</div>
+<div id="SS7.SSS6.p2" class="ltx_para">
+<p class="ltx_p">Occasionally, if the Colvars configuration is changed mid-run certain quantities may be added or removed, changing the column layout. Labels in comment lines can assist in such cases: for example, consider the trajectory above with the addition of a second variable, “<math id="SS7.SSS6.p2.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>”, after 10,000 steps:
+<pre class="ltx_verbatim cv_example cv_example_datafile ltx_font_typewriter">
+#       step   A                     E_rA
+           0    1.42467449615693e+01  6.30982865292123e+02
+         100    1.42282559728026e+01  6.20640585041317e+02
+…
+#       step   A                     B                     E_rA              
+       10000    1.38136915830229e+01  9.99574098859265e-01  4.11184644791030e+02
+       10100    1.36437184346326e+01  9.99574091957314e-01  3.37726286543895e+02
+</pre></p>
+</div>
+<div id="SS7.SSS6.p3" class="ltx_para">
+<p class="ltx_p">Analyzing the above file with standard tools is possible, but laborious: a <a href="https://github.com/Colvars/colvars/blob/master/colvartools/plot_colvars_traj.py?raw=true" title="" class="ltx_ref ltx_href">convenience script</a> is provided for this and related purposes. It may be used either as a command-line tool or as a Python module:
+<pre class="ltx_verbatim cv_example cv_example_engine ltx_font_typewriter">
+&gt;&gt;&gt; from plot_colvars_traj import Colvars_traj
+&gt;&gt;&gt; traj = Colvars_traj('test.colvars.traj')
+&gt;&gt;&gt; print(traj['A'].steps, traj['A'].values)
+[    0   100  ...  10000 10100] [14.246745 14.228256 ... 13.813692 13.643718]
+&gt;&gt;&gt; print(traj['B'].steps, traj['B'].values)
+[10000 10100] [0.999574  0.9995741]
+</pre></p>
+</div>
+</section>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="sec_dashboard.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Colvars dashboard</span></a><a href="bib.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="index"><span class="ltx_text ltx_ref_title">Index</span></a><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for VMD" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Defining collective variables</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Tue Nov 24 17:53:19 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
