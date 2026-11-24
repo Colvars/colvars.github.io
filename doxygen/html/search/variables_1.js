@@ -39,7 +39,7 @@ var searchData=
   ['biases_5factive_5f_36',['biases_active_',['../classcolvarmodule.html#a40366a8e0dbe3a3d3d35da388e158c85',1,'colvarmodule']]],
   ['biasing_5fforce_5fscaling_5ffactors_37',['biasing_force_scaling_factors',['../classcolvarbias.html#aff7750281ca9601e58b6628be38f1e66',1,'colvarbias']]],
   ['bin_38',['bin',['../classcolvarbias__abf.html#ac0b1428c24c7da264c4922bb399f966d',1,'colvarbias_abf']]],
-  ['boltzmann_5f_39',['boltzmann_',['../classcolvarproxy__system.html#a261d49b1c02ca3ed5f52371efee41e6c',1,'colvarproxy_system']]],
-  ['boundaries_5f_40',['boundaries_',['../classcolvarproxy__system.html#a3f68a3542e8586c18817120a4e9e2acb',1,'colvarproxy_system']]],
+  ['boltzmann_5f_39',['boltzmann_',['../classcolvarproxy.html#af19556b1495d5b787f2a1623b727334d',1,'colvarproxy']]],
+  ['boundaries_5f_40',['boundaries_',['../classcolvarproxy.html#a53e833af75675113ed6bad85bde60311',1,'colvarproxy']]],
   ['boundary_5fconditions_41',['boundary_conditions',['../classcolvar_1_1cvc.html#a62873d2bf1be820ace0379dd48bb8683',1,'colvar::cvc']]]
 ];

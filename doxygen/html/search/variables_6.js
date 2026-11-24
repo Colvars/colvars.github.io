@@ -3,7 +3,7 @@ var searchData=
   ['gaussian_5fwidth_0',['gaussian_width',['../classcolvarbias__restraint__histogram.html#af93a6a0eaebcda947e396cefbe199c26',1,'colvarbias_restraint_histogram']]],
   ['get_5fcmd_5ffn_1',['get_cmd_fn',['../classcolvarscript.html#ab9f474adb214596a346801027d4d3479',1,'colvarscript']]],
   ['global_5fcvc_5fdesc_5fmap_2',['global_cvc_desc_map',['../classcolvar.html#aba5d45b2fc47c1ce8e0cbb67c3650409',1,'colvar']]],
-  ['global_5fcvc_5fmap_3',['global_cvc_map',['../classcolvar.html#a903c17d524a729976a8c5d789268de2f',1,'colvar']]],
+  ['global_5fcvc_5fmap_3',['global_cvc_map',['../classcolvar.html#a2340e26a7c56e6ee444b0e2ffab71de4',1,'colvar']]],
   ['globalmaster_4',['globalmaster',['../classcolvarproxy__namd.html#a0a78c0c6c1f43eea5156cd8626d91058',1,'colvarproxy_namd']]],
   ['gm_5fatoms_5fmap_5',['gm_atoms_map',['../classcolvarproxy__namd.html#a719cf07adf64ff4a0a364e7426e9bfe3',1,'colvarproxy_namd']]],
   ['gradients_6',['gradients',['../classcolvarbias__abf.html#a7cd5a30adf494de9569770d5e6c2adee',1,'colvarbias_abf']]],

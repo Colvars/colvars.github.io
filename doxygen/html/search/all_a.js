@@ -4,5 +4,5 @@ var searchData=
   ['jacobi_5fdone_1',['jacobi_done',['../classcolvars__gpu_1_1rotation__gpu.html#a7834e9dd45132f6d879ffa3e9d5d69dd',1,'colvars_gpu::rotation_gpu']]],
   ['jacobian_5fderivative_2',['Jacobian_derivative',['../classcolvar_1_1cvc.html#a302ea805321f9f0978b0dc16e1ea4581',1,'colvar::cvc']]],
   ['jd_3',['jd',['../classcolvar_1_1cvc.html#a12e8a53f1077996e42a4791e3d3074ca',1,'colvar::cvc']]],
-  ['join_5fpaths_4',['join_paths',['../classcolvarproxy__io.html#a20f8f1346c49200295bceafdb4725b97',1,'colvarproxy_io']]]
+  ['join_5fpaths_4',['join_paths',['../classcolvarproxy.html#a25dba192bf52fc4eadf082101abb498a',1,'colvarproxy']]]
 ];

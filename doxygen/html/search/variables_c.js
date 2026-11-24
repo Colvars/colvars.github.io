@@ -26,7 +26,7 @@ var searchData=
   ['max_5flength_5f_23',['max_length_',['../classcvm_1_1memory__stream.html#aa8c304ae25bbfa2a246c312f6b689fb4',1,'cvm::memory_stream']]],
   ['means_24',['means',['../classcolvarbias__alb.html#a0dd7f01418c21d32eca3fdfa905e9791',1,'colvarbias_alb']]],
   ['min_5fsamples_25',['min_samples',['../classcolvarbias__abf.html#af7ec8d96d96281c6a4731ad833c76273',1,'colvarbias_abf']]],
-  ['modified_5fatom_5flist_5f_26',['modified_atom_list_',['../classcolvarproxy__atoms.html#a6d06577773376ba004e32ae590424c44',1,'colvarproxy_atoms']]],
+  ['modified_5fatom_5flist_5f_26',['modified_atom_list_',['../classcolvarproxy.html#aadc8a1d9b67c2a44d6a3abed5f4408bb',1,'colvarproxy']]],
   ['modify_5flock_27',['modify_lock',['../classcvm_1_1atom__group.html#a10a4c63adb5002f7ddf7d21489e1ccfd',1,'cvm::atom_group']]],
   ['monitor_5fcrossings_28',['monitor_crossings',['../classcolvarmodule_1_1rotation.html#a9967b62b87d70fd7cf35b1a5b4fd8513',1,'colvarmodule::rotation']]],
   ['msgcolvars_29',['msgColvars',['../classcolvarproxy__vmd.html#a11d498ad34c25eee1264d11a5c56923b',1,'colvarproxy_vmd']]],

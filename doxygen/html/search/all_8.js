@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['h_5fbond_0',['h_bond',['../classcolvar_1_1h__bond.html',1,'colvar::h_bond'],['../classcolvar_1_1h__bond.html#a05d7fa163979d747188aa41fba118fc1',1,'colvar::h_bond::h_bond()']]],
+  ['h_5fbond_0',['h_bond',['../classcolvar_1_1h__bond.html',1,'colvar::h_bond'],['../classcolvar_1_1h__bond.html#a7de826790c59711f932e5eb1be512fac',1,'colvar::h_bond::h_bond()']]],
   ['h_5fc_1',['h_C',['../classcolvars__gpu_1_1rotation__gpu.html#a9bf158ce2750f25f429f1c0bb0f1552b',1,'colvars_gpu::rotation_gpu']]],
   ['h_5fcog_2',['h_cog',['../structcolvars__gpu_1_1colvaratoms__gpu__buffer__t.html#a6b3e923ece9f3527b695850b9cab8922',1,'colvars_gpu::colvaratoms_gpu_buffer_t']]],
   ['h_5fcog_5forig_3',['h_cog_orig',['../structcolvars__gpu_1_1colvaratoms__gpu__buffer__t.html#a9246bb3e76448eac41a3de1987c768fe',1,'colvars_gpu::colvaratoms_gpu_buffer_t']]],
@@ -10,7 +10,7 @@ var searchData=
   ['hard_5flower_5fboundaries_7',['hard_lower_boundaries',['../classcolvar__grid.html#aae4b6fde4775d004cb9e8872833d01be',1,'colvar_grid']]],
   ['hard_5fupper_5fboundaries_8',['hard_upper_boundaries',['../classcolvar__grid.html#a3537a8b9704b79a68da7eb5e75313e6d',1,'colvar_grid']]],
   ['has_5fdata_9',['has_data',['../classcolvarbias.html#aa33d58dccf5a5c2a1cab78a4412b8ed1',1,'colvarbias::has_data'],['../classcolvar__grid.html#a5fbd378c88cf06662a64d6ccd27a8d63',1,'colvar_grid::has_data']]],
-  ['has_5fgpu_5fsupport_10',['has_gpu_support',['../classcolvarproxy__gpu.html#ab5e9be5a92857ce6c71680d236aebd7d',1,'colvarproxy_gpu']]],
+  ['has_5fgpu_5fsupport_10',['has_gpu_support',['../classcolvarproxy.html#a89eb96fba1ccc75bb29d994eb814a3ca',1,'colvarproxy']]],
   ['has_5fparent_5fdata_11',['has_parent_data',['../classcolvar__grid.html#a95468da24b815194702cb7dbb1257af8',1,'colvar_grid']]],
   ['has_5fremaining_12',['has_remaining',['../classcvm_1_1memory__stream.html#a015fba11afd141b4c3564c5d798e99e6',1,'cvm::memory_stream']]],
   ['has_5fuser_5fdefined_5ffitting_13',['has_user_defined_fitting',['../classcolvar_1_1CartesianBasedPath.html#aa4aa0cff5f4af7bde6767adf1d417716',1,'colvar::CartesianBasedPath']]],

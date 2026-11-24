@@ -35,11 +35,11 @@ var searchData=
   ['volmap_5fids_5f_32',['volmap_ids_',['../classcolvar.html#aef556d8625be1e7afe9b93ad143c23c9',1,'colvar']]],
   ['volmap_5findex_33',['volmap_index',['../classcolvar_1_1map__total.html#a39e3a19f371b390200ec1104ef54f135',1,'colvar::map_total']]],
   ['volmap_5fname_34',['volmap_name',['../classcolvar_1_1map__total.html#a1412bd97e60049b9aa8652a3b90cb876',1,'colvar::map_total']]],
-  ['volmaps_5ffilenames_35',['volmaps_filenames',['../classcolvarproxy__volmaps.html#a4cfce32b3464705be55a291fe80e996f',1,'colvarproxy_volmaps']]],
-  ['volmaps_5fids_36',['volmaps_ids',['../classcolvarproxy__volmaps.html#a488e58f67402c0c9058a94f3640a7020',1,'colvarproxy_volmaps']]],
-  ['volmaps_5fmax_5fapplied_5fforce_5f_37',['volmaps_max_applied_force_',['../classcolvarproxy__volmaps.html#a855064b4bdfbfd85c687c999f1730529',1,'colvarproxy_volmaps']]],
-  ['volmaps_5fnew_5fcolvar_5fforces_38',['volmaps_new_colvar_forces',['../classcolvarproxy__volmaps.html#aee898cb3b1bf3823a3991e2d606911f7',1,'colvarproxy_volmaps']]],
-  ['volmaps_5frefcount_39',['volmaps_refcount',['../classcolvarproxy__volmaps.html#a5f588b7676db5779b6c709677878f358',1,'colvarproxy_volmaps']]],
-  ['volmaps_5frms_5fapplied_5fforce_5f_40',['volmaps_rms_applied_force_',['../classcolvarproxy__volmaps.html#a0faac53aba69b5cc3c1cdb503a4667f5',1,'colvarproxy_volmaps']]],
-  ['volmaps_5fvalues_41',['volmaps_values',['../classcolvarproxy__volmaps.html#a855f34c4a358cdc62964437098a33739',1,'colvarproxy_volmaps']]]
+  ['volmaps_5ffilenames_35',['volmaps_filenames',['../classcolvarproxy.html#ac4326a2ecd7d8a7d3addaedabe18233b',1,'colvarproxy']]],
+  ['volmaps_5fids_36',['volmaps_ids',['../classcolvarproxy.html#a65bb502a99601ac1a5100b37dfe349bd',1,'colvarproxy']]],
+  ['volmaps_5fmax_5fapplied_5fforce_5f_37',['volmaps_max_applied_force_',['../classcolvarproxy.html#a3565cc46d69f6d993192fdab0041f629',1,'colvarproxy']]],
+  ['volmaps_5fnew_5fcolvar_5fforces_38',['volmaps_new_colvar_forces',['../classcolvarproxy.html#a00b336325e0ddd69f74b1eab5fd5b569',1,'colvarproxy']]],
+  ['volmaps_5frefcount_39',['volmaps_refcount',['../classcolvarproxy.html#ae9d03b5fd51cbb12d37f6d1063928f79',1,'colvarproxy']]],
+  ['volmaps_5frms_5fapplied_5fforce_5f_40',['volmaps_rms_applied_force_',['../classcolvarproxy.html#abb0b8d9f9536117e6b82068826b63cdd',1,'colvarproxy']]],
+  ['volmaps_5fvalues_41',['volmaps_values',['../classcolvarproxy.html#abdcd6ac82d238c59185a824946ab6c53',1,'colvarproxy']]]
 ];

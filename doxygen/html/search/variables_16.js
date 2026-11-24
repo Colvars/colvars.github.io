@@ -1,7 +1,7 @@
 var searchData=
 [
   ['w_0',['W',['../classcolvarbias__meta_1_1hill.html#a967490e4fb7a15d44a82ed70f82ec84c',1,'colvarbias_meta::hill']]],
-  ['warp_5fsize_1',['warp_size',['../classcolvarproxy__gpu.html#a25064fb5fb54251d4c8a344302cf173a',1,'colvarproxy_gpu']]],
+  ['warp_5fsize_1',['warp_size',['../classcolvarproxy.html#ab35c6b6fcb3d2f255885827471a55521',1,'colvarproxy']]],
   ['weights_2',['weights',['../classcolvarbias__histogram.html#ada50901a63e5b35813b3a1dfda829d35',1,'colvarbias_histogram']]],
   ['well_5ftempered_3',['well_tempered',['../classcolvarbias__meta.html#a5ed9aa0c18698d2484dc7adba4236ca1',1,'colvarbias_meta']]],
   ['white_5fspace_4',['white_space',['../classcolvarparse.html#a8d4d1aeef4fd6ace84d59a05fe46d257',1,'colvarparse']]],

@@ -10,9 +10,9 @@ var searchData=
   ['operator_7c_7',['operator|',['../colvarparse_8h.html#a8cce97d215886ef0a37e3f07e0826c83',1,'colvarparse.h']]],
   ['output_5fbuffer_8',['output_buffer',['../classcvm_1_1memory__stream.html#a3001a5bdca52296cf9b3bfe217fbb30a',1,'cvm::memory_stream']]],
   ['output_5flocation_9',['output_location',['../classcvm_1_1memory__stream.html#a104304f4e2f2e0182da0067fb5ef0d19',1,'cvm::memory_stream']]],
-  ['output_5fprefix_10',['output_prefix',['../classcolvarmodule.html#a821a1cf8bb6173b7e4236244e5c5d087',1,'colvarmodule::output_prefix()'],['../classcolvarproxy__io.html#ad394a4fb49ced4697800447576cbc486',1,'colvarproxy_io::output_prefix() const']]],
-  ['output_5fstream_11',['output_stream',['../classcolvarproxy__io.html#a834c08a7b1df1886adf3e05933530034',1,'colvarproxy_io::output_stream()'],['../classcolvarproxy__namd.html#a94ffd9f0a0837958f0d1a50291b61b7b',1,'colvarproxy_namd::output_stream()']]],
-  ['output_5fstream_5fexists_12',['output_stream_exists',['../classcolvarproxy__io.html#a9f6b7ccd8b68569ddab5b061ddeebe86',1,'colvarproxy_io']]],
+  ['output_5fprefix_10',['output_prefix',['../classcolvarmodule.html#a821a1cf8bb6173b7e4236244e5c5d087',1,'colvarmodule::output_prefix()'],['../classcolvarproxy.html#a690fbc2aaa22eaccc7fdb9a9ce463012',1,'colvarproxy::output_prefix() const']]],
+  ['output_5fstream_11',['output_stream',['../classcolvarproxy.html#afecad039dcabf9cc4b729c32314d8512',1,'colvarproxy::output_stream()'],['../classcolvarproxy__namd.html#a94ffd9f0a0837958f0d1a50291b61b7b',1,'colvarproxy_namd::output_stream()']]],
+  ['output_5fstream_5fexists_12',['output_stream_exists',['../classcolvarproxy.html#a4ce935e480950474ee74126da30d3609',1,'colvarproxy']]],
   ['output_5ftraj_13',['output_traj',['../classcolvarbias__meta_1_1hill.html#ace9d0b2e01e7e042961b0c80d25001b5',1,'colvarbias_meta::hill']]],
   ['output_5fwidth_14',['output_width',['../classcolvarmodule_1_1vector1d.html#a0b2f3eae6b2979d7875bd57d5ffb263b',1,'colvarmodule::vector1d::output_width()'],['../classcolvarmodule_1_1quaternion.html#a980121b944bad5f114b2489bcaebd573',1,'colvarmodule::quaternion::output_width()'],['../classcolvarvalue.html#aab59ee77ce03e0527e503c10a3702ba6',1,'colvarvalue::output_width()']]],
   ['overlap_15',['overlap',['../classcvm_1_1atom__group.html#aeb24361d99ecb81fd3f262948c0cac95',1,'cvm::atom_group']]]

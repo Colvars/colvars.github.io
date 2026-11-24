@@ -162,19 +162,19 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">int</span> cvscript_n_commands();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordtype">char</span> <span class="keyword">const</span> ** cvscript_command_names();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordtype">char</span> <span class="keyword">const</span> ** cvscript_command_names(<span class="keywordtype">void</span> *proxy_in);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">char</span> <span class="keyword">const</span> *cvscript_command_help(<span class="keywordtype">char</span> <span class="keyword">const</span> *cmd);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">char</span> <span class="keyword">const</span> *cvscript_command_help(<span class="keywordtype">void</span> *proxy_in, <span class="keywordtype">char</span> <span class="keyword">const</span> *cmd);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordtype">char</span> <span class="keyword">const</span> *cvscript_command_rethelp(<span class="keywordtype">char</span> <span class="keyword">const</span> *cmd);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordtype">char</span> <span class="keyword">const</span> *cvscript_command_rethelp(<span class="keywordtype">void</span> *proxy_in, <span class="keywordtype">char</span> <span class="keyword">const</span> *cmd);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">char</span> <span class="keyword">const</span> *cvscript_command_arghelp(<span class="keywordtype">char</span> <span class="keyword">const</span> *cmd, <span class="keywordtype">int</span> i);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">char</span> <span class="keyword">const</span> *cvscript_command_arghelp(<span class="keywordtype">void</span> *proxy_in, <span class="keywordtype">char</span> <span class="keyword">const</span> *cmd, <span class="keywordtype">int</span> i);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">char</span> <span class="keyword">const</span> *cvscript_command_full_help(<span class="keywordtype">char</span> <span class="keyword">const</span> *cmd);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">char</span> <span class="keyword">const</span> *cvscript_command_full_help(<span class="keywordtype">void</span> *proxy_in, <span class="keywordtype">char</span> <span class="keyword">const</span> *cmd);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">int</span> cvscript_command_n_args_min(<span class="keywordtype">char</span> <span class="keyword">const</span> *cmd);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">int</span> cvscript_command_n_args_min(<span class="keywordtype">void</span> *proxy_in, <span class="keywordtype">char</span> <span class="keyword">const</span> *cmd);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordtype">int</span> cvscript_command_n_args_max(<span class="keywordtype">char</span> <span class="keyword">const</span> *cmd);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordtype">int</span> cvscript_command_n_args_max(<span class="keywordtype">void</span> *proxy_in, <span class="keywordtype">char</span> <span class="keyword">const</span> *cmd);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
@@ -523,7 +523,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>         0, 0,</div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>         <span class="stringliteral">&quot;&quot;</span>,</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>         <span class="keywordtype">int</span> <span class="keyword">const</span> n_commands = cvscript_n_commands();</div>
-<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>         <span class="keywordtype">char</span> <span class="keyword">const</span> **command_names = cvscript_command_names();</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>         <span class="keywordtype">char</span> <span class="keyword">const</span> **command_names = cvscript_command_names(cvmodule-&gt;proxy);</div>
 <div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>         std::string result;</div>
 <div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n_commands; i++) {</div>
 <div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>           <span class="keywordflow">if</span> (i &gt; 0) result.append(1, <span class="charliteral">&#39; &#39;</span>);</div>

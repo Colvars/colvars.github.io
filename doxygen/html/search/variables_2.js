@@ -1,8 +1,8 @@
 var searchData=
 [
   ['c_0',['C',['../classcolvarmodule_1_1rotation.html#a0d210f6469c9ae92172c056c6d41ec38',1,'colvarmodule::rotation']]],
-  ['cached_5falch_5flambda_1',['cached_alch_lambda',['../classcolvarproxy__system.html#a74fe2a75bd4619174e9482f8be677589',1,'colvarproxy_system']]],
-  ['cached_5falch_5flambda_5fchanged_2',['cached_alch_lambda_changed',['../classcolvarproxy__system.html#a7d6833e6e0079e790135759ea10a460c',1,'colvarproxy_system']]],
+  ['cached_5falch_5flambda_1',['cached_alch_lambda',['../classcolvarproxy.html#aa530b2ea9c8bd1525e33e89e55af9cdd',1,'colvarproxy']]],
+  ['cached_5falch_5flambda_5fchanged_2',['cached_alch_lambda_changed',['../classcolvarproxy.html#aae1c4f2c804905e7447e0d16cf392e31',1,'colvarproxy']]],
   ['calc_5ffit_5fforces_5fgpu_5finfo_3',['calc_fit_forces_gpu_info',['../classcolvars__gpu_1_1colvaratoms__gpu.html#ae7dfbe771ade228a472497029c08a416',1,'colvars_gpu::colvaratoms_gpu']]],
   ['calc_5ffit_5fgradients_5fgpu_5finfo_4',['calc_fit_gradients_gpu_info',['../classcolvars__gpu_1_1colvaratoms__gpu.html#a3f9408cb85e440b0f22ce047b4cb2f1b',1,'colvars_gpu::colvaratoms_gpu']]],
   ['cap_5fforce_5',['cap_force',['../classcolvarbias__abf.html#a24b721c001d221205eee039df21df018',1,'colvarbias_abf']]],
@@ -54,7 +54,7 @@ var searchData=
   ['cvc_5fflags_51',['cvc_flags',['../classcolvar.html#aeeed115517f76151fec8713f0b6c4683',1,'colvar']]],
   ['cvcs_52',['cvcs',['../classcolvar.html#aba4db88dd110a89da45eec3e445c7621',1,'colvar']]],
   ['cvm_5foutput_5fprefix_53',['cvm_output_prefix',['../classcolvarmodule.html#af3c31eccaea134be14ab4946cd99ae76',1,'colvarmodule']]],
-  ['cvmodule_54',['cvmodule',['../structcolvars__gpu_1_1rotation__derivative__gpu.html#ac04692b33f633f26f2ed596a3468eeec',1,'colvars_gpu::rotation_derivative_gpu::cvmodule'],['../classcolvars__gpu_1_1colvaratoms__gpu.html#a3edc79af996df7a74ed68b669c4dcf56',1,'colvars_gpu::colvaratoms_gpu::cvmodule'],['../structcolvar_1_1coordnum_1_1coordnum__gpu__impl__t_1_1selfCoordNumTileListT.html#ac7f76141af74ee7a38a4dff42156bae5',1,'colvar::coordnum::coordnum_gpu_impl_t::selfCoordNumTileListT::cvmodule'],['../classcolvarproxy.html#ae612e3c4cb646a1d82f23d840b5efaf1',1,'colvarproxy::cvmodule']]],
+  ['cvmodule_54',['cvmodule',['../structcolvars__gpu_1_1rotation__derivative__gpu.html#ac04692b33f633f26f2ed596a3468eeec',1,'colvars_gpu::rotation_derivative_gpu::cvmodule'],['../classcolvars__gpu_1_1colvaratoms__gpu.html#a3edc79af996df7a74ed68b669c4dcf56',1,'colvars_gpu::colvaratoms_gpu::cvmodule'],['../structcolvar_1_1coordnum_1_1coordnum__gpu__impl__t_1_1selfCoordNumTileListT.html#ac7f76141af74ee7a38a4dff42156bae5',1,'colvar::coordnum::coordnum_gpu_impl_t::selfCoordNumTileListT::cvmodule'],['../classcolvarproxy.html#ae612e3c4cb646a1d82f23d840b5efaf1',1,'colvarproxy::cvmodule'],['../classcolvarmodule_1_1rotation.html#a647b78fa38535580f78467311842145f',1,'colvarmodule::rotation::cvmodule'],['../classcolvars__gpu_1_1rotation__gpu.html#ae9c0686f9cda6124b79d00556aae370e',1,'colvars_gpu::rotation_gpu::cvmodule']]],
   ['czar_5fgradients_55',['czar_gradients',['../classcolvarbias__abf.html#af06429076e670077da8227dd69d16393',1,'colvarbias_abf']]],
   ['czar_5fpmf_56',['czar_pmf',['../classcolvarbias__abf.html#a6cd3c6b47c28ba5051a2acd35c8dfeca',1,'colvarbias_abf']]]
 ];
