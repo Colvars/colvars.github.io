@@ -1,0 +1,670 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>References ‣ Collective Variables Module Reference manual for GROMACS</title>
+<!--Generated on Fri Nov 27 12:53:37 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on Code version: 2026‐09‐10.-->
+
+<link rel="shortcut icon" href="logo/colvars-logo-compact.svg" type="image/svg+xml">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="latexml/colvars-refman.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/mml-chtml.js"></script>
+<link rel="up" href="./" title="Collective Variables Module Reference manual for GROMACS">
+<link rel="start" href="./" title="Collective Variables Module Reference manual for GROMACS">
+<link rel="prev" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvars_crash_course.html" title="2 Writing a Colvars configuration: a crash course ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvarmodule.html" title="3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvar.html" title="4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvar_atom_groups.html" title="5 Selecting atoms ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvarbias.html" title="6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvars_config_changes.html" title="7 Syntax changes from older versions ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_compilation_notes.html" title="8 Compilation notes ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="index" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for GROMACS">
+</head>
+<body>
+<nav class="ltx_page_navbar"><a href="./" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for GROMACS</span></a>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Enabling and controlling the Colvars module in GROMACS</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Defining collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar_atom_groups.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Selecting atoms</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Syntax changes from older versions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Compilation notes</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_index"><a href="idx.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title">Index</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography ltx_ref_self"><span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title">References</span></span></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="./" title="" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Collective Variables Module<span class="ltx_text"> </span>Reference manual for GROMACS</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title">Index</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_bibliography ltx_authors_1line">
+<h1 class="ltx_title ltx_title_bibliography">References</h1>
+
+<ul id="L1" class="ltx_biblist">
+<li id="bib39" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, and E. Lindahl</span><span class="ltx_text ltx_bib_year"> (2015)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">GROMACS: high performance molecular simulations through multi-level parallelism from laptops to supercomputers</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">SoftwareX</span> <span class="ltx_text ltx_bib_volume">1–2</span>, <span class="ltx_text ltx_bib_pages"> pp. 19–25</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1016/j.softx.2015.06.001" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1016/j.softx.2015.06.001" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarmodule.html#p1" title="3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>.
+</span>
+</li>
+<li id="bib1" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Altis, P. H. Nguyen, R. Hegger, and G. Stock</span><span class="ltx_text ltx_bib_year"> (2007)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Dihedral angle principal component analysis of molecular dynamics simulations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Phys.</span> <span class="ltx_text ltx_bib_volume">126</span> (<span class="ltx_text ltx_bib_number">24</span>), <span class="ltx_text ltx_bib_pages"> pp. 244111</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS8.SSS2.p1" title="4.8.2 dihedralPC: protein dihedral principal component ‣ 4.8 Protein structure descriptors ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.8.2</span></a>.
+</span>
+</li>
+<li id="bib2" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Barducci, G. Bussi, and M. Parrinello</span><span class="ltx_text ltx_bib_year"> (2008)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Well-tempered metadynamics: a smoothly converging and tunable free-energy method</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Phys. Rev. Lett.</span> <span class="ltx_text ltx_bib_volume">100</span>, <span class="ltx_text ltx_bib_pages"> pp. 020603</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#I19.i1.p2" title="In 6.6.6 Well-tempered metadynamics ‣ 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1st item</span></a>,
+<a href="sec_colvarbias.html#I19.i2.p2" title="In 6.6.6 Well-tempered metadynamics ‣ 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2nd item</span></a>,
+<a href="sec_colvarbias.html#SS6.SSS6.p1" title="6.6.6 Well-tempered metadynamics ‣ 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6.6</span></a>.
+</span>
+</li>
+<li id="bib3" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. Branduardi, F. L. Gervasio, and M. Parrinello</span><span class="ltx_text ltx_bib_year"> (2007)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">From a to b in free energy space</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J Chem Phys</span> <span class="ltx_text ltx_bib_volume">126</span> (<span class="ltx_text ltx_bib_number">5</span>), <span class="ltx_text ltx_bib_pages"> pp. 054103</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS10.p1" title="4.10 Geometric path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.10</span></a>,
+<a href="sec_colvar.html#SS11.p1" title="4.11 Arithmetic path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.11</span></a>.
+</span>
+</li>
+<li id="bib4" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. Bussi, A. Laio, and M. Parrinello</span><span class="ltx_text ltx_bib_year"> (2006)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Equilibrium free energies from nonequilibrium metadynamics.</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Phys. Rev. Lett.</span> <span class="ltx_text ltx_bib_volume">96</span> (<span class="ltx_text ltx_bib_number">9</span>), <span class="ltx_text ltx_bib_pages"> pp. 090601</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS6.p3" title="6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6</span></a>.
+</span>
+</li>
+<li id="bib5" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Carter, G. Ciccotti, J. T. Hynes, and R. Kapral</span><span class="ltx_text ltx_bib_year"> (1989)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Constrained reaction coordinate dynamics for the simulation of rare events</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Chem. Phys. Lett.</span> <span class="ltx_text ltx_bib_volume">156</span>, <span class="ltx_text ltx_bib_pages"> pp. 472–477</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS3.p12" title="6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3</span></a>,
+<a href="sec_colvarbias.html#SS3.p8" title="6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3</span></a>.
+</span>
+</li>
+<li id="bib42" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">H. Chen, H. Liu, H. Feng, H. Fu, W. Cai, X. Shao, and C. Chipot</span><span class="ltx_text ltx_bib_year"> (2022)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">MLCV: Bridging Machine-Learning-Based Dimensionality Reduction and Free-Energy Calculation</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Inf. Model.</span> <span class="ltx_text ltx_bib_volume">62</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 1–8</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1021/acs.jcim.1c01010" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1021/acs.jcim.1c01010" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS12.p1" title="4.12 Dense neural network in CV space (MLCV) ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.12</span></a>.
+</span>
+</li>
+<li id="bib53" class="ltx_bibitem ltx_bib_misc">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">L. Chen</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Finite difference methods for poisson equation</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://www.math.uci.edu/~chenlong/226/FDM.pdf" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#I8.i1.p2" title="In 6.3.5 Multidimensional free energy surfaces ‣ 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1st item</span></a>.
+</span>
+</li>
+<li id="bib6" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. Ciccotti, R. Kapral, and E. Vanden-Eijnden</span><span class="ltx_text ltx_bib_year"> (2005)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Blue moon sampling, vectorial reaction coordinates, and unbiased constrained dynamics</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">ChemPhysChem</span> <span class="ltx_text ltx_bib_volume">6</span> (<span class="ltx_text ltx_bib_number">9</span>), <span class="ltx_text ltx_bib_pages"> pp. 1809–1814</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS3.p10" title="6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3</span></a>,
+<a href="sec_colvarbias.html#SS3.p8" title="6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3</span></a>.
+</span>
+</li>
+<li id="bib43" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Comer, J. C. Phillips, K. Schulten, and C. Chipot</span><span class="ltx_text ltx_bib_year"> (2014)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Multiple-walker strategies for free-energy calculations in NAMD: Shared adaptive biasing force and walker selection rules</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Theor. Comput.</span> <span class="ltx_text ltx_bib_volume">10</span> (<span class="ltx_text ltx_bib_number">12</span>), <span class="ltx_text ltx_bib_pages"> pp. 5276–5285</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1021/ct500874p" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1021/ct500874p" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS3.SSS3.p1" title="6.3.3 Multiple-walker ABF ‣ 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3.3</span></a>.
+</span>
+</li>
+<li id="bib7" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">E. A. Coutsias, C. Seok, and K. A. Dill</span><span class="ltx_text ltx_bib_year"> (2004)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Using quaternions to calculate RMSD</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Comput. Chem.</span> <span class="ltx_text ltx_bib_volume">25</span> (<span class="ltx_text ltx_bib_number">15</span>), <span class="ltx_text ltx_bib_pages"> pp. 1849–1857</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS6.SSS1.p1" title="4.6.1 rmsd: root mean square displacement (RMSD) from reference positions. ‣ 4.6 Collective metrics ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.6.1</span></a>,
+<a href="sec_colvar.html#SS7.SSS1.p1" title="4.7.1 orientation: orientation from reference coordinates. ‣ 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7.1</span></a>,
+<a href="sec_colvar.html#SS7.p1" title="4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7</span></a>,
+<a href="sec_colvar_atom_groups.html#I3.i3.p2" title="In Warning on rotating frames of reference and ABF. ‣ 5.2 Moving frame of reference. ‣ 5 Selecting atoms ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3rd item</span></a>.
+</span>
+</li>
+<li id="bib8" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">Y. Crespo, F. Marinelli, F. Pietrucci, and A. Laio</span><span class="ltx_text ltx_bib_year"> (2010-05)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Metadynamics convergence law in a multidimensional system</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Phys. Rev. E</span> <span class="ltx_text ltx_bib_volume">81</span>, <span class="ltx_text ltx_bib_pages"> pp. 055701</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1103/PhysRevE.81.055701" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://link.aps.org/doi/10.1103/PhysRevE.81.055701" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS6.p4" title="6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6</span></a>.
+</span>
+</li>
+<li id="bib9" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">K. Daniilidis</span><span class="ltx_text ltx_bib_year"> (1999)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Hand-eye calibration using dual quaternions</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Int. J. Robot. Res.</span> <span class="ltx_text ltx_bib_volume">18</span> (<span class="ltx_text ltx_bib_number">3</span>), <span class="ltx_text ltx_bib_pages"> pp. 286–298</span> (<span class="ltx_text ltx_bib_language">english</span>).
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1177/02783649922066213" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<span class="ltx_text issn ltx_bib_external">ISSN 0278-3649</span></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS7.SSS4.p4" title="4.7.4 spinAngle: angle of rotation around a given axis. ‣ 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7.4</span></a>,
+<a href="sec_colvar.html#SS7.SSS5.p2" title="4.7.5 tilt: cosine of the rotation orthogonal to a given axis. ‣ 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7.5</span></a>,
+<a href="sec_colvar.html#SS7.p1" title="4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7</span></a>.
+</span>
+</li>
+<li id="bib10" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[14]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">E. Darve, D. Rodríguez-Gómez, and A. Pohorille</span><span class="ltx_text ltx_bib_year"> (2008)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Adaptive biasing force method for scalar and vector free energy calculations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Phys.</span> <span class="ltx_text ltx_bib_volume">128</span> (<span class="ltx_text ltx_bib_number">14</span>), <span class="ltx_text ltx_bib_pages"> pp. 144120</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS3.p1" title="6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3</span></a>.
+</span>
+</li>
+<li id="bib12" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[15]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">W. K. den Otter</span><span class="ltx_text ltx_bib_year"> (2000)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Thermodynamic integration of the free energy along a reaction coordinate in cartesian coordinates</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Phys.</span> <span class="ltx_text ltx_bib_volume">112</span>, <span class="ltx_text ltx_bib_pages"> pp. 7283–7292</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS3.p8" title="6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3</span></a>.
+</span>
+</li>
+<li id="bib11" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[16]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">Y. Deng and B. Roux</span><span class="ltx_text ltx_bib_year"> (2009)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Computations of standard binding free energies with molecular dynamics simulations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Phys. Chem. B</span> <span class="ltx_text ltx_bib_volume">113</span> (<span class="ltx_text ltx_bib_number">8</span>), <span class="ltx_text ltx_bib_pages"> pp. 2234–2246</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#I29.i1.p2" title="In 6.8.3 Changing force constant ‣ 6.8 Harmonic restraints ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1st item</span></a>,
+<a href="sec_colvarbias.html#SS8.SSS3.p1" title="6.8.3 Changing force constant ‣ 6.8 Harmonic restraints ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.8.3</span></a>.
+</span>
+</li>
+<li id="bib44" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[17]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Ebrahimi and J. Hénin</span><span class="ltx_text ltx_bib_year"> (2022)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Symmetry-adapted restraints for binding free energy calculations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Journal of Chemical Theory and Computation</span> <span class="ltx_text ltx_bib_volume">18</span> (<span class="ltx_text ltx_bib_number">4</span>), <span class="ltx_text ltx_bib_pages"> pp. 2494–2502</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1021/acs.jctc.1c01235" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1021/acs.jctc.1c01235" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#I21.i4.p2" title="In 4.6.1 rmsd: root mean square displacement (RMSD) from reference positions. ‣ 4.6 Collective metrics ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4th item</span></a>.
+</span>
+</li>
+<li id="bib13" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[18]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. J. Ferrarotti, S. Bottaro, A. Pérez-Villa, and G. Bussi</span><span class="ltx_text ltx_bib_year"> (2015)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Accurate multiple time step in biased molecular simulations.</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Journal of chemical theory and computation</span> <span class="ltx_text ltx_bib_volume">11</span>, <span class="ltx_text ltx_bib_pages"> pp. 139–146</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 1549-9626</span>,
+<a href="https://dx.doi.org/10.1021/ct5007086" title="" class="ltx_ref doi ltx_bib_external">Document</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#I59.i1.p2" title="In 4.22 Multiple time-step variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1st item</span></a>.
+</span>
+</li>
+<li id="bib45" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[19]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. Fiorin, M. L. Klein, and J. Hénin</span><span class="ltx_text ltx_bib_year"> (2013)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Using collective variables to drive molecular dynamics simulations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Mol. Phys.</span> <span class="ltx_text ltx_bib_volume">111</span> (<span class="ltx_text ltx_bib_number">22-23</span>), <span class="ltx_text ltx_bib_pages"> pp. 3345–3362</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1080/00268976.2013.813594" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1080/00268976.2013.813594" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvars_intro.html#p3" title="1 Overview ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
+<a href="sec_colvar.html#SS7.SSS4.p2" title="4.7.4 spinAngle: angle of rotation around a given axis. ‣ 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7.4</span></a>,
+<a href="sec_colvar.html#SS7.p1" title="4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7</span></a>,
+<a href="sec_colvarbias.html#I15.i9.p2" title="In 6.6.2 Required metadynamics keywords ‣ 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9th item</span></a>,
+<a href="sec_colvarbias.html#SS6.SSS1.p1" title="6.6.1 Treatment of the PMF boundaries ‣ 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6.1</span></a>,
+<a href="sec_colvarbias.html#SS6.SSS7.p2" title="6.6.7 Multiple-walker metadynamics ‣ 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6.7</span></a>.
+</span>
+</li>
+<li id="bib47" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[20]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. Fiorin, F. Marinelli, L. R. Forrest, H. Chen, C. Chipot, A. Kohlmeyer, H. Santuz, and J. Hénin</span><span class="ltx_text ltx_bib_year"> (2024)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Expanded functionality and portability for the colvars library</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Phys. Chem. B</span> <span class="ltx_text ltx_bib_volume">128</span> (<span class="ltx_text ltx_bib_number">45</span>), <span class="ltx_text ltx_bib_pages"> pp. 11108–11123</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1021/acs.jpcb.4c05604" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1021/acs.jpcb.4c05604" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS7.SSS4.p1" title="4.7.4 spinAngle: angle of rotation around a given axis. ‣ 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7.4</span></a>,
+<a href="sec_colvarbias.html#SS3.SSS3.p1" title="6.3.3 Multiple-walker ABF ‣ 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3.3</span></a>.
+</span>
+</li>
+<li id="bib49" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[21]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">H. Fu, W. Cai, J. Hénin, B. Roux, and C. Chipot</span><span class="ltx_text ltx_bib_year"> (2017)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">New coarse variables for the accurate determination of standard binding free energies</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Theory. Comput.</span> <span class="ltx_text ltx_bib_volume">13</span> (<span class="ltx_text ltx_bib_number">11</span>), <span class="ltx_text ltx_bib_pages"> pp. 5173–5178</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1021/acs.jctc.7b00791" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1021/acs.jctc.7b00791" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS7.SSS6.p3" title="4.7.6 eulerPhi: Roll angle from references coordinates. ‣ 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7.6</span></a>.
+</span>
+</li>
+<li id="bib14" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[22]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">N. M. Glykos</span><span class="ltx_text ltx_bib_year"> (2006)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Carma: a molecular dynamics analysis program</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Comput. Chem.</span> <span class="ltx_text ltx_bib_volume">27</span> (<span class="ltx_text ltx_bib_number">14</span>), <span class="ltx_text ltx_bib_pages"> pp. 1765–1768</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#I39.i2.p2" title="In 4.8.2 dihedralPC: protein dihedral principal component ‣ 4.8 Protein structure descriptors ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2nd item</span></a>,
+<a href="sec_colvar.html#SS8.SSS2.p1" title="4.8.2 dihedralPC: protein dihedral principal component ‣ 4.8 Protein structure descriptors ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.8.2</span></a>.
+</span>
+</li>
+<li id="bib16" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[23]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">H. Grubmüller</span><span class="ltx_text ltx_bib_year"> (1995-09)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Predicting slow structural transitions in macromolecular systems: conformational flooding</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Phys. Rev. E</span> <span class="ltx_text ltx_bib_volume">52</span> (<span class="ltx_text ltx_bib_number">3</span>), <span class="ltx_text ltx_bib_pages"> pp. 2893–2906</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1103/PhysRevE.52.2893" title="" class="ltx_ref doi ltx_bib_external">Document</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS6.p1" title="6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6</span></a>.
+</span>
+</li>
+<li id="bib17" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[24]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Hénin and C. Chipot</span><span class="ltx_text ltx_bib_year"> (2004)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Overcoming free energy barriers using unconstrained molecular dynamics simulations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Phys.</span> <span class="ltx_text ltx_bib_volume">121</span>, <span class="ltx_text ltx_bib_pages"> pp. 2904–2914</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS3.p1" title="6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3</span></a>.
+</span>
+</li>
+<li id="bib52" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[25]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Hénin</span><span class="ltx_text ltx_bib_year"> (2021)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Fast and accurate multidimensional free energy integration</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Theory Comput.</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1021/acs.jctc.1c00593" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1021/acs.jctc.1c00593" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#I8.i1.p2" title="In 6.3.5 Multidimensional free energy surfaces ‣ 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1st item</span></a>,
+<a href="sec_colvarbias.html#SS3.SSS5.p9" title="6.3.5 Multidimensional free energy surfaces ‣ 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3.5</span></a>.
+</span>
+</li>
+<li id="bib51" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[26]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Hénin, G. Fiorin, C. Chipot, and M. L. Klein</span><span class="ltx_text ltx_bib_year"> (2010)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Exploring multidimensional free energy landscapes using time-dependent biases on collective variables</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Theory Comput.</span> <span class="ltx_text ltx_bib_volume">6</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 35–47</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1021/ct9004432" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1021/ct9004432" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS3.p1" title="6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3</span></a>.
+</span>
+</li>
+<li id="bib19" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[27]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">C. Hu, M. Q. H. Meng, M. Mandal, and P. X. Liu</span><span class="ltx_text ltx_bib_year"> (2006)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Robot rotation decomposition using quaternions</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Proceedings of the 2006 IEEE International Conference on Mechatronics
+and Automation June 25 - 28, 2006, Luoyang, China</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS7.SSS4.p4" title="4.7.4 spinAngle: angle of rotation around a given axis. ‣ 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7.4</span></a>,
+<a href="sec_colvar.html#SS7.SSS5.p2" title="4.7.5 tilt: cosine of the rotation orthogonal to a given axis. ‣ 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7.5</span></a>,
+<a href="sec_colvar.html#SS7.p1" title="4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.7</span></a>.
+</span>
+</li>
+<li id="bib20" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[28]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">T. Huber, A. E. Torda, and W.F. van Gunsteren</span><span class="ltx_text ltx_bib_year"> (1994-12)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Local elevation - A method for improving the searching properties of molecular-dynamics simulation</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Journal of Computer-Aided Molecular Design</span> <span class="ltx_text ltx_bib_volume">8</span> (<span class="ltx_text ltx_bib_number">6</span>), <span class="ltx_text ltx_bib_pages"> pp. 695–708</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS6.p1" title="6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6</span></a>.
+</span>
+</li>
+<li id="bib21" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[29]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Iannuzzi, A. Laio, and M. Parrinello</span><span class="ltx_text ltx_bib_year"> (2003)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Efficient exploration of reactive potential energy surfaces using car-parrinello molecular dynamics</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Phys. Rev. Lett.</span> <span class="ltx_text ltx_bib_volume">90</span> (<span class="ltx_text ltx_bib_number">23</span>), <span class="ltx_text ltx_bib_pages"> pp. 238302</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#I58.i1.p2" title="In 4.21 Extended Lagrangian ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1st item</span></a>,
+<a href="sec_colvar.html#SS5.SSS1.p1" title="4.5.1 coordNum: coordination number between two groups. ‣ 4.5 Contacts ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.5.1</span></a>.
+</span>
+</li>
+<li id="bib63" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[30]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Invernizzi and M. Parrinello</span><span class="ltx_text ltx_bib_year"> (2020-04)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Rethinking Metadynamics: From Bias Potentials to Probability Distributions</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Phys. Chem. Lett.</span> <span class="ltx_text ltx_bib_volume">11</span> (<span class="ltx_text ltx_bib_number">7</span>), <span class="ltx_text ltx_bib_pages"> pp. 2731–2736</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 1948-7185, 1948-7185</span>,
+<a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.0c00497" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://dx.doi.org/10.1021/acs.jpclett.0c00497" title="" class="ltx_ref doi ltx_bib_external">Document</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#I24.i5.p2" title="In 6.7.4 Output options ‣ 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5th item</span></a>,
+<a href="sec_colvarbias.html#SS7.SSS4.p4" title="6.7.4 Output options ‣ 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.7.4</span></a>,
+<a href="sec_colvarbias.html#SS7.p1" title="6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.7</span></a>.
+</span>
+</li>
+<li id="bib64" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[31]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Invernizzi and M. Parrinello</span><span class="ltx_text ltx_bib_year"> (2022-06)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Exploration vs Convergence Speed in Adaptive-Bias Enhanced Sampling</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Theory Comput.</span> <span class="ltx_text ltx_bib_volume">18</span> (<span class="ltx_text ltx_bib_number">6</span>), <span class="ltx_text ltx_bib_pages"> pp. 3988–3996</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 1549-9618</span>,
+<a href="https://doi.org/10.1021/acs.jctc.2c00152" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://dx.doi.org/10.1021/acs.jctc.2c00152" title="" class="ltx_ref doi ltx_bib_external">Document</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#I22.i13.p2" title="In 6.7.2 General options ‣ 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13rd item</span></a>,
+<a href="sec_colvarbias.html#I22.i14.p2" title="In 6.7.2 General options ‣ 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14th item</span></a>,
+<a href="sec_colvarbias.html#I22.i9.p2" title="In 6.7.2 General options ‣ 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9th item</span></a>,
+<a href="sec_colvarbias.html#SS7.p2" title="6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.7</span></a>.
+</span>
+</li>
+<li id="bib18" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[32]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">F. C. L. Hovan and F. L. Gervasio</span><span class="ltx_text ltx_bib_year"> (2019)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Defining an optimal metric for the path collective variables</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Theory Comput.</span> <span class="ltx_text ltx_bib_volume">15</span>, <span class="ltx_text ltx_bib_pages"> pp. 25–32</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS11.p1" title="4.11 Arithmetic path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.11</span></a>.
+</span>
+</li>
+<li id="bib23" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[33]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Laio and M. Parrinello</span><span class="ltx_text ltx_bib_year"> (2002)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Escaping free-energy minima.</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Proc. Natl. Acad. Sci. USA</span> <span class="ltx_text ltx_bib_volume">99</span> (<span class="ltx_text ltx_bib_number">20</span>), <span class="ltx_text ltx_bib_pages"> pp. 12562–12566</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS6.p1" title="6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6</span></a>.
+</span>
+</li>
+<li id="bib24" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[34]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. D. Leines and B. Ensing</span><span class="ltx_text ltx_bib_year"> (2012)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Path finding on high-dimensional free energy landscapes</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Phys. Rev. Lett.</span> <span class="ltx_text ltx_bib_volume">109</span>, <span class="ltx_text ltx_bib_pages"> pp. 020601</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS10.p1" title="4.10 Geometric path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.10</span></a>.
+</span>
+</li>
+<li id="bib56" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[35]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Lesage, T. Lelièvre, G. Stoltz, and J. Hénin</span><span class="ltx_text ltx_bib_year"> (2017)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Smoothed biasing forces yield unbiased free energies with the extended-system adaptive biasing force method</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Phys. Chem. B</span> <span class="ltx_text ltx_bib_volume">121</span> (<span class="ltx_text ltx_bib_number">15</span>), <span class="ltx_text ltx_bib_pages"> pp. 3676–3685</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1021/acs.jpcb.6b10055" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1021/acs.jpcb.6b10055" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS4.SSS1.p1" title="6.4.1 CZAR estimator of the free energy ‣ 6.4 Extended-system Adaptive Biasing Force (eABF) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.4.1</span></a>,
+<a href="sec_colvarbias.html#SS4.p1" title="6.4 Extended-system Adaptive Biasing Force (eABF) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.4</span></a>,
+<a href="sec_colvarbias.html#SS4.p4" title="6.4 Extended-system Adaptive Biasing Force (eABF) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.4</span></a>.
+</span>
+</li>
+<li id="bib25" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[36]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Marchi and P. Ballone</span><span class="ltx_text ltx_bib_year"> (1999)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Adiabatic bias molecular dynamics: a method to navigate the conformational space of complex molecular systems</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Phys.</span> <span class="ltx_text ltx_bib_volume">110</span> (<span class="ltx_text ltx_bib_number">8</span>), <span class="ltx_text ltx_bib_pages"> pp. 3697–3702</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1063/1.478259" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1063/1.478259" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS5.p1" title="6.5 Adiabatic Bias Molecular Dynamics (ABMD) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.5</span></a>.
+</span>
+</li>
+<li id="bib57" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[37]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">F. Marinelli and J. D. Faraldo-Gómez</span><span class="ltx_text ltx_bib_year"> (2015)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Ensemble-biased metadynamics: a molecular simulation method to sample experimental distributions</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Biophys. J.</span> <span class="ltx_text ltx_bib_volume">108</span> (<span class="ltx_text ltx_bib_number">12</span>), <span class="ltx_text ltx_bib_pages"> pp. 2779–2782</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1016/j.bpj.2015.05.024" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1016/j.bpj.2015.05.024" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#I18.i1.p2" title="In 6.6.5 Ensemble-Biased Metadynamics ‣ 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1st item</span></a>,
+<a href="sec_colvarbias.html#SS6.SSS5.p1" title="6.6.5 Ensemble-Biased Metadynamics ‣ 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6.5</span></a>,
+<a href="sec_colvarbias.html#SS6.SSS5.p2" title="6.6.5 Ensemble-Biased Metadynamics ‣ 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6.5</span></a>.
+</span>
+</li>
+<li id="bib26" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[38]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">F. Marinelli, F. Pietrucci, A. Laio, and S. Piana</span><span class="ltx_text ltx_bib_year"> (2009)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">A kinetic model of trp-cage folding from multiple biased molecular dynamics simulations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">PLOS Computational Biology</span> <span class="ltx_text ltx_bib_volume">5</span> (<span class="ltx_text ltx_bib_number">8</span>), <span class="ltx_text ltx_bib_pages"> pp. 1–18</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://doi.org/10.1371/journal.pcbi.1000452" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://dx.doi.org/10.1371/journal.pcbi.1000452" title="" class="ltx_ref doi ltx_bib_external">Document</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS6.p4" title="6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6</span></a>.
+</span>
+</li>
+<li id="bib28" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[39]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">K. Minoukadeh, C. Chipot, and T. Lelièvre</span><span class="ltx_text ltx_bib_year"> (2010)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Potential of mean force calculations: a multiple-walker adaptive biasing force approach</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Theor. Comput.</span> <span class="ltx_text ltx_bib_volume">6</span>, <span class="ltx_text ltx_bib_pages"> pp. 1008–1017</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS3.SSS3.p1" title="6.3.3 Multiple-walker ABF ‣ 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3.3</span></a>.
+</span>
+</li>
+<li id="bib29" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[40]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">Y. Mu, P. H. Nguyen, and G. Stock</span><span class="ltx_text ltx_bib_year"> (2005)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Energy landscape of a small peptide revealed by dihedral angle principal component analysis</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Proteins</span> <span class="ltx_text ltx_bib_volume">58</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 45–52</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvar.html#SS8.SSS2.p1" title="4.8.2 dihedralPC: protein dihedral principal component ‣ 4.8 Protein structure descriptors ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.8.2</span></a>.
+</span>
+</li>
+<li id="bib30" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[41]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. W. Pitera and J. D. Chodera</span><span class="ltx_text ltx_bib_year"> (2012)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">On the use of experimental observations to bias simulated ensembles</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Theory Comput.</span> <span class="ltx_text ltx_bib_volume">8</span>, <span class="ltx_text ltx_bib_pages"> pp. 3445–3451</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS11.p3" title="6.11 Linear restraints ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.11</span></a>.
+</span>
+</li>
+<li id="bib31" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[42]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">P. Raiteri, A. Laio, F. L. Gervasio, C. Micheletti, and M. Parrinello</span><span class="ltx_text ltx_bib_year"> (2006)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Efficient reconstruction of complex free energy landscapes by multiple walkers metadynamics.</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Phys. Chem. B</span> <span class="ltx_text ltx_bib_volume">110</span> (<span class="ltx_text ltx_bib_number">8</span>), <span class="ltx_text ltx_bib_pages"> pp. 3533–9</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS6.SSS7.p1" title="6.6.7 Multiple-walker metadynamics ‣ 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.6.7</span></a>.
+</span>
+</li>
+<li id="bib32" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[43]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. J. Ruiz-Montero, D. Frenkel, and J. J. Brey</span><span class="ltx_text ltx_bib_year"> (1997)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Efficient schemes to compute diffusive barrier crossing rates</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Mol. Phys.</span> <span class="ltx_text ltx_bib_volume">90</span>, <span class="ltx_text ltx_bib_pages"> pp. 925–941</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS3.p8" title="6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.3</span></a>.
+</span>
+</li>
+<li id="bib60" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[44]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">R. Shen, W. Han, G. Fiorin, S. M. Islam, K. Schulten, and B. Roux</span><span class="ltx_text ltx_bib_year"> (2015)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Structural refinement of proteins by restrained molecular dynamics simulations with non-interacting molecular fragments</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">PLoS Comput. Biol.</span> <span class="ltx_text ltx_bib_volume">11</span> (<span class="ltx_text ltx_bib_number">10</span>), <span class="ltx_text ltx_bib_pages"> pp. e1004368</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1371/journal.pcbi.1004368" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1371/journal.pcbi.1004368" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS14.p1" title="6.14 Probability distribution-restraints ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.14</span></a>.
+</span>
+</li>
+<li id="bib38" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[45]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. A. Tribello, M. Bonomi, D. Branduardi, C. Camilloni, and G. Bussi</span><span class="ltx_text ltx_bib_year"> (2014-02)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">PLUMED 2: New feathers for an old bird</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Comput. Phys. Commun.</span> <span class="ltx_text ltx_bib_volume">185</span> (<span class="ltx_text ltx_bib_number">2</span>), <span class="ltx_text ltx_bib_pages"> pp. 604–613</span> (<span class="ltx_text ltx_bib_language">en</span>).
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 00104655</span>,
+<a href="http://linkinghub.elsevier.com/retrieve/pii/S0010465513003196" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://dx.doi.org/10.1016/j.cpc.2013.09.018" title="" class="ltx_ref doi ltx_bib_external">Document</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS7.SSS1.p1" title="6.7.1 Implementation notes ‣ 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.7.1</span></a>.
+</span>
+</li>
+<li id="bib62" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[46]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. D. White and G. A. Voth</span><span class="ltx_text ltx_bib_year"> (2014)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Efficient and minimal method to bias molecular simulations with experimental data</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Chem. Theory Comput.</span> <span class="ltx_text ltx_bib_volume">10</span> (<span class="ltx_text ltx_bib_number">8</span>), <span class="ltx_text ltx_bib_pages"> pp. 3023––3030</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1021/ct500320c" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1021/ct500320c" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="sec_colvarbias.html#SS12.p1" title="6.12 Adaptive Linear Bias/Experiment Directed Simulation ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6.12</span></a>.
+</span>
+</li>
+</ul>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="idx.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title">Index</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref" rel="index"><span class="ltx_text ltx_ref_title">Index</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Fri Nov 27 12:53:37 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

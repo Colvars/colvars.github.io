@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Collective Variables Module Reference manual for GROMACS</title>
+<!--Generated on Fri Nov 27 12:53:37 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on Code version: 2026‐09‐10.-->
+
+<link rel="shortcut icon" href="logo/colvars-logo-compact.svg" type="image/svg+xml">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="latexml/colvars-refman.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/mml-chtml.js"></script>
+<link rel="next" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvars_intro.html" title="1 Overview ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvars_crash_course.html" title="2 Writing a Colvars configuration: a crash course ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvarmodule.html" title="3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvar.html" title="4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvar_atom_groups.html" title="5 Selecting atoms ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvarbias.html" title="6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_colvars_config_changes.html" title="7 Syntax changes from older versions ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="section" href="sec_compilation_notes.html" title="8 Compilation notes ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="index" href="idx.html" title="Index ‣ Collective Variables Module Reference manual for GROMACS">
+<link rel="bibliography" href="bib.html" title="References ‣ Collective Variables Module Reference manual for GROMACS">
+</head>
+<body>
+<nav class="ltx_page_navbar">
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Enabling and controlling the Colvars module in GROMACS</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Defining collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvar_atom_groups.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Selecting atoms</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Syntax changes from older versions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Compilation notes</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_index"><a href="idx.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title">Index</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="bib.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a>
+</div></header>
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Collective Variables Module
+<br class="ltx_break">Reference manual for GROMACS</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Alejandro Bernardin, Haochuan Chen, Jeffrey R. Comer, Giacomo Fiorin, Haohao Fu, Jérôme Hénin, Axel Kohlmeyer, Fabrizio Marinelli, Hubert Santuz, Joshua V. Vermaas, Andrew D. White, Wei Zhang
+</span></span>
+</div>
+<div class="ltx_dates">(Code version: 2026-09-10)</div>
+
+<div id="p1" class="ltx_para">
+<img src="cover-512px.jpg" id="g1" class="ltx_graphics ltx_centering ltx_img_square" width="512" height="512" alt="[Uncaptioned image]">
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Updated versions of this manual:
+[<a href="../html-gromacs/index.html" title="" class="ltx_ref ltx_href">GROMACS</a>]
+[<a href="../html-lammps/index.html" title="" class="ltx_ref ltx_href">LAMMPS</a>]
+[<a href="../html-namd/index.html" title="" class="ltx_ref ltx_href">NAMD</a>]
+[<a href="../html-tinkerhp/index.html" title="" class="ltx_ref ltx_href">Tinker-HP</a>]
+[<a href="../html-vmd/index.html" title="" class="ltx_ref ltx_href">VMD</a>]
+<br class="ltx_break">(<a href="../colvars-refman-gromacs.pdf" title="" class="ltx_ref ltx_href">PDF version</a>)</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<nav class="ltx_TOC ltx_list_toc ltx_toc_toc"><h6 class="ltx_title ltx_title_contents">Contents</h6>
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_crash_course.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Writing a Colvars configuration: a crash course</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="sec_colvarmodule.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Enabling and controlling the Colvars module in GROMACS</span></a>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarmodule.html#sec:units" title="In 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>Units in the Colvars module</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarmodule.html#sec:colvars_mdengine_parameters" title="In 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Running Colvars in GROMACS</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarmodule.html#sec:colvars_config_syntax" title="In 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Configuration syntax used by the Colvars module</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarmodule.html#sec:colvars_global" title="In 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>Global keywords</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvarmodule.html#sec:colvars_input" title="In 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>Input state file</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarmodule.html#sec:colvars_input_gromacs" title="In 3.5 Input state file ‣ 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5.1 </span>Restarting in GROMACS.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarmodule.html#sec:change_config_restart" title="In 3.5 Input state file ‣ 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5.2 </span>Changing configuration upon restarting.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarmodule.html#sec:colvars_output" title="In 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.6 </span>Output files</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvarmodule.html#sec:colvars_file_formats" title="In 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7 </span>File formats</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarmodule.html#sec:colvars_text_format" title="In 3.7 File formats ‣ 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7.1 </span>Configuration and state files.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarmodule.html#sec:colvars_ndx_format" title="In 3.7 File formats ‣ 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7.2 </span>Index (NDX) files</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarmodule.html#sec:colvars_xyz_format" title="In 3.7 File formats ‣ 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7.3 </span>XYZ coordinate files</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarmodule.html#sec:colvar_multicolumn_grid" title="In 3.7 File formats ‣ 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7.4 </span>Grid files: multicolumn text format</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarmodule.html#sec:colvars_traj_format" title="In 3.7 File formats ‣ 3 Enabling and controlling the Colvars module in GROMACS ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7.5 </span>Output trajectory files</span></a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="sec_colvar.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Defining collective variables</span></a>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:cvc_list" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.1 </span>Choosing a function</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:cvc_pbcs" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2 </span>Treatment of periodic boundary conditions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar.html#sec:cvc_distances" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3 </span>Distances</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Cdistance" title="In 4.3 Distances ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3.1 </span><span class="ltx_text ltx_font_typewriter">distance</span>: center-of-mass distance between two groups.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CdistanceZ" title="In 4.3 Distances ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3.2 </span><span class="ltx_text ltx_font_typewriter">distanceZ</span>: projection of a distance vector on an axis.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CdistanceXY" title="In 4.3 Distances ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3.3 </span><span class="ltx_text ltx_font_typewriter">distanceXY</span>: modulus of the projection of a distance vector on a plane.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CdistanceVec" title="In 4.3 Distances ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3.4 </span><span class="ltx_text ltx_font_typewriter">distanceVec</span>: distance vector between two groups.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CdistanceDir" title="In 4.3 Distances ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3.5 </span><span class="ltx_text ltx_font_typewriter">distanceDir</span>: distance unit vector between two groups.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CdistanceInv" title="In 4.3 Distances ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3.6 </span><span class="ltx_text ltx_font_typewriter">distanceInv</span>: mean distance between two groups of atoms.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar.html#sec:cvc_angles" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.4 </span>Angles</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Cangle" title="In 4.4 Angles ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.4.1 </span><span class="ltx_text ltx_font_typewriter">angle</span>: angle between three groups.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CdipoleAngle" title="In 4.4 Angles ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.4.2 </span><span class="ltx_text ltx_font_typewriter">dipoleAngle</span>: angle between two groups and dipole of a third group.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Cdihedral" title="In 4.4 Angles ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.4.3 </span><span class="ltx_text ltx_font_typewriter">dihedral</span>: torsional angle between four groups.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CpolarTheta" title="In 4.4 Angles ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.4.4 </span><span class="ltx_text ltx_font_typewriter">polarTheta</span>: polar angle in spherical coordinates.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CpolarPhi" title="In 4.4 Angles ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.4.5 </span><span class="ltx_text ltx_font_typewriter">polarPhi</span>: azimuthal angle in spherical coordinates.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar.html#sec:cvc_contacts" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.5 </span>Contacts</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CcoordNum" title="In 4.5 Contacts ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.5.1 </span><span class="ltx_text ltx_font_typewriter">coordNum</span>: coordination number between two groups.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CgroupCoord" title="In 4.5 Contacts ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.5.2 </span><span class="ltx_text ltx_font_typewriter">groupCoord</span>: coordination number between two groups.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CselfCoordNum" title="In 4.5 Contacts ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.5.3 </span><span class="ltx_text ltx_font_typewriter">selfCoordNum</span>: coordination number between atoms within a group.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7ChBond" title="In 4.5 Contacts ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.5.4 </span><span class="ltx_text ltx_font_typewriter">hBond</span>: hydrogen bond between two atoms.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar.html#sec:cvc_collective" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.6 </span>Collective metrics</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Crmsd" title="In 4.6 Collective metrics ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.6.1 </span><span class="ltx_text ltx_font_typewriter">rmsd</span>: root mean square displacement (RMSD) from reference positions.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#sec:cvc_rmsd_advanced" title="In 4.6 Collective metrics ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.6.2 </span>Advanced usage of the <span class="ltx_text ltx_font_typewriter">rmsd</span> component.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Ceigenvector" title="In 4.6 Collective metrics ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.6.3 </span><span class="ltx_text ltx_font_typewriter">eigenvector</span>: projection of the atomic coordinates on a vector.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Cgyration" title="In 4.6 Collective metrics ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.6.4 </span><span class="ltx_text ltx_font_typewriter">gyration</span>: radius of gyration of a group of atoms.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Cinertia" title="In 4.6 Collective metrics ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.6.5 </span><span class="ltx_text ltx_font_typewriter">inertia</span>: total moment of inertia of a group of atoms.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CdipoleMagnitude" title="In 4.6 Collective metrics ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.6.6 </span><span class="ltx_text ltx_font_typewriter">dipoleMagnitude</span>: dipole magnitude of a group of atoms.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CinertiaZ" title="In 4.6 Collective metrics ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.6.7 </span><span class="ltx_text ltx_font_typewriter">inertiaZ</span>: total moment of inertia of a group of atoms around a chosen axis.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar.html#sec:cvc_rotations" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7 </span>Rotations</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Corientation" title="In 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.1 </span><span class="ltx_text ltx_font_typewriter">orientation</span>: orientation from reference coordinates.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CorientationAngle" title="In 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.2 </span><span class="ltx_text ltx_font_typewriter">orientationAngle</span>: angle of rotation from reference coordinates.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CorientationProj" title="In 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.3 </span><span class="ltx_text ltx_font_typewriter">orientationProj</span>: cosine of the angle of rotation from reference coordinates.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CspinAngle" title="In 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.4 </span><span class="ltx_text ltx_font_typewriter">spinAngle</span>: angle of rotation around a given axis.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Ctilt" title="In 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.5 </span><span class="ltx_text ltx_font_typewriter">tilt</span>: cosine of the rotation orthogonal to a given axis.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CeulerPhi" title="In 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.6 </span><span class="ltx_text ltx_font_typewriter">eulerPhi</span>: Roll angle from
+references coordinates.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CeulerTheta" title="In 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.7 </span><span class="ltx_text ltx_font_typewriter">eulerTheta</span>: Pitch angle from
+references coordinates.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CeulerPsi" title="In 4.7 Rotations ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.7.8 </span><span class="ltx_text ltx_font_typewriter">eulerPsi</span>: Yaw angle from
+references coordinates.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar.html#sec:cvc_protein" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.8 </span>Protein structure descriptors</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Calpha" title="In 4.8 Protein structure descriptors ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.8.1 </span><span class="ltx_text ltx_font_typewriter">alpha</span>: <math class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>-helix content of a protein segment.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CdihedralPC" title="In 4.8 Protein structure descriptors ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.8.2 </span><span class="ltx_text ltx_font_typewriter">dihedralPC</span>: protein dihedral principal component</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar.html#sec:cvc_raw" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.9 </span>Raw data: building blocks for custom functions</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Ccartesian" title="In 4.9 Raw data: building blocks for custom functions ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.9.1 </span><span class="ltx_text ltx_font_typewriter">cartesian</span>: vector of atomic Cartesian coordinates.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CdistancePairs" title="In 4.9 Raw data: building blocks for custom functions ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.9.2 </span><span class="ltx_text ltx_font_typewriter">distancePairs</span>: set of pairwise distances between two groups.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar.html#sec:cvc_gpath" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.10 </span>Geometric path collective variables</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Cgspath" title="In 4.10 Geometric path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.10.1 </span><span class="ltx_text ltx_font_typewriter">gspath</span>: progress along a path defined in atomic Cartesian coordinate space.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Cgzpath" title="In 4.10 Geometric path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.10.2 </span><span class="ltx_text ltx_font_typewriter">gzpath</span>: distance from a path defined in atomic Cartesian coordinate space.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7ClinearCombination" title="In 4.10 Geometric path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.10.3 </span><span class="ltx_text ltx_font_typewriter">linearCombination</span>: Helper CV to define a linear combination of other CVs</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CcustomColvar" title="In 4.10 Geometric path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.10.4 </span><span class="ltx_text ltx_font_typewriter">customColvar</span>: Helper CV to define a mathematical expression as CV from other CVs</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CgspathCV" title="In 4.10 Geometric path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.10.5 </span><span class="ltx_text ltx_font_typewriter">gspathCV</span>: progress along a path defined in CV space.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CgzpathCV" title="In 4.10 Geometric path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.10.6 </span><span class="ltx_text ltx_font_typewriter">gzpathCV</span>: distance from a path defined in CV space.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar.html#sec:cvc_apathCV" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.11 </span>Arithmetic path collective variables</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7CaspathCV" title="In 4.11 Arithmetic path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.11.1 </span><span class="ltx_text ltx_font_typewriter">aspathCV</span>: progress along a path defined in CV space.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#sec:cvc_azpathCV" title="In 4.11 Arithmetic path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.11.2 </span><span class="ltx_text ltx_font_typewriter">azpathCV</span>: distance from a path defined in CV space.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Caspath" title="In 4.11 Arithmetic path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.11.3 </span><span class="ltx_text ltx_font_typewriter">aspath</span>: progress along a path defined in atomic Cartesian coordinate space.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#colvar%7Cazpath" title="In 4.11 Arithmetic path collective variables ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.11.4 </span><span class="ltx_text ltx_font_typewriter">azpath</span>: distance from a path defined in atomic Cartesian coordinate space.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:cvc_neuralNetwork" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.12 </span>Dense neural network in CV space (MLCV)</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:cvc_torchann" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.13 </span>Torch-based collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:cvc_common" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.14 </span>Shared keywords for all components</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:cvc_periodic" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.15 </span>Periodic components</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar.html#sec:cvc_non_scalar" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.16 </span>Non-scalar components</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar.html#sec:cvc_sys_forces" title="In 4.16 Non-scalar components ‣ 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.16.1 </span>Calculating total forces</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:cvc_superp" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.17 </span>Linear and polynomial combinations of components</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:colvar_custom_function" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.18 </span>Custom functions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:colvar_grid_params" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.19 </span>Defining grid parameters for a colvar</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:colvar_traj_output" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.20 </span>Trajectory output</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:colvar_extended" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.21 </span>Extended Lagrangian</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:mts_colvar" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.22 </span>Multiple time-step variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:colvar_compatibility" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.23 </span>Backward-compatibility</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar.html#sec:colvar_acf" title="In 4 Defining collective variables ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.24 </span>Statistical analysis</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="sec_colvar_atom_groups.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Selecting atoms</span></a>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar_atom_groups.html#sec:colvar_atom_groups_sel" title="In 5 Selecting atoms ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>Atom selection keywords</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvar_atom_groups.html#sec:colvar_atom_groups_ref_frame" title="In 5 Selecting atoms ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2 </span>Moving frame of reference.</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvar_atom_groups.html#sec:fit_gradients" title="In 5.2 Moving frame of reference. ‣ 5 Selecting atoms ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.1 </span>Note on fit gradients</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar_atom_groups.html#sec:colvar_atom_groups_wrapping" title="In 5 Selecting atoms ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Treatment of periodic boundary conditions.</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvar_atom_groups.html#sec:colvar_atom_groups_scaling" title="In 5 Selecting atoms ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4 </span>Performance of a Colvars calculation based on group size.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="sec_colvarbias.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Biasing and analysis methods</span></a>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarbias.html#sec:colvarbias_grid" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.1 </span>Defining grids for biasing and analysis methods</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarbias.html#sec:colvarbias_ti" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.2 </span>Thermodynamic integration</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvarbias.html#sec:colvarbias_abf" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.3 </span>Adaptive Biasing Force</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_abf_req" title="In 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.3.1 </span>ABF requirements on collective variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_abf_params" title="In 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.3.2 </span>Parameters for ABF</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection">
+<a href="sec_colvarbias.html#sec:colvarbias_abf_shared" title="In 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.3.3 </span>Multiple-walker ABF</span></a>
+<ol class="ltx_toclist ltx_toclist_subsubsection">
+<li class="ltx_tocentry ltx_tocentry_paragraph"><a href="sec_colvarbias.html#SS3.SSS3.Px1" title="In 6.3.3 Multiple-walker ABF ‣ 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title">Output files of multiple-walker ABF.</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_abf_output" title="In 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.3.4 </span>Output files</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_abf_post" title="In 6.3 Adaptive Biasing Force ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.3.5 </span>Multidimensional free energy surfaces</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvarbias.html#sec:colvarbias_abf_extended" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.4 </span>Extended-system Adaptive Biasing Force (eABF)</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_ti_ext_czar" title="In 6.4 Extended-system Adaptive Biasing Force (eABF) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.4.1 </span>CZAR estimator of the free energy</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarbias.html#sec:colvarbias_abmd" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.5 </span>Adiabatic Bias Molecular Dynamics (ABMD)</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvarbias.html#sec:colvarbias_meta" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6 </span>Metadynamics</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_meta_boundaries" title="In 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6.1 </span>Treatment of the PMF boundaries</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_meta_basics" title="In 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6.2 </span>Required metadynamics keywords</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_meta_output" title="In 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6.3 </span>Output files</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_meta_performance" title="In 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6.4 </span>Performance optimization</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_ebmeta" title="In 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6.5 </span>Ensemble-Biased Metadynamics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_well_tempered" title="In 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6.6 </span>Well-tempered metadynamics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_meta_mr" title="In 6.6 Metadynamics ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6.7 </span>Multiple-walker metadynamics</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvarbias.html#sec:colvarbias_opes" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.7 </span>On-the-fly probability enhanced sampling (OPES)</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_opes_notes" title="In 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.7.1 </span>Implementation notes</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_opes_general_options" title="In 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.7.2 </span>General options</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_opes_multiple_walker_options" title="In 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.7.3 </span>Multiple-walker options</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_opes_output_options" title="In 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.7.4 </span>Output options</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_opes_example" title="In 6.7 On-the-fly probability enhanced sampling (OPES) ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.7.5 </span>Example input</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvarbias.html#sec:colvarbias_harmonic" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.8 </span>Harmonic restraints</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_smd" title="In 6.8 Harmonic restraints ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.8.1 </span>Moving restraints: steered molecular dynamics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_us" title="In 6.8 Harmonic restraints ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.8.2 </span>Moving restraints: umbrella sampling</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_force_k_ti" title="In 6.8 Harmonic restraints ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.8.3 </span>Changing force constant</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarbias.html#sec:colvarbias_acc_work" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.9 </span>Computing the work of a changing restraint</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarbias.html#sec:colvarbias_harmonic_walls" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.10 </span>Harmonic wall restraints</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarbias.html#sec:colvarbias_linear" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.11 </span>Linear restraints</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarbias.html#sec:colvarbias_alb" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.12 </span>Adaptive Linear Bias/Experiment Directed Simulation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="sec_colvarbias.html#sec:colvarbias_histogram" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.13 </span>Multidimensional histograms</span></a>
+<ol class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_histogram_output" title="In 6.13 Multidimensional histograms ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.13.1 </span>Output options for multi-dimensional histograms</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="sec_colvarbias.html#sec:colvarbias_histogram_vectors" title="In 6.13 Multidimensional histograms ‣ 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.13.2 </span>Histogramming vector variables</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="sec_colvarbias.html#sec:colvarbias_restraint_histogram" title="In 6 Biasing and analysis methods ‣ Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.14 </span>Probability distribution-restraints</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_colvars_config_changes.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Syntax changes from older versions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="sec_compilation_notes.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Compilation notes</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_index"><a href="idx.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title">Index</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="bib.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="bib.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="idx.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref" rel="index"><span class="ltx_text ltx_ref_title">Index</span></a><a href="sec_colvars_intro.html" title="In Collective Variables Module Reference manual for GROMACS" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Overview</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Fri Nov 27 12:53:37 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
